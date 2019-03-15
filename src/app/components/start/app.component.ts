@@ -61,10 +61,14 @@ export class AppComponent implements OnInit {
   // getRouteAnimation(outlet) {
   //   return outlet.activatedRouteData.animation
   // }
+  rightSidebarLinks:any;
   constructor(private router: Router,private applicationBroadCast:ApplicationBroadcaster,private auth:AuthService) {
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
     });
+    this.applicationBroadCast.topSubject.subscribe(t=>{
+      this.rightSidebarLinks = t.rightSidebarLinks;
+    })
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         if (val.url == "/" || val.url == "/home" || val.url == "/form-builder" || val.url == "/dynamic-form-builder")

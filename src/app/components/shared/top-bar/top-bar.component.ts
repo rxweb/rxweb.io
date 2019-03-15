@@ -10,6 +10,12 @@ import { Router } from "@angular/router";
 })
 
 export class TopBarComponent  {
+  titleData:any = {codeContent:{}};
+  constructor(private applicationBroadCaster:ApplicationBroadcaster){
+    this.applicationBroadCaster.topSubscriber.subscribe(t=>{
+      this.titleData = t;
+    })
+  }
 
   searchvalue: string
   @ViewChild('search') searchInput: ElementRef;

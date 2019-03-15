@@ -27,7 +27,7 @@ export class RightSideBarComponent implements OnInit {
     @Input('sidebarLinks') sidebarLinks: any = {};
     showComponent: boolean = false;
     contributorList: any = [];
-    gitEditUrl: string = "https://github.com/rxweb/rxweb/edit/master/";
+    gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/";
     @HostListener('window:scroll', ['$event'])
     handleScroll(){
         const windowScroll = document.documentElement.scrollTop;
@@ -72,6 +72,7 @@ export class RightSideBarComponent implements OnInit {
         else if(splitedArray.length > 0 && splitedArray[0]== "changelog"){
             this.gitEditUrl += "CHANGELOG.md"    
         }
+        this.sidebarLinks.splice(0,1);
         this.showComponent = true;
     }
     scrollTo(section) {

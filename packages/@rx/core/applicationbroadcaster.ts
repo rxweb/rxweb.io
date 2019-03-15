@@ -10,12 +10,17 @@ export class ApplicationBroadcaster {
 
   private urlSubject: Subject<string> = new Subject<string>();
 
+   topSubject:Subject<any> = new Subject<any>();
+
   public urlSubscriber: Observable<string>;
+
+  public topSubscriber:Observable<any>;
 
   
   constructor() {
     this.configurationSubscriber = this.configurationSubject.asObservable();
     this.urlSubscriber = this.urlSubject.asObservable();
+    this.topSubscriber = this.topSubject.asObservable();
   }
 
   configurationBroadCast(value: boolean): void {

@@ -47,6 +47,7 @@ export const API_HOST_URI: string = 'API_URL';
 
 import { MonacoEditorModule, NgxMonacoEditorConfig } from 'ngx-monaco-editor'
 import { TextPageModule } from './text-page/text-page.module';
+import { TitleComponent } from './shared/title/title.component';
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
 const monacoConfig: NgxMonacoEditorConfig = {
@@ -56,7 +57,7 @@ const monacoConfig: NgxMonacoEditorConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent, SideBarComponent, TopBarComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent],
+    AppComponent, SideBarComponent,TitleComponent, TopBarComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, DisqusSharedModule, BasicExamplesExtendedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
     BrowserAnimationsModule,

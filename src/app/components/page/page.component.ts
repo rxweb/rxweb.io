@@ -10,6 +10,7 @@ import {
   transition,
 } from '@angular/animations';
 import { environment } from 'src/environments/environment';
+import { ApplicationBroadcaster } from '@rx/core';
 
 @Component({
   templateUrl: './page.component.html',
@@ -45,7 +46,8 @@ export class PageComponent implements OnInit {
   constructor(
     private http: HttpClient, private elementRef: ElementRef,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private applicationBroadcaster:ApplicationBroadcaster
   ) {
     this.element = elementRef.nativeElement as HTMLElement;
     activatedRoute.params.subscribe(t => {
@@ -106,6 +108,7 @@ export class PageComponent implements OnInit {
           this.jsonContent = JSON.parse(responseObj.toString());
           this.showComponent = true;
           this.activeTab = splitedArray[3];
+          this.applicationBroadcaster.topSubject.next({...this.codeContent,activeTab:this.activeTab,mainType:this.mainType,validationName:this.validationName,templateDrivenType:this.templateDrivenType})
           this.showViewer = true;
         });
       });

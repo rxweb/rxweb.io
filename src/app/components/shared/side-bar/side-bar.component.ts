@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { ApplicationBroadcaster } from "@rx/core";
@@ -101,6 +101,16 @@ export class SideBarComponent implements OnInit {
     } else {
       body.classList.toggle('hide-sidebar');
     }
+  }
+  sticky:boolean;
+  @HostListener('window:scroll', ['$event'])
+  handleScroll(){
+    const windowScroll = document.documentElement.scrollTop;
+        if(windowScroll >= 50){
+            this.sticky = true;
+        } else {
+            this.sticky = false;
+        }
   }
 }
 

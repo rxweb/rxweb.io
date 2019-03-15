@@ -57,7 +57,6 @@ export class DynamicFormBuilderComponent extends DynamicFormBuilderDomain implem
             let model: Model = new Model();
             let propertyModel: PropertyModel = new PropertyModel();
             if (jsonObject.hasOwnProperty(key)) {
-                debugger
                 if (typeof jsonObject[key] == "string") {
                     propertyModel.isRemoved = false;
                     if (parentKey != "") {
