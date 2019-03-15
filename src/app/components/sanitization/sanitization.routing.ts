@@ -50,5 +50,9 @@ const SANITIZATION_ROUTES: Routes = [
 	path:'whitelist',
 	loadChildren: './whitelist/whitelist.module#WhitelistModule',
 },
+{
+	path:'escape',
+	loadChildren: './escape/escape.module#EscapeModule',
+},
 ];
 export const SANITIZATION_ROUTING: ModuleWithProviders = RouterModule.forChild(SANITIZATION_ROUTES);

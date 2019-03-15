@@ -1,0 +1,10 @@
+{
+    "complete": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup,Validators } from \"@angular/forms\"\r\n\r\nimport { RxFormBuilder,IFormGroup } from '@rxweb/reactive-form-validators';\r\nimport { User } from \"./user.model\"\r\n\r\n@Component({\r\n    selector: 'app-stronglyType-complete',\r\n    templateUrl: './strongly-type-complete.component.html'\r\n})\r\nexport class StronglyTypeCompleteComponent implements OnInit {\r\n\r\n    userFormGroup: IFormGroup<User>\r\n\r\n    constructor(\r\n        private formBuilder: RxFormBuilder\r\n    ) { }\r\n\r\n    ngOnInit() {\r\n        this.userFormGroup  = this.formBuilder.formGroup(User) as IFormGroup<User>;\r\n        this.userFormGroup.controls.fullName.setValue(\"John\");\r\n        let fullName = this.userFormGroup.value.fullName;\r\n        \r\n    }\r\n\r\n}",
+        "html": "<div>\r\n    <form [formGroup]=\"userFormGroup\">\r\n        <div class=\"form-group\">\r\n            <label>Full Name</label>\r\n            <input type=\"text\" formControlName=\"fullName\" class=\"form-control\" />\r\n        </div>\r\n    </form>\r\n</div>",
+        "model": "import { prop } from \"@rxweb/reactive-form-validators\"\r\n\r\nexport class User{\r\n  \r\n  @prop()\r\n  fullName:string;\r\n\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    }
+}

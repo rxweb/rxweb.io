@@ -22,5 +22,9 @@ const HOWTO_ROUTES: Routes = [
 	path:'resetForm',
 	loadChildren: './resetForm/reset-form.module#ResetFormModule',
 },
+{
+	path:'stronglyType',
+	loadChildren: './stronglyType/strongly-type.module#StronglyTypeModule',
+},
 ];
 export const HOWTO_ROUTING: ModuleWithProviders = RouterModule.forChild(HOWTO_ROUTES);

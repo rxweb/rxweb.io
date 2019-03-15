@@ -434,8 +434,12 @@
           "title":"Reset Form",
           "uri":"/how-to/resetForm/validators",
           "isActive": false
-        }
-             
+        },
+        {
+          "title":"Strongly Typed Angular Reactive Form",
+          "uri":"/how-to/stronglyType/decorators",
+          "isActive": false
+        }   
       ]
     },
     {
