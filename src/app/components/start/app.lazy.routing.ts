@@ -8,6 +8,9 @@ import { ReactiveFormConfigComponent } from "../reactive-form-config/reactive-fo
 import { FormBuilderComponent } from "../form-builder/form-builder.component";
 import { ConditionalValidationComponent } from "src/assets/examples/advance-form-validations/conditional-validation/conditional-validation.component";
 import { TextPageComponent } from "../text-page/text-page.component";
+import { WhatsNextComponent } from "../whats-next/whats-next.component";
+import { WhatsNewComponent } from "../whats-new/whats-new.component";
+import { WhyRxwebComponent } from "../why/why-component";
 
 
 
@@ -30,6 +33,15 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path:'api/reactive-form-config',component:ReactiveFormConfigComponent
+  },
+  {
+    path:'whats-next',component:WhatsNextComponent
+  },
+  {
+    path:'whats-new',component:WhatsNewComponent
+  },
+  {
+    path:'why',component:WhyRxwebComponent
   },
   {
     path:'how-to',
