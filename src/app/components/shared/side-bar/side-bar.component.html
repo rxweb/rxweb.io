@@ -75,7 +75,7 @@
 					<input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Search..." id="search-input">
 				</div>
 			</li>-->
-			<!-- <li *ngFor="let link of links">
+			<li *ngFor="let link of links">
 				<a (click)="navigateTo(link,null);link.isOpen = !link.isOpen" [class.active]="link.isActive"><span class="nav-label">{{link.title}}</span><span class="fa" [class.arrow]="!link.isOpen" [class.fa-angle-down]="link.isOpen" *ngIf="link.childrens?.length > 0"></span></a>
 				<ul [class.hide]="!link.isOpen" [class.show]="link.isOpen" class="nav nav-second-level collapse" aria-expanded="false" *ngIf="link.childrens?.length > 0">
 					<li *ngFor="let secondLevel of link.childrens;let i = index">
@@ -93,9 +93,9 @@
 						
 					</li>
 				</ul>
-			</li> -->
+			</li>
 
-			<li>
+			<!-- <li>
 				<a href="#" ><span class="nav-label">Getting Started</span></a>
 			</li>
 			<li>
@@ -173,7 +173,7 @@
 				<ul class="nav nav-second-level collapse hide">
 					<li><a href="#">Reactive Form validator</a></li>
 				</ul>
-			</li>
+			</li> -->
 
 		</ul>
 	</div>

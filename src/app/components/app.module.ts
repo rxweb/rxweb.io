@@ -50,6 +50,7 @@ import { TextPageModule } from './text-page/text-page.module';
 import { WhatsNextComponent } from './whats-next/whats-next.component';
 import { WhatsNewComponent } from './whats-new/whats-new.component';
 import { WhyRxwebComponent } from './why/why-component';
+import { TitleComponent } from './shared/title/title.component';
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
 const monacoConfig: NgxMonacoEditorConfig = {
