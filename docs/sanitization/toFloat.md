@@ -6,6 +6,9 @@ category: sanitization
 type:decorators
 linktitle: toFloat
 ---
+
+<div class="title-bar"><p>Convert the input to a float, or NAN if the input is not a float.</p></div>
+
 # Example  
 Let's create a user model and define a property of 'amount' in the model.
 <div component="app-code" key="toFloat-add-model"></div> 

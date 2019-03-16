@@ -7,6 +7,8 @@ type: tabs
 linktitle: file
 ---
 
+<div class="title-bar"><p>file validation {{validatorType}} allows user to validate whether how many files can be uploaded. It depends on maxFiles and minFiles.</p></div>
+
 # When to use
 Suppose you want to create a User form, which contains fields like totalImageFiles, totalDocumentFiles, minimumFiles,maximumFile,minMaxFiles and you want the user to upload files as per validation format. Here depending upon the requirement these scenarios may arise.
 

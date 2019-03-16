@@ -6,6 +6,9 @@ category: sanitization
 type:decorators
 linktitle: trim
 ---
+
+<div class="title-bar"><p>Trim characters from the input.</p></div>
+
 # Example  
 Let's create a user model and define a property of freeText in the model.
 <div component="app-code" key="trim-add-model"></div> 

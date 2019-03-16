@@ -7,6 +7,8 @@ type: tabs
 linktitle: allOf
 ---
 
+<div class="title-bar"><p>allOf validation {{validatorType}} will check whether the user has entered all of the values of given field or not.</p></div>
+
 # When to use
 
 Suppose you want to create an employee form which contain fields like department, projectDomains, qualifications, skills and hobbies. You want the user to enter all values of a particular field. Here the field is taken in the form of array and according to that the choice is applied on the property by providing matchValues. Here depending upon the requirement these scenarios may arise.

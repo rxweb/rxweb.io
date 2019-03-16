@@ -6,6 +6,9 @@ category: form-validations
 type: tabs
 linktitle: compose
 ---
+
+<div class="title-bar"><p>compose validation {{validatorType}} is used to apply multiple validations on a particular formControl.</p></div>
+
 # When to use
 Suppose you want to create UserInfo form, which contains fields like firstName, lastName, age, cityName, countryName and apply multiple validations on these fields. Here depending upon the requirement these scenarios may arise.
 

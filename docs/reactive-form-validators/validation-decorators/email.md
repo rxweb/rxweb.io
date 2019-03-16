@@ -7,6 +7,8 @@ type: tabs
 linktitle: email
 ---
 
+<div class="title-bar"><p>email validation {{validatorType}} will only allow user to enter input which is in the correct email format.</p></div>
+
 # When to use
 Suppose you want to create a user form and you have fields like Email, RecoveryEmail, Business Email Address, OtherEmailAddress and you want user to enter valid Email Address Here depending upon the requirement these scenarios may arise.
 

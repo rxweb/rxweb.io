@@ -7,6 +7,8 @@ type: tabs
 linktitle: endsWith
 ---
 
+<div class="title-bar"><p>endsWith validation {{validatorType}} allows user to validate the input which ends with particular value.</p></div>
+
 # When to use
 Suppose you want to create a user form, which contains fields like name, profession, taskId and company and you want the user to enter input which ends with a particular value. Here depending upon the requirement, these scenarios may arise..
 

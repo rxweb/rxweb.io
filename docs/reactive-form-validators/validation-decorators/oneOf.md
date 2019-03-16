@@ -7,6 +7,8 @@ type:tabs
 linktitle: oneOf
 ---
 
+<div class="title-bar"><p>oneOf validation  {{validatorType}}  will check whether the user has entered any one of the given inputs or not.</p></div>
+
 # When to use
 Let's assume that you are creating a employee form in which you want employee to enter any one value of a particular value which contains fields like department, hobbies and skills.Here the field is taken in the form of array and according to that the oneOf is applied on the property by applying matchvalues. Here depending upon the requirement these scenarios may arise.
 <ol class='showHideElement'>

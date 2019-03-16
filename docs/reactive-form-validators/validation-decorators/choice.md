@@ -7,6 +7,8 @@ type: tabs
 linktitle: choice
 ---
 
+<div class="title-bar"><p>choice validation {{validatorType}} will check that whether the value entered by user is matching the range defined in the properties.</p></div>
+
 # When to use
 Suppose you want to create an employee form which contains fields like department, projectDomains, qualifications, skills and hobbies. You want user to select a specific range of value for a particular choice. Here the field is taken in the form of array and according to that the choice is applied on the property by applying minlength and maxLength. Here depending upon the requirement these scenarios may arise.
 

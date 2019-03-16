@@ -2,9 +2,10 @@
 title: Show Error Message on Submit
 author: rxwebteam
 category: decorators
-type:decorators
+type: decorators
 linktitle: error
 ---
+
 # When to use
 Showing error messages conditionally is a bit clumsy on the UI. As a standard angular approach, we are putting *ngIf condition and write the error message. Once the condition is a success, then it will show the error message.
 Here, we will manage the error message through the @error decorator. Where we have to set the conditional expressions.

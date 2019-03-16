@@ -7,6 +7,8 @@ type: tabs
 linktitle: greaterThan
 ---
 
+<div class="title-bar"><p>greater than validation {{validatorType}} will check that user's input is greater than related field input.</p></div>
+
 #  When to use
 Suppose you want to create a User form, which contains fields like Age, RetirementAge, MemberAge, VoterAge, OtherAge and you want the user to enter input which is greater than a related field input. Here depending upon the requirement these scenarios may arise.   
 <ol class='showHideElement'>

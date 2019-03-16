@@ -6,6 +6,9 @@ category: sanitization
 type:decorators
 linktitle: blacklist
 ---
+
+<div class="title-bar"><p>Remove the characters form the user entered value.</p></div>
+
 # When to use
 If you want remove some specific text then apply in the blacklist. Whenever user enters the value in the respective HTML control at that time it will sanitize it and set the value in the FormControl/Model Property.
 

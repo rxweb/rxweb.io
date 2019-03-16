@@ -9,7 +9,7 @@
                     <div class="hpanel">
                         <div class="tab-content fade" [class.show]="showViewer">
                             <div class="tab-pane panel-body validation-tab active">
-                                	<div class="title-bar"><p>Alpha validation validators will allow only alphabets to be entered. It will not allow any digit or special character.</p></div>
+                                	<!-- <div class="title-bar"><p>Alpha validation validators will allow only alphabets to be entered. It will not allow any digit or special character.</p></div> -->
                                 <div class="tabs-left" *ngIf="showViewer" [@enterAnimation]>
                                         <button class="btn  example-btn" [class.btn-primary]="!showExample" [class.btn-outline-secondary]="showExample" *ngIf="mainType != 'how-to'" (click)="routeExample()">Examples Only</button>
                                     <page-viewer [content]="codeContent.htmlContent" [tabArray]="codeContent.tabArray"

@@ -6,6 +6,9 @@ category: api
 type:simple
 linktitle: reactive-form-config
 ---
+
+<div class="title-bar"><p>ReactiveFormConfig is used to configure date format,validation messages globally at the start of the application.</p></div>
+
 # About ReactiveFormConfig
 
 ReactiveFormConfig is used to globally set date format,validation messages whenever the application starts it will initialized automatically. we have to set "validationMessage" for setting global validation message ,"baseConfig" for setting dateformat globally and "internationalization" for setting dateformat for worldwide applications. 

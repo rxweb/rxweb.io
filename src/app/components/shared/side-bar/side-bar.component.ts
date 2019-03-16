@@ -16,6 +16,7 @@ export class SideBarComponent implements OnInit {
   isthirdLevelCollapse: boolean = true;
   showComponent: boolean;
   userProfile:any;
+  sticky:boolean = false;
   constructor(
     private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster,private authService:AuthService
   ) {
@@ -102,15 +103,15 @@ export class SideBarComponent implements OnInit {
       body.classList.toggle('hide-sidebar');
     }
   }
-  sticky:boolean;
-  @HostListener('window:scroll', ['$event'])
-  handleScroll(){
-    const windowScroll = document.documentElement.scrollTop;
-        if(windowScroll >= 50){
-            this.sticky = true;
-        } else {
-            this.sticky = false;
-        }
-  }
+
+   @HostListener('window:scroll', ['$event'])
+   handleScroll(){
+     const windowScroll = document.getElementById('menu').scrollTop;
+         if(windowScroll >= 50){
+             this.sticky = true;
+         } else {
+             this.sticky = false;
+         }
+   }
 }
 

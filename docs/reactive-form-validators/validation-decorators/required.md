@@ -6,6 +6,9 @@ category: form-validations
 type:tabs
 linktitle: required
 ---
+
+<div class="title-bar"><p>required validation  {{validatorType}}  will check that the user has entered the value in the property or not.</p></div>
+
 # When to use
 Suppose you want to create a UserInfo form, which contains fields like FirstName, LastName, Username and you want the user to must enter anything in that field. That field can not be empty. Here depending upon the requirement these scenarios may arise.
 <ol class='showHideElement'>

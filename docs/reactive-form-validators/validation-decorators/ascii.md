@@ -7,6 +7,8 @@ type: tabs
 linktitle: ascii
 ---
 
+<div class="title-bar"><p>ascii validation {{validatorType}} allows user to enter the input which is in the proper ascii format.</p></div>
+
 # When to use
 Suppose you want to create a user form in which you want the user to enter an input which is in the form of valid ascii code. The form contains fields like language, numberAsciiCode, alphabetAsciiCode and specialCharAsciiCode. Depending on requirements these scenarios may arise..
 <ol class='showHideElement'>

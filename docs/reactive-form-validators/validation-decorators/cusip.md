@@ -7,6 +7,8 @@ type: tabs
 linktitle: cusip
 ---
 
+<div class="title-bar"><p>cusip validation {{validatorType}} will allow user to enter only nine-character alpha-numeric cusip code. CUSIP numbers are used to identify North-American finantial securities.</p></div>
+
 # When to use
 Suppose you want to create a CompanyInfo form, which contain fields like CompanyName, OracleCorporationCusipCode, GoogleIncCusipCode, MicrosoftCorporationCusipCode and AppleIncCusipCode, and you want the user to enter a valid 9-character alpha-numeric CUSIP code. Here depending upon the requirement these scenarios may arise.
 

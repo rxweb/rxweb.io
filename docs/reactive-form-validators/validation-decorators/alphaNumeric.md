@@ -7,6 +7,8 @@ type: tabs
 linktitle: alphaNumeric
 ---
 
+<div class="title-bar"><p>alphaNumeric validation {{validatorType}} will allow only alphabets and numbers to be entered. It will not allow any special character.</p></div>
+
 # When to use
 Suppose you want to create a Location form, which contains fields like AreaName, FlatAddress, PostalAddress, countryCode, CityCode and you want the user to enter only alphabets and numbers. Here depending upon the requirement these scenarios may arise.
 
