@@ -2,7 +2,7 @@
 title: Getting Started
 uid: getting-started
 category: getting-started
-type:simple
+type: simple
 linktitle: getting-started
 ---
 ## Introduction

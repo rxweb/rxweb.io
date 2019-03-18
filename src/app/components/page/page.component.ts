@@ -43,12 +43,18 @@ export class PageComponent implements OnInit {
   templateDrivenType: string = "directives";
   showExample: boolean = true;
   mainType: string;
+  rightSidebarLinks:any;
   constructor(
     private http: HttpClient, private elementRef: ElementRef,
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private applicationBroadcaster:ApplicationBroadcaster
   ) {
+
+    this.applicationBroadcaster.topSubject.subscribe(t=>{
+      this.rightSidebarLinks = t.rightSidebarLinks;
+    })
+
     this.element = elementRef.nativeElement as HTMLElement;
     activatedRoute.params.subscribe(t => {
       if (t["typeName"])

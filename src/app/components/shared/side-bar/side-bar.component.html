@@ -1,10 +1,10 @@
-<aside id="menu" *ngIf="showComponent" [class.title-sticky]="sticky">
+<aside id="menu" *ngIf="showComponent" >
 	<!-- <div class="header-link hide-menu d-flex align-items-center" >
 		<a routerLink="/home" title="rxweb" class="rxlogo">rxweb</a>
 	
 		<div class="collapse-btn menu-open"  (click)="hideSideBar()"> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
 	</div> -->
-	<div id="navigation">
+	<div id="navigation" [class.title-sticky]="sticky">
 		<div class="search-page  position-relative">
 
 			<ais-instantsearch [config]="{
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 		</div> -->
-		<ul class="nav" id="side-menu">
+		<ul class="nav" id="side-menu" >
 			<!--<li>
 				<div class="input-group">
 					<input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Search..." id="search-input">
