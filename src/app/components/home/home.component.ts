@@ -28,7 +28,8 @@ export class HomeComponent implements OnInit {
   ) {
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+ this.isActive = false;
     this.isLoggedIn = false;
     if (localStorage.getItem('isLoggedIn') === 'true') {
       this.isLoggedIn = true;
