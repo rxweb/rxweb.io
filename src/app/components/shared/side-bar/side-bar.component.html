@@ -1,112 +1,56 @@
-<aside id="menu" *ngIf="showComponent" >
+<aside id="menu"  *ngIf="showComponent">
 	<!-- <div class="header-link hide-menu d-flex align-items-center" >
 		<a routerLink="/home" title="rxweb" class="rxlogo">rxweb</a>
 	
 		<div class="collapse-btn menu-open"  (click)="hideSideBar()"> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
 	</div> -->
-	<div id="navigation" [class.title-sticky]="sticky">
+	<div id="navigation" [class.title-sticky]="sticky" >
 		<div class="search-page  position-relative">
 
 			<ais-instantsearch [config]="{
 	  apiKey: '4f3d9e65c9459b43e692a149f365c74e',
 	  appId: 'U3S057LEMB',
-	  indexName: 'rxwebio'
+	  indexName: 'rxweb links'
 	}">
 				<div class="search-box position-relative">
-
-					<ais-search-box id="search" placeholder='' type="text"
-						(keyup)="showsearchcontent($event,searchvalue)" (blur)="hideSearch()" #search
-						[(ngModel)]="searchvalue" name="searchvalue"
-						class="search-field search-field-focus ais-SearchBox-input" ngDefaultControl focus>
-					</ais-search-box>
-
-					<!-- <div class="search-btn">
-					<svg height="24" viewBox="0 0 50 50" width="24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
-				</div>  -->
-					<!-- <ais-search-box class="search-field"></ais-search-box>
-		  <	div class="search-btn">
-				<svg height="24" viewBox="0 0 50 50" width="24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
-			</div>  -->
+					<ais-search-box id="search" placeholder="Search..." type="text" (keyup)="showsearchcontent($event,searchvalue)" (blur)="hideSearch()"  #search [(ngModel)]="searchvalue" name="searchvalue"
+					 class="search-field search-field-focus ais-SearchBox-input" ngDefaultControl focus></ais-search-box>
 				</div>
-				<div id="searchlist-content" class="search-content">
-					<!--	<h2>Search results for : {{searchvalue}} </h2>
-		  <ais-stats></ais-stats>                   -->
+				<div id="searchlist-content1" class="search-content">
 					<ais-hits>
-
 						<ng-template let-hits="hits" let-results="results">
-							<div *ngIf="hits.length == 0">
-								Nothing found for
-								<strong>{{results.query}}</strong>.
-							</div>
-							<ul class="list-unstyled search-list">
-								<li *ngFor="let hit of hits">
-									<div class="search-title">
-										<a [routerLink]="hit.link"> {{hit.title}}</a>
-									</div>
-									<div class="search-decr"> {{hit.description}}</div>
-									<ul class="list-unstyled see-more-links" *ngIf="hits.length == 0">
-										<li class="bold">Go to : </li>
-										<li class="" *ngFor="let item of hit.refLinks">
-											<a [routerLink]="item.url">{{item.title}}</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
+							 {{bindLinks(hits)}}
 						</ng-template>
 					</ais-hits>
 				</div>
 			</ais-instantsearch>
 		</div>
-		<!-- <div class="profile-picture" *ngIf="userProfile">
-			<a href="/">
-				<img [src]="userProfile.picture" class="img-circle m-b" alt="@{{userProfile.name}}" height="75" width="75">
-			</a>
-			<div class="stats-label text-color">
-				<div class="dropdown" [class.open]="isOpen">
-					<span class="font-extra-bold font-uppercase dropdown-toggle" data-toggle="dropdown"
-					 aria-expanded="true">{{userProfile.name}}</span><b (click)="isOpen=!isOpen" class="caret"></b>
-					<ul class="dropdown-menu animated flipInX m-t-xs">
-						<li><a (click)="logOut()">Logout</a></li>
-					</ul>
-				</div>
-			</div>
-		</div> -->
-		<ul class="nav" id="side-menu" >
-			<!--<li>
-				<div class="input-group">
-					<input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Search..." id="search-input">
-				</div>
-			</li>-->
-			<li *ngFor="let link of links">
-				<a (click)="navigateTo(link,null);link.isOpen = !link.isOpen" [class.active]="link.isActive"><span
-						class="nav-label">{{link.title}}</span><span class="fa" [class.arrow]="!link.isOpen"
-						[class.fa-angle-down]="link.isOpen" *ngIf="link.childrens?.length > 0"></span></a>
-				<ul [class.hide]="!link.isOpen" [class.show]="link.isOpen" class="nav nav-second-level collapse"
-					aria-expanded="false" *ngIf="link.childrens?.length > 0">
-					<li *ngFor="let secondLevel of link.childrens;let i = index">
-						<a (click)="secondLevel.isOpen = !secondLevel.isOpen;navigateTo(secondLevel,link,null)"
-							[class.active]="secondLevel.isActive"><span
-								class="nav-label">{{secondLevel.title}}</span><span class="fa"
-								[class.arrow]="!secondLevel.isOpen" [class.fa-angle-down]="secondLevel.isOpen"
-								*ngIf="secondLevel.childrens?.length > 0"></span>
+		<ul class="nav" id="side-menu">
+			<span *ngFor="let link of links" >
+			<li *ngIf="!link.isHide">
+				<a (click)="navigateTo(link,null);link.isOpen = !link.isOpen" [class.active]="link.isActive"><span class="nav-label">{{link.title}}</span><span class="fa" [class.arrow]="!link.isOpen" [class.fa-angle-down]="link.isOpen" *ngIf="link.childrens?.length > 0"></span></a>
+				<ul [class.hide]="!link.isOpen" [class.show]="link.isOpen" class="nav nav-second-level collapse" aria-expanded="false" *ngIf="link.childrens?.length > 0">
+					<span *ngFor="let secondLevel of link.childrens;let i = index">
+					<li  *ngIf="!secondLevel.isHide" >
+						<a (click)="secondLevel.isOpen = !secondLevel.isOpen;navigateTo(secondLevel,link,null)" [class.active]="secondLevel.isActive"><span class="nav-label">{{secondLevel.title}}</span><span class="fa" [class.arrow]="!secondLevel.isOpen" [class.fa-angle-down]="secondLevel.isOpen" *ngIf="secondLevel.childrens?.length > 0"></span>
 						</a>
-
-						<ul [class.hide]="!secondLevel.isOpen" [class.show]="secondLevel.isOpen"
-							class="nav nav-third-level collapse in third-nav" aria-expanded="false"
-							*ngIf="secondLevel.childrens?.length > 0">
-							<li *ngFor="let thirdLevel of secondLevel.childrens;let i = index">
-								<a (click)="navigateTo(thirdLevel,secondLevel,link)"
-									[class.active]="thirdLevel.isActive">
-									<span class="nav-label">{{thirdLevel.title}}</span>
-								</a>
-							</li>
-						</ul>
+								<ul [class.hide]="!secondLevel.isOpen" [class.show]="secondLevel.isOpen" class="nav nav-third-level collapse in third-nav" aria-expanded="false" *ngIf="secondLevel.childrens?.length > 0">
+									<span *ngFor="let thirdLevel of secondLevel.childrens;let i = index">
+									<li *ngIf="!thirdLevel.isHide" >
+										<a (click)="navigateTo(thirdLevel,secondLevel,link)" [class.active]="thirdLevel.isActive">
+												<span class="nav-label">{{thirdLevel.title}}</span>
+											</a>
+									</li>
+								</span>
+								</ul>
+					
+						
 					</li>
+				</span>
 				</ul>
 			</li>
+		</span>
 		</ul>
 	</div>
-	<!-- <div class="bottom-collapse">
-		<div class="collapse-btn"  (click)="hideSideBar()"> <i class="fa fa-angle-left" aria-hidden="true"></i></div>
-	</div> -->
 </aside>
+

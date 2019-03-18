@@ -10,6 +10,8 @@ import { Router } from "@angular/router";
 })
 
 export class TopBarComponent  {
+  searchvalue1: string
+  @ViewChild('search1') searchInput: ElementRef;
   titleData:any = {codeContent:{}};
   constructor(private applicationBroadCaster:ApplicationBroadcaster){
     this.applicationBroadCaster.topSubscriber.subscribe(t=>{
@@ -17,8 +19,7 @@ export class TopBarComponent  {
     })
   }
 
-  searchvalue: string
-  @ViewChild('search') searchInput: ElementRef;
+ 
   hideSideBar(): void {
     const body = document.getElementsByTagName('body')[0];
     if (window.innerWidth < 769)
@@ -26,24 +27,24 @@ export class TopBarComponent  {
     else
       body.classList.toggle('hide-sidebar');
   }
-  
-  showsearchcontent(event, searchvalue: string) {
+  showsearchcontent1(event, searchvalue1: string) {
     if (event.key == "Escape")
-      this.hideSearch();
+      this.hideSearch1();
     else {
-      if (searchvalue != undefined && searchvalue.length > 0)
+      if (searchvalue1 != undefined && searchvalue1.length > 0)
         document.getElementById("searchlist-content").style.display = "block";
       else
-        this.hideSearch();
+        this.hideSearch1();
     }
   }
-  hideSearch() {
+  hideSearch1() {
     setTimeout(() => {
       this.searchInput['searchBox'].nativeElement.value = "";
-      this.searchvalue = "";
+      this.searchvalue1 = "";
       if(document.getElementById("searchlist-content") != undefined)
         document.getElementById("searchlist-content").style.display = "none";
     },300);
   }
+ 
 
 }
