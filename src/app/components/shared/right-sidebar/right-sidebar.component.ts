@@ -8,6 +8,7 @@ import { RequestOptionsArgs } from "@angular/http";
 import { RequestOptions } from "@angular/http";
 import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-right-sidebar',
@@ -19,9 +20,10 @@ export class RightSideBarComponent implements OnInit {
     sticky:boolean = false;
     validationName: string;
     mainType: string;
+    showExample: boolean = true;
     httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' })};
     constructor(
-        private http: HttpClient,private formBuilder: RxFormBuilder
+        private http: HttpClient,private router: Router, private formBuilder: RxFormBuilder
     ) {
     }
     @Input('sidebarLinks') sidebarLinks: any = {};
@@ -85,4 +87,12 @@ export class RightSideBarComponent implements OnInit {
         return false;
     }
    
+    routeExample() {
+        this.showExample = !this.showExample;
+        var splitedArray = location.pathname.split('/');
+        if (splitedArray[4])
+          this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+        else
+          this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+      }
 }

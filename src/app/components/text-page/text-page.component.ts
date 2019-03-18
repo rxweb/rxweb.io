@@ -4,6 +4,7 @@ import { HttpClient, HttpRequest, HttpErrorResponse } from '@angular/common/http
 import { PageViewerComponent } from "src/app/components/shared/page-viewer/page-viewer.component";
 import { ActivatedRoute } from "@angular/router";
 import { environment } from 'src/environments/environment';
+import { ApplicationBroadcaster } from '@rx/core';
 
 @Component({
   templateUrl: './text-page.component.html',
@@ -16,9 +17,10 @@ export class TextPageComponent implements OnInit {
   validationName: string;
   mainType: string;
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private applicationBroadcaster:ApplicationBroadcaster
   ) {
-    
+    this.applicationBroadcaster.topSubject.next({})
   }
   ngOnInit(): void {
     this.bind();
@@ -39,6 +41,7 @@ export class TextPageComponent implements OnInit {
         var element = document.getElementById("mainContent")
         element.innerHTML = this.codeContent.htmlContent;
         document.title = "rxweb " + this.codeContent.title
+        this.applicationBroadcaster.topSubject.next(this.codeContent);
     });
 
   }

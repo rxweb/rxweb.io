@@ -14,8 +14,10 @@
         <li>
           <a target="_blank" href="{{gitEditUrl}}" class="edit-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>
         </li>
-        <li><a target="_blank" href="https://gitter.im/rxweb-project/rxweb"><i class="fa fa-commenting-o" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" href="https://gitter.im/rxweb-project/rxweb"><i class="fab fa-gitter"></i></a></li>
         <li><a target="_blank" href="https://github.com/rxweb/rxweb/"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" (click)="routeExample()" *ngIf="mainType != 'community' && mainType != 'getting-started' && mainType != 'api'">
+            <i class="fa fa-toggle-on" data-toggle="tooltip" data-placement="bottom" title="Examples Only"aria-hidden="true"></i></a></li>
 </ul>
 <!-- 
 <ul class="quick-links list-unstyled">
