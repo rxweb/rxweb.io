@@ -6,6 +6,8 @@ category: sanitization
 type:decorators
 linktitle: stripLow
 ---
+<div class="title-bar"><p>Remove the characters with a numerical value < 32 and 127.</p></div>
+
 # Example  
 Let's create a user model and define a property of freeText in the model.
 <div component="app-code" key="stripLow-add-model"></div> 

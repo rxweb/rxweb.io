@@ -7,6 +7,8 @@ type: tabs
 linktitle: date
 ---
 
+<div class="title-bar"><p>date validation {{validatorType}} will allow user to enter input which is only in the proper date format.</p></div>
+
 # When to use
 Suppose you want to create a UserInfo form, which contains fields like BirthDate, AdmissionDate, EnrollmentDate, and AllocationDate, and you want the user to enter only date input. Here depending upon the requirement these scenarios may arise.
 

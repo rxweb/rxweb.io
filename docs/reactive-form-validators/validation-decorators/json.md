@@ -6,6 +6,9 @@ category: form-validations
 type:tabs
 linktitle: json
 ---
+
+<div class="title-bar"><p>json validation  {{validatorType}}  will allow user to enter the input only in proper Json format.</p></div>
+
 # When to use
 Suppose you want to create a location based jsonInfo form and you have fields like locationJson, location, AddressJson, ContactJson and you want the user to enter only Json value i.e in key and value form. Here depending upon the requirement these scenarios may arise.
 <ol class='showHideElement'>

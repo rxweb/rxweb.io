@@ -7,6 +7,8 @@ type: tabs
 linktitle: dataUri
 ---
 
+<div class="title-bar"><p>dataUri validation {{validatorType}} allows user to enter the input which is a valid data Uri format.</p></div>
+
 # When to use
 Suppose you want to create a user form, which contains fields like scheme, AudioDataUri, VideoDataUri and ImageDataUri and you want the user to enter input which is a proper data URI format. depending on the requirements, these scenarios may arise..
 <ol class='showHideElement'>

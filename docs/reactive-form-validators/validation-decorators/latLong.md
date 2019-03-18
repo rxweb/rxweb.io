@@ -6,6 +6,9 @@ category: form-validations
 type:tabs
 linktitle: latLong
 ---
+
+<div class="title-bar"><p>latLong validation  {{validatorType}}  allows user to enter the input which is valid Latitude or longitude.</p></div>
+
 # When to use
 Suppose you want to create a country form, which contains fields like continent, firstCountry, secondCountry and thirdCountry and you want the user to enter input which is a proper Latitude or longitude format. Here depending upon the requirement, these scenarios may arise..
 <ol class='showHideElement'>

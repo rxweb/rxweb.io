@@ -6,6 +6,9 @@ category: decorators
 type: decorators
 linktitle: propObject
 ---
+
+<div class="title-bar"><p>It is used to define an object of thes property of a field in the model class.</p></div>
+
 # When to use
 Suppose you want to create a user form, which contains fields like emailAddress,city and country.You want to create an object of the address class and access the properties of it in the user model class. 
 Let's see how @propObject() decorator fulfil the need.

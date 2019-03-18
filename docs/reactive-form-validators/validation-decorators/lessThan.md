@@ -6,6 +6,9 @@ category: form-validations
 type:tabs
 linktitle: lessThan
 ---
+
+<div class="title-bar"><p>less than validation  {{validatorType}}  will allow the user to enter only that value which is less than the value in the pre defined field.</p></div>
+
 # When to use
 Suppose you want to create a User form, which contains fields like ObtainedMarks, PassingMarks, OtherMarks and you want the user to enter the numbers which are less than a related field. Here depending upon the requirement these scenarios may arise.
 <ol class='showHideElement'>

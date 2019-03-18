@@ -15,7 +15,7 @@ export class ComposeAddValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userFormGroup = this.formBuilder.group({
-            firstName:['', RxwebValidators.compose({validators:[RxwebValidators.alpha()] })], 
+            firstName:['', RxwebValidators.compose({validators:[RxwebValidators.required(), RxwebValidators.alpha()] })], 
         });
     }
 }

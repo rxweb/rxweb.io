@@ -5839,11 +5839,10 @@ input.ng-invalid{
 {
 	width: 0px;
 }
-#side-menu li .nav-third-level li a.active{
-    /* color: #000;     */
+/* #side-menu li .nav-third-level li a.active{
     font-weight: bolder;
     background-color: lightgrey;
-}
+} */
 .slimscroll-wrapper
 {
     height: 910px!important;

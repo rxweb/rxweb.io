@@ -6,6 +6,9 @@ category: form-validations
 type:tabs
 linktitle: pattern
 ---
+
+<div class="title-bar"><p>pattern validation {{validatorType}} will allow user to enter the input which match the predefined pattern value parameter.</p></div>
+
 # When to use
 Suppose you want to create a User form, which contains fields like Username, Zipcode, Age and you want the user to enter the input which contains the predefined value. Here depending upon the requirement these scenarios may arise.
 <ol class='showHideElement'>

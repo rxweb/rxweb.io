@@ -6,6 +6,9 @@ category: form-validations
 type:tabs
 linktitle: primeNumber
 ---
+
+<div class="title-bar"><p>primeNumber validation  {{validatorType}}  allows user to enter only prime number.</p></div>
+
 # When to use
 Suppose you want to create a numberInfo form, which contains fields like numberType, firstNumber, secondNumber and thirdNumber and you want the user to enter input which is a prime number. Here depending upon the requirement, these scenarios may arise..
 <ol class='showHideElement'>

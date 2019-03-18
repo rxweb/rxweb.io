@@ -6,6 +6,9 @@ category: sanitization
 type:decorators
 linktitle: whitelist
 ---
+
+<div class="title-bar"><p>Remove characters that do not appear in the whitelist.</p></div>
+
 # Example  
 let's create a user model and define a property of freeText in the model.
 <div component="app-code" key="whitelist-add-model"></div> 

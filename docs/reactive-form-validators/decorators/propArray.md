@@ -7,6 +7,8 @@ type: decorators
 linktitle: propArray
 ---
 
+<div class="title-bar"><p>propArray is used to define an array of the instances of a class.</p></div>
+
 # When to use
 Suppose you want to create a User form, which contains fields like CourseName in `User` class,
  which is an array of the instances of a class `Course` and you want to add the `@required` validation, then you can use @propArray() for this.

@@ -7,6 +7,8 @@ type: tabs
 linktitle: alpha
 ---
 
+<div class="title-bar"><p>alpha validation {{validatorType}} will allow only alphabets to be entered. It will not allow any digit or special character.</p></div>
+
 # When to use
 
 Suppose you want to create a AddressInfo form, which contains fields like CountryName, CountryCode, StateName, StateCode and you want the user to enter only alphabets. Here depending upon the requirement these scenarios may arise.

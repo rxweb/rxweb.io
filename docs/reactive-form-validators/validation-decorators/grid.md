@@ -6,6 +6,9 @@ category: form-validations
 type:tabs
 linktitle: grid
 ---
+
+<div class="title-bar"><p>GRid validation {{validatorType}}  will allow user to enter only the input in proper GRid format.The Global Release Identifier (GRid) is a system to identify releases of digital sound recordings (and other digital data) for electronic distribution.A GRid consists of 18 alphanumerical characters.</p></div>
+
 # When to use
 Suppose you want to create a digital resource form, which contains fields like soundRecordingGrid, audioVisualRecordingGrid, photographGrid, graphicImageGrid and you want the user to enter only the proper Grid format. Here depending upon the requirement these scenarios may arise.
 

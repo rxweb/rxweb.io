@@ -6,6 +6,9 @@ category: sanitization
 type:decorators
 linktitle: toDate
 ---
+
+<div class="title-bar"><p>Convert the input to a date, or null if the input is not a date.</p></div>
+
 # Example  
 Let's create a user model and define a property of 'dob' in the model.
 <div component="app-code" key="toDate-add-model"></div> 
