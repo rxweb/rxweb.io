@@ -47,3 +47,4 @@ export const GRID_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						add : GridAddValidatorComponent,
 			  },
 }
+<hr /> <div><a href="www.rxweb.io"></a></div>
