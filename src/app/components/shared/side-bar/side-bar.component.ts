@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter, HostListener } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { ApplicationBroadcaster } from "@rx/core";
@@ -16,6 +16,8 @@ export class SideBarComponent implements OnInit {
   isthirdLevelCollapse: boolean = true;
   showComponent: boolean;
   userProfile:any;
+  searchvalue: string
+  @ViewChild('search') searchInput: ElementRef;
   constructor(
     private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster,private authService:AuthService
   ) {
@@ -24,6 +26,7 @@ export class SideBarComponent implements OnInit {
     this.http.get('assets/json/sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
       this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
       this.links = response.links;
+      
       var splitedArray = location.pathname.split('#')[0].split('/')
       if (splitedArray[1]) {
         var currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);
@@ -111,6 +114,64 @@ export class SideBarComponent implements OnInit {
         } else {
             this.sticky = false;
         }
+  }
+  showsearchcontent(event, searchvalue: string) {
+    if (event.key == "Escape")
+      this.hideSearch();
+    else {
+      if (searchvalue != undefined && searchvalue.length > 0)
+        document.getElementById("searchlist-content1").style.display = "block";
+      else
+        this.hideSearch();
+    }
+  }
+
+  refLinks:any[] = [];
+  lastSearchValue:string = '';
+  bindLinks(searchResult:any[]){
+ 
+    if(this.lastSearchValue != this.searchvalue){
+      this.lastSearchValue = this.searchvalue;
+      if(this.searchvalue) {
+        this.hideAll(this.links,true,true)
+        searchResult.forEach(t=>{
+          let searchObject = this.links;
+          if(t.linkTree){
+            t.linkTree.forEach(x=>{
+              let refObject = searchObject.filter(y => y.title.toLowerCase() == x.toLowerCase())[0];
+              if(refObject){
+                refObject.isHide = false;
+                searchObject = refObject.childrens;
+            }
+            })
+            let refObject = searchObject.filter(y => y.title.toLowerCase() == t.title.toLowerCase())[0];
+              if(refObject){
+                refObject.isHide = false;
+                refObject.isOpen = true;
+          }
+          }
+        })
+      }else
+        this.hideAll(this.links,false,false);
+    }
+      return ;
+ }
+
+ hideAll(jObject:any[],isHide:boolean,isOpen:boolean){
+  for(var i=0;i<jObject.length;i++){
+    jObject[i].isHide = isHide;
+    jObject[i].isOpen = isOpen;
+    if(jObject[i].childrens && jObject[i].childrens.length > 0)
+      this.hideAll(jObject[i].childrens,isHide,isOpen);
+  }
+ }
+  hideSearch() {
+    setTimeout(() => {
+      this.searchInput['searchBox'].nativeElement.value = "";
+      this.searchvalue = "";
+      if(document.getElementById("searchlist-content") != undefined)
+        document.getElementById("searchlist-content").style.display = "none";
+    },300);
   }
 }
 

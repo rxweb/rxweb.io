@@ -72,10 +72,15 @@
                       "isActive": false
                   },
                   {
-                      "title": "cusip",
-                      "uri": "/form-validations/cusip/validators",
+                      "title": "dataUri",
+                      "uri": "/form-validations/dataUri/validators",
                       "isActive": false
                   },
+                  {
+                    "title": "cusip",
+                    "uri": "/form-validations/cusip/validators",
+                    "isActive": false
+                },
                   {
                       "title": "email",
                       "uri": "/form-validations/email/validators",
@@ -504,7 +509,12 @@
           "title":"escape",
           "uri":"/sanitization/escape/decorators",
           "isActive": false
-        }
+        },
+        {
+            "title":"toFloat",
+            "uri":"/sanitization/toFloat/decorators",
+            "isActive": false
+          }
       ]
     }
   ]
