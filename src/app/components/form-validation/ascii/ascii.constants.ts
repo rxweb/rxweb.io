@@ -47,3 +47,4 @@ export const ASCII_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						add : AsciiAddValidatorComponent,
 			  },
 }
+<hr /> <div><a href="www.rxweb.io"></a></div>
