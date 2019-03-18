@@ -1,8 +1,5 @@
 <div id="wrapper" *ngIf="showComponent">
     <div class="content">
-        <div class="title" id="whats-new" [class.sticky] = "sticky">
-                <h1>What's New</h1>
-         </div>
          <div class="title-bar">
             <p>
             </p>
@@ -13,23 +10,80 @@
                     <div class="col-lg-12">
                 <div class="hpanel">
                     <div class="panel-body validation-tab">
-                        <div class='row page-section' id="our-vision">
-                            <div class='col-lg-12'>
-                                <h2>Updates<a title="Link to this heading" class="link-header"
-                                        routerLink="/whats-next" fragment="our-vision"><i
+                        <div class='row page-section'>
+                            <div class='col-lg-12' id="1.8.4">
+                                <h2>1.8.4<a title="Link to this heading" class="link-header"
+                                        routerLink="/whats-new" fragment="1.8.4"><i
                                             class="fa fa-link"></i></a></h2>
-                                            <h4>New Features:</h4>
-                                <ul>    
-                                     <li><a routerLink="/sanitization/blacklist/decorators">Sanitization</a></li>
-                                     <li><a routerLink="/how-to/stronglyType/decorators">Strongly Type Angular Reactive Forms</a></li>
-                               </ul>
+
+                                         <a routerLink="/how-to/stronglyType/decorators" class="card">
+                                            <h3>Strongly Typed FormControl</h3>
+                                            <p>For making respective FormControls strongly typed with the model which is usefull while making complex forms</p>
+                                         </a>   
+
+                                         <a href="https://stackblitz.com/edit/angular-9xertz?file=src%2Fapp%2Ferrormessage-single.component.html" class="card">
+                                            <h3>Use errorMessage property without inverted comma in the HTML</h3>
+                                            <p>For using `errorMessage` just like AbstractControl properties without inverted comma in HTML.</p>
+                                         </a>   
+                                         
+                                         <a href="https://stackblitz.com/angular/pdjvyalobrb?file=src%2Fapp%2Fmin-number-complete.component.ts" class="card">
+                                            <h3>Bind Config Runtime</h3>
+                                            <p>To bind the values of the formControls as per the `dynamicConfig` which is set as a property in the validator.</p>
+                                         </a> 
+
+                                         <a routerLink="/sanitization/escape/decorators" class="card">
+                                            
+                                            <h3>Escape sanitizer</h3>
+                                            <p>escapes the string when the user enters the input.</p>
+                                         </a>                                        
+
+                                       
+                            </div>
+                            <div class='col-lg-12' id="1.8.3">
+                                <h2>1.8.3<a title="Link to this heading" class="link-header"
+                                    routerLink="/whats-new" fragment="1.8.3"><i
+                                        class="fa fa-link"></i></a></h2>
+                                        <a routerLink="http://localhost:4200/sanitization/toBoolean/decorators" class="card">
+                                            <h3>Improvement in Sanitizers</h3>
+                                            <p>`strictActive` property in toBooleand and `radix` in toInt sanitizer.</p>
+                                         </a> 
+                            </div>
+                            <div class='col-lg-12' id="1.8.2">
+                                <h2>1.8.2<a title="Link to this heading" class="link-header"
+                                    routerLink="/whats-new" fragment="1.8.2"><i
+                                        class="fa fa-link"></i></a></h2>
+                                        <a href="https://stackblitz.com/angular/vqqayaopkba?file=src%2Fapp%2Fprop-add.component.ts" class="card">
+                                            <h3>patchModelValue method in RxFormBuilder</h3>
+                                            <p>patchModelValue is used to patch value of model properties of RxFormGroup.</p>
+                                         </a> 
+
+                                         <a href="https://stackblitz.com/angular/qmombeqdmbl?file=src%2Fapp%2Fcompose-message-key.component.ts" class="card">
+                                            <h3>Message key for custom messages</h3>
+                                            <p>To globally declare `messageKey` in reactiveFormConfig for custom messages.</p>
+                                         </a> 
+                            </div>
+                            <div class='row page-section' id="180">
+                            <div class='col-lg-12'>
+                                <h2>1.8.0<a title="Link to this heading" class="link-header"
+                                    routerLink="/whats-new" fragment="180"><i
+                                        class="fa fa-link"></i></a></h2>
+                                        <a href="https://stackblitz.com/angular/vqqayaopkba?file=src%2Fapp%2Fprop-add.component.ts" class="card">
+                                            <h3>patchModelValue method in RxFormBuilder</h3>
+                                            <p>patchModelValue is used to patch value of model properties of RxFormGroup.</p>
+                                         </a> 
+
+                                         <a href="https://stackblitz.com/angular/qmombeqdmbl?file=src%2Fapp%2Fcompose-message-key.component.ts" class="card">
+                                            <h3>Message key for custom messages</h3>
+                                            <p>To globally declare `messageKey` in reactiveFormConfig for custom messages.</p>
+                                         </a> 
+                            </div>
                             </div>
                         </div>
-                    </div>
-
-                    
+                        </div>
+                    </div>                    
                 </div>
                 </div>
             </div>
         </div>
+        <app-right-sidebar [sidebarLinks]="rightSidebarLinks"></app-right-sidebar>
 </div>

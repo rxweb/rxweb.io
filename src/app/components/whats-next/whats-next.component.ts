@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { ApplicationBroadcaster } from '@rx/core';
 
 @Component({
     selector: 'app-whats-next',
@@ -13,7 +14,10 @@ export class WhatsNextComponent implements OnInit {
     {"id":"excellent-documentation","title":"Excellent Documentation","subLink":null},
     {"id":"reliability","title":"Reliability","subLink":null},
     {"id":"upcoming-features","title":"Upcoming features","subLink":null}];
-    constructor() { }
+    pageTitle:any = this.rightSidebarLinks[0];
+    constructor(private applicationBroadcaster: ApplicationBroadcaster) {
+        this.applicationBroadcaster.topSubject.next(this.pageTitle);
+     }
 
     ngOnInit() {
         this.showComponent = true;
