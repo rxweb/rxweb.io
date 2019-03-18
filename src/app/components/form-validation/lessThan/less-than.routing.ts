@@ -13,3 +13,4 @@ const LESS_THAN_ROUTES: Routes = [
 
 ];
 export const LESS_THAN_ROUTING: ModuleWithProviders = RouterModule.forChild(LESS_THAN_ROUTES);
+<hr /> <div><a href="www.rxweb.io"></a></div>
