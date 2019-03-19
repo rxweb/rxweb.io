@@ -1,10 +1,10 @@
-<aside id="menu"  *ngIf="showComponent">
+<aside id="menu" [class.title-sticky]="sticky" *ngIf="showComponent">
 	<!-- <div class="header-link hide-menu d-flex align-items-center" >
 		<a routerLink="/home" title="rxweb" class="rxlogo">rxweb</a>
 	
 		<div class="collapse-btn menu-open"  (click)="hideSideBar()"> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
 	</div> -->
-	<div id="navigation" [class.title-sticky]="sticky" >
+	<div id="navigation">
 		<div class="search-page  position-relative">
 
 			<ais-instantsearch [config]="{
@@ -26,30 +26,35 @@
 			</ais-instantsearch>
 		</div>
 		<ul class="nav" id="side-menu">
-			<span *ngFor="let link of links" >
-			<li *ngIf="!link.isHide">
+				<li *ngFor="let link of links" >
+			<span *ngIf="!link.isHide">
+		
 				<a (click)="navigateTo(link,null);link.isOpen = !link.isOpen" [class.active]="link.isActive"><span class="nav-label">{{link.title}}</span><span class="fa" [class.arrow]="!link.isOpen" [class.fa-angle-down]="link.isOpen" *ngIf="link.childrens?.length > 0"></span></a>
 				<ul [class.hide]="!link.isOpen" [class.show]="link.isOpen" class="nav nav-second-level collapse" aria-expanded="false" *ngIf="link.childrens?.length > 0">
-					<span *ngFor="let secondLevel of link.childrens;let i = index">
-					<li  *ngIf="!secondLevel.isHide" >
+						<li *ngFor="let secondLevel of link.childrens;let i = index"  >
+					<span *ngIf="!secondLevel.isHide">
+				
 						<a (click)="secondLevel.isOpen = !secondLevel.isOpen;navigateTo(secondLevel,link,null)" [class.active]="secondLevel.isActive"><span class="nav-label">{{secondLevel.title}}</span><span class="fa" [class.arrow]="!secondLevel.isOpen" [class.fa-angle-down]="secondLevel.isOpen" *ngIf="secondLevel.childrens?.length > 0"></span>
 						</a>
 								<ul [class.hide]="!secondLevel.isOpen" [class.show]="secondLevel.isOpen" class="nav nav-third-level collapse in third-nav" aria-expanded="false" *ngIf="secondLevel.childrens?.length > 0">
-									<span *ngFor="let thirdLevel of secondLevel.childrens;let i = index">
-									<li *ngIf="!thirdLevel.isHide" >
+										<li *ngFor="let thirdLevel of secondLevel.childrens;let i = index"  >
+									<span *ngIf="!thirdLevel.isHide">
+									
 										<a (click)="navigateTo(thirdLevel,secondLevel,link)" [class.active]="thirdLevel.isActive">
 												<span class="nav-label">{{thirdLevel.title}}</span>
 											</a>
-									</li>
-								</span>
+										</span>
+										</li>
+								
 								</ul>
 					
-						
+							</span>
 					</li>
-				</span>
+			
 				</ul>
-			</li>
+		
 		</span>
+	</li>
 		</ul>
 	</div>
 </aside>

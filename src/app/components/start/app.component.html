@@ -10,7 +10,7 @@
         <app-side-bar></app-side-bar>
       </div>
       <!-- <div [@routerAnimation]="getRouteAnimation(route)"> -->
-      <div class="col-sm-9 main-content">
+      <div class="main-content" [class.col-sm-9]="!isHome" [class.col-sm-12]="isHome">
         <router-outlet></router-outlet>
       </div>
       <!-- </div> -->

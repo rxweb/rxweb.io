@@ -1,23 +1,39 @@
 <ul class="quick-links list-unstyled">
-        <li class="">
-          <a class="more-links">     <i class="fa fa-bars" aria-hidden="true"></i>     </a>
-          <ul class="list-unstyled" id="rightsidebar-items">
-                <li class="nav-item" *ngFor="let item of sidebarLinks;let i = index" [class.d-flex]="i == 0" [class.border-none]="i == 0"  [class.sidebar-list]="item.subLink?.length > 0">
-                    <a class="nav-link sidebar-link" [class.child-item-list]="item.subLink?.length > 0" href="#{{item.id}}"  (click)="scrollTo(item.id)">{{item.title}}</a>
-                    <ul class="list-unstyled" [class.child-list]="item.subLink?.length > 0">
-                        <li *ngFor="let obj of item.subLink" class="nav-item px-1"><a class="nav-link" href="#{{obj.id}}" (click)="scrollTo(obj.id)">{{obj.title}}</a></li>
-                        
-                    </ul>
-                </li>
-            </ul>
+    <li class="">
+        <a class="more-links"> <i class="fa fa-bars" aria-hidden="true"></i> </a>
+        <ul class="list-unstyled" id="rightsidebar-items">
+            <li class="nav-item" *ngFor="let item of sidebarLinks;let i = index" [class.border-none]="i == 0"
+                [class.sidebar-list]="item.subLink?.length > 0">
+                <a class="nav-link sidebar-link" [class.child-item-list]="item.subLink?.length > 0" href="#{{item.id}}"
+                    (click)="scrollTo(item.id)">{{item.title}}</a>
+                <ul class="list-unstyled" [class.child-list]="item.subLink?.length > 0">
+                    <li *ngFor="let obj of item.subLink" class="nav-item px-1"><a class="nav-link" href="#{{obj.id}}"
+                            (click)="scrollTo(obj.id)">{{obj.title}}</a></li>
+                    <!-- [class.d-flex]="i == 0" -->
+                </ul>
             </li>
-        <li>
-          <a target="_blank" href="{{gitEditUrl}}" class="edit-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-        </li>
-        <li><a target="_blank" href="https://gitter.im/rxweb-project/rxweb"><i class="fab fa-gitter"></i></a></li>
-        <li><a target="_blank" href="https://github.com/rxweb/rxweb/"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-        <li><a target="_blank" (click)="routeExample()" *ngIf="mainType != 'community' && mainType != 'getting-started' && mainType != 'api'">
-            <i class="fa fa-toggle-on" data-toggle="tooltip" data-placement="bottom" title="Examples Only"aria-hidden="true"></i></a></li>
+        </ul>
+    </li>
+    <li>
+        <a target="_blank" href="{{gitEditUrl}}" class="edit-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+    </li>
+    <li><a target="_blank" href="https://gitter.im/rxweb-project/rxweb"><i class="fab fa-gitter"></i></a></li>
+    <li><a target="_blank" href="https://github.com/rxweb/rxweb/"><i class="fa fa-github" aria-hidden="true"></i></a>
+    </li>
+    <li><a target="_blank" (click)="routeExample()"
+            *ngIf="mainType != 'community' && mainType != 'getting-started' && mainType != 'api'">
+            <i class="fa fa-toggle-on" data-toggle="tooltip" title="Examples Only" aria-hidden="true"></i></a></li>
+    <!-- <span rxTooltip="left" message="Examples" tipTrigger="hover" class="fa fa-toggle-on" aria-hidden="true"></span></a></li> -->
+    <li><a target="_blank"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+        <ul class="list-unstyled p-0 border-0" id="rightsidebar-items">
+            <li class="card">
+                <div class="d-block card-header">Lorem</div>
+                <div class="card-body">
+                    lorem ipsum dolar,jsdlfk hsl sjfdl djsfl jsdf;l sfjl sdjklf jdslf
+                </div>
+            </li>
+        </ul>
+    </li>
 </ul>
 <!-- 
 <ul class="quick-links list-unstyled">
@@ -42,3 +58,8 @@
         <li><a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i></a></li>
         <li><a href="#">b</a></li>
     </ul> -->
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

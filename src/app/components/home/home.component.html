@@ -1,6 +1,8 @@
+
 <div class="home-page" *ngIf="showComponent">
-    <header class="banner">
-        <div class="container-fluid">
+        <app-top-bar></app-top-bar>
+
+        <!-- <div class="container-fluid">
             <div class="top-bar">
                 <a routerLink="/home">
             <img src="/assets/images/rxweb-logo.png" width="111" height="31"/>
@@ -19,29 +21,53 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <div class="banner">
         <div class="banner-text">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <h1>Clean Code. <br/>Built with Purpose</h1>
-                        <p>The most powerful form validation framework with tons of validation scenarios, which fulfil every
-                            large scale enterprise application’s need. The most easiest way to implement complex form validation
-                            solution with less line of code and quick to develop.</p>
-                        <a routerLink="/getting-started" class="doc-btn">Documentation <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <p>The most powerful framework with tons of Angular Forms scenarios, which fulfil every large scale Angular Based Enterprise Application’s need.</p>
+                  <a routerLink="/getting-started" class="doc-btn">Documentation <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                        <div class="downloads-counter">
+                        <!-- <div class="downloads-counter">
                             <i class="fa fa-download" aria-hidden="true"></i>
                             <span class="number h2">8,000+</span>
                             <p>It's just a beginning, <br>Many more to come</p>
-                        </div>
+                        </div> -->
+                        <img src="/src/assets/images/laptop.png" alt="laptop-screen" class="img-responsive"/>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <section class="features">
+    </div>
+    <div class="highlights text-center">
+            <div class="container">
+                <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                  <div class="point">
+                <h3>Conditional Validation</h3>
+                <p>Binds validation conditions with the validators, without writing additional code like valueChanges subscription/ global validator.</p>
+              </div>
+            </div>
+              <div class="col-xs-12 col-sm-4">
+                    <div class="point">
+                <h3>Simplified Error Messages</h3>
+                <p>Without putting more *ngIf to show the error messages easily</p>
+              </div>
+            </div>
+              <div class="col-xs-12 col-sm-4 ">
+                    <div class="point">
+                <h3>Strongly Typed Forms</h3>
+                <p>Binds the Reactive Form with your model and that completely strongly type Typescript to HTML. </p>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+    <!-- <section class="features">
         <div class="container">
             <h2>Core features of reactive form validators</h2>
             <div class="row">
@@ -319,5 +345,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </div>

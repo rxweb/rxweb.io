@@ -46,5 +46,10 @@ export class TopBarComponent  {
     },300);
   }
  
-
+  openMenu(): void {
+    const body = document.getElementsByClassName('header-links content')[0];
+    if (window.innerWidth < 769) {
+      body.classList.toggle('open');
+    }
+  }
 }

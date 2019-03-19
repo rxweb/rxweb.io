@@ -28,15 +28,14 @@ export class GettingStartedComponent implements OnInit {
     this.applicationBroadCaster.topSubscriber.subscribe(t => {
       this.titleData = t;
     })
-    this.applicationBroadCaster.topSubject.next(this.pageTitle);
   }
 
   ngOnInit(): void {
     this.http.get('assets/json/generator/getting-started/getting-started.json?v=' + environment.appVersion).subscribe(response => {
       this.codeContent = response.json();
-      this.showComponent = true;
     });
-    console.log(this.pageTitle);
+    this.applicationBroadCaster.topSubject.next(this.pageTitle);
+    this.showComponent = true;
   }
 
   @HostListener('window:scroll', ['$event'])

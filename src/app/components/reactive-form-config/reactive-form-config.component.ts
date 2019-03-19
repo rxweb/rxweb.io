@@ -17,14 +17,14 @@ export class ReactiveFormConfigComponent implements OnInit {
     sticky: boolean = false;
     constructor(private http: Http,private applicationBroadcaster: ApplicationBroadcaster
         ) {
-            this.applicationBroadcaster.topSubject.next(this.pageTitle);
+            
         }
     ngOnInit(): void {
         this.http.get('assets/json/generator/reactiveFormConfig/reactiveFormConfig.json?v=' + environment.appVersion).subscribe(response => {
             this.codeContent = response.json();
-        this.showComponent = true;
     });
-    console.log(this.pageTitle);
+    this.applicationBroadcaster.topSubject.next(this.pageTitle);
+    this.showComponent = true;
    }
 
    @HostListener('window:scroll', ['$event'])
