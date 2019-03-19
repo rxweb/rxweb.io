@@ -16,7 +16,7 @@ export class WhatsNextComponent implements OnInit {
     {"id":"upcoming-features","title":"Upcoming features","subLink":null}];
     pageTitle:any = this.rightSidebarLinks[0];
     constructor(private applicationBroadcaster: ApplicationBroadcaster) {
-        this.applicationBroadcaster.topSubject.next(this.pageTitle);
+           this.applicationBroadcaster.topSubject.next(this.pageTitle);
      }
 
     ngOnInit() {

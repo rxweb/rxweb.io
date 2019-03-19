@@ -30,6 +30,11 @@
         "linkTree":["How to"]
     },
     {
+        "title": "Dynamically bind configuration in formGroup",
+        "link": "how-to/bindConfig/validators",
+        "linkTree":["How to"]
+    },
+    {
         "title": "Disabled Control Conditionally validation decorators",
         "link": "decorators/disable/validators",
         "linkTree":["How to"]

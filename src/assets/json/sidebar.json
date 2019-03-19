@@ -444,7 +444,12 @@
           "title":"Strongly Typed Angular Reactive Form",
           "uri":"/how-to/stronglyType/decorators",
           "isActive": false
-        }   
+        },
+        {
+            "title":"Dynamically bind configuration in formGroup",
+            "uri":"/how-to/bindConfig/validators",
+            "isActive": false
+          }     
       ]
     },
     {

@@ -8,13 +8,13 @@ import { ApplicationBroadcaster } from '@rx/core';
 export class WhatsNewComponent implements OnInit {
     sticky: boolean = false;
     showComponent:boolean = false;
-    rightSidebarLinks:any=[{"id":"whats-new","title":"What's New","subLink":null},
-    {"id":"1.8.4","title":"1.8.4","subLink":null},
-    {"id":"1.8.3","title":"1.8.3","subLink":null},
-    {"id":"1.8.2","title":"1.8.2","subLink":null},
-    {"id":"180","title":"1.8.0","subLink":null}
+    rightSidebarLinks:any=[
+    {"id":"stronglyType","title":"1.8.4","subLink":null},
+    {"id":"boolean","title":"1.8.3","subLink":null},
+    {"id":"patchmodel","title":"1.8.2","subLink":null},
+    {"id":"disable","title":"1.8.0","subLink":null}
   ];
-  pageTitle:any = this.rightSidebarLinks[0];
+  pageTitle:any = "What's New";
     constructor(private applicationBroadcaster: ApplicationBroadcaster) {  this.applicationBroadcaster.topSubject.next(this.pageTitle); }
 
     ngOnInit() {
