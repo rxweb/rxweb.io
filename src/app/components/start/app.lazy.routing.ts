@@ -72,6 +72,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/dynamic-form-builder/dynamic-form-builder.module#DynamicFormBuilderModule',
   },
   {
+    path: 'api/RxFormBuilder',
+    loadChildren: 'src/app/components/api/RxFormBuilder/rx-form-builder.module#RxFormBuilderModule',
+  },
+  {
     path:'sanitization',
     loadChildren: 'src/app/components/sanitization/sanitization.module#SanitizationModule',
   },

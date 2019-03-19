@@ -371,7 +371,24 @@
           "title":"ReactiveFormConfig",
           "uri":"api/reactive-form-config",
           "isActive": false
-        }
+        },
+        {
+            "title":"RxFormBuilder",
+            "isActive": false,
+            "isOpen": false,
+            "childrens":[
+                {
+                    "title": "group",
+                    "uri": "api/RxFormBuilder/decorators#group",
+                    "isActive": false
+                },
+                {
+                    "title": "formGroup",
+                    "uri": "api/RxFormBuilder/decorators#formgroup",
+                    "isActive": false
+                }
+            ]
+          }
       ]
     },
     {
