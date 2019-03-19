@@ -6,6 +6,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 import { ErrormessageSingleComponent } from './single-message/errormessage-single.component';
 import { ErrormessageCompleteComponent } from './complete/errormessage-complete.component';
+import { ErrormessageInvertedComponent } from './inverted/errormessage-inverted.component';
 
 
 
@@ -13,10 +14,10 @@ import { ErrormessageCompleteComponent } from './complete/errormessage-complete.
 
 @NgModule({
   declarations: [
-    ErrormessageCompleteComponent,ErrormessageSingleComponent
+    ErrormessageCompleteComponent,ErrormessageSingleComponent,ErrormessageInvertedComponent
   ],
 entryComponents: [
-	ErrormessageCompleteComponent,ErrormessageSingleComponent
+	ErrormessageCompleteComponent,ErrormessageSingleComponent,ErrormessageInvertedComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -25,7 +26,7 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-    ErrormessageCompleteComponent,ErrormessageSingleComponent
+    ErrormessageCompleteComponent,ErrormessageSingleComponent,ErrormessageInvertedComponent
   ],
 
 })

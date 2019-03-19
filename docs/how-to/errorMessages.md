@@ -37,3 +37,16 @@ First we need to create a user class and define properties in the model.
 Next, we need to write html code. For showing error message you have to use 'errorMessage' property.
 <div component="app-code" key="error-complete-html"></div> 
 <div component="app-example-runner" ref-component="app-errormessage-complete"></div>
+
+# Use errorMessage without inverted comma in HTML
+
+If you dont want to use the errorMessage property using inverted comma in HTML, errorMessage property can be used just like AbstractControl properties.
+
+<data-scope scope="['decorator']">
+First we need to create a user class and define properties in the model.
+<div component="app-code" key="error-inverted-model"></div> 
+</data-scope>
+<div component="app-code" key="error-inverted-component"></div> 
+Next, we need to write html code. For showing error message you have to use 'errorMessage' property.
+<div component="app-code" key="error-inverted-html"></div> 
+<div component="app-example-runner" ref-component="app-errormessage-inverted"></div>

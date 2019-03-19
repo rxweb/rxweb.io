@@ -11,7 +11,7 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [STRONGLY_TYPE_ROUTING ,StronglyTypeDecoratorsExtendedModule,PageModule],
+  imports: [STRONGLY_TYPE_ROUTING ,StronglyTypeDecoratorsExtendedModule ,PageModule],
   exports: [RouterModule],
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: STRONGLY_TYPE_COMPONENT_EXAMPLE_CONSTANT }]
   })
