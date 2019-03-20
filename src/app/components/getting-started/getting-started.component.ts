@@ -16,7 +16,7 @@ export class GettingStartedComponent implements OnInit {
   options: any = { responseType: 'text' };
   codeContent: any;
   globalValidationMessageContent: string;
-  mainTab: string = "reactive-form-based-validation"
+  mainTab: string = "installation"
   reactiveFormBasedValidation: string = "Example";
   templateFormBasedValidation: string = "Example";
   modelBasedFormValidation: string = "Example";
