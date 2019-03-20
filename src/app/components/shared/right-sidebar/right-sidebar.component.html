@@ -14,26 +14,19 @@
             </li>
         </ul>
     </li>
+    <li><a target="_blank" (click)="routeExample()"
+        *ngIf="mainType != 'community' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'">
+        <i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen" class="fa" data-toggle="tooltip" title="Examples Only" aria-hidden="true"></i></a></li>
     <li>
         <a target="_blank" href="{{gitEditUrl}}" class="edit-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>
     </li>
     <li><a target="_blank" href="https://gitter.im/rxweb-project/rxweb"><i class="fab fa-gitter"></i></a></li>
     <li><a target="_blank" href="https://github.com/rxweb/rxweb/"><i class="fa fa-github" aria-hidden="true"></i></a>
     </li>
-    <li><a target="_blank" (click)="routeExample()"
-            *ngIf="mainType != 'community' && mainType != 'getting-started' && mainType != 'api'">
-            <i class="fa fa-toggle-on" data-toggle="tooltip" title="Examples Only" aria-hidden="true"></i></a></li>
-    <!-- <span rxTooltip="left" message="Examples" tipTrigger="hover" class="fa fa-toggle-on" aria-hidden="true"></span></a></li> -->
-    <li><a target="_blank"><i class="fa fa-user-o" aria-hidden="true"></i></a>
-        <ul class="list-unstyled p-0 border-0" id="rightsidebar-items">
-            <li class="card">
-                <div class="d-block card-header">Lorem</div>
-                <div class="card-body">
-                    lorem ipsum dolar,jsdlfk hsl sjfdl djsfl jsdf;l sfjl sdjklf jdslf
-                </div>
-            </li>
-        </ul>
+    <li><a target="_blank" href="https://dev.to/t/rxweb"><i class="fab fa-dev" aria-hidden="true"></i></a>
     </li>
+  
+    <!-- <span rxTooltip="left" message="Examples" tipTrigger="hover" class="fa fa-toggle-on" aria-hidden="true"></span></a></li> -->
 </ul>
 <!-- 
 <ul class="quick-links list-unstyled">

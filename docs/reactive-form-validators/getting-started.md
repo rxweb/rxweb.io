@@ -11,7 +11,7 @@ The most powerful validation framework for angular based enterprise application.
 Angular forms provides good feature, but at some level code become messy to fulfil the complex scenarios, so the core objective is to provide optimum solution for basic, complex and dynamic validation for angular based enterprise applications. 
 This validation framework is an extension of angular forms library, which will help to fulfil the need by following angular standard practices with less lines of code. 
 
-
+  
 
 ## Quick Start
 To start using rxweb reactive form validation framework, you need to install the package from npm/yarn.

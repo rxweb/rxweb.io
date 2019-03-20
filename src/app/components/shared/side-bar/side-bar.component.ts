@@ -1,5 +1,5 @@
 import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter, HostListener, ViewChild, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { ApplicationBroadcaster } from "@rx/core";
 import { AuthService } from 'src/app/domain/auth.service';
@@ -12,21 +12,21 @@ import { environment } from 'src/environments/environment';
 
 export class SideBarComponent implements OnInit {
   links: any;
-  isSecondLevelCollapse: boolean = false;
-  isthirdLevelCollapse: boolean = true;
+
   showComponent: boolean;
   userProfile:any;
   searchvalue: string
+  pageLoaded:boolean = false;
   @ViewChild('search') searchInput: ElementRef;
+
   constructor(
-    private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster,private authService:AuthService
+    private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster,private authService:AuthService,private activatedRoute:ActivatedRoute
   ) {
   }
   ngOnInit(): void {
     this.http.get('assets/json/sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
       this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
       this.links = response.links;
-      
       var splitedArray = location.pathname.split('#')[0].split('/')
       if (splitedArray[1]) {
         var currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);
@@ -35,7 +35,7 @@ export class SideBarComponent implements OnInit {
           currentArray[0].isOpen = true;
           if (splitedArray[2]) {
             if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-              var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
+             var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
               if (currentObj && currentObj.length > 0) {
                 currentObj[0].isActive = true;
                 currentObj[0].isOpen = true;
@@ -50,8 +50,8 @@ export class SideBarComponent implements OnInit {
             currentArray[0].isActive = true;
             currentArray[0].isOpen = true;
             if (splitedArray[2]) {
-              if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-                var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
+              if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {     
+              var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
                 if (currentObj && currentObj.length > 0) {
                   currentObj[0].isActive = true;
                   currentObj[0].isOpen = true;
@@ -64,7 +64,7 @@ export class SideBarComponent implements OnInit {
       this.showComponent = true;
     });
   }
-  navigateTo(link: any, secondlevel: any, thirdlevel: any): void {
+  navigateTo(link: any, secondlevel: any, thirdlevel: any): void {    
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;
@@ -152,7 +152,10 @@ export class SideBarComponent implements OnInit {
           }
         })
       }else
+      if(this.pageLoaded)
         this.hideAll(this.links,false,false);
+      else
+      this.pageLoaded = true;
     }
       return ;
  }

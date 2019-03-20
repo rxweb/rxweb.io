@@ -6122,6 +6122,7 @@ ul.menu li {
 }
 .comment-section .issue p{padding: 0;}
 .comment-section .panel-body {
+    margin-left: 28px;
     padding: 0 20px;
     padding-top: 15px !important;
 }
@@ -7060,6 +7061,9 @@ padding: 2px 0;
     line-height: 21px;
     padding: 7px 8px;
     } 
+}
+.list-inline-item.active{
+    border-bottom: 2px solid;
 }
 
 /*-------- do not add any css here ---------- */

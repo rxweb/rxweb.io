@@ -47,6 +47,196 @@
               ]
           },
           {
+            "title": "Custom",
+            "isOpen": false,
+            "isActive": false,
+            "childrens": [
+                {
+                    "title": "async",
+                    "uri": "/form-validations/async/decorators",
+                    "isActive": false
+                },
+                {
+                    "title": "compose",
+                    "uri": "/form-validations/compose/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "pattern",
+                    "uri": "/form-validations/pattern/validators",
+                    "isActive": false
+                }
+            ]
+        },          
+        {
+            "title": "Date and time",
+            "isOpen": false,
+            "isActive": false,
+            "childrens": [
+                {
+                    "title": "date",
+                    "uri": "/form-validations/date/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "maxDate",
+                    "uri": "/form-validations/maxDate/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "minDate",
+                    "uri": "/form-validations/minDate/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "time",
+                    "uri": "/form-validations/time/validators",
+                    "isActive": false
+                }
+            ]
+        },
+        {
+            "title": "File",
+            "isOpen": false,
+            "isActive": false,
+            "childrens": [
+              {
+                  "title": "image",
+                  "uri": "/form-validations/image/validators",
+                  "isActive": false
+              },
+                {
+                    "title": "file",
+                    "uri": "/form-validations/file/validators",
+                    "isActive": false
+                },                 
+                {
+                    "title": "fileSize",
+                    "uri": "/form-validations/fileSize/validators",
+                    "isActive": false
+                }              
+            ]
+        },
+        {
+            "title": "Numeric",
+            "isOpen": false,
+            "isActive": false,
+            "childrens": [
+                {
+                    "title": "creditCard",
+                    "uri": "/form-validations/creditCard/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "digit",
+                    "uri": "/form-validations/digit/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "even",
+                    "uri": "/form-validations/even/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "factor",
+                    "uri": "/form-validations/factor/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "latitude",
+                    "uri": "/form-validations/latitude/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "latLong",
+                    "uri": "/form-validations/latLong/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "leapYear",
+                    "uri": "/form-validations/leapYear/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "longitude",
+                    "uri": "/form-validations/longitude/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "maxNumber",
+                    "uri": "/form-validations/maxNumber/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "minNumber",
+                    "uri": "/form-validations/minNumber/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "numeric",
+                    "uri": "/form-validations/numeric/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "odd",
+                    "uri": "/form-validations/odd/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "port",
+                    "uri": "/form-validations/port/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "primeNumber",
+                    "uri": "/form-validations/primeNumber/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "range",
+                    "uri": "/form-validations/range/validators",
+                    "isActive": false
+                }
+            ]
+        },
+        {
+            "title": "Relational",
+            "isOpen": false,
+            "isActive": false,
+            "childrens": [
+                {
+                    "title": "compare",
+                    "uri": "/form-validations/compare/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "different",
+                    "uri": "/form-validations/different/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "lessThanEqualTo",
+                    "uri": "/form-validations/lessThanEqualTo/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "lessThan",
+                    "uri": "/form-validations/lessThan/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "greaterThanEqualTo",
+                    "uri": "/form-validations/greaterThanEqualTo/validators",
+                    "isActive": false
+                },
+                {
+                    "title": "greaterThan",
+                    "uri": "/form-validations/greaterThan/validators",
+                    "isActive": false
+                }                 
+            ]
+        },
+          {
               "title": "String",
               "isOpen": false,
               "isActive": false,
@@ -157,203 +347,8 @@
                       "isActive": false
                   }
               ]
-          },
-          {
-              "title": "Numeric",
-              "isOpen": false,
-              "isActive": false,
-              "childrens": [
-                  {
-                      "title": "creditCard",
-                      "uri": "/form-validations/creditCard/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "digit",
-                      "uri": "/form-validations/digit/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "even",
-                      "uri": "/form-validations/even/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "factor",
-                      "uri": "/form-validations/factor/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "latitude",
-                      "uri": "/form-validations/latitude/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "latLong",
-                      "uri": "/form-validations/latLong/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "leapYear",
-                      "uri": "/form-validations/leapYear/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "longitude",
-                      "uri": "/form-validations/longitude/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "maxNumber",
-                      "uri": "/form-validations/maxNumber/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "minNumber",
-                      "uri": "/form-validations/minNumber/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "numeric",
-                      "uri": "/form-validations/numeric/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "odd",
-                      "uri": "/form-validations/odd/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "port",
-                      "uri": "/form-validations/port/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "primeNumber",
-                      "uri": "/form-validations/primeNumber/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "range",
-                      "uri": "/form-validations/range/validators",
-                      "isActive": false
-                  }
-              ]
-          },
-          {
-              "title": "Relational",
-              "isOpen": false,
-              "isActive": false,
-              "childrens": [
-                  {
-                      "title": "compare",
-                      "uri": "/form-validations/compare/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "different",
-                      "uri": "/form-validations/different/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "lessThanEqualTo",
-                      "uri": "/form-validations/lessThanEqualTo/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "lessThan",
-                      "uri": "/form-validations/lessThan/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "greaterThanEqualTo",
-                      "uri": "/form-validations/greaterThanEqualTo/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "greaterThan",
-                      "uri": "/form-validations/greaterThan/validators",
-                      "isActive": false
-                  }                 
-              ]
-          },
-          {
-              "title": "File",
-              "isOpen": false,
-              "isActive": false,
-              "childrens": [
-                  {
-                      "title": "file",
-                      "uri": "/form-validations/file/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "choice",
-                      "uri": "/form-validations/choice/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "fileSize",
-                      "uri": "/form-validations/fileSize/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "image",
-                      "uri": "/form-validations/image/validators",
-                      "isActive": false
-                  }
-              ]
-          },
-          {
-              "title": "Custom",
-              "isOpen": false,
-              "isActive": false,
-              "childrens": [
-                  {
-                      "title": "async",
-                      "uri": "/form-validations/async/decorators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "compose",
-                      "uri": "/form-validations/compose/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "pattern",
-                      "uri": "/form-validations/pattern/validators",
-                      "isActive": false
-                  }
-              ]
-          },
-          {
-              "title": "Date and time",
-              "isOpen": false,
-              "isActive": false,
-              "childrens": [
-                  {
-                      "title": "date",
-                      "uri": "/form-validations/date/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "maxDate",
-                      "uri": "/form-validations/maxDate/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "minDate",
-                      "uri": "/form-validations/minDate/validators",
-                      "isActive": false
-                  },
-                  {
-                      "title": "time",
-                      "uri": "/form-validations/time/validators",
-                      "isActive": false
-                  }
-              ]
-          },              
-          {
+          },         
+         {
               "title": "required",
               "uri": "/form-validations/required/validators",
               "isActive": false
@@ -376,6 +371,7 @@
             "title":"RxFormBuilder",
             "isActive": false,
             "isOpen": false,
+            "otherUri":"RxFormBuilder",
             "childrens":[
                 {
                     "title": "group",
@@ -401,7 +397,8 @@
         {
           "title":"prop",
           "uri":"/decorators/prop/decorators",
-          "isActive": false
+          "isActive": false,
+          "isOpen":false
         },
         {
           "title":"propArray",
