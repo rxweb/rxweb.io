@@ -20,6 +20,7 @@ export class RightSideBarComponent implements OnInit {
     sticky:boolean = false;
     validationName: string;
     mainType: string;
+    toogleOpen:boolean = true;
     showExample: boolean = true;
     httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' })};
     constructor(
@@ -88,6 +89,7 @@ export class RightSideBarComponent implements OnInit {
     }
    
     routeExample() {
+        this.toogleOpen = !this.toogleOpen;
         this.showExample = !this.showExample;
         var splitedArray = location.pathname.split('/');
         if (splitedArray[4])
