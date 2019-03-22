@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder,Validators } from "@angular/forms"
+import { FormGroup, FormBuilder,Validators, FormArray } from "@angular/forms"
 import { RxwebValidators,RxFormBuilder } from '@rxweb/reactive-form-validators';
 
 @Component({
@@ -26,5 +26,10 @@ export class GroupCompleteComponent implements OnInit {
             name:''
           }]
         });
+    }
+
+    getFormArray(){
+      let formarray = this.userInfoFormGroup.controls.hobbies as FormArray;
+      return formarray.controls;
     }
 }

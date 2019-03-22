@@ -22,9 +22,9 @@ export class ReactiveFormConfigComponent implements OnInit {
     ngOnInit(): void {
         this.http.get('assets/json/generator/reactiveFormConfig/reactiveFormConfig.json?v=' + environment.appVersion).subscribe(response => {
             this.codeContent = response.json();
+            this.showComponent = true;
     });
     this.applicationBroadcaster.topSubject.next(this.pageTitle);
-    this.showComponent = true;
    }
 
    @HostListener('window:scroll', ['$event'])

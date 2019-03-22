@@ -75,7 +75,10 @@ export class RightSideBarComponent implements OnInit {
         else if(splitedArray.length > 0 && splitedArray[0]== "changelog"){
             this.gitEditUrl += "CHANGELOG.md"    
         }
+        if(this.mainType != "community")
+        {
         this.sidebarLinks.splice(0,1);
+        }
         this.showComponent = true;
     }
     scrollTo(section) {
@@ -93,7 +96,8 @@ export class RightSideBarComponent implements OnInit {
         this.showExample = !this.showExample;
         var splitedArray = location.pathname.split('/');
         if (splitedArray[4])
-          this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+    
+        this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
         else
           this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
       }

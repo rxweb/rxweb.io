@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit,OnDestroy, Input, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder } from "@angular/forms"
@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 @Component({
   templateUrl: './home.component.html'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,OnDestroy {
   userFormGroup: FormGroup;
   userForm:FormGroup;
   userInfoFormGroup:FormGroup;
@@ -54,59 +54,70 @@ export class HomeComponent implements OnInit {
   }
 
   bindText(character: string, className: string) {
-    document.getElementById("code_change").innerHTML += `<span class='${className}'>${character}</span>`
+    if(this.isExistElement())
+      document.getElementById("code_change").innerHTML += `<span class='${className}'>${character}</span>`
   }
-
+isExistElement(){
+    let codeElement = document.getElementById("code_change");
+    return codeElement != null;
+}
   removeChildNodes() {
     let codeElement = document.getElementById("code_change");
-    if (codeElement.children.length > this.currentTextGroup.fixText.length) {
-      document.getElementById("code_change").removeChild(codeElement.children.item(codeElement.children.length - 1))
-      var t = setTimeout(() => this.removeChildNodes(), 20);
-    } else {
-      this.totalIndex++;
-      this.codeIndex = 0;
-      this.changeCodeText();
+    if(this.isExistElement()){
+      if (codeElement.children.length > this.currentTextGroup.fixText.length) {
+        if(this.isExistElement())
+          document.getElementById("code_change").removeChild(codeElement.children.item(codeElement.children.length - 1))
+        var t = setTimeout(() => this.removeChildNodes(), 20);
+      } else {
+        this.totalIndex++;
+        this.codeIndex = 0;
+        this.changeCodeText();
+      }
     }
   }
 
 
   processCharacters(textGroup: { [key: string]: any }) {
-    if (textGroup.text.length > this.textIndex) {
-      this.bindText(textGroup.text.charAt(this.textIndex), textGroup.class);
-      this.textIndex++;
-      var t = setTimeout(() => { this.processCharacters(textGroup) }, 30)
-    } else {
-      this.textIndex = 0;
-      this.changeCodeText()
-      
+    if(this.isExistElement()){
+      if (textGroup.text.length > this.textIndex) {
+        this.bindText(textGroup.text.charAt(this.textIndex), textGroup.class);
+        this.textIndex++;
+        var t = setTimeout(() => { this.processCharacters(textGroup) }, 30)
+      } else {
+        this.textIndex = 0;
+        this.changeCodeText()
+      }
     }
+    
   }
 
   changeCodeText(isFirstTime:boolean = false) {
-    if (this.typeItTexts.length > this.totalIndex) {
-      if (this.typeItTexts[this.totalIndex].codes.length > this.codeIndex) {
-        this.currentTextGroup = this.typeItTexts[this.totalIndex]
-        if (isFirstTime && document.getElementById("code_change").children.length > 0 && this.totalIndex == 0)
+    if(this.isExistElement()){
+      if (this.typeItTexts.length > this.totalIndex) {
+        if (this.typeItTexts[this.totalIndex].codes.length > this.codeIndex) {
+          this.currentTextGroup = this.typeItTexts[this.totalIndex]
+          if (isFirstTime && document.getElementById("code_change").children.length > 0 && this.totalIndex == 0)
+            this.codeIndex++;
+          this.processCharacters(this.typeItTexts[this.totalIndex].codes[this.codeIndex])
           this.codeIndex++;
-        this.processCharacters(this.typeItTexts[this.totalIndex].codes[this.codeIndex])
-        this.codeIndex++;
+        } else {
+          var t = setTimeout(() => this.removeChildNodes(), 600);
+  
+          //this.changeCodeText();
+        }
       } else {
-        var t = setTimeout(() => this.removeChildNodes(), 600);
-
-        //this.changeCodeText();
+        this.totalIndex = 0;
+        this.changeText();
       }
-    } else {
-      this.totalIndex = 0;
-      this.changeText();
     }
   }
   changeText() {
-    
-    if (this.typeItTexts.length > this.totalIndex) {
-      this.changeCodeText(true)
-      //this.totalIndex++;
-    } 
-    
+    if(this.isExistElement()){
+      if (this.typeItTexts.length > this.totalIndex) {
+        this.changeCodeText(true)
+        //this.totalIndex++;
+      } 
+    }
   }
 
   ngOnInit(): void {
@@ -145,4 +156,12 @@ export class HomeComponent implements OnInit {
     this.auth.login();
   }
 
+  ngOnDestroy(){
+    let childElement = document.getElementById("code_change");
+    if(childElement != null){
+      let rxwebbody = childElement.parentNode;
+      rxwebbody.removeChild(childElement)
+    }
+    
+  }
 }

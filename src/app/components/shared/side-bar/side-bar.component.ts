@@ -4,6 +4,7 @@ import { HttpClient } from "@angular/common/http";
 import { ApplicationBroadcaster } from "@rx/core";
 import { AuthService } from 'src/app/domain/auth.service';
 import { environment } from 'src/environments/environment';
+import { element } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-side-bar',
@@ -14,13 +15,13 @@ export class SideBarComponent implements OnInit {
   links: any;
 
   showComponent: boolean;
-  userProfile:any;
+  userProfile: any;
   searchvalue: string
-  pageLoaded:boolean = false;
+  pageLoaded: boolean = false;
   @ViewChild('search') searchInput: ElementRef;
 
   constructor(
-    private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster,private authService:AuthService,private activatedRoute:ActivatedRoute
+    private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster, private authService: AuthService, private activatedRoute: ActivatedRoute
   ) {
   }
   ngOnInit(): void {
@@ -35,10 +36,41 @@ export class SideBarComponent implements OnInit {
           currentArray[0].isOpen = true;
           if (splitedArray[2]) {
             if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-             var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
-              if (currentObj && currentObj.length > 0) {
-                currentObj[0].isActive = true;
-                currentObj[0].isOpen = true;
+              if (splitedArray[1].includes('api')) {
+                var currentObj = currentArray[0].childrens[1].childrens.filter(a => a.linkTitle == splitedArray[2]);
+                if (currentObj && currentObj.length > 0) {
+                  currentObj[0].isActive = true;
+                  currentObj[0].isOpen = true;
+                }
+                else {
+                  var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]);
+                  if (currentObj && currentObj.length > 0) {
+                    currentObj[0].isActive = true;
+                    currentObj[0].isOpen = true;
+                  }
+                }
+              }
+              else if (splitedArray[1].includes('decorators') || splitedArray[1].includes('sanitization')) {
+                var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
+                if (currentObj && currentObj.length > 0) {
+                  currentObj[0].isActive = true;
+                  currentObj[0].isOpen = true;
+                }
+              }
+              else if (splitedArray[1].includes('form-validation')) {     
+
+                currentArray[0].childrens.forEach(formvalidation => {
+                  if (formvalidation.title != "required") {
+                    formvalidation.childrens.forEach(element => {
+                      if (element.title == splitedArray[2]) {
+                        formvalidation.isOpen = true;
+                        formvalidation.isActive = true;
+                        element.isActive = true;
+                        element.isOpen = true;
+                      }
+                    });
+                  }
+                })
               }
             }
           }
@@ -50,8 +82,8 @@ export class SideBarComponent implements OnInit {
             currentArray[0].isActive = true;
             currentArray[0].isOpen = true;
             if (splitedArray[2]) {
-              if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {     
-              var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
+              if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
+                var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
                 if (currentObj && currentObj.length > 0) {
                   currentObj[0].isActive = true;
                   currentObj[0].isOpen = true;
@@ -64,7 +96,7 @@ export class SideBarComponent implements OnInit {
       this.showComponent = true;
     });
   }
-  navigateTo(link: any, secondlevel: any, thirdlevel: any): void {    
+  navigateTo(link: any, secondlevel: any, thirdlevel: any): void {
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;
@@ -94,7 +126,7 @@ export class SideBarComponent implements OnInit {
       this.router.navigateByUrl(link.uri);
     }
   }
-  logOut():void{
+  logOut(): void {
     this.authService.logout()
   }
   hideSideBar(): void {
@@ -105,15 +137,15 @@ export class SideBarComponent implements OnInit {
       body.classList.toggle('hide-sidebar');
     }
   }
-  sticky:boolean;
+  sticky: boolean;
   @HostListener('window:scroll', ['$event'])
-  handleScroll(){
+  handleScroll() {
     const windowScroll = document.documentElement.scrollTop;
-        if(windowScroll >= 50){
-            this.sticky = true;
-        } else {
-            this.sticky = false;
-        }
+    if (windowScroll >= 50) {
+      this.sticky = true;
+    } else {
+      this.sticky = false;
+    }
   }
   showsearchcontent(event, searchvalue: string) {
     if (event.key == "Escape")
@@ -126,55 +158,55 @@ export class SideBarComponent implements OnInit {
     }
   }
 
-  refLinks:any[] = [];
-  lastSearchValue:string = '';
-  bindLinks(searchResult:any[]){
- 
-    if(this.lastSearchValue != this.searchvalue){
+  refLinks: any[] = [];
+  lastSearchValue: string = '';
+  bindLinks(searchResult: any[]) {
+
+    if (this.lastSearchValue != this.searchvalue) {
       this.lastSearchValue = this.searchvalue;
-      if(this.searchvalue) {
-        this.hideAll(this.links,true,true)
-        searchResult.forEach(t=>{
+      if (this.searchvalue) {
+        this.hideAll(this.links, true, true)
+        searchResult.forEach(t => {
           let searchObject = this.links;
-          if(t.linkTree){
-            t.linkTree.forEach(x=>{
+          if (t.linkTree) {
+            t.linkTree.forEach(x => {
               let refObject = searchObject.filter(y => y.title.toLowerCase() == x.toLowerCase())[0];
-              if(refObject){
+              if (refObject) {
                 refObject.isHide = false;
                 searchObject = refObject.childrens;
-            }
+              }
             })
             let refObject = searchObject.filter(y => y.title.toLowerCase() == t.title.toLowerCase())[0];
-              if(refObject){
-                refObject.isHide = false;
-                refObject.isOpen = true;
-          }
+            if (refObject) {
+              refObject.isHide = false;
+              refObject.isOpen = true;
+            }
           }
         })
-      }else
-      if(this.pageLoaded)
-        this.hideAll(this.links,false,false);
-      else
-      this.pageLoaded = true;
+      } else
+        if (this.pageLoaded)
+          this.hideAll(this.links, false, false);
+        else
+          this.pageLoaded = true;
     }
-      return ;
- }
-
- hideAll(jObject:any[],isHide:boolean,isOpen:boolean){
-  for(var i=0;i<jObject.length;i++){
-    jObject[i].isHide = isHide;
-    jObject[i].isOpen = isOpen;
-    if(jObject[i].childrens && jObject[i].childrens.length > 0)
-      this.hideAll(jObject[i].childrens,isHide,isOpen);
+    return;
   }
- }
+
+  hideAll(jObject: any[], isHide: boolean, isOpen: boolean) {
+    for (var i = 0; i < jObject.length; i++) {
+      jObject[i].isHide = isHide;
+      jObject[i].isOpen = isOpen;
+      if (jObject[i].childrens && jObject[i].childrens.length > 0)
+        this.hideAll(jObject[i].childrens, isHide, isOpen);
+    }
+  }
   hideSearch() {
     setTimeout(() => {
       this.searchInput['searchBox'].nativeElement.value = "";
       this.searchvalue = "";
-      if(document.getElementById("searchlist-content") != undefined)
+      if (document.getElementById("searchlist-content") != undefined)
         document.getElementById("searchlist-content").style.display = "none";
-    },300);
+    }, 300);
   }
 }
 

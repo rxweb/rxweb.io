@@ -5959,16 +5959,25 @@ img{
 .parser-text {
   color:#8C1B65;
 }
+@media (min-width: 1600px) {
+    .typeit {
+      font-size: 50px;
+      margin-top: 130px;
+      margin-left: 100px;
+      margin-bottom: 130px;
+    }
+  }
+  
 @media (min-width: 1200px) {
   .typeit {
-    font-size: 50px;
+    font-size: 30px;
     margin-top: 130px;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-bottom: 130px;
   }
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .typeit {
     font-size: 40px;
     margin-top: 100px;

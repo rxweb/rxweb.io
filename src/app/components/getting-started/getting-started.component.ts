@@ -10,7 +10,7 @@ import { ApplicationBroadcaster } from '@rx/core';
 })
 export class GettingStartedComponent implements OnInit {
   showComponent: boolean = false;
-  rightSidebarLinks: any = [{ "id": "getting-started", "title": "Getting Started", "subLink": null }, { "id": "quick-start", "title": "Quick Start", "subLink": [{ "title": "Installation", "id": "installation" }, { "title": "Import Modules", "id": "import-modules" }, { "title": "Global Validation Messages", "id": "global-validation-messages" }, { "title": "Examples", "id": "examples" }] }, { "id": "goal", "title": "Goal", "subLink": null }];
+  rightSidebarLinks: any = [{ "id": "getting-started", "title": "Getting Started", "subLink": null },{ "id": "examples", "title": "Installation", "subLink": null }, { "id": "goal", "title": "Goal", "subLink": null }];
   pageTitle:any = this.rightSidebarLinks[0];
   importModuleContent: string;
   options: any = { responseType: 'text' };

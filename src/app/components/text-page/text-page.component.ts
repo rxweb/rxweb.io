@@ -16,25 +16,29 @@ export class TextPageComponent implements OnInit {
   codeContent: any = "";
   validationName: string;
   mainType: string;
+  rightSidebarLinks:any;
   constructor(
     private http: HttpClient,
     private applicationBroadcaster:ApplicationBroadcaster
   ) {
-    this.applicationBroadcaster.topSubject.next({})
+    this.applicationBroadcaster.topSubject.subscribe(t=>{
+      this.rightSidebarLinks = t.rightSidebarLinks;
+    })
   }
   ngOnInit(): void {
     this.bind();
+    this.showComponent = true;
   }
 
   bind() {
     let splitedArray = location.pathname.split('/');
     this.mainType = splitedArray[1];
     this.validationName = splitedArray[2];
-    let codeUri = "";
-    if(this.validationName !== undefined)
-      codeUri = 'assets/json/generator/' + this.validationName + '/decorators.json?v=' + environment.appVersion;
-    else
-      if(this.mainType == 'changelog')
+     let codeUri = 'assests/json/generator/contributing/decorators.json?v=' + environment.appVersion;
+     if(this.validationName !== undefined)
+       codeUri = 'assets/json/generator/' + this.validationName + '/decorators.json?v=' + environment.appVersion;
+     else
+       if(this.mainType == 'changelog')
         codeUri = 'assets/json/generator/CHANGELOG/decorators.json?v=' + environment.appVersion;
     this.http.get(codeUri, this.options).subscribe(response => {
         this.codeContent = JSON.parse(response.toString());
