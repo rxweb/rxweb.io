@@ -10,7 +10,7 @@ While developing large forms, we have multiple needs to validate the FormControl
 
 The benefit of using this is don't have worry about when this validator will call, this will be called whatever properties you have used in the dynamicConfig function. Those thing the framework automatically take cares of it.
 
-Here is an example for a scenerio such that there are two fields purchaseprice and resalePrice and the resaleprice is validated such that it should not be less than 10% of its purchaseprice, This can be achieved using dynamicConfig. Lets see how:
+Here is an example for a scenerio such that there are two fields Purchase price and Resale Price and the resaleprice is validated such that Resale price must be at least 30% more than Purchase price, This can be achieved using dynamicConfig. Lets see how:
 
 # Example
 

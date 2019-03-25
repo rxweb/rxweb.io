@@ -60,7 +60,7 @@ export class SideBarComponent implements OnInit {
               else if (splitedArray[1].includes('form-validation')) {     
 
                 currentArray[0].childrens.forEach(formvalidation => {
-                  if (formvalidation.title != "required") {
+                  if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
                     formvalidation.childrens.forEach(element => {
                       if (element.title == splitedArray[2]) {
                         formvalidation.isOpen = true;

@@ -17,10 +17,10 @@ export class BindConfigCompleteValidatorComponent implements OnInit {
         this.userInfoFormGroup = this.formBuilder.group({
             purchasePrice:[''], 
            resalePrice: ['', RxwebValidators.minNumber({
-                 dynamicConfig: (x, y) => {
-                   let minimumPrice = (x.purchasePrice * 10) / 100
-                     return { value: minimumPrice };
-                 }
+            dynamicConfig: (x, y) => {
+                const minimumPrice = (x.purchasePrice * 1) + (x.purchasePrice * 30 / 100);
+                  return { value: minimumPrice, message: `Resale price must be at least 30% more than Purchase price. Minimum resale price should be ${minimumPrice}` };
+              }
              })] 
             
         });
