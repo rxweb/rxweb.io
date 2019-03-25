@@ -4,7 +4,7 @@
         <label>Hobbies</label>
         <div class="form-check" *ngFor="let tag of hobbiesArray; let i = index;">
             <h4>
-              <input (click)="addHobby($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+              <input (click)="addHobby($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
             </h4>
           </div>
           <br>

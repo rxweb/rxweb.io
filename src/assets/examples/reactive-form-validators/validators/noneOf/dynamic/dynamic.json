@@ -16,7 +16,7 @@
     "hobbies": {
         "noneOf": {
             "matchValues":["Drawing", "Singing","Dancing","Travelling","Sports"],
-            "message": "Please do not select any hobbies."
+            "message": "Please do not select any hobby."
         }
     }
 }

@@ -11,37 +11,22 @@ import { environment } from 'src/environments/environment';
 })
 export class AllOfMessageValidatorComponent implements OnInit {
     employeeInfoFormGroup: FormGroup
-
-    selectedHobbies: string[] = [];
+    hobbies: string[] = [];
 
     constructor(
         private formBuilder: RxFormBuilder, private http: HttpClient) { }
-
-    hobbiesArray: string[] = [];
+        
+        hobbiesArray: string[] = ["Drawing", "Singing", "Dancing", "Travelling", "Sports"];
 
     ngOnInit() {
         this.employeeInfoFormGroup = this.formBuilder.group({
             hobbies:['',RxwebValidators.allOf({matchValues:["Drawing", "Singing","Dancing","Travelling","Sports"],message: "Please select all hobbies"})]
         });
-        this.http.get("assets/examples/reactive-form-validators/validators/allOf/message/all-of.json?v="+environment.appVersion).subscribe(response => {
-            this.hobbiesArray = response['hobbiesArray'];
-        })
     }
 
-    index = 0;
-    addHobby(element:any) {
-        var value = this.employeeInfoFormGroup.controls.hobbies.value;
-        if(!value)
-          value = [];
-          if(element.checked) {
-                value.push(element.value);
-                this.index++;
-          }
-          else
-          {
-          var indexOf = value.indexOf(element.value);
-          value.splice(indexOf,1);
-          }
-        this.employeeInfoFormGroup.controls.hobbies.setValue(value)
+    addHobby(element: any, index: number) {
+        var indexOf = this.hobbies.indexOf(element.value);
+        element.checked ? this.hobbies.push(element.value) : this.hobbies.splice(indexOf, 1);
+        this.employeeInfoFormGroup.controls.hobbies.setValue(this.hobbies);
       }
 }

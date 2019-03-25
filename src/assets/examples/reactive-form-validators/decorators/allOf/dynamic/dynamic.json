@@ -16,7 +16,7 @@
     "hobbies": {
         "allOf": {
             "matchValues":["Drawing", "Singing","Dancing","Travelling","Sports"],
-            "message": "Please select atleast one hobby."
+            "message": "Please select all hobbies."
         }
     }
 }

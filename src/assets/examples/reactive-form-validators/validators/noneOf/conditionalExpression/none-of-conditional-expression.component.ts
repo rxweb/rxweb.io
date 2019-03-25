@@ -9,12 +9,14 @@ import { environment } from 'src/environments/environment';
 })
 export class NoneOfConditionalExpressionValidatorComponent implements OnInit {
     employeeInfoFormGroup: FormGroup
+  qualifications: string[] = [];
+  skills: string[] = [];
 
     constructor(
         private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-    qualificationsArray: string[] = [];
-    skillsArray: string[] = [];
+        qualificationsArray: string[] = ["Secondary", "Senior Secondary", "B.Tech.", "M.Tech.", "B.C.A.", "M.C.A."];
+        skillsArray: string[] = ["MVC", "AngularJS", "Angular 5", "C#", "Web Api", "SQL Server"];
 
     ngOnInit() {
         this.employeeInfoFormGroup = this.formBuilder.group({
@@ -23,43 +25,18 @@ export class NoneOfConditionalExpressionValidatorComponent implements OnInit {
             skills:['',RxwebValidators.noneOf({matchValues: ["MVC", "AngularJS","Angular 5","C#","Web Api","SQL Server"], conditionalExpression: "x => x.department =='DotNet'"})]
             
         });
-        this.http.get("assets/examples/reactive-form-validators/validators/noneOf/conditionalExpression/none-of.json?v="+environment.appVersion).subscribe(response => {
-            this.qualificationsArray = response['qualificationsArray'];
-            this.skillsArray = response['skillsArray'];
-        })
     }
 
-    index = 0;
-    addQualification(element:any) {
-        var value = this.employeeInfoFormGroup.controls.qualifications.value;
-        if(!value)
-          value = [];
-          if(element.checked) {
-                value.push(element.value);
-                this.index++;
-          }
-          else
-          {
-          var indexOf = value.indexOf(element.value);
-          value.splice(indexOf,1);
-          }
-        this.employeeInfoFormGroup.controls.qualifications.setValue(value)
-      }
-
-      addSkill(element:any) {
-        var value = this.employeeInfoFormGroup.controls.skills.value;
-        if(!value)
-          value = [];
-          if(element.checked) {
-                value.push(element.value);
-                this.index++;
-          }
-          else
-          {
-          var indexOf = value.indexOf(element.value);
-          value.splice(indexOf,1);
-          }
-        this.employeeInfoFormGroup.controls.skills.setValue(value)
-      }
+    addQualification(element: any, index: number) {
+      var indexOf = this.qualifications.indexOf(element.value);
+      element.checked ? this.qualifications.push(element.value) : this.qualifications.splice(indexOf, 1);
+      this.employeeInfoFormGroup.controls.qualifications.setValue(this.qualifications);
+    }
+  
+    addSkill(element: any, index: number) {
+      var indexOf = this.skills.indexOf(element.value);
+      element.checked ? this.skills.push(element.value) : this.skills.splice(indexOf, 1);
+      this.employeeInfoFormGroup.controls.skills.setValue(this.skills);
+    }
 
 }

@@ -12,35 +12,21 @@ import { environment } from 'src/environments/environment';
 })
 export class NoneOfMessageComponent implements OnInit {
     employeeInfoFormGroup: FormGroup
+    hobbies: string[] = [];
 
     constructor(
         private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-    hobbiesArray: string[] = [];
+      hobbiesArray: string[] = ["Drawing","Singing","Dancing","Travelling","Sports"];
 
     ngOnInit() {
         let employeeInfo = new EmployeeInfo();
-        this.http.get("assets/examples/reactive-form-validators/decorators/noneOf/message/none-of.json?v="+environment.appVersion).subscribe(response => {
-            this.hobbiesArray = response['hobbiesArray'];
-        })
-
         this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);
     }
 
-    index = 0;
-    addHobby(element:any) {
-        var value = this.employeeInfoFormGroup.controls.hobbies.value;
-        if(!value)
-          value = [];
-          if(element.checked) {
-                value.push(element.value);
-                this.index++;
-          }
-          else
-          {
-          var indexOf = value.indexOf(element.value);
-          value.splice(indexOf,1);
-          }
-        this.employeeInfoFormGroup.controls.hobbies.setValue(value)
+    addHobby(element: any,index:number) {
+        var indexOf = this.hobbies.indexOf(element.value);
+        element.checked ? this.hobbies.push(element.value) : this.hobbies.splice(indexOf,1);
+         this.employeeInfoFormGroup.controls.hobbies.setValue(this.hobbies);
       }
 }

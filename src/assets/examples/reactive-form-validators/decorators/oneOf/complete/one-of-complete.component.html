@@ -8,7 +8,7 @@
     <label>Project Domains</label>
     <div class="form-check" *ngFor="let tag of projectDomainsArray; let i = index;">
         <h4>
-          <input (click)="addProjectDomain($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+          <input (click)="addProjectDomain($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
         </h4>
       </div>
       <br>
@@ -19,7 +19,7 @@
     <label>Qualifications</label>
     <div class="form-check" *ngFor="let tag of qualificationsArray; let i = index;">
       <h4>
-        <input (click)="addQualification($event.target,i)"  type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+        <input (click)="addQualification($event.target,i)"  type="checkbox" value="{{tag}}" /> {{tag}}
       </h4>
     </div>
     <br>
@@ -30,7 +30,7 @@
     <label>Skills</label><small>( With Conditional Expression )</small><br>
     <div class="form-check" *ngFor="let tag of skillsArray; let i = index;">
       <h4>
-        <input (click)="addSkill($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+        <input (click)="addSkill($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
       </h4>
     </div>
     <br>
@@ -41,7 +41,7 @@
     <label>Hobbies</label>
     <div class="form-check" *ngFor="let tag of hobbiesArray; let i = index;">
         <h4>
-          <input (click)="addHobby($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+          <input (click)="addHobby($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
         </h4>
       </div>
     <br>
