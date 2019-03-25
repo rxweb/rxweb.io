@@ -47,3 +47,4 @@ export const URL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						add : UrlAddValidatorComponent,
 			  },
 }
+<hr /> <div><a href="www.rxweb.io"></a></div>
