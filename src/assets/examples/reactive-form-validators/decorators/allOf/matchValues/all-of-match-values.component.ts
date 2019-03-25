@@ -12,35 +12,21 @@ import { environment } from 'src/environments/environment';
 })
 export class AllOfMatchValuesComponent implements OnInit {
     employeeInfoFormGroup: FormGroup
-
+    projectDomains: string[] = [];
+ 
     constructor(
         private formBuilder: RxFormBuilder ,private http: HttpClient) { }
 
-        projectDomainsArray : string[] = [];
+        projectDomainsArray : string[] = ["ECommerce", "Banking", "Educational", "Gaming"];
       
         ngOnInit() {
           let employeeInfo = new EmployeeInfo();
-          this.http.get("assets/examples/reactive-form-validators/decorators/allOf/matchValues/all-of.json?v="+environment.appVersion).subscribe(response => {
-            this.projectDomainsArray = response['projectDomainsArray'];
-        })
-      
           this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);
         }
 
-        index = 0;
-        addProjectDomain(element:any) {
-          var value = this.employeeInfoFormGroup.controls.projectDomains.value;
-          if(!value)
-            value = [];
-            if(element.checked) {
-                  value.push(element.value);
-                  this.index++;
-            }
-            else
-            {
-            var indexOf = value.indexOf(element.value);
-            value.splice(indexOf,1);
-            }
-          this.employeeInfoFormGroup.controls.projectDomains.setValue(value)
+        addProjectDomain(element: any,index:number) {
+          var indexOf = this.projectDomains.indexOf(element.value);
+          element.checked ? this.projectDomains.push(element.value) : this.projectDomains.splice(indexOf,1);
+           this.employeeInfoFormGroup.controls.projectDomains.setValue(this.projectDomains);
         }
 }

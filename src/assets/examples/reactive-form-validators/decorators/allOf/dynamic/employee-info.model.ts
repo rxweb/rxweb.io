@@ -9,9 +9,6 @@ export class EmployeeInfo{
     projectDomains: string;
 
     @prop()
-	qualifications: string[];
-
-    @prop()
     skills: string;
 
     @prop()

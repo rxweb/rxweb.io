@@ -14,10 +14,10 @@ export class NoneOfNonArrayValueComponent implements OnInit {
     constructor(
         private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-    
     employeeInfoFormGroup: FormGroup;
     excludedDepartments: string[] = ["HR", "Network", "Sales"];
     ngOnInit() {
+        debugger;
         let employeeInfo = new EmployeeInfo();
         this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);
     }

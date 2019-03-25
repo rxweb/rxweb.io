@@ -7,40 +7,26 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 @Component({
-    selector: 'app-noneOf-add',
-    templateUrl: './none-of-add.component.html'
+  selector: 'app-noneOf-add',
+  templateUrl: './none-of-add.component.html'
 })
 export class NoneOfAddComponent implements OnInit {
-    employeeInfoFormGroup: FormGroup
- 
-    constructor(
-        private formBuilder: RxFormBuilder ,private http: HttpClient) { }
+  employeeInfoFormGroup: FormGroup
+  projectDomains: string[] = [];
 
-        projectDomainsArray : string[] = [];
-      
-        ngOnInit() {
-          let employeeInfo = new EmployeeInfo();
-          this.http.get("assets/examples/reactive-form-validators/decorators/noneOf/add/none-of.json?v="+environment.appVersion).subscribe(response => {
-            this.projectDomainsArray = response['projectDomainsArray'];
-        })
-      
-          this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);
-        }
+  constructor(
+    private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-        index = 0;
-        addProjectDomain(element:any) {
-          var value = this.employeeInfoFormGroup.controls.projectDomains.value;
-          if(!value)
-            value = [];
-            if(element.checked) {
-                  value.push(element.value);
-                  this.index++;
-            }
-            else
-            {
-            var indexOf = value.indexOf(element.value);
-            value.splice(indexOf,1);
-            }
-          this.employeeInfoFormGroup.controls.projectDomains.setValue(value)
-        }
+  projectDomainsArray: string[] = ["ECommerce", "Banking", "Educational", "Gaming"];
+
+  ngOnInit() {
+    let employeeInfo = new EmployeeInfo();
+    this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);
+  }
+
+  addProjectDomain(element: any, index: number) {
+    var indexOf = this.projectDomains.indexOf(element.value);
+    element.checked ? this.projectDomains.push(element.value) : this.projectDomains.splice(indexOf, 1);
+    this.employeeInfoFormGroup.controls.projectDomains.setValue(this.projectDomains);
+  }
 }
