@@ -4014,6 +4014,7 @@ body {
     /* box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.1); */
     z-index: 999;
     /* background: #fff; */
+
 }
 #menu::-webkit-scrollbar-track
 {
@@ -4126,7 +4127,9 @@ body {
     border-right: 1px solid #eeeeee;
     top: 120px;
     width:285px;
-    background-color:#fff;;
+    background-color:#fff;
+    min-height: auto;
+    height: auto;
 }
 
 .fixed-footer .footer {
