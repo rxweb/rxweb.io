@@ -13,3 +13,4 @@ const TO_DOUBLE_ROUTES: Routes = [
 
 ];
 export const TO_DOUBLE_ROUTING: ModuleWithProviders = RouterModule.forChild(TO_DOUBLE_ROUTES);
+<hr /> <div><a href="www.rxweb.io"></a></div>
