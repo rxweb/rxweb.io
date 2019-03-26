@@ -8,7 +8,7 @@
       <label>Project Domains</label>
       <div class="form-check" *ngFor="let tag of projectDomainsArray; let i = index;">
           <h4>
-            <input (click)="addProjectDomain($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+            <input (click)="addProjectDomain($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
           </h4>
         </div>
         <br>
@@ -16,21 +16,21 @@
         <small class="form-text text-muted">You must select minimum 2 values.</small><br>
     </div>
     <div class="form-group">
-      <label>Qualifications</label>
-      <div class="form-check" *ngFor="let tag of qualificationsArray; let i = index;">
+      <label>Languages</label>
+      <div class="form-check" *ngFor="let tag of languagesArray; let i = index;">
           <h4>
-            <input (click)="addQualification($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+            <input (click)="addLanguages($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
           </h4>
         </div>
         <br>
-        <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.qualifications.errors">{{employeeInfoFormGroup.controls.qualifications.errors.choice.message}}</small><br>
-        <small class="form-text text-muted">You must select atmost 5 values.</small><br>
+        <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.languages.errors">{{employeeInfoFormGroup.controls.languages.errors.choice.message}}</small><br>
+        <small class="form-text text-muted">You must select atmost 4 values.</small><br>
     </div>
     <div class="form-group">
       <label>Skills</label><small>( With Conditional Expression )</small><br>
       <div class="form-check" *ngFor="let tag of skillsArray; let i = index;">
         <h4>
-          <input (click)="addSkill($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+          <input (click)="addSkill($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
         </h4>
       </div>
       <br>
@@ -41,7 +41,7 @@
       <label>Hobbies</label>
       <div class="form-check" *ngFor="let tag of hobbiesArray; let i = index;">
           <h4>
-            <input (click)="addHobby($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+            <input (click)="addHobby($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
           </h4>
         </div>
         <br>

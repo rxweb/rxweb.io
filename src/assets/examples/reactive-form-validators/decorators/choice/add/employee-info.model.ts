@@ -2,7 +2,7 @@ import {  choice  } from "@rxweb/reactive-form-validators"
 
 export class EmployeeInfo{
 
-    @choice({minLength:3})
+    @choice({minLength:2})
     projectDomains: string[];
 
 }

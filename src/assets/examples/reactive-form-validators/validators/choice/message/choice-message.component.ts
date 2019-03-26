@@ -5,30 +5,27 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-    selector: 'app-choice-message-validator',
-    templateUrl: './choice-message.component.html'
+  selector: 'app-choice-message-validator',
+  templateUrl: './choice-message.component.html'
 })
 export class ChoiceMessageValidatorComponent implements OnInit {
-    employeeInfoFormGroup: FormGroup
+  employeeInfoFormGroup: FormGroup
+  hobbies: string[] = [];
 
-    selectedHobbies: string[] = [];
+  constructor(
+    private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-    constructor(
-        private formBuilder: RxFormBuilder, private http: HttpClient) { }
+  hobbiesArray: string[] = ["Drawing", "Singing", "Dancing", "Travelling", "Sports"];
 
-    hobbiesArray: string[] = [];
+  ngOnInit() {
+    this.employeeInfoFormGroup = this.formBuilder.group({
+      hobbies: ['', RxwebValidators.choice({ maxLength: 4, message: "You can select atmost 4 hobbies" })]
+    });
+  }
 
-    ngOnInit() {
-        this.employeeInfoFormGroup = this.formBuilder.group({
-            hobbies:['',RxwebValidators.choice({maxLength:4,message: "Please select upto 4 hobby"})]
-        });
-        this.http.get("assets/examples/reactive-form-validators/validators/choice/message/choice.json?v="+environment.appVersion).subscribe(response => {
-            this.hobbiesArray = response['hobbiesArray'];
-        })
-    }
-
-    addHobby(element: any, index: number) {
-        element.checked ? this.selectedHobbies.push(element.value) : this.selectedHobbies.splice(index, 1);
-        this.employeeInfoFormGroup.controls.hobbies.setValue(this.selectedHobbies);
-    }
+  addHobby(element: any, index: number) {
+    var indexOf = this.hobbies.indexOf(element.value);
+    element.checked ? this.hobbies.push(element.value) : this.hobbies.splice(indexOf, 1);
+    this.employeeInfoFormGroup.controls.hobbies.setValue(this.hobbies);
+  }
 }

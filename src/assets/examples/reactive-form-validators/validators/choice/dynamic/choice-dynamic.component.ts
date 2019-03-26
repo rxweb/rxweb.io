@@ -11,86 +11,49 @@ import { environment } from 'src/environments/environment';
 export class ChoiceDynamicValidatorComponent implements OnInit {
 
     employeeInfoFormGroup: FormGroup
-
-    selectedQualifications: string[] = [];
-    selectedSkills: string[] = [];
-    selectedHobbies: string[] = [];
+    skills: string[] = [];
+    hobbies: string[] = [];
     projectDomains : string[] = [];
+    languages:string[] = [];
 
-	constructor(
-        private formBuilder: RxFormBuilder , private http: HttpClient )
-	{ }
+    constructor(
+        private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-	qualificationsArray: string[] = [];
-	skillsArray: string[] = [];
-	hobbiesArray: string[] = [];
-	projectDomainsArray : string[] = [];
+    languagesArray: string[] = ["English","Chinese","Japanese","Spanish","French"];
+    skillsArray: string[] = ["MVC","AngularJS","Angular 5","C#","Web Api","SQL Server"];
+    hobbiesArray: string[] = ["Drawing","Singing","Dancing","Travelling","Sports"];
+    projectDomainsArray : string[] = ["ECommerce", "Banking", "Educational", "Gaming"];
 
     ngOnInit() {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/choice/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var employeeInfo = { department:'', projectDomains:'', skills:'', hobbies:'' ,qualifications:'' }
+			var employeeInfo = { department:'', projectDomains:'', skills:'', hobbies:'' ,languages:'' }
 			this.employeeInfoFormGroup = this.formBuilder.group(employeeInfo,formBuilderConfiguration);
 		})
+    }
 
-		this.http.get("assets/examples/reactive-form-validators/validators/choice/dynamic/choice.json?v="+environment.appVersion).subscribe(response => {
-            this.skillsArray = response['skillsArray'];
-            this.hobbiesArray = response['hobbiesArray'];
-            this.projectDomainsArray = response['projectDomainsArray'];
-            this.qualificationsArray = response['qualificationsArray']
-        })
+    addProjectDomain(element: any,index:number) {
+      var indexOf = this.projectDomains.indexOf(element.value);
+      element.checked ? this.projectDomains.push(element.value) : this.projectDomains.splice(indexOf,1);
+       this.employeeInfoFormGroup.controls.projectDomains.setValue(this.projectDomains);
     }
     
-    index = 0;
-    addProjectDomain(element:any) {
-      var value = this.employeeInfoFormGroup.controls.projectDomains.value;
-      if(!value)
-        value = [];
-        if(element.checked) {
-              value.push(element.value);
-              this.index++;
-        }
-        else
-        {
-        var indexOf = value.indexOf(element.value);
-        value.splice(indexOf,1);
-        }
-      this.employeeInfoFormGroup.controls.projectDomains.setValue(value)
+    addSkill(element: any,index:number) {
+      var indexOf = this.skills.indexOf(element.value);
+      element.checked ? this.skills.push(element.value) : this.skills.splice(indexOf,1);
+       this.employeeInfoFormGroup.controls.skills.setValue(this.skills);
     }
 
-      addSkill(element:any) {
-        var value = this.employeeInfoFormGroup.controls.skills.value;
-        if(!value)
-          value = [];
-          if(element.checked) {
-                value.push(element.value);
-                this.index++;
-          }
-          else
-          {
-          var indexOf = value.indexOf(element.value);
-          value.splice(indexOf,1);
-          }
-        this.employeeInfoFormGroup.controls.skills.setValue(value)
+      addHobby(element: any,index:number) {
+        var indexOf = this.hobbies.indexOf(element.value);
+        element.checked ? this.hobbies.push(element.value) : this.hobbies.splice(indexOf,1);
+         this.employeeInfoFormGroup.controls.hobbies.setValue(this.hobbies);
       }
 
-      addHobby(element:any) {
-        var value = this.employeeInfoFormGroup.controls.hobbies.value;
-        if(!value)
-          value = [];
-          if(element.checked) {
-                value.push(element.value);
-                this.index++;
-          }
-          else
-          {
-          var indexOf = value.indexOf(element.value);
-          value.splice(indexOf,1);
-          }
-        this.employeeInfoFormGroup.controls.hobbies.setValue(value)
-      }
-
-
-     
+  addLanguage(element: any, index: number) {
+      var indexOf = this.languages.indexOf(element.value);
+        element.checked ? this.languages.push(element.value) : this.languages.splice(indexOf,1);
+         this.employeeInfoFormGroup.controls.languages.setValue(this.languages);
+  }
 }
