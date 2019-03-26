@@ -12,25 +12,21 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class ChoiceMessageComponent implements OnInit {
     employeeInfoFormGroup: FormGroup
-
-    selectedHobbies: string[] = [];
+    hobbies: string[] = [];
 
     constructor(
         private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-    hobbiesArray: string[] = [];
+    hobbiesArray: string[] = ["Drawing", "Singing", "Dancing", "Travelling", "Sports"];
 
     ngOnInit() {
         let employeeInfo = new EmployeeInfo();
-        this.http.get("assets/examples/reactive-form-validators/decorators/choice/message/choice.json?v="+environment.appVersion).subscribe(response => {
-            this.hobbiesArray = response['hobbiesArray'];
-        })
-
         this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);
     }
 
     addHobby(element: any, index: number) {
-        element.checked ? this.selectedHobbies.push(element.value) : this.selectedHobbies.splice(index, 1);
-        this.employeeInfoFormGroup.controls.hobbies.setValue(this.selectedHobbies);
+        var indexOf = this.hobbies.indexOf(element.value);
+        element.checked ? this.hobbies.push(element.value) : this.hobbies.splice(indexOf, 1);
+        this.employeeInfoFormGroup.controls.hobbies.setValue(this.hobbies);
     }
 }

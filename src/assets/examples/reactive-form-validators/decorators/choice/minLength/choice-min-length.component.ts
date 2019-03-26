@@ -13,25 +13,21 @@ import { environment } from 'src/environments/environment';
 
 export class ChoiceMinLengthComponent implements OnInit {
     employeeInfoFormGroup: FormGroup
-
-    selectedQualifications: string[] = [];
+    qualifications: string[] = [];
 
     constructor(
         private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-        qualificationsArray: string[] = [];
+    qualificationsArray: string[] = ["Secondary","Senior Secondary","B.Tech.","M.Tech.","B.C.A.","M.C.A."];
 
     ngOnInit() {
         let employeeInfo = new EmployeeInfo();
-        this.http.get("assets/examples/reactive-form-validators/decorators/choice/minLength/choice.json?v="+environment.appVersion).subscribe(response => {
-            this.qualificationsArray = response['qualificationsArray'];
-        })
-
         this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);
     }
 
-    addQualification(element: any, index: number) {
-        element.checked ? this.selectedQualifications.push(element.value) : this.selectedQualifications.splice(index, 1);
-        this.employeeInfoFormGroup.controls.qualifications.setValue(this.selectedQualifications);
-    }
+    addQualification(element: any,index:number) {
+        var indexOf = this.qualifications.indexOf(element.value);
+        element.checked ? this.qualifications.push(element.value) : this.qualifications.splice(indexOf,1);
+         this.employeeInfoFormGroup.controls.qualifications.setValue(this.qualifications);
+      }
 }

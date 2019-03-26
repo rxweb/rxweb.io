@@ -8,11 +8,10 @@
         <label>Qualifications</label>
         <div class="form-check" *ngFor="let tag of qualificationsArray; let i = index;">
           <h4>
-            <input (click)="addQualification($event.target,i)"  type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+            <input (click)="addQualification($event.target,i)"  type="checkbox" value="{{tag}}" /> {{tag}}
           </h4>
         </div>
-        <br />
-        <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.qualifications.errors">{{employeeInfoFormGroup.controls.qualifications.errors.choice.message}}</small>
+        <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.qualifications.errors"><br />{{employeeInfoFormGroup.controls.qualifications.errors.choice.message}}</small>
         <br />
         <small class="form-text text-muted" >To apply the validation on 'Qualifications' field, enter 'DotNet' in 'Department' field</small>
         <br />
@@ -21,11 +20,10 @@
         <label>Skills</label><small>( With Conditional Expression )</small><br>
         <div class="form-check" *ngFor="let tag of skillsArray; let i = index;">
           <h4>
-            <input (click)="addSkill($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+            <input (click)="addSkill($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
           </h4>
         </div>
-        <br />
-        <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.skills.errors">{{employeeInfoFormGroup.controls.skills.errors.choice.message}}</small>
+        <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.skills.errors"> <br />{{employeeInfoFormGroup.controls.skills.errors.choice.message}}</small>
         <br />
         <small class="form-text text-muted" >To apply the validation on 'Skills' field, enter 'DotNet' in 'Department' field</small><br />
       </div>

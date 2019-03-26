@@ -7,21 +7,21 @@
             "minLength": 2
         }
     },
-    "qualifications": {
+    "languages": {
         "choice": {
             "maxLength":4
         }
     },
     "skills": {
         "choice": {
-            "minLength":3,
+            "minLength":2,
             "conditionalExpression": "x => x.department =='DotNet'"
         }
     },
     "hobbies": {
         "choice": {
-            "maxLength":5,
-            "message": "Please select upto 5 hobby"
+            "maxLength":4,
+            "message": "You can select upto 5 hobby"
         }
     }
 }

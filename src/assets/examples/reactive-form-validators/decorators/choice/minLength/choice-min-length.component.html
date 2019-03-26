@@ -4,7 +4,7 @@
     <label>Qualification</label>
     <div class="form-check" *ngFor="let tag of qualificationsArray; let i = index;">
         <h4>
-          <input (click)="addQualification($event.target,i)" type="checkbox" value="{{tag.name}}" /> {{tag.name}}
+          <input (click)="addQualification($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
         </h4>
       </div>
       <br>

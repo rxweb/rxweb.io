@@ -12,34 +12,30 @@ import { environment } from 'src/environments/environment';
 })
 export class ChoiceConditionalExpressionComponent implements OnInit {
     employeeInfoFormGroup: FormGroup
-
-    selectedQualifications: string[] = [];
-    selectedSkills: string[] = [];
+    qualifications: string[] = [];
+    skills: string[] = [];
 
     constructor(
         private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-    qualificationsArray: string[] = [];
-    skillsArray: string[] = [];
+        qualificationsArray: string[] = ["Secondary","Senior Secondary","B.Tech.","M.Tech.","B.C.A.","M.C.A."];
+        skillsArray: string[] = ["MVC","AngularJS","Angular 5","C#","Web Api","SQL Server"];
 
     ngOnInit() {
         let employeeInfo = new EmployeeInfo();
-        this.http.get("assets/examples/reactive-form-validators/decorators/choice/conditionalExpression/choice.json?v="+environment.appVersion).subscribe(response => {
-            this.qualificationsArray = response['qualificationsArray'];
-            this.skillsArray = response['skillsArray'];
-        })
-
         this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);
     }
 
-    addQualification(element: any, index: number) {
-        element.checked ? this.selectedQualifications.push(element.value) : this.selectedQualifications.splice(index, 1);
-        this.employeeInfoFormGroup.controls.qualifications.setValue(this.selectedQualifications);
-    }
-    
-    addSkill(element: any, index: number) {
-        element.checked ? this.selectedSkills.push(element.value) : this.selectedSkills.splice(index, 1);
-        this.employeeInfoFormGroup.controls.skills.setValue(this.selectedSkills);
-    }
+    addQualification(element: any,index:number) {
+        var indexOf = this.qualifications.indexOf(element.value);
+        element.checked ? this.qualifications.push(element.value) : this.qualifications.splice(indexOf,1);
+         this.employeeInfoFormGroup.controls.qualifications.setValue(this.qualifications);
+      }
+  
+      addSkill(element: any,index:number) {
+        var indexOf = this.skills.indexOf(element.value);
+        element.checked ? this.skills.push(element.value) : this.skills.splice(indexOf,1);
+         this.employeeInfoFormGroup.controls.skills.setValue(this.skills);
+      }
 
 }

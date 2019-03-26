@@ -4,24 +4,24 @@
     },
     "projectDomains": {
         "choice": {
-            "minLength": 3
+            "minLength": 2
         }
     },
-    "qualifications": {
+    "languages": {
         "choice": {
             "maxLength": 4
         }
     },
     "skills": {
         "choice": {
-            "minLength":3,
+            "minLength":2,
             "conditionalExpression": "x => x.department =='DotNet'"
         }
     },
     "hobbies": {
         "choice": {
-            "maxLength":4,
-            "message": "Please select upto 4 hobby"
+            "maxLength":3,
+            "message": "You can select atmost 3 hobbies"
         }
     }
 }
