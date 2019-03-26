@@ -5947,11 +5947,14 @@ img{
   color: #bd6541;
 }
 .typeit-parameter-type {
-  color:#3dc1a0 
+  color:#c1513d 
 }
-
 .marker {
-  color:#808080;
+  color:#e21111;
+}
+.type-it-error
+{
+    color:#111111;
 }
 .attribute-color {
   color:#9B280F;
@@ -7134,5 +7137,18 @@ padding: 2px 0;
     border-bottom: 2px solid;
 }
 
+@media only screen and (min-width:1200px)
+{
+    .next
+    {
+        font-size: 48px;
+        line-height: 100px;
+        position: fixed;
+        margin-top: 351px;
+    }
+}
+.fas{
+    color: #E8E8E8;
+}
 /*-------- do not add any css here ---------- */
 

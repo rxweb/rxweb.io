@@ -46,7 +46,7 @@ Now, For dynamic server validation rules we can make a call to server or put a J
 Here we are putting static JSON object of validation rules, See the below code:
 <data-scope scope="['decorator']">
 <div component="app-code" key="RxFormBuilder-servervalidationrules-component"></div> 
-</data-scope>
+</data-scope>   
 
 # formGroup
 If you are using decorator based validation approach then your FormGroup will be created through this method. This you many ways to create the FormGroup. We discuss one by one all approches.

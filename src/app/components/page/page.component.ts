@@ -31,6 +31,7 @@ import { ApplicationBroadcaster } from '@rx/core';
   ],
 })
 export class PageComponent implements OnInit {
+  links:any;
   showComponent: boolean = false;
   options: any = { responseType: 'text' };
   codeContent: any = "";
@@ -72,9 +73,31 @@ export class PageComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-
+    this.http.get('assets/json/rxweb-links.json?v=' + environment.appVersion).subscribe((response: any) => {    
+      this.links = response;
+    });
+  }
+  nextLink()
+  {
+    var currentObjIndex = this.links.findIndex(a => a.link ==  location.pathname);
+    if(currentObjIndex != undefined)
+    {
+     currentObjIndex++;
+     var nextObj = this.links[currentObjIndex];
+     this.router.navigate([nextObj.link]);    
+    }
   }
 
+  previousLink()
+  {
+    var currentObjIndex = this.links.findIndex(a => a.link ==  location.pathname);
+    if(currentObjIndex != undefined)
+    {
+     currentObjIndex--;
+     var nextObj = this.links[currentObjIndex];
+     this.router.navigate([nextObj.link]);    
+    }
+  }
   bind() {
     this.showViewer = false;
     let splitedArray = location.pathname.split('/');

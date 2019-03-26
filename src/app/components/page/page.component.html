@@ -1,5 +1,13 @@
 
 <div  id="wrapper" *ngIf="showComponent">
+           
+                <div class="next">
+                        <a class="fas fa-chevron-left" (click)="previousLink()"></a>
+                        <a class="fas fa-chevron-right" style="margin-left: 1420px;" (click)="nextLink()"></a> 
+                      
+                </div>    
+                     
+        
     <div class="content">
         <!-- <app-title [title]="codeContent.title" [description]="codeContent.description" [mainType]="mainType" [activeTab]="activeTab" [validationName]="validationName" [validatorType]="codeContent.validatorType"
             [validationTypeTitle]="codeContent.validationTypeTitle" [templateDrivenType]="templateDrivenType"></app-title> -->
