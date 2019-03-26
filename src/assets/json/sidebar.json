@@ -352,7 +352,12 @@
               "title": "required",
               "uri": "/form-validations/required/validators",
               "isActive": false
-          }
+          },
+          {
+            "title": "notEmpty",
+            "uri": "/form-validations/notEmpty/validators",
+            "isActive": false
+        }
       ]
   },
     {

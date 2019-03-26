@@ -179,6 +179,10 @@ const FORM_VALIDATION_ROUTES: Routes = [
 	loadChildren: './noneOf/none-of.module#NoneOfModule',
 },
 {
+	path:'notEmpty',
+	loadChildren: './notEmpty/not-empty.module#NotEmptyModule',
+},
+{
 	path:'numeric',
 	loadChildren: './numeric/numeric.module#NumericModule',
 },
