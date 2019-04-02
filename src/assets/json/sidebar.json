@@ -374,6 +374,12 @@
           "linkTitle":"reactive-form-config"
         },
         {
+          "title": "FormBuilderConfiguration",
+          "uri": "api/FormBuilderConfiguration/decorators",
+          "isActive": false,
+          "linkTitle":"FormBuilderConfiguration"   
+      },
+        {
             "title":"RxFormBuilder",
             "isActive": false,
             "isOpen": false,
@@ -390,6 +396,39 @@
                     "uri": "api/RxFormBuilder/decorators#formgroup",
                     "isActive": false,
                     "linkTitle":"RxFormBuilder"   
+                }          
+            ]
+          },
+       
+          {
+            "title":"RxFormGroup",
+            "isActive": false,
+            "isOpen": false,
+            "otherUri":"RxFormGroup",
+            "childrens":[
+                {
+                    "title": "patchModelValue",
+                    "uri": "how-to/patchModelValue/validators",
+                    "isActive": false,
+                    "linkTitle":"RxFormGroup"                   
+                },
+                {
+                    "title": "resetForm",
+                    "uri": "how-to/resetForm/validators",
+                    "isActive": false,
+                    "linkTitle":"RxFormGroup"   
+                },
+                {
+                  "title": "isDirty",
+                  "uri": "how-to/dirtyCheck/validators",
+                  "isActive": false,
+                  "linkTitle":"RxFormGroup"   
+                },
+                {
+                  "title": "toformData",
+                  "uri": "how-to/formData/validators",
+                  "isActive": false,
+                  "linkTitle":"RxFormGroup"   
                 }
             ]
           }
@@ -471,7 +510,17 @@
             "title":"Dynamically bind configuration in formGroup",
             "uri":"/how-to/bindConfig/validators",
             "isActive": false
-          }     
+          },
+          {
+            "title":"Patch Model Value in formGroup",
+            "uri":"/how-to/patchModelValue/validators",
+            "isActive": false
+          },
+          {
+            "title":"Use multiple validations using logical operators.",
+            "uri":"/how-to/logicalOperators/validators",
+            "isActive": false
+          }        
       ]
     },
     {

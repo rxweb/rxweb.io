@@ -3,6 +3,7 @@ title: noneOf
 description: noneOf validation  {{validatorType}}  will check whether the user has entered none of the value is selected from the given inputs.
 author: rxcontributorone
 category: form-validations
+subcategory: Array
 type:tabs
 linktitle: noneOf
 ---
@@ -51,7 +52,7 @@ Below options are not mandatory to use in the `noneOf` validation. If needed the
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a (click)='scrollTo("#matchValues")' title="matchValues">matchValues</a></td><td>MatchValues is the array based on which the value is matched for validation. According to it none of the values in the array should be matched.</td></tr>
-<tr><td><a (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>noneOf validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
+<tr><td><a (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>noneOf validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 </table>
 
@@ -62,11 +63,14 @@ matchValues is the array based on which the value is matched for validation. Acc
 
 <div component="app-code" key="oneOf-matchValuesExample-model"></div> 
 <div component="app-example-runner" ref-component="app-noneOf-matchValues" title="noneOf {{validatorType}} with matchValues" key="matchValues"></div>
+
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
 
 noneOf validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.
-If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.
+If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.
+
+> This won't work if you return without expression or fixed boolean value true or false; like : `conditionalExpression: (x) => x.toggle`
 
 <data-scope scope="['validator','decorator']"> 
 > Binding `conditionalExpression` with `Function` object.

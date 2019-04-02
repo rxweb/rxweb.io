@@ -3,6 +3,7 @@ title: async
 description: Async validation {{validatorType}} will allow the field to validate the unique value from server for that particular field. This async validation can be customized according to the need.
 author: rxcontributortwo
 category: form-validations
+subcategory: Custom
 type: tabs
 linktitle: async
 ---

@@ -30,5 +30,13 @@ const HOWTO_ROUTES: Routes = [
 	path:'bindConfig',
 	loadChildren: './bindConfig/bind-config.module#BindConfigModule',
 },
+{
+	path:'patchModelValue',
+	loadChildren: './patchModelValue/patch-model-value.module#PatchModelValueModule',
+},
+{
+	path:'logicalOperators',
+	loadChildren: './logicalOperators/logical-operators.module#LogicalOperatorsModule',
+},
 ];
 export const HOWTO_ROUTING: ModuleWithProviders = RouterModule.forChild(HOWTO_ROUTES);

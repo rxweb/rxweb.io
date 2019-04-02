@@ -3,6 +3,7 @@ title: unique
 description: Unique validation {{validatorType}} is used to validate unique input based on formArray.
 author: rxcontributortwo
 category: form-validations
+subcategory: Array
 type:tabs
 linktitle: unique
 ---

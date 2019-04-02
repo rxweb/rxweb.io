@@ -43,13 +43,13 @@
 					<ais-instantsearch [config]="{
 						  apiKey: '4f3d9e65c9459b43e692a149f365c74e',
 						  appId: 'U3S057LEMB',
-						  indexName: 'rxwebio'
+						  indexName: 'rxwebio1'
 						}">
 						<div class="search-box position-relative">
 
 							<ais-search-box id="search1" placeholder='' type="text"
-								(keyup)="showsearchcontent1($event,searchvalue1)" (blur)="hideSearch1()" #search1
-								[(ngModel)]="searchvalue1" name="searchvalue1"
+								(keyup)="showsearchcontent1($event,searchvalue1)" #search1
+								[(ngModel)]="searchvalue1" name="searchvalue1" (blur)="hideSearch1()"
 								class="search-field search-field-focus ais-SearchBox-input" ngDefaultControl focus>
 							</ais-search-box>
 
@@ -76,7 +76,7 @@
 											<div class="search-title">
 												<a [routerLink]="hit.link"> {{hit.title}}</a>
 											</div>
-											<div class="search-decr"> {{hit.description}}</div>
+							 				<a [routerLink]="hit.link" class="search-decr"> {{hit.description}}</a>
 											<ul class="list-unstyled see-more-links" *ngIf="hits.length == 0">
 												<li class="bold">Go to : </li>
 												<li class="" *ngFor="let item of hit.refLinks">

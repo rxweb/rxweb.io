@@ -1,5 +1,6 @@
-import { GroupCompleteComponent } from "src/assets/examples/api/RxFormBuilder/group/complete/group-complete.component";
-import { FormgroupAddComponent } from "src/assets/examples/api/RxFormBuilder/formGroup/add/formgroup-add.component";
+import { GroupCompleteComponent } from "src/assets/examples/api/RxFormBuilder/complete/group-complete.component";
+import { FormgroupAddComponent } from "src/assets/examples/api/RxFormBuilder/add/formgroup-add.component";
+
 
 
 

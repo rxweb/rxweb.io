@@ -1,0 +1,18 @@
+{
+    "add": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup } from \"@angular/forms\"\r\nimport { RxFormBuilder,RxFormGroup } from '@rxweb/reactive-form-validators';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n    selector: 'app-patch-add',\r\n    templateUrl: './patchmodelvalue-add.component.html'\r\n})\r\nexport class PatchModelValueAddComponent implements OnInit {\r\n    userInfoFormGroup: RxFormGroup\r\n\r\n    constructor(\r\n        private formBuilder: RxFormBuilder    ) { }\r\n\r\n    ngOnInit() {\r\n        let user = new User();\r\n        this.userInfoFormGroup = <RxFormGroup>this.formBuilder.formGroup(user);\r\n        this.userInfoFormGroup.patchModelValue({firstName:'Ajay'})\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form  [formGroup]=\"userInfoFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>FirstName</label>\r\n        <input type=\"text\" formControlName=\"firstName\" class=\"form-control\"  />\r\n      \r\n      </div>\r\n       <div class=\"form-group\">\r\n        <label>lastName</label>\r\n        <input type=\"text\" formControlName=\"lastName\" class=\"form-control\"  />\r\n      \r\n      </div>\r\n      <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>\r\n  ",
+        "model": "import {  required } from   \"@rxweb/reactive-form-validators\"   \r\n\r\nexport class User {\r\n\r\n\t@required() \r\n\tfirstName: string;\r\n\t\r\n\t@required()\r\n  lastName:string;\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },    
+    "complete": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup } from \"@angular/forms\"\r\nimport { RxFormBuilder,RxFormGroup,FormGroupExtension } from '@rxweb/reactive-form-validators';\r\n\r\nimport { Country } from './country.model';\r\n\r\n@Component({\r\n    selector: 'app-error-complete',\r\n    templateUrl: './geterrorsummary-complete.component.html'\r\n})\r\nexport class GetErrorSummaryCompleteComponent implements OnInit {\r\n    \r\n    countryFormGroup: RxFormGroup\r\n  \r\n    constructor(\r\n        private formBuilder: RxFormBuilder    ) { }\r\n\r\n    ngOnInit() {\r\n        let country = new Country();\r\n        this.countryFormGroup = <RxFormGroup>this.formBuilder.formGroup(country);\r\n    }\r\n    showError()\r\n    {\r\n      let errorObject = {};\r\n      errorObject = this.countryFormGroup.getErrorSummary(true);\r\n      console.log(errorObject);\r\n\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form  [formGroup]=\"countryFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>Country Name</label>\r\n        <input type=\"text\" formControlName=\"countryName\" class=\"form-control\"  />\r\n      </div>\r\n       <div class=\"form-group\">\r\n        <label>Country Code</label>\r\n        <input type=\"text\" formControlName=\"countryCode\" class=\"form-control\"  />\r\n      </div>\r\n      <button (click)=\"showError()\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>",
+        "model": "import {required,alphaNumeric} from   \"@rxweb/reactive-form-validators\"   \r\n\r\nexport class Country {\r\n\r\n\t@required() \r\n\tcountryName: string;\r\n\t\r\n\t@alphaNumeric()\r\n  countryCode : string;\r\n}\r\n",
+        "modelName": "country.model.ts",
+        "json": {}
+    }
+}
