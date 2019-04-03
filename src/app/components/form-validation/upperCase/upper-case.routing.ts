@@ -13,3 +13,4 @@ const UPPER_CASE_ROUTES: Routes = [
 
 ];
 export const UPPER_CASE_ROUTING: ModuleWithProviders = RouterModule.forChild(UPPER_CASE_ROUTES);
+<hr /> <div><a href="www.rxweb.io"></a></div>
