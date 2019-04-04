@@ -3,6 +3,7 @@ title: different
 description: Different validation {{validatorType}} will check two inputs whether they are different or not. It is just opposite of different decorator.
 author: rxcontributortwo
 category: form-validations
+subcategory: Relational
 type: tabs
 linktitle: different
 ---

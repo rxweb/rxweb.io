@@ -3,6 +3,7 @@ title: compose
 description: Compose validation {{validatorType}} is used to apply multiple validations on a particular formControl.
 author: rxcontributortwo
 category: form-validations
+subcategory: Custom
 type: tabs
 linktitle: compose
 ---
@@ -53,7 +54,7 @@ Below options are not mandatory to use in the `compose` validation. If needed th
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a (click)='scrollTo("#validators")' title="validators">validators</a></td><td>It is an array of rxwebValidators. Validators are set according to the relative requirement based on which validation you want to apply. Here you have to specify the name of validator which you want to use.</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey option of compose validation is used to set the key based validation message.</td></tr>
-<tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Compose validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
+<tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Compose validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 </table>
 
 ## validators
@@ -76,7 +77,9 @@ messageKey option of compose validation is used to set the key based validation 
 Type :  `Function`  |  `string` 
 
 Compose validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.
-If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.
+If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.
+
+> This won't work if you return without expression or fixed boolean value true or false; like : `conditionalExpression: (x) => x.toggle`
 
 <data-scope scope="['validator','decorator']">
 > Binding `conditionalExpression` with `Function` object. 

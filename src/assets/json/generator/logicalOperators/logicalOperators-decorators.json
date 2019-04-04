@@ -1,0 +1,26 @@
+{
+    "complete": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup } from \"@angular/forms\"\r\nimport { RxFormBuilder } from '@rxweb/reactive-form-validators';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n    selector: 'app-or-complete',\r\n    templateUrl: './or-complete.component.html'\r\n})\r\nexport class OrCompleteComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n    constructor(\r\n        private formBuilder: RxFormBuilder    ) { }\r\n\r\n    ngOnInit() {\r\n        let user = new User();\r\n        this.userInfoFormGroup = this.formBuilder.formGroup(user);\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n        <label>Email</label>\r\n        <input type=\"text\" formControlName=\"email\" class=\"form-control\"  />\r\n       <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.email.errors\">{{userInfoFormGroup.controls.email.errors.or.message}}<br/></small>\t\r\n      </div>\r\n      <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>\r\n  ",
+        "model": "import { or } from   \"@rxweb/reactive-form-validators\"   \r\n\r\nexport class User {\r\n\r\n  @or({validation:{contains:{value:'@gmail.com'},endsWith:{value:'.com'}}})\r\n  email: string;\t\r\n\t\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "add": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators,RxFormBuilder } from '@rxweb/reactive-form-validators';\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n    selector: 'app-and-add',\r\n    templateUrl: './and-add.component.html'\r\n})\r\nexport class AndAddComponent implements OnInit {\r\n    userFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: RxFormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        let user = new User();\r\n        this.userFormGroup = this.formBuilder.formGroup(user);\r\n    }\r\n}",
+        "html": "<div>\r\n    <form  [formGroup]=\"userFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>Flat Address</label>\r\n        <input type=\"text\" formControlName=\"flatAddress\" class=\"form-control\"  />\r\n       <small class=\"form-text text-danger\" *ngIf=\"userFormGroup.controls.flatAddress.errors\">{{userFormGroup.controls.flatAddress.errors.and.message}}<br/></small>\t\r\n      </div>\r\n      <button [disabled]=\"!userFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>",
+        "model": "import { and } from   \"@rxweb/reactive-form-validators\"   \r\n\r\nexport class User {\r\n\r\n  @and({validation:{alphaNumeric:{allowWhiteSpace:true},maxLength:{value:50}}})\r\n  flatAddress: string;\r\n\t\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "digit": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators,RxFormBuilder } from '@rxweb/reactive-form-validators';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n    selector: 'app-not-digit',\r\n    templateUrl: './not-digit.component.html'\r\n})\r\nexport class NotDigitComponent implements OnInit {\r\n    userFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: RxFormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        let user = new User();\r\n        this.userFormGroup = this.formBuilder.formGroup(user);\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form  [formGroup]=\"userFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>Age</label>\r\n        <input type=\"text\" formControlName=\"age\" class=\"form-control\"  />\r\n       <small class=\"form-text text-danger\" *ngIf=\"userFormGroup.controls.age.errors\">{{userFormGroup.controls.age.errors.not.message}}<br/></small>\t\r\n      </div>\r\n      <button [disabled]=\"!userFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>",
+        "model": "import { not } from   \"@rxweb/reactive-form-validators\"   \r\n\r\nexport class User {\r\n\r\n\r\n  @not({validation:{maxNumber:{value:9},minNumber:{value:100}}})\r\n  age: string;\r\n\t\r\n\t\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    }
+}

@@ -3,19 +3,16 @@ import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
-import { GroupCompleteComponent } from './complete/group-complete.component';
-
-
-
+import {  PatchCompleteComponent } from './complete/patch-complete.component';
 
 
 
 @NgModule({
   declarations: [
-    GroupCompleteComponent
+    PatchCompleteComponent
   ],
 entryComponents: [
-	GroupCompleteComponent
+	PatchCompleteComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -24,8 +21,8 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-    GroupCompleteComponent
+    PatchCompleteComponent
   ],
 
 })
-export class  GroupExtendedModule { }
+export class  PatchModelValueDecoratorsExtendedModule { }

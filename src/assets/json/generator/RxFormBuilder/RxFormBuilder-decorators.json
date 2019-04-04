@@ -28,4 +28,5 @@
     "addcomponent":{"component":"this.userInfoFormGroup = this.formBuilder.formGroup(User);"},
     "modelinstance":{"component":"this.user = new User();\r\nthis.userInforFormGroup = this.formBuilder.formGroup(this.user);"},
     "serverdata":{"component":"let jObject = {\"firstName\":\"John\",\"lastName\":\"Cena\"};\r\nthis.userInfoFormGroup = this.formBuilder.formGroup(User,jObject);"}
+  
 }

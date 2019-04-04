@@ -34,7 +34,16 @@
         "link": "/how-to/bindConfig/validators",
         "linkTree":["How to"]
     }, 
- 
+    {
+        "title": "Use multiple validations using logical operators.",
+        "link": "/how-to/logicalOperators/validators",
+        "linkTree":["How to"]
+    },
+    {
+        "title": "RxFormBuilder",
+        "link": "/api/RxFormBuilder/decorators",
+        "linkTrees": ["api"]
+    },
     {
         "title": "prop",
         "link": "/decorators/prop/decorators",
@@ -357,7 +366,7 @@
     },
     {
         "title": "escape",
-        "link": "/sanitization/escape/validators",
+        "link": "/sanitization/escape/decorators",
         "linkTree":["/sanitization"]
     },
     {

@@ -3,20 +3,17 @@ import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
-import { FormgroupAddComponent } from './add/formgroup-add.component';
-
-
-
-
-
+import { OrCompleteComponent } from './or/Complete/or-complete.component';
+import { AndAddComponent } from './and/and-add.component';
+import { NotDigitComponent } from './not/digit/not-digit.component';
 
 
 @NgModule({
   declarations: [
-    FormgroupAddComponent
+    OrCompleteComponent,AndAddComponent,NotDigitComponent
   ],
 entryComponents: [
-	FormgroupAddComponent
+	OrCompleteComponent,AndAddComponent,NotDigitComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -25,8 +22,8 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-    FormgroupAddComponent
+    OrCompleteComponent,AndAddComponent,NotDigitComponent
   ],
 
 })
-export class  FormGroupExtendedModule { }
+export class  LogicalOperatorsDecoratorsExtendedModule { }

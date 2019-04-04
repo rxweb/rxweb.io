@@ -3,6 +3,7 @@ title: compare
 description: Compare validation  {{validatorType}}  will compare two inputs whether they are same or not.
 author: rxcontributorone
 category: form-validations
+subcategory: Relational
 type: tabs
 linktitle: compare
 ---

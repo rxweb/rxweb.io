@@ -3,6 +3,7 @@ title: password
 description: Password validation  {{validatorType}}  will allow user to enter only the input according to correct password validation format.
 author: rxcontributorone
 category: form-validations
+subcategory: String
 type:tabs
 linktitle: password
 ---

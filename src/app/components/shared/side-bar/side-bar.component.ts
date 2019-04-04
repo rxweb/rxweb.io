@@ -35,29 +35,15 @@ export class SideBarComponent implements OnInit {
           currentArray[0].isActive = true;
           currentArray[0].isOpen = true;
           if (splitedArray[2]) {
-            if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-              if (splitedArray[1].includes('api')) {
-                var currentObj = currentArray[0].childrens[1].childrens.filter(a => a.linkTitle == splitedArray[2]);
-                if (currentObj && currentObj.length > 0) {
-                  currentObj[0].isActive = true;
-                  currentObj[0].isOpen = true;
-                }
-                else {
-                  var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]);
-                  if (currentObj && currentObj.length > 0) {
-                    currentObj[0].isActive = true;
-                    currentObj[0].isOpen = true;
-                  }
-                }
-              }
-              else if (splitedArray[1].includes('decorators') || splitedArray[1].includes('sanitization')) {
+            if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {            
+               if (splitedArray[1].includes('decorators') || splitedArray[1].includes('sanitization')) {
                 var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
                 if (currentObj && currentObj.length > 0) {
                   currentObj[0].isActive = true;
                   currentObj[0].isOpen = true;
                 }
               }
-              else if (splitedArray[1].includes('form-validation')) {     
+              else if (splitedArray[1].includes('form-validation')) {  
 
                 currentArray[0].childrens.forEach(formvalidation => {
                   if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {

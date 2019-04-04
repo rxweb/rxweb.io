@@ -1,0 +1,26 @@
+{
+    "complete": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup } from \"@angular/forms\"\r\nimport { RxFormBuilder,RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n\r\n@Component({\r\n    selector: 'app-or-complete-validator',\r\n    templateUrl: './or-complete.complete.html'\r\n})\r\nexport class OrCompleteValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n    constructor(\r\n        private formBuilder: RxFormBuilder    ) { }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            email :['',RxwebValidators.or({validation:{contains:{value:'@gmail.com'},endsWith:{value:'.com'}}})]\r\n          });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form  [formGroup]=\"userInfoFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>Email</label>\r\n        <input type=\"text\" formControlName=\"email\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.email.errors\">{{userInfoFormGroup.controls.email.errors.or.message}}<br/></small>\t\r\n      </div>\r\n\r\n      <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>\r\n  ",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "add": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-and-add-validator',\r\n    templateUrl: './and-add.component.html'\r\n})\r\nexport class AndAddValidatorComponent implements OnInit {\r\n    userFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userFormGroup = this.formBuilder.group({\r\n            flatAddress:['', RxwebValidators.and({validation:{alphaNumeric:{allowWhiteSpace:true},maxLength:{value:50}}})]\r\n        });\r\n    }\r\n}",
+        "html": "<div>\r\n    <form  [formGroup]=\"userFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>Flat Address</label>\r\n        <input type=\"text\" formControlName=\"flatAddress\" class=\"form-control\"  />\r\n       <small class=\"form-text text-danger\" *ngIf=\"userFormGroup.controls.flatAddress.errors\">{{userFormGroup.controls.flatAddress.errors.and.message}}<br/></small>\t\r\n      </div>\r\n      <button [disabled]=\"!userFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "digit": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-not-digit-validator',\r\n    templateUrl: './not-digit.component.html'\r\n})\r\nexport class NotDigitValidatorComponent implements OnInit {\r\n    userFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userFormGroup = this.formBuilder.group({\r\n            age:['', RxwebValidators.not({validation:{maxNumber:{value:9},minNumber:{value:100}}})],\r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form  [formGroup]=\"userFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>Age</label>\r\n        <input type=\"text\" formControlName=\"age\" class=\"form-control\"  />\r\n       <small class=\"form-text text-danger\" *ngIf=\"userFormGroup.controls.age.errors\">{{userFormGroup.controls.age.errors.not.message}}<br/></small>\t\r\n      </div>\r\n      <button [disabled]=\"!userFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>\r\n  ",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }
+}
