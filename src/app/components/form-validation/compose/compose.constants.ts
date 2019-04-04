@@ -17,3 +17,4 @@ export const COMPOSE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						add : ComposeAddValidatorComponent,
 			  },
 }
+<hr /> <div><a href="www.rxweb.io"></a></div>
