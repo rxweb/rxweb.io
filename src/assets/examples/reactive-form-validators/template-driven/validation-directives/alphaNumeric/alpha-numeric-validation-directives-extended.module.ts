@@ -9,6 +9,7 @@ import { AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent } from 
 import { AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent } from './allowWhiteSpace/alpha-numeric-allow-white-space.component';
 import { AlphaNumericMessageTemplateDrivenValidationDirectivesComponent } from './message/alpha-numeric-message.component';
 import { AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/alpha-numeric-conditional-expression.component';
+import { AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/alpha-numeric-message-key.component';
 import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from './add/alpha-numeric-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from './ad
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
   ],
 

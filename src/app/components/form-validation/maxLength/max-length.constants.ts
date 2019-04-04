@@ -14,6 +14,10 @@ import { MaxLengthMessageComponent } from "src/assets/examples/reactive-form-val
 import { MaxLengthMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/maxLength/message/max-length-message.component";
 import { MaxLengthMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/maxLength/message/max-length-message.component";
 import { MaxLengthMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/maxLength/message/max-length-message.component";
+import { MaxLengthMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/maxLength/messageKey/max-length-message-key.component";
+import { MaxLengthMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/maxLength/messageKey/max-length-message-key.component";
+import { MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/maxLength/messageKey/max-length-message-key.component";
+import { MaxLengthMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/maxLength/messageKey/max-length-message-key.component";
 import { MaxLengthDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/maxLength/dynamic/max-length-dynamic.component";
 import { MaxLengthDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/maxLength/dynamic/max-length-dynamic.component";
 import { MaxLengthAddComponent } from "src/assets/examples/reactive-form-validators/decorators/maxLength/add/max-length-add.component";
@@ -28,6 +32,7 @@ export const MAX_LENGTH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MaxLengthValueComponent,
 						conditionalExpression : MaxLengthConditionalExpressionComponent,
 						message : MaxLengthMessageComponent,
+						messageKey : MaxLengthMessageKeyComponent,
 						dynamic : MaxLengthDynamicComponent,
 						add : MaxLengthAddComponent,
 						edit : MaxLengthEditComponent,
@@ -37,6 +42,7 @@ export const MAX_LENGTH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MaxLengthValueTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : MaxLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : MaxLengthMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : MaxLengthMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : MaxLengthAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const MAX_LENGTH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MaxLengthValueTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const MAX_LENGTH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MaxLengthValueValidatorComponent,
 						conditionalExpression : MaxLengthConditionalExpressionValidatorComponent,
 						message : MaxLengthMessageValidatorComponent,
+						messageKey : MaxLengthMessageKeyValidatorComponent,
 						dynamic : MaxLengthDynamicValidatorComponent,
 						add : MaxLengthAddValidatorComponent,
 			  },

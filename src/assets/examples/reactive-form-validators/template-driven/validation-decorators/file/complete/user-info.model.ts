@@ -25,4 +25,8 @@ export class UserInfo {
 	minMaxFiles: string;
 	
 	
+	@file({minFiles:2  ,maxFiles:5  ,messageKey:'fileMessageKey' }) 
+	excelFiles: string;
+	
+	
 }

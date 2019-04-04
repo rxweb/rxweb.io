@@ -11,4 +11,9 @@ export class User {
 	confirmPassword: string;
 	
 	
+	contactNumber: string;
+
+	confirmContactNumber: string;
+	
+	
 }

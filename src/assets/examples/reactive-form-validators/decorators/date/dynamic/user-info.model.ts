@@ -11,4 +11,7 @@ export class UserInfo {
 	@prop()
 	allocationDate: string;
 
+	@prop()
+	confirmationDate: string;
+
 }

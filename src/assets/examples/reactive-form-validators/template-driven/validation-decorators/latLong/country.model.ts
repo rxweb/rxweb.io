@@ -1,9 +1,17 @@
-import {  latLong, } from   "@rxweb/reactive-form-validators"   
+import {  latLong,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class Country {
 
-	@latLong() 
+	@prop()
+	continent: string;
+
+	@prop()
+	thirdCountry: string;
+
+	@prop()
 	firstCountry: string;
-	
-	
+
+	@prop()
+	fourthCountry: string;
+
 }

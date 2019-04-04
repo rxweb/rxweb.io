@@ -14,6 +14,10 @@ import { GreaterThanMessageComponent } from "src/assets/examples/reactive-form-v
 import { GreaterThanMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/greaterThan/message/greater-than-message.component";
 import { GreaterThanMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/greaterThan/message/greater-than-message.component";
 import { GreaterThanMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/greaterThan/message/greater-than-message.component";
+import { GreaterThanMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/greaterThan/messageKey/greater-than-message-key.component";
+import { GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/greaterThan/messageKey/greater-than-message-key.component";
+import { GreaterThanMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/greaterThan/messageKey/greater-than-message-key.component";
+import { GreaterThanMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/greaterThan/messageKey/greater-than-message-key.component";
 import { GreaterThanDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/greaterThan/dynamic/greater-than-dynamic.component";
 import { GreaterThanDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/greaterThan/dynamic/greater-than-dynamic.component";
 import { GreaterThanAddComponent } from "src/assets/examples/reactive-form-validators/decorators/greaterThan/add/greater-than-add.component";
@@ -28,6 +32,7 @@ export const GREATER_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : GreaterThanFieldNameComponent,
 						conditionalExpression : GreaterThanConditionalExpressionComponent,
 						message : GreaterThanMessageComponent,
+						messageKey : GreaterThanMessageKeyComponent,
 						dynamic : GreaterThanDynamicComponent,
 						add : GreaterThanAddComponent,
 						edit : GreaterThanEditComponent,
@@ -37,6 +42,7 @@ export const GREATER_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : GreaterThanFieldNameTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : GreaterThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : GreaterThanMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : GreaterThanAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const GREATER_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : GreaterThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : GreaterThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : GreaterThanMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : GreaterThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : GreaterThanAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const GREATER_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : GreaterThanFieldNameValidatorComponent,
 						conditionalExpression : GreaterThanConditionalExpressionValidatorComponent,
 						message : GreaterThanMessageValidatorComponent,
+						messageKey : GreaterThanMessageKeyValidatorComponent,
 						dynamic : GreaterThanDynamicValidatorComponent,
 						add : GreaterThanAddValidatorComponent,
 			  },

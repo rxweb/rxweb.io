@@ -10,6 +10,10 @@ import { LatLongMessageComponent } from "src/assets/examples/reactive-form-valid
 import { LatLongMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/latLong/message/lat-long-message.component";
 import { LatLongMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/latLong/message/lat-long-message.component";
 import { LatLongMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/latLong/message/lat-long-message.component";
+import { LatLongMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/latLong/messageKey/lat-long-message-key.component";
+import { LatLongMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/latLong/messageKey/lat-long-message-key.component";
+import { LatLongMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/latLong/messageKey/lat-long-message-key.component";
+import { LatLongMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/latLong/messageKey/lat-long-message-key.component";
 import { LatLongDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/latLong/dynamic/lat-long-dynamic.component";
 import { LatLongDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/latLong/dynamic/lat-long-dynamic.component";
 import { LatLongAddComponent } from "src/assets/examples/reactive-form-validators/decorators/latLong/add/lat-long-add.component";
@@ -23,6 +27,7 @@ export const LAT_LONG_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LatLongCompleteComponent,
 						conditionalExpression : LatLongConditionalExpressionComponent,
 						message : LatLongMessageComponent,
+						messageKey : LatLongMessageKeyComponent,
 						dynamic : LatLongDynamicComponent,
 						add : LatLongAddComponent,
 						edit : LatLongEditComponent,
@@ -31,18 +36,21 @@ export const LAT_LONG_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LatLongCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : LatLongConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : LatLongMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : LatLongMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : LatLongAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : LatLongCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : LatLongConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : LatLongMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : LatLongMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : LatLongAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : LatLongCompleteValidatorComponent,
 						conditionalExpression : LatLongConditionalExpressionValidatorComponent,
 						message : LatLongMessageValidatorComponent,
+						messageKey : LatLongMessageKeyValidatorComponent,
 						dynamic : LatLongDynamicValidatorComponent,
 						add : LatLongAddValidatorComponent,
 			  },

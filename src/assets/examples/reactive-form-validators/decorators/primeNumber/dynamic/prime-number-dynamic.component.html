@@ -11,14 +11,20 @@
       <input type="text" formControlName="thirdNumber" class="form-control"  />
       <small class="form-text text-muted">If you want to apply conditional validation on 'Third Number' then you need to add 'Number Type' input as 'Prime'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
-      <small class="form-text text-danger" *ngIf="numberInfoFormGroup.controls.thirdNumber.errors">{{numberInfoFormGroup.controls.thirdNumber.errors.primeNumber.message}}<br/></small>
+	<small class="form-text text-danger" *ngIf="numberInfoFormGroup.controls.thirdNumber.errors">{{numberInfoFormGroup.controls.thirdNumber.errors.primeNumber.message}}<br/></small>
     </div>
     <div class="form-group">
       <label>First Number</label>
       <input type="text" formControlName="firstNumber" class="form-control"  />
       <small class="form-text text-muted">You can enter only prime number<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>
-      <small class="form-text text-danger" *ngIf="numberInfoFormGroup.controls.firstNumber.errors">{{numberInfoFormGroup.controls.firstNumber.errors.primeNumber.message}}<br/></small>
+	<small class="form-text text-danger" *ngIf="numberInfoFormGroup.controls.firstNumber.errors">{{numberInfoFormGroup.controls.firstNumber.errors.primeNumber.message}}<br/></small>
+    </div>
+    <div class="form-group">
+      <label>Fourth Number</label>
+      <input type="text" formControlName="fourthNumber" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message using messageKey<br/></small>
+	<small class="form-text text-danger" *ngIf="numberInfoFormGroup.controls.fourthNumber.errors">{{numberInfoFormGroup.controls.fourthNumber.errors.primeNumber.message}}<br/></small>
     </div>
     <button [disabled]="!numberInfoFormGroup.valid" class="btn btn-primary">Submit</button>
   </form>

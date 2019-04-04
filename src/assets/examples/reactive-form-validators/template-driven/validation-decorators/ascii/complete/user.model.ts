@@ -19,4 +19,8 @@ export class User {
 	specialCharAsciiCode: string;
 	
 	
+	@ascii({messageKey:'asciiMessageKey' }) 
+	digitalCode: string;
+	
+	
 }

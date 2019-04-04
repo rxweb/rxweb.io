@@ -14,4 +14,7 @@ export class Contact {
 	@prop()
 	stateCode: string;
 
+	@prop()
+	stateName: string;
+
 }

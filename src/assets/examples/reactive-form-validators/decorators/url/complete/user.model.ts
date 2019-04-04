@@ -20,4 +20,8 @@ export class User {
 	maintenanceWebSiteUrl: string;
 	
 	
+	@url({messageKey:'urlMessageKey' }) 
+	deployedWebSiteUrl: string;
+	
+	
 }

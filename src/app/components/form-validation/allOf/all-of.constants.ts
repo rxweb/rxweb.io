@@ -10,6 +10,8 @@ import { AllOfMatchValuesComponent } from "src/assets/examples/reactive-form-val
 import { AllOfMessageComponent } from "src/assets/examples/reactive-form-validators/decorators/allOf/message/all-of-message.component";
 import { AllOfDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/allOf/dynamic/all-of-dynamic.component";
 import { AllOfAddComponent } from "src/assets/examples/reactive-form-validators/decorators/allOf/add/all-of-add.component";
+import { AllOfMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/allOf/messageKey/all-of-message-key.component";
+import { AllOfMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/allOf/messageKey/all-of-message-key.component";
 
 export const ALL_OF_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
@@ -18,7 +20,8 @@ export const ALL_OF_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						matchValues : AllOfMatchValuesComponent,
 						message : AllOfMessageComponent,
 						dynamic : AllOfDynamicComponent,
-						add : AllOfAddComponent,
+            add: AllOfAddComponent,
+            messageKey: AllOfMessageKeyComponent
 			  },
 	template_driven_validation_directives:{
 						// complete : AllOfCompleteTemplateDrivenValidationDirectivesComponent,
@@ -40,6 +43,7 @@ export const ALL_OF_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						matchValues : AllOfMatchValuesValidatorComponent,
 						message : AllOfMessageValidatorComponent,
 						dynamic : AllOfDynamicValidatorComponent,
-						add : AllOfAddValidatorComponent,
+            add: AllOfAddValidatorComponent,
+            messageKey: AllOfMessageKeyValidatorComponent
 			  },
 }

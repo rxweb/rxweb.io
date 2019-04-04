@@ -19,6 +19,7 @@ export class NotEmptyCompleteValidatorComponent implements OnInit {
             middleName:['', RxwebValidators.notEmpty({conditionalExpression:(x,y) => x.firstName == "Bharat"  })], 
             lastName:['', RxwebValidators.notEmpty({conditionalExpression:'x => x.firstName == "Bharat"' })], 
             userName:['', RxwebValidators.notEmpty({message:'Username cannot be blank.' })], 
+            fullName:['', RxwebValidators.notEmpty({messageKey:'notEmptyMessageKey' })], 
         });
     }
 }

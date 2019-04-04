@@ -23,4 +23,8 @@ export class CompanyInfo {
 	appleIncCusipCode: string;
 	
 	
+	@cusip({messageKey:'cusipMessageKey' }) 
+	amazonCorporationCusipCode: string;
+	
+	
 }

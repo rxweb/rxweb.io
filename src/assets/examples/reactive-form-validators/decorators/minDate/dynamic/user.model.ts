@@ -23,4 +23,7 @@ export class User {
 	@prop()
 	confirmationDate: string;
 
+	@prop()
+	resignationDate: string;
+
 }

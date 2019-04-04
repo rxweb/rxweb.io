@@ -26,6 +26,10 @@ import { ImageMessageComponent } from "src/assets/examples/reactive-form-validat
 import { ImageMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/image/message/image-message.component";
 import { ImageMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/image/message/image-message.component";
 import { ImageMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/image/message/image-message.component";
+import { ImageMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/image/messageKey/image-message-key.component";
+import { ImageMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/image/messageKey/image-message-key.component";
+import { ImageMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/image/messageKey/image-message-key.component";
+import { ImageMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/image/messageKey/image-message-key.component";
 import { ImageDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/image/dynamic/image-dynamic.component";
 import { ImageDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/image/dynamic/image-dynamic.component";
 import { ImageAddComponent } from "src/assets/examples/reactive-form-validators/decorators/image/add/image-add.component";
@@ -43,6 +47,7 @@ export const IMAGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minWidth : ImageMinWidthComponent,
 						conditionalExpression : ImageConditionalExpressionComponent,
 						message : ImageMessageComponent,
+						messageKey : ImageMessageKeyComponent,
 						dynamic : ImageDynamicComponent,
 						add : ImageAddComponent,
 						edit : ImageEditComponent,
@@ -55,6 +60,7 @@ export const IMAGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minWidth : ImageMinWidthTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : ImageConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : ImageMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : ImageMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : ImageAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -65,6 +71,7 @@ export const IMAGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minWidth : ImageMinWidthTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : ImageConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : ImageMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : ImageMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : ImageAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -75,6 +82,7 @@ export const IMAGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minWidth : ImageMinWidthValidatorComponent,
 						conditionalExpression : ImageConditionalExpressionValidatorComponent,
 						message : ImageMessageValidatorComponent,
+						messageKey : ImageMessageKeyValidatorComponent,
 						dynamic : ImageDynamicValidatorComponent,
 						add : ImageAddValidatorComponent,
 			  },

@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PortCompleteTemplateDrivenValidationDirectivesComponent } from './complete/port-complete.component';
 import { PortConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/port-conditional-expression.component';
 import { PortMessageTemplateDrivenValidationDirectivesComponent } from './message/port-message.component';
+import { PortMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/port-message-key.component';
 import { PortAddTemplateDrivenValidationDirectivesComponent } from './add/port-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { PortAddTemplateDrivenValidationDirectivesComponent } from './add/port-a
 	PortCompleteTemplateDrivenValidationDirectivesComponent,
 	PortConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	PortMessageTemplateDrivenValidationDirectivesComponent,
+	PortMessageKeyTemplateDrivenValidationDirectivesComponent,
 	PortAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	PortCompleteTemplateDrivenValidationDirectivesComponent,
 	PortConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	PortMessageTemplateDrivenValidationDirectivesComponent,
+	PortMessageKeyTemplateDrivenValidationDirectivesComponent,
 	PortAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	PortCompleteTemplateDrivenValidationDirectivesComponent,
 	PortConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	PortMessageTemplateDrivenValidationDirectivesComponent,
+	PortMessageKeyTemplateDrivenValidationDirectivesComponent,
 	PortAddTemplateDrivenValidationDirectivesComponent,
   ],
 

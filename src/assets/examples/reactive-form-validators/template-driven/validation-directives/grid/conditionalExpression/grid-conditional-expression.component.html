@@ -1,5 +1,5 @@
 <div>
-  <form #digitalinfoForm = "ngForm" [rxwebForm]="digitalinfoForm">
+  <form #digitalinfoForm = "ngForm" [rxwebForm]="digitalinfoForm" [model]="digitalinfo">
     <div class="form-group">
       <label>SoundRecording GRid</label>
 	    <input type="text" name="soundRecordingGrid" [(ngModel)]="digitalinfo.soundRecordingGrid"  class="form-control" grid/>

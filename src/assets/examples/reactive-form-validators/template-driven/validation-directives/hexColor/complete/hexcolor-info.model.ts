@@ -13,4 +13,7 @@ export class HexcolorInfo {
 	bodyHexcolorCode: string;
 	
 	
+	titleHexcolorCode: string;
+	
+	
 }

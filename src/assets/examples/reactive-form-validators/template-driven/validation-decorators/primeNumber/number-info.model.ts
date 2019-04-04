@@ -1,9 +1,17 @@
-import {  primeNumber, } from   "@rxweb/reactive-form-validators"   
+import {  primeNumber,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class NumberInfo {
 
-	@primeNumber() 
+	@prop()
+	numberType: string;
+
+	@prop()
+	thirdNumber: string;
+
+	@prop()
 	firstNumber: string;
-	
-	
+
+	@prop()
+	fourthNumber: string;
+
 }

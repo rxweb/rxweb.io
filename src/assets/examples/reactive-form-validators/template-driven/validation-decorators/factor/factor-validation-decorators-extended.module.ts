@@ -10,6 +10,7 @@ import { FactorFieldNameTemplateDrivenValidationDecoratorsComponent } from './fi
 import { FactorConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/factor-conditional-expression.component';
 import { FactorDividendTemplateDrivenValidationDecoratorsComponent } from './dividend/factor-dividend.component';
 import { FactorMessageTemplateDrivenValidationDecoratorsComponent } from './message/factor-message.component';
+import { FactorMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/factor-message-key.component';
 import { FactorAddTemplateDrivenValidationDecoratorsComponent } from './add/factor-add.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FactorAddTemplateDrivenValidationDecoratorsComponent } from './add/fact
 	FactorConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	FactorDividendTemplateDrivenValidationDecoratorsComponent,
 	FactorMessageTemplateDrivenValidationDecoratorsComponent,
+	FactorMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	FactorAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -27,6 +29,7 @@ entryComponents: [
 	FactorConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	FactorDividendTemplateDrivenValidationDecoratorsComponent,
 	FactorMessageTemplateDrivenValidationDecoratorsComponent,
+	FactorMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	FactorAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -41,6 +44,7 @@ entryComponents: [
 	FactorConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	FactorDividendTemplateDrivenValidationDecoratorsComponent,
 	FactorMessageTemplateDrivenValidationDecoratorsComponent,
+	FactorMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	FactorAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

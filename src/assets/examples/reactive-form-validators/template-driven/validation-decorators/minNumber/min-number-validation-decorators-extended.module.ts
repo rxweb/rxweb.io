@@ -9,6 +9,7 @@ import { MinNumberCompleteTemplateDrivenValidationDecoratorsComponent } from './
 import { MinNumberValueTemplateDrivenValidationDecoratorsComponent } from './value/min-number-value.component';
 import { MinNumberMessageTemplateDrivenValidationDecoratorsComponent } from './message/min-number-message.component';
 import { MinNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/min-number-conditional-expression.component';
+import { MinNumberMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/min-number-message-key.component';
 import { MinNumberAddTemplateDrivenValidationDecoratorsComponent } from './add/min-number-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MinNumberAddTemplateDrivenValidationDecoratorsComponent } from './add/m
 	MinNumberValueTemplateDrivenValidationDecoratorsComponent,
 	MinNumberMessageTemplateDrivenValidationDecoratorsComponent,
 	MinNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	MinNumberMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MinNumberAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	MinNumberValueTemplateDrivenValidationDecoratorsComponent,
 	MinNumberMessageTemplateDrivenValidationDecoratorsComponent,
 	MinNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	MinNumberMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MinNumberAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	MinNumberValueTemplateDrivenValidationDecoratorsComponent,
 	MinNumberMessageTemplateDrivenValidationDecoratorsComponent,
 	MinNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	MinNumberMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MinNumberAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

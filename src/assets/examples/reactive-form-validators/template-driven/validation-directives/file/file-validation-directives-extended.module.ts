@@ -10,6 +10,7 @@ import { FileMaxFilesTemplateDrivenValidationDirectivesComponent } from './maxFi
 import { FileMinFilesTemplateDrivenValidationDirectivesComponent } from './minFiles/file-min-files.component';
 import { FileConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/file-conditional-expression.component';
 import { FileMessageTemplateDrivenValidationDirectivesComponent } from './message/file-message.component';
+import { FileMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/file-message-key.component';
 import { FileAddTemplateDrivenValidationDirectivesComponent } from './add/file-add.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FileAddTemplateDrivenValidationDirectivesComponent } from './add/file-a
 	FileMinFilesTemplateDrivenValidationDirectivesComponent,
 	FileConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	FileMessageTemplateDrivenValidationDirectivesComponent,
+	FileMessageKeyTemplateDrivenValidationDirectivesComponent,
 	FileAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -27,6 +29,7 @@ entryComponents: [
 	FileMinFilesTemplateDrivenValidationDirectivesComponent,
 	FileConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	FileMessageTemplateDrivenValidationDirectivesComponent,
+	FileMessageKeyTemplateDrivenValidationDirectivesComponent,
 	FileAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -41,6 +44,7 @@ entryComponents: [
 	FileMinFilesTemplateDrivenValidationDirectivesComponent,
 	FileConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	FileMessageTemplateDrivenValidationDirectivesComponent,
+	FileMessageKeyTemplateDrivenValidationDirectivesComponent,
 	FileAddTemplateDrivenValidationDirectivesComponent,
   ],
 

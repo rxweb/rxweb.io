@@ -7,4 +7,6 @@ export class User {
 
 	lastName: string;
 
+	state: string;
+
 }

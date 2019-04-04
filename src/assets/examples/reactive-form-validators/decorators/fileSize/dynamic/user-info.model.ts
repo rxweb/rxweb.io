@@ -20,4 +20,7 @@ export class UserInfo {
 	@prop()
 	profilePicture: string;
 
+	@prop()
+	excelFile: string;
+
 }

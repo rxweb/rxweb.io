@@ -18,6 +18,10 @@ import { NumericMessageComponent } from "src/assets/examples/reactive-form-valid
 import { NumericMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/numeric/message/numeric-message.component";
 import { NumericMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/numeric/message/numeric-message.component";
 import { NumericMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/numeric/message/numeric-message.component";
+import { NumericMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/numeric/messageKey/numeric-message-key.component";
+import { NumericMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/numeric/messageKey/numeric-message-key.component";
+import { NumericMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/numeric/messageKey/numeric-message-key.component";
+import { NumericMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/numeric/messageKey/numeric-message-key.component";
 import { NumericDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/numeric/dynamic/numeric-dynamic.component";
 import { NumericDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/numeric/dynamic/numeric-dynamic.component";
 import { NumericAddComponent } from "src/assets/examples/reactive-form-validators/decorators/numeric/add/numeric-add.component";
@@ -33,6 +37,7 @@ export const NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						allowDecimal : NumericAllowDecimalComponent,
 						conditionalExpression : NumericConditionalExpressionComponent,
 						message : NumericMessageComponent,
+						messageKey : NumericMessageKeyComponent,
 						dynamic : NumericDynamicComponent,
 						add : NumericAddComponent,
 						edit : NumericEditComponent,
@@ -43,6 +48,7 @@ export const NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						allowDecimal : NumericAllowDecimalTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : NumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : NumericMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : NumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : NumericAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -51,6 +57,7 @@ export const NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						allowDecimal : NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : NumericMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : NumericAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -59,6 +66,7 @@ export const NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						allowDecimal : NumericAllowDecimalValidatorComponent,
 						conditionalExpression : NumericConditionalExpressionValidatorComponent,
 						message : NumericMessageValidatorComponent,
+						messageKey : NumericMessageKeyValidatorComponent,
 						dynamic : NumericDynamicValidatorComponent,
 						add : NumericAddValidatorComponent,
 			  },

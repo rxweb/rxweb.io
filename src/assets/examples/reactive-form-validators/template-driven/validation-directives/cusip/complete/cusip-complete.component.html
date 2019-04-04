@@ -31,6 +31,14 @@
       <small class="form-text text-muted">Shows custom message.<br/></small>
 	   <small class="form-text text-danger" *ngIf="companyinfoForm.controls?.appleIncCusipCode?.errors">{{companyinfoForm.controls?.appleIncCusipCode?.errors?.cusip.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Amazon Corporation Cusip Code</label>
+	    <input type="text" name="amazonCorporationCusipCode" [(ngModel)]="companyinfo.amazonCorporationCusipCode"  class="form-control" [cusip]="{'messageKey':'cusipMessageKey'}"/>
+
+      <small class="form-text text-muted">enter 9-character alphanumeric cusip Code only<br/></small>
+      <small class="form-text text-muted">Shows custom message.<br/></small>
+	   <small class="form-text text-danger" *ngIf="companyinfoForm.controls?.amazonCorporationCusipCode?.errors">{{companyinfoForm.controls?.amazonCorporationCusipCode?.errors?.cusip.message}}<br/></small>	
+    </div>
     <button [disabled]="!companyinfoForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

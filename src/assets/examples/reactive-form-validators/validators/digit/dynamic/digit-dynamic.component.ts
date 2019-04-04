@@ -20,7 +20,7 @@ export class DigitDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/digit/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { age:'', phoneNumber:'', faxNumber:'', mobileNumber:'',  }
+			var user = { age:'', phoneNumber:'', faxNumber:'', mobileNumber:'', zipCode:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

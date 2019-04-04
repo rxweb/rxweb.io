@@ -10,6 +10,7 @@ import { FileSizeMaxSizeComponent } from './maxSize/file-size-max-size.component
 import { FileSizeMinSizeComponent } from './minSize/file-size-min-size.component';
 import { FileSizeConditionalExpressionComponent } from './conditionalExpression/file-size-conditional-expression.component';
 import { FileSizeMessageComponent } from './message/file-size-message.component';
+import { FileSizeMessageKeyComponent } from './messageKey/file-size-message-key.component';
 import { FileSizeDynamicComponent } from './dynamic/file-size-dynamic.component';
 import { FileSizeAddComponent } from './add/file-size-add.component';
 import { FileSizeEditComponent } from './edit/file-size-edit.component';
@@ -21,6 +22,7 @@ import { FileSizeEditComponent } from './edit/file-size-edit.component';
 	FileSizeMinSizeComponent,
 	FileSizeConditionalExpressionComponent,
 	FileSizeMessageComponent,
+	FileSizeMessageKeyComponent,
 	FileSizeDynamicComponent,
 	FileSizeAddComponent,
 	FileSizeEditComponent,
@@ -31,6 +33,7 @@ entryComponents: [
 	FileSizeMinSizeComponent,
 	FileSizeConditionalExpressionComponent,
 	FileSizeMessageComponent,
+	FileSizeMessageKeyComponent,
 	FileSizeDynamicComponent,
 	FileSizeAddComponent,
 	FileSizeEditComponent,
@@ -47,6 +50,7 @@ entryComponents: [
 	FileSizeMinSizeComponent,
 	FileSizeConditionalExpressionComponent,
 	FileSizeMessageComponent,
+	FileSizeMessageKeyComponent,
 	FileSizeDynamicComponent,
 	FileSizeAddComponent,
 	FileSizeEditComponent,

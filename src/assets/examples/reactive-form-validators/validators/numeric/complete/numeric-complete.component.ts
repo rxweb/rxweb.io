@@ -16,6 +16,7 @@ export class NumericCompleteValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: FormBuilder )
 	{ }
@@ -28,6 +29,7 @@ export class NumericCompleteValidatorComponent implements OnInit {
             integerNumber:['', RxwebValidators.numeric({acceptValue:NumericValueType.PositiveNumber  ,conditionalExpression:(x,y) => x.dataType == "Integer"  })], 
             realNumber:['', RxwebValidators.numeric({acceptValue:NumericValueType.Both  ,conditionalExpression:'x => x.dataType == "Real"' })], 
             positiveNumber:['', RxwebValidators.numeric({message:'{{0}} is not a positive number' })], 
+            positiveNonDecimalNumber:['', RxwebValidators.numeric({messageKey:'numericMessageKey' })], 
         });
     }
 }

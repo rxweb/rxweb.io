@@ -18,6 +18,8 @@ export class DifferentCompleteValidatorComponent implements OnInit {
             firstName:['',], 
             lastName:['', RxwebValidators.different({fieldName:'firstName' })], 
             middleName:['', RxwebValidators.different({fieldName:'firstName'  ,message:'{{0}} is same as firstName' })], 
+            emailAddress:['',], 
+            recoveryEmailAddress:['', RxwebValidators.different({fieldName:'emailAddress'  ,messageKey:'differentMessageKey' })], 
         });
     }
 }

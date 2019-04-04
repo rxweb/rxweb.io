@@ -13,4 +13,7 @@ export class UserInfo {
 	allocationDate: string;
 	
 	
+	confirmationDate: string;
+	
+	
 }

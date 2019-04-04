@@ -13,4 +13,7 @@ export class ResultInfo {
 	statstics: number;
 	
 	
+	economics: number;
+	
+	
 }

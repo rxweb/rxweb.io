@@ -1,0 +1,27 @@
+<div>
+  <form [formGroup]="employeeFormGroup">
+
+    <h4>Certifications</h4>
+    <button class="btn btn-primary" (click)="addCertification()">Add Certification</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Certification Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr [formGroup]="certificationGroup" *ngFor="let certificationGroup of employeeFormGroup['controls']['certifications']['controls'];let i = index;">
+          <th scope="row">{{i+ 1}}</th>
+          <td>
+            <input type="text" formControlName="certificationName" class="form-control" />
+            <small class="form-text text-danger" *ngIf="certificationGroup.controls.certificationName.errors">{{certificationGroup.controls.certificationName.errors.unique.message}}<br /></small>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <button [disabled]="!employeeFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

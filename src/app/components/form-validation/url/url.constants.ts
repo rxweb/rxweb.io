@@ -10,6 +10,10 @@ import { UrlMessageComponent } from "src/assets/examples/reactive-form-validator
 import { UrlMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/url/message/url-message.component";
 import { UrlMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/url/message/url-message.component";
 import { UrlMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/url/message/url-message.component";
+import { UrlMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/url/messageKey/url-message-key.component";
+import { UrlMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/url/messageKey/url-message-key.component";
+import { UrlMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/url/messageKey/url-message-key.component";
+import { UrlMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/url/messageKey/url-message-key.component";
 import { UrlDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/url/dynamic/url-dynamic.component";
 import { UrlDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/url/dynamic/url-dynamic.component";
 import { UrlAddComponent } from "src/assets/examples/reactive-form-validators/decorators/url/add/url-add.component";
@@ -23,6 +27,7 @@ export const URL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : UrlCompleteComponent,
 						conditionalExpression : UrlConditionalExpressionComponent,
 						message : UrlMessageComponent,
+						messageKey : UrlMessageKeyComponent,
 						dynamic : UrlDynamicComponent,
 						add : UrlAddComponent,
 						edit : UrlEditComponent,
@@ -31,18 +36,21 @@ export const URL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : UrlCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : UrlConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : UrlMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : UrlMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : UrlAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : UrlCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : UrlConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : UrlMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : UrlMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : UrlAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : UrlCompleteValidatorComponent,
 						conditionalExpression : UrlConditionalExpressionValidatorComponent,
 						message : UrlMessageValidatorComponent,
+						messageKey : UrlMessageKeyValidatorComponent,
 						dynamic : UrlDynamicValidatorComponent,
 						add : UrlAddValidatorComponent,
 			  },

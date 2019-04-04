@@ -9,6 +9,7 @@ import { StartsWithCompleteComponent } from './complete/starts-with-complete.com
 import { StartsWithValueComponent } from './value/starts-with-value.component';
 import { StartsWithConditionalExpressionComponent } from './conditionalExpression/starts-with-conditional-expression.component';
 import { StartsWithMessageComponent } from './message/starts-with-message.component';
+import { StartsWithMessageKeyComponent } from './messageKey/starts-with-message-key.component';
 import { StartsWithDynamicComponent } from './dynamic/starts-with-dynamic.component';
 import { StartsWithAddComponent } from './add/starts-with-add.component';
 import { StartsWithEditComponent } from './edit/starts-with-edit.component';
@@ -19,6 +20,7 @@ import { StartsWithEditComponent } from './edit/starts-with-edit.component';
 	StartsWithValueComponent,
 	StartsWithConditionalExpressionComponent,
 	StartsWithMessageComponent,
+	StartsWithMessageKeyComponent,
 	StartsWithDynamicComponent,
 	StartsWithAddComponent,
 	StartsWithEditComponent,
@@ -28,6 +30,7 @@ entryComponents: [
 	StartsWithValueComponent,
 	StartsWithConditionalExpressionComponent,
 	StartsWithMessageComponent,
+	StartsWithMessageKeyComponent,
 	StartsWithDynamicComponent,
 	StartsWithAddComponent,
 	StartsWithEditComponent,
@@ -43,6 +46,7 @@ entryComponents: [
 	StartsWithValueComponent,
 	StartsWithConditionalExpressionComponent,
 	StartsWithMessageComponent,
+	StartsWithMessageKeyComponent,
 	StartsWithDynamicComponent,
 	StartsWithAddComponent,
 	StartsWithEditComponent,

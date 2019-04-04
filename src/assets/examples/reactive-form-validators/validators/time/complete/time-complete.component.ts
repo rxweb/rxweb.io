@@ -20,6 +20,7 @@ export class TimeCompleteValidatorComponent implements OnInit {
             entryTime:['', RxwebValidators.time({conditionalExpression:'x => x.entryPlace == "Lunch Room"' })], 
             totalOutTime:['', RxwebValidators.time({allowSeconds:true })], 
             exitTime:['', RxwebValidators.time({message:'You can enter only time format data' })], 
+            netInTime:['', RxwebValidators.time({messageKey:'timeMessageKey' })], 
         });
     }
 }

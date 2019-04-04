@@ -15,19 +15,21 @@ export class AllOfDynamicValidatorComponent implements OnInit {
   hobbies: string[] = [];
   skills: string[] = [];
   projectDomains: string[] = [];
+  languages: string[] = [];
 
   constructor(
     private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
-    skillsArray: string[] = ["MVC", "AngularJS", "Angular 5", "C#", "Web Api", "SQL Server"];
-    hobbiesArray: string[] = ["Drawing", "Singing", "Dancing", "Travelling", "Sports"];
-    projectDomainsArray: string[] = ["ECommerce", "Banking", "Educational", "Gaming"];
+  skillsArray: string[] = ["MVC", "AngularJS", "Angular 5", "C#", "Web Api", "SQL Server"];
+  hobbiesArray: string[] = ["Drawing", "Singing", "Dancing", "Travelling", "Sports"];
+  projectDomainsArray: string[] = ["ECommerce", "Banking", "Educational", "Gaming"];
+  languagesArray: string[] = ["English", "Spanish", "French", "German", "Chinese"];
 
   ngOnInit() {
     let formBuilderConfiguration = new FormBuilderConfiguration();
     this.http.get('assets/examples/reactive-form-validators/validators/allOf/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
       formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-      var employeeInfo = { department: '', projectDomains: '', skills: '', hobbies: '' }
+      var employeeInfo = { department: '', projectDomains: '', skills: '', hobbies: '', languages: '' }
       this.employeeInfoFormGroup = this.formBuilder.group(employeeInfo, formBuilderConfiguration);
     })
   }
@@ -37,7 +39,7 @@ export class AllOfDynamicValidatorComponent implements OnInit {
     element.checked ? this.projectDomains.push(element.value) : this.projectDomains.splice(indexOf, 1);
     this.employeeInfoFormGroup.controls.projectDomains.setValue(this.projectDomains);
   }
- 
+
   addSkill(element: any, index: number) {
     var indexOf = this.skills.indexOf(element.value);
     element.checked ? this.skills.push(element.value) : this.skills.splice(indexOf, 1);
@@ -48,5 +50,11 @@ export class AllOfDynamicValidatorComponent implements OnInit {
     var indexOf = this.hobbies.indexOf(element.value);
     element.checked ? this.hobbies.push(element.value) : this.hobbies.splice(indexOf, 1);
     this.employeeInfoFormGroup.controls.hobbies.setValue(this.hobbies);
+  }
+
+  addLanguage(element: any, index: number) {
+    var indexOf = this.languages.indexOf(element.value);
+    element.checked ? this.languages.push(element.value) : this.languages.splice(indexOf, 1);
+    this.employeeInfoFormGroup.controls.languages.setValue(this.languages);
   }
 }

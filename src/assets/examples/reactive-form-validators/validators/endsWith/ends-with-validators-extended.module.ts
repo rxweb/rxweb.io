@@ -9,6 +9,7 @@ import { EndsWithCompleteValidatorComponent } from './complete/ends-with-complet
 import { EndsWithValueValidatorComponent } from './value/ends-with-value.component';
 import { EndsWithConditionalExpressionValidatorComponent } from './conditionalExpression/ends-with-conditional-expression.component';
 import { EndsWithMessageValidatorComponent } from './message/ends-with-message.component';
+import { EndsWithMessageKeyValidatorComponent } from './messageKey/ends-with-message-key.component';
 import { EndsWithDynamicValidatorComponent } from './dynamic/ends-with-dynamic.component';
 import { EndsWithAddValidatorComponent } from './add/ends-with-add.component';
 
@@ -18,6 +19,7 @@ import { EndsWithAddValidatorComponent } from './add/ends-with-add.component';
 	EndsWithValueValidatorComponent,
 	EndsWithConditionalExpressionValidatorComponent,
 	EndsWithMessageValidatorComponent,
+	EndsWithMessageKeyValidatorComponent,
 	EndsWithDynamicValidatorComponent,
 	EndsWithAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	EndsWithValueValidatorComponent,
 	EndsWithConditionalExpressionValidatorComponent,
 	EndsWithMessageValidatorComponent,
+	EndsWithMessageKeyValidatorComponent,
 	EndsWithDynamicValidatorComponent,
 	EndsWithAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	EndsWithValueValidatorComponent,
 	EndsWithConditionalExpressionValidatorComponent,
 	EndsWithMessageValidatorComponent,
+	EndsWithMessageKeyValidatorComponent,
 	EndsWithDynamicValidatorComponent,
 	EndsWithAddValidatorComponent,
   ],

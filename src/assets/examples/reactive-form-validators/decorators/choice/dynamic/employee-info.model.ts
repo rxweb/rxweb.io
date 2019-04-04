@@ -16,4 +16,7 @@ export class EmployeeInfo{
 
     @prop()
     hobbies: string[];
+
+    @prop()
+    certifications: string[];
 }

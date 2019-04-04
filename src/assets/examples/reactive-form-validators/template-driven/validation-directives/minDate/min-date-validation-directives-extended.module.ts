@@ -11,6 +11,7 @@ import { MinDateConditionalExpressionTemplateDrivenValidationDirectivesComponent
 import { MinDateMessageTemplateDrivenValidationDirectivesComponent } from './message/min-date-message.component';
 import { MinDateFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/min-date-field-name.component';
 import { MinDateOperatorTemplateDrivenValidationDirectivesComponent } from './operator/min-date-operator.component';
+import { MinDateMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/min-date-message-key.component';
 import { MinDateAddTemplateDrivenValidationDirectivesComponent } from './add/min-date-add.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MinDateAddTemplateDrivenValidationDirectivesComponent } from './add/min
 	MinDateMessageTemplateDrivenValidationDirectivesComponent,
 	MinDateFieldNameTemplateDrivenValidationDirectivesComponent,
 	MinDateOperatorTemplateDrivenValidationDirectivesComponent,
+	MinDateMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MinDateAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -30,6 +32,7 @@ entryComponents: [
 	MinDateMessageTemplateDrivenValidationDirectivesComponent,
 	MinDateFieldNameTemplateDrivenValidationDirectivesComponent,
 	MinDateOperatorTemplateDrivenValidationDirectivesComponent,
+	MinDateMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MinDateAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -45,6 +48,7 @@ entryComponents: [
 	MinDateMessageTemplateDrivenValidationDirectivesComponent,
 	MinDateFieldNameTemplateDrivenValidationDirectivesComponent,
 	MinDateOperatorTemplateDrivenValidationDirectivesComponent,
+	MinDateMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MinDateAddTemplateDrivenValidationDirectivesComponent,
   ],
 

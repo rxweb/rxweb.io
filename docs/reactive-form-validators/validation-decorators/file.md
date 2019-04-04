@@ -14,14 +14,15 @@ linktitle: file
 Suppose you want to create a User form, which contains fields like totalImageFiles, totalDocumentFiles, minimumFiles,maximumFile,minMaxFiles and you want the user to upload files as per validation format. Here depending upon the requirement these scenarios may arise.
 
 <ol class='showHideElement'>
-    <li>Allow file validation on field of totalImageFiles based on maxFiles.</li>
-    <li>Apply file validation based on minFiles on totalDocumentFiles</li>
-    <li>Adding Custom Message on minMaxFiles field.</li>
-   <li>Apply validation on maximumFile field based on matched condition in the form, like if the fileType is 'Document', then the maximumFile must be valid file count (Used as a function).</li>
-   <li>Apply validation on minMaxFiles field based on matched condition in the form, like if the ImageType is 'Picture', then the minMaxFiles must be a Image format (Used as a string datatype).</li>
-    <data-scope scope="['decorator','validator']">
+  <li>Allow file validation on field of totalImageFiles based on maxFiles.</li>
+  <li>Apply file validation based on minFiles on totalDocumentFiles</li>
+  <li>Adding Custom Message on minMaxFiles field.</li>
+  <li>Apply validation on maximumFile field based on matched condition in the form, like if the fileType is 'Document', then the maximumFile must be valid file count (Used as a function).</li>
+  <li>Apply validation on minMaxFiles field based on matched condition in the form, like if the ImageType is 'Picture', then the minMaxFiles must be a Image format (Used as a string datatype).</li>
+  <li>Shows the custom message on `Excel Files` field by using `messageKey` property.</li>
+  <data-scope scope="['decorator','validator']">
     <li>Apply file validation dynamically based on server rules.</li>
-    </data-scope>
+  </data-scope>
 </ol>
 
 Let’s see how file {{validatorType}} fulfil the need.
@@ -86,6 +87,7 @@ Below options are not mandatory to use in the `file` validation. If needed then 
 <tr><td><a  title="minFiles">minFiles</a></td><td>The Minimum Number of files that can be uploaded</td></tr>
 <tr><td><a  title="conditionalExpression">conditionalExpression</a></td><td>file validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## maxFiles
@@ -129,6 +131,14 @@ To override the global configuration message and set the custom error message on
 
 <div component="app-code" key="file-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-file-message" title="file {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="file-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-file-messageKey" title="file {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete file Example
 

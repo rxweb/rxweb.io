@@ -14,4 +14,7 @@ export class SubjectDetails {
 	@prop()
 	practicalMarks: number;
 
+	@prop()
+	disciplineMarks: number;
+
 }

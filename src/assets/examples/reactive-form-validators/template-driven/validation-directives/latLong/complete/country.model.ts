@@ -12,4 +12,7 @@ export class Country {
 	firstCountry: string;
 	
 	
+	fourthCountry: string;
+	
+	
 }

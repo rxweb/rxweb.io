@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	specialCharAsciiCode: string;
 
+	@prop()
+	digitalCode: string;
+
 }

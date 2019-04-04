@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { NotEmptyCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/not-empty-complete.component';
 import { NotEmptyConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/not-empty-conditional-expression.component';
 import { NotEmptyMessageTemplateDrivenValidationDecoratorsComponent } from './message/not-empty-message.component';
+import { NotEmptyMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/not-empty-message-key.component';
 import { NotEmptyAddTemplateDrivenValidationDecoratorsComponent } from './add/not-empty-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { NotEmptyAddTemplateDrivenValidationDecoratorsComponent } from './add/no
 	NotEmptyCompleteTemplateDrivenValidationDecoratorsComponent,
 	NotEmptyConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NotEmptyMessageTemplateDrivenValidationDecoratorsComponent,
+	NotEmptyMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	NotEmptyAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	NotEmptyCompleteTemplateDrivenValidationDecoratorsComponent,
 	NotEmptyConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NotEmptyMessageTemplateDrivenValidationDecoratorsComponent,
+	NotEmptyMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	NotEmptyAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	NotEmptyCompleteTemplateDrivenValidationDecoratorsComponent,
 	NotEmptyConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NotEmptyMessageTemplateDrivenValidationDecoratorsComponent,
+	NotEmptyMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	NotEmptyAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

@@ -19,4 +19,8 @@ export class Country {
 	firstCountryLatitude: string;
 	
 	
+	@latitude({messageKey:'latitudeMessageKey' }) 
+	fourthCountryLatitude: string;
+	
+	
 }

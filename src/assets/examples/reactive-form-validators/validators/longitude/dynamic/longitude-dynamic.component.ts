@@ -20,7 +20,7 @@ export class LongitudeDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/longitude/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var country = { continent:'', secondCountryLongitude:'', thirdCountryLongitude:'', firstCountryLongitude:'',  }
+			var country = { continent:'', secondCountryLongitude:'', thirdCountryLongitude:'', firstCountryLongitude:'', fourthCountryLongitude:'',  }
 			this.countryFormGroup = this.formBuilder.group(country,formBuilderConfiguration);
 		})
     }

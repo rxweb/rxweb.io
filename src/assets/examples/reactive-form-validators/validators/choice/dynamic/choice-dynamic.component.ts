@@ -15,7 +15,7 @@ export class ChoiceDynamicValidatorComponent implements OnInit {
     hobbies: string[] = [];
     projectDomains : string[] = [];
     languages:string[] = [];
-
+  certifications: string[] = [];
     constructor(
         private formBuilder: RxFormBuilder, private http: HttpClient) { }
 
@@ -23,12 +23,12 @@ export class ChoiceDynamicValidatorComponent implements OnInit {
     skillsArray: string[] = ["MVC","AngularJS","Angular 5","C#","Web Api","SQL Server"];
     hobbiesArray: string[] = ["Drawing","Singing","Dancing","Travelling","Sports"];
     projectDomainsArray : string[] = ["ECommerce", "Banking", "Educational", "Gaming"];
-
+  certificationsArray: string[] = ["Microsoft certified", "Google certified", "Oracle certified", "AWS certified", "Adobe certified", "VMware certified"];
     ngOnInit() {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/choice/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var employeeInfo = { department:'', projectDomains:'', skills:'', hobbies:'' ,languages:'' }
+          var employeeInfo = { department: '', projectDomains: '', skills: '', hobbies: '', languages: '', certifications: '' }
 			this.employeeInfoFormGroup = this.formBuilder.group(employeeInfo,formBuilderConfiguration);
 		})
     }
@@ -55,5 +55,11 @@ export class ChoiceDynamicValidatorComponent implements OnInit {
       var indexOf = this.languages.indexOf(element.value);
         element.checked ? this.languages.push(element.value) : this.languages.splice(indexOf,1);
          this.employeeInfoFormGroup.controls.languages.setValue(this.languages);
+  }
+
+  addCertification(element: any) {
+    var indexOf = this.certifications.indexOf(element.value);
+    element.checked ? this.certifications.push(element.value) : this.certifications.splice(indexOf, 1);
+    this.employeeInfoFormGroup.controls.certifications.setValue(this.certifications);
   }
 }

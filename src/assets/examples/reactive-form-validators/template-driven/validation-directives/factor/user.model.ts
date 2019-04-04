@@ -1,7 +1,16 @@
 
 export class User {
 
-	firstNumber: Number;
-	
-	
+	firstNumber: number;
+
+	fifthNumber: number;
+
+	thirdNumber: number;
+
+	fourthNumber: number;
+
+	sixthNumber: number;
+
+	seventhNumber: number;
+
 }

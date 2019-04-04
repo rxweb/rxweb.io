@@ -1,0 +1,11 @@
+<div>
+  <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
+    <div class="form-group">
+      <label>Full Name</label>
+	    <input type="text" name="fullName" [(ngModel)]="user.fullName"  class="form-control" [maxLength]="{'value':20,'messageKey':'maxLengthMessageKey'}"/>
+
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.fullName?.errors">{{userForm.controls?.fullName?.errors?.maxLength.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

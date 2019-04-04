@@ -10,6 +10,10 @@ import { PrimeNumberMessageComponent } from "src/assets/examples/reactive-form-v
 import { PrimeNumberMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/primeNumber/message/prime-number-message.component";
 import { PrimeNumberMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/primeNumber/message/prime-number-message.component";
 import { PrimeNumberMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/primeNumber/message/prime-number-message.component";
+import { PrimeNumberMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/primeNumber/messageKey/prime-number-message-key.component";
+import { PrimeNumberMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/primeNumber/messageKey/prime-number-message-key.component";
+import { PrimeNumberMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/primeNumber/messageKey/prime-number-message-key.component";
+import { PrimeNumberMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/primeNumber/messageKey/prime-number-message-key.component";
 import { PrimeNumberDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/primeNumber/dynamic/prime-number-dynamic.component";
 import { PrimeNumberDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/primeNumber/dynamic/prime-number-dynamic.component";
 import { PrimeNumberAddComponent } from "src/assets/examples/reactive-form-validators/decorators/primeNumber/add/prime-number-add.component";
@@ -23,6 +27,7 @@ export const PRIME_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : PrimeNumberCompleteComponent,
 						conditionalExpression : PrimeNumberConditionalExpressionComponent,
 						message : PrimeNumberMessageComponent,
+						messageKey : PrimeNumberMessageKeyComponent,
 						dynamic : PrimeNumberDynamicComponent,
 						add : PrimeNumberAddComponent,
 						edit : PrimeNumberEditComponent,
@@ -31,18 +36,21 @@ export const PRIME_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : PrimeNumberCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : PrimeNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : PrimeNumberMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : PrimeNumberMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : PrimeNumberAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : PrimeNumberCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : PrimeNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : PrimeNumberMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : PrimeNumberMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : PrimeNumberAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : PrimeNumberCompleteValidatorComponent,
 						conditionalExpression : PrimeNumberConditionalExpressionValidatorComponent,
 						message : PrimeNumberMessageValidatorComponent,
+						messageKey : PrimeNumberMessageKeyValidatorComponent,
 						dynamic : PrimeNumberDynamicValidatorComponent,
 						add : PrimeNumberAddValidatorComponent,
 			  },

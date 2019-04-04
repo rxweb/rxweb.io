@@ -19,6 +19,7 @@ export class DateCompleteValidatorComponent implements OnInit {
             admissionDate:['', RxwebValidators.date({conditionalExpression:(x,y) => x.birthDate == "16/04/1997"  })], 
             enrollmentDate:['', RxwebValidators.date({conditionalExpression:'x => x.birthDate =="16/04/1997"' })], 
             allocationDate:['', RxwebValidators.date({message:'{{0}} is not a valid date' })], 
+            confirmationDate:['', RxwebValidators.date({messageKey:'dateMessageKey' })], 
         });
     }
 }

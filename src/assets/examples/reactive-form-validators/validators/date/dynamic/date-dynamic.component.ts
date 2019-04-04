@@ -20,7 +20,7 @@ export class DateDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/date/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var userInfo = { birthDate:'', admissionDate:'', enrollmentDate:'', allocationDate:'',  }
+			var userInfo = { birthDate:'', admissionDate:'', enrollmentDate:'', allocationDate:'', confirmationDate:'',  }
 			this.userInfoFormGroup = this.formBuilder.group(userInfo,formBuilderConfiguration);
 		})
     }

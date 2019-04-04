@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { NotEmptyCompleteComponent } from './complete/not-empty-complete.component';
 import { NotEmptyConditionalExpressionComponent } from './conditionalExpression/not-empty-conditional-expression.component';
 import { NotEmptyMessageComponent } from './message/not-empty-message.component';
+import { NotEmptyMessageKeyComponent } from './messageKey/not-empty-message-key.component';
 import { NotEmptyDynamicComponent } from './dynamic/not-empty-dynamic.component';
 import { NotEmptyAddComponent } from './add/not-empty-add.component';
 import { NotEmptyEditComponent } from './edit/not-empty-edit.component';
@@ -17,6 +18,7 @@ import { NotEmptyEditComponent } from './edit/not-empty-edit.component';
 	NotEmptyCompleteComponent,
 	NotEmptyConditionalExpressionComponent,
 	NotEmptyMessageComponent,
+	NotEmptyMessageKeyComponent,
 	NotEmptyDynamicComponent,
 	NotEmptyAddComponent,
 	NotEmptyEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	NotEmptyCompleteComponent,
 	NotEmptyConditionalExpressionComponent,
 	NotEmptyMessageComponent,
+	NotEmptyMessageKeyComponent,
 	NotEmptyDynamicComponent,
 	NotEmptyAddComponent,
 	NotEmptyEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	NotEmptyCompleteComponent,
 	NotEmptyConditionalExpressionComponent,
 	NotEmptyMessageComponent,
+	NotEmptyMessageKeyComponent,
 	NotEmptyDynamicComponent,
 	NotEmptyAddComponent,
 	NotEmptyEditComponent,

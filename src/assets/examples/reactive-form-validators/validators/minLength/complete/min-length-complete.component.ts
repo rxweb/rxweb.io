@@ -20,6 +20,7 @@ export class MinLengthCompleteValidatorComponent implements OnInit {
             landLineNo:['', RxwebValidators.minLength({value:8  ,message:'Minimum 8 characters are allowed' })], 
             countryCode:['', RxwebValidators.minLength({value:3  ,conditionalExpression:(x,y)=> x.countryName == "India" })], 
             stateCode:['', RxwebValidators.minLength({value:3  ,conditionalExpression:'x => x.countryName == "India"' })], 
+            stateName:['', RxwebValidators.minLength({value:3  ,messageKey:'minLengthMessageKey' })], 
         });
     }
 }

@@ -17,4 +17,7 @@ export class UserInfo {
 	@prop()
 	positiveNumber: number;
 
+	@prop()
+	positiveNonDecimalNumber: number;
+
 }

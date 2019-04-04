@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { OddCompleteComponent } from './complete/odd-complete.component';
 import { OddConditionalExpressionComponent } from './conditionalExpression/odd-conditional-expression.component';
 import { OddMessageComponent } from './message/odd-message.component';
+import { OddMessageKeyComponent } from './messageKey/odd-message-key.component';
 import { OddDynamicComponent } from './dynamic/odd-dynamic.component';
 import { OddAddComponent } from './add/odd-add.component';
 import { OddEditComponent } from './edit/odd-edit.component';
@@ -17,6 +18,7 @@ import { OddEditComponent } from './edit/odd-edit.component';
 	OddCompleteComponent,
 	OddConditionalExpressionComponent,
 	OddMessageComponent,
+	OddMessageKeyComponent,
 	OddDynamicComponent,
 	OddAddComponent,
 	OddEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	OddCompleteComponent,
 	OddConditionalExpressionComponent,
 	OddMessageComponent,
+	OddMessageKeyComponent,
 	OddDynamicComponent,
 	OddAddComponent,
 	OddEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	OddCompleteComponent,
 	OddConditionalExpressionComponent,
 	OddMessageComponent,
+	OddMessageKeyComponent,
 	OddDynamicComponent,
 	OddAddComponent,
 	OddEditComponent,

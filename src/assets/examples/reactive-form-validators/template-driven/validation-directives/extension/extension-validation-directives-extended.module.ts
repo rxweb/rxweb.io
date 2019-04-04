@@ -9,6 +9,7 @@ import { ExtensionCompleteTemplateDrivenValidationDirectivesComponent } from './
 import { ExtensionExtensionsTemplateDrivenValidationDirectivesComponent } from './extensions/extension-extensions.component';
 import { ExtensionConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/extension-conditional-expression.component';
 import { ExtensionMessageTemplateDrivenValidationDirectivesComponent } from './message/extension-message.component';
+import { ExtensionMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/extension-message-key.component';
 import { ExtensionAddTemplateDrivenValidationDirectivesComponent } from './add/extension-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ExtensionAddTemplateDrivenValidationDirectivesComponent } from './add/e
 	ExtensionExtensionsTemplateDrivenValidationDirectivesComponent,
 	ExtensionConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	ExtensionMessageTemplateDrivenValidationDirectivesComponent,
+	ExtensionMessageKeyTemplateDrivenValidationDirectivesComponent,
 	ExtensionAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	ExtensionExtensionsTemplateDrivenValidationDirectivesComponent,
 	ExtensionConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	ExtensionMessageTemplateDrivenValidationDirectivesComponent,
+	ExtensionMessageKeyTemplateDrivenValidationDirectivesComponent,
 	ExtensionAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	ExtensionExtensionsTemplateDrivenValidationDirectivesComponent,
 	ExtensionConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	ExtensionMessageTemplateDrivenValidationDirectivesComponent,
+	ExtensionMessageKeyTemplateDrivenValidationDirectivesComponent,
 	ExtensionAddTemplateDrivenValidationDirectivesComponent,
   ],
 

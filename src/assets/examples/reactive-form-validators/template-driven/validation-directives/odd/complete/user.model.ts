@@ -12,4 +12,7 @@ export class User {
 	multiplesOfOddNumber: number;
 	
 	
+	otherOddNumber: string;
+	
+	
 }

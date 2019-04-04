@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { AsciiCompleteTemplateDrivenValidationDirectivesComponent } from './complete/ascii-complete.component';
 import { AsciiConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/ascii-conditional-expression.component';
 import { AsciiMessageTemplateDrivenValidationDirectivesComponent } from './message/ascii-message.component';
+import { AsciiMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/ascii-message-key.component';
 import { AsciiAddTemplateDrivenValidationDirectivesComponent } from './add/ascii-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { AsciiAddTemplateDrivenValidationDirectivesComponent } from './add/ascii
 	AsciiCompleteTemplateDrivenValidationDirectivesComponent,
 	AsciiConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AsciiMessageTemplateDrivenValidationDirectivesComponent,
+	AsciiMessageKeyTemplateDrivenValidationDirectivesComponent,
 	AsciiAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	AsciiCompleteTemplateDrivenValidationDirectivesComponent,
 	AsciiConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AsciiMessageTemplateDrivenValidationDirectivesComponent,
+	AsciiMessageKeyTemplateDrivenValidationDirectivesComponent,
 	AsciiAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	AsciiCompleteTemplateDrivenValidationDirectivesComponent,
 	AsciiConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AsciiMessageTemplateDrivenValidationDirectivesComponent,
+	AsciiMessageKeyTemplateDrivenValidationDirectivesComponent,
 	AsciiAddTemplateDrivenValidationDirectivesComponent,
   ],
 

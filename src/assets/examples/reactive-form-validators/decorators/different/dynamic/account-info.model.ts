@@ -11,4 +11,10 @@ export class AccountInfo {
 	@prop()
 	middleName: string;
 
+	@prop()
+	emailAddress: string;
+
+	@prop()
+	recoveryEmailAddress: string;
+
 }

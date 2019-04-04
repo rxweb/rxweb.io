@@ -9,6 +9,7 @@ import { ExtensionCompleteTemplateDrivenValidationDecoratorsComponent } from './
 import { ExtensionExtensionsTemplateDrivenValidationDecoratorsComponent } from './extensions/extension-extensions.component';
 import { ExtensionConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/extension-conditional-expression.component';
 import { ExtensionMessageTemplateDrivenValidationDecoratorsComponent } from './message/extension-message.component';
+import { ExtensionMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/extension-message-key.component';
 import { ExtensionAddTemplateDrivenValidationDecoratorsComponent } from './add/extension-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ExtensionAddTemplateDrivenValidationDecoratorsComponent } from './add/e
 	ExtensionExtensionsTemplateDrivenValidationDecoratorsComponent,
 	ExtensionConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	ExtensionMessageTemplateDrivenValidationDecoratorsComponent,
+	ExtensionMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	ExtensionAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	ExtensionExtensionsTemplateDrivenValidationDecoratorsComponent,
 	ExtensionConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	ExtensionMessageTemplateDrivenValidationDecoratorsComponent,
+	ExtensionMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	ExtensionAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	ExtensionExtensionsTemplateDrivenValidationDecoratorsComponent,
 	ExtensionConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	ExtensionMessageTemplateDrivenValidationDecoratorsComponent,
+	ExtensionMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	ExtensionAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

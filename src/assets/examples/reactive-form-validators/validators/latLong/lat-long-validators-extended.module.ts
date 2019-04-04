@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LatLongCompleteValidatorComponent } from './complete/lat-long-complete.component';
 import { LatLongConditionalExpressionValidatorComponent } from './conditionalExpression/lat-long-conditional-expression.component';
 import { LatLongMessageValidatorComponent } from './message/lat-long-message.component';
+import { LatLongMessageKeyValidatorComponent } from './messageKey/lat-long-message-key.component';
 import { LatLongDynamicValidatorComponent } from './dynamic/lat-long-dynamic.component';
 import { LatLongAddValidatorComponent } from './add/lat-long-add.component';
 
@@ -16,6 +17,7 @@ import { LatLongAddValidatorComponent } from './add/lat-long-add.component';
 	LatLongCompleteValidatorComponent,
 	LatLongConditionalExpressionValidatorComponent,
 	LatLongMessageValidatorComponent,
+	LatLongMessageKeyValidatorComponent,
 	LatLongDynamicValidatorComponent,
 	LatLongAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	LatLongCompleteValidatorComponent,
 	LatLongConditionalExpressionValidatorComponent,
 	LatLongMessageValidatorComponent,
+	LatLongMessageKeyValidatorComponent,
 	LatLongDynamicValidatorComponent,
 	LatLongAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	LatLongCompleteValidatorComponent,
 	LatLongConditionalExpressionValidatorComponent,
 	LatLongMessageValidatorComponent,
+	LatLongMessageKeyValidatorComponent,
 	LatLongDynamicValidatorComponent,
 	LatLongAddValidatorComponent,
   ],

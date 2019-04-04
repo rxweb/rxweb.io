@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { UpperCaseCompleteValidatorComponent } from './complete/upper-case-complete.component';
 import { UpperCaseConditionalExpressionValidatorComponent } from './conditionalExpression/upper-case-conditional-expression.component';
 import { UpperCaseMessageValidatorComponent } from './message/upper-case-message.component';
+import { UpperCaseMessageKeyValidatorComponent } from './messageKey/upper-case-message-key.component';
 import { UpperCaseDynamicValidatorComponent } from './dynamic/upper-case-dynamic.component';
 import { UpperCaseAddValidatorComponent } from './add/upper-case-add.component';
 
@@ -16,6 +17,7 @@ import { UpperCaseAddValidatorComponent } from './add/upper-case-add.component';
 	UpperCaseCompleteValidatorComponent,
 	UpperCaseConditionalExpressionValidatorComponent,
 	UpperCaseMessageValidatorComponent,
+	UpperCaseMessageKeyValidatorComponent,
 	UpperCaseDynamicValidatorComponent,
 	UpperCaseAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	UpperCaseCompleteValidatorComponent,
 	UpperCaseConditionalExpressionValidatorComponent,
 	UpperCaseMessageValidatorComponent,
+	UpperCaseMessageKeyValidatorComponent,
 	UpperCaseDynamicValidatorComponent,
 	UpperCaseAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	UpperCaseCompleteValidatorComponent,
 	UpperCaseConditionalExpressionValidatorComponent,
 	UpperCaseMessageValidatorComponent,
+	UpperCaseMessageKeyValidatorComponent,
 	UpperCaseDynamicValidatorComponent,
 	UpperCaseAddValidatorComponent,
   ],

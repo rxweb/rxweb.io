@@ -16,4 +16,7 @@ export class AddressInfo {
 	stateCode: string;
 	
 	
+	cityCode: string;
+	
+	
 }

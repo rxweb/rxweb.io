@@ -19,4 +19,8 @@ export class NumberInfo {
 	firstNumber: string;
 	
 	
+	@primeNumber({messageKey:'primeNumberMessageKey' }) 
+	fourthNumber: string;
+	
+	
 }

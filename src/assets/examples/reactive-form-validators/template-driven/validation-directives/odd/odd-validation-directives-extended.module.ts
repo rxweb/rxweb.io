@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { OddCompleteTemplateDrivenValidationDirectivesComponent } from './complete/odd-complete.component';
 import { OddConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/odd-conditional-expression.component';
 import { OddMessageTemplateDrivenValidationDirectivesComponent } from './message/odd-message.component';
+import { OddMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/odd-message-key.component';
 import { OddAddTemplateDrivenValidationDirectivesComponent } from './add/odd-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { OddAddTemplateDrivenValidationDirectivesComponent } from './add/odd-add
 	OddCompleteTemplateDrivenValidationDirectivesComponent,
 	OddConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	OddMessageTemplateDrivenValidationDirectivesComponent,
+	OddMessageKeyTemplateDrivenValidationDirectivesComponent,
 	OddAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	OddCompleteTemplateDrivenValidationDirectivesComponent,
 	OddConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	OddMessageTemplateDrivenValidationDirectivesComponent,
+	OddMessageKeyTemplateDrivenValidationDirectivesComponent,
 	OddAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	OddCompleteTemplateDrivenValidationDirectivesComponent,
 	OddConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	OddMessageTemplateDrivenValidationDirectivesComponent,
+	OddMessageKeyTemplateDrivenValidationDirectivesComponent,
 	OddAddTemplateDrivenValidationDirectivesComponent,
   ],
 

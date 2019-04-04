@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { EvenCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/even-complete.component';
 import { EvenConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/even-conditional-expression.component';
 import { EvenMessageTemplateDrivenValidationDecoratorsComponent } from './message/even-message.component';
+import { EvenMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/even-message-key.component';
 import { EvenAddTemplateDrivenValidationDecoratorsComponent } from './add/even-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { EvenAddTemplateDrivenValidationDecoratorsComponent } from './add/even-a
 	EvenCompleteTemplateDrivenValidationDecoratorsComponent,
 	EvenConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	EvenMessageTemplateDrivenValidationDecoratorsComponent,
+	EvenMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	EvenAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	EvenCompleteTemplateDrivenValidationDecoratorsComponent,
 	EvenConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	EvenMessageTemplateDrivenValidationDecoratorsComponent,
+	EvenMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	EvenAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	EvenCompleteTemplateDrivenValidationDecoratorsComponent,
 	EvenConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	EvenMessageTemplateDrivenValidationDecoratorsComponent,
+	EvenMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	EvenAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

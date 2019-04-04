@@ -23,4 +23,8 @@ export class SubjectDetails {
 	practicalMarks: number;
 	
 	
+	@maxNumber({value:50  ,messageKey:'maxNumberMessageKey' }) 
+	disciplineMarks: number;
+	
+	
 }

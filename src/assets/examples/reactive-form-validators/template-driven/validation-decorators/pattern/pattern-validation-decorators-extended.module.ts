@@ -9,6 +9,7 @@ import { PatternCompleteTemplateDrivenValidationDecoratorsComponent } from './co
 import { PatternExpressionTemplateDrivenValidationDecoratorsComponent } from './expression/pattern-expression.component';
 import { PatternMessageTemplateDrivenValidationDecoratorsComponent } from './message/pattern-message.component';
 import { PatternConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/pattern-conditional-expression.component';
+import { PatternMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/pattern-message-key.component';
 import { PatternAddTemplateDrivenValidationDecoratorsComponent } from './add/pattern-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { PatternAddTemplateDrivenValidationDecoratorsComponent } from './add/pat
 	PatternExpressionTemplateDrivenValidationDecoratorsComponent,
 	PatternMessageTemplateDrivenValidationDecoratorsComponent,
 	PatternConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	PatternMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	PatternAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	PatternExpressionTemplateDrivenValidationDecoratorsComponent,
 	PatternMessageTemplateDrivenValidationDecoratorsComponent,
 	PatternConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	PatternMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	PatternAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	PatternExpressionTemplateDrivenValidationDecoratorsComponent,
 	PatternMessageTemplateDrivenValidationDecoratorsComponent,
 	PatternConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	PatternMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	PatternAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

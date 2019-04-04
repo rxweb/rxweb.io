@@ -9,6 +9,7 @@ import { AlphaCompleteTemplateDrivenValidationDecoratorsComponent } from './comp
 import { AlphaConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/alpha-conditional-expression.component';
 import { AlphaAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent } from './allowWhiteSpace/alpha-allow-white-space.component';
 import { AlphaMessageTemplateDrivenValidationDecoratorsComponent } from './message/alpha-message.component';
+import { AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/alpha-message-key.component';
 import { AlphaAddTemplateDrivenValidationDecoratorsComponent } from './add/alpha-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AlphaAddTemplateDrivenValidationDecoratorsComponent } from './add/alpha
 	AlphaConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 	AlphaMessageTemplateDrivenValidationDecoratorsComponent,
+	AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	AlphaAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	AlphaConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 	AlphaMessageTemplateDrivenValidationDecoratorsComponent,
+	AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	AlphaAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	AlphaConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 	AlphaMessageTemplateDrivenValidationDecoratorsComponent,
+	AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	AlphaAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

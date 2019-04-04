@@ -17,4 +17,7 @@ export class User {
 	@prop()
 	sixthNumber: number;
 
+	@prop()
+	seventhNumber: number;
+
 }

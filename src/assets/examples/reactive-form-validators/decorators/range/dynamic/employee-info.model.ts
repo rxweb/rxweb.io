@@ -11,4 +11,7 @@ export class EmployeeInfo {
 	@prop()
 	salary: number;
 
+	@prop()
+	noOfprojects: number;
+
 }

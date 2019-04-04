@@ -20,7 +20,7 @@ export class LeapYearDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/leapYear/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { name:'', birthYear:'', admissionYear:'', joiningYear:'',  }
+			var user = { name:'', birthYear:'', admissionYear:'', joiningYear:'', promotionYear:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

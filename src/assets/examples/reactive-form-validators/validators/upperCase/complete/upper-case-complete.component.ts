@@ -19,6 +19,7 @@ export class UpperCaseCompleteValidatorComponent implements OnInit {
             stateName:['', RxwebValidators.upperCase({conditionalExpression:(x,y) => x.countryName == "INDIA"  })], 
             cityName:['', RxwebValidators.upperCase({conditionalExpression:'x => x.countryName == "INDIA"' })], 
             colonyName:['', RxwebValidators.upperCase({message:'You can enter only upperCase letters.' })], 
+            streetName:['', RxwebValidators.upperCase({messageKey:'upperCaseMessageKey' })], 
         });
     }
 }

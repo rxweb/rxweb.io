@@ -23,4 +23,8 @@ export class AttandanceDetail {
 	exitTime: string;
 	
 	
+	@time({messageKey:'timeMessageKey' }) 
+	netInTime: string;
+	
+	
 }

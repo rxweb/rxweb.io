@@ -23,6 +23,13 @@
       <small class="form-text text-muted">Shows custom message.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.educationalWebsitePort?.errors">{{userForm.controls?.educationalWebsitePort?.errors?.port.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Commercial Website Port</label>
+	    <input type="text" name="commercialWebsitePort" [(ngModel)]="user.commercialWebsitePort"  class="form-control" />
+
+      <small class="form-text text-muted">Shows custom message using messageKey<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.commercialWebsitePort?.errors">{{userForm.controls?.commercialWebsitePort?.errors?.port.message}}<br/></small>	
+    </div>
     <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

@@ -9,6 +9,7 @@ import { MaxLengthCompleteTemplateDrivenValidationDirectivesComponent } from './
 import { MaxLengthValueTemplateDrivenValidationDirectivesComponent } from './value/max-length-value.component';
 import { MaxLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/max-length-conditional-expression.component';
 import { MaxLengthMessageTemplateDrivenValidationDirectivesComponent } from './message/max-length-message.component';
+import { MaxLengthMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/max-length-message-key.component';
 import { MaxLengthAddTemplateDrivenValidationDirectivesComponent } from './add/max-length-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MaxLengthAddTemplateDrivenValidationDirectivesComponent } from './add/m
 	MaxLengthValueTemplateDrivenValidationDirectivesComponent,
 	MaxLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	MaxLengthMessageTemplateDrivenValidationDirectivesComponent,
+	MaxLengthMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MaxLengthAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	MaxLengthValueTemplateDrivenValidationDirectivesComponent,
 	MaxLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	MaxLengthMessageTemplateDrivenValidationDirectivesComponent,
+	MaxLengthMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MaxLengthAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	MaxLengthValueTemplateDrivenValidationDirectivesComponent,
 	MaxLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	MaxLengthMessageTemplateDrivenValidationDirectivesComponent,
+	MaxLengthMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MaxLengthAddTemplateDrivenValidationDirectivesComponent,
   ],
 

@@ -10,6 +10,10 @@ import { LongitudeMessageComponent } from "src/assets/examples/reactive-form-val
 import { LongitudeMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/longitude/message/longitude-message.component";
 import { LongitudeMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/longitude/message/longitude-message.component";
 import { LongitudeMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/longitude/message/longitude-message.component";
+import { LongitudeMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/longitude/messageKey/longitude-message-key.component";
+import { LongitudeMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/longitude/messageKey/longitude-message-key.component";
+import { LongitudeMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/longitude/messageKey/longitude-message-key.component";
+import { LongitudeMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/longitude/messageKey/longitude-message-key.component";
 import { LongitudeDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/longitude/dynamic/longitude-dynamic.component";
 import { LongitudeDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/longitude/dynamic/longitude-dynamic.component";
 import { LongitudeAddComponent } from "src/assets/examples/reactive-form-validators/decorators/longitude/add/longitude-add.component";
@@ -23,6 +27,7 @@ export const LONGITUDE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LongitudeCompleteComponent,
 						conditionalExpression : LongitudeConditionalExpressionComponent,
 						message : LongitudeMessageComponent,
+						messageKey : LongitudeMessageKeyComponent,
 						dynamic : LongitudeDynamicComponent,
 						add : LongitudeAddComponent,
 						edit : LongitudeEditComponent,
@@ -31,18 +36,21 @@ export const LONGITUDE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LongitudeCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : LongitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : LongitudeMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : LongitudeMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : LongitudeAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : LongitudeCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : LongitudeConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : LongitudeMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : LongitudeMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : LongitudeAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : LongitudeCompleteValidatorComponent,
 						conditionalExpression : LongitudeConditionalExpressionValidatorComponent,
 						message : LongitudeMessageValidatorComponent,
+						messageKey : LongitudeMessageKeyValidatorComponent,
 						dynamic : LongitudeDynamicValidatorComponent,
 						add : LongitudeAddValidatorComponent,
 			  },

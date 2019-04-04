@@ -39,4 +39,8 @@ export class User {
 	dinersClubCard: string;
 	
 	
+	@creditCard({fieldName:'cardType'  ,conditionalExpression:'x => x.cardType == "MasterCard"'  ,messageKey:'creditCardMessageKey' }) 
+	otherMasterCard: string;
+	
+	
 }

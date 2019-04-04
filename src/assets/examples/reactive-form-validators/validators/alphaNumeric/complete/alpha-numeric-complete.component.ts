@@ -20,6 +20,7 @@ export class AlphaNumericCompleteValidatorComponent implements OnInit {
             postalAddress:['', RxwebValidators.alphaNumeric({message:'Please enter only alphanumerics, special characters are not allowed.' })], 
             countryCode:['', RxwebValidators.alphaNumeric({conditionalExpression:(x,y) => x.areaName == "Delhi"  })], 
             cityCode:['', RxwebValidators.alphaNumeric({conditionalExpression:'x => x.areaName =="Delhi"' })], 
+            colonyName:['', RxwebValidators.alphaNumeric({messageKey:'alphaNumericMessageKey' })], 
         });
     }
 }

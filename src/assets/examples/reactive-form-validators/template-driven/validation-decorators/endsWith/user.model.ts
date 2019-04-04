@@ -1,9 +1,17 @@
-import {  endsWith, } from   "@rxweb/reactive-form-validators"   
+import {  endsWith,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@endsWith({value:'t' }) 
+	@prop()
 	name: string;
-	
-	
+
+	@prop()
+	taskId: string;
+
+	@prop()
+	company: string;
+
+	@prop()
+	skill: string;
+
 }

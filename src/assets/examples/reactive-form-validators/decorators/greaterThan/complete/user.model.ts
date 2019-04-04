@@ -23,4 +23,8 @@ export class User {
 	otherAge: number;
 	
 	
+	@greaterThan({fieldName:'age'  ,messageKey:'greaterThanMessageKey' }) 
+	joiningAge: number;
+	
+	
 }

@@ -1,9 +1,17 @@
-import {  port, } from   "@rxweb/reactive-form-validators"   
+import {  port,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@port() 
+	@prop()
+	browser: string;
+
+	@prop()
+	shoppingWebsitePort: string;
+
+	@prop()
 	educationalWebsitePort: string;
-	
-	
+
+	@prop()
+	commercialWebsitePort: string;
+
 }

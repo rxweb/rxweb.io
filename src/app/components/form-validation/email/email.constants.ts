@@ -10,6 +10,10 @@ import { EmailMessageComponent } from "src/assets/examples/reactive-form-validat
 import { EmailMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/email/message/email-message.component";
 import { EmailMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/email/message/email-message.component";
 import { EmailMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/email/message/email-message.component";
+import { EmailMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/email/messageKey/email-message-key.component";
+import { EmailMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/email/messageKey/email-message-key.component";
+import { EmailMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/email/messageKey/email-message-key.component";
+import { EmailMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/email/messageKey/email-message-key.component";
 import { EmailDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/email/dynamic/email-dynamic.component";
 import { EmailDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/email/dynamic/email-dynamic.component";
 import { EmailAddComponent } from "src/assets/examples/reactive-form-validators/decorators/email/add/email-add.component";
@@ -23,6 +27,7 @@ export const EMAIL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : EmailCompleteComponent,
 						conditionalExpression : EmailConditionalExpressionComponent,
 						message : EmailMessageComponent,
+						messageKey : EmailMessageKeyComponent,
 						dynamic : EmailDynamicComponent,
 						add : EmailAddComponent,
 						edit : EmailEditComponent,
@@ -31,18 +36,21 @@ export const EMAIL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : EmailCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : EmailConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : EmailMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : EmailMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : EmailAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : EmailCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : EmailConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : EmailMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : EmailMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : EmailAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : EmailCompleteValidatorComponent,
 						conditionalExpression : EmailConditionalExpressionValidatorComponent,
 						message : EmailMessageValidatorComponent,
+						messageKey : EmailMessageKeyValidatorComponent,
 						dynamic : EmailDynamicValidatorComponent,
 						add : EmailAddValidatorComponent,
 			  },

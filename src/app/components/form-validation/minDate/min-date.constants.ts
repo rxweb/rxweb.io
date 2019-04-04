@@ -22,6 +22,10 @@ import { MinDateOperatorComponent } from "src/assets/examples/reactive-form-vali
 import { MinDateOperatorTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/minDate/operator/min-date-operator.component";
 import { MinDateOperatorTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/minDate/operator/min-date-operator.component";
 import { MinDateOperatorValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/minDate/operator/min-date-operator.component";
+import { MinDateMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/minDate/messageKey/min-date-message-key.component";
+import { MinDateMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/minDate/messageKey/min-date-message-key.component";
+import { MinDateMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/minDate/messageKey/min-date-message-key.component";
+import { MinDateMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/minDate/messageKey/min-date-message-key.component";
 import { MinDateDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/minDate/dynamic/min-date-dynamic.component";
 import { MinDateDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/minDate/dynamic/min-date-dynamic.component";
 import { MinDateAddComponent } from "src/assets/examples/reactive-form-validators/decorators/minDate/add/min-date-add.component";
@@ -38,6 +42,7 @@ export const MIN_DATE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						message : MinDateMessageComponent,
 						fieldName : MinDateFieldNameComponent,
 						operator : MinDateOperatorComponent,
+						messageKey : MinDateMessageKeyComponent,
 						dynamic : MinDateDynamicComponent,
 						add : MinDateAddComponent,
 						edit : MinDateEditComponent,
@@ -49,6 +54,7 @@ export const MIN_DATE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						message : MinDateMessageTemplateDrivenValidationDirectivesComponent,
 						fieldName : MinDateFieldNameTemplateDrivenValidationDirectivesComponent,
 						operator : MinDateOperatorTemplateDrivenValidationDirectivesComponent,
+						messageKey : MinDateMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : MinDateAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -58,6 +64,7 @@ export const MIN_DATE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						message : MinDateMessageTemplateDrivenValidationDecoratorsComponent,
 						fieldName : MinDateFieldNameTemplateDrivenValidationDecoratorsComponent,
 						operator : MinDateOperatorTemplateDrivenValidationDecoratorsComponent,
+						messageKey : MinDateMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : MinDateAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -67,6 +74,7 @@ export const MIN_DATE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						message : MinDateMessageValidatorComponent,
 						fieldName : MinDateFieldNameValidatorComponent,
 						operator : MinDateOperatorValidatorComponent,
+						messageKey : MinDateMessageKeyValidatorComponent,
 						dynamic : MinDateDynamicValidatorComponent,
 						add : MinDateAddValidatorComponent,
 			  },

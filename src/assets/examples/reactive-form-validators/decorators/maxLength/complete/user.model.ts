@@ -21,4 +21,9 @@ export class User {
 	userName: string;
 	
 	
+	//Shows custom message based on message key
+	@maxLength({value:20  ,messageKey:'maxLengthMessageKey' }) 
+	fullName: string;
+	
+	
 }

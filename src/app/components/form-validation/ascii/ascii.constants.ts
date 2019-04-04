@@ -10,6 +10,10 @@ import { AsciiMessageComponent } from "src/assets/examples/reactive-form-validat
 import { AsciiMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/ascii/message/ascii-message.component";
 import { AsciiMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/ascii/message/ascii-message.component";
 import { AsciiMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/ascii/message/ascii-message.component";
+import { AsciiMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/ascii/messageKey/ascii-message-key.component";
+import { AsciiMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/ascii/messageKey/ascii-message-key.component";
+import { AsciiMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/ascii/messageKey/ascii-message-key.component";
+import { AsciiMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/ascii/messageKey/ascii-message-key.component";
 import { AsciiDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/ascii/dynamic/ascii-dynamic.component";
 import { AsciiDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/ascii/dynamic/ascii-dynamic.component";
 import { AsciiAddComponent } from "src/assets/examples/reactive-form-validators/decorators/ascii/add/ascii-add.component";
@@ -23,6 +27,7 @@ export const ASCII_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : AsciiCompleteComponent,
 						conditionalExpression : AsciiConditionalExpressionComponent,
 						message : AsciiMessageComponent,
+						messageKey : AsciiMessageKeyComponent,
 						dynamic : AsciiDynamicComponent,
 						add : AsciiAddComponent,
 						edit : AsciiEditComponent,
@@ -31,18 +36,21 @@ export const ASCII_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : AsciiCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : AsciiConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : AsciiMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : AsciiMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : AsciiAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : AsciiCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : AsciiConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : AsciiMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : AsciiMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : AsciiAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : AsciiCompleteValidatorComponent,
 						conditionalExpression : AsciiConditionalExpressionValidatorComponent,
 						message : AsciiMessageValidatorComponent,
+						messageKey : AsciiMessageKeyValidatorComponent,
 						dynamic : AsciiDynamicValidatorComponent,
 						add : AsciiAddValidatorComponent,
 			  },

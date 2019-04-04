@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LeapYearCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/leap-year-complete.component';
 import { LeapYearConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/leap-year-conditional-expression.component';
 import { LeapYearMessageTemplateDrivenValidationDecoratorsComponent } from './message/leap-year-message.component';
+import { LeapYearMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/leap-year-message-key.component';
 import { LeapYearAddTemplateDrivenValidationDecoratorsComponent } from './add/leap-year-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { LeapYearAddTemplateDrivenValidationDecoratorsComponent } from './add/le
 	LeapYearCompleteTemplateDrivenValidationDecoratorsComponent,
 	LeapYearConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LeapYearMessageTemplateDrivenValidationDecoratorsComponent,
+	LeapYearMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LeapYearAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	LeapYearCompleteTemplateDrivenValidationDecoratorsComponent,
 	LeapYearConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LeapYearMessageTemplateDrivenValidationDecoratorsComponent,
+	LeapYearMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LeapYearAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	LeapYearCompleteTemplateDrivenValidationDecoratorsComponent,
 	LeapYearConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LeapYearMessageTemplateDrivenValidationDecoratorsComponent,
+	LeapYearMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LeapYearAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

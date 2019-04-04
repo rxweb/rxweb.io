@@ -9,6 +9,7 @@ import { AlphaNumericCompleteComponent } from './complete/alpha-numeric-complete
 import { AlphaNumericAllowWhiteSpaceComponent } from './allowWhiteSpace/alpha-numeric-allow-white-space.component';
 import { AlphaNumericMessageComponent } from './message/alpha-numeric-message.component';
 import { AlphaNumericConditionalExpressionComponent } from './conditionalExpression/alpha-numeric-conditional-expression.component';
+import { AlphaNumericMessageKeyComponent } from './messageKey/alpha-numeric-message-key.component';
 import { AlphaNumericDynamicComponent } from './dynamic/alpha-numeric-dynamic.component';
 import { AlphaNumericAddComponent } from './add/alpha-numeric-add.component';
 import { AlphaNumericEditComponent } from './edit/alpha-numeric-edit.component';
@@ -19,6 +20,7 @@ import { AlphaNumericEditComponent } from './edit/alpha-numeric-edit.component';
 	AlphaNumericAllowWhiteSpaceComponent,
 	AlphaNumericMessageComponent,
 	AlphaNumericConditionalExpressionComponent,
+	AlphaNumericMessageKeyComponent,
 	AlphaNumericDynamicComponent,
 	AlphaNumericAddComponent,
 	AlphaNumericEditComponent,
@@ -28,6 +30,7 @@ entryComponents: [
 	AlphaNumericAllowWhiteSpaceComponent,
 	AlphaNumericMessageComponent,
 	AlphaNumericConditionalExpressionComponent,
+	AlphaNumericMessageKeyComponent,
 	AlphaNumericDynamicComponent,
 	AlphaNumericAddComponent,
 	AlphaNumericEditComponent,
@@ -43,6 +46,7 @@ entryComponents: [
 	AlphaNumericAllowWhiteSpaceComponent,
 	AlphaNumericMessageComponent,
 	AlphaNumericConditionalExpressionComponent,
+	AlphaNumericMessageKeyComponent,
 	AlphaNumericDynamicComponent,
 	AlphaNumericAddComponent,
 	AlphaNumericEditComponent,

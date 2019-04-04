@@ -20,7 +20,7 @@ export class ContainsDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/contains/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { emailAddress:'', businessEmailAddress:'', recoveryEmailAddress:'', otherEmailAddress:'',  }
+			var user = { emailAddress:'', businessEmailAddress:'', recoveryEmailAddress:'', otherEmailAddress:'', organizationEmailAddress:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

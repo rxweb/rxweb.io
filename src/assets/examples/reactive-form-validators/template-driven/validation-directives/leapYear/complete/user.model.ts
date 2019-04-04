@@ -12,4 +12,7 @@ export class User {
 	joiningYear: number;
 	
 	
+	promotionYear: number;
+	
+	
 }

@@ -12,6 +12,7 @@ import { ImageMinHeightTemplateDrivenValidationDecoratorsComponent } from './min
 import { ImageMinWidthTemplateDrivenValidationDecoratorsComponent } from './minWidth/image-min-width.component';
 import { ImageConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/image-conditional-expression.component';
 import { ImageMessageTemplateDrivenValidationDecoratorsComponent } from './message/image-message.component';
+import { ImageMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/image-message-key.component';
 import { ImageAddTemplateDrivenValidationDecoratorsComponent } from './add/image-add.component';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ImageAddTemplateDrivenValidationDecoratorsComponent } from './add/image
 	ImageMinWidthTemplateDrivenValidationDecoratorsComponent,
 	ImageConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	ImageMessageTemplateDrivenValidationDecoratorsComponent,
+	ImageMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	ImageAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -33,6 +35,7 @@ entryComponents: [
 	ImageMinWidthTemplateDrivenValidationDecoratorsComponent,
 	ImageConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	ImageMessageTemplateDrivenValidationDecoratorsComponent,
+	ImageMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	ImageAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -49,6 +52,7 @@ entryComponents: [
 	ImageMinWidthTemplateDrivenValidationDecoratorsComponent,
 	ImageConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	ImageMessageTemplateDrivenValidationDecoratorsComponent,
+	ImageMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	ImageAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

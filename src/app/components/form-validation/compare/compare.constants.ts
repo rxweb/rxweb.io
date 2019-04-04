@@ -10,6 +10,10 @@ import { CompareMessageComponent } from "src/assets/examples/reactive-form-valid
 import { CompareMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/compare/message/compare-message.component";
 import { CompareMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/compare/message/compare-message.component";
 import { CompareMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/compare/message/compare-message.component";
+import { CompareMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/compare/messageKey/compare-message-key.component";
+import { CompareMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/compare/messageKey/compare-message-key.component";
+import { CompareMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/compare/messageKey/compare-message-key.component";
+import { CompareMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/compare/messageKey/compare-message-key.component";
 import { CompareDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/compare/dynamic/compare-dynamic.component";
 import { CompareDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/compare/dynamic/compare-dynamic.component";
 import { CompareAddComponent } from "src/assets/examples/reactive-form-validators/decorators/compare/add/compare-add.component";
@@ -23,6 +27,7 @@ export const COMPARE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : CompareCompleteComponent,
 						fieldName : CompareFieldNameComponent,
 						message : CompareMessageComponent,
+						messageKey : CompareMessageKeyComponent,
 						dynamic : CompareDynamicComponent,
 						add : CompareAddComponent,
 						edit : CompareEditComponent,
@@ -31,18 +36,21 @@ export const COMPARE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : CompareCompleteTemplateDrivenValidationDirectivesComponent,
 						fieldName : CompareFieldNameTemplateDrivenValidationDirectivesComponent,
 						message : CompareMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : CompareMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : CompareAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : CompareCompleteTemplateDrivenValidationDecoratorsComponent,
 						fieldName : CompareFieldNameTemplateDrivenValidationDecoratorsComponent,
 						message : CompareMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : CompareMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : CompareAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : CompareCompleteValidatorComponent,
 						fieldName : CompareFieldNameValidatorComponent,
 						message : CompareMessageValidatorComponent,
+						messageKey : CompareMessageKeyValidatorComponent,
 						dynamic : CompareDynamicValidatorComponent,
 						add : CompareAddValidatorComponent,
 			  },

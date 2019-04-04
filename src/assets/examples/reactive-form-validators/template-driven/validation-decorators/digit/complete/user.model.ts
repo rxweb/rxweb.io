@@ -20,4 +20,8 @@ export class User {
 	mobileNumber: number;
 	
 	
+	@digit({messageKey:'digitMessageKey' }) 
+	zipCode: number;
+	
+	
 }

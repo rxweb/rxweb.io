@@ -14,4 +14,7 @@ export class UserInfo {
 	@prop()
 	contactFile: string;
 
+	@prop()
+	excelFile: string;
+
 }

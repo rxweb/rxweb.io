@@ -11,4 +11,7 @@ export class NumberInfo {
 	@prop()
 	firstNumber: string;
 
+	@prop()
+	fourthNumber: string;
+
 }

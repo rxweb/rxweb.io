@@ -1,0 +1,12 @@
+<div>
+  <form #macaddressinfoForm = "ngForm" [rxwebForm]="macaddressinfoForm" [model]="macaddressinfo">
+    <div class="form-group">
+      <label>Server MAC Address</label>
+	    <input type="text" name="serverMacAddress" [(ngModel)]="macaddressinfo.serverMacAddress"  class="form-control" />
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="macaddressinfoForm.controls?.serverMacAddress?.errors">{{macaddressinfoForm.controls?.serverMacAddress?.errors?.mac.message}}<br/></small>	
+    </div>
+    <button [disabled]="!macaddressinfoForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

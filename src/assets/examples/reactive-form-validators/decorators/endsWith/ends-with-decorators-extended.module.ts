@@ -9,6 +9,7 @@ import { EndsWithCompleteComponent } from './complete/ends-with-complete.compone
 import { EndsWithValueComponent } from './value/ends-with-value.component';
 import { EndsWithConditionalExpressionComponent } from './conditionalExpression/ends-with-conditional-expression.component';
 import { EndsWithMessageComponent } from './message/ends-with-message.component';
+import { EndsWithMessageKeyComponent } from './messageKey/ends-with-message-key.component';
 import { EndsWithDynamicComponent } from './dynamic/ends-with-dynamic.component';
 import { EndsWithAddComponent } from './add/ends-with-add.component';
 import { EndsWithEditComponent } from './edit/ends-with-edit.component';
@@ -19,6 +20,7 @@ import { EndsWithEditComponent } from './edit/ends-with-edit.component';
 	EndsWithValueComponent,
 	EndsWithConditionalExpressionComponent,
 	EndsWithMessageComponent,
+	EndsWithMessageKeyComponent,
 	EndsWithDynamicComponent,
 	EndsWithAddComponent,
 	EndsWithEditComponent,
@@ -28,6 +30,7 @@ entryComponents: [
 	EndsWithValueComponent,
 	EndsWithConditionalExpressionComponent,
 	EndsWithMessageComponent,
+	EndsWithMessageKeyComponent,
 	EndsWithDynamicComponent,
 	EndsWithAddComponent,
 	EndsWithEditComponent,
@@ -43,6 +46,7 @@ entryComponents: [
 	EndsWithValueComponent,
 	EndsWithConditionalExpressionComponent,
 	EndsWithMessageComponent,
+	EndsWithMessageKeyComponent,
 	EndsWithDynamicComponent,
 	EndsWithAddComponent,
 	EndsWithEditComponent,

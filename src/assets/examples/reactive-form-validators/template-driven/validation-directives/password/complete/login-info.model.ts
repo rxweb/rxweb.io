@@ -7,4 +7,7 @@ export class LoginInfo {
 	oldPassword: string;
 	
 	
+	confirmPassword: string;
+	
+	
 }

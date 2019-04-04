@@ -14,6 +14,10 @@ import { TimeMessageComponent } from "src/assets/examples/reactive-form-validato
 import { TimeMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/time/message/time-message.component";
 import { TimeMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/time/message/time-message.component";
 import { TimeMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/time/message/time-message.component";
+import { TimeMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/time/messageKey/time-message-key.component";
+import { TimeMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/time/messageKey/time-message-key.component";
+import { TimeMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/time/messageKey/time-message-key.component";
+import { TimeMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/time/messageKey/time-message-key.component";
 import { TimeDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/time/dynamic/time-dynamic.component";
 import { TimeDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/time/dynamic/time-dynamic.component";
 import { TimeAddComponent } from "src/assets/examples/reactive-form-validators/decorators/time/add/time-add.component";
@@ -28,6 +32,7 @@ export const TIME_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : TimeConditionalExpressionComponent,
 						allowSeconds : TimeAllowSecondsComponent,
 						message : TimeMessageComponent,
+						messageKey : TimeMessageKeyComponent,
 						dynamic : TimeDynamicComponent,
 						add : TimeAddComponent,
 						edit : TimeEditComponent,
@@ -37,6 +42,7 @@ export const TIME_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : TimeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						allowSeconds : TimeAllowSecondsTemplateDrivenValidationDirectivesComponent,
 						message : TimeMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : TimeMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : TimeAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const TIME_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : TimeConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						allowSeconds : TimeAllowSecondsTemplateDrivenValidationDecoratorsComponent,
 						message : TimeMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : TimeMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : TimeAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const TIME_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : TimeConditionalExpressionValidatorComponent,
 						allowSeconds : TimeAllowSecondsValidatorComponent,
 						message : TimeMessageValidatorComponent,
+						messageKey : TimeMessageKeyValidatorComponent,
 						dynamic : TimeDynamicValidatorComponent,
 						add : TimeAddValidatorComponent,
 			  },

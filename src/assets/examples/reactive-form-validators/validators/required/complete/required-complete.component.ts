@@ -19,6 +19,7 @@ export class RequiredCompleteValidatorComponent implements OnInit {
             middleName:['', RxwebValidators.required({conditionalExpression:(x,y) => x.firstName == "Bharat"  })], 
             lastName:['', RxwebValidators.required({conditionalExpression:'x => x.firstName == "Bharat"' })], 
             userName:['', RxwebValidators.required({message:'Username cannot be blank.' })], 
+            fullName:['', RxwebValidators.required({messageKey:'requiredMessageKey' })], 
         });
     }
 }

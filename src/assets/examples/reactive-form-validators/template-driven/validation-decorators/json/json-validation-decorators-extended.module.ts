@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { JsonCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/json-complete.component';
 import { JsonMessageTemplateDrivenValidationDecoratorsComponent } from './message/json-message.component';
 import { JsonConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/json-conditional-expression.component';
+import { JsonMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/json-message-key.component';
 import { JsonAddTemplateDrivenValidationDecoratorsComponent } from './add/json-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { JsonAddTemplateDrivenValidationDecoratorsComponent } from './add/json-a
 	JsonCompleteTemplateDrivenValidationDecoratorsComponent,
 	JsonMessageTemplateDrivenValidationDecoratorsComponent,
 	JsonConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	JsonMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	JsonAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	JsonCompleteTemplateDrivenValidationDecoratorsComponent,
 	JsonMessageTemplateDrivenValidationDecoratorsComponent,
 	JsonConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	JsonMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	JsonAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	JsonCompleteTemplateDrivenValidationDecoratorsComponent,
 	JsonMessageTemplateDrivenValidationDecoratorsComponent,
 	JsonConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	JsonMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	JsonAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

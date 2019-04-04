@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LatLongCompleteTemplateDrivenValidationDirectivesComponent } from './complete/lat-long-complete.component';
 import { LatLongConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/lat-long-conditional-expression.component';
 import { LatLongMessageTemplateDrivenValidationDirectivesComponent } from './message/lat-long-message.component';
+import { LatLongMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/lat-long-message-key.component';
 import { LatLongAddTemplateDrivenValidationDirectivesComponent } from './add/lat-long-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { LatLongAddTemplateDrivenValidationDirectivesComponent } from './add/lat
 	LatLongCompleteTemplateDrivenValidationDirectivesComponent,
 	LatLongConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LatLongMessageTemplateDrivenValidationDirectivesComponent,
+	LatLongMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LatLongAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	LatLongCompleteTemplateDrivenValidationDirectivesComponent,
 	LatLongConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LatLongMessageTemplateDrivenValidationDirectivesComponent,
+	LatLongMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LatLongAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	LatLongCompleteTemplateDrivenValidationDirectivesComponent,
 	LatLongConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LatLongMessageTemplateDrivenValidationDirectivesComponent,
+	LatLongMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LatLongAddTemplateDrivenValidationDirectivesComponent,
   ],
 

@@ -20,7 +20,7 @@ export class TimeDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/time/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var attandanceDetail = { entryPlace:'', totalIn:'', entryTime:'', totalOutTime:'', exitTime:'',  }
+			var attandanceDetail = { entryPlace:'', totalIn:'', entryTime:'', totalOutTime:'', exitTime:'', netInTime:'',  }
 			this.attandanceDetailFormGroup = this.formBuilder.group(attandanceDetail,formBuilderConfiguration);
 		})
     }

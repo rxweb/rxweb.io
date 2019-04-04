@@ -14,4 +14,7 @@ export class AddressInfo {
 	@prop()
 	stateCode: string;
 
+	@prop()
+	cityCode: string;
+
 }

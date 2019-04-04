@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	educationalWebsitePort: string;
 
+	@prop()
+	commercialWebsitePort: string;
+
 }

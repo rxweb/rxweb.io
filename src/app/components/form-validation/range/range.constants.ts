@@ -18,6 +18,10 @@ import { RangeMessageComponent } from "src/assets/examples/reactive-form-validat
 import { RangeMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/range/message/range-message.component";
 import { RangeMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/range/message/range-message.component";
 import { RangeMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/range/message/range-message.component";
+import { RangeMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/range/messageKey/range-message-key.component";
+import { RangeMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/range/messageKey/range-message-key.component";
+import { RangeMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/range/messageKey/range-message-key.component";
+import { RangeMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/range/messageKey/range-message-key.component";
 import { RangeDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/range/dynamic/range-dynamic.component";
 import { RangeDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/range/dynamic/range-dynamic.component";
 import { RangeAddComponent } from "src/assets/examples/reactive-form-validators/decorators/range/add/range-add.component";
@@ -33,6 +37,7 @@ export const RANGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						maximumNumber : RangeMaximumNumberComponent,
 						conditionalExpression : RangeConditionalExpressionComponent,
 						message : RangeMessageComponent,
+						messageKey : RangeMessageKeyComponent,
 						dynamic : RangeDynamicComponent,
 						add : RangeAddComponent,
 						edit : RangeEditComponent,
@@ -43,6 +48,7 @@ export const RANGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						maximumNumber : RangeMaximumNumberTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : RangeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : RangeMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : RangeMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : RangeAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -51,6 +57,7 @@ export const RANGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						maximumNumber : RangeMaximumNumberTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : RangeConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : RangeMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : RangeMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : RangeAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -59,6 +66,7 @@ export const RANGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						maximumNumber : RangeMaximumNumberValidatorComponent,
 						conditionalExpression : RangeConditionalExpressionValidatorComponent,
 						message : RangeMessageValidatorComponent,
+						messageKey : RangeMessageKeyValidatorComponent,
 						dynamic : RangeDynamicValidatorComponent,
 						add : RangeAddValidatorComponent,
 			  },

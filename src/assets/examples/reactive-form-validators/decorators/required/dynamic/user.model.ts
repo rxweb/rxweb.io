@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	userName: string;
 
+	@prop()
+	fullName: string;
+
 }

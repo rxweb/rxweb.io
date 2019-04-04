@@ -17,6 +17,7 @@ Suppose you want to create a User form, which contains fields like Username, Bir
 	<li>Allow date greater than `30/07/2018 ` in RegistrationDate.</li>
 	<li>Apply minDate validation based on matched condition in the form, like if the UserName is `john`, then only the minDate validation will be  applied to BirthDate field (i.e., BirthDate must be greater than `30/07/2018 `).</li>
 	<li>Adding Custom Message on RegistrationDate Field.</li>
+  <li>Shows the custom message on `Resignation Date` field by using `messageKey` property.</li>
 	<data-scope scope="['decorator','validator']">
 	<li>Apply minDate validation dynamically based on server rules.</li>
 	</data-scope>
@@ -86,6 +87,7 @@ Below options are not mandatory to use in the `minDate` validation. If needed th
 <tr><td><a  (click)='scrollTo("#message")'  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#value")'  title="value">value</a></td><td>Enter date value which you want to restrict in the property. </td></tr>
 <tr><td><a (click)='scrollTo("#operator")' title="operator">operator</a></td><td>operator is used to validate date based upon greater than or greater than equal to a particular value, The default validation is based upon greater than equal to.</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## operator
@@ -137,6 +139,14 @@ Enter date value which you want to restrict in the property.
 
 <div component="app-code" key="minDate-valueExample-model"></div> 
 <div component="app-example-runner" ref-component="minDate-value-value" title="minDate {{validatorType}} with value" key="value"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="minDate-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-minDate-messageKey" title="minDate {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete minDate Example
 

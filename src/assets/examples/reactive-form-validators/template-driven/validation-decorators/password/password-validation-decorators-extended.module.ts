@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PasswordCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/password-complete.component';
 import { PasswordValidationTemplateDrivenValidationDecoratorsComponent } from './validation/password-validation.component';
 import { PasswordMessageTemplateDrivenValidationDecoratorsComponent } from './message/password-message.component';
+import { PasswordMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/password-message-key.component';
 import { PasswordAddTemplateDrivenValidationDecoratorsComponent } from './add/password-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { PasswordAddTemplateDrivenValidationDecoratorsComponent } from './add/pa
 	PasswordCompleteTemplateDrivenValidationDecoratorsComponent,
 	PasswordValidationTemplateDrivenValidationDecoratorsComponent,
 	PasswordMessageTemplateDrivenValidationDecoratorsComponent,
+	PasswordMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	PasswordAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	PasswordCompleteTemplateDrivenValidationDecoratorsComponent,
 	PasswordValidationTemplateDrivenValidationDecoratorsComponent,
 	PasswordMessageTemplateDrivenValidationDecoratorsComponent,
+	PasswordMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	PasswordAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	PasswordCompleteTemplateDrivenValidationDecoratorsComponent,
 	PasswordValidationTemplateDrivenValidationDecoratorsComponent,
 	PasswordMessageTemplateDrivenValidationDecoratorsComponent,
+	PasswordMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	PasswordAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

@@ -10,6 +10,10 @@ import { RequiredMessageComponent } from "src/assets/examples/reactive-form-vali
 import { RequiredMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/required/message/required-message.component";
 import { RequiredMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/required/message/required-message.component";
 import { RequiredMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/required/message/required-message.component";
+import { RequiredMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/required/messageKey/required-message-key.component";
+import { RequiredMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/required/messageKey/required-message-key.component";
+import { RequiredMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/required/messageKey/required-message-key.component";
+import { RequiredMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/required/messageKey/required-message-key.component";
 import { RequiredDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/required/dynamic/required-dynamic.component";
 import { RequiredDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/required/dynamic/required-dynamic.component";
 import { RequiredAddComponent } from "src/assets/examples/reactive-form-validators/decorators/required/add/required-add.component";
@@ -23,6 +27,7 @@ export const REQUIRED_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : RequiredCompleteComponent,
 						conditionalExpression : RequiredConditionalExpressionComponent,
 						message : RequiredMessageComponent,
+						messageKey : RequiredMessageKeyComponent,
 						dynamic : RequiredDynamicComponent,
 						add : RequiredAddComponent,
 						edit : RequiredEditComponent,
@@ -31,18 +36,21 @@ export const REQUIRED_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : RequiredCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : RequiredConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : RequiredMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : RequiredMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : RequiredAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : RequiredCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : RequiredConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : RequiredMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : RequiredMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : RequiredAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : RequiredCompleteValidatorComponent,
 						conditionalExpression : RequiredConditionalExpressionValidatorComponent,
 						message : RequiredMessageValidatorComponent,
+						messageKey : RequiredMessageKeyValidatorComponent,
 						dynamic : RequiredDynamicValidatorComponent,
 						add : RequiredAddValidatorComponent,
 			  },

@@ -11,4 +11,7 @@ export class MacAddressInfo {
 	@prop()
 	systemMacAddress: string;
 
+	@prop()
+	serverMacAddress: string;
+
 }

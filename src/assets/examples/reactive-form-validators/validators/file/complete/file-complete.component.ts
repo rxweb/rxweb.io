@@ -16,6 +16,7 @@ export class FileCompleteValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: FormBuilder )
 	{ }
@@ -28,6 +29,7 @@ export class FileCompleteValidatorComponent implements OnInit {
             minimumFiles:['', RxwebValidators.file({minFiles:5  ,conditionalExpression:'x => x.fileType == "Picture"' })], 
             maximumFile:['', RxwebValidators.file({maxFiles:5  ,conditionalExpression:'(x,y) => x.fileType == "Document"' })], 
             minMaxFiles:['', RxwebValidators.file({minFiles:5  ,maxFiles:10  ,message:'You can upload minimum 5 and maximum 10 files.' })], 
+            excelFiles:['', RxwebValidators.file({minFiles:2  ,maxFiles:5  ,messageKey:'fileMessageKey' })], 
         });
     }
 }

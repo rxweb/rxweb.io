@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LowerCaseCompleteTemplateDrivenValidationDirectivesComponent } from './complete/lower-case-complete.component';
 import { LowerCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/lower-case-conditional-expression.component';
 import { LowerCaseMessageTemplateDrivenValidationDirectivesComponent } from './message/lower-case-message.component';
+import { LowerCaseMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/lower-case-message-key.component';
 import { LowerCaseAddTemplateDrivenValidationDirectivesComponent } from './add/lower-case-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { LowerCaseAddTemplateDrivenValidationDirectivesComponent } from './add/l
 	LowerCaseCompleteTemplateDrivenValidationDirectivesComponent,
 	LowerCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LowerCaseMessageTemplateDrivenValidationDirectivesComponent,
+	LowerCaseMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LowerCaseAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	LowerCaseCompleteTemplateDrivenValidationDirectivesComponent,
 	LowerCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LowerCaseMessageTemplateDrivenValidationDirectivesComponent,
+	LowerCaseMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LowerCaseAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	LowerCaseCompleteTemplateDrivenValidationDirectivesComponent,
 	LowerCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LowerCaseMessageTemplateDrivenValidationDirectivesComponent,
+	LowerCaseMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LowerCaseAddTemplateDrivenValidationDirectivesComponent,
   ],
 

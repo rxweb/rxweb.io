@@ -11,14 +11,20 @@
       <input type="text" formControlName="thirdCountryLatitude" class="form-control"  />
       <small class="form-text text-muted">If you want to apply conditional validation on 'Third Country Latitude' then you need to add 'Continent' input as 'Asia'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
-      <small class="form-text text-danger" *ngIf="countryFormGroup.controls.thirdCountryLatitude.errors">{{countryFormGroup.controls.thirdCountryLatitude.errors.latitude.message}}<br/></small>
+	<small class="form-text text-danger" *ngIf="countryFormGroup.controls.thirdCountryLatitude.errors">{{countryFormGroup.controls.thirdCountryLatitude.errors.latitude.message}}<br/></small>
     </div>
     <div class="form-group">
       <label>First Country Latitude</label>
       <input type="text" formControlName="firstCountryLatitude" class="form-control"  />
       <small class="form-text text-muted">You can enter only latitude<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>
-      <small class="form-text text-danger" *ngIf="countryFormGroup.controls.firstCountryLatitude.errors">{{countryFormGroup.controls.firstCountryLatitude.errors.latitude.message}}<br/></small>
+	<small class="form-text text-danger" *ngIf="countryFormGroup.controls.firstCountryLatitude.errors">{{countryFormGroup.controls.firstCountryLatitude.errors.latitude.message}}<br/></small>
+    </div>
+    <div class="form-group">
+      <label>Fourth Country Latitude</label>
+      <input type="text" formControlName="fourthCountryLatitude" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	<small class="form-text text-danger" *ngIf="countryFormGroup.controls.fourthCountryLatitude.errors">{{countryFormGroup.controls.fourthCountryLatitude.errors.latitude.message}}<br/></small>
     </div>
     <button [disabled]="!countryFormGroup.valid" class="btn btn-primary">Submit</button>
   </form>

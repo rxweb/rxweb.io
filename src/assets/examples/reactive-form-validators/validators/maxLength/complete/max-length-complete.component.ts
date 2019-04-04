@@ -19,6 +19,7 @@ export class MaxLengthCompleteValidatorComponent implements OnInit {
             middleName:['', RxwebValidators.maxLength({value:16  ,conditionalExpression:(x,y)=> x.firstName == "Bharat" })], 
             lastName:['', RxwebValidators.maxLength({value:16  ,conditionalExpression:'x => x.firstName == "Bharat"' })], 
             userName:['', RxwebValidators.maxLength({value:10  ,message:'Maximum 10 characters are allowed' })], 
+            fullName:['', RxwebValidators.maxLength({value:20  ,messageKey:'maxLengthMessageKey' })], 
         });
     }
 }

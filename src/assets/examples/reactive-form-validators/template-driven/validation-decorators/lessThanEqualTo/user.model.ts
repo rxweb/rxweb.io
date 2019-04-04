@@ -5,8 +5,16 @@ export class User {
 	@prop()
 	totalMarks: number;
 
-	@lessThanEqualTo({fieldName:'totalMarks' }) 
-	marks: number;
-	
-	
+	@prop()
+	passingMarks: number;
+
+	@prop()
+	practicalExamMarks: number;
+
+	@prop()
+	otherMarks: number;
+
+	@prop()
+	disciplineMarks: number;
+
 }

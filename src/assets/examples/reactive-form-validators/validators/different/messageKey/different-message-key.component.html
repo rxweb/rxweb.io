@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="accountInfoFormGroup">
+    <div class="form-group">
+      <label>Recovery Email Address</label>
+      <input type="text" formControlName="recoveryEmailAddress" class="form-control"  />
+      <small class="form-text text-muted">Custom message based on message key<br/></small>
+	<small class="form-text text-danger" *ngIf="accountInfoFormGroup.controls.recoveryEmailAddress.errors">{{accountInfoFormGroup.controls.recoveryEmailAddress.errors.different.message}}<br/></small>
+    </div>
+    <button [disabled]="!accountInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

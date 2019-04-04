@@ -14,6 +14,10 @@ import { ExtensionMessageComponent } from "src/assets/examples/reactive-form-val
 import { ExtensionMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/extension/message/extension-message.component";
 import { ExtensionMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/extension/message/extension-message.component";
 import { ExtensionMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/extension/message/extension-message.component";
+import { ExtensionMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/extension/messageKey/extension-message-key.component";
+import { ExtensionMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/extension/messageKey/extension-message-key.component";
+import { ExtensionMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/extension/messageKey/extension-message-key.component";
+import { ExtensionMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/extension/messageKey/extension-message-key.component";
 import { ExtensionDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/extension/dynamic/extension-dynamic.component";
 import { ExtensionDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/extension/dynamic/extension-dynamic.component";
 import { ExtensionAddComponent } from "src/assets/examples/reactive-form-validators/decorators/extension/add/extension-add.component";
@@ -28,6 +32,7 @@ export const EXTENSION_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						extensions : ExtensionExtensionsComponent,
 						conditionalExpression : ExtensionConditionalExpressionComponent,
 						message : ExtensionMessageComponent,
+						messageKey : ExtensionMessageKeyComponent,
 						dynamic : ExtensionDynamicComponent,
 						add : ExtensionAddComponent,
 						edit : ExtensionEditComponent,
@@ -37,6 +42,7 @@ export const EXTENSION_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						extensions : ExtensionExtensionsTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : ExtensionConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : ExtensionMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : ExtensionMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : ExtensionAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const EXTENSION_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						extensions : ExtensionExtensionsTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : ExtensionConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : ExtensionMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : ExtensionMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : ExtensionAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const EXTENSION_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						extensions : ExtensionExtensionsValidatorComponent,
 						conditionalExpression : ExtensionConditionalExpressionValidatorComponent,
 						message : ExtensionMessageValidatorComponent,
+						messageKey : ExtensionMessageKeyValidatorComponent,
 						dynamic : ExtensionDynamicValidatorComponent,
 						add : ExtensionAddValidatorComponent,
 			  },

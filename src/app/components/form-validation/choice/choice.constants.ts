@@ -19,35 +19,39 @@ import { ChoiceDynamicValidatorComponent } from "src/assets/examples/reactive-fo
 import { ChoiceMaxLengthComponent } from "src/assets/examples/reactive-form-validators/decorators/choice/maxLength/choice-max-length.component";
 import { ChoiceMaxLengthTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/choice/maxLength/choice-max-length.component";
 import { ChoiceMaxLengthValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/choice/maxLength/choice-max-length.component";
+import { ChoiceMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/choice/messageKey/choice-message-key.component";
+import { ChoiceMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/choice/messageKey/choice-message-key.component";
 
 export const CHOICE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
-	decorators: {
-		complete: ChoiceCompleteComponent,
-		minLength: ChoiceMinLengthComponent,
-		maxLength: ChoiceMaxLengthComponent,
-		message: ChoiceMessageComponent,
-		conditionalExpression: ChoiceConditionalExpressionComponent,
-		dynamic: ChoiceDynamicComponent,
-		add: ChoiceAddComponent,
-	},
-	template_driven_validation_directives: {
-		complete: ChoiceCompleteTemplateDrivenValidationDirectivesComponent,
-		maxLength: ChoiceMaxLengthTemplateDrivenValidationDirectivesComponent,
-		minLength: ChoiceMinLengthTemplateDrivenValidationDirectivesComponent,
-		message: ChoiceMessageTemplateDrivenValidationDirectivesComponent,
-		conditionalExpression: ChoiceConditionalExpressionTemplateDrivenValidationDirectivesComponent,
-		dynamic: ChoiceDynamicTemplateDrivenValidationDirectivesComponent,
-		add: ChoiceAddTemplateDrivenValidationDirectivesComponent,
-	},
-	template_driven_validation_decorators: {
-	},
-	validators: {
-		complete: ChoiceCompleteValidatorComponent,
-		minLength: ChoiceMinLengthValidatorComponent,
-		maxLength: ChoiceMaxLengthValidatorComponent,
-		message: ChoiceMessageValidatorComponent,
-		conditionalExpression: ChoiceConditionalExpressionValidatorComponent,
-		dynamic: ChoiceDynamicValidatorComponent,
-		add: ChoiceAddValidatorComponent,
-	},
+  decorators: {
+    complete: ChoiceCompleteComponent,
+    minLength: ChoiceMinLengthComponent,
+    maxLength: ChoiceMaxLengthComponent,
+    message: ChoiceMessageComponent,
+    conditionalExpression: ChoiceConditionalExpressionComponent,
+    dynamic: ChoiceDynamicComponent,
+    add: ChoiceAddComponent,
+    messageKey: ChoiceMessageKeyComponent
+  },
+  template_driven_validation_directives: {
+    complete: ChoiceCompleteTemplateDrivenValidationDirectivesComponent,
+    maxLength: ChoiceMaxLengthTemplateDrivenValidationDirectivesComponent,
+    minLength: ChoiceMinLengthTemplateDrivenValidationDirectivesComponent,
+    message: ChoiceMessageTemplateDrivenValidationDirectivesComponent,
+    conditionalExpression: ChoiceConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+    dynamic: ChoiceDynamicTemplateDrivenValidationDirectivesComponent,
+    add: ChoiceAddTemplateDrivenValidationDirectivesComponent,
+  },
+  template_driven_validation_decorators: {
+  },
+  validators: {
+    complete: ChoiceCompleteValidatorComponent,
+    minLength: ChoiceMinLengthValidatorComponent,
+    maxLength: ChoiceMaxLengthValidatorComponent,
+    message: ChoiceMessageValidatorComponent,
+    conditionalExpression: ChoiceConditionalExpressionValidatorComponent,
+    dynamic: ChoiceDynamicValidatorComponent,
+    add: ChoiceAddValidatorComponent,
+    messageKey: ChoiceMessageKeyValidatorComponent
+  },
 }

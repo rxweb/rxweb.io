@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	age: string;
 
+	@prop()
+	pinCode: string;
+
 }

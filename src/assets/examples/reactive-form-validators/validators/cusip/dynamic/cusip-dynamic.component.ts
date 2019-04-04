@@ -18,6 +18,7 @@ export class CusipDynamicValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: RxFormBuilder , private http: HttpClient )
 	{ }
@@ -26,7 +27,7 @@ export class CusipDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/cusip/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var companyInfo = { companyName:'', oracleCorporationCusipCode:'', googleIncCusipCode:'', microsoftCorporationCusipCode:'', appleIncCusipCode:'',  }
+			var companyInfo = { companyName:'', oracleCorporationCusipCode:'', googleIncCusipCode:'', microsoftCorporationCusipCode:'', appleIncCusipCode:'', amazonCorporationCusipCode:'',  }
 			this.companyInfoFormGroup = this.formBuilder.group(companyInfo,formBuilderConfiguration);
 		})
     }

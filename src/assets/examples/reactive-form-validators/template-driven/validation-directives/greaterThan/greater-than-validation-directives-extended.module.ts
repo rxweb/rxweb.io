@@ -9,6 +9,7 @@ import { GreaterThanCompleteTemplateDrivenValidationDirectivesComponent } from '
 import { GreaterThanFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/greater-than-field-name.component';
 import { GreaterThanConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/greater-than-conditional-expression.component';
 import { GreaterThanMessageTemplateDrivenValidationDirectivesComponent } from './message/greater-than-message.component';
+import { GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/greater-than-message-key.component';
 import { GreaterThanAddTemplateDrivenValidationDirectivesComponent } from './add/greater-than-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { GreaterThanAddTemplateDrivenValidationDirectivesComponent } from './add
 	GreaterThanFieldNameTemplateDrivenValidationDirectivesComponent,
 	GreaterThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanMessageTemplateDrivenValidationDirectivesComponent,
+	GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	GreaterThanFieldNameTemplateDrivenValidationDirectivesComponent,
 	GreaterThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanMessageTemplateDrivenValidationDirectivesComponent,
+	GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	GreaterThanFieldNameTemplateDrivenValidationDirectivesComponent,
 	GreaterThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanMessageTemplateDrivenValidationDirectivesComponent,
+	GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanAddTemplateDrivenValidationDirectivesComponent,
   ],
 

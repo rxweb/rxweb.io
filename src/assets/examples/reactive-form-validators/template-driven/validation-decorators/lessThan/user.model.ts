@@ -3,10 +3,18 @@ import {  lessThan,prop, } from   "@rxweb/reactive-form-validators"
 export class User {
 
 	@prop()
-	marks: number;
+	obtainedMarks: number;
 
-	@lessThan({fieldName:'marks' }) 
+	@prop()
+	otherActivityMarks: number;
+
+	@prop()
 	passingMarks: number;
-	
-	
+
+	@prop()
+	otherMarks: number;
+
+	@prop()
+	disciplineMarks: number;
+
 }

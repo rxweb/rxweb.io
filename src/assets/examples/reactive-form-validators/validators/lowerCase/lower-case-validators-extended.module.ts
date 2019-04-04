@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LowerCaseCompleteValidatorComponent } from './complete/lower-case-complete.component';
 import { LowerCaseConditionalExpressionValidatorComponent } from './conditionalExpression/lower-case-conditional-expression.component';
 import { LowerCaseMessageValidatorComponent } from './message/lower-case-message.component';
+import { LowerCaseMessageKeyValidatorComponent } from './messageKey/lower-case-message-key.component';
 import { LowerCaseDynamicValidatorComponent } from './dynamic/lower-case-dynamic.component';
 import { LowerCaseAddValidatorComponent } from './add/lower-case-add.component';
 
@@ -16,6 +17,7 @@ import { LowerCaseAddValidatorComponent } from './add/lower-case-add.component';
 	LowerCaseCompleteValidatorComponent,
 	LowerCaseConditionalExpressionValidatorComponent,
 	LowerCaseMessageValidatorComponent,
+	LowerCaseMessageKeyValidatorComponent,
 	LowerCaseDynamicValidatorComponent,
 	LowerCaseAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	LowerCaseCompleteValidatorComponent,
 	LowerCaseConditionalExpressionValidatorComponent,
 	LowerCaseMessageValidatorComponent,
+	LowerCaseMessageKeyValidatorComponent,
 	LowerCaseDynamicValidatorComponent,
 	LowerCaseAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	LowerCaseCompleteValidatorComponent,
 	LowerCaseConditionalExpressionValidatorComponent,
 	LowerCaseMessageValidatorComponent,
+	LowerCaseMessageKeyValidatorComponent,
 	LowerCaseDynamicValidatorComponent,
 	LowerCaseAddValidatorComponent,
   ],

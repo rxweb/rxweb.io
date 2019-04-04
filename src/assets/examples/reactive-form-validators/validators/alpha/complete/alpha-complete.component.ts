@@ -20,6 +20,7 @@ export class AlphaCompleteValidatorComponent implements OnInit {
             cityName:['', RxwebValidators.alpha({conditionalExpression:'x => x.countryName =="India"' })], 
             stateName:['', RxwebValidators.alpha({allowWhiteSpace:true })], 
             stateCode:['', RxwebValidators.alpha({message:'You can enter only alphabets.' })], 
+            cityCode:['', RxwebValidators.alpha({messageKey:'alphaMessageKey' })], 
         });
     }
 }

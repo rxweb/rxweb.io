@@ -19,6 +19,7 @@ export class ContainsCompleteValidatorComponent implements OnInit {
             businessEmailAddress:['', RxwebValidators.contains({value:'@gmail.com'  ,conditionalExpression:(x,y) => x.emailAddress == "abc@gmail.com" })], 
             recoveryEmailAddress:['', RxwebValidators.contains({value:'@gmail.com'  ,conditionalExpression:'x => x.emailAddress == "abc@gmail.com"' })], 
             otherEmailAddress:['', RxwebValidators.contains({value:'@gmail.com'  ,message:'Please enter valid gmailId' })], 
+            organizationEmailAddress:['', RxwebValidators.contains({value:'@gmail.com'  ,messageKey:'containsMessageKey' })], 
         });
     }
 }

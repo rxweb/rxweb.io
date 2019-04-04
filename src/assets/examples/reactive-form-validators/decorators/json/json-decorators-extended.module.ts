@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { JsonCompleteComponent } from './complete/json-complete.component';
 import { JsonMessageComponent } from './message/json-message.component';
 import { JsonConditionalExpressionComponent } from './conditionalExpression/json-conditional-expression.component';
+import { JsonMessageKeyComponent } from './messageKey/json-message-key.component';
 import { JsonDynamicComponent } from './dynamic/json-dynamic.component';
 import { JsonAddComponent } from './add/json-add.component';
 import { JsonEditComponent } from './edit/json-edit.component';
@@ -17,6 +18,7 @@ import { JsonEditComponent } from './edit/json-edit.component';
 	JsonCompleteComponent,
 	JsonMessageComponent,
 	JsonConditionalExpressionComponent,
+	JsonMessageKeyComponent,
 	JsonDynamicComponent,
 	JsonAddComponent,
 	JsonEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	JsonCompleteComponent,
 	JsonMessageComponent,
 	JsonConditionalExpressionComponent,
+	JsonMessageKeyComponent,
 	JsonDynamicComponent,
 	JsonAddComponent,
 	JsonEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	JsonCompleteComponent,
 	JsonMessageComponent,
 	JsonConditionalExpressionComponent,
+	JsonMessageKeyComponent,
 	JsonDynamicComponent,
 	JsonAddComponent,
 	JsonEditComponent,

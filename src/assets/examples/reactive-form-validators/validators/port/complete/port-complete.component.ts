@@ -19,6 +19,7 @@ export class PortCompleteValidatorComponent implements OnInit {
             entertainmentWebsitePort:['', RxwebValidators.port({conditionalExpression:(x,y) => x.browser == "Chrome"  })], 
             shoppingWebsitePort:['', RxwebValidators.port({conditionalExpression:'x => x.browser =="Chrome"' })], 
             educationalWebsitePort:['', RxwebValidators.port({message:'{{0}} is not a proper port number' })], 
+            commercialWebsitePort:['', RxwebValidators.port({messageKey:'portMessageKey' })], 
         });
     }
 }

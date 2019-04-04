@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { DataUriCompleteComponent } from './complete/data-uri-complete.component';
 import { DataUriConditionalExpressionComponent } from './conditionalExpression/data-uri-conditional-expression.component';
 import { DataUriMessageComponent } from './message/data-uri-message.component';
+import { DataUriMessageKeyComponent } from './messageKey/data-uri-message-key.component';
 import { DataUriDynamicComponent } from './dynamic/data-uri-dynamic.component';
 import { DataUriAddComponent } from './add/data-uri-add.component';
 import { DataUriEditComponent } from './edit/data-uri-edit.component';
@@ -17,6 +18,7 @@ import { DataUriEditComponent } from './edit/data-uri-edit.component';
 	DataUriCompleteComponent,
 	DataUriConditionalExpressionComponent,
 	DataUriMessageComponent,
+	DataUriMessageKeyComponent,
 	DataUriDynamicComponent,
 	DataUriAddComponent,
 	DataUriEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	DataUriCompleteComponent,
 	DataUriConditionalExpressionComponent,
 	DataUriMessageComponent,
+	DataUriMessageKeyComponent,
 	DataUriDynamicComponent,
 	DataUriAddComponent,
 	DataUriEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	DataUriCompleteComponent,
 	DataUriConditionalExpressionComponent,
 	DataUriMessageComponent,
+	DataUriMessageKeyComponent,
 	DataUriDynamicComponent,
 	DataUriAddComponent,
 	DataUriEditComponent,

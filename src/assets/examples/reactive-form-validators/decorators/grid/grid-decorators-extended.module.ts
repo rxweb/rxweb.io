@@ -8,15 +8,17 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { GridCompleteComponent } from './complete/grid-complete.component';
 import { GridConditionalExpressionComponent } from './conditionalExpression/grid-conditional-expression.component';
 import { GridMessageComponent } from './message/grid-message.component';
+import { GridMessageKeyComponent } from './messageKey/grid-message-key.component';
 import { GridDynamicComponent } from './dynamic/grid-dynamic.component';
 import { GridAddComponent } from './add/grid-add.component';
 import { GridEditComponent } from './edit/grid-edit.component';
 
-@NgModule({ 
+@NgModule({
   declarations: [
 	GridCompleteComponent,
 	GridConditionalExpressionComponent,
 	GridMessageComponent,
+	GridMessageKeyComponent,
 	GridDynamicComponent,
 	GridAddComponent,
 	GridEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	GridCompleteComponent,
 	GridConditionalExpressionComponent,
 	GridMessageComponent,
+	GridMessageKeyComponent,
 	GridDynamicComponent,
 	GridAddComponent,
 	GridEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	GridCompleteComponent,
 	GridConditionalExpressionComponent,
 	GridMessageComponent,
+	GridMessageKeyComponent,
 	GridDynamicComponent,
 	GridAddComponent,
 	GridEditComponent,

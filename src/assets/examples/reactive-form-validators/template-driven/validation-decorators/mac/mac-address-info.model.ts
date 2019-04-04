@@ -1,9 +1,17 @@
-import {  mac, } from   "@rxweb/reactive-form-validators"   
+import {  mac,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class MacAddressInfo {
 
-	@mac() 
+	@prop()
+	device: string;
+
+	@prop()
+	localMacAddress: string;
+
+	@prop()
 	systemMacAddress: string;
-	
-	
+
+	@prop()
+	serverMacAddress: string;
+
 }

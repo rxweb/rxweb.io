@@ -19,6 +19,7 @@ export class HexColorCompleteValidatorComponent implements OnInit {
             footerHexCode:['', RxwebValidators.hexColor({conditionalExpression:(x,y) =>x.color == "#AFAFAF" })], 
             headerHexcolorCode:['', RxwebValidators.hexColor({conditionalExpression:'x => x.color == "#AFAFAF"' })], 
             bodyHexcolorCode:['', RxwebValidators.hexColor({message:'Please enter the right format of hexcode for body like "#AFAFAF"' })], 
+            titleHexcolorCode:['', RxwebValidators.hexColor({messageKey:'hexColorMessageKey' })], 
         });
     }
 }

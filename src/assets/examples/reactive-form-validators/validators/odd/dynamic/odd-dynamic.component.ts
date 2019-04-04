@@ -20,7 +20,7 @@ export class OddDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/odd/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { type:'', number:'', oddNumber:'', multiplesOfOddNumber:'',  }
+			var user = { type:'', number:'', oddNumber:'', multiplesOfOddNumber:'', otherOddNumber:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PortCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/port-complete.component';
 import { PortConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/port-conditional-expression.component';
 import { PortMessageTemplateDrivenValidationDecoratorsComponent } from './message/port-message.component';
+import { PortMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/port-message-key.component';
 import { PortAddTemplateDrivenValidationDecoratorsComponent } from './add/port-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { PortAddTemplateDrivenValidationDecoratorsComponent } from './add/port-a
 	PortCompleteTemplateDrivenValidationDecoratorsComponent,
 	PortConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	PortMessageTemplateDrivenValidationDecoratorsComponent,
+	PortMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	PortAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	PortCompleteTemplateDrivenValidationDecoratorsComponent,
 	PortConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	PortMessageTemplateDrivenValidationDecoratorsComponent,
+	PortMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	PortAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	PortCompleteTemplateDrivenValidationDecoratorsComponent,
 	PortConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	PortMessageTemplateDrivenValidationDecoratorsComponent,
+	PortMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	PortAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

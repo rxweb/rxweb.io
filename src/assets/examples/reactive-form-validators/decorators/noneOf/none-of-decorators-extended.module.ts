@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
@@ -12,41 +12,45 @@ import { NoneOfMatchValuesComponent } from './matchValues/none-of-match-values.c
 import { NoneOfDynamicComponent } from './dynamic/none-of-dynamic.component';
 import { NoneOfMessageComponent } from './message/none-of-message.component';
 import { NoneOfNonArrayValueComponent } from './nonArrayValue/none-of-non-array-value.component';
+import { NoneOfMessageKeyComponent } from './messageKey/none-of-message-key.component';
 
 @NgModule({
   declarations: [
-	NoneOfCompleteComponent,
-	NoneOfConditionalExpressionComponent,
-	NoneOfMatchValuesComponent,
-	NoneOfMessageComponent,
-	NoneOfDynamicComponent,
-	NoneOfAddComponent,
-	NoneOfNonArrayValueComponent,
+    NoneOfCompleteComponent,
+    NoneOfConditionalExpressionComponent,
+    NoneOfMatchValuesComponent,
+    NoneOfMessageComponent,
+    NoneOfDynamicComponent,
+    NoneOfAddComponent,
+    NoneOfNonArrayValueComponent,
+    NoneOfMessageKeyComponent
   ],
-entryComponents: [
-	NoneOfCompleteComponent,
-	NoneOfConditionalExpressionComponent,
-	NoneOfMatchValuesComponent,
-	NoneOfMessageComponent,
-	NoneOfDynamicComponent,
-	NoneOfAddComponent,
-	NoneOfNonArrayValueComponent
+  entryComponents: [
+    NoneOfCompleteComponent,
+    NoneOfConditionalExpressionComponent,
+    NoneOfMatchValuesComponent,
+    NoneOfMessageComponent,
+    NoneOfDynamicComponent,
+    NoneOfAddComponent,
+    NoneOfNonArrayValueComponent,
+    NoneOfMessageKeyComponent
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule, HttpClientModule, ReactiveFormsModule, FormsModule, RxReactiveFormsModule
   ],
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-	NoneOfCompleteComponent,
-	NoneOfConditionalExpressionComponent,
-	NoneOfMatchValuesComponent,
-	NoneOfMessageComponent,
-	NoneOfDynamicComponent,
-	NoneOfAddComponent,
-	NoneOfNonArrayValueComponent
+    NoneOfCompleteComponent,
+    NoneOfConditionalExpressionComponent,
+    NoneOfMatchValuesComponent,
+    NoneOfMessageComponent,
+    NoneOfDynamicComponent,
+    NoneOfAddComponent,
+    NoneOfNonArrayValueComponent,
+    NoneOfMessageKeyComponent
   ],
 
 })
-export class  NoneOfDecoratorsExtendedModule { }
+export class NoneOfDecoratorsExtendedModule { }

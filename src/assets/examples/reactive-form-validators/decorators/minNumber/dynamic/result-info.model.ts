@@ -11,4 +11,7 @@ export class ResultInfo {
 	@prop()
 	statstics: number;
 
+	@prop()
+	economics: number;
+
 }

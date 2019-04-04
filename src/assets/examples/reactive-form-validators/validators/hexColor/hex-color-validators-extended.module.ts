@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { HexColorCompleteValidatorComponent } from './complete/hex-color-complete.component';
 import { HexColorConditionalExpressionValidatorComponent } from './conditionalExpression/hex-color-conditional-expression.component';
 import { HexColorMessageValidatorComponent } from './message/hex-color-message.component';
+import { HexColorMessageKeyValidatorComponent } from './messageKey/hex-color-message-key.component';
 import { HexColorDynamicValidatorComponent } from './dynamic/hex-color-dynamic.component';
 import { HexColorAddValidatorComponent } from './add/hex-color-add.component';
 
@@ -16,6 +17,7 @@ import { HexColorAddValidatorComponent } from './add/hex-color-add.component';
 	HexColorCompleteValidatorComponent,
 	HexColorConditionalExpressionValidatorComponent,
 	HexColorMessageValidatorComponent,
+	HexColorMessageKeyValidatorComponent,
 	HexColorDynamicValidatorComponent,
 	HexColorAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	HexColorCompleteValidatorComponent,
 	HexColorConditionalExpressionValidatorComponent,
 	HexColorMessageValidatorComponent,
+	HexColorMessageKeyValidatorComponent,
 	HexColorDynamicValidatorComponent,
 	HexColorAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	HexColorCompleteValidatorComponent,
 	HexColorConditionalExpressionValidatorComponent,
 	HexColorMessageValidatorComponent,
+	HexColorMessageKeyValidatorComponent,
 	HexColorDynamicValidatorComponent,
 	HexColorAddValidatorComponent,
   ],

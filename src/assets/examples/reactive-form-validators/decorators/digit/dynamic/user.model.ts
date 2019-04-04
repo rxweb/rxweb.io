@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	mobileNumber: number;
 
+	@prop()
+	zipCode: number;
+
 }

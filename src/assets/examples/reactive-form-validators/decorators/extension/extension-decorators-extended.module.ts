@@ -9,6 +9,7 @@ import { ExtensionCompleteComponent } from './complete/extension-complete.compon
 import { ExtensionExtensionsComponent } from './extensions/extension-extensions.component';
 import { ExtensionConditionalExpressionComponent } from './conditionalExpression/extension-conditional-expression.component';
 import { ExtensionMessageComponent } from './message/extension-message.component';
+import { ExtensionMessageKeyComponent } from './messageKey/extension-message-key.component';
 import { ExtensionDynamicComponent } from './dynamic/extension-dynamic.component';
 import { ExtensionAddComponent } from './add/extension-add.component';
 import { ExtensionEditComponent } from './edit/extension-edit.component';
@@ -19,6 +20,7 @@ import { ExtensionEditComponent } from './edit/extension-edit.component';
 	ExtensionExtensionsComponent,
 	ExtensionConditionalExpressionComponent,
 	ExtensionMessageComponent,
+	ExtensionMessageKeyComponent,
 	ExtensionDynamicComponent,
 	ExtensionAddComponent,
 	ExtensionEditComponent,
@@ -28,6 +30,7 @@ entryComponents: [
 	ExtensionExtensionsComponent,
 	ExtensionConditionalExpressionComponent,
 	ExtensionMessageComponent,
+	ExtensionMessageKeyComponent,
 	ExtensionDynamicComponent,
 	ExtensionAddComponent,
 	ExtensionEditComponent,
@@ -43,6 +46,7 @@ entryComponents: [
 	ExtensionExtensionsComponent,
 	ExtensionConditionalExpressionComponent,
 	ExtensionMessageComponent,
+	ExtensionMessageKeyComponent,
 	ExtensionDynamicComponent,
 	ExtensionAddComponent,
 	ExtensionEditComponent,

@@ -17,4 +17,7 @@ export class UserInfo {
 	@prop()
 	minMaxFiles: string;
 
+	@prop()
+	excelFiles: string;
+
 }

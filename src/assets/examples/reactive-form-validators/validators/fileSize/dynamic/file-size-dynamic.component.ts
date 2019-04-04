@@ -20,6 +20,7 @@ export class FileSizeDynamicValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: RxFormBuilder , private http: HttpClient )
 	{ }
@@ -28,7 +29,7 @@ export class FileSizeDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/fileSize/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var userInfo = { fileType:'', videoFile:'', audioFile:'', imageFile:'', documentFile:'', contactFile:'', profilePicture:'',  }
+			var userInfo = { fileType:'', videoFile:'', audioFile:'', imageFile:'', documentFile:'', contactFile:'', profilePicture:'', excelFile:'',  }
 			this.userInfoFormGroup = this.formBuilder.group(userInfo,formBuilderConfiguration);
 		})
     }

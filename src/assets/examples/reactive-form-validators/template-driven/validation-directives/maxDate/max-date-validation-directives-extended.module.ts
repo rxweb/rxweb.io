@@ -11,6 +11,7 @@ import { MaxDateConditionalExpressionTemplateDrivenValidationDirectivesComponent
 import { MaxDateMessageTemplateDrivenValidationDirectivesComponent } from './message/max-date-message.component';
 import { MaxDateFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/max-date-field-name.component';
 import { MaxDateOperatorTemplateDrivenValidationDirectivesComponent } from './operator/max-date-operator.component';
+import { MaxDateMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/max-date-message-key.component';
 import { MaxDateAddTemplateDrivenValidationDirectivesComponent } from './add/max-date-add.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MaxDateAddTemplateDrivenValidationDirectivesComponent } from './add/max
 	MaxDateMessageTemplateDrivenValidationDirectivesComponent,
 	MaxDateFieldNameTemplateDrivenValidationDirectivesComponent,
 	MaxDateOperatorTemplateDrivenValidationDirectivesComponent,
+	MaxDateMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MaxDateAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -30,6 +32,7 @@ entryComponents: [
 	MaxDateMessageTemplateDrivenValidationDirectivesComponent,
 	MaxDateFieldNameTemplateDrivenValidationDirectivesComponent,
 	MaxDateOperatorTemplateDrivenValidationDirectivesComponent,
+	MaxDateMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MaxDateAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -45,6 +48,7 @@ entryComponents: [
 	MaxDateMessageTemplateDrivenValidationDirectivesComponent,
 	MaxDateFieldNameTemplateDrivenValidationDirectivesComponent,
 	MaxDateOperatorTemplateDrivenValidationDirectivesComponent,
+	MaxDateMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MaxDateAddTemplateDrivenValidationDirectivesComponent,
   ],
 

@@ -14,6 +14,10 @@ import { AlphaNumericConditionalExpressionComponent } from "src/assets/examples/
 import { AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/alphaNumeric/conditionalExpression/alpha-numeric-conditional-expression.component";
 import { AlphaNumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/alphaNumeric/conditionalExpression/alpha-numeric-conditional-expression.component";
 import { AlphaNumericConditionalExpressionValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alphaNumeric/conditionalExpression/alpha-numeric-conditional-expression.component";
+import { AlphaNumericMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/messageKey/alpha-numeric-message-key.component";
+import { AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/alphaNumeric/messageKey/alpha-numeric-message-key.component";
+import { AlphaNumericMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/alphaNumeric/messageKey/alpha-numeric-message-key.component";
+import { AlphaNumericMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alphaNumeric/messageKey/alpha-numeric-message-key.component";
 import { AlphaNumericDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/dynamic/alpha-numeric-dynamic.component";
 import { AlphaNumericDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alphaNumeric/dynamic/alpha-numeric-dynamic.component";
 import { AlphaNumericAddComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/add/alpha-numeric-add.component";
@@ -28,6 +32,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						allowWhiteSpace : AlphaNumericAllowWhiteSpaceComponent,
 						message : AlphaNumericMessageComponent,
 						conditionalExpression : AlphaNumericConditionalExpressionComponent,
+						messageKey : AlphaNumericMessageKeyComponent,
 						dynamic : AlphaNumericDynamicComponent,
 						add : AlphaNumericAddComponent,
 						edit : AlphaNumericEditComponent,
@@ -37,6 +42,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						allowWhiteSpace : AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 						message : AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+						messageKey : AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						allowWhiteSpace : AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 						message : AlphaNumericMessageTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : AlphaNumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+						messageKey : AlphaNumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : AlphaNumericAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						allowWhiteSpace : AlphaNumericAllowWhiteSpaceValidatorComponent,
 						message : AlphaNumericMessageValidatorComponent,
 						conditionalExpression : AlphaNumericConditionalExpressionValidatorComponent,
+						messageKey : AlphaNumericMessageKeyValidatorComponent,
 						dynamic : AlphaNumericDynamicValidatorComponent,
 						add : AlphaNumericAddValidatorComponent,
 			  },

@@ -9,6 +9,7 @@ import { MaxNumberCompleteTemplateDrivenValidationDirectivesComponent } from './
 import { MaxNumberValueTemplateDrivenValidationDirectivesComponent } from './value/max-number-value.component';
 import { MaxNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/max-number-conditional-expression.component';
 import { MaxNumberMessageTemplateDrivenValidationDirectivesComponent } from './message/max-number-message.component';
+import { MaxNumberMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/max-number-message-key.component';
 import { MaxNumberAddTemplateDrivenValidationDirectivesComponent } from './add/max-number-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MaxNumberAddTemplateDrivenValidationDirectivesComponent } from './add/m
 	MaxNumberValueTemplateDrivenValidationDirectivesComponent,
 	MaxNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	MaxNumberMessageTemplateDrivenValidationDirectivesComponent,
+	MaxNumberMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MaxNumberAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	MaxNumberValueTemplateDrivenValidationDirectivesComponent,
 	MaxNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	MaxNumberMessageTemplateDrivenValidationDirectivesComponent,
+	MaxNumberMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MaxNumberAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	MaxNumberValueTemplateDrivenValidationDirectivesComponent,
 	MaxNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	MaxNumberMessageTemplateDrivenValidationDirectivesComponent,
+	MaxNumberMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MaxNumberAddTemplateDrivenValidationDirectivesComponent,
   ],
 

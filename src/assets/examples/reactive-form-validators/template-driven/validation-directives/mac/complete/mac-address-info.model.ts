@@ -12,4 +12,7 @@ export class MacAddressInfo {
 	systemMacAddress: string;
 	
 	
+	serverMacAddress: string;
+	
+	
 }

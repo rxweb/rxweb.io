@@ -9,6 +9,7 @@ import { TimeCompleteComponent } from './complete/time-complete.component';
 import { TimeConditionalExpressionComponent } from './conditionalExpression/time-conditional-expression.component';
 import { TimeAllowSecondsComponent } from './allowSeconds/time-allow-seconds.component';
 import { TimeMessageComponent } from './message/time-message.component';
+import { TimeMessageKeyComponent } from './messageKey/time-message-key.component';
 import { TimeDynamicComponent } from './dynamic/time-dynamic.component';
 import { TimeAddComponent } from './add/time-add.component';
 import { TimeEditComponent } from './edit/time-edit.component';
@@ -19,6 +20,7 @@ import { TimeEditComponent } from './edit/time-edit.component';
 	TimeConditionalExpressionComponent,
 	TimeAllowSecondsComponent,
 	TimeMessageComponent,
+	TimeMessageKeyComponent,
 	TimeDynamicComponent,
 	TimeAddComponent,
 	TimeEditComponent,
@@ -28,6 +30,7 @@ entryComponents: [
 	TimeConditionalExpressionComponent,
 	TimeAllowSecondsComponent,
 	TimeMessageComponent,
+	TimeMessageKeyComponent,
 	TimeDynamicComponent,
 	TimeAddComponent,
 	TimeEditComponent,
@@ -43,6 +46,7 @@ entryComponents: [
 	TimeConditionalExpressionComponent,
 	TimeAllowSecondsComponent,
 	TimeMessageComponent,
+	TimeMessageKeyComponent,
 	TimeDynamicComponent,
 	TimeAddComponent,
 	TimeEditComponent,

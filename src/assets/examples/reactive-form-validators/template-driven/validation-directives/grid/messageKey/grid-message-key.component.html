@@ -1,0 +1,12 @@
+<div>
+  <form #digitalinfoForm = "ngForm" [rxwebForm]="digitalinfoForm" [model]="digitalinfo">
+    <div class="form-group">
+      <label>VideoGraphic GRid</label>
+	    <input type="text" name="videoGraphicGrid" [(ngModel)]="digitalinfo.videoGraphicGrid"  class="form-control" [grid]="{'messageKey':'gridMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on message key.<br/></small>
+	   <small class="form-text text-danger" *ngIf="digitalinfoForm.controls?.videoGraphicGrid?.errors">{{digitalinfoForm.controls?.videoGraphicGrid?.errors?.grid.message}}<br/></small>	
+    </div>
+    <button [disabled]="!digitalinfoForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

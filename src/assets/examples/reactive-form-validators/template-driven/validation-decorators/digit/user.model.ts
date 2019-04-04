@@ -1,9 +1,17 @@
-import {  digit, } from   "@rxweb/reactive-form-validators"   
+import {  digit,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@digit() 
+	@prop()
 	age: number;
-	
-	
+
+	@prop()
+	faxNumber: number;
+
+	@prop()
+	mobileNumber: number;
+
+	@prop()
+	zipCode: number;
+
 }

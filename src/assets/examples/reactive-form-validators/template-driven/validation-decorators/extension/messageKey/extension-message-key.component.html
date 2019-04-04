@@ -1,0 +1,12 @@
+<div>
+  <form #userinfoForm = "ngForm" [rxwebForm]="userinfoForm" [model]="userinfo">
+    <div class="form-group">
+      <label>Excel File</label>
+	    <input type="file" name="excelFile"  [(ngModel)]="userinfo.excelFile"  class="form-control" />
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.excelFile?.errors">{{userinfoForm.controls?.excelFile?.errors?.extension.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userinfoForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

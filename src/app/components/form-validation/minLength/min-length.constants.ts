@@ -14,6 +14,10 @@ import { MinLengthConditionalExpressionComponent } from "src/assets/examples/rea
 import { MinLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/minLength/conditionalExpression/min-length-conditional-expression.component";
 import { MinLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/minLength/conditionalExpression/min-length-conditional-expression.component";
 import { MinLengthConditionalExpressionValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/minLength/conditionalExpression/min-length-conditional-expression.component";
+import { MinLengthMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/minLength/messageKey/min-length-message-key.component";
+import { MinLengthMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/minLength/messageKey/min-length-message-key.component";
+import { MinLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/minLength/messageKey/min-length-message-key.component";
+import { MinLengthMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/minLength/messageKey/min-length-message-key.component";
 import { MinLengthDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/minLength/dynamic/min-length-dynamic.component";
 import { MinLengthDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/minLength/dynamic/min-length-dynamic.component";
 import { MinLengthAddComponent } from "src/assets/examples/reactive-form-validators/decorators/minLength/add/min-length-add.component";
@@ -28,6 +32,7 @@ export const MIN_LENGTH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MinLengthValueComponent,
 						message : MinLengthMessageComponent,
 						conditionalExpression : MinLengthConditionalExpressionComponent,
+						messageKey : MinLengthMessageKeyComponent,
 						dynamic : MinLengthDynamicComponent,
 						add : MinLengthAddComponent,
 						edit : MinLengthEditComponent,
@@ -37,6 +42,7 @@ export const MIN_LENGTH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MinLengthValueTemplateDrivenValidationDirectivesComponent,
 						message : MinLengthMessageTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : MinLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+						messageKey : MinLengthMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : MinLengthAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const MIN_LENGTH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MinLengthValueTemplateDrivenValidationDecoratorsComponent,
 						message : MinLengthMessageTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : MinLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+						messageKey : MinLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : MinLengthAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const MIN_LENGTH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MinLengthValueValidatorComponent,
 						message : MinLengthMessageValidatorComponent,
 						conditionalExpression : MinLengthConditionalExpressionValidatorComponent,
+						messageKey : MinLengthMessageKeyValidatorComponent,
 						dynamic : MinLengthDynamicValidatorComponent,
 						add : MinLengthAddValidatorComponent,
 			  },

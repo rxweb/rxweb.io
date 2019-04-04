@@ -14,6 +14,10 @@ import { MaxNumberMessageComponent } from "src/assets/examples/reactive-form-val
 import { MaxNumberMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/maxNumber/message/max-number-message.component";
 import { MaxNumberMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/maxNumber/message/max-number-message.component";
 import { MaxNumberMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/maxNumber/message/max-number-message.component";
+import { MaxNumberMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/maxNumber/messageKey/max-number-message-key.component";
+import { MaxNumberMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/maxNumber/messageKey/max-number-message-key.component";
+import { MaxNumberMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/maxNumber/messageKey/max-number-message-key.component";
+import { MaxNumberMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/maxNumber/messageKey/max-number-message-key.component";
 import { MaxNumberDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/maxNumber/dynamic/max-number-dynamic.component";
 import { MaxNumberDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/maxNumber/dynamic/max-number-dynamic.component";
 import { MaxNumberAddComponent } from "src/assets/examples/reactive-form-validators/decorators/maxNumber/add/max-number-add.component";
@@ -28,6 +32,7 @@ export const MAX_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MaxNumberValueComponent,
 						conditionalExpression : MaxNumberConditionalExpressionComponent,
 						message : MaxNumberMessageComponent,
+						messageKey : MaxNumberMessageKeyComponent,
 						dynamic : MaxNumberDynamicComponent,
 						add : MaxNumberAddComponent,
 						edit : MaxNumberEditComponent,
@@ -37,6 +42,7 @@ export const MAX_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MaxNumberValueTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : MaxNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : MaxNumberMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : MaxNumberMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : MaxNumberAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const MAX_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MaxNumberValueTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : MaxNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : MaxNumberMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : MaxNumberMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : MaxNumberAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const MAX_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MaxNumberValueValidatorComponent,
 						conditionalExpression : MaxNumberConditionalExpressionValidatorComponent,
 						message : MaxNumberMessageValidatorComponent,
+						messageKey : MaxNumberMessageKeyValidatorComponent,
 						dynamic : MaxNumberDynamicValidatorComponent,
 						add : MaxNumberAddValidatorComponent,
 			  },

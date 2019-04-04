@@ -17,9 +17,10 @@ Suppose you want to create a User form, which contains fields like ProfilePhoto,
     <li>Allow validation using maxwidth on field of ProfilePhoto.</li>
     <li>Apply image validation based on maxheight in Signature</li>
     <li>Adding Custom Message on VoterId field.</li>
-   <li>Apply validation on AadharCard field based on matched condition in the form, like if the ImageType is 'IdentityCard', then the AadharCard must be a Image format (Used as a function).</li>
-   <li>Apply validation on PanCard field based on matched condition in the form, like if the ImageType is 'IdentityCard', then the PanCard must be a Image format (Used as a string datatype).</li>
-   <li>Adding custom message on residenceProof field.</li>
+    <li>Apply validation on AadharCard field based on matched condition in the form, like if the ImageType is 'IdentityCard', then the AadharCard must be a Image format (Used as a function).</li>
+    <li>Apply validation on PanCard field based on matched condition in the form, like if the ImageType is 'IdentityCard', then the PanCard must be a Image format (Used as a string datatype).</li>
+    <li>Adding custom message on residenceProof field.</li>
+    <li>Shows the custom message on `passport` field by using `messageKey` property.</li>
     <data-scope scope="['decorator','validator']">
     <li>Apply image validation dynamically based on server rules.</li>
     </data-scope>
@@ -88,6 +89,7 @@ Below options are not mandatory to use in the `image` validation. If needed then
 <tr><td><a title="minHeight">minHeight</a></td><td>To set the minimum Height of the Image</td></tr>
 <tr><td><a  title="conditionalExpression">conditionalExpression</a></td><td>image validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## maxWidth
@@ -147,6 +149,14 @@ To override the global configuration message and set the custom error message on
 
 <div component="app-code" key="image-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-image-message" title="image {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="image-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-image-messageKey" title="image {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete image Example
 

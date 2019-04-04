@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LeapYearCompleteValidatorComponent } from './complete/leap-year-complete.component';
 import { LeapYearConditionalExpressionValidatorComponent } from './conditionalExpression/leap-year-conditional-expression.component';
 import { LeapYearMessageValidatorComponent } from './message/leap-year-message.component';
+import { LeapYearMessageKeyValidatorComponent } from './messageKey/leap-year-message-key.component';
 import { LeapYearDynamicValidatorComponent } from './dynamic/leap-year-dynamic.component';
 import { LeapYearAddValidatorComponent } from './add/leap-year-add.component';
 
@@ -16,6 +17,7 @@ import { LeapYearAddValidatorComponent } from './add/leap-year-add.component';
 	LeapYearCompleteValidatorComponent,
 	LeapYearConditionalExpressionValidatorComponent,
 	LeapYearMessageValidatorComponent,
+	LeapYearMessageKeyValidatorComponent,
 	LeapYearDynamicValidatorComponent,
 	LeapYearAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	LeapYearCompleteValidatorComponent,
 	LeapYearConditionalExpressionValidatorComponent,
 	LeapYearMessageValidatorComponent,
+	LeapYearMessageKeyValidatorComponent,
 	LeapYearDynamicValidatorComponent,
 	LeapYearAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	LeapYearCompleteValidatorComponent,
 	LeapYearConditionalExpressionValidatorComponent,
 	LeapYearMessageValidatorComponent,
+	LeapYearMessageKeyValidatorComponent,
 	LeapYearDynamicValidatorComponent,
 	LeapYearAddValidatorComponent,
   ],

@@ -18,4 +18,7 @@ export class User {
 	sixthNumber: number;
 	
 	
+	seventhNumber: number;
+	
+	
 }

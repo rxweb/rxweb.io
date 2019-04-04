@@ -1,0 +1,12 @@
+<div>
+  <form #addressinfoForm = "ngForm" [rxwebForm]="addressinfoForm" [model]="addressinfo">
+    <div class="form-group">
+      <label>City Code</label>
+	    <input type="text" name="cityCode" [(ngModel)]="addressinfo.cityCode"  class="form-control" [alpha]="{'messageKey':'alphaMessageKey'}"/>
+
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+	   <small class="form-text text-danger" *ngIf="addressinfoForm.controls?.cityCode?.errors">{{addressinfoForm.controls?.cityCode?.errors?.alpha.message}}<br/></small>	
+    </div>
+    <button [disabled]="!addressinfoForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -13,4 +13,7 @@ export class User {
 	otherEmailAddress: string;
 	
 	
+	organizationEmailAddress: string;
+	
+	
 }

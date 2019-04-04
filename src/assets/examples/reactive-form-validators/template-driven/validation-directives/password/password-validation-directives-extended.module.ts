@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PasswordCompleteTemplateDrivenValidationDirectivesComponent } from './complete/password-complete.component';
 import { PasswordValidationTemplateDrivenValidationDirectivesComponent } from './validation/password-validation.component';
 import { PasswordMessageTemplateDrivenValidationDirectivesComponent } from './message/password-message.component';
+import { PasswordMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/password-message-key.component';
 import { PasswordAddTemplateDrivenValidationDirectivesComponent } from './add/password-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { PasswordAddTemplateDrivenValidationDirectivesComponent } from './add/pa
 	PasswordCompleteTemplateDrivenValidationDirectivesComponent,
 	PasswordValidationTemplateDrivenValidationDirectivesComponent,
 	PasswordMessageTemplateDrivenValidationDirectivesComponent,
+	PasswordMessageKeyTemplateDrivenValidationDirectivesComponent,
 	PasswordAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	PasswordCompleteTemplateDrivenValidationDirectivesComponent,
 	PasswordValidationTemplateDrivenValidationDirectivesComponent,
 	PasswordMessageTemplateDrivenValidationDirectivesComponent,
+	PasswordMessageKeyTemplateDrivenValidationDirectivesComponent,
 	PasswordAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	PasswordCompleteTemplateDrivenValidationDirectivesComponent,
 	PasswordValidationTemplateDrivenValidationDirectivesComponent,
 	PasswordMessageTemplateDrivenValidationDirectivesComponent,
+	PasswordMessageKeyTemplateDrivenValidationDirectivesComponent,
 	PasswordAddTemplateDrivenValidationDirectivesComponent,
   ],
 

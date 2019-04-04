@@ -80,7 +80,8 @@ Below options are not mandatory to use in the `minNumber` validation. If needed 
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>MinNumber validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
-<tr><td><a (click)='scrollTo("#value")' title="value">value</a></td></td> Enter value which you want to restrict number in the property.</td></tr>
+<tr><td><a (click)='scrollTo("#value")' title="value">value</a></td><td> Enter value which you want to restrict number in the property.</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## conditionalExpression 
@@ -116,6 +117,14 @@ enter value which you want to restrict number in the property
 
 <div component="app-code" key="minNumber-valueExample-model"></div> 
 <div component="app-example-runner" ref-component="minNumber-value-value" title="minNumber {{validatorType}} with value" key="value"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="minNumber-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-minNumber-messageKey" title="minNumber {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete minNumber Example
 

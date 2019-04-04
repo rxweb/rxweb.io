@@ -9,6 +9,7 @@ import { EndsWithCompleteTemplateDrivenValidationDecoratorsComponent } from './c
 import { EndsWithValueTemplateDrivenValidationDecoratorsComponent } from './value/ends-with-value.component';
 import { EndsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/ends-with-conditional-expression.component';
 import { EndsWithMessageTemplateDrivenValidationDecoratorsComponent } from './message/ends-with-message.component';
+import { EndsWithMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/ends-with-message-key.component';
 import { EndsWithAddTemplateDrivenValidationDecoratorsComponent } from './add/ends-with-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { EndsWithAddTemplateDrivenValidationDecoratorsComponent } from './add/en
 	EndsWithValueTemplateDrivenValidationDecoratorsComponent,
 	EndsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	EndsWithMessageTemplateDrivenValidationDecoratorsComponent,
+	EndsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	EndsWithAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	EndsWithValueTemplateDrivenValidationDecoratorsComponent,
 	EndsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	EndsWithMessageTemplateDrivenValidationDecoratorsComponent,
+	EndsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	EndsWithAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	EndsWithValueTemplateDrivenValidationDecoratorsComponent,
 	EndsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	EndsWithMessageTemplateDrivenValidationDecoratorsComponent,
+	EndsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	EndsWithAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

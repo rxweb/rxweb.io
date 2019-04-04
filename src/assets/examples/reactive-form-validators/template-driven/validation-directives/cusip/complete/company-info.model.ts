@@ -15,4 +15,7 @@ export class CompanyInfo {
 	appleIncCusipCode: string;
 	
 	
+	amazonCorporationCusipCode: string;
+	
+	
 }

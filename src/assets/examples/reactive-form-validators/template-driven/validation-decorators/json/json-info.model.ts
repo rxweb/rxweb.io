@@ -1,9 +1,17 @@
-import {  json, } from   "@rxweb/reactive-form-validators"   
+import {  json,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class JsonInfo {
 
-	@json() 
+	@prop()
+	location: string;
+
+	@prop()
 	locationJson: string;
-	
-	
+
+	@prop()
+	contactJson: string;
+
+	@prop()
+	countryJson: string;
+
 }

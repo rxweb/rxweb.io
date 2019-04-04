@@ -19,6 +19,8 @@ export class CompareCompleteValidatorComponent implements OnInit {
             confirmEmail:['', RxwebValidators.compare({fieldName:'email' })], 
             password:['',], 
             confirmPassword:['', RxwebValidators.compare({fieldName:'password'  ,message:'You must enter same password' })], 
+            contactNumber:['',], 
+            confirmContactNumber:['', RxwebValidators.compare({fieldName:'contactNumber'  ,messageKey:'compareMessageKey' })], 
         });
     }
 }

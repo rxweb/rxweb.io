@@ -1,9 +1,17 @@
-import {  upperCase, } from   "@rxweb/reactive-form-validators"   
+import {  upperCase,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class Location {
 
-	@upperCase() 
+	@prop()
 	countryName: string;
-	
-	
+
+	@prop()
+	cityName: string;
+
+	@prop()
+	colonyName: string;
+
+	@prop()
+	streetName: string;
+
 }

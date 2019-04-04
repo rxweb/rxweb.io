@@ -23,6 +23,7 @@ export class MaxDateCompleteValidatorComponent implements OnInit {
             enrollmentDate:['',], 
             lastRegistrationDate:['', RxwebValidators.maxDate({fieldName:'enrollmentDate' })], 
             confirmationDate:['', RxwebValidators.maxDate({value:'07/30/2018'  ,operator:'<' })], 
+            resignationDate:['', RxwebValidators.maxDate({value:'07/30/2018'  ,messageKey:'maxDateMessageKey' })], 
         });
     }
 }

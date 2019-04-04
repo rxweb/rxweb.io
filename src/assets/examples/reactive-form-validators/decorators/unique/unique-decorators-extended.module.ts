@@ -7,18 +7,21 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { UniqueCompleteComponent } from './complete/unique-complete.component';
 import { UniqueMessageComponent } from './message/unique-message.component';
 import { UniqueAddComponent } from './add/unique-add.component';
+import { UniqueMessageKeyComponent } from './messageKey/unique-message-key.component';
 
 
 @NgModule({
   declarations: [
 	UniqueCompleteComponent,
 	UniqueMessageComponent,
-	UniqueAddComponent,
+    UniqueAddComponent,
+    UniqueMessageKeyComponent
   ],
 entryComponents: [
 	UniqueCompleteComponent,
 	UniqueMessageComponent,
-	UniqueAddComponent,
+  UniqueAddComponent,
+  UniqueMessageKeyComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -29,7 +32,8 @@ entryComponents: [
   exports: [
 	UniqueCompleteComponent,
 	UniqueMessageComponent,
-	UniqueAddComponent,
+    UniqueAddComponent,
+    UniqueMessageKeyComponent
   ],
 
 })

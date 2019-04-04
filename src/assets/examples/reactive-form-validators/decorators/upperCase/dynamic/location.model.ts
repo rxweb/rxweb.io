@@ -11,4 +11,7 @@ export class Location {
 	@prop()
 	colonyName: string;
 
+	@prop()
+	streetName: string;
+
 }

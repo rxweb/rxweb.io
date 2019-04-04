@@ -19,4 +19,8 @@ export class User {
 	multiplesOfEvenNumber: number;
 	
 	
+	@even({messageKey:'evenMessageKey' }) 
+	otherEvenNumber: string;
+	
+	
 }

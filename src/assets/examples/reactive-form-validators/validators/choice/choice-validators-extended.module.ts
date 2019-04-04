@@ -11,6 +11,7 @@ import { ChoiceMessageValidatorComponent } from './message/choice-message.compon
 import { ChoiceMaxLengthValidatorComponent } from './maxLength/choice-max-length.component';
 import { ChoiceMinLengthValidatorComponent } from './minLength/choice-min-length.component';
 import { ChoiceDynamicValidatorComponent } from './dynamic/choice-dynamic.component';
+import { ChoiceMessageKeyValidatorComponent } from './messageKey/choice-message-key.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChoiceDynamicValidatorComponent } from './dynamic/choice-dynamic.compon
     ChoiceMaxLengthValidatorComponent,
     ChoiceMessageValidatorComponent,
     ChoiceMinLengthValidatorComponent,
-    ChoiceDynamicValidatorComponent
+    ChoiceDynamicValidatorComponent,
+    ChoiceMessageKeyValidatorComponent
   ],
   entryComponents: [
     ChoiceAddValidatorComponent,
@@ -31,7 +33,8 @@ import { ChoiceDynamicValidatorComponent } from './dynamic/choice-dynamic.compon
     ChoiceMaxLengthValidatorComponent,
     ChoiceMessageValidatorComponent,
     ChoiceMinLengthValidatorComponent,
-    ChoiceDynamicValidatorComponent
+    ChoiceDynamicValidatorComponent,
+    ChoiceMessageKeyValidatorComponent
   ],
   imports: [
     CommonModule, HttpClientModule, ReactiveFormsModule, FormsModule, RxReactiveFormsModule
@@ -47,7 +50,8 @@ import { ChoiceDynamicValidatorComponent } from './dynamic/choice-dynamic.compon
     ChoiceDynamicValidatorComponent,
     ChoiceMaxLengthValidatorComponent,
     ChoiceMessageValidatorComponent,
-    ChoiceMinLengthValidatorComponent
+    ChoiceMinLengthValidatorComponent,
+    ChoiceMessageKeyValidatorComponent
   ],
 
 })

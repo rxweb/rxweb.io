@@ -19,4 +19,8 @@ export class User {
 	videoDataUri: string;
 	
 	
+	@dataUri({messageKey:'dataUriMessageKey' }) 
+	pdfDataUri: string;
+	
+	
 }

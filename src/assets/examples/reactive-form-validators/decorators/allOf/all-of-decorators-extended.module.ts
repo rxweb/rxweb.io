@@ -9,6 +9,7 @@ import { AllOfAddComponent } from './add/all-of-add.component';
 import { AllOfMessageComponent } from './message/all-of-message.component';
 import { AllOfDynamicComponent } from './dynamic/all-of-dynamic.component';
 import { AllOfMatchValuesComponent } from './matchValues/all-of-match-values.component';
+import { AllOfMessageKeyComponent } from './messageKey/all-of-message-key.component';
 
 
 
@@ -19,7 +20,8 @@ import { AllOfMatchValuesComponent } from './matchValues/all-of-match-values.com
 	AllOfMatchValuesComponent,
 	AllOfMessageComponent,
 	AllOfDynamicComponent,
-	AllOfAddComponent,
+  AllOfAddComponent,
+  AllOfMessageKeyComponent
   ],
 entryComponents: [
 	AllOfCompleteComponent,
@@ -27,7 +29,8 @@ entryComponents: [
 	AllOfMatchValuesComponent,
 	AllOfMessageComponent,
 	AllOfDynamicComponent,
-	AllOfAddComponent,
+  AllOfAddComponent,
+  AllOfMessageKeyComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -41,7 +44,8 @@ entryComponents: [
 	AllOfMatchValuesComponent,
 	AllOfMessageComponent,
 	AllOfDynamicComponent,
-	AllOfAddComponent,
+  AllOfAddComponent,
+  AllOfMessageKeyComponent
   ],
 
 })

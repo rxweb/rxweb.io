@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PasswordCompleteValidatorComponent } from './complete/password-complete.component';
 import { PasswordValidationValidatorComponent } from './validation/password-validation.component';
 import { PasswordMessageValidatorComponent } from './message/password-message.component';
+import { PasswordMessageKeyValidatorComponent } from './messageKey/password-message-key.component';
 import { PasswordDynamicValidatorComponent } from './dynamic/password-dynamic.component';
 import { PasswordAddValidatorComponent } from './add/password-add.component';
 
@@ -16,6 +17,7 @@ import { PasswordAddValidatorComponent } from './add/password-add.component';
 	PasswordCompleteValidatorComponent,
 	PasswordValidationValidatorComponent,
 	PasswordMessageValidatorComponent,
+	PasswordMessageKeyValidatorComponent,
 	PasswordDynamicValidatorComponent,
 	PasswordAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	PasswordCompleteValidatorComponent,
 	PasswordValidationValidatorComponent,
 	PasswordMessageValidatorComponent,
+	PasswordMessageKeyValidatorComponent,
 	PasswordDynamicValidatorComponent,
 	PasswordAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	PasswordCompleteValidatorComponent,
 	PasswordValidationValidatorComponent,
 	PasswordMessageValidatorComponent,
+	PasswordMessageKeyValidatorComponent,
 	PasswordDynamicValidatorComponent,
 	PasswordAddValidatorComponent,
   ],

@@ -1,9 +1,20 @@
-import {  maxNumber, } from   "@rxweb/reactive-form-validators"   
+import {  maxNumber,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class SubjectDetails {
 
-	@maxNumber({value:50 }) 
+	@prop()
+	subjectCode: string;
+
+	@prop()
+	obtainedMarks: number;
+
+	@prop()
 	passingMarks: number;
-	
-	
+
+	@prop()
+	practicalMarks: number;
+
+	@prop()
+	disciplineMarks: number;
+
 }

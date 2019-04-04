@@ -18,10 +18,16 @@
             "conditionalExpression": "x => x.department =='DotNet'"
         }
     },
-    "hobbies": {
-        "choice": {
-            "maxLength":4,
-            "message": "You can select upto 5 hobby"
-        }
+  "hobbies": {
+    "choice": {
+      "maxLength": 3,
+      "message": "You can select upto 3 hobby"
     }
+  },
+  "certifications": {
+    "choice": {
+      "minLength": 2,
+      "messageKey": "choiceMessageKey"
+    }
+  }
 }

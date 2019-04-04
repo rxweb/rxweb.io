@@ -18,8 +18,9 @@ Suppose you want to create a user form and you have fields like Email, RecoveryE
     <li>Apply email validation based on matched condition in the form, like if the Email is `bharat.patel@gmail.com` then the RecoveryEmailAddress value should be valid email address (conditional expression with function).</li>
     <li>Apply email validation based on matched condition in the form, like if the Email is `bharat.patel@gmail.com` then the Business Email Address value should be valid email address (conditional expression with string).</li>
     <li>Adding Custom Message on OtherEmailAddress Field.</li>
+    <li>Shows the custom message on `Organization Email Address` field by using `messageKey` property.</li>
     <data-scope scope="['decorator','validator']">
-    <li>Apply email validation dynamically based on server rules.</li>
+      <li>Apply email validation dynamically based on server rules.</li>
     </data-scope>
 </ol>
 
@@ -68,7 +69,7 @@ Next, we need to write html code.
 <div component="app-example-runner" ref-component="app-email-add"></div>
 </data-scope>
 
-#EmailConfig
+# EmailConfig
 
 <data-scope scope="['decorator']">
 Below options are not mandatory to use in the `@email()` decorator. If needed then use the below options.
@@ -84,6 +85,7 @@ Below options are not mandatory to use in the `email` validation. If needed then
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Email validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## conditionalExpression 
@@ -111,6 +113,14 @@ To override the global configuration message and set the custom message on respe
 
 <div component="app-code" key="email-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-email-message" title="email {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="email-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-email-messageKey" title="email {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete Email Example
 

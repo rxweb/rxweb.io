@@ -10,6 +10,7 @@ import { RangeMinimumNumberTemplateDrivenValidationDecoratorsComponent } from '.
 import { RangeMaximumNumberTemplateDrivenValidationDecoratorsComponent } from './maximumNumber/range-maximum-number.component';
 import { RangeConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/range-conditional-expression.component';
 import { RangeMessageTemplateDrivenValidationDecoratorsComponent } from './message/range-message.component';
+import { RangeMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/range-message-key.component';
 import { RangeAddTemplateDrivenValidationDecoratorsComponent } from './add/range-add.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { RangeAddTemplateDrivenValidationDecoratorsComponent } from './add/range
 	RangeMaximumNumberTemplateDrivenValidationDecoratorsComponent,
 	RangeConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	RangeMessageTemplateDrivenValidationDecoratorsComponent,
+	RangeMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	RangeAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -27,6 +29,7 @@ entryComponents: [
 	RangeMaximumNumberTemplateDrivenValidationDecoratorsComponent,
 	RangeConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	RangeMessageTemplateDrivenValidationDecoratorsComponent,
+	RangeMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	RangeAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -41,6 +44,7 @@ entryComponents: [
 	RangeMaximumNumberTemplateDrivenValidationDecoratorsComponent,
 	RangeConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	RangeMessageTemplateDrivenValidationDecoratorsComponent,
+	RangeMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	RangeAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

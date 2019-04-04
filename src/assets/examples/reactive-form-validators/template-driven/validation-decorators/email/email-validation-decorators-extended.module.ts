@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { EmailCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/email-complete.component';
 import { EmailConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/email-conditional-expression.component';
 import { EmailMessageTemplateDrivenValidationDecoratorsComponent } from './message/email-message.component';
+import { EmailMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/email-message-key.component';
 import { EmailAddTemplateDrivenValidationDecoratorsComponent } from './add/email-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { EmailAddTemplateDrivenValidationDecoratorsComponent } from './add/email
 	EmailCompleteTemplateDrivenValidationDecoratorsComponent,
 	EmailConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	EmailMessageTemplateDrivenValidationDecoratorsComponent,
+	EmailMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	EmailAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	EmailCompleteTemplateDrivenValidationDecoratorsComponent,
 	EmailConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	EmailMessageTemplateDrivenValidationDecoratorsComponent,
+	EmailMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	EmailAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	EmailCompleteTemplateDrivenValidationDecoratorsComponent,
 	EmailConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	EmailMessageTemplateDrivenValidationDecoratorsComponent,
+	EmailMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	EmailAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

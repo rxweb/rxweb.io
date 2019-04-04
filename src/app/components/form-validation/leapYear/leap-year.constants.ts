@@ -10,6 +10,10 @@ import { LeapYearMessageComponent } from "src/assets/examples/reactive-form-vali
 import { LeapYearMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/leapYear/message/leap-year-message.component";
 import { LeapYearMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/leapYear/message/leap-year-message.component";
 import { LeapYearMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/leapYear/message/leap-year-message.component";
+import { LeapYearMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/leapYear/messageKey/leap-year-message-key.component";
+import { LeapYearMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/leapYear/messageKey/leap-year-message-key.component";
+import { LeapYearMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/leapYear/messageKey/leap-year-message-key.component";
+import { LeapYearMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/leapYear/messageKey/leap-year-message-key.component";
 import { LeapYearDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/leapYear/dynamic/leap-year-dynamic.component";
 import { LeapYearDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/leapYear/dynamic/leap-year-dynamic.component";
 import { LeapYearAddComponent } from "src/assets/examples/reactive-form-validators/decorators/leapYear/add/leap-year-add.component";
@@ -23,6 +27,7 @@ export const LEAP_YEAR_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LeapYearCompleteComponent,
 						conditionalExpression : LeapYearConditionalExpressionComponent,
 						message : LeapYearMessageComponent,
+						messageKey : LeapYearMessageKeyComponent,
 						dynamic : LeapYearDynamicComponent,
 						add : LeapYearAddComponent,
 						edit : LeapYearEditComponent,
@@ -31,18 +36,21 @@ export const LEAP_YEAR_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LeapYearCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : LeapYearConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : LeapYearMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : LeapYearMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : LeapYearAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : LeapYearCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : LeapYearConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : LeapYearMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : LeapYearMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : LeapYearAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : LeapYearCompleteValidatorComponent,
 						conditionalExpression : LeapYearConditionalExpressionValidatorComponent,
 						message : LeapYearMessageValidatorComponent,
+						messageKey : LeapYearMessageKeyValidatorComponent,
 						dynamic : LeapYearDynamicValidatorComponent,
 						add : LeapYearAddValidatorComponent,
 			  },

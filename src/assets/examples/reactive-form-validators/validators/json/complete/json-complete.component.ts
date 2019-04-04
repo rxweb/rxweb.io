@@ -19,6 +19,7 @@ export class JsonCompleteValidatorComponent implements OnInit {
             addressJson:['', RxwebValidators.json({conditionalExpression:(x,y)=> x.location == "{CountryName:India}"  })], 
             locationJson:['', RxwebValidators.json({conditionalExpression:'x => x.location == "{CountryName:India}"'  ,message:'Enter the text in JSON format --> {key:value}' })], 
             contactJson:['', RxwebValidators.json({message:'Enter only JSON type data' })], 
+            countryJson:['', RxwebValidators.json({messageKey:'jsonMessageKey' })], 
         });
     }
 }

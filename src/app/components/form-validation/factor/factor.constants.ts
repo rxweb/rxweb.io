@@ -18,6 +18,10 @@ import { FactorMessageComponent } from "src/assets/examples/reactive-form-valida
 import { FactorMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/factor/message/factor-message.component";
 import { FactorMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/factor/message/factor-message.component";
 import { FactorMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/factor/message/factor-message.component";
+import { FactorMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/factor/messageKey/factor-message-key.component";
+import { FactorMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/factor/messageKey/factor-message-key.component";
+import { FactorMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/factor/messageKey/factor-message-key.component";
+import { FactorMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/factor/messageKey/factor-message-key.component";
 import { FactorDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/factor/dynamic/factor-dynamic.component";
 import { FactorDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/factor/dynamic/factor-dynamic.component";
 import { FactorAddComponent } from "src/assets/examples/reactive-form-validators/decorators/factor/add/factor-add.component";
@@ -33,6 +37,7 @@ export const FACTOR_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : FactorConditionalExpressionComponent,
 						dividend : FactorDividendComponent,
 						message : FactorMessageComponent,
+						messageKey : FactorMessageKeyComponent,
 						dynamic : FactorDynamicComponent,
 						add : FactorAddComponent,
 						edit : FactorEditComponent,
@@ -43,6 +48,7 @@ export const FACTOR_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : FactorConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						dividend : FactorDividendTemplateDrivenValidationDirectivesComponent,
 						message : FactorMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : FactorMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : FactorAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -51,6 +57,7 @@ export const FACTOR_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : FactorConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						dividend : FactorDividendTemplateDrivenValidationDecoratorsComponent,
 						message : FactorMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : FactorMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : FactorAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -59,6 +66,7 @@ export const FACTOR_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : FactorConditionalExpressionValidatorComponent,
 						dividend : FactorDividendValidatorComponent,
 						message : FactorMessageValidatorComponent,
+						messageKey : FactorMessageKeyValidatorComponent,
 						dynamic : FactorDynamicValidatorComponent,
 						add : FactorAddValidatorComponent,
 			  },

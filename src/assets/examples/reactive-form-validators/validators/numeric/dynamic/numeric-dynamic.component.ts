@@ -19,6 +19,7 @@ export class NumericDynamicValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: RxFormBuilder , private http: HttpClient )
 	{ }
@@ -27,7 +28,7 @@ export class NumericDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/numeric/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var userInfo = { dataType:'', negativeNumber:'', decimalNumber:'', integerNumber:'', realNumber:'', positiveNumber:'',  }
+			var userInfo = { dataType:'', negativeNumber:'', decimalNumber:'', integerNumber:'', realNumber:'', positiveNumber:'', positiveNonDecimalNumber:'',  }
 			this.userInfoFormGroup = this.formBuilder.group(userInfo,formBuilderConfiguration);
 		})
     }

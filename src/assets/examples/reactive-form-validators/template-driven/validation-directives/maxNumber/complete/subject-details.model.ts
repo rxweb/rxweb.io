@@ -15,4 +15,7 @@ export class SubjectDetails {
 	practicalMarks: number;
 	
 	
+	disciplineMarks: number;
+	
+	
 }

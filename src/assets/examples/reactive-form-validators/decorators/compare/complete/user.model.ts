@@ -17,4 +17,11 @@ export class User {
 	confirmPassword: string;
 	
 	
+	@prop()
+	contactNumber: string;
+
+	@compare({fieldName:'contactNumber'  ,messageKey:'compareMessageKey' }) 
+	confirmContactNumber: string;
+	
+	
 }

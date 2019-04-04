@@ -19,6 +19,7 @@ export class DataUriCompleteValidatorComponent implements OnInit {
             imageDataUri:['', RxwebValidators.dataUri({conditionalExpression:(x,y) => x.scheme == "DataUri"  })], 
             audioDataUri:['', RxwebValidators.dataUri({conditionalExpression:'x => x.scheme =="DataUri"' })], 
             videoDataUri:['', RxwebValidators.dataUri({message:'{{0}} is not a proper data URI' })], 
+            pdfDataUri:['', RxwebValidators.dataUri({messageKey:'dataUriMessageKey' })], 
         });
     }
 }

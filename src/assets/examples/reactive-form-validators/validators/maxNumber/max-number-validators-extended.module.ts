@@ -9,6 +9,7 @@ import { MaxNumberCompleteValidatorComponent } from './complete/max-number-compl
 import { MaxNumberValueValidatorComponent } from './value/max-number-value.component';
 import { MaxNumberConditionalExpressionValidatorComponent } from './conditionalExpression/max-number-conditional-expression.component';
 import { MaxNumberMessageValidatorComponent } from './message/max-number-message.component';
+import { MaxNumberMessageKeyValidatorComponent } from './messageKey/max-number-message-key.component';
 import { MaxNumberDynamicValidatorComponent } from './dynamic/max-number-dynamic.component';
 import { MaxNumberAddValidatorComponent } from './add/max-number-add.component';
 
@@ -18,6 +19,7 @@ import { MaxNumberAddValidatorComponent } from './add/max-number-add.component';
 	MaxNumberValueValidatorComponent,
 	MaxNumberConditionalExpressionValidatorComponent,
 	MaxNumberMessageValidatorComponent,
+	MaxNumberMessageKeyValidatorComponent,
 	MaxNumberDynamicValidatorComponent,
 	MaxNumberAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	MaxNumberValueValidatorComponent,
 	MaxNumberConditionalExpressionValidatorComponent,
 	MaxNumberMessageValidatorComponent,
+	MaxNumberMessageKeyValidatorComponent,
 	MaxNumberDynamicValidatorComponent,
 	MaxNumberAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	MaxNumberValueValidatorComponent,
 	MaxNumberConditionalExpressionValidatorComponent,
 	MaxNumberMessageValidatorComponent,
+	MaxNumberMessageKeyValidatorComponent,
 	MaxNumberDynamicValidatorComponent,
 	MaxNumberAddValidatorComponent,
   ],

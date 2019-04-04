@@ -26,4 +26,7 @@ export class User {
 	@prop()
 	dinersClubCard: string;
 
+	@prop()
+	otherMasterCard: string;
+
 }

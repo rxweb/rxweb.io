@@ -9,6 +9,7 @@ import { AlphaCompleteValidatorComponent } from './complete/alpha-complete.compo
 import { AlphaConditionalExpressionValidatorComponent } from './conditionalExpression/alpha-conditional-expression.component';
 import { AlphaAllowWhiteSpaceValidatorComponent } from './allowWhiteSpace/alpha-allow-white-space.component';
 import { AlphaMessageValidatorComponent } from './message/alpha-message.component';
+import { AlphaMessageKeyValidatorComponent } from './messageKey/alpha-message-key.component';
 import { AlphaDynamicValidatorComponent } from './dynamic/alpha-dynamic.component';
 import { AlphaAddValidatorComponent } from './add/alpha-add.component';
 
@@ -18,6 +19,7 @@ import { AlphaAddValidatorComponent } from './add/alpha-add.component';
 	AlphaConditionalExpressionValidatorComponent,
 	AlphaAllowWhiteSpaceValidatorComponent,
 	AlphaMessageValidatorComponent,
+	AlphaMessageKeyValidatorComponent,
 	AlphaDynamicValidatorComponent,
 	AlphaAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	AlphaConditionalExpressionValidatorComponent,
 	AlphaAllowWhiteSpaceValidatorComponent,
 	AlphaMessageValidatorComponent,
+	AlphaMessageKeyValidatorComponent,
 	AlphaDynamicValidatorComponent,
 	AlphaAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	AlphaConditionalExpressionValidatorComponent,
 	AlphaAllowWhiteSpaceValidatorComponent,
 	AlphaMessageValidatorComponent,
+	AlphaMessageKeyValidatorComponent,
 	AlphaDynamicValidatorComponent,
 	AlphaAddValidatorComponent,
   ],

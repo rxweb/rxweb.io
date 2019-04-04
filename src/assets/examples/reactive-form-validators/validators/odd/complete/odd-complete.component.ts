@@ -19,6 +19,7 @@ export class OddCompleteValidatorComponent implements OnInit {
             number:['', RxwebValidators.odd({conditionalExpression:(x,y) => x.type == "Odd"  })], 
             oddNumber:['', RxwebValidators.odd({conditionalExpression:'x => x.type == "Odd"' })], 
             multiplesOfOddNumber:['', RxwebValidators.odd({message:'{{0}} is not an odd number' })], 
+            otherOddNumber:['', RxwebValidators.odd({messageKey:'oddMessageKey' })], 
         });
     }
 }

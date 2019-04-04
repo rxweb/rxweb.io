@@ -10,6 +10,7 @@ import { FileSizeMaxSizeValidatorComponent } from './maxSize/file-size-max-size.
 import { FileSizeMinSizeValidatorComponent } from './minSize/file-size-min-size.component';
 import { FileSizeConditionalExpressionValidatorComponent } from './conditionalExpression/file-size-conditional-expression.component';
 import { FileSizeMessageValidatorComponent } from './message/file-size-message.component';
+import { FileSizeMessageKeyValidatorComponent } from './messageKey/file-size-message-key.component';
 import { FileSizeDynamicValidatorComponent } from './dynamic/file-size-dynamic.component';
 import { FileSizeAddValidatorComponent } from './add/file-size-add.component';
 
@@ -20,6 +21,7 @@ import { FileSizeAddValidatorComponent } from './add/file-size-add.component';
 	FileSizeMinSizeValidatorComponent,
 	FileSizeConditionalExpressionValidatorComponent,
 	FileSizeMessageValidatorComponent,
+	FileSizeMessageKeyValidatorComponent,
 	FileSizeDynamicValidatorComponent,
 	FileSizeAddValidatorComponent,
   ],
@@ -29,6 +31,7 @@ entryComponents: [
 	FileSizeMinSizeValidatorComponent,
 	FileSizeConditionalExpressionValidatorComponent,
 	FileSizeMessageValidatorComponent,
+	FileSizeMessageKeyValidatorComponent,
 	FileSizeDynamicValidatorComponent,
 	FileSizeAddValidatorComponent,
   ],
@@ -44,6 +47,7 @@ entryComponents: [
 	FileSizeMinSizeValidatorComponent,
 	FileSizeConditionalExpressionValidatorComponent,
 	FileSizeMessageValidatorComponent,
+	FileSizeMessageKeyValidatorComponent,
 	FileSizeDynamicValidatorComponent,
 	FileSizeAddValidatorComponent,
   ],

@@ -11,4 +11,7 @@ export class Country {
 	@prop()
 	firstCountry: string;
 
+	@prop()
+	fourthCountry: string;
+
 }

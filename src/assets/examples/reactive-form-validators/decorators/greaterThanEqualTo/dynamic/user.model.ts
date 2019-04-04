@@ -14,4 +14,7 @@ export class User {
 	@prop()
 	otherAge: number;
 
+	@prop()
+	joiningAge: number;
+
 }

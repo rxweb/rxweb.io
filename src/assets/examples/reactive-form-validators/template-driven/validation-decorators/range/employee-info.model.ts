@@ -1,9 +1,17 @@
-import {  range, } from   "@rxweb/reactive-form-validators"   
+import {  range,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class EmployeeInfo {
 
-	@range({minimumNumber:18  ,maximumNumber:60 }) 
+	@prop()
 	age: number;
-	
-	
+
+	@prop()
+	experience: number;
+
+	@prop()
+	salary: number;
+
+	@prop()
+	noOfprojects: number;
+
 }

@@ -20,4 +20,8 @@ export class UserInfo {
 	allocationDate: string;
 	
 	
+	@date({messageKey:'dateMessageKey' }) 
+	confirmationDate: string;
+	
+	
 }

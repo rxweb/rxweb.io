@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	company: string;
 
+	@prop()
+	skill: string;
+
 }

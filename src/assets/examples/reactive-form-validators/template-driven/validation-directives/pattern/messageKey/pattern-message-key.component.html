@@ -1,0 +1,12 @@
+<div>
+  <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
+    <div class="form-group">
+      <label>Pin Code</label>
+	    <input type="text" name="pinCode" [(ngModel)]="user.pinCode"  class="form-control" [pattern]="{'expression':{'pinCode':'/^[1-9][0-9]{5}$/' },'messageKey':'patternMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.pinCode?.errors">{{userForm.controls?.pinCode?.errors?.pinCode.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

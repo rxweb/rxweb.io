@@ -9,6 +9,7 @@ import { GreaterThanEqualToCompleteTemplateDrivenValidationDecoratorsComponent }
 import { GreaterThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent } from './fieldName/greater-than-equal-to-field-name.component';
 import { GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/greater-than-equal-to-conditional-expression.component';
 import { GreaterThanEqualToMessageTemplateDrivenValidationDecoratorsComponent } from './message/greater-than-equal-to-message.component';
+import { GreaterThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/greater-than-equal-to-message-key.component';
 import { GreaterThanEqualToAddTemplateDrivenValidationDecoratorsComponent } from './add/greater-than-equal-to-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { GreaterThanEqualToAddTemplateDrivenValidationDecoratorsComponent } from
 	GreaterThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanEqualToMessageTemplateDrivenValidationDecoratorsComponent,
+	GreaterThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanEqualToAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	GreaterThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanEqualToMessageTemplateDrivenValidationDecoratorsComponent,
+	GreaterThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanEqualToAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	GreaterThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanEqualToMessageTemplateDrivenValidationDecoratorsComponent,
+	GreaterThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanEqualToAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

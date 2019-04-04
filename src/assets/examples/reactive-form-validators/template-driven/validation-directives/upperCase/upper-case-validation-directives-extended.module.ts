@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { UpperCaseCompleteTemplateDrivenValidationDirectivesComponent } from './complete/upper-case-complete.component';
 import { UpperCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/upper-case-conditional-expression.component';
 import { UpperCaseMessageTemplateDrivenValidationDirectivesComponent } from './message/upper-case-message.component';
+import { UpperCaseMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/upper-case-message-key.component';
 import { UpperCaseAddTemplateDrivenValidationDirectivesComponent } from './add/upper-case-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { UpperCaseAddTemplateDrivenValidationDirectivesComponent } from './add/u
 	UpperCaseCompleteTemplateDrivenValidationDirectivesComponent,
 	UpperCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	UpperCaseMessageTemplateDrivenValidationDirectivesComponent,
+	UpperCaseMessageKeyTemplateDrivenValidationDirectivesComponent,
 	UpperCaseAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	UpperCaseCompleteTemplateDrivenValidationDirectivesComponent,
 	UpperCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	UpperCaseMessageTemplateDrivenValidationDirectivesComponent,
+	UpperCaseMessageKeyTemplateDrivenValidationDirectivesComponent,
 	UpperCaseAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	UpperCaseCompleteTemplateDrivenValidationDirectivesComponent,
 	UpperCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	UpperCaseMessageTemplateDrivenValidationDirectivesComponent,
+	UpperCaseMessageKeyTemplateDrivenValidationDirectivesComponent,
 	UpperCaseAddTemplateDrivenValidationDirectivesComponent,
   ],
 

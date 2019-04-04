@@ -19,6 +19,7 @@ export class LatitudeCompleteValidatorComponent implements OnInit {
             secondCountryLatitude:['', RxwebValidators.latitude({conditionalExpression:(x,y) => x.continent == "Asia"  })], 
             thirdCountryLatitude:['', RxwebValidators.latitude({conditionalExpression:'x => x.continent =="Asia"' })], 
             firstCountryLatitude:['', RxwebValidators.latitude({message:'{{0}} is not a latitude' })], 
+            fourthCountryLatitude:['', RxwebValidators.latitude({messageKey:'latitudeMessageKey' })], 
         });
     }
 }

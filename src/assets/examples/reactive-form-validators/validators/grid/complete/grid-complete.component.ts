@@ -16,9 +16,10 @@ export class GridCompleteValidatorComponent implements OnInit {
     ngOnInit() {
         this.digitalInfoFormGroup = this.formBuilder.group({
             soundRecordingGrid:['', RxwebValidators.grid()], 
-            audioVisualRecordingGrid:['', RxwebValidators.grid({conditionalExpression:(x,y) => x.soundRecordingGrid == "A12425GABC1234002M"  })], 
+            audioVisualRecordingGrid:['', RxwebValidators.grid({conditionalExpression:(x,y) => x.soundRecordingGrid == "A12425GABC1234002M" })], 
             photographGrid:['', RxwebValidators.grid({conditionalExpression:'x => x.soundRecordingGrid =="A12425GABC1234002M"' })], 
             graphicImageGrid:['', RxwebValidators.grid({message:'This is Not valid GRid' })], 
+            videoGraphicGrid:['', RxwebValidators.grid({messageKey:'gridMessageKey' })], 
         });
     }
 }

@@ -15,6 +15,7 @@ Suppose you want to create a login form, which contains fields like newPassword 
 <ol class='showHideElement'>
    <li>Adding validation on oldPassword Field and adding  Custom Message on it.</li>
    <li>Apply validation in newPassword validation there is validators on digit, alphabets, contains, lowerCase, upperCase, specialCharacter, minLength, maxLength.</li>
+  <li>Shows the custom message on `Confirm Password` field by using `messageKey` property.</li>
    <data-scope scope="['decorator','validator']">
    <li>Apply password validation dynamically based on server rules.</li>
    </data-scope>
@@ -79,6 +80,7 @@ Below options are not mandatory to use in the `password` validation. If needed t
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a href="#validation" (click)='scrollTo("#validation")'  title="validation">validation</a></td><td> Validation is used for setting the parameters for password validation, In Password validation there is validations on digit, alphabets, contains, lowerCase, upperCase, specialCharacter, minLength, maxLength.</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## message 
@@ -95,6 +97,14 @@ Password Validation is used for setting the parameters for password validation, 
 
 <div component="app-code" key="password-validationExample-model"></div> 
 <div component="app-example-runner" ref-component="app-password-validation" title="password {{validatorType}} with validation" key="validation"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="password-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-password-messageKey" title="password {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete password Example
 

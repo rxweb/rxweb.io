@@ -11,6 +11,7 @@ import { MinDateConditionalExpressionValidatorComponent } from './conditionalExp
 import { MinDateMessageValidatorComponent } from './message/min-date-message.component';
 import { MinDateFieldNameValidatorComponent } from './fieldName/min-date-field-name.component';
 import { MinDateOperatorValidatorComponent } from './operator/min-date-operator.component';
+import { MinDateMessageKeyValidatorComponent } from './messageKey/min-date-message-key.component';
 import { MinDateDynamicValidatorComponent } from './dynamic/min-date-dynamic.component';
 import { MinDateAddValidatorComponent } from './add/min-date-add.component';
 
@@ -22,6 +23,7 @@ import { MinDateAddValidatorComponent } from './add/min-date-add.component';
 	MinDateMessageValidatorComponent,
 	MinDateFieldNameValidatorComponent,
 	MinDateOperatorValidatorComponent,
+	MinDateMessageKeyValidatorComponent,
 	MinDateDynamicValidatorComponent,
 	MinDateAddValidatorComponent,
   ],
@@ -32,6 +34,7 @@ entryComponents: [
 	MinDateMessageValidatorComponent,
 	MinDateFieldNameValidatorComponent,
 	MinDateOperatorValidatorComponent,
+	MinDateMessageKeyValidatorComponent,
 	MinDateDynamicValidatorComponent,
 	MinDateAddValidatorComponent,
   ],
@@ -48,6 +51,7 @@ entryComponents: [
 	MinDateMessageValidatorComponent,
 	MinDateFieldNameValidatorComponent,
 	MinDateOperatorValidatorComponent,
+	MinDateMessageKeyValidatorComponent,
 	MinDateDynamicValidatorComponent,
 	MinDateAddValidatorComponent,
   ],

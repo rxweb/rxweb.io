@@ -10,6 +10,7 @@ import { AllOfMatchValuesValidatorComponent } from './matchValues/all-of-match-v
 import { AllOfMessageValidatorComponent } from './message/all-of-message.component';
 import { AllOfDynamicValidatorComponent } from './dynamic/all-of-dynamic.component';
 import { AllOfAddValidatorComponent } from './add/all-of-add.component';
+import { AllOfMessageKeyValidatorComponent } from './messageKey/all-of-message-key.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AllOfAddValidatorComponent } from './add/all-of-add.component';
 	AllOfMatchValuesValidatorComponent,
 	AllOfMessageValidatorComponent,
 	AllOfDynamicValidatorComponent,
-	AllOfAddValidatorComponent,
+  AllOfAddValidatorComponent,
+  AllOfMessageKeyValidatorComponent
   ],
 entryComponents: [
 	AllOfCompleteValidatorComponent,
@@ -27,7 +29,8 @@ entryComponents: [
 	AllOfMatchValuesValidatorComponent,
 	AllOfMessageValidatorComponent,
 	AllOfDynamicValidatorComponent,
-	AllOfAddValidatorComponent,
+  AllOfAddValidatorComponent,
+  AllOfMessageKeyValidatorComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -41,7 +44,8 @@ entryComponents: [
 	AllOfMatchValuesValidatorComponent,
 	AllOfMessageValidatorComponent,
 	AllOfDynamicValidatorComponent,
-	AllOfAddValidatorComponent,
+  AllOfAddValidatorComponent,
+  AllOfMessageKeyValidatorComponent
   ],
 
 })

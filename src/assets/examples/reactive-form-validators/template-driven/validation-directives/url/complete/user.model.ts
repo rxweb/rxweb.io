@@ -13,4 +13,7 @@ export class User {
 	maintenanceWebSiteUrl: string;
 	
 	
+	deployedWebSiteUrl: string;
+	
+	
 }

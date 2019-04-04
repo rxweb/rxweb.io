@@ -12,4 +12,7 @@ export class User {
 	videoDataUri: string;
 	
 	
+	pdfDataUri: string;
+	
+	
 }

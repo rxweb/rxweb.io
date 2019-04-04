@@ -13,4 +13,7 @@ export class User {
 	mobileNumber: number;
 	
 	
+	zipCode: number;
+	
+	
 }

@@ -10,6 +10,10 @@ import { LatitudeMessageComponent } from "src/assets/examples/reactive-form-vali
 import { LatitudeMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/latitude/message/latitude-message.component";
 import { LatitudeMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/latitude/message/latitude-message.component";
 import { LatitudeMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/latitude/message/latitude-message.component";
+import { LatitudeMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/latitude/messageKey/latitude-message-key.component";
+import { LatitudeMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/latitude/messageKey/latitude-message-key.component";
+import { LatitudeMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/latitude/messageKey/latitude-message-key.component";
+import { LatitudeMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/latitude/messageKey/latitude-message-key.component";
 import { LatitudeDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/latitude/dynamic/latitude-dynamic.component";
 import { LatitudeDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/latitude/dynamic/latitude-dynamic.component";
 import { LatitudeAddComponent } from "src/assets/examples/reactive-form-validators/decorators/latitude/add/latitude-add.component";
@@ -23,6 +27,7 @@ export const LATITUDE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LatitudeCompleteComponent,
 						conditionalExpression : LatitudeConditionalExpressionComponent,
 						message : LatitudeMessageComponent,
+						messageKey : LatitudeMessageKeyComponent,
 						dynamic : LatitudeDynamicComponent,
 						add : LatitudeAddComponent,
 						edit : LatitudeEditComponent,
@@ -31,18 +36,21 @@ export const LATITUDE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LatitudeCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : LatitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : LatitudeMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : LatitudeMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : LatitudeAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : LatitudeCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : LatitudeConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : LatitudeMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : LatitudeMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : LatitudeAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : LatitudeCompleteValidatorComponent,
 						conditionalExpression : LatitudeConditionalExpressionValidatorComponent,
 						message : LatitudeMessageValidatorComponent,
+						messageKey : LatitudeMessageKeyValidatorComponent,
 						dynamic : LatitudeDynamicValidatorComponent,
 						add : LatitudeAddValidatorComponent,
 			  },

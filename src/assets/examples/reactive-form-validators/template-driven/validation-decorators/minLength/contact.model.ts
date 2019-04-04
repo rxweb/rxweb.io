@@ -1,9 +1,20 @@
-import {  minLength, } from   "@rxweb/reactive-form-validators"   
+import {  minLength,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class Contact {
 
-	@minLength({value:3 }) 
+	@prop()
 	countryName: string;
-	
-	
+
+	@prop()
+	mobileNo: string;
+
+	@prop()
+	landLineNo: string;
+
+	@prop()
+	stateCode: string;
+
+	@prop()
+	stateName: string;
+
 }

@@ -19,6 +19,7 @@ export class PatternCompleteValidatorComponent implements OnInit {
             zipCode:['', RxwebValidators.pattern({expression:{'zipCode':/^[0-9]{5}(?:-[0-9]{4})?$/ }  ,message:'Zip code should match 12345 or 12345-6789' })], 
             contactNumber:['', RxwebValidators.pattern({expression:{'onlyDigit': /^[0-9]*$/}  ,conditionalExpression:(x,y) => x.userName == "Bharat"  })], 
             age:['', RxwebValidators.pattern({expression:{'onlyDigit': /^[0-9]*$/}  ,conditionalExpression:'x => x.userName=="Bharat"' })], 
+            pinCode:['', RxwebValidators.pattern({expression:{'pinCode':/^[1-9][0-9]{5}$/ }  ,messageKey:'patternMessageKey' })], 
         });
     }
 }

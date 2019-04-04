@@ -1,14 +1,13 @@
 ---
 title: fileSize
-description: fileSize validation {{validatorType}} allows user to enter the input which is in the proper file size format.
+description: fileSize validation {{validatorType}} allows user to enter the input which is in the proper fileSize size format.
 author: rxcontributortwo
 category: form-validations
-subcategory: File
 type: tabs
 linktitle: fileSize
 ---
 
-<div class="title-bar"><p>fileSize validation {{validatorType}} allows user to enter the input which is in the proper file size format.</p></div>
+<div class="title-bar"><p>fileSize validation {{validatorType}} allows user to enter the input which is in the proper fileSize size format.</p></div>
 
 # When to use
 Suppose you want to create a UserInfo form, which contains fields like fileType , profilePhoto, videoFile , audioFile and imageFile, documentFile ,contactFile, profilePicture and you want the user to enter input which is a proper size format. Here depending upon the requirement, these scenarios may arise..
@@ -17,6 +16,7 @@ Suppose you want to create a UserInfo form, which contains fields like fileType 
    <li>Apply validation on documentFile field based on matched condition in the form, like if the fileType is 'Document', then the documentFile must be a size format (Used as a function).</li>
    <li>Apply validation on imageFile field based on matched condition in the form, like if the device is 'SmartPhone', then the imageFile must be a size format (Used as a string datatype).</li>
    <li>Adding custom message on ContactFile field</li>
+  `<li>Shows the custom message on `Excel File` field by using `messageKey` property.</li>
    <data-scope scope="['decorator','validator']">
    <li>Apply fileSize validation dynamically based on server rules.</li>
    </data-scope>
@@ -79,15 +79,16 @@ Below options are not mandatory to use in the `fileSize` validation. If needed t
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a (click)='scrollTo("#maxSize")' title="maxSize">maxSize</a></td><td>maxSize property of the SizeConfig is used to set the maximum file size allowed to be entered.</td></tr>
-<tr><td><a (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>FileSize validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
+<tr><td><a (click)='scrollTo("#maxSize")' title="maxSize">maxSize</a></td><td>maxSize property of the SizeConfig is used to set the maximum fileSize size allowed to be entered.</td></tr>
+<tr><td><a (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>FileSize validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
 <tr><td><a (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## maxSize
 Type :  `number` 
 
-maxSize property of the SizeConfig is used to set the maximum file size allowed to be entered.
+maxSize property of the SizeConfig is used to set the maximum fileSize size allowed to be entered.
 
 <div component="app-code" key="fileSize-maxSizeExample-model"></div> 
 <div component="app-example-runner" ref-component="app-fileSize-maxSize" title="fileSize {{validatorType}} with maxSize" key="maxSize"></div>
@@ -96,9 +97,7 @@ maxSize property of the SizeConfig is used to set the maximum file size allowed 
 Type :  `Function`  |  `string` 
 
 fileSize validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.
-If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.
-
-> This won't work if you return without expression or fixed boolean value true or false; like : `conditionalExpression: (x) => x.toggle`
+If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.
 
 <data-scope scope="['validator','decorator']">
 > Binding `conditionalExpression` with `Function` object.
@@ -117,6 +116,14 @@ To override the global configuration message and set the custom message on respe
 
 <div component="app-code" key="fileSize-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-fileSize-message" title="fileSize {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="fileSize-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-fileSize-messageKey" title="fileSize {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete fileSize Example
 

@@ -19,6 +19,7 @@ export class ImageCompleteValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: FormBuilder )
 	{ }
@@ -34,6 +35,7 @@ export class ImageCompleteValidatorComponent implements OnInit {
             aadharCard:['', RxwebValidators.image({maxHeight:50  ,maxWidth:100  ,conditionalExpression:'x => x.ImageType == "IdentityCard"' })], 
             panCard:['', RxwebValidators.image({maxHeight:100  ,maxWidth:200  ,conditionalExpression:'(x,y) => x.ImageType == "IdentityCard"' })], 
             residenceProof:['', RxwebValidators.image({maxHeight:100  ,maxWidth:100  ,message:'File exceed maximum Height.' })], 
+            passport:['', RxwebValidators.image({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' })], 
         });
     }
 }

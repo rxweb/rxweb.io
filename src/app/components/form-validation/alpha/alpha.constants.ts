@@ -14,6 +14,10 @@ import { AlphaMessageComponent } from "src/assets/examples/reactive-form-validat
 import { AlphaMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/alpha/message/alpha-message.component";
 import { AlphaMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/alpha/message/alpha-message.component";
 import { AlphaMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alpha/message/alpha-message.component";
+import { AlphaMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/alpha/messageKey/alpha-message-key.component";
+import { AlphaMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/alpha/messageKey/alpha-message-key.component";
+import { AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/alpha/messageKey/alpha-message-key.component";
+import { AlphaMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alpha/messageKey/alpha-message-key.component";
 import { AlphaDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/alpha/dynamic/alpha-dynamic.component";
 import { AlphaDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alpha/dynamic/alpha-dynamic.component";
 import { AlphaAddComponent } from "src/assets/examples/reactive-form-validators/decorators/alpha/add/alpha-add.component";
@@ -28,6 +32,7 @@ export const ALPHA_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : AlphaConditionalExpressionComponent,
 						allowWhiteSpace : AlphaAllowWhiteSpaceComponent,
 						message : AlphaMessageComponent,
+						messageKey : AlphaMessageKeyComponent,
 						dynamic : AlphaDynamicComponent,
 						add : AlphaAddComponent,
 						edit : AlphaEditComponent,
@@ -37,6 +42,7 @@ export const ALPHA_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : AlphaConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						allowWhiteSpace : AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 						message : AlphaMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : AlphaMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : AlphaAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const ALPHA_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : AlphaConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						allowWhiteSpace : AlphaAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 						message : AlphaMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : AlphaAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const ALPHA_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						conditionalExpression : AlphaConditionalExpressionValidatorComponent,
 						allowWhiteSpace : AlphaAllowWhiteSpaceValidatorComponent,
 						message : AlphaMessageValidatorComponent,
+						messageKey : AlphaMessageKeyValidatorComponent,
 						dynamic : AlphaDynamicValidatorComponent,
 						add : AlphaAddValidatorComponent,
 			  },

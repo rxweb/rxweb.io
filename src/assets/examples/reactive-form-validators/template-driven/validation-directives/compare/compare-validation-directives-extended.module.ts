@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { CompareCompleteTemplateDrivenValidationDirectivesComponent } from './complete/compare-complete.component';
 import { CompareFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/compare-field-name.component';
 import { CompareMessageTemplateDrivenValidationDirectivesComponent } from './message/compare-message.component';
+import { CompareMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/compare-message-key.component';
 import { CompareAddTemplateDrivenValidationDirectivesComponent } from './add/compare-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { CompareAddTemplateDrivenValidationDirectivesComponent } from './add/com
 	CompareCompleteTemplateDrivenValidationDirectivesComponent,
 	CompareFieldNameTemplateDrivenValidationDirectivesComponent,
 	CompareMessageTemplateDrivenValidationDirectivesComponent,
+	CompareMessageKeyTemplateDrivenValidationDirectivesComponent,
 	CompareAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	CompareCompleteTemplateDrivenValidationDirectivesComponent,
 	CompareFieldNameTemplateDrivenValidationDirectivesComponent,
 	CompareMessageTemplateDrivenValidationDirectivesComponent,
+	CompareMessageKeyTemplateDrivenValidationDirectivesComponent,
 	CompareAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	CompareCompleteTemplateDrivenValidationDirectivesComponent,
 	CompareFieldNameTemplateDrivenValidationDirectivesComponent,
 	CompareMessageTemplateDrivenValidationDirectivesComponent,
+	CompareMessageKeyTemplateDrivenValidationDirectivesComponent,
 	CompareAddTemplateDrivenValidationDirectivesComponent,
   ],
 
