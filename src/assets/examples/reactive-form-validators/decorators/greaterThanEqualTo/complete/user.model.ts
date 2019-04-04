@@ -23,4 +23,8 @@ export class User {
 	otherAge: number;
 	
 	
+	@greaterThanEqualTo({fieldName:'admissionAge'  ,messageKey:'greaterThanEqualToMessageKey' }) 
+	joiningAge: number;
+	
+	
 }

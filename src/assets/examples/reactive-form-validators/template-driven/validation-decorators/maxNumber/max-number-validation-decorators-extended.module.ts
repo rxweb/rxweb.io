@@ -9,6 +9,7 @@ import { MaxNumberCompleteTemplateDrivenValidationDecoratorsComponent } from './
 import { MaxNumberValueTemplateDrivenValidationDecoratorsComponent } from './value/max-number-value.component';
 import { MaxNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/max-number-conditional-expression.component';
 import { MaxNumberMessageTemplateDrivenValidationDecoratorsComponent } from './message/max-number-message.component';
+import { MaxNumberMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/max-number-message-key.component';
 import { MaxNumberAddTemplateDrivenValidationDecoratorsComponent } from './add/max-number-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MaxNumberAddTemplateDrivenValidationDecoratorsComponent } from './add/m
 	MaxNumberValueTemplateDrivenValidationDecoratorsComponent,
 	MaxNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	MaxNumberMessageTemplateDrivenValidationDecoratorsComponent,
+	MaxNumberMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MaxNumberAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	MaxNumberValueTemplateDrivenValidationDecoratorsComponent,
 	MaxNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	MaxNumberMessageTemplateDrivenValidationDecoratorsComponent,
+	MaxNumberMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MaxNumberAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	MaxNumberValueTemplateDrivenValidationDecoratorsComponent,
 	MaxNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	MaxNumberMessageTemplateDrivenValidationDecoratorsComponent,
+	MaxNumberMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MaxNumberAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

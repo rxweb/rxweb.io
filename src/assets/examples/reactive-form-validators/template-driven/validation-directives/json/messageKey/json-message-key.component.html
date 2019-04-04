@@ -1,0 +1,12 @@
+<div>
+  <form #jsoninfoForm = "ngForm" [rxwebForm]="jsoninfoForm" [model]="jsoninfo">
+    <div class="form-group">
+      <label>Country Json</label>
+	    <input type="text" name="countryJson" [(ngModel)]="jsoninfo.countryJson"  class="form-control" [json]="{'messageKey':'jsonMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on Message Key<br/></small>
+	   <small class="form-text text-danger" *ngIf="jsoninfoForm.controls?.countryJson?.errors">{{jsoninfoForm.controls?.countryJson?.errors?.json.message}}<br/></small>	
+    </div>
+    <button [disabled]="!jsoninfoForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -15,6 +15,7 @@ Suppose you want to create a employeeInfo form, which contains field of employee
  <li>Adding value which you want to restrict number in the property. The minimum number is 18 and maximum number is 60.</li> 
  <li>Apply range validation based on matched condition in the form, like if the age is greater than ‘25’ then the employeeExperience value should be between 2 to 20.</li>
  <li>Adding Custom Message on Salary Field.</li>
+ <li>Shows the custom message on `Number of Projects` field by using `messageKey` property.</li>
  <data-scope scope="['decorator','validator']">
  <li>Apply range validation dynamically based on server rules.</li>
  </data-scope>
@@ -81,6 +82,7 @@ Below options are not mandatory to use in the `range` validation. If needed then
 <tr><td><a (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#minimumNumber")' title="minimumnumber">minimumNumber</a></td><td> Minimum number is for define a minimum number of range.</td></tr>
 <tr><td><a (click)='scrollTo("#maximumNumber")' title="maximumNumber">maximumNumber</a></td><td> Maximum number is for define a maximum number of range.</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## conditionalExpression 
@@ -118,6 +120,14 @@ Maximum number is for define a maximum number of range
 
 <div component="app-code" key="range-maximumNumberExample-model"></div> 
 <div component="app-example-runner" ref-component="app-range-maximumNumber" title="range {{validatorType}} with maximumNumber" key="maximumNumber"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="range-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-range-messageKey" title="range {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete range Example
 

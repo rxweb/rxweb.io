@@ -9,6 +9,7 @@ import { ExtensionCompleteValidatorComponent } from './complete/extension-comple
 import { ExtensionExtensionsValidatorComponent } from './extensions/extension-extensions.component';
 import { ExtensionConditionalExpressionValidatorComponent } from './conditionalExpression/extension-conditional-expression.component';
 import { ExtensionMessageValidatorComponent } from './message/extension-message.component';
+import { ExtensionMessageKeyValidatorComponent } from './messageKey/extension-message-key.component';
 import { ExtensionDynamicValidatorComponent } from './dynamic/extension-dynamic.component';
 import { ExtensionAddValidatorComponent } from './add/extension-add.component';
 
@@ -18,6 +19,7 @@ import { ExtensionAddValidatorComponent } from './add/extension-add.component';
 	ExtensionExtensionsValidatorComponent,
 	ExtensionConditionalExpressionValidatorComponent,
 	ExtensionMessageValidatorComponent,
+	ExtensionMessageKeyValidatorComponent,
 	ExtensionDynamicValidatorComponent,
 	ExtensionAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	ExtensionExtensionsValidatorComponent,
 	ExtensionConditionalExpressionValidatorComponent,
 	ExtensionMessageValidatorComponent,
+	ExtensionMessageKeyValidatorComponent,
 	ExtensionDynamicValidatorComponent,
 	ExtensionAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	ExtensionExtensionsValidatorComponent,
 	ExtensionConditionalExpressionValidatorComponent,
 	ExtensionMessageValidatorComponent,
+	ExtensionMessageKeyValidatorComponent,
 	ExtensionDynamicValidatorComponent,
 	ExtensionAddValidatorComponent,
   ],

@@ -17,8 +17,9 @@ Suppose you want to create a user form, which contains fields like Number, Type,
     <li>Apply Even validation based on matched condition in the form, like if the type  is ‘Even’ then the number value should be even number (Conditional Expression with Function).</li>
     <li>Apply Even validation based on matched condition in the form, like if the type  is ‘Even’ then the EvenNumber field input value should be even number (Conditional Expression with String).</li>
     <li>Adding Custom Message on EvenNumber Field.</li>
+    <li>Shows the custom message on `Other Even Number` field by using `messageKey` property.</li>
     <data-scope scope="['decorator','validator']">
-    <li>Apply even validation dynamically based on server rules.</li>
+      <li>Apply even validation dynamically based on server rules.</li>
     </data-scope>
 </ol>
 
@@ -82,6 +83,7 @@ Below options are not mandatory to use in the `even` validation. If needed then 
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Even validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## conditionalExpression 
@@ -107,6 +109,14 @@ To override the global configuration message and set the custom message on respe
 
 <div component="app-code" key="even-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-even-message" title="even {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="even-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-even-messageKey" title="even {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete even Example
 

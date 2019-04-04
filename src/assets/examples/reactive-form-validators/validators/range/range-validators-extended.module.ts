@@ -10,6 +10,7 @@ import { RangeMinimumNumberValidatorComponent } from './minimumNumber/range-mini
 import { RangeMaximumNumberValidatorComponent } from './maximumNumber/range-maximum-number.component';
 import { RangeConditionalExpressionValidatorComponent } from './conditionalExpression/range-conditional-expression.component';
 import { RangeMessageValidatorComponent } from './message/range-message.component';
+import { RangeMessageKeyValidatorComponent } from './messageKey/range-message-key.component';
 import { RangeDynamicValidatorComponent } from './dynamic/range-dynamic.component';
 import { RangeAddValidatorComponent } from './add/range-add.component';
 
@@ -20,6 +21,7 @@ import { RangeAddValidatorComponent } from './add/range-add.component';
 	RangeMaximumNumberValidatorComponent,
 	RangeConditionalExpressionValidatorComponent,
 	RangeMessageValidatorComponent,
+	RangeMessageKeyValidatorComponent,
 	RangeDynamicValidatorComponent,
 	RangeAddValidatorComponent,
   ],
@@ -29,6 +31,7 @@ entryComponents: [
 	RangeMaximumNumberValidatorComponent,
 	RangeConditionalExpressionValidatorComponent,
 	RangeMessageValidatorComponent,
+	RangeMessageKeyValidatorComponent,
 	RangeDynamicValidatorComponent,
 	RangeAddValidatorComponent,
   ],
@@ -44,6 +47,7 @@ entryComponents: [
 	RangeMaximumNumberValidatorComponent,
 	RangeConditionalExpressionValidatorComponent,
 	RangeMessageValidatorComponent,
+	RangeMessageKeyValidatorComponent,
 	RangeDynamicValidatorComponent,
 	RangeAddValidatorComponent,
   ],

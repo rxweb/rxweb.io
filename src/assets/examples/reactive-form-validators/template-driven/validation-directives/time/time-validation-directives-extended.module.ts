@@ -9,6 +9,7 @@ import { TimeCompleteTemplateDrivenValidationDirectivesComponent } from './compl
 import { TimeConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/time-conditional-expression.component';
 import { TimeAllowSecondsTemplateDrivenValidationDirectivesComponent } from './allowSeconds/time-allow-seconds.component';
 import { TimeMessageTemplateDrivenValidationDirectivesComponent } from './message/time-message.component';
+import { TimeMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/time-message-key.component';
 import { TimeAddTemplateDrivenValidationDirectivesComponent } from './add/time-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { TimeAddTemplateDrivenValidationDirectivesComponent } from './add/time-a
 	TimeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	TimeAllowSecondsTemplateDrivenValidationDirectivesComponent,
 	TimeMessageTemplateDrivenValidationDirectivesComponent,
+	TimeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	TimeAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	TimeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	TimeAllowSecondsTemplateDrivenValidationDirectivesComponent,
 	TimeMessageTemplateDrivenValidationDirectivesComponent,
+	TimeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	TimeAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	TimeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	TimeAllowSecondsTemplateDrivenValidationDirectivesComponent,
 	TimeMessageTemplateDrivenValidationDirectivesComponent,
+	TimeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	TimeAddTemplateDrivenValidationDirectivesComponent,
   ],
 

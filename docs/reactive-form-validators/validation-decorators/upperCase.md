@@ -15,6 +15,7 @@ Suppose you want to create a Location form, which contains fields like CountryNa
     <li>Apply upperCase validation in the CountryName without any condition.</li>
     <li>Apply upperCase validation based on matched condition in the form, like if the CountryName is `INDIA`, then only the upperCase validation will be applied to StateName field.</li>
 	<li>Adding Custom Message on CityName Field.</li>
+<li>Shows the custom message on `Street Name` field by using `messageKey` property.</li>
     <data-scope scope="['decorator','validator']">
 	<li>Apply upperCase validation dynamically based on server rules.</li>
     </data-scope>
@@ -73,6 +74,7 @@ Below options are not mandatory to use in the `upperCase` validation. If needed 
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a href="#conditionalExpression" (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>upperCase validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
 <tr><td><a href="#message" (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## conditionalExpression 
@@ -98,6 +100,14 @@ To override the global configuration message and set the custom message on respe
  
 <div component="app-code" key="upperCase-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-upperCase-message" title="upperCase {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="upperCase-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-upperCase-messageKey" title="upperCase {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete upperCase Example
 

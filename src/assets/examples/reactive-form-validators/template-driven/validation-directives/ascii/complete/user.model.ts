@@ -12,4 +12,7 @@ export class User {
 	specialCharAsciiCode: string;
 	
 	
+	digitalCode: string;
+	
+	
 }

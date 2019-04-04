@@ -16,6 +16,7 @@ export class NoneOfDynamicComponent implements OnInit {
   projectDomains: string[] = [];
   hobbies: string[] = [];
   skills: string[] = [];
+  languages: string[] = [];
 
   constructor(
     private formBuilder: RxFormBuilder, private http: HttpClient) { }
@@ -23,6 +24,7 @@ export class NoneOfDynamicComponent implements OnInit {
   skillsArray: string[] = ["MVC", "AngularJS", "Angular 5", "C#", "Web Api", "SQL Server"];
   hobbiesArray: string[] = ["Drawing", "Singing", "Dancing", "Travelling", "Sports"];
   projectDomainsArray: string[] = ["ECommerce", "Banking", "Educational", "Gaming"];
+  languagesArray: string[] = ["English", "Spanish", "French", "German", "Chinese"];
 
   ngOnInit() {
     let employeeInfo = new EmployeeInfo();
@@ -50,5 +52,11 @@ export class NoneOfDynamicComponent implements OnInit {
     var indexOf = this.hobbies.indexOf(element.value);
     element.checked ? this.hobbies.push(element.value) : this.hobbies.splice(indexOf, 1);
     this.employeeInfoFormGroup.controls.hobbies.setValue(this.hobbies);
+  }
+
+  addLanguage(element: any, index: number) {
+    var indexOf = this.languages.indexOf(element.value);
+    element.checked ? this.languages.push(element.value) : this.languages.splice(indexOf, 1);
+    this.employeeInfoFormGroup.controls.languages.setValue(this.languages);
   }
 }

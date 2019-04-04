@@ -21,4 +21,8 @@ export class Location {
 	colonyName: string;
 	
 	
+	@upperCase({messageKey:'upperCaseMessageKey' }) 
+	streetName: string;
+	
+	
 }

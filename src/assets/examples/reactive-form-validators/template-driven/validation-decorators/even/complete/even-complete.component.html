@@ -23,6 +23,13 @@
       <small class="form-text text-muted">Shows custom message.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.multiplesOfEvenNumber?.errors">{{userForm.controls?.multiplesOfEvenNumber?.errors?.even.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Other Even Number</label>
+	    <input type="text" name="otherEvenNumber" [(ngModel)]="user.otherEvenNumber"  class="form-control" />
+
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherEvenNumber?.errors">{{userForm.controls?.otherEvenNumber?.errors?.even.message}}<br/></small>	
+    </div>
     <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

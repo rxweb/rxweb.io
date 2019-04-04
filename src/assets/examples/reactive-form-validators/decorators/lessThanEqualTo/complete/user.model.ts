@@ -23,4 +23,8 @@ export class User {
 	otherMarks: number;
 	
 	
+	@lessThanEqualTo({fieldName:'totalMarks'  ,messageKey:'lessThanEqualToMessageKey' }) 
+	disciplineMarks: number;
+	
+	
 }

@@ -20,4 +20,8 @@ export class User {
 	otherEmailAddress: string;
 	
 	
+	@contains({value:'@gmail.com'  ,messageKey:'containsMessageKey' }) 
+	organizationEmailAddress: string;
+	
+	
 }

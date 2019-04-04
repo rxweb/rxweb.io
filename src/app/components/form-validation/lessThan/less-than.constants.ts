@@ -14,6 +14,10 @@ import { LessThanMessageComponent } from "src/assets/examples/reactive-form-vali
 import { LessThanMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThan/message/less-than-message.component";
 import { LessThanMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThan/message/less-than-message.component";
 import { LessThanMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/message/less-than-message.component";
+import { LessThanMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/messageKey/less-than-message-key.component";
+import { LessThanMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThan/messageKey/less-than-message-key.component";
+import { LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThan/messageKey/less-than-message-key.component";
+import { LessThanMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/messageKey/less-than-message-key.component";
 import { LessThanDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/dynamic/less-than-dynamic.component";
 import { LessThanDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/dynamic/less-than-dynamic.component";
 import { LessThanAddComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/add/less-than-add.component";
@@ -28,6 +32,7 @@ export const LESS_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : LessThanFieldNameComponent,
 						conditionalExpression : LessThanConditionalExpressionComponent,
 						message : LessThanMessageComponent,
+						messageKey : LessThanMessageKeyComponent,
 						dynamic : LessThanDynamicComponent,
 						add : LessThanAddComponent,
 						edit : LessThanEditComponent,
@@ -37,6 +42,7 @@ export const LESS_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : LessThanFieldNameTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : LessThanMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : LessThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : LessThanAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const LESS_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : LessThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : LessThanMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : LessThanAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const LESS_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : LessThanFieldNameValidatorComponent,
 						conditionalExpression : LessThanConditionalExpressionValidatorComponent,
 						message : LessThanMessageValidatorComponent,
+						messageKey : LessThanMessageKeyValidatorComponent,
 						dynamic : LessThanDynamicValidatorComponent,
 						add : LessThanAddValidatorComponent,
 			  },

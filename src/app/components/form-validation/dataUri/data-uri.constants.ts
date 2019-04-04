@@ -10,6 +10,10 @@ import { DataUriMessageComponent } from "src/assets/examples/reactive-form-valid
 import { DataUriMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/dataUri/message/data-uri-message.component";
 import { DataUriMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/dataUri/message/data-uri-message.component";
 import { DataUriMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/dataUri/message/data-uri-message.component";
+import { DataUriMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/dataUri/messageKey/data-uri-message-key.component";
+import { DataUriMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/dataUri/messageKey/data-uri-message-key.component";
+import { DataUriMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/dataUri/messageKey/data-uri-message-key.component";
+import { DataUriMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/dataUri/messageKey/data-uri-message-key.component";
 import { DataUriDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/dataUri/dynamic/data-uri-dynamic.component";
 import { DataUriDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/dataUri/dynamic/data-uri-dynamic.component";
 import { DataUriAddComponent } from "src/assets/examples/reactive-form-validators/decorators/dataUri/add/data-uri-add.component";
@@ -23,6 +27,7 @@ export const DATA_URI_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : DataUriCompleteComponent,
 						conditionalExpression : DataUriConditionalExpressionComponent,
 						message : DataUriMessageComponent,
+						messageKey : DataUriMessageKeyComponent,
 						dynamic : DataUriDynamicComponent,
 						add : DataUriAddComponent,
 						edit : DataUriEditComponent,
@@ -31,18 +36,21 @@ export const DATA_URI_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : DataUriCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : DataUriConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : DataUriMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : DataUriMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : DataUriAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : DataUriCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : DataUriConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : DataUriMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : DataUriMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : DataUriAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : DataUriCompleteValidatorComponent,
 						conditionalExpression : DataUriConditionalExpressionValidatorComponent,
 						message : DataUriMessageValidatorComponent,
+						messageKey : DataUriMessageKeyValidatorComponent,
 						dynamic : DataUriDynamicValidatorComponent,
 						add : DataUriAddValidatorComponent,
 			  },

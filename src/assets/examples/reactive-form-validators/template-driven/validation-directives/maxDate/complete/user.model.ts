@@ -23,4 +23,7 @@ export class User {
 	confirmationDate: string;
 	
 	
+	resignationDate: string;
+	
+	
 }

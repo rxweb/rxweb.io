@@ -9,4 +9,9 @@ export class AccountInfo {
 	middleName: string;
 	
 	
+	emailAddress: string;
+
+	recoveryEmailAddress: string;
+	
+	
 }

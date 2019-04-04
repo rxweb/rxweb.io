@@ -9,6 +9,7 @@ import { MinLengthCompleteValidatorComponent } from './complete/min-length-compl
 import { MinLengthValueValidatorComponent } from './value/min-length-value.component';
 import { MinLengthMessageValidatorComponent } from './message/min-length-message.component';
 import { MinLengthConditionalExpressionValidatorComponent } from './conditionalExpression/min-length-conditional-expression.component';
+import { MinLengthMessageKeyValidatorComponent } from './messageKey/min-length-message-key.component';
 import { MinLengthDynamicValidatorComponent } from './dynamic/min-length-dynamic.component';
 import { MinLengthAddValidatorComponent } from './add/min-length-add.component';
 
@@ -18,6 +19,7 @@ import { MinLengthAddValidatorComponent } from './add/min-length-add.component';
 	MinLengthValueValidatorComponent,
 	MinLengthMessageValidatorComponent,
 	MinLengthConditionalExpressionValidatorComponent,
+	MinLengthMessageKeyValidatorComponent,
 	MinLengthDynamicValidatorComponent,
 	MinLengthAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	MinLengthValueValidatorComponent,
 	MinLengthMessageValidatorComponent,
 	MinLengthConditionalExpressionValidatorComponent,
+	MinLengthMessageKeyValidatorComponent,
 	MinLengthDynamicValidatorComponent,
 	MinLengthAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	MinLengthValueValidatorComponent,
 	MinLengthMessageValidatorComponent,
 	MinLengthConditionalExpressionValidatorComponent,
+	MinLengthMessageKeyValidatorComponent,
 	MinLengthDynamicValidatorComponent,
 	MinLengthAddValidatorComponent,
   ],

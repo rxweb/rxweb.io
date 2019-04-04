@@ -25,4 +25,8 @@ export class Location {
 	cityCode: string;
 	
 	
+	@alphaNumeric({messageKey:'alphaNumericMessageKey' }) 
+	colonyName: string;
+	
+	
 }

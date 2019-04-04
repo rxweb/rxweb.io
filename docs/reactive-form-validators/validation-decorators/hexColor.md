@@ -17,6 +17,7 @@ Suppose you want to create a User form, which contains fields like ColorPicker, 
     <li>Apply hexColor validation based on matched condition in the form, like if the ColorPicker is `#AFAFAF`, then only the HeaderHexColorCode field will be validated to hexColor validator.</li>
     <li>Adding Custom Message on BodyHexColorCode field.</li>
     <li>Applying strict format of hexCode in StrictHexCode field.</li>
+    <li>Shows the custom message on `Title HexCode` field by using `messageKey` property.</li>
     <data-scope scope="['decorator','validator']">
     <li>Apply HexColor validation dynamically based on server rules.</li>
     </data-scope>
@@ -81,6 +82,7 @@ Below options are not mandatory to use in the `hexColor` validation. If needed t
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a  title="conditionalExpression">conditionalExpression</a></td><td>HexColor validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
 <tr><td><a  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## conditionalExpression 
@@ -106,6 +108,14 @@ To override the global configuration message and set the custom error message on
 
 <div component="app-code" key="hexColor-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-hexColor-message" title="hexColor {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="hexColor-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-hexColor-messageKey" title="hexColor {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete hexColor Example
 

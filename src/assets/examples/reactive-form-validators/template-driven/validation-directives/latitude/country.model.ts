@@ -7,4 +7,6 @@ export class Country {
 
 	firstCountryLatitude: string;
 
+	fourthCountryLatitude: string;
+
 }

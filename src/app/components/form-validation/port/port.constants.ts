@@ -10,6 +10,10 @@ import { PortMessageComponent } from "src/assets/examples/reactive-form-validato
 import { PortMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/port/message/port-message.component";
 import { PortMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/port/message/port-message.component";
 import { PortMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/port/message/port-message.component";
+import { PortMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/port/messageKey/port-message-key.component";
+import { PortMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/port/messageKey/port-message-key.component";
+import { PortMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/port/messageKey/port-message-key.component";
+import { PortMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/port/messageKey/port-message-key.component";
 import { PortDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/port/dynamic/port-dynamic.component";
 import { PortDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/port/dynamic/port-dynamic.component";
 import { PortAddComponent } from "src/assets/examples/reactive-form-validators/decorators/port/add/port-add.component";
@@ -23,6 +27,7 @@ export const PORT_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : PortCompleteComponent,
 						conditionalExpression : PortConditionalExpressionComponent,
 						message : PortMessageComponent,
+						messageKey : PortMessageKeyComponent,
 						dynamic : PortDynamicComponent,
 						add : PortAddComponent,
 						edit : PortEditComponent,
@@ -31,18 +36,21 @@ export const PORT_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : PortCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : PortConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : PortMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : PortMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : PortAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : PortCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : PortConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : PortMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : PortMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : PortAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : PortCompleteValidatorComponent,
 						conditionalExpression : PortConditionalExpressionValidatorComponent,
 						message : PortMessageValidatorComponent,
+						messageKey : PortMessageKeyValidatorComponent,
 						dynamic : PortDynamicValidatorComponent,
 						add : PortAddValidatorComponent,
 			  },

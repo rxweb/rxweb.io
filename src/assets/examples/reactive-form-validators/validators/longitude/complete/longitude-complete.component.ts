@@ -19,6 +19,7 @@ export class LongitudeCompleteValidatorComponent implements OnInit {
             secondCountryLongitude:['', RxwebValidators.longitude({conditionalExpression:(x,y) => x.continent == "Asia"  })], 
             thirdCountryLongitude:['', RxwebValidators.longitude({conditionalExpression:'x => x.continent =="Asia"' })], 
             firstCountryLongitude:['', RxwebValidators.longitude({message:'{{0}} is not a longitude' })], 
+            fourthCountryLongitude:['', RxwebValidators.longitude({messageKey:'longitudeMessageKey' })], 
         });
     }
 }

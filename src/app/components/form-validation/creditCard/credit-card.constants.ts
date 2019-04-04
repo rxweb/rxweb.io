@@ -14,6 +14,10 @@ import { CreditCardMessageComponent } from "src/assets/examples/reactive-form-va
 import { CreditCardMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/creditCard/message/credit-card-message.component";
 import { CreditCardMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/creditCard/message/credit-card-message.component";
 import { CreditCardMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/creditCard/message/credit-card-message.component";
+import { CreditCardMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/creditCard/messageKey/credit-card-message-key.component";
+import { CreditCardMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/creditCard/messageKey/credit-card-message-key.component";
+import { CreditCardMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/creditCard/messageKey/credit-card-message-key.component";
+import { CreditCardMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/creditCard/messageKey/credit-card-message-key.component";
 import { CreditCardDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/creditCard/dynamic/credit-card-dynamic.component";
 import { CreditCardDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/creditCard/dynamic/credit-card-dynamic.component";
 import { CreditCardAddComponent } from "src/assets/examples/reactive-form-validators/decorators/creditCard/add/credit-card-add.component";
@@ -28,6 +32,7 @@ export const CREDIT_CARD_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : CreditCardFieldNameComponent,
 						conditionalExpression : CreditCardConditionalExpressionComponent,
 						message : CreditCardMessageComponent,
+						messageKey : CreditCardMessageKeyComponent,
 						dynamic : CreditCardDynamicComponent,
 						add : CreditCardAddComponent,
 						edit : CreditCardEditComponent,
@@ -37,6 +42,7 @@ export const CREDIT_CARD_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : CreditCardFieldNameTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : CreditCardConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : CreditCardMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : CreditCardMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : CreditCardAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const CREDIT_CARD_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : CreditCardFieldNameTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : CreditCardConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : CreditCardMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : CreditCardMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : CreditCardAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const CREDIT_CARD_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						fieldName : CreditCardFieldNameValidatorComponent,
 						conditionalExpression : CreditCardConditionalExpressionValidatorComponent,
 						message : CreditCardMessageValidatorComponent,
+						messageKey : CreditCardMessageKeyValidatorComponent,
 						dynamic : CreditCardDynamicValidatorComponent,
 						add : CreditCardAddValidatorComponent,
 			  },

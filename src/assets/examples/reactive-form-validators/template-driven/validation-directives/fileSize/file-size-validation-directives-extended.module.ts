@@ -10,6 +10,7 @@ import { FileSizeMaxSizeTemplateDrivenValidationDirectivesComponent } from './ma
 import { FileSizeMinSizeTemplateDrivenValidationDirectivesComponent } from './minSize/file-size-min-size.component';
 import { FileSizeConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/file-size-conditional-expression.component';
 import { FileSizeMessageTemplateDrivenValidationDirectivesComponent } from './message/file-size-message.component';
+import { FileSizeMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/file-size-message-key.component';
 import { FileSizeAddTemplateDrivenValidationDirectivesComponent } from './add/file-size-add.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FileSizeAddTemplateDrivenValidationDirectivesComponent } from './add/fi
 	FileSizeMinSizeTemplateDrivenValidationDirectivesComponent,
 	FileSizeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	FileSizeMessageTemplateDrivenValidationDirectivesComponent,
+	FileSizeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	FileSizeAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -27,6 +29,7 @@ entryComponents: [
 	FileSizeMinSizeTemplateDrivenValidationDirectivesComponent,
 	FileSizeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	FileSizeMessageTemplateDrivenValidationDirectivesComponent,
+	FileSizeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	FileSizeAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -41,6 +44,7 @@ entryComponents: [
 	FileSizeMinSizeTemplateDrivenValidationDirectivesComponent,
 	FileSizeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	FileSizeMessageTemplateDrivenValidationDirectivesComponent,
+	FileSizeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	FileSizeAddTemplateDrivenValidationDirectivesComponent,
   ],
 

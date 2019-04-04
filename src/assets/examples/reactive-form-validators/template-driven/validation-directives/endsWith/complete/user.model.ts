@@ -13,4 +13,7 @@ export class User {
 	company: string;
 	
 	
+	skill: string;
+	
+	
 }

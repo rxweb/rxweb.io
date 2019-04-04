@@ -26,4 +26,7 @@ export class UserInfo {
 	@prop()
 	residenceProof: string;
 
+	@prop()
+	passport: string;
+
 }

@@ -14,6 +14,7 @@ export class NoneOfDynamicValidatorComponent implements OnInit {
   projectDomains: string[] = [];
   hobbies: string[] = [];
   skills: string[] = [];
+  languages: string[] = [];
 
   constructor(
     private formBuilder: RxFormBuilder, private http: HttpClient) { }
@@ -21,12 +22,13 @@ export class NoneOfDynamicValidatorComponent implements OnInit {
   skillsArray: string[] = ["MVC", "AngularJS", "Angular 5", "C#", "Web Api", "SQL Server"];
   hobbiesArray: string[] = ["Drawing", "Singing", "Dancing", "Travelling", "Sports"];
   projectDomainsArray: string[] = ["ECommerce", "Banking", "Educational", "Gaming"];
+  languagesArray: string[] = ["English", "Spanish", "French", "German", "Chinese"];
 
   ngOnInit() {
     let formBuilderConfiguration = new FormBuilderConfiguration();
     this.http.get('assets/examples/reactive-form-validators/validators/noneOf/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
       formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-      var employeeInfo = { department: '', projectDomains: '', skills: '', hobbies: '' }
+      var employeeInfo = { department: '', projectDomains: '', skills: '', hobbies: '', languages: '' }
       this.employeeInfoFormGroup = this.formBuilder.group(employeeInfo, formBuilderConfiguration);
     })
   }
@@ -47,5 +49,11 @@ export class NoneOfDynamicValidatorComponent implements OnInit {
     var indexOf = this.hobbies.indexOf(element.value);
     element.checked ? this.hobbies.push(element.value) : this.hobbies.splice(indexOf, 1);
     this.employeeInfoFormGroup.controls.hobbies.setValue(this.hobbies);
+  }
+
+  addLanguage(element: any, index: number) {
+    var indexOf = this.languages.indexOf(element.value);
+    element.checked ? this.languages.push(element.value) : this.languages.splice(indexOf, 1);
+    this.employeeInfoFormGroup.controls.languages.setValue(this.languages);
   }
 }

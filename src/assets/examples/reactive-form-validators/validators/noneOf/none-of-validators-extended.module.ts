@@ -11,6 +11,7 @@ import { NoneOfMessageValidatorComponent } from './message/none-of-message.compo
 import { NoneOfDynamicValidatorComponent } from './dynamic/none-of-dynamic.component';
 import { NoneOfConditionalExpressionValidatorComponent } from './conditionalExpression/none-of-conditional-expression.component';
 import { NoneOfNonArrayValueValidatorComponent } from './nonArrayValue/none-of-non-array-value.component';
+import { NoneOfMessageKeyValidatorComponent } from './messageKey/none-of-message-key.component';
 
 
 
@@ -22,7 +23,8 @@ import { NoneOfNonArrayValueValidatorComponent } from './nonArrayValue/none-of-n
 	NoneOfMessageValidatorComponent,
 	NoneOfDynamicValidatorComponent,
 	NoneOfAddValidatorComponent,
-	NoneOfNonArrayValueValidatorComponent
+  NoneOfNonArrayValueValidatorComponent,
+  NoneOfMessageKeyValidatorComponent
   ],
 entryComponents: [
 	NoneOfCompleteValidatorComponent,
@@ -31,7 +33,8 @@ entryComponents: [
 	NoneOfMessageValidatorComponent,
 	NoneOfDynamicValidatorComponent,
 	NoneOfAddValidatorComponent,
-	NoneOfNonArrayValueValidatorComponent
+  NoneOfNonArrayValueValidatorComponent,
+  NoneOfMessageKeyValidatorComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -46,7 +49,8 @@ entryComponents: [
 	NoneOfMessageValidatorComponent,
 	NoneOfDynamicValidatorComponent,
 	NoneOfAddValidatorComponent,
-	NoneOfNonArrayValueValidatorComponent
+  NoneOfNonArrayValueValidatorComponent,
+  NoneOfMessageKeyValidatorComponent
   ],
 
 })

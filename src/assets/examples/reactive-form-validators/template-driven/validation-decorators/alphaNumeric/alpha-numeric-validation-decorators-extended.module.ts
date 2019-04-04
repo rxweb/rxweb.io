@@ -9,6 +9,7 @@ import { AlphaNumericCompleteTemplateDrivenValidationDecoratorsComponent } from 
 import { AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent } from './allowWhiteSpace/alpha-numeric-allow-white-space.component';
 import { AlphaNumericMessageTemplateDrivenValidationDecoratorsComponent } from './message/alpha-numeric-message.component';
 import { AlphaNumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/alpha-numeric-conditional-expression.component';
+import { AlphaNumericMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/alpha-numeric-message-key.component';
 import { AlphaNumericAddTemplateDrivenValidationDecoratorsComponent } from './add/alpha-numeric-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AlphaNumericAddTemplateDrivenValidationDecoratorsComponent } from './ad
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 	AlphaNumericMessageTemplateDrivenValidationDecoratorsComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	AlphaNumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	AlphaNumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 	AlphaNumericMessageTemplateDrivenValidationDecoratorsComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	AlphaNumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	AlphaNumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 	AlphaNumericMessageTemplateDrivenValidationDecoratorsComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	AlphaNumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	AlphaNumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

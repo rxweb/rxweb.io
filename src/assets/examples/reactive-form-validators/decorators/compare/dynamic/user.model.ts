@@ -14,4 +14,10 @@ export class User {
 	@prop()
 	confirmPassword: string;
 
+	@prop()
+	contactNumber: string;
+
+	@prop()
+	confirmContactNumber: string;
+
 }

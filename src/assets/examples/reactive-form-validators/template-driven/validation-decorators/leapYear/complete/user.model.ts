@@ -19,4 +19,8 @@ export class User {
 	joiningYear: number;
 	
 	
+	@leapYear({messageKey:'leapYearMessageKey' }) 
+	promotionYear: number;
+	
+	
 }

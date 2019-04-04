@@ -17,6 +17,7 @@ export class PasswordCompleteValidatorComponent implements OnInit {
         this.loginInfoFormGroup = this.formBuilder.group({
             newPassword:['', RxwebValidators.password({validation:{maxLength: 10,minLength: 5,digit: true,specialCharacter: true} })], 
             oldPassword:['', RxwebValidators.password({validation:{maxLength: 10,minLength: 5,digit: true,specialCharacter: true}  ,message:'Password is not valid' })], 
+            confirmPassword:['', RxwebValidators.password({validation:{maxLength: 10,minLength: 5,digit: true,specialCharacter: true}  ,messageKey:'passwordMessageKey' })], 
         });
     }
 }

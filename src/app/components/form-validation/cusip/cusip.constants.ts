@@ -10,6 +10,10 @@ import { CusipMessageComponent } from "src/assets/examples/reactive-form-validat
 import { CusipMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/cusip/message/cusip-message.component";
 import { CusipMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/cusip/message/cusip-message.component";
 import { CusipMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/cusip/message/cusip-message.component";
+import { CusipMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/cusip/messageKey/cusip-message-key.component";
+import { CusipMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/cusip/messageKey/cusip-message-key.component";
+import { CusipMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/cusip/messageKey/cusip-message-key.component";
+import { CusipMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/cusip/messageKey/cusip-message-key.component";
 import { CusipDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/cusip/dynamic/cusip-dynamic.component";
 import { CusipDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/cusip/dynamic/cusip-dynamic.component";
 import { CusipAddComponent } from "src/assets/examples/reactive-form-validators/decorators/cusip/add/cusip-add.component";
@@ -23,6 +27,7 @@ export const CUSIP_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : CusipCompleteComponent,
 						conditionalExpression : CusipConditionalExpressionComponent,
 						message : CusipMessageComponent,
+						messageKey : CusipMessageKeyComponent,
 						dynamic : CusipDynamicComponent,
 						add : CusipAddComponent,
 						edit : CusipEditComponent,
@@ -31,18 +36,21 @@ export const CUSIP_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : CusipCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : CusipConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : CusipMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : CusipMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : CusipAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : CusipCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : CusipConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : CusipMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : CusipMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : CusipAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : CusipCompleteValidatorComponent,
 						conditionalExpression : CusipConditionalExpressionValidatorComponent,
 						message : CusipMessageValidatorComponent,
+						messageKey : CusipMessageKeyValidatorComponent,
 						dynamic : CusipDynamicValidatorComponent,
 						add : CusipAddValidatorComponent,
 			  },

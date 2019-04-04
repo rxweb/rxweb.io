@@ -1,9 +1,17 @@
-import {  ascii, } from   "@rxweb/reactive-form-validators"   
+import {  ascii,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@ascii() 
+	@prop()
+	language: string;
+
+	@prop()
+	alphabetAsciiCode: string;
+
+	@prop()
 	specialCharAsciiCode: string;
-	
-	
+
+	@prop()
+	digitalCode: string;
+
 }

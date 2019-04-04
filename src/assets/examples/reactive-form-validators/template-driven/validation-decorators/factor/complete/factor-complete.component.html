@@ -38,6 +38,13 @@
       <small class="form-text text-muted">Shows custom message.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.sixthNumber?.errors">{{userForm.controls?.sixthNumber?.errors?.factor.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Seventh Number</label>
+	    <input type="text" name="seventhNumber" [(ngModel)]="user.seventhNumber"  class="form-control" />
+
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.seventhNumber?.errors">{{userForm.controls?.seventhNumber?.errors?.factor.message}}<br/></small>	
+    </div>
     <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

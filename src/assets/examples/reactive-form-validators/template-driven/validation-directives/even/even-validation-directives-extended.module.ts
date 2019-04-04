@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { EvenCompleteTemplateDrivenValidationDirectivesComponent } from './complete/even-complete.component';
 import { EvenConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/even-conditional-expression.component';
 import { EvenMessageTemplateDrivenValidationDirectivesComponent } from './message/even-message.component';
+import { EvenMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/even-message-key.component';
 import { EvenAddTemplateDrivenValidationDirectivesComponent } from './add/even-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { EvenAddTemplateDrivenValidationDirectivesComponent } from './add/even-a
 	EvenCompleteTemplateDrivenValidationDirectivesComponent,
 	EvenConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	EvenMessageTemplateDrivenValidationDirectivesComponent,
+	EvenMessageKeyTemplateDrivenValidationDirectivesComponent,
 	EvenAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	EvenCompleteTemplateDrivenValidationDirectivesComponent,
 	EvenConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	EvenMessageTemplateDrivenValidationDirectivesComponent,
+	EvenMessageKeyTemplateDrivenValidationDirectivesComponent,
 	EvenAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	EvenCompleteTemplateDrivenValidationDirectivesComponent,
 	EvenConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	EvenMessageTemplateDrivenValidationDirectivesComponent,
+	EvenMessageKeyTemplateDrivenValidationDirectivesComponent,
 	EvenAddTemplateDrivenValidationDirectivesComponent,
   ],
 

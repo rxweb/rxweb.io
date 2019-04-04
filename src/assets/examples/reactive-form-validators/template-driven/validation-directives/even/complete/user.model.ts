@@ -12,4 +12,7 @@ export class User {
 	multiplesOfEvenNumber: number;
 	
 	
+	otherEvenNumber: string;
+	
+	
 }

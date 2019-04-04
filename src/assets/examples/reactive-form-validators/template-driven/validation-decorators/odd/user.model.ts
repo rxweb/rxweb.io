@@ -1,9 +1,17 @@
-import {  odd, } from   "@rxweb/reactive-form-validators"   
+import {  odd,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@odd() 
+	@prop()
+	type: string;
+
+	@prop()
 	oddNumber: number;
-	
-	
+
+	@prop()
+	multiplesOfOddNumber: number;
+
+	@prop()
+	otherOddNumber: string;
+
 }

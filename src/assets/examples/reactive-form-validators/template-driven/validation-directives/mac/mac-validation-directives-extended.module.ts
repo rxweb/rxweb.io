@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { MacCompleteTemplateDrivenValidationDirectivesComponent } from './complete/mac-complete.component';
 import { MacConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/mac-conditional-expression.component';
 import { MacMessageTemplateDrivenValidationDirectivesComponent } from './message/mac-message.component';
+import { MacMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/mac-message-key.component';
 import { MacAddTemplateDrivenValidationDirectivesComponent } from './add/mac-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { MacAddTemplateDrivenValidationDirectivesComponent } from './add/mac-add
 	MacCompleteTemplateDrivenValidationDirectivesComponent,
 	MacConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	MacMessageTemplateDrivenValidationDirectivesComponent,
+	MacMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MacAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	MacCompleteTemplateDrivenValidationDirectivesComponent,
 	MacConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	MacMessageTemplateDrivenValidationDirectivesComponent,
+	MacMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MacAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	MacCompleteTemplateDrivenValidationDirectivesComponent,
 	MacConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	MacMessageTemplateDrivenValidationDirectivesComponent,
+	MacMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MacAddTemplateDrivenValidationDirectivesComponent,
   ],
 

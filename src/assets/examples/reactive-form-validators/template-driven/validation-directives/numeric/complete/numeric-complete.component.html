@@ -38,6 +38,13 @@
       <small class="form-text text-muted">Shows custom message.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.positiveNumber?.errors">{{userinfoForm.controls?.positiveNumber?.errors?.numeric.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Positive Non Decimal Number</label>
+	    <input type="text" name="positiveNonDecimalNumber" [(ngModel)]="userinfo.positiveNonDecimalNumber"  class="form-control" [numeric]="{'messageKey':'numericMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.positiveNonDecimalNumber?.errors">{{userinfoForm.controls?.positiveNonDecimalNumber?.errors?.numeric.message}}<br/></small>	
+    </div>
     <button [disabled]="!userinfoForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

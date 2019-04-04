@@ -20,4 +20,8 @@ export class User {
 	age: string;
 	
 	
+	@pattern({expression:{'pinCode':/^[1-9][0-9]{5}$/ }  ,messageKey:'patternMessageKey' }) 
+	pinCode: string;
+	
+	
 }

@@ -20,4 +20,8 @@ export class User {
 	company: string;
 	
 	
+	@endsWith({value:'r'  ,messageKey:'endsWithMessageKey' }) 
+	skill: string;
+	
+	
 }

@@ -1,7 +1,12 @@
 
 export class User {
 
-	birthYear: number;
-	
-	
+	name: string;
+
+	admissionYear: number;
+
+	joiningYear: number;
+
+	promotionYear: number;
+
 }

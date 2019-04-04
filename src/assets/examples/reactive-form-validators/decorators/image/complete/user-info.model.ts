@@ -37,4 +37,8 @@ export class UserInfo {
 	residenceProof: string;
 	
 	
+	@image({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' }) 
+	passport: string;
+	
+	
 }

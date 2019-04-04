@@ -10,6 +10,10 @@ import { HexColorMessageComponent } from "src/assets/examples/reactive-form-vali
 import { HexColorMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/hexColor/message/hex-color-message.component";
 import { HexColorMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/hexColor/message/hex-color-message.component";
 import { HexColorMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/hexColor/message/hex-color-message.component";
+import { HexColorMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/hexColor/messageKey/hex-color-message-key.component";
+import { HexColorMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/hexColor/messageKey/hex-color-message-key.component";
+import { HexColorMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/hexColor/messageKey/hex-color-message-key.component";
+import { HexColorMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/hexColor/messageKey/hex-color-message-key.component";
 import { HexColorDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/hexColor/dynamic/hex-color-dynamic.component";
 import { HexColorDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/hexColor/dynamic/hex-color-dynamic.component";
 import { HexColorAddComponent } from "src/assets/examples/reactive-form-validators/decorators/hexColor/add/hex-color-add.component";
@@ -23,6 +27,7 @@ export const HEX_COLOR_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : HexColorCompleteComponent,
 						conditionalExpression : HexColorConditionalExpressionComponent,
 						message : HexColorMessageComponent,
+						messageKey : HexColorMessageKeyComponent,
 						dynamic : HexColorDynamicComponent,
 						add : HexColorAddComponent,
 						edit : HexColorEditComponent,
@@ -31,18 +36,21 @@ export const HEX_COLOR_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : HexColorCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : HexColorConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : HexColorMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : HexColorMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : HexColorAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : HexColorCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : HexColorConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : HexColorMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : HexColorMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : HexColorAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : HexColorCompleteValidatorComponent,
 						conditionalExpression : HexColorConditionalExpressionValidatorComponent,
 						message : HexColorMessageValidatorComponent,
+						messageKey : HexColorMessageKeyValidatorComponent,
 						dynamic : HexColorDynamicValidatorComponent,
 						add : HexColorAddValidatorComponent,
 			  },

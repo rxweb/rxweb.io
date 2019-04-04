@@ -14,4 +14,7 @@ export class CompanyInfo {
 	@prop()
 	appleIncCusipCode: string;
 
+	@prop()
+	amazonCorporationCusipCode: string;
+
 }

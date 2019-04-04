@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { UpperCaseCompleteComponent } from './complete/upper-case-complete.component';
 import { UpperCaseConditionalExpressionComponent } from './conditionalExpression/upper-case-conditional-expression.component';
 import { UpperCaseMessageComponent } from './message/upper-case-message.component';
+import { UpperCaseMessageKeyComponent } from './messageKey/upper-case-message-key.component';
 import { UpperCaseDynamicComponent } from './dynamic/upper-case-dynamic.component';
 import { UpperCaseAddComponent } from './add/upper-case-add.component';
 import { UpperCaseEditComponent } from './edit/upper-case-edit.component';
@@ -17,6 +18,7 @@ import { UpperCaseEditComponent } from './edit/upper-case-edit.component';
 	UpperCaseCompleteComponent,
 	UpperCaseConditionalExpressionComponent,
 	UpperCaseMessageComponent,
+	UpperCaseMessageKeyComponent,
 	UpperCaseDynamicComponent,
 	UpperCaseAddComponent,
 	UpperCaseEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	UpperCaseCompleteComponent,
 	UpperCaseConditionalExpressionComponent,
 	UpperCaseMessageComponent,
+	UpperCaseMessageKeyComponent,
 	UpperCaseDynamicComponent,
 	UpperCaseAddComponent,
 	UpperCaseEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	UpperCaseCompleteComponent,
 	UpperCaseConditionalExpressionComponent,
 	UpperCaseMessageComponent,
+	UpperCaseMessageKeyComponent,
 	UpperCaseDynamicComponent,
 	UpperCaseAddComponent,
 	UpperCaseEditComponent,

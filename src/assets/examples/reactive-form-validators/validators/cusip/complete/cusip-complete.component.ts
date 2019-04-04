@@ -15,6 +15,7 @@ export class CusipCompleteValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: FormBuilder )
 	{ }
@@ -26,6 +27,7 @@ export class CusipCompleteValidatorComponent implements OnInit {
             googleIncCusipCode:['', RxwebValidators.cusip({conditionalExpression:(x,y) => x.companyName == "Google"  })], 
             microsoftCorporationCusipCode:['', RxwebValidators.cusip({conditionalExpression:'x => x.companyName =="Microsoft"' })], 
             appleIncCusipCode:['', RxwebValidators.cusip({message:'{{0}} is not a valid cusip Code' })], 
+            amazonCorporationCusipCode:['', RxwebValidators.cusip({messageKey:'cusipMessageKey' })], 
         });
     }
 }

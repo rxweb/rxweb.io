@@ -1,6 +1,6 @@
 ---
 title: lessThanEqualTo
-description: Less than equal to validation  {{validatorType}}  will allow the user to enter only that value which is less than oe equal to the value in the pre defined field.
+description: Less than equal to validation {{validatorType}} will allow the user to enter only that value which is less than or equal to the value in the pre defined field.
 author: rxcontributorone
 category: form-validations
 type:tabs
@@ -15,6 +15,7 @@ Suppose you want to create a user form and you have fields like TotalMarks, Obta
    <li>Specify TotalMarks as fieldName such that LessThanEqualTo validation should be applied to the fieldname for comparing other fields.</li>
    <li>Apply LessThanEqualTo validation based on matched condition in the form, like if the TotalMarks is ‘100’ then the ObtainedMarks,OtherMarks value  should be less than or equal to 100.</li>
    <li>Adding Custom Message on OtherMarks Field.</li>
+    <li>Shows the custom message on `Discipline Marks` field by using `messageKey` property.</li>
    <data-scope scope="['decorator','validator']">
    <li>Apply lessThanEqualTo validation dynamically based on server rules.</li>
    </data-scope>
@@ -78,6 +79,7 @@ Below options are not mandatory to use in the `lessThanEqualTo` validation. If n
 <tr><td><a (click)='scrollTo("#fieldName")' title="fieldName">fieldName</a></td><td>Current property is matched with the particular property. so we need to pass particular property name.</td></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>lessThanEqualTo validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## fieldName 
@@ -109,6 +111,14 @@ To override the global configuration message and set the custom message on respe
 
 <div component="app-code" key="lessThanEqualTo-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-lessThanEqualTo-message" title="lessThanEqualTo {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="lessThanEqualTo-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-lessThanEqualTo-messageKey" title="lessThanEqualTo {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete lessThanEqualTo Example
 

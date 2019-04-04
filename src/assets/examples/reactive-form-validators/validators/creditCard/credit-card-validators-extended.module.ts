@@ -9,6 +9,7 @@ import { CreditCardCompleteValidatorComponent } from './complete/credit-card-com
 import { CreditCardFieldNameValidatorComponent } from './fieldName/credit-card-field-name.component';
 import { CreditCardConditionalExpressionValidatorComponent } from './conditionalExpression/credit-card-conditional-expression.component';
 import { CreditCardMessageValidatorComponent } from './message/credit-card-message.component';
+import { CreditCardMessageKeyValidatorComponent } from './messageKey/credit-card-message-key.component';
 import { CreditCardDynamicValidatorComponent } from './dynamic/credit-card-dynamic.component';
 import { CreditCardAddValidatorComponent } from './add/credit-card-add.component';
 
@@ -18,6 +19,7 @@ import { CreditCardAddValidatorComponent } from './add/credit-card-add.component
 	CreditCardFieldNameValidatorComponent,
 	CreditCardConditionalExpressionValidatorComponent,
 	CreditCardMessageValidatorComponent,
+	CreditCardMessageKeyValidatorComponent,
 	CreditCardDynamicValidatorComponent,
 	CreditCardAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	CreditCardFieldNameValidatorComponent,
 	CreditCardConditionalExpressionValidatorComponent,
 	CreditCardMessageValidatorComponent,
+	CreditCardMessageKeyValidatorComponent,
 	CreditCardDynamicValidatorComponent,
 	CreditCardAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	CreditCardFieldNameValidatorComponent,
 	CreditCardConditionalExpressionValidatorComponent,
 	CreditCardMessageValidatorComponent,
+	CreditCardMessageKeyValidatorComponent,
 	CreditCardDynamicValidatorComponent,
 	CreditCardAddValidatorComponent,
   ],

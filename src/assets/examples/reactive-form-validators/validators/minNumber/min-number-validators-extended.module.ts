@@ -9,6 +9,7 @@ import { MinNumberCompleteValidatorComponent } from './complete/min-number-compl
 import { MinNumberValueValidatorComponent } from './value/min-number-value.component';
 import { MinNumberMessageValidatorComponent } from './message/min-number-message.component';
 import { MinNumberConditionalExpressionValidatorComponent } from './conditionalExpression/min-number-conditional-expression.component';
+import { MinNumberMessageKeyValidatorComponent } from './messageKey/min-number-message-key.component';
 import { MinNumberDynamicValidatorComponent } from './dynamic/min-number-dynamic.component';
 import { MinNumberAddValidatorComponent } from './add/min-number-add.component';
 
@@ -18,6 +19,7 @@ import { MinNumberAddValidatorComponent } from './add/min-number-add.component';
 	MinNumberValueValidatorComponent,
 	MinNumberMessageValidatorComponent,
 	MinNumberConditionalExpressionValidatorComponent,
+	MinNumberMessageKeyValidatorComponent,
 	MinNumberDynamicValidatorComponent,
 	MinNumberAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	MinNumberValueValidatorComponent,
 	MinNumberMessageValidatorComponent,
 	MinNumberConditionalExpressionValidatorComponent,
+	MinNumberMessageKeyValidatorComponent,
 	MinNumberDynamicValidatorComponent,
 	MinNumberAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	MinNumberValueValidatorComponent,
 	MinNumberMessageValidatorComponent,
 	MinNumberConditionalExpressionValidatorComponent,
+	MinNumberMessageKeyValidatorComponent,
 	MinNumberDynamicValidatorComponent,
 	MinNumberAddValidatorComponent,
   ],

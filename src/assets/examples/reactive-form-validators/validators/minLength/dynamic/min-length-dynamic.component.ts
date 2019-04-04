@@ -20,7 +20,7 @@ export class MinLengthDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/minLength/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var contact = { countryName:'', mobileNo:'', landLineNo:'', countryCode:'', stateCode:'',  }
+			var contact = { countryName:'', mobileNo:'', landLineNo:'', countryCode:'', stateCode:'', stateName:'',  }
 			this.contactFormGroup = this.formBuilder.group(contact,formBuilderConfiguration);
 		})
     }

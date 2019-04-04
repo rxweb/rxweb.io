@@ -21,6 +21,12 @@
 
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.lastName?.errors">{{userForm.controls?.lastName?.errors?.lowerCase.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>State</label>
+	    <input type="text" name="state" [(ngModel)]="user.state"  class="form-control" />
+
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.state?.errors">{{userForm.controls?.state?.errors?.lowerCase.message}}<br/></small>	
+    </div>
     <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

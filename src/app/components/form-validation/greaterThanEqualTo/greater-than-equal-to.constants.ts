@@ -14,6 +14,10 @@ import { GreaterThanEqualToMessageComponent } from "src/assets/examples/reactive
 import { GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/greaterThanEqualTo/message/greater-than-equal-to-message.component";
 import { GreaterThanEqualToMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/greaterThanEqualTo/message/greater-than-equal-to-message.component";
 import { GreaterThanEqualToMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/greaterThanEqualTo/message/greater-than-equal-to-message.component";
+import { GreaterThanEqualToMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/greaterThanEqualTo/messageKey/greater-than-equal-to-message-key.component";
+import { GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/greaterThanEqualTo/messageKey/greater-than-equal-to-message-key.component";
+import { GreaterThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/greaterThanEqualTo/messageKey/greater-than-equal-to-message-key.component";
+import { GreaterThanEqualToMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/greaterThanEqualTo/messageKey/greater-than-equal-to-message-key.component";
 import { GreaterThanEqualToDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/greaterThanEqualTo/dynamic/greater-than-equal-to-dynamic.component";
 import { GreaterThanEqualToDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/greaterThanEqualTo/dynamic/greater-than-equal-to-dynamic.component";
 import { GreaterThanEqualToAddComponent } from "src/assets/examples/reactive-form-validators/decorators/greaterThanEqualTo/add/greater-than-equal-to-add.component";
@@ -28,6 +32,7 @@ export const GREATER_THAN_EQUAL_TO_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: 
 						fieldName : GreaterThanEqualToFieldNameComponent,
 						conditionalExpression : GreaterThanEqualToConditionalExpressionComponent,
 						message : GreaterThanEqualToMessageComponent,
+						messageKey : GreaterThanEqualToMessageKeyComponent,
 						dynamic : GreaterThanEqualToDynamicComponent,
 						add : GreaterThanEqualToAddComponent,
 						edit : GreaterThanEqualToEditComponent,
@@ -37,6 +42,7 @@ export const GREATER_THAN_EQUAL_TO_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: 
 						fieldName : GreaterThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const GREATER_THAN_EQUAL_TO_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: 
 						fieldName : GreaterThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : GreaterThanEqualToMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : GreaterThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : GreaterThanEqualToAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const GREATER_THAN_EQUAL_TO_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: 
 						fieldName : GreaterThanEqualToFieldNameValidatorComponent,
 						conditionalExpression : GreaterThanEqualToConditionalExpressionValidatorComponent,
 						message : GreaterThanEqualToMessageValidatorComponent,
+						messageKey : GreaterThanEqualToMessageKeyValidatorComponent,
 						dynamic : GreaterThanEqualToDynamicValidatorComponent,
 						add : GreaterThanEqualToAddValidatorComponent,
 			  },

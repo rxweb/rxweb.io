@@ -20,4 +20,8 @@ export class User {
 	otherEmailAddress: string;
 	
 	
+	@email({messageKey:'emailMessageKey' }) 
+	organizationEmailAddress: string;
+	
+	
 }

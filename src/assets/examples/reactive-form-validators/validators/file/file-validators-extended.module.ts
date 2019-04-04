@@ -10,6 +10,7 @@ import { FileMaxFilesValidatorComponent } from './maxFiles/file-max-files.compon
 import { FileMinFilesValidatorComponent } from './minFiles/file-min-files.component';
 import { FileConditionalExpressionValidatorComponent } from './conditionalExpression/file-conditional-expression.component';
 import { FileMessageValidatorComponent } from './message/file-message.component';
+import { FileMessageKeyValidatorComponent } from './messageKey/file-message-key.component';
 import { FileDynamicValidatorComponent } from './dynamic/file-dynamic.component';
 import { FileAddValidatorComponent } from './add/file-add.component';
 
@@ -20,6 +21,7 @@ import { FileAddValidatorComponent } from './add/file-add.component';
 	FileMinFilesValidatorComponent,
 	FileConditionalExpressionValidatorComponent,
 	FileMessageValidatorComponent,
+	FileMessageKeyValidatorComponent,
 	FileDynamicValidatorComponent,
 	FileAddValidatorComponent,
   ],
@@ -29,6 +31,7 @@ entryComponents: [
 	FileMinFilesValidatorComponent,
 	FileConditionalExpressionValidatorComponent,
 	FileMessageValidatorComponent,
+	FileMessageKeyValidatorComponent,
 	FileDynamicValidatorComponent,
 	FileAddValidatorComponent,
   ],
@@ -44,6 +47,7 @@ entryComponents: [
 	FileMinFilesValidatorComponent,
 	FileConditionalExpressionValidatorComponent,
 	FileMessageValidatorComponent,
+	FileMessageKeyValidatorComponent,
 	FileDynamicValidatorComponent,
 	FileAddValidatorComponent,
   ],

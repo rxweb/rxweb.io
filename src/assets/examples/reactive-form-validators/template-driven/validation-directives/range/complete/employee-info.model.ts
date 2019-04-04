@@ -13,4 +13,7 @@ export class EmployeeInfo {
 	salary: number;
 	
 	
+	noOfprojects: number;
+	
+	
 }

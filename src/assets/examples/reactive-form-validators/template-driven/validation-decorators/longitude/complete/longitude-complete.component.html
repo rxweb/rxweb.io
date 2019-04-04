@@ -23,6 +23,13 @@
       <small class="form-text text-muted">Shows custom message.<br/></small>
 	   <small class="form-text text-danger" *ngIf="countryForm.controls?.firstCountryLongitude?.errors">{{countryForm.controls?.firstCountryLongitude?.errors?.longitude.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Fourth Country Longitude</label>
+	    <input type="text" name="fourthCountryLongitude" [(ngModel)]="country.fourthCountryLongitude"  class="form-control" />
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="countryForm.controls?.fourthCountryLongitude?.errors">{{countryForm.controls?.fourthCountryLongitude?.errors?.longitude.message}}<br/></small>	
+    </div>
     <button [disabled]="!countryForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

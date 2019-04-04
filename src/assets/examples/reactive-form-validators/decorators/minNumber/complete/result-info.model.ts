@@ -19,4 +19,8 @@ export class ResultInfo {
 	statstics: number;
 	
 	
+	@minNumber({value:35  ,messageKey:'minNumberMessageKey' }) 
+	economics: number;
+	
+	
 }

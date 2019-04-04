@@ -13,4 +13,7 @@ export class User {
 	age: string;
 	
 	
+	pinCode: string;
+	
+	
 }

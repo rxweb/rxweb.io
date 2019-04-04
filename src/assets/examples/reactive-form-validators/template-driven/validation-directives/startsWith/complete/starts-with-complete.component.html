@@ -23,6 +23,13 @@
       <small class="form-text text-muted">Shows custom message<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.company?.errors">{{userForm.controls?.company?.errors?.startsWith.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Skill</label>
+	    <input type="text" name="skill" [(ngModel)]="user.skill"  class="form-control" [startsWith]="{'value':'A','messageKey':'startsWithMessageKey'}"/>
+
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.skill?.errors">{{userForm.controls?.skill?.errors?.startsWith.message}}<br/></small>	
+    </div>
     <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

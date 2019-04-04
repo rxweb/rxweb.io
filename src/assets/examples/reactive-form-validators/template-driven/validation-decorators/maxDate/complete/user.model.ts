@@ -34,4 +34,8 @@ export class User {
 	confirmationDate: string;
 	
 	
+	@maxDate({value:'07/30/2018'  ,messageKey:'maxDateMessageKey' }) 
+	resignationDate: string;
+	
+	
 }

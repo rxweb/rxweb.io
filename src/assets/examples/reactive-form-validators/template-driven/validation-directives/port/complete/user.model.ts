@@ -12,4 +12,7 @@ export class User {
 	educationalWebsitePort: string;
 	
 	
+	commercialWebsitePort: string;
+	
+	
 }

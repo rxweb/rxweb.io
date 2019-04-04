@@ -1,7 +1,10 @@
 
 export class LoginInfo {
 
-	password: string;
-	
-	
+	newPassword: string;
+
+	oldPassword: string;
+
+	confirmPassword: string;
+
 }

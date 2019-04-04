@@ -15,4 +15,7 @@ export class User {
 	otherAge: number;
 	
 	
+	joiningAge: number;
+	
+	
 }

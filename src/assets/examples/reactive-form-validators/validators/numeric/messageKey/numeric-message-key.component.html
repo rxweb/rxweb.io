@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>Positive Non Decimal Number</label>
+      <input type="text" formControlName="positiveNonDecimalNumber" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	<small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.positiveNonDecimalNumber.errors">{{userInfoFormGroup.controls.positiveNonDecimalNumber.errors.numeric.message}}<br/></small>
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

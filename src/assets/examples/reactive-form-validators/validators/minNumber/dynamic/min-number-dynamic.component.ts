@@ -20,7 +20,7 @@ export class MinNumberDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/minNumber/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var resultInfo = { maths:'', science:'', english:'', statstics:'',  }
+			var resultInfo = { maths:'', science:'', english:'', statstics:'', economics:'',  }
 			this.resultInfoFormGroup = this.formBuilder.group(resultInfo,formBuilderConfiguration);
 		})
     }

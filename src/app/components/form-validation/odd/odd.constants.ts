@@ -10,6 +10,10 @@ import { OddMessageComponent } from "src/assets/examples/reactive-form-validator
 import { OddMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/odd/message/odd-message.component";
 import { OddMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/odd/message/odd-message.component";
 import { OddMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/odd/message/odd-message.component";
+import { OddMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/odd/messageKey/odd-message-key.component";
+import { OddMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/odd/messageKey/odd-message-key.component";
+import { OddMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/odd/messageKey/odd-message-key.component";
+import { OddMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/odd/messageKey/odd-message-key.component";
 import { OddDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/odd/dynamic/odd-dynamic.component";
 import { OddDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/odd/dynamic/odd-dynamic.component";
 import { OddAddComponent } from "src/assets/examples/reactive-form-validators/decorators/odd/add/odd-add.component";
@@ -23,6 +27,7 @@ export const ODD_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : OddCompleteComponent,
 						conditionalExpression : OddConditionalExpressionComponent,
 						message : OddMessageComponent,
+						messageKey : OddMessageKeyComponent,
 						dynamic : OddDynamicComponent,
 						add : OddAddComponent,
 						edit : OddEditComponent,
@@ -31,18 +36,21 @@ export const ODD_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : OddCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : OddConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : OddMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : OddMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : OddAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : OddCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : OddConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : OddMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : OddMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : OddAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : OddCompleteValidatorComponent,
 						conditionalExpression : OddConditionalExpressionValidatorComponent,
 						message : OddMessageValidatorComponent,
+						messageKey : OddMessageKeyValidatorComponent,
 						dynamic : OddDynamicValidatorComponent,
 						add : OddAddValidatorComponent,
 			  },

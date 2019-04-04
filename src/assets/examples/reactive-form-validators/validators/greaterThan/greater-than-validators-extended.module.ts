@@ -9,6 +9,7 @@ import { GreaterThanCompleteValidatorComponent } from './complete/greater-than-c
 import { GreaterThanFieldNameValidatorComponent } from './fieldName/greater-than-field-name.component';
 import { GreaterThanConditionalExpressionValidatorComponent } from './conditionalExpression/greater-than-conditional-expression.component';
 import { GreaterThanMessageValidatorComponent } from './message/greater-than-message.component';
+import { GreaterThanMessageKeyValidatorComponent } from './messageKey/greater-than-message-key.component';
 import { GreaterThanDynamicValidatorComponent } from './dynamic/greater-than-dynamic.component';
 import { GreaterThanAddValidatorComponent } from './add/greater-than-add.component';
 
@@ -18,6 +19,7 @@ import { GreaterThanAddValidatorComponent } from './add/greater-than-add.compone
 	GreaterThanFieldNameValidatorComponent,
 	GreaterThanConditionalExpressionValidatorComponent,
 	GreaterThanMessageValidatorComponent,
+	GreaterThanMessageKeyValidatorComponent,
 	GreaterThanDynamicValidatorComponent,
 	GreaterThanAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	GreaterThanFieldNameValidatorComponent,
 	GreaterThanConditionalExpressionValidatorComponent,
 	GreaterThanMessageValidatorComponent,
+	GreaterThanMessageKeyValidatorComponent,
 	GreaterThanDynamicValidatorComponent,
 	GreaterThanAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	GreaterThanFieldNameValidatorComponent,
 	GreaterThanConditionalExpressionValidatorComponent,
 	GreaterThanMessageValidatorComponent,
+	GreaterThanMessageKeyValidatorComponent,
 	GreaterThanDynamicValidatorComponent,
 	GreaterThanAddValidatorComponent,
   ],

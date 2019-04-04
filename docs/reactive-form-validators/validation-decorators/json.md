@@ -1,6 +1,6 @@
 ---
 title: json  
-description: json validation  {{validatorType}}  will allow user to enter the input only in proper Json format.
+descrjsontion: json validation  {{validatorType}}  will allow user to enter the input only in proper Json format.
 author: rxcontributorone
 category: form-validations
 type:tabs
@@ -15,6 +15,7 @@ Suppose you want to create a location based jsonInfo form and you have fields li
   <li>Apply json validation on LocationJson field  without any conditional expression.</li>
   <li>Apply json validation based on matched condition in the form, like if the location is ‘India’ then the AddressJson value should be valid Json value.</li>
   <li>Adding Custom Message on ContactJson Field.</li>
+  <li>Shows the custom message on `Country Json` field by using `messageKey` property.</li>
   <data-scope scope="['decorator','validator']">
   <li>Apply json validation dynamically based on server rules.</li>
   </data-scope>
@@ -74,10 +75,11 @@ Below options are not mandatory to use in the `RxwebValidators.json()` validator
 Below options are not mandatory to use in the `json` validation. If needed then use the below options.
 </data-scope>
 
-<table class="table table-bordered table-striped showHideElement">
-<tr><th>Option</th><th>Description</th></tr>
+<table class="table table-bordered table-strjsoned showHideElement">
+<tr><th>Option</th><th>Descrjsontion</th></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Json validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## conditionalExpression
@@ -103,6 +105,14 @@ To override the global configuration message and set the custom message on respe
 
 [<div component="app-code" key="json-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-json-message" title="json {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="json-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-json-messageKey" title="json {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete Json Example
 

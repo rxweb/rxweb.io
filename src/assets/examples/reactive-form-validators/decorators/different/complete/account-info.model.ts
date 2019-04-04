@@ -13,4 +13,11 @@ export class AccountInfo {
 	middleName: string;
 	
 	
+	@prop()
+	emailAddress: string;
+
+	@different({fieldName:'emailAddress'  ,messageKey:'differentMessageKey' }) 
+	recoveryEmailAddress: string;
+	
+	
 }

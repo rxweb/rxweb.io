@@ -9,6 +9,7 @@ import { MinLengthCompleteTemplateDrivenValidationDirectivesComponent } from './
 import { MinLengthValueTemplateDrivenValidationDirectivesComponent } from './value/min-length-value.component';
 import { MinLengthMessageTemplateDrivenValidationDirectivesComponent } from './message/min-length-message.component';
 import { MinLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/min-length-conditional-expression.component';
+import { MinLengthMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/min-length-message-key.component';
 import { MinLengthAddTemplateDrivenValidationDirectivesComponent } from './add/min-length-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MinLengthAddTemplateDrivenValidationDirectivesComponent } from './add/m
 	MinLengthValueTemplateDrivenValidationDirectivesComponent,
 	MinLengthMessageTemplateDrivenValidationDirectivesComponent,
 	MinLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+	MinLengthMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MinLengthAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	MinLengthValueTemplateDrivenValidationDirectivesComponent,
 	MinLengthMessageTemplateDrivenValidationDirectivesComponent,
 	MinLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+	MinLengthMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MinLengthAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	MinLengthValueTemplateDrivenValidationDirectivesComponent,
 	MinLengthMessageTemplateDrivenValidationDirectivesComponent,
 	MinLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+	MinLengthMessageKeyTemplateDrivenValidationDirectivesComponent,
 	MinLengthAddTemplateDrivenValidationDirectivesComponent,
   ],
 

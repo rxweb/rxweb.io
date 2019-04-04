@@ -9,6 +9,7 @@ import { ContainsCompleteValidatorComponent } from './complete/contains-complete
 import { ContainsValueValidatorComponent } from './value/contains-value.component';
 import { ContainsConditionalExpressionValidatorComponent } from './conditionalExpression/contains-conditional-expression.component';
 import { ContainsMessageValidatorComponent } from './message/contains-message.component';
+import { ContainsMessageKeyValidatorComponent } from './messageKey/contains-message-key.component';
 import { ContainsDynamicValidatorComponent } from './dynamic/contains-dynamic.component';
 import { ContainsAddValidatorComponent } from './add/contains-add.component';
 
@@ -18,6 +19,7 @@ import { ContainsAddValidatorComponent } from './add/contains-add.component';
 	ContainsValueValidatorComponent,
 	ContainsConditionalExpressionValidatorComponent,
 	ContainsMessageValidatorComponent,
+	ContainsMessageKeyValidatorComponent,
 	ContainsDynamicValidatorComponent,
 	ContainsAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	ContainsValueValidatorComponent,
 	ContainsConditionalExpressionValidatorComponent,
 	ContainsMessageValidatorComponent,
+	ContainsMessageKeyValidatorComponent,
 	ContainsDynamicValidatorComponent,
 	ContainsAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	ContainsValueValidatorComponent,
 	ContainsConditionalExpressionValidatorComponent,
 	ContainsMessageValidatorComponent,
+	ContainsMessageKeyValidatorComponent,
 	ContainsDynamicValidatorComponent,
 	ContainsAddValidatorComponent,
   ],

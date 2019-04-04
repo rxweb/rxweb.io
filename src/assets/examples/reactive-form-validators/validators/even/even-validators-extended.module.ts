@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { EvenCompleteValidatorComponent } from './complete/even-complete.component';
 import { EvenConditionalExpressionValidatorComponent } from './conditionalExpression/even-conditional-expression.component';
 import { EvenMessageValidatorComponent } from './message/even-message.component';
+import { EvenMessageKeyValidatorComponent } from './messageKey/even-message-key.component';
 import { EvenDynamicValidatorComponent } from './dynamic/even-dynamic.component';
 import { EvenAddValidatorComponent } from './add/even-add.component';
 
@@ -16,6 +17,7 @@ import { EvenAddValidatorComponent } from './add/even-add.component';
 	EvenCompleteValidatorComponent,
 	EvenConditionalExpressionValidatorComponent,
 	EvenMessageValidatorComponent,
+	EvenMessageKeyValidatorComponent,
 	EvenDynamicValidatorComponent,
 	EvenAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	EvenCompleteValidatorComponent,
 	EvenConditionalExpressionValidatorComponent,
 	EvenMessageValidatorComponent,
+	EvenMessageKeyValidatorComponent,
 	EvenDynamicValidatorComponent,
 	EvenAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	EvenCompleteValidatorComponent,
 	EvenConditionalExpressionValidatorComponent,
 	EvenMessageValidatorComponent,
+	EvenMessageKeyValidatorComponent,
 	EvenDynamicValidatorComponent,
 	EvenAddValidatorComponent,
   ],

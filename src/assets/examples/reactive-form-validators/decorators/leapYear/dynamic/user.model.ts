@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	joiningYear: number;
 
+	@prop()
+	promotionYear: number;
+
 }

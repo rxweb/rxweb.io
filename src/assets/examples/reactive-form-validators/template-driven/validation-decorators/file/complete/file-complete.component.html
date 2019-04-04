@@ -37,6 +37,13 @@
       <small class="form-text text-muted">It shows custom message<br/></small>
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.minMaxFiles?.errors">{{userinfoForm.controls?.minMaxFiles?.errors?.file.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Excel Files</label>
+	    <input type="file" name="excelFiles" multiple [(ngModel)]="userinfo.excelFiles"  class="form-control" />
+
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.excelFiles?.errors">{{userinfoForm.controls?.excelFiles?.errors?.file.message}}<br/></small>	
+    </div>
     <button [disabled]="!userinfoForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

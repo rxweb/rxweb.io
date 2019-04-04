@@ -10,6 +10,7 @@ import { IpVersionValidatorComponent } from './version/ip-version.component';
 import { IpIsCidrValidatorComponent } from './isCidr/ip-is-cidr.component';
 import { IpConditionalExpressionValidatorComponent } from './conditionalExpression/ip-conditional-expression.component';
 import { IpMessageValidatorComponent } from './message/ip-message.component';
+import { IpMessageKeyValidatorComponent } from './messageKey/ip-message-key.component';
 import { IpDynamicValidatorComponent } from './dynamic/ip-dynamic.component';
 import { IpAddValidatorComponent } from './add/ip-add.component';
 
@@ -20,6 +21,7 @@ import { IpAddValidatorComponent } from './add/ip-add.component';
 	IpIsCidrValidatorComponent,
 	IpConditionalExpressionValidatorComponent,
 	IpMessageValidatorComponent,
+	IpMessageKeyValidatorComponent,
 	IpDynamicValidatorComponent,
 	IpAddValidatorComponent,
   ],
@@ -29,6 +31,7 @@ entryComponents: [
 	IpIsCidrValidatorComponent,
 	IpConditionalExpressionValidatorComponent,
 	IpMessageValidatorComponent,
+	IpMessageKeyValidatorComponent,
 	IpDynamicValidatorComponent,
 	IpAddValidatorComponent,
   ],
@@ -44,6 +47,7 @@ entryComponents: [
 	IpIsCidrValidatorComponent,
 	IpConditionalExpressionValidatorComponent,
 	IpMessageValidatorComponent,
+	IpMessageKeyValidatorComponent,
 	IpDynamicValidatorComponent,
 	IpAddValidatorComponent,
   ],

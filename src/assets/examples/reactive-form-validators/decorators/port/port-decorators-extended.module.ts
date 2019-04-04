@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PortCompleteComponent } from './complete/port-complete.component';
 import { PortConditionalExpressionComponent } from './conditionalExpression/port-conditional-expression.component';
 import { PortMessageComponent } from './message/port-message.component';
+import { PortMessageKeyComponent } from './messageKey/port-message-key.component';
 import { PortDynamicComponent } from './dynamic/port-dynamic.component';
 import { PortAddComponent } from './add/port-add.component';
 import { PortEditComponent } from './edit/port-edit.component';
@@ -17,6 +18,7 @@ import { PortEditComponent } from './edit/port-edit.component';
 	PortCompleteComponent,
 	PortConditionalExpressionComponent,
 	PortMessageComponent,
+	PortMessageKeyComponent,
 	PortDynamicComponent,
 	PortAddComponent,
 	PortEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	PortCompleteComponent,
 	PortConditionalExpressionComponent,
 	PortMessageComponent,
+	PortMessageKeyComponent,
 	PortDynamicComponent,
 	PortAddComponent,
 	PortEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	PortCompleteComponent,
 	PortConditionalExpressionComponent,
 	PortMessageComponent,
+	PortMessageKeyComponent,
 	PortDynamicComponent,
 	PortAddComponent,
 	PortEditComponent,

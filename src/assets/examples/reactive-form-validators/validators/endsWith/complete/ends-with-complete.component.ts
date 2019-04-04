@@ -19,6 +19,7 @@ export class EndsWithCompleteValidatorComponent implements OnInit {
             profession:['', RxwebValidators.endsWith({value:'r'  ,conditionalExpression:(x,y) => x.name == "Bharat"  })], 
             taskId:['', RxwebValidators.endsWith({value:'1'  ,conditionalExpression:'x => x.name =="Bharat"' })], 
             company:['', RxwebValidators.endsWith({value:'b'  ,message:'{{0}} does not ends with `b`' })], 
+            skill:['', RxwebValidators.endsWith({value:'r'  ,messageKey:'endsWithMessageKey' })], 
         });
     }
 }

@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LongitudeCompleteValidatorComponent } from './complete/longitude-complete.component';
 import { LongitudeConditionalExpressionValidatorComponent } from './conditionalExpression/longitude-conditional-expression.component';
 import { LongitudeMessageValidatorComponent } from './message/longitude-message.component';
+import { LongitudeMessageKeyValidatorComponent } from './messageKey/longitude-message-key.component';
 import { LongitudeDynamicValidatorComponent } from './dynamic/longitude-dynamic.component';
 import { LongitudeAddValidatorComponent } from './add/longitude-add.component';
 
@@ -16,6 +17,7 @@ import { LongitudeAddValidatorComponent } from './add/longitude-add.component';
 	LongitudeCompleteValidatorComponent,
 	LongitudeConditionalExpressionValidatorComponent,
 	LongitudeMessageValidatorComponent,
+	LongitudeMessageKeyValidatorComponent,
 	LongitudeDynamicValidatorComponent,
 	LongitudeAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	LongitudeCompleteValidatorComponent,
 	LongitudeConditionalExpressionValidatorComponent,
 	LongitudeMessageValidatorComponent,
+	LongitudeMessageKeyValidatorComponent,
 	LongitudeDynamicValidatorComponent,
 	LongitudeAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	LongitudeCompleteValidatorComponent,
 	LongitudeConditionalExpressionValidatorComponent,
 	LongitudeMessageValidatorComponent,
+	LongitudeMessageKeyValidatorComponent,
 	LongitudeDynamicValidatorComponent,
 	LongitudeAddValidatorComponent,
   ],

@@ -10,6 +10,7 @@ import { FactorFieldNameValidatorComponent } from './fieldName/factor-field-name
 import { FactorConditionalExpressionValidatorComponent } from './conditionalExpression/factor-conditional-expression.component';
 import { FactorDividendValidatorComponent } from './dividend/factor-dividend.component';
 import { FactorMessageValidatorComponent } from './message/factor-message.component';
+import { FactorMessageKeyValidatorComponent } from './messageKey/factor-message-key.component';
 import { FactorDynamicValidatorComponent } from './dynamic/factor-dynamic.component';
 import { FactorAddValidatorComponent } from './add/factor-add.component';
 
@@ -20,6 +21,7 @@ import { FactorAddValidatorComponent } from './add/factor-add.component';
 	FactorConditionalExpressionValidatorComponent,
 	FactorDividendValidatorComponent,
 	FactorMessageValidatorComponent,
+	FactorMessageKeyValidatorComponent,
 	FactorDynamicValidatorComponent,
 	FactorAddValidatorComponent,
   ],
@@ -29,6 +31,7 @@ entryComponents: [
 	FactorConditionalExpressionValidatorComponent,
 	FactorDividendValidatorComponent,
 	FactorMessageValidatorComponent,
+	FactorMessageKeyValidatorComponent,
 	FactorDynamicValidatorComponent,
 	FactorAddValidatorComponent,
   ],
@@ -44,6 +47,7 @@ entryComponents: [
 	FactorConditionalExpressionValidatorComponent,
 	FactorDividendValidatorComponent,
 	FactorMessageValidatorComponent,
+	FactorMessageKeyValidatorComponent,
 	FactorDynamicValidatorComponent,
 	FactorAddValidatorComponent,
   ],

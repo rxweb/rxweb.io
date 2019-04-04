@@ -19,6 +19,7 @@ export class MacCompleteValidatorComponent implements OnInit {
             macAddress:['', RxwebValidators.mac({conditionalExpression:(x,y) => x.device == "Laptop"  })], 
             localMacAddress:['', RxwebValidators.mac({conditionalExpression:'x => x.device =="Laptop"' })], 
             systemMacAddress:['', RxwebValidators.mac({message:'{{0}} is not a MAC address' })], 
+            serverMacAddress:['', RxwebValidators.mac({messageKey:'macMessageKey' })], 
         });
     }
 }

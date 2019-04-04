@@ -14,6 +14,10 @@ import { PatternConditionalExpressionComponent } from "src/assets/examples/react
 import { PatternConditionalExpressionTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/pattern/conditionalExpression/pattern-conditional-expression.component";
 import { PatternConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/pattern/conditionalExpression/pattern-conditional-expression.component";
 import { PatternConditionalExpressionValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/pattern/conditionalExpression/pattern-conditional-expression.component";
+import { PatternMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/pattern/messageKey/pattern-message-key.component";
+import { PatternMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/pattern/messageKey/pattern-message-key.component";
+import { PatternMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/pattern/messageKey/pattern-message-key.component";
+import { PatternMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/pattern/messageKey/pattern-message-key.component";
 import { PatternDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/pattern/dynamic/pattern-dynamic.component";
 import { PatternDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/pattern/dynamic/pattern-dynamic.component";
 import { PatternAddComponent } from "src/assets/examples/reactive-form-validators/decorators/pattern/add/pattern-add.component";
@@ -28,6 +32,7 @@ export const PATTERN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						expression : PatternExpressionComponent,
 						message : PatternMessageComponent,
 						conditionalExpression : PatternConditionalExpressionComponent,
+						messageKey : PatternMessageKeyComponent,
 						dynamic : PatternDynamicComponent,
 						add : PatternAddComponent,
 						edit : PatternEditComponent,
@@ -37,6 +42,7 @@ export const PATTERN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						expression : PatternExpressionTemplateDrivenValidationDirectivesComponent,
 						message : PatternMessageTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : PatternConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+						messageKey : PatternMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : PatternAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const PATTERN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						expression : PatternExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : PatternMessageTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : PatternConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+						messageKey : PatternMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : PatternAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const PATTERN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						expression : PatternExpressionValidatorComponent,
 						message : PatternMessageValidatorComponent,
 						conditionalExpression : PatternConditionalExpressionValidatorComponent,
+						messageKey : PatternMessageKeyValidatorComponent,
 						dynamic : PatternDynamicValidatorComponent,
 						add : PatternAddValidatorComponent,
 			  },

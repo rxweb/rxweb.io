@@ -15,4 +15,7 @@ export class User {
 	otherMarks: number;
 	
 	
+	disciplineMarks: number;
+	
+	
 }

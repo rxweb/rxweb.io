@@ -16,4 +16,7 @@ export class Location {
 	cityCode: string;
 	
 	
+	colonyName: string;
+	
+	
 }

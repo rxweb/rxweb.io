@@ -10,7 +10,7 @@ linktitle: maxDate
 <div class="title-bar"><p>maxDate validation  {{validatorType}}  will allow user to enter the date less than the maxDate value parameter.</p></div>
 
 # When to use
-Suppose you want to create a User form, which contains fields like userName, birthDate, RegistrationDate and you want the user to enter valid date which does not exceed the maximum date. Here depending upon the requirement these scenarios may arise.
+Suppose you want to create a User form, which contains fields like userName, birthDate, RegistrationDate, lastRegistrationDate and you want the user to enter valid date which does not exceed the maximum date. Here depending upon the requirement these scenarios may arise.
 
 <ol class='showHideElement'>
 <li>Apply MaxDate validation in lastRegistrationDate based on fieldName for which the maxDate has to be set.</li>
@@ -18,6 +18,7 @@ Suppose you want to create a User form, which contains fields like userName, bir
 <li>Apply MaxDate validation based on matched condition in the form, like if the userName is ‘John’ then the birthDate value should be valid date does not exceed the maximum date.</li>
 <li>Adding Custom Message on registrationDate Field.</li>
 <li>Adding value which you want to restrict number in the property. The maximum date is '2018,7,30'. </li>
+<li>Shows the custom message on `Resignation Date` field by using `messageKey` property.</li>
 <data-scope scope="['decorator','validator']">
 <li>Apply MaxDate validation dynamically based on server rules.</li>
 </data-scope>
@@ -89,6 +90,7 @@ Below options are not mandatory to use in the `maxDate` validation. If needed th
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <data-scope scope="['decorator','validator']">
 <tr><td><a (click)='scrollTo("#operator")' title="operator">operator</a></td><td>operator is used to validate date based upon less than or less than equal to a particular value, The default validation is based upon less than equal to.</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </data-scope>
 </table>
 
@@ -138,6 +140,14 @@ To override the global configuration message and set the custom error message on
 
 <div component="app-code" key="maxDate-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-maxDate-message" title="maxDate {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="maxDate-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-maxDate-messageKey" title="maxDate {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete MaxDate Example
 

@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PrimeNumberCompleteValidatorComponent } from './complete/prime-number-complete.component';
 import { PrimeNumberConditionalExpressionValidatorComponent } from './conditionalExpression/prime-number-conditional-expression.component';
 import { PrimeNumberMessageValidatorComponent } from './message/prime-number-message.component';
+import { PrimeNumberMessageKeyValidatorComponent } from './messageKey/prime-number-message-key.component';
 import { PrimeNumberDynamicValidatorComponent } from './dynamic/prime-number-dynamic.component';
 import { PrimeNumberAddValidatorComponent } from './add/prime-number-add.component';
 
@@ -16,6 +17,7 @@ import { PrimeNumberAddValidatorComponent } from './add/prime-number-add.compone
 	PrimeNumberCompleteValidatorComponent,
 	PrimeNumberConditionalExpressionValidatorComponent,
 	PrimeNumberMessageValidatorComponent,
+	PrimeNumberMessageKeyValidatorComponent,
 	PrimeNumberDynamicValidatorComponent,
 	PrimeNumberAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	PrimeNumberCompleteValidatorComponent,
 	PrimeNumberConditionalExpressionValidatorComponent,
 	PrimeNumberMessageValidatorComponent,
+	PrimeNumberMessageKeyValidatorComponent,
 	PrimeNumberDynamicValidatorComponent,
 	PrimeNumberAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	PrimeNumberCompleteValidatorComponent,
 	PrimeNumberConditionalExpressionValidatorComponent,
 	PrimeNumberMessageValidatorComponent,
+	PrimeNumberMessageKeyValidatorComponent,
 	PrimeNumberDynamicValidatorComponent,
 	PrimeNumberAddValidatorComponent,
   ],

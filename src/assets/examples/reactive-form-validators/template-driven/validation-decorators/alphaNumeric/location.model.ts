@@ -1,9 +1,20 @@
-import {  alphaNumeric, } from   "@rxweb/reactive-form-validators"   
+import {  alphaNumeric,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class Location {
 
-	@alphaNumeric() 
+	@prop()
 	areaName: string;
-	
-	
+
+	@prop()
+	flatAddress: string;
+
+	@prop()
+	postalAddress: string;
+
+	@prop()
+	cityCode: string;
+
+	@prop()
+	colonyName: string;
+
 }

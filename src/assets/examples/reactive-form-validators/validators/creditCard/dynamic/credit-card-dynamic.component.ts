@@ -22,6 +22,7 @@ export class CreditCardDynamicValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: RxFormBuilder , private http: HttpClient )
 	{ }
@@ -30,7 +31,7 @@ export class CreditCardDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/creditCard/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { cardType:'', visaCard:'', otherVisaCard:'', americanExpressCard:'', maestroCard:'', jcbCard:'', discoverCard:'', masterCard:'', dinersClubCard:'',  }
+			var user = { cardType:'', visaCard:'', otherVisaCard:'', americanExpressCard:'', maestroCard:'', jcbCard:'', discoverCard:'', masterCard:'', dinersClubCard:'', otherMasterCard:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

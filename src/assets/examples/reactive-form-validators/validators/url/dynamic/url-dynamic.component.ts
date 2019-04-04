@@ -20,7 +20,7 @@ export class UrlDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/url/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { adminWebsiteUrl:'', qaWebsiteUrl:'', customerWebsiteUrl:'', maintenanceWebSiteUrl:'',  }
+			var user = { adminWebsiteUrl:'', qaWebsiteUrl:'', customerWebsiteUrl:'', maintenanceWebSiteUrl:'', deployedWebSiteUrl:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

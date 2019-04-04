@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LatitudeCompleteValidatorComponent } from './complete/latitude-complete.component';
 import { LatitudeConditionalExpressionValidatorComponent } from './conditionalExpression/latitude-conditional-expression.component';
 import { LatitudeMessageValidatorComponent } from './message/latitude-message.component';
+import { LatitudeMessageKeyValidatorComponent } from './messageKey/latitude-message-key.component';
 import { LatitudeDynamicValidatorComponent } from './dynamic/latitude-dynamic.component';
 import { LatitudeAddValidatorComponent } from './add/latitude-add.component';
 
@@ -16,6 +17,7 @@ import { LatitudeAddValidatorComponent } from './add/latitude-add.component';
 	LatitudeCompleteValidatorComponent,
 	LatitudeConditionalExpressionValidatorComponent,
 	LatitudeMessageValidatorComponent,
+	LatitudeMessageKeyValidatorComponent,
 	LatitudeDynamicValidatorComponent,
 	LatitudeAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	LatitudeCompleteValidatorComponent,
 	LatitudeConditionalExpressionValidatorComponent,
 	LatitudeMessageValidatorComponent,
+	LatitudeMessageKeyValidatorComponent,
 	LatitudeDynamicValidatorComponent,
 	LatitudeAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	LatitudeCompleteValidatorComponent,
 	LatitudeConditionalExpressionValidatorComponent,
 	LatitudeMessageValidatorComponent,
+	LatitudeMessageKeyValidatorComponent,
 	LatitudeDynamicValidatorComponent,
 	LatitudeAddValidatorComponent,
   ],

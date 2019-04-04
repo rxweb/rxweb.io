@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { DateCompleteTemplateDrivenValidationDirectivesComponent } from './complete/date-complete.component';
 import { DateConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/date-conditional-expression.component';
 import { DateMessageTemplateDrivenValidationDirectivesComponent } from './message/date-message.component';
+import { DateMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/date-message-key.component';
 import { DateAddTemplateDrivenValidationDirectivesComponent } from './add/date-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { DateAddTemplateDrivenValidationDirectivesComponent } from './add/date-a
 	DateCompleteTemplateDrivenValidationDirectivesComponent,
 	DateConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	DateMessageTemplateDrivenValidationDirectivesComponent,
+	DateMessageKeyTemplateDrivenValidationDirectivesComponent,
 	DateAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	DateCompleteTemplateDrivenValidationDirectivesComponent,
 	DateConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	DateMessageTemplateDrivenValidationDirectivesComponent,
+	DateMessageKeyTemplateDrivenValidationDirectivesComponent,
 	DateAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	DateCompleteTemplateDrivenValidationDirectivesComponent,
 	DateConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	DateMessageTemplateDrivenValidationDirectivesComponent,
+	DateMessageKeyTemplateDrivenValidationDirectivesComponent,
 	DateAddTemplateDrivenValidationDirectivesComponent,
   ],
 

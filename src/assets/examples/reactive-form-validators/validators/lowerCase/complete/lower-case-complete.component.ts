@@ -19,6 +19,7 @@ export class LowerCaseCompleteValidatorComponent implements OnInit {
             firstName:['', RxwebValidators.lowerCase({conditionalExpression:(x,y) =>  x.username == "jonathan.feldman"  })], 
             middleName:['', RxwebValidators.lowerCase({conditionalExpression:'x => x.username == "jonathan.feldman"' })], 
             lastName:['', RxwebValidators.lowerCase({message:'You can enter only lowerCase letters.' })], 
+            state:['', RxwebValidators.lowerCase({messageKey:'lowerCaseMessageKey' })], 
         });
     }
 }

@@ -14,4 +14,7 @@ export class User {
 	@prop()
 	otherMarks: number;
 
+	@prop()
+	disciplineMarks: number;
+
 }

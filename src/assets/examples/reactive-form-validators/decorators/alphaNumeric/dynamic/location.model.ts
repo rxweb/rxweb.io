@@ -14,4 +14,7 @@ export class Location {
 	@prop()
 	cityCode: string;
 
+	@prop()
+	colonyName: string;
+
 }

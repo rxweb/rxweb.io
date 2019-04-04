@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { AsciiCompleteComponent } from './complete/ascii-complete.component';
 import { AsciiConditionalExpressionComponent } from './conditionalExpression/ascii-conditional-expression.component';
 import { AsciiMessageComponent } from './message/ascii-message.component';
+import { AsciiMessageKeyComponent } from './messageKey/ascii-message-key.component';
 import { AsciiDynamicComponent } from './dynamic/ascii-dynamic.component';
 import { AsciiAddComponent } from './add/ascii-add.component';
 import { AsciiEditComponent } from './edit/ascii-edit.component';
@@ -17,6 +18,7 @@ import { AsciiEditComponent } from './edit/ascii-edit.component';
 	AsciiCompleteComponent,
 	AsciiConditionalExpressionComponent,
 	AsciiMessageComponent,
+	AsciiMessageKeyComponent,
 	AsciiDynamicComponent,
 	AsciiAddComponent,
 	AsciiEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	AsciiCompleteComponent,
 	AsciiConditionalExpressionComponent,
 	AsciiMessageComponent,
+	AsciiMessageKeyComponent,
 	AsciiDynamicComponent,
 	AsciiAddComponent,
 	AsciiEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	AsciiCompleteComponent,
 	AsciiConditionalExpressionComponent,
 	AsciiMessageComponent,
+	AsciiMessageKeyComponent,
 	AsciiDynamicComponent,
 	AsciiAddComponent,
 	AsciiEditComponent,

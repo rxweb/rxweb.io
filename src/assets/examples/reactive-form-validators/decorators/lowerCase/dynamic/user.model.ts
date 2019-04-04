@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	lastName: string;
 
+	@prop()
+	state: string;
+
 }

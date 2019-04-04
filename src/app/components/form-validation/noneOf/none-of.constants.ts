@@ -12,38 +12,42 @@ import { NoneOfCompleteValidatorComponent } from "src/assets/examples/reactive-f
 import { NoneOfConditionalExpressionValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/noneOf/conditionalExpression/none-of-conditional-expression.component";
 import { NoneOfNonArrayValueComponent } from "src/assets/examples/reactive-form-validators/decorators/noneOf/nonArrayValue/none-of-non-array-value.component";
 import { NoneOfNonArrayValueValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/noneOf/nonArrayValue/none-of-non-array-value.component";
+import { NoneOfMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/noneOf/messageKey/none-of-message-key.component";
+import { NoneOfMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/noneOf/messageKey/none-of-message-key.component";
 
 export const NONE_OF_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
-	decorators:{
-						complete : NoneOfCompleteComponent,
-						conditionalExpression : NoneOfConditionalExpressionComponent,
-						matchValues : NoneOfMatchValuesComponent,
-						message : NoneOfMessageComponent,
-						dynamic : NoneOfDynamicComponent,
-						add : NoneOfAddComponent,
-						nonArrayValue : NoneOfNonArrayValueComponent
-			  },
-	template_driven_validation_directives:{
-						// complete : NoneOfCompleteTemplateDrivenValidationDirectivesComponent,
-						// conditionalExpression : NoneOfConditionalExpressionTemplateDrivenValidationDirectivesComponent,
-						// matchValues : NoneOfMatchValuesTemplateDrivenValidationDirectivesComponent,
-						// message : NoneOfMessageTemplateDrivenValidationDirectivesComponent,
-						// add : NoneOfAddTemplateDrivenValidationDirectivesComponent,
-			  },
-	template_driven_validation_decorators:{
-						// complete : NoneOfCompleteTemplateDrivenValidationDecoratorsComponent,
-						// conditionalExpression : NoneOfConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
-						// matchValues : NoneOfMatchValuesTemplateDrivenValidationDecoratorsComponent,
-						// message : NoneOfMessageTemplateDrivenValidationDecoratorsComponent,
-						// add : NoneOfAddTemplateDrivenValidationDecoratorsComponent,
-			  },
-	validators:{
-						complete : NoneOfCompleteValidatorComponent,
-						conditionalExpression : NoneOfConditionalExpressionValidatorComponent,
-						matchValues : NoneOfMatchValuesValidatorComponent,
-						message : NoneOfMessageValidatorComponent,
-						dynamic : NoneOfDynamicValidatorComponent,
-						add : NoneOfAddValidatorComponent,
-						nonArrayValue : NoneOfNonArrayValueValidatorComponent
-			  },
+  decorators: {
+    complete: NoneOfCompleteComponent,
+    conditionalExpression: NoneOfConditionalExpressionComponent,
+    matchValues: NoneOfMatchValuesComponent,
+    message: NoneOfMessageComponent,
+    dynamic: NoneOfDynamicComponent,
+    add: NoneOfAddComponent,
+    nonArrayValue: NoneOfNonArrayValueComponent,
+    messageKey: NoneOfMessageKeyComponent
+  },
+  template_driven_validation_directives: {
+    // complete : NoneOfCompleteTemplateDrivenValidationDirectivesComponent,
+    // conditionalExpression : NoneOfConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+    // matchValues : NoneOfMatchValuesTemplateDrivenValidationDirectivesComponent,
+    // message : NoneOfMessageTemplateDrivenValidationDirectivesComponent,
+    // add : NoneOfAddTemplateDrivenValidationDirectivesComponent,
+  },
+  template_driven_validation_decorators: {
+    // complete : NoneOfCompleteTemplateDrivenValidationDecoratorsComponent,
+    // conditionalExpression : NoneOfConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+    // matchValues : NoneOfMatchValuesTemplateDrivenValidationDecoratorsComponent,
+    // message : NoneOfMessageTemplateDrivenValidationDecoratorsComponent,
+    // add : NoneOfAddTemplateDrivenValidationDecoratorsComponent,
+  },
+  validators: {
+    complete: NoneOfCompleteValidatorComponent,
+    conditionalExpression: NoneOfConditionalExpressionValidatorComponent,
+    matchValues: NoneOfMatchValuesValidatorComponent,
+    message: NoneOfMessageValidatorComponent,
+    dynamic: NoneOfDynamicValidatorComponent,
+    add: NoneOfAddValidatorComponent,
+    nonArrayValue: NoneOfNonArrayValueValidatorComponent,
+    messageKey: NoneOfMessageKeyValidatorComponent
+  },
 }

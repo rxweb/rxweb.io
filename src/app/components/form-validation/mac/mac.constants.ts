@@ -10,6 +10,10 @@ import { MacMessageComponent } from "src/assets/examples/reactive-form-validator
 import { MacMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/mac/message/mac-message.component";
 import { MacMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/mac/message/mac-message.component";
 import { MacMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/mac/message/mac-message.component";
+import { MacMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/mac/messageKey/mac-message-key.component";
+import { MacMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/mac/messageKey/mac-message-key.component";
+import { MacMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/mac/messageKey/mac-message-key.component";
+import { MacMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/mac/messageKey/mac-message-key.component";
 import { MacDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/mac/dynamic/mac-dynamic.component";
 import { MacDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/mac/dynamic/mac-dynamic.component";
 import { MacAddComponent } from "src/assets/examples/reactive-form-validators/decorators/mac/add/mac-add.component";
@@ -23,6 +27,7 @@ export const MAC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : MacCompleteComponent,
 						conditionalExpression : MacConditionalExpressionComponent,
 						message : MacMessageComponent,
+						messageKey : MacMessageKeyComponent,
 						dynamic : MacDynamicComponent,
 						add : MacAddComponent,
 						edit : MacEditComponent,
@@ -31,18 +36,21 @@ export const MAC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : MacCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : MacConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : MacMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : MacMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : MacAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : MacCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : MacConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : MacMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : MacMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : MacAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : MacCompleteValidatorComponent,
 						conditionalExpression : MacConditionalExpressionValidatorComponent,
 						message : MacMessageValidatorComponent,
+						messageKey : MacMessageKeyValidatorComponent,
 						dynamic : MacDynamicValidatorComponent,
 						add : MacAddValidatorComponent,
 			  },

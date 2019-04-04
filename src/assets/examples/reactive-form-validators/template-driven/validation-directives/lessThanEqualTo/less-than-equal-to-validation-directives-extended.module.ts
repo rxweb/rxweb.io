@@ -9,6 +9,7 @@ import { LessThanEqualToCompleteTemplateDrivenValidationDirectivesComponent } fr
 import { LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/less-than-equal-to-field-name.component';
 import { LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/less-than-equal-to-conditional-expression.component';
 import { LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent } from './message/less-than-equal-to-message.component';
+import { LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/less-than-equal-to-message-key.component';
 import { LessThanEqualToAddTemplateDrivenValidationDirectivesComponent } from './add/less-than-equal-to-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { LessThanEqualToAddTemplateDrivenValidationDirectivesComponent } from '.
 	LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
 

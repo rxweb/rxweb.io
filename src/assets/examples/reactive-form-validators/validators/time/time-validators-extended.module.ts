@@ -9,6 +9,7 @@ import { TimeCompleteValidatorComponent } from './complete/time-complete.compone
 import { TimeConditionalExpressionValidatorComponent } from './conditionalExpression/time-conditional-expression.component';
 import { TimeAllowSecondsValidatorComponent } from './allowSeconds/time-allow-seconds.component';
 import { TimeMessageValidatorComponent } from './message/time-message.component';
+import { TimeMessageKeyValidatorComponent } from './messageKey/time-message-key.component';
 import { TimeDynamicValidatorComponent } from './dynamic/time-dynamic.component';
 import { TimeAddValidatorComponent } from './add/time-add.component';
 
@@ -18,6 +19,7 @@ import { TimeAddValidatorComponent } from './add/time-add.component';
 	TimeConditionalExpressionValidatorComponent,
 	TimeAllowSecondsValidatorComponent,
 	TimeMessageValidatorComponent,
+	TimeMessageKeyValidatorComponent,
 	TimeDynamicValidatorComponent,
 	TimeAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	TimeConditionalExpressionValidatorComponent,
 	TimeAllowSecondsValidatorComponent,
 	TimeMessageValidatorComponent,
+	TimeMessageKeyValidatorComponent,
 	TimeDynamicValidatorComponent,
 	TimeAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	TimeConditionalExpressionValidatorComponent,
 	TimeAllowSecondsValidatorComponent,
 	TimeMessageValidatorComponent,
+	TimeMessageKeyValidatorComponent,
 	TimeDynamicValidatorComponent,
 	TimeAddValidatorComponent,
   ],

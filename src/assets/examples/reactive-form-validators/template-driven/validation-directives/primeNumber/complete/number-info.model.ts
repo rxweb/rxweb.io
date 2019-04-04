@@ -12,4 +12,7 @@ export class NumberInfo {
 	firstNumber: string;
 	
 	
+	fourthNumber: string;
+	
+	
 }

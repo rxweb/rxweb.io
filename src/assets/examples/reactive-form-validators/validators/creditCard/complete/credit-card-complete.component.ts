@@ -19,6 +19,7 @@ export class CreditCardCompleteValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: FormBuilder )
 	{ }
@@ -34,6 +35,7 @@ export class CreditCardCompleteValidatorComponent implements OnInit {
             discoverCard:['', RxwebValidators.creditCard({fieldName:'cardType'  ,conditionalExpression:'x => x.cardType == "Discover"' })], 
             masterCard:['', RxwebValidators.creditCard({fieldName:'cardType'  ,conditionalExpression:'x => x.cardType == "MasterCard"' })], 
             dinersClubCard:['', RxwebValidators.creditCard({fieldName:'cardType'  ,conditionalExpression:'x => x.cardType == "DinersClub"' })], 
+            otherMasterCard:['', RxwebValidators.creditCard({fieldName:'cardType'  ,conditionalExpression:'x => x.cardType == "MasterCard"'  ,messageKey:'creditCardMessageKey' })], 
         });
     }
 }

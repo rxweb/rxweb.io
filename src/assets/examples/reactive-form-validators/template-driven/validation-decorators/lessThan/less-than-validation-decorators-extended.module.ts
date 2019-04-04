@@ -9,6 +9,7 @@ import { LessThanCompleteTemplateDrivenValidationDecoratorsComponent } from './c
 import { LessThanFieldNameTemplateDrivenValidationDecoratorsComponent } from './fieldName/less-than-field-name.component';
 import { LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/less-than-conditional-expression.component';
 import { LessThanMessageTemplateDrivenValidationDecoratorsComponent } from './message/less-than-message.component';
+import { LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/less-than-message-key.component';
 import { LessThanAddTemplateDrivenValidationDecoratorsComponent } from './add/less-than-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { LessThanAddTemplateDrivenValidationDecoratorsComponent } from './add/le
 	LessThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LessThanMessageTemplateDrivenValidationDecoratorsComponent,
+	LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LessThanAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	LessThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LessThanMessageTemplateDrivenValidationDecoratorsComponent,
+	LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LessThanAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	LessThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LessThanMessageTemplateDrivenValidationDecoratorsComponent,
+	LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LessThanAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

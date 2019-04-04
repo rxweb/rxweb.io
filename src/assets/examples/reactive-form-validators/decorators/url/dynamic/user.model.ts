@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	maintenanceWebSiteUrl: string;
 
+	@prop()
+	deployedWebSiteUrl: string;
+
 }

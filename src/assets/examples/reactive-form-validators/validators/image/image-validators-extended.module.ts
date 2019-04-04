@@ -12,6 +12,7 @@ import { ImageMinHeightValidatorComponent } from './minHeight/image-min-height.c
 import { ImageMinWidthValidatorComponent } from './minWidth/image-min-width.component';
 import { ImageConditionalExpressionValidatorComponent } from './conditionalExpression/image-conditional-expression.component';
 import { ImageMessageValidatorComponent } from './message/image-message.component';
+import { ImageMessageKeyValidatorComponent } from './messageKey/image-message-key.component';
 import { ImageDynamicValidatorComponent } from './dynamic/image-dynamic.component';
 import { ImageAddValidatorComponent } from './add/image-add.component';
 
@@ -24,6 +25,7 @@ import { ImageAddValidatorComponent } from './add/image-add.component';
 	ImageMinWidthValidatorComponent,
 	ImageConditionalExpressionValidatorComponent,
 	ImageMessageValidatorComponent,
+	ImageMessageKeyValidatorComponent,
 	ImageDynamicValidatorComponent,
 	ImageAddValidatorComponent,
   ],
@@ -35,6 +37,7 @@ entryComponents: [
 	ImageMinWidthValidatorComponent,
 	ImageConditionalExpressionValidatorComponent,
 	ImageMessageValidatorComponent,
+	ImageMessageKeyValidatorComponent,
 	ImageDynamicValidatorComponent,
 	ImageAddValidatorComponent,
   ],
@@ -52,6 +55,7 @@ entryComponents: [
 	ImageMinWidthValidatorComponent,
 	ImageConditionalExpressionValidatorComponent,
 	ImageMessageValidatorComponent,
+	ImageMessageKeyValidatorComponent,
 	ImageDynamicValidatorComponent,
 	ImageAddValidatorComponent,
   ],

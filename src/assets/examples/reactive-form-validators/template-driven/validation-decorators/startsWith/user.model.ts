@@ -1,9 +1,17 @@
-import {  startsWith, } from   "@rxweb/reactive-form-validators"   
+import {  startsWith,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@startsWith({value:'n' }) 
+	@prop()
 	name: string;
-	
-	
+
+	@prop()
+	taskId: string;
+
+	@prop()
+	company: string;
+
+	@prop()
+	skill: string;
+
 }

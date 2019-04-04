@@ -1,9 +1,20 @@
-import {  extension, } from   "@rxweb/reactive-form-validators"   
+import {  extension,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class UserInfo {
 
-	@extension({extensions:['jpg','bmp'] }) 
+	@prop()
+	fileType: string;
+
+	@prop()
 	profilePicture: string;
-	
-	
+
+	@prop()
+	imageFile: string;
+
+	@prop()
+	contactFile: string;
+
+	@prop()
+	excelFile: string;
+
 }

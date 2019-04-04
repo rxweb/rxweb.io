@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	multiplesOfOddNumber: number;
 
+	@prop()
+	otherOddNumber: string;
+
 }

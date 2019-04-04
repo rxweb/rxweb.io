@@ -19,4 +19,8 @@ export class User {
 	multiplesOfOddNumber: number;
 	
 	
+	@odd({messageKey:'oddMessageKey' }) 
+	otherOddNumber: string;
+	
+	
 }

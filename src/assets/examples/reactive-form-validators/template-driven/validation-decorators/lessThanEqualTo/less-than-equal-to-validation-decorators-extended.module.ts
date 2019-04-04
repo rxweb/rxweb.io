@@ -9,6 +9,7 @@ import { LessThanEqualToCompleteTemplateDrivenValidationDecoratorsComponent } fr
 import { LessThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent } from './fieldName/less-than-equal-to-field-name.component';
 import { LessThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/less-than-equal-to-conditional-expression.component';
 import { LessThanEqualToMessageTemplateDrivenValidationDecoratorsComponent } from './message/less-than-equal-to-message.component';
+import { LessThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/less-than-equal-to-message-key.component';
 import { LessThanEqualToAddTemplateDrivenValidationDecoratorsComponent } from './add/less-than-equal-to-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { LessThanEqualToAddTemplateDrivenValidationDecoratorsComponent } from '.
 	LessThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent,
 	LessThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LessThanEqualToMessageTemplateDrivenValidationDecoratorsComponent,
+	LessThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LessThanEqualToAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	LessThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent,
 	LessThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LessThanEqualToMessageTemplateDrivenValidationDecoratorsComponent,
+	LessThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LessThanEqualToAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	LessThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent,
 	LessThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LessThanEqualToMessageTemplateDrivenValidationDecoratorsComponent,
+	LessThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LessThanEqualToAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

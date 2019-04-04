@@ -1,9 +1,17 @@
-import {  minNumber, } from   "@rxweb/reactive-form-validators"   
+import {  minNumber,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class ResultInfo {
 
-	@minNumber({value:35 }) 
+	@prop()
 	maths: number;
-	
-	
+
+	@prop()
+	science: number;
+
+	@prop()
+	statstics: number;
+
+	@prop()
+	economics: number;
+
 }

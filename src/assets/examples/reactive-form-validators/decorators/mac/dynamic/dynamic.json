@@ -1,1 +1,1 @@
-{"device":{},"localMacAddress":{"mac":{"conditionalExpression":"x => x.device ==\"Laptop\""}},"systemMacAddress":{"mac":{"message":"{{0}} is not a MAC address"}}}
+{"device":{},"localMacAddress":{"mac":{"conditionalExpression":"x => x.device ==\"Laptop\""}},"systemMacAddress":{"mac":{"message":"{{0}} is not a MAC address"}},"serverMacAddress":{"mac":{"message":"macMessageKey"}}}

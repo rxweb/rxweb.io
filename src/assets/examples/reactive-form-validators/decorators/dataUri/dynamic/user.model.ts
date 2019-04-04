@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	videoDataUri: string;
 
+	@prop()
+	pdfDataUri: string;
+
 }

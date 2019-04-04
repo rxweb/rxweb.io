@@ -3,10 +3,18 @@ import {  greaterThanEqualTo,prop, } from   "@rxweb/reactive-form-validators"
 export class User {
 
 	@prop()
-	age: number;
+	admissionAge: number;
 
-	@greaterThanEqualTo({fieldName:'age' }) 
-	voterAge: number;
-	
-	
+	@prop()
+	retiermentAge: number;
+
+	@prop()
+	memberAge: number;
+
+	@prop()
+	otherAge: number;
+
+	@prop()
+	joiningAge: number;
+
 }

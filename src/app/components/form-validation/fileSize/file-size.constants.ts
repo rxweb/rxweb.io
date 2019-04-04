@@ -18,6 +18,10 @@ import { FileSizeMessageComponent } from "src/assets/examples/reactive-form-vali
 import { FileSizeMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/fileSize/message/file-size-message.component";
 import { FileSizeMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/fileSize/message/file-size-message.component";
 import { FileSizeMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/fileSize/message/file-size-message.component";
+import { FileSizeMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/fileSize/messageKey/file-size-message-key.component";
+import { FileSizeMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/fileSize/messageKey/file-size-message-key.component";
+import { FileSizeMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/fileSize/messageKey/file-size-message-key.component";
+import { FileSizeMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/fileSize/messageKey/file-size-message-key.component";
 import { FileSizeDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/fileSize/dynamic/file-size-dynamic.component";
 import { FileSizeDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/fileSize/dynamic/file-size-dynamic.component";
 import { FileSizeAddComponent } from "src/assets/examples/reactive-form-validators/decorators/fileSize/add/file-size-add.component";
@@ -33,6 +37,7 @@ export const FILE_SIZE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minSize : FileSizeMinSizeComponent,
 						conditionalExpression : FileSizeConditionalExpressionComponent,
 						message : FileSizeMessageComponent,
+						messageKey : FileSizeMessageKeyComponent,
 						dynamic : FileSizeDynamicComponent,
 						add : FileSizeAddComponent,
 						edit : FileSizeEditComponent,
@@ -43,6 +48,7 @@ export const FILE_SIZE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minSize : FileSizeMinSizeTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : FileSizeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : FileSizeMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : FileSizeMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : FileSizeAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -51,6 +57,7 @@ export const FILE_SIZE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minSize : FileSizeMinSizeTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : FileSizeConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : FileSizeMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : FileSizeMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : FileSizeAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -59,6 +66,7 @@ export const FILE_SIZE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minSize : FileSizeMinSizeValidatorComponent,
 						conditionalExpression : FileSizeConditionalExpressionValidatorComponent,
 						message : FileSizeMessageValidatorComponent,
+						messageKey : FileSizeMessageKeyValidatorComponent,
 						dynamic : FileSizeDynamicValidatorComponent,
 						add : FileSizeAddValidatorComponent,
 			  },

@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { DifferentCompleteComponent } from './complete/different-complete.component';
 import { DifferentFieldNameComponent } from './fieldName/different-field-name.component';
 import { DifferentMessageComponent } from './message/different-message.component';
+import { DifferentMessageKeyComponent } from './messageKey/different-message-key.component';
 import { DifferentDynamicComponent } from './dynamic/different-dynamic.component';
 import { DifferentAddComponent } from './add/different-add.component';
 import { DifferentEditComponent } from './edit/different-edit.component';
@@ -17,6 +18,7 @@ import { DifferentEditComponent } from './edit/different-edit.component';
 	DifferentCompleteComponent,
 	DifferentFieldNameComponent,
 	DifferentMessageComponent,
+	DifferentMessageKeyComponent,
 	DifferentDynamicComponent,
 	DifferentAddComponent,
 	DifferentEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	DifferentCompleteComponent,
 	DifferentFieldNameComponent,
 	DifferentMessageComponent,
+	DifferentMessageKeyComponent,
 	DifferentDynamicComponent,
 	DifferentAddComponent,
 	DifferentEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	DifferentCompleteComponent,
 	DifferentFieldNameComponent,
 	DifferentMessageComponent,
+	DifferentMessageKeyComponent,
 	DifferentDynamicComponent,
 	DifferentAddComponent,
 	DifferentEditComponent,

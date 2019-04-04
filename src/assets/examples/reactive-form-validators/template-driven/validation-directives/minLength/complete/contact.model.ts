@@ -15,4 +15,7 @@ export class Contact {
 	stateCode: string;
 	
 	
+	stateName: string;
+	
+	
 }

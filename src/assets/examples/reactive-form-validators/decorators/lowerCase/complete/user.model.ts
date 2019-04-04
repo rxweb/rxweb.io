@@ -21,4 +21,9 @@ export class User {
 	lastName: string;
 	
 	
+	//Shows custom message based on message key
+	@lowerCase({messageKey:'lowerCaseMessageKey' }) 
+	state: string;
+	
+	
 }

@@ -5,8 +5,28 @@ export class User {
 	@prop()
 	cardType: string;
 
-	@creditCard({fieldName:'cardType' }) 
-	creditCardNumber: string;
-	
-	
+	@prop()
+	otherVisaCard: string;
+
+	@prop()
+	americanExpressCard: string;
+
+	@prop()
+	maestroCard: string;
+
+	@prop()
+	jcbCard: string;
+
+	@prop()
+	discoverCard: string;
+
+	@prop()
+	masterCard: string;
+
+	@prop()
+	dinersClubCard: string;
+
+	@prop()
+	otherMasterCard: string;
+
 }

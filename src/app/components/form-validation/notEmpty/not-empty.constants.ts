@@ -10,6 +10,10 @@ import { NotEmptyMessageComponent } from "src/assets/examples/reactive-form-vali
 import { NotEmptyMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/notEmpty/message/not-empty-message.component";
 import { NotEmptyMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/notEmpty/message/not-empty-message.component";
 import { NotEmptyMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/notEmpty/message/not-empty-message.component";
+import { NotEmptyMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/notEmpty/messageKey/not-empty-message-key.component";
+import { NotEmptyMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/notEmpty/messageKey/not-empty-message-key.component";
+import { NotEmptyMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/notEmpty/messageKey/not-empty-message-key.component";
+import { NotEmptyMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/notEmpty/messageKey/not-empty-message-key.component";
 import { NotEmptyDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/notEmpty/dynamic/not-empty-dynamic.component";
 import { NotEmptyDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/notEmpty/dynamic/not-empty-dynamic.component";
 import { NotEmptyAddComponent } from "src/assets/examples/reactive-form-validators/decorators/notEmpty/add/not-empty-add.component";
@@ -23,6 +27,7 @@ export const NOT_EMPTY_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : NotEmptyCompleteComponent,
 						conditionalExpression : NotEmptyConditionalExpressionComponent,
 						message : NotEmptyMessageComponent,
+						messageKey : NotEmptyMessageKeyComponent,
 						dynamic : NotEmptyDynamicComponent,
 						add : NotEmptyAddComponent,
 						edit : NotEmptyEditComponent,
@@ -31,18 +36,21 @@ export const NOT_EMPTY_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : NotEmptyCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : NotEmptyConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : NotEmptyMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : NotEmptyMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : NotEmptyAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : NotEmptyCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : NotEmptyConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : NotEmptyMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : NotEmptyMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : NotEmptyAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : NotEmptyCompleteValidatorComponent,
 						conditionalExpression : NotEmptyConditionalExpressionValidatorComponent,
 						message : NotEmptyMessageValidatorComponent,
+						messageKey : NotEmptyMessageKeyValidatorComponent,
 						dynamic : NotEmptyDynamicValidatorComponent,
 						add : NotEmptyAddValidatorComponent,
 			  },

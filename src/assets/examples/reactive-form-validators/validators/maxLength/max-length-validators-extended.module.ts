@@ -9,6 +9,7 @@ import { MaxLengthCompleteValidatorComponent } from './complete/max-length-compl
 import { MaxLengthValueValidatorComponent } from './value/max-length-value.component';
 import { MaxLengthConditionalExpressionValidatorComponent } from './conditionalExpression/max-length-conditional-expression.component';
 import { MaxLengthMessageValidatorComponent } from './message/max-length-message.component';
+import { MaxLengthMessageKeyValidatorComponent } from './messageKey/max-length-message-key.component';
 import { MaxLengthDynamicValidatorComponent } from './dynamic/max-length-dynamic.component';
 import { MaxLengthAddValidatorComponent } from './add/max-length-add.component';
 
@@ -18,6 +19,7 @@ import { MaxLengthAddValidatorComponent } from './add/max-length-add.component';
 	MaxLengthValueValidatorComponent,
 	MaxLengthConditionalExpressionValidatorComponent,
 	MaxLengthMessageValidatorComponent,
+	MaxLengthMessageKeyValidatorComponent,
 	MaxLengthDynamicValidatorComponent,
 	MaxLengthAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	MaxLengthValueValidatorComponent,
 	MaxLengthConditionalExpressionValidatorComponent,
 	MaxLengthMessageValidatorComponent,
+	MaxLengthMessageKeyValidatorComponent,
 	MaxLengthDynamicValidatorComponent,
 	MaxLengthAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	MaxLengthValueValidatorComponent,
 	MaxLengthConditionalExpressionValidatorComponent,
 	MaxLengthMessageValidatorComponent,
+	MaxLengthMessageKeyValidatorComponent,
 	MaxLengthDynamicValidatorComponent,
 	MaxLengthAddValidatorComponent,
   ],

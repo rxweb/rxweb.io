@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	multiplesOfEvenNumber: number;
 
+	@prop()
+	otherEvenNumber: string;
+
 }

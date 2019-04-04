@@ -5,33 +5,41 @@ import { RxFormBuilder } from '@rxweb/reactive-form-validators';
 import { Employee, Skill } from './employee.model';
 
 @Component({
-    selector: 'app-unique-complete',
-    templateUrl: './unique-complete.component.html'
+  selector: 'app-unique-complete',
+  templateUrl: './unique-complete.component.html'
 })
 export class UniqueCompleteComponent implements OnInit {
-    employeeFormGroup: FormGroup
+  employeeFormGroup: FormGroup
 
-    constructor(
-        private formBuilder: RxFormBuilder) { }
+  constructor(
+    private formBuilder: RxFormBuilder) { }
 
-    ngOnInit() {
-        let employee = new Employee();
-        employee.skills = new Array<Skill>();
-        employee.hobbies = new Array<Skill>();
-        let skill = new Skill();
-        employee.skills.push(skill);
-        employee.hobbies.push(skill);
-        this.employeeFormGroup = this.formBuilder.formGroup(employee);
-    }
+  ngOnInit() {
+    let employee = new Employee();
+    employee.skills = new Array<Skill>();
+    employee.hobbies = new Array<Skill>();
+    employee.certifications = new Array<Skill>();
 
-    addSkill() {
-        let skills = this.employeeFormGroup.controls.skills as FormArray;
-        skills.push(this.formBuilder.formGroup(Skill));
-    }
+    let skill = new Skill();
+    employee.skills.push(skill);
+    employee.hobbies.push(skill);
+    employee.certifications.push(skill);
+    this.employeeFormGroup = this.formBuilder.formGroup(employee);
+  }
 
-    addHobby() {
-        let hobbies = this.employeeFormGroup.controls.hobbies as FormArray;
-        hobbies.push(this.formBuilder.formGroup(Skill));
-    }
+  addSkill() {
+    let skills = this.employeeFormGroup.controls.skills as FormArray;
+    skills.push(this.formBuilder.formGroup(Skill));
+  }
+
+  addHobby() {
+    let hobbies = this.employeeFormGroup.controls.hobbies as FormArray;
+    hobbies.push(this.formBuilder.formGroup(Skill));
+  }
+
+  addCertification() {
+    let certifications = this.employeeFormGroup.controls.certifications as FormArray;
+    certifications.push(this.formBuilder.formGroup(Skill));
+  }
 
 }

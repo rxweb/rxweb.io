@@ -10,4 +10,8 @@ export class LoginInfo {
 	oldPassword: string;
 	
 	
+	@password({validation:{maxLength: 10,minLength: 5,digit: true,specialCharacter: true}  ,messageKey:'passwordMessageKey' }) 
+	confirmPassword: string;
+	
+	
 }

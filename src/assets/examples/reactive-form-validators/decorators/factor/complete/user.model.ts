@@ -27,4 +27,8 @@ export class User {
 	sixthNumber: number;
 	
 	
+	@factor({dividend:50  ,messageKey:'factorMessageKey' }) 
+	seventhNumber: number;
+	
+	
 }

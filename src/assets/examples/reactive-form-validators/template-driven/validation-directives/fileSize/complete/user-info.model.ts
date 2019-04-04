@@ -21,4 +21,7 @@ export class UserInfo {
 	profilePicture: string;
 	
 	
+	excelFile: string;
+	
+	
 }

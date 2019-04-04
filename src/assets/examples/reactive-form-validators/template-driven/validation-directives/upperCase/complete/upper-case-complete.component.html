@@ -21,6 +21,13 @@
 
 	   <small class="form-text text-danger" *ngIf="locationForm.controls?.colonyName?.errors">{{locationForm.controls?.colonyName?.errors?.upperCase.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Street Name</label>
+	    <input type="text" name="streetName" [(ngModel)]="location.streetName"  class="form-control" [upperCase]="{'messageKey':'upperCaseMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="locationForm.controls?.streetName?.errors">{{locationForm.controls?.streetName?.errors?.upperCase.message}}<br/></small>	
+    </div>
     <button [disabled]="!locationForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

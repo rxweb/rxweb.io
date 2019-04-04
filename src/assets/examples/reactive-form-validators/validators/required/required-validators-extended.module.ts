@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { RequiredCompleteValidatorComponent } from './complete/required-complete.component';
 import { RequiredConditionalExpressionValidatorComponent } from './conditionalExpression/required-conditional-expression.component';
 import { RequiredMessageValidatorComponent } from './message/required-message.component';
+import { RequiredMessageKeyValidatorComponent } from './messageKey/required-message-key.component';
 import { RequiredDynamicValidatorComponent } from './dynamic/required-dynamic.component';
 import { RequiredAddValidatorComponent } from './add/required-add.component';
 
@@ -16,6 +17,7 @@ import { RequiredAddValidatorComponent } from './add/required-add.component';
 	RequiredCompleteValidatorComponent,
 	RequiredConditionalExpressionValidatorComponent,
 	RequiredMessageValidatorComponent,
+	RequiredMessageKeyValidatorComponent,
 	RequiredDynamicValidatorComponent,
 	RequiredAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	RequiredCompleteValidatorComponent,
 	RequiredConditionalExpressionValidatorComponent,
 	RequiredMessageValidatorComponent,
+	RequiredMessageKeyValidatorComponent,
 	RequiredDynamicValidatorComponent,
 	RequiredAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	RequiredCompleteValidatorComponent,
 	RequiredConditionalExpressionValidatorComponent,
 	RequiredMessageValidatorComponent,
+	RequiredMessageKeyValidatorComponent,
 	RequiredDynamicValidatorComponent,
 	RequiredAddValidatorComponent,
   ],

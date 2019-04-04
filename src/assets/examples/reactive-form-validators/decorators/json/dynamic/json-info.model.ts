@@ -11,4 +11,7 @@ export class JsonInfo {
 	@prop()
 	contactJson: string;
 
+	@prop()
+	countryJson: string;
+
 }

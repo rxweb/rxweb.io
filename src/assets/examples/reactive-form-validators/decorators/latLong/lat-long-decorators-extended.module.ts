@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LatLongCompleteComponent } from './complete/lat-long-complete.component';
 import { LatLongConditionalExpressionComponent } from './conditionalExpression/lat-long-conditional-expression.component';
 import { LatLongMessageComponent } from './message/lat-long-message.component';
+import { LatLongMessageKeyComponent } from './messageKey/lat-long-message-key.component';
 import { LatLongDynamicComponent } from './dynamic/lat-long-dynamic.component';
 import { LatLongAddComponent } from './add/lat-long-add.component';
 import { LatLongEditComponent } from './edit/lat-long-edit.component';
@@ -17,6 +18,7 @@ import { LatLongEditComponent } from './edit/lat-long-edit.component';
 	LatLongCompleteComponent,
 	LatLongConditionalExpressionComponent,
 	LatLongMessageComponent,
+	LatLongMessageKeyComponent,
 	LatLongDynamicComponent,
 	LatLongAddComponent,
 	LatLongEditComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	LatLongCompleteComponent,
 	LatLongConditionalExpressionComponent,
 	LatLongMessageComponent,
+	LatLongMessageKeyComponent,
 	LatLongDynamicComponent,
 	LatLongAddComponent,
 	LatLongEditComponent,
@@ -39,6 +42,7 @@ entryComponents: [
 	LatLongCompleteComponent,
 	LatLongConditionalExpressionComponent,
 	LatLongMessageComponent,
+	LatLongMessageKeyComponent,
 	LatLongDynamicComponent,
 	LatLongAddComponent,
 	LatLongEditComponent,

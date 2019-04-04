@@ -12,6 +12,7 @@ import { ImageMinHeightComponent } from './minHeight/image-min-height.component'
 import { ImageMinWidthComponent } from './minWidth/image-min-width.component';
 import { ImageConditionalExpressionComponent } from './conditionalExpression/image-conditional-expression.component';
 import { ImageMessageComponent } from './message/image-message.component';
+import { ImageMessageKeyComponent } from './messageKey/image-message-key.component';
 import { ImageDynamicComponent } from './dynamic/image-dynamic.component';
 import { ImageAddComponent } from './add/image-add.component';
 import { ImageEditComponent } from './edit/image-edit.component';
@@ -25,6 +26,7 @@ import { ImageEditComponent } from './edit/image-edit.component';
 	ImageMinWidthComponent,
 	ImageConditionalExpressionComponent,
 	ImageMessageComponent,
+	ImageMessageKeyComponent,
 	ImageDynamicComponent,
 	ImageAddComponent,
 	ImageEditComponent,
@@ -37,6 +39,7 @@ entryComponents: [
 	ImageMinWidthComponent,
 	ImageConditionalExpressionComponent,
 	ImageMessageComponent,
+	ImageMessageKeyComponent,
 	ImageDynamicComponent,
 	ImageAddComponent,
 	ImageEditComponent,
@@ -55,6 +58,7 @@ entryComponents: [
 	ImageMinWidthComponent,
 	ImageConditionalExpressionComponent,
 	ImageMessageComponent,
+	ImageMessageKeyComponent,
 	ImageDynamicComponent,
 	ImageAddComponent,
 	ImageEditComponent,

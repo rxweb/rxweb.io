@@ -1,9 +1,17 @@
-import {  dataUri, } from   "@rxweb/reactive-form-validators"   
+import {  dataUri,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@dataUri() 
+	@prop()
+	scheme: string;
+
+	@prop()
+	audioDataUri: string;
+
+	@prop()
 	videoDataUri: string;
-	
-	
+
+	@prop()
+	pdfDataUri: string;
+
 }

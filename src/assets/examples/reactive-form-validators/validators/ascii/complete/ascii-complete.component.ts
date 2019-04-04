@@ -19,6 +19,7 @@ export class AsciiCompleteValidatorComponent implements OnInit {
             numberAsciiCode:['', RxwebValidators.ascii({conditionalExpression:(x,y) => x.language == "Java"  })], 
             alphabetAsciiCode:['', RxwebValidators.ascii({conditionalExpression:'x => x.language =="Java"' })], 
             specialCharAsciiCode:['', RxwebValidators.ascii({message:'{{0}} is not an Ascii Code' })], 
+            digitalCode:['', RxwebValidators.ascii({messageKey:'asciiMessageKey' })], 
         });
     }
 }

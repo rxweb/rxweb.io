@@ -1,9 +1,17 @@
-import {  leapYear, } from   "@rxweb/reactive-form-validators"   
+import {  leapYear,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@leapYear() 
-	birthYear: number;
-	
-	
+	@prop()
+	name: string;
+
+	@prop()
+	admissionYear: number;
+
+	@prop()
+	joiningYear: number;
+
+	@prop()
+	promotionYear: number;
+
 }

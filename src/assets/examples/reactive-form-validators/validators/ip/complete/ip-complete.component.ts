@@ -19,6 +19,7 @@ export class IpCompleteValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: FormBuilder )
 	{ }
@@ -34,6 +35,7 @@ export class IpCompleteValidatorComponent implements OnInit {
             ipV6Conditional:['', RxwebValidators.ip({conditionalExpression:'(x,y) => x.ipType == "V6"'  ,version:2 })], 
             ipV4Conditional:['', RxwebValidators.ip({conditionalExpression:'x => x.ipType == "V4"'  ,version:1 })], 
             ipV4Message:['', RxwebValidators.ip({version:1  ,message:'Please Enter IP V4 type Only' })], 
+            ipV6MessageKey:['', RxwebValidators.ip({version:2  ,messageKey:'ipMessageKey' })], 
         });
     }
 }

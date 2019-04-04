@@ -24,4 +24,8 @@ export class AddressInfo {
 	stateCode: string;
 	
 	
+	@alpha({messageKey:'alphaMessageKey' }) 
+	cityCode: string;
+	
+	
 }

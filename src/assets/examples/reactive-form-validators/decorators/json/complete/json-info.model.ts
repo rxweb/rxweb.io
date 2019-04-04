@@ -19,4 +19,8 @@ export class JsonInfo {
 	contactJson: string;
 	
 	
+	@json({messageKey:'jsonMessageKey' }) 
+	countryJson: string;
+	
+	
 }

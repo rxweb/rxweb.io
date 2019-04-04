@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { HexColorCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/hex-color-complete.component';
 import { HexColorConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/hex-color-conditional-expression.component';
 import { HexColorMessageTemplateDrivenValidationDecoratorsComponent } from './message/hex-color-message.component';
+import { HexColorMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/hex-color-message-key.component';
 import { HexColorAddTemplateDrivenValidationDecoratorsComponent } from './add/hex-color-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { HexColorAddTemplateDrivenValidationDecoratorsComponent } from './add/he
 	HexColorCompleteTemplateDrivenValidationDecoratorsComponent,
 	HexColorConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	HexColorMessageTemplateDrivenValidationDecoratorsComponent,
+	HexColorMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	HexColorAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	HexColorCompleteTemplateDrivenValidationDecoratorsComponent,
 	HexColorConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	HexColorMessageTemplateDrivenValidationDecoratorsComponent,
+	HexColorMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	HexColorAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	HexColorCompleteTemplateDrivenValidationDecoratorsComponent,
 	HexColorConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	HexColorMessageTemplateDrivenValidationDecoratorsComponent,
+	HexColorMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	HexColorAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

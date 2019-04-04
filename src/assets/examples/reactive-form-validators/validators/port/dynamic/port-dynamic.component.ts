@@ -20,7 +20,7 @@ export class PortDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/port/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { browser:'', entertainmentWebsitePort:'', shoppingWebsitePort:'', educationalWebsitePort:'',  }
+			var user = { browser:'', entertainmentWebsitePort:'', shoppingWebsitePort:'', educationalWebsitePort:'', commercialWebsitePort:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

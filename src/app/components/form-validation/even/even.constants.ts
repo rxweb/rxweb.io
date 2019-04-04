@@ -10,6 +10,10 @@ import { EvenMessageComponent } from "src/assets/examples/reactive-form-validato
 import { EvenMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/even/message/even-message.component";
 import { EvenMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/even/message/even-message.component";
 import { EvenMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/even/message/even-message.component";
+import { EvenMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/even/messageKey/even-message-key.component";
+import { EvenMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/even/messageKey/even-message-key.component";
+import { EvenMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/even/messageKey/even-message-key.component";
+import { EvenMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/even/messageKey/even-message-key.component";
 import { EvenDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/even/dynamic/even-dynamic.component";
 import { EvenDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/even/dynamic/even-dynamic.component";
 import { EvenAddComponent } from "src/assets/examples/reactive-form-validators/decorators/even/add/even-add.component";
@@ -23,6 +27,7 @@ export const EVEN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : EvenCompleteComponent,
 						conditionalExpression : EvenConditionalExpressionComponent,
 						message : EvenMessageComponent,
+						messageKey : EvenMessageKeyComponent,
 						dynamic : EvenDynamicComponent,
 						add : EvenAddComponent,
 						edit : EvenEditComponent,
@@ -31,18 +36,21 @@ export const EVEN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : EvenCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : EvenConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : EvenMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : EvenMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : EvenAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : EvenCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : EvenConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : EvenMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : EvenMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : EvenAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : EvenCompleteValidatorComponent,
 						conditionalExpression : EvenConditionalExpressionValidatorComponent,
 						message : EvenMessageValidatorComponent,
+						messageKey : EvenMessageKeyValidatorComponent,
 						dynamic : EvenDynamicValidatorComponent,
 						add : EvenAddValidatorComponent,
 			  },

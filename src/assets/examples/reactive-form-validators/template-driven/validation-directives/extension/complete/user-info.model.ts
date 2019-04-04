@@ -15,4 +15,7 @@ export class UserInfo {
 	contactFile: string;
 	
 	
+	excelFile: string;
+	
+	
 }

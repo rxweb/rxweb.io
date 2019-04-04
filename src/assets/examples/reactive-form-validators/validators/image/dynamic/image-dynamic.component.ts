@@ -22,6 +22,7 @@ export class ImageDynamicValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: RxFormBuilder , private http: HttpClient )
 	{ }
@@ -30,7 +31,7 @@ export class ImageDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/image/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var userInfo = { imageType:'', profilePhoto:'', signature:'', voterId:'', identityCard:'', drivinglicense:'', aadharCard:'', panCard:'', residenceProof:'',  }
+			var userInfo = { imageType:'', profilePhoto:'', signature:'', voterId:'', identityCard:'', drivinglicense:'', aadharCard:'', panCard:'', residenceProof:'', passport:'',  }
 			this.userInfoFormGroup = this.formBuilder.group(userInfo,formBuilderConfiguration);
 		})
     }

@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { UrlCompleteTemplateDrivenValidationDirectivesComponent } from './complete/url-complete.component';
 import { UrlConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/url-conditional-expression.component';
 import { UrlMessageTemplateDrivenValidationDirectivesComponent } from './message/url-message.component';
+import { UrlMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/url-message-key.component';
 import { UrlAddTemplateDrivenValidationDirectivesComponent } from './add/url-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { UrlAddTemplateDrivenValidationDirectivesComponent } from './add/url-add
 	UrlCompleteTemplateDrivenValidationDirectivesComponent,
 	UrlConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	UrlMessageTemplateDrivenValidationDirectivesComponent,
+	UrlMessageKeyTemplateDrivenValidationDirectivesComponent,
 	UrlAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	UrlCompleteTemplateDrivenValidationDirectivesComponent,
 	UrlConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	UrlMessageTemplateDrivenValidationDirectivesComponent,
+	UrlMessageKeyTemplateDrivenValidationDirectivesComponent,
 	UrlAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	UrlCompleteTemplateDrivenValidationDirectivesComponent,
 	UrlConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	UrlMessageTemplateDrivenValidationDirectivesComponent,
+	UrlMessageKeyTemplateDrivenValidationDirectivesComponent,
 	UrlAddTemplateDrivenValidationDirectivesComponent,
   ],
 

@@ -18,4 +18,7 @@ export class UserInfo {
 	minMaxFiles: string;
 	
 	
+	excelFiles: string;
+	
+	
 }

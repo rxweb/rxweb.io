@@ -9,6 +9,7 @@ import { LessThanEqualToCompleteValidatorComponent } from './complete/less-than-
 import { LessThanEqualToFieldNameValidatorComponent } from './fieldName/less-than-equal-to-field-name.component';
 import { LessThanEqualToConditionalExpressionValidatorComponent } from './conditionalExpression/less-than-equal-to-conditional-expression.component';
 import { LessThanEqualToMessageValidatorComponent } from './message/less-than-equal-to-message.component';
+import { LessThanEqualToMessageKeyValidatorComponent } from './messageKey/less-than-equal-to-message-key.component';
 import { LessThanEqualToDynamicValidatorComponent } from './dynamic/less-than-equal-to-dynamic.component';
 import { LessThanEqualToAddValidatorComponent } from './add/less-than-equal-to-add.component';
 
@@ -18,6 +19,7 @@ import { LessThanEqualToAddValidatorComponent } from './add/less-than-equal-to-a
 	LessThanEqualToFieldNameValidatorComponent,
 	LessThanEqualToConditionalExpressionValidatorComponent,
 	LessThanEqualToMessageValidatorComponent,
+	LessThanEqualToMessageKeyValidatorComponent,
 	LessThanEqualToDynamicValidatorComponent,
 	LessThanEqualToAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	LessThanEqualToFieldNameValidatorComponent,
 	LessThanEqualToConditionalExpressionValidatorComponent,
 	LessThanEqualToMessageValidatorComponent,
+	LessThanEqualToMessageKeyValidatorComponent,
 	LessThanEqualToDynamicValidatorComponent,
 	LessThanEqualToAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	LessThanEqualToFieldNameValidatorComponent,
 	LessThanEqualToConditionalExpressionValidatorComponent,
 	LessThanEqualToMessageValidatorComponent,
+	LessThanEqualToMessageKeyValidatorComponent,
 	LessThanEqualToDynamicValidatorComponent,
 	LessThanEqualToAddValidatorComponent,
   ],

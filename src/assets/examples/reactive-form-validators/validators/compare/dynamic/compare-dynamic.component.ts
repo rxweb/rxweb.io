@@ -20,7 +20,7 @@ export class CompareDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/compare/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { email:'', confirmEmail:'', password:'', confirmPassword:'',  }
+			var user = { email:'', confirmEmail:'', password:'', confirmPassword:'', contactNumber:'', confirmContactNumber:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

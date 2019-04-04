@@ -14,6 +14,7 @@ Suppose you want to create a Employee form, which contains fields like fullName,
 <ol class = 'showHideElement'>
 <li>Apply unique validation on skillName field.</li>
 <li>Adding Custom Message on hobbies Field.</li>
+   <li>Shows the custom message on `Certifications` field by using `messageKey` property.</li>
 	<data-scope scope="['decorator','validator']">
 		<li>Apply unique validation dynamically based on server rules. </li>
 	</data-scope>
@@ -67,9 +68,10 @@ Below options are not mandatory to use in the `RxwebValidators.unique()` validat
 Below options are not mandatory to use in the `unique` validation. If needed then use the below options.
 </data-scope>
 
-<table class="table table-striped showHideElement">
+<table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## message 
@@ -80,6 +82,13 @@ To override the global configuration message and set the custom message on respe
 <div component="app-code" key="unique-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-unique-message" title="unique {{validatorType}} with message" key="message"></div>
 
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="unique-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-unique-messageKey" title="unique {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete Unique Example
 

@@ -12,4 +12,7 @@ export class JsonInfo {
 	contactJson: string;
 	
 	
+	countryJson: string;
+	
+	
 }

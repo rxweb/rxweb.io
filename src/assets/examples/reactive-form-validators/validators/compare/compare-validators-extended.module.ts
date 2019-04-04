@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { CompareCompleteValidatorComponent } from './complete/compare-complete.component';
 import { CompareFieldNameValidatorComponent } from './fieldName/compare-field-name.component';
 import { CompareMessageValidatorComponent } from './message/compare-message.component';
+import { CompareMessageKeyValidatorComponent } from './messageKey/compare-message-key.component';
 import { CompareDynamicValidatorComponent } from './dynamic/compare-dynamic.component';
 import { CompareAddValidatorComponent } from './add/compare-add.component';
 
@@ -16,6 +17,7 @@ import { CompareAddValidatorComponent } from './add/compare-add.component';
 	CompareCompleteValidatorComponent,
 	CompareFieldNameValidatorComponent,
 	CompareMessageValidatorComponent,
+	CompareMessageKeyValidatorComponent,
 	CompareDynamicValidatorComponent,
 	CompareAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	CompareCompleteValidatorComponent,
 	CompareFieldNameValidatorComponent,
 	CompareMessageValidatorComponent,
+	CompareMessageKeyValidatorComponent,
 	CompareDynamicValidatorComponent,
 	CompareAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	CompareCompleteValidatorComponent,
 	CompareFieldNameValidatorComponent,
 	CompareMessageValidatorComponent,
+	CompareMessageKeyValidatorComponent,
 	CompareDynamicValidatorComponent,
 	CompareAddValidatorComponent,
   ],

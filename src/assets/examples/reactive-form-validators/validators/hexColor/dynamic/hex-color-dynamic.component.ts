@@ -20,7 +20,7 @@ export class HexColorDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/hexColor/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var hexcolorInfo = { color:'', footerHexCode:'', headerHexcolorCode:'', bodyHexcolorCode:'',  }
+			var hexcolorInfo = { color:'', footerHexCode:'', headerHexcolorCode:'', bodyHexcolorCode:'', titleHexcolorCode:'',  }
 			this.hexcolorInfoFormGroup = this.formBuilder.group(hexcolorInfo,formBuilderConfiguration);
 		})
     }

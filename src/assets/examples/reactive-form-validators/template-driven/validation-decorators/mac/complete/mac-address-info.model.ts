@@ -19,4 +19,8 @@ export class MacAddressInfo {
 	systemMacAddress: string;
 	
 	
+	@mac({messageKey:'macMessageKey' }) 
+	serverMacAddress: string;
+	
+	
 }

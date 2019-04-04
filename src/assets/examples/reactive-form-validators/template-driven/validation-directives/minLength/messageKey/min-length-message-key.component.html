@@ -1,0 +1,12 @@
+<div>
+  <form #contactForm = "ngForm" [rxwebForm]="contactForm" [model]="contact">
+    <div class="form-group">
+      <label>State Name</label>
+	    <input type="text" name="stateName" [(ngModel)]="contact.stateName"  class="form-control" [minLength]="{'value':3,'messageKey':'minLengthMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="contactForm.controls?.stateName?.errors">{{contactForm.controls?.stateName?.errors?.minLength.message}}<br/></small>	
+    </div>
+    <button [disabled]="!contactForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

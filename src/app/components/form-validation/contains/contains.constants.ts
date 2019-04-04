@@ -14,6 +14,10 @@ import { ContainsMessageComponent } from "src/assets/examples/reactive-form-vali
 import { ContainsMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/contains/message/contains-message.component";
 import { ContainsMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/contains/message/contains-message.component";
 import { ContainsMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/contains/message/contains-message.component";
+import { ContainsMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/contains/messageKey/contains-message-key.component";
+import { ContainsMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/contains/messageKey/contains-message-key.component";
+import { ContainsMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/contains/messageKey/contains-message-key.component";
+import { ContainsMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/contains/messageKey/contains-message-key.component";
 import { ContainsDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/contains/dynamic/contains-dynamic.component";
 import { ContainsDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/contains/dynamic/contains-dynamic.component";
 import { ContainsAddComponent } from "src/assets/examples/reactive-form-validators/decorators/contains/add/contains-add.component";
@@ -28,6 +32,7 @@ export const CONTAINS_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : ContainsValueComponent,
 						conditionalExpression : ContainsConditionalExpressionComponent,
 						message : ContainsMessageComponent,
+						messageKey : ContainsMessageKeyComponent,
 						dynamic : ContainsDynamicComponent,
 						add : ContainsAddComponent,
 						edit : ContainsEditComponent,
@@ -37,6 +42,7 @@ export const CONTAINS_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : ContainsValueTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : ContainsConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : ContainsMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : ContainsMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : ContainsAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const CONTAINS_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : ContainsValueTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : ContainsConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : ContainsMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : ContainsMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : ContainsAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const CONTAINS_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : ContainsValueValidatorComponent,
 						conditionalExpression : ContainsConditionalExpressionValidatorComponent,
 						message : ContainsMessageValidatorComponent,
+						messageKey : ContainsMessageKeyValidatorComponent,
 						dynamic : ContainsDynamicValidatorComponent,
 						add : ContainsAddValidatorComponent,
 			  },

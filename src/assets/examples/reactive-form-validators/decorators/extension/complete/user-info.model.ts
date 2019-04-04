@@ -21,4 +21,8 @@ export class UserInfo {
 	contactFile: string;
 	
 	
+	@extension({extensions:['xls','xlsx']  ,messageKey:'extensionMessageKey' }) 
+	excelFile: string;
+	
+	
 }

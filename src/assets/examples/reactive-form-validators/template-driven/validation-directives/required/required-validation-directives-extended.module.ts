@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { RequiredCompleteTemplateDrivenValidationDirectivesComponent } from './complete/required-complete.component';
 import { RequiredConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/required-conditional-expression.component';
 import { RequiredMessageTemplateDrivenValidationDirectivesComponent } from './message/required-message.component';
+import { RequiredMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/required-message-key.component';
 import { RequiredAddTemplateDrivenValidationDirectivesComponent } from './add/required-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { RequiredAddTemplateDrivenValidationDirectivesComponent } from './add/re
 	RequiredCompleteTemplateDrivenValidationDirectivesComponent,
 	RequiredConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	RequiredMessageTemplateDrivenValidationDirectivesComponent,
+	RequiredMessageKeyTemplateDrivenValidationDirectivesComponent,
 	RequiredAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	RequiredCompleteTemplateDrivenValidationDirectivesComponent,
 	RequiredConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	RequiredMessageTemplateDrivenValidationDirectivesComponent,
+	RequiredMessageKeyTemplateDrivenValidationDirectivesComponent,
 	RequiredAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	RequiredCompleteTemplateDrivenValidationDirectivesComponent,
 	RequiredConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	RequiredMessageTemplateDrivenValidationDirectivesComponent,
+	RequiredMessageKeyTemplateDrivenValidationDirectivesComponent,
 	RequiredAddTemplateDrivenValidationDirectivesComponent,
   ],
 

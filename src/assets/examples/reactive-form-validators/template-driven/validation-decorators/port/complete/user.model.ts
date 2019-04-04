@@ -19,4 +19,8 @@ export class User {
 	educationalWebsitePort: string;
 	
 	
+	@port({messageKey:'portMessageKey' }) 
+	commercialWebsitePort: string;
+	
+	
 }

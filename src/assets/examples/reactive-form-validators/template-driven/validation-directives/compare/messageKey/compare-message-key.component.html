@@ -1,0 +1,12 @@
+<div>
+  <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
+    <div class="form-group">
+      <label>Confirm Contact Number</label>
+	    <input type="text" name="confirmContactNumber" [(ngModel)]="user.confirmContactNumber"  class="form-control" [compare]="{'fieldName':'contactNumber','messageKey':'compareMessageKey'}"/>
+
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.confirmContactNumber?.errors">{{userForm.controls?.confirmContactNumber?.errors?.compare.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -23,6 +23,7 @@ export class MinDateCompleteValidatorComponent implements OnInit {
             enrollmentDate:['',], 
             lastRegistrationDate:['', RxwebValidators.minDate({fieldName:'enrollmentDate' })], 
             confirmationDate:['', RxwebValidators.minDate({value:'07/30/2018'  ,operator:'>' })], 
+            resignationDate:['', RxwebValidators.minDate({value:'07/30/2018'  ,messageKey:'minDateMessageKey' })], 
         });
     }
 }

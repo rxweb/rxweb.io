@@ -34,4 +34,8 @@ export class User {
 	confirmationDate: string;
 	
 	
+	@minDate({value:'07/30/2018'  ,messageKey:'minDateMessageKey' }) 
+	resignationDate: string;
+	
+	
 }

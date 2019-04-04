@@ -10,6 +10,7 @@ import { NumericAcceptValueTemplateDrivenValidationDecoratorsComponent } from '.
 import { NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent } from './allowDecimal/numeric-allow-decimal.component';
 import { NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/numeric-conditional-expression.component';
 import { NumericMessageTemplateDrivenValidationDecoratorsComponent } from './message/numeric-message.component';
+import { NumericMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/numeric-message-key.component';
 import { NumericAddTemplateDrivenValidationDecoratorsComponent } from './add/numeric-add.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { NumericAddTemplateDrivenValidationDecoratorsComponent } from './add/num
 	NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageTemplateDrivenValidationDecoratorsComponent,
+	NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	NumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -27,6 +29,7 @@ entryComponents: [
 	NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageTemplateDrivenValidationDecoratorsComponent,
+	NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	NumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -41,6 +44,7 @@ entryComponents: [
 	NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageTemplateDrivenValidationDecoratorsComponent,
+	NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	NumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

@@ -23,4 +23,8 @@ export class Contact {
 	stateCode: string;
 	
 	
+	@minLength({value:3  ,messageKey:'minLengthMessageKey' }) 
+	stateName: string;
+	
+	
 }

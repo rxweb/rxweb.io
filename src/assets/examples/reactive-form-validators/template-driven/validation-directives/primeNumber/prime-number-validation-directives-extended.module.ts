@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PrimeNumberCompleteTemplateDrivenValidationDirectivesComponent } from './complete/prime-number-complete.component';
 import { PrimeNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/prime-number-conditional-expression.component';
 import { PrimeNumberMessageTemplateDrivenValidationDirectivesComponent } from './message/prime-number-message.component';
+import { PrimeNumberMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/prime-number-message-key.component';
 import { PrimeNumberAddTemplateDrivenValidationDirectivesComponent } from './add/prime-number-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { PrimeNumberAddTemplateDrivenValidationDirectivesComponent } from './add
 	PrimeNumberCompleteTemplateDrivenValidationDirectivesComponent,
 	PrimeNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	PrimeNumberMessageTemplateDrivenValidationDirectivesComponent,
+	PrimeNumberMessageKeyTemplateDrivenValidationDirectivesComponent,
 	PrimeNumberAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	PrimeNumberCompleteTemplateDrivenValidationDirectivesComponent,
 	PrimeNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	PrimeNumberMessageTemplateDrivenValidationDirectivesComponent,
+	PrimeNumberMessageKeyTemplateDrivenValidationDirectivesComponent,
 	PrimeNumberAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	PrimeNumberCompleteTemplateDrivenValidationDirectivesComponent,
 	PrimeNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	PrimeNumberMessageTemplateDrivenValidationDirectivesComponent,
+	PrimeNumberMessageKeyTemplateDrivenValidationDirectivesComponent,
 	PrimeNumberAddTemplateDrivenValidationDirectivesComponent,
   ],
 

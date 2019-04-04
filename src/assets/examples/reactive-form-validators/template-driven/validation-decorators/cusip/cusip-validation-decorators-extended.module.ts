@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { CusipCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/cusip-complete.component';
 import { CusipConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/cusip-conditional-expression.component';
 import { CusipMessageTemplateDrivenValidationDecoratorsComponent } from './message/cusip-message.component';
+import { CusipMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/cusip-message-key.component';
 import { CusipAddTemplateDrivenValidationDecoratorsComponent } from './add/cusip-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { CusipAddTemplateDrivenValidationDecoratorsComponent } from './add/cusip
 	CusipCompleteTemplateDrivenValidationDecoratorsComponent,
 	CusipConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	CusipMessageTemplateDrivenValidationDecoratorsComponent,
+	CusipMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	CusipAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	CusipCompleteTemplateDrivenValidationDecoratorsComponent,
 	CusipConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	CusipMessageTemplateDrivenValidationDecoratorsComponent,
+	CusipMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	CusipAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	CusipCompleteTemplateDrivenValidationDecoratorsComponent,
 	CusipConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	CusipMessageTemplateDrivenValidationDecoratorsComponent,
+	CusipMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	CusipAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

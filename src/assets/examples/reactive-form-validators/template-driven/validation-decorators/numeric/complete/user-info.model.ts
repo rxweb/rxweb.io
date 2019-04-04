@@ -27,4 +27,8 @@ export class UserInfo {
 	positiveNumber: number;
 	
 	
+	@numeric({messageKey:'numericMessageKey' }) 
+	positiveNonDecimalNumber: number;
+	
+	
 }

@@ -3,6 +3,7 @@ import { IpVersionValidatorComponent } from "src/assets/examples/reactive-form-v
 import { IpIsCidrValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/ip/isCidr/ip-is-cidr.component";
 import { IpConditionalExpressionValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/ip/conditionalExpression/ip-conditional-expression.component";
 import { IpMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/ip/message/ip-message.component";
+import { IpMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/ip/messageKey/ip-message-key.component";
 import { IpDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/ip/dynamic/ip-dynamic.component";
 import { IpAddValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/ip/add/ip-add.component";
 
@@ -13,6 +14,7 @@ export const IP_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						isCidr : IpIsCidrValidatorComponent,
 						conditionalExpression : IpConditionalExpressionValidatorComponent,
 						message : IpMessageValidatorComponent,
+						messageKey : IpMessageKeyValidatorComponent,
 						dynamic : IpDynamicValidatorComponent,
 						add : IpAddValidatorComponent,
 			  },

@@ -1,5 +1,5 @@
 <div>
-  <form  *ngIf="employeeInfoFormGroup"  [formGroup]="employeeInfoFormGroup">
+  <form *ngIf="employeeInfoFormGroup" [formGroup]="employeeInfoFormGroup">
     <div class="form-group">
       <label>Department</label>
       <input type="text" formControlName="department" class="form-control" placeholder="Enter any department" />
@@ -7,24 +7,24 @@
     <div class="form-group">
       <label>Project Domains</label>
       <div class="form-check" *ngFor="let tag of projectDomainsArray; let i = index;">
-          <h4>
-            <input (click)="addProjectDomain($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
-          </h4>
-        </div>
-        <br>
-        <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.projectDomains.errors">{{employeeInfoFormGroup.controls.projectDomains.errors.choice.message}}</small><br>
-        <small class="form-text text-muted">You must select minimum 2 values.</small><br>
+        <h4>
+          <input (click)="addProjectDomain($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
+        </h4>
+      </div>
+      <br>
+      <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.projectDomains.errors">{{employeeInfoFormGroup.controls.projectDomains.errors.choice.message}}</small><br>
+      <small class="form-text text-muted">You must select minimum 2 values.</small><br>
     </div>
     <div class="form-group">
       <label>Languages</label>
       <div class="form-check" *ngFor="let tag of languagesArray; let i = index;">
-          <h4>
-            <input (click)="addLanguages($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
-          </h4>
-        </div>
-        <br>
-        <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.languages.errors">{{employeeInfoFormGroup.controls.languages.errors.choice.message}}</small><br>
-        <small class="form-text text-muted">You must select atmost 4 values.</small><br>
+        <h4>
+          <input (click)="addLanguages($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
+        </h4>
+      </div>
+      <br>
+      <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.languages.errors">{{employeeInfoFormGroup.controls.languages.errors.choice.message}}</small><br>
+      <small class="form-text text-muted">You must select atmost 4 values.</small><br>
     </div>
     <div class="form-group">
       <label>Skills</label><small>( With Conditional Expression )</small><br>
@@ -35,18 +35,29 @@
       </div>
       <br>
       <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.skills.errors">{{employeeInfoFormGroup.controls.skills.errors.choice.message}}</small><br />
-      <small class="form-text text-muted" >To apply the validation on 'Skills' field, enter 'DotNet' in 'Department' field</small><br>
+      <small class="form-text text-muted">To apply the validation on 'Skills' field, enter 'DotNet' in 'Department' field</small><br>
     </div>
     <div class="form-group">
       <label>Hobbies</label>
       <div class="form-check" *ngFor="let tag of hobbiesArray; let i = index;">
-          <h4>
-            <input (click)="addHobby($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
-          </h4>
-        </div>
-        <br>
-        <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.hobbies.errors">{{employeeInfoFormGroup.controls.hobbies.errors.choice.message}}</small><br />
+        <h4>
+          <input (click)="addHobby($event.target,i)" type="checkbox" value="{{tag}}" /> {{tag}}
+        </h4>
+      </div>
+      <br>
+      <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.hobbies.errors">{{employeeInfoFormGroup.controls.hobbies.errors.choice.message}}</small><br />
       <small class="form-text text-muted">Shows custom message</small><br>
+    </div>
+    <div class="form-group">
+      <label>Certifications</label>
+      <div class="form-check" *ngFor="let tag of certificationsArray">
+        <h4>
+          <input (click)="addCertification($event.target)" type="checkbox" value="{{tag}}" /> {{tag}}
+        </h4>
+      </div>
+      <br>
+      <small class="form-text text-muted">choice validation using messageKey.</small><br>
+      <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls?.certifications?.errors">{{employeeInfoFormGroup.controls.certifications.errors.choice.message}}</small><br>
     </div>
     <button [disabled]="!employeeInfoFormGroup.valid" class="btn btn-primary">Submit</button>
   </form>

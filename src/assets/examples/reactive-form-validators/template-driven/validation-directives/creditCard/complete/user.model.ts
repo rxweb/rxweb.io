@@ -27,4 +27,7 @@ export class User {
 	dinersClubCard: string;
 	
 	
+	otherMasterCard: string;
+	
+	
 }

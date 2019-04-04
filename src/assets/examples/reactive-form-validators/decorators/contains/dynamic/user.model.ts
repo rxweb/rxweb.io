@@ -11,4 +11,7 @@ export class User {
 	@prop()
 	otherEmailAddress: string;
 
+	@prop()
+	organizationEmailAddress: string;
+
 }

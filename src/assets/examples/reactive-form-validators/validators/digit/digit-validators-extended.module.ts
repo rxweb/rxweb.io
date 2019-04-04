@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { DigitCompleteValidatorComponent } from './complete/digit-complete.component';
 import { DigitConditionalExpressionValidatorComponent } from './conditionalExpression/digit-conditional-expression.component';
 import { DigitMessageValidatorComponent } from './message/digit-message.component';
+import { DigitMessageKeyValidatorComponent } from './messageKey/digit-message-key.component';
 import { DigitDynamicValidatorComponent } from './dynamic/digit-dynamic.component';
 import { DigitAddValidatorComponent } from './add/digit-add.component';
 
@@ -16,6 +17,7 @@ import { DigitAddValidatorComponent } from './add/digit-add.component';
 	DigitCompleteValidatorComponent,
 	DigitConditionalExpressionValidatorComponent,
 	DigitMessageValidatorComponent,
+	DigitMessageKeyValidatorComponent,
 	DigitDynamicValidatorComponent,
 	DigitAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	DigitCompleteValidatorComponent,
 	DigitConditionalExpressionValidatorComponent,
 	DigitMessageValidatorComponent,
+	DigitMessageKeyValidatorComponent,
 	DigitDynamicValidatorComponent,
 	DigitAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	DigitCompleteValidatorComponent,
 	DigitConditionalExpressionValidatorComponent,
 	DigitMessageValidatorComponent,
+	DigitMessageKeyValidatorComponent,
 	DigitDynamicValidatorComponent,
 	DigitAddValidatorComponent,
   ],

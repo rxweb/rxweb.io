@@ -19,6 +19,7 @@ export class EmailCompleteValidatorComponent implements OnInit {
             recoveryEmailAddress:['', RxwebValidators.email({conditionalExpression:(x,y) => x.email == "abc@gmail.com"  })], 
             businessEmailAddress:['', RxwebValidators.email({conditionalExpression:'x => x.email =="abc@gmail.com"' })], 
             otherEmailAddress:['', RxwebValidators.email({message:'Please enter valid email' })], 
+            organizationEmailAddress:['', RxwebValidators.email({messageKey:'emailMessageKey' })], 
         });
     }
 }

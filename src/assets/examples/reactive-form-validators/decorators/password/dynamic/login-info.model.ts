@@ -8,4 +8,7 @@ export class LoginInfo {
 	@prop()
 	oldPassword: string;
 
+	@prop()
+	confirmPassword: string;
+
 }

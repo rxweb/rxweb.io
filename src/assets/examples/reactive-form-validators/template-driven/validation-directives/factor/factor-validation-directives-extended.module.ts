@@ -10,6 +10,7 @@ import { FactorFieldNameTemplateDrivenValidationDirectivesComponent } from './fi
 import { FactorConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/factor-conditional-expression.component';
 import { FactorDividendTemplateDrivenValidationDirectivesComponent } from './dividend/factor-dividend.component';
 import { FactorMessageTemplateDrivenValidationDirectivesComponent } from './message/factor-message.component';
+import { FactorMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/factor-message-key.component';
 import { FactorAddTemplateDrivenValidationDirectivesComponent } from './add/factor-add.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FactorAddTemplateDrivenValidationDirectivesComponent } from './add/fact
 	FactorConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	FactorDividendTemplateDrivenValidationDirectivesComponent,
 	FactorMessageTemplateDrivenValidationDirectivesComponent,
+	FactorMessageKeyTemplateDrivenValidationDirectivesComponent,
 	FactorAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -27,6 +29,7 @@ entryComponents: [
 	FactorConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	FactorDividendTemplateDrivenValidationDirectivesComponent,
 	FactorMessageTemplateDrivenValidationDirectivesComponent,
+	FactorMessageKeyTemplateDrivenValidationDirectivesComponent,
 	FactorAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -41,6 +44,7 @@ entryComponents: [
 	FactorConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	FactorDividendTemplateDrivenValidationDirectivesComponent,
 	FactorMessageTemplateDrivenValidationDirectivesComponent,
+	FactorMessageKeyTemplateDrivenValidationDirectivesComponent,
 	FactorAddTemplateDrivenValidationDirectivesComponent,
   ],
 

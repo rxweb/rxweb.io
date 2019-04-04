@@ -14,4 +14,7 @@ export class AttandanceDetail {
 	@prop()
 	exitTime: string;
 
+	@prop()
+	netInTime: string;
+
 }

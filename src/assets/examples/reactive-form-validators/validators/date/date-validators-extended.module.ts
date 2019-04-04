@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { DateCompleteValidatorComponent } from './complete/date-complete.component';
 import { DateConditionalExpressionValidatorComponent } from './conditionalExpression/date-conditional-expression.component';
 import { DateMessageValidatorComponent } from './message/date-message.component';
+import { DateMessageKeyValidatorComponent } from './messageKey/date-message-key.component';
 import { DateDynamicValidatorComponent } from './dynamic/date-dynamic.component';
 import { DateAddValidatorComponent } from './add/date-add.component';
 
@@ -16,6 +17,7 @@ import { DateAddValidatorComponent } from './add/date-add.component';
 	DateCompleteValidatorComponent,
 	DateConditionalExpressionValidatorComponent,
 	DateMessageValidatorComponent,
+	DateMessageKeyValidatorComponent,
 	DateDynamicValidatorComponent,
 	DateAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	DateCompleteValidatorComponent,
 	DateConditionalExpressionValidatorComponent,
 	DateMessageValidatorComponent,
+	DateMessageKeyValidatorComponent,
 	DateDynamicValidatorComponent,
 	DateAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	DateCompleteValidatorComponent,
 	DateConditionalExpressionValidatorComponent,
 	DateMessageValidatorComponent,
+	DateMessageKeyValidatorComponent,
 	DateDynamicValidatorComponent,
 	DateAddValidatorComponent,
   ],

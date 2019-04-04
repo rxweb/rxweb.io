@@ -9,6 +9,7 @@ import { PatternCompleteValidatorComponent } from './complete/pattern-complete.c
 import { PatternExpressionValidatorComponent } from './expression/pattern-expression.component';
 import { PatternMessageValidatorComponent } from './message/pattern-message.component';
 import { PatternConditionalExpressionValidatorComponent } from './conditionalExpression/pattern-conditional-expression.component';
+import { PatternMessageKeyValidatorComponent } from './messageKey/pattern-message-key.component';
 import { PatternDynamicValidatorComponent } from './dynamic/pattern-dynamic.component';
 import { PatternAddValidatorComponent } from './add/pattern-add.component';
 
@@ -18,6 +19,7 @@ import { PatternAddValidatorComponent } from './add/pattern-add.component';
 	PatternExpressionValidatorComponent,
 	PatternMessageValidatorComponent,
 	PatternConditionalExpressionValidatorComponent,
+	PatternMessageKeyValidatorComponent,
 	PatternDynamicValidatorComponent,
 	PatternAddValidatorComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	PatternExpressionValidatorComponent,
 	PatternMessageValidatorComponent,
 	PatternConditionalExpressionValidatorComponent,
+	PatternMessageKeyValidatorComponent,
 	PatternDynamicValidatorComponent,
 	PatternAddValidatorComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	PatternExpressionValidatorComponent,
 	PatternMessageValidatorComponent,
 	PatternConditionalExpressionValidatorComponent,
+	PatternMessageKeyValidatorComponent,
 	PatternDynamicValidatorComponent,
 	PatternAddValidatorComponent,
   ],

@@ -1,19 +1,22 @@
-import {  noneOf,prop  } from "@rxweb/reactive-form-validators"
+import { noneOf, prop } from "@rxweb/reactive-form-validators"
 
-export class EmployeeInfo{
+export class EmployeeInfo {
 
-    @prop()
-    department: string;
-    
-    @noneOf({matchValues:["ECommerce", "Banking","Educational","Gaming"]})
-    projectDomains: string;
+  @prop()
+  department: string;
 
-    @noneOf({matchValues:["Secondary","Senior Secondary","B.Tech","M.Tech","B.C.A.","M.C.A."], conditionalExpression: (x,y) => x.department =='DotNet'})
-	qualifications: string[];
+  @noneOf({ matchValues: ["ECommerce", "Banking", "Educational", "Gaming"] })
+  projectDomains: string;
 
-    @noneOf({matchValues: ["MVC", "AngularJS","Angular 5","C#","Web Api","SQL Server"], conditionalExpression: "x => x.department =='DotNet'"})
-    skills: string;
+  @noneOf({ matchValues: ["Secondary", "Senior Secondary", "B.Tech", "M.Tech", "B.C.A.", "M.C.A."], conditionalExpression: (x, y) => x.department == 'DotNet' })
+  qualifications: string[];
 
-    @noneOf({matchValues:["Drawing", "Singing","Dancing","Travelling","Sports"],message: "Please do not select any hobbies"})
-    hobbies: string;
+  @noneOf({ matchValues: ["MVC", "AngularJS", "Angular 5", "C#", "Web Api", "SQL Server"], conditionalExpression: "x => x.department =='DotNet'" })
+  skills: string;
+
+  @noneOf({ matchValues: ["Drawing", "Singing", "Dancing", "Travelling", "Sports"], message: "Please do not select any hobbies" })
+  hobbies: string;
+
+  @noneOf({ matchValues: ["English", "Spanish", "French"], messageKey: "noneOfMessageKey" })
+  languages: string;
 }

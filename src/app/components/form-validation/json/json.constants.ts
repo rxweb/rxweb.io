@@ -10,6 +10,10 @@ import { JsonConditionalExpressionComponent } from "src/assets/examples/reactive
 import { JsonConditionalExpressionTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/json/conditionalExpression/json-conditional-expression.component";
 import { JsonConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/json/conditionalExpression/json-conditional-expression.component";
 import { JsonConditionalExpressionValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/json/conditionalExpression/json-conditional-expression.component";
+import { JsonMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/json/messageKey/json-message-key.component";
+import { JsonMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/json/messageKey/json-message-key.component";
+import { JsonMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/json/messageKey/json-message-key.component";
+import { JsonMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/json/messageKey/json-message-key.component";
 import { JsonDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/json/dynamic/json-dynamic.component";
 import { JsonDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/json/dynamic/json-dynamic.component";
 import { JsonAddComponent } from "src/assets/examples/reactive-form-validators/decorators/json/add/json-add.component";
@@ -23,6 +27,7 @@ export const JSON_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : JsonCompleteComponent,
 						message : JsonMessageComponent,
 						conditionalExpression : JsonConditionalExpressionComponent,
+						messageKey : JsonMessageKeyComponent,
 						dynamic : JsonDynamicComponent,
 						add : JsonAddComponent,
 						edit : JsonEditComponent,
@@ -31,18 +36,21 @@ export const JSON_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : JsonCompleteTemplateDrivenValidationDirectivesComponent,
 						message : JsonMessageTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : JsonConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+						messageKey : JsonMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : JsonAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : JsonCompleteTemplateDrivenValidationDecoratorsComponent,
 						message : JsonMessageTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : JsonConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+						messageKey : JsonMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : JsonAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : JsonCompleteValidatorComponent,
 						message : JsonMessageValidatorComponent,
 						conditionalExpression : JsonConditionalExpressionValidatorComponent,
+						messageKey : JsonMessageKeyValidatorComponent,
 						dynamic : JsonDynamicValidatorComponent,
 						add : JsonAddValidatorComponent,
 			  },

@@ -20,4 +20,8 @@ export class EmployeeInfo {
 	salary: number;
 	
 	
+	@range({minimumNumber:1  ,maximumNumber:10  ,messageKey:'rangeMessageKey' }) 
+	noOfprojects: number;
+	
+	
 }

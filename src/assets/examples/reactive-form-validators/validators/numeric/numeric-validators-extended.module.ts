@@ -10,6 +10,7 @@ import { NumericAcceptValueValidatorComponent } from './acceptValue/numeric-acce
 import { NumericAllowDecimalValidatorComponent } from './allowDecimal/numeric-allow-decimal.component';
 import { NumericConditionalExpressionValidatorComponent } from './conditionalExpression/numeric-conditional-expression.component';
 import { NumericMessageValidatorComponent } from './message/numeric-message.component';
+import { NumericMessageKeyValidatorComponent } from './messageKey/numeric-message-key.component';
 import { NumericDynamicValidatorComponent } from './dynamic/numeric-dynamic.component';
 import { NumericAddValidatorComponent } from './add/numeric-add.component';
 
@@ -20,6 +21,7 @@ import { NumericAddValidatorComponent } from './add/numeric-add.component';
 	NumericAllowDecimalValidatorComponent,
 	NumericConditionalExpressionValidatorComponent,
 	NumericMessageValidatorComponent,
+	NumericMessageKeyValidatorComponent,
 	NumericDynamicValidatorComponent,
 	NumericAddValidatorComponent,
   ],
@@ -29,6 +31,7 @@ entryComponents: [
 	NumericAllowDecimalValidatorComponent,
 	NumericConditionalExpressionValidatorComponent,
 	NumericMessageValidatorComponent,
+	NumericMessageKeyValidatorComponent,
 	NumericDynamicValidatorComponent,
 	NumericAddValidatorComponent,
   ],
@@ -44,6 +47,7 @@ entryComponents: [
 	NumericAllowDecimalValidatorComponent,
 	NumericConditionalExpressionValidatorComponent,
 	NumericMessageValidatorComponent,
+	NumericMessageKeyValidatorComponent,
 	NumericDynamicValidatorComponent,
 	NumericAddValidatorComponent,
   ],

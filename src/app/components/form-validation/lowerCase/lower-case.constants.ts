@@ -10,6 +10,10 @@ import { LowerCaseMessageComponent } from "src/assets/examples/reactive-form-val
 import { LowerCaseMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lowerCase/message/lower-case-message.component";
 import { LowerCaseMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lowerCase/message/lower-case-message.component";
 import { LowerCaseMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lowerCase/message/lower-case-message.component";
+import { LowerCaseMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/lowerCase/messageKey/lower-case-message-key.component";
+import { LowerCaseMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lowerCase/messageKey/lower-case-message-key.component";
+import { LowerCaseMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lowerCase/messageKey/lower-case-message-key.component";
+import { LowerCaseMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lowerCase/messageKey/lower-case-message-key.component";
 import { LowerCaseDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/lowerCase/dynamic/lower-case-dynamic.component";
 import { LowerCaseDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lowerCase/dynamic/lower-case-dynamic.component";
 import { LowerCaseAddComponent } from "src/assets/examples/reactive-form-validators/decorators/lowerCase/add/lower-case-add.component";
@@ -23,6 +27,7 @@ export const LOWER_CASE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LowerCaseCompleteComponent,
 						conditionalExpression : LowerCaseConditionalExpressionComponent,
 						message : LowerCaseMessageComponent,
+						messageKey : LowerCaseMessageKeyComponent,
 						dynamic : LowerCaseDynamicComponent,
 						add : LowerCaseAddComponent,
 						edit : LowerCaseEditComponent,
@@ -31,18 +36,21 @@ export const LOWER_CASE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : LowerCaseCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : LowerCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : LowerCaseMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : LowerCaseMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : LowerCaseAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : LowerCaseCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : LowerCaseConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : LowerCaseMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : LowerCaseMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : LowerCaseAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : LowerCaseCompleteValidatorComponent,
 						conditionalExpression : LowerCaseConditionalExpressionValidatorComponent,
 						message : LowerCaseMessageValidatorComponent,
+						messageKey : LowerCaseMessageKeyValidatorComponent,
 						dynamic : LowerCaseDynamicValidatorComponent,
 						add : LowerCaseAddValidatorComponent,
 			  },

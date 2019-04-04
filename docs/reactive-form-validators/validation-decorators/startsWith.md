@@ -15,6 +15,7 @@ Suppose you want to create a user form, which contains fields like userId, name,
    <li>Apply validation on name field in which you want the user to enter value which starts with ‘n’.</li>
    <li>Apply startsWith validation based on matched condition in the form, like if the name is 'Bharat', then the profession must starts with 'Senior ' (Used as a function).</li>
    <li>Apply startsWith validation based on matched condition in the form, like if the name is 'Bharat', then the taskId must starts with '#' (Used as a string datatype).</li>
+  <li>Shows the custom message on `Skill` field by using `messageKey` property.</li>
    <data-scope scope="['decorator','validator']">
    <li>Apply StartsWith validation dynamically based on server rules.</li>
    </data-scope>
@@ -74,6 +75,7 @@ Below options are not mandatory to use in the `startsWith` validation. If needed
 <tr><td><a (click)='scrollTo("#value")' title="value">value</a></td><td>The `value` from which the input should starts with.</td></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>startsWith validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")'  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## value
@@ -107,6 +109,14 @@ To override the global configuration message and set the custom error message on
 
 <div component="app-code" key="startsWith-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-startsWith-message" title="startsWith {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="startsWith-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-startsWith-messageKey" title="startsWith {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete StartsWith Example
 

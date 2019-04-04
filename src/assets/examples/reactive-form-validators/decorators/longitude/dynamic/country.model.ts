@@ -11,4 +11,7 @@ export class Country {
 	@prop()
 	firstCountryLongitude: string;
 
+	@prop()
+	fourthCountryLongitude: string;
+
 }

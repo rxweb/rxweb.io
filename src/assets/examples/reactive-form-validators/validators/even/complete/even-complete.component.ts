@@ -19,6 +19,7 @@ export class EvenCompleteValidatorComponent implements OnInit {
             number:['', RxwebValidators.even({conditionalExpression:(x,y) => x.type == "Even"  })], 
             evenNumber:['', RxwebValidators.even({conditionalExpression:'x => x.type == "Even"' })], 
             multiplesOfEvenNumber:['', RxwebValidators.even({message:'{{0}} is not an even number' })], 
+            otherEvenNumber:['', RxwebValidators.even({messageKey:'evenMessageKey' })], 
         });
     }
 }

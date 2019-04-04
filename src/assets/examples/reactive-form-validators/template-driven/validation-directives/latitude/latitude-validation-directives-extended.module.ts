@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LatitudeCompleteTemplateDrivenValidationDirectivesComponent } from './complete/latitude-complete.component';
 import { LatitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/latitude-conditional-expression.component';
 import { LatitudeMessageTemplateDrivenValidationDirectivesComponent } from './message/latitude-message.component';
+import { LatitudeMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/latitude-message-key.component';
 import { LatitudeAddTemplateDrivenValidationDirectivesComponent } from './add/latitude-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { LatitudeAddTemplateDrivenValidationDirectivesComponent } from './add/la
 	LatitudeCompleteTemplateDrivenValidationDirectivesComponent,
 	LatitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LatitudeMessageTemplateDrivenValidationDirectivesComponent,
+	LatitudeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LatitudeAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	LatitudeCompleteTemplateDrivenValidationDirectivesComponent,
 	LatitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LatitudeMessageTemplateDrivenValidationDirectivesComponent,
+	LatitudeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LatitudeAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	LatitudeCompleteTemplateDrivenValidationDirectivesComponent,
 	LatitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LatitudeMessageTemplateDrivenValidationDirectivesComponent,
+	LatitudeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LatitudeAddTemplateDrivenValidationDirectivesComponent,
   ],
 

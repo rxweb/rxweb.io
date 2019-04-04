@@ -14,6 +14,10 @@ import { EndsWithMessageComponent } from "src/assets/examples/reactive-form-vali
 import { EndsWithMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/endsWith/message/ends-with-message.component";
 import { EndsWithMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/endsWith/message/ends-with-message.component";
 import { EndsWithMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/endsWith/message/ends-with-message.component";
+import { EndsWithMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/endsWith/messageKey/ends-with-message-key.component";
+import { EndsWithMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/endsWith/messageKey/ends-with-message-key.component";
+import { EndsWithMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/endsWith/messageKey/ends-with-message-key.component";
+import { EndsWithMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/endsWith/messageKey/ends-with-message-key.component";
 import { EndsWithDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/endsWith/dynamic/ends-with-dynamic.component";
 import { EndsWithDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/endsWith/dynamic/ends-with-dynamic.component";
 import { EndsWithAddComponent } from "src/assets/examples/reactive-form-validators/decorators/endsWith/add/ends-with-add.component";
@@ -28,6 +32,7 @@ export const ENDS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : EndsWithValueComponent,
 						conditionalExpression : EndsWithConditionalExpressionComponent,
 						message : EndsWithMessageComponent,
+						messageKey : EndsWithMessageKeyComponent,
 						dynamic : EndsWithDynamicComponent,
 						add : EndsWithAddComponent,
 						edit : EndsWithEditComponent,
@@ -37,6 +42,7 @@ export const ENDS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : EndsWithValueTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : EndsWithConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : EndsWithMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : EndsWithMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : EndsWithAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const ENDS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : EndsWithValueTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : EndsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : EndsWithMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : EndsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : EndsWithAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const ENDS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : EndsWithValueValidatorComponent,
 						conditionalExpression : EndsWithConditionalExpressionValidatorComponent,
 						message : EndsWithMessageValidatorComponent,
+						messageKey : EndsWithMessageKeyValidatorComponent,
 						dynamic : EndsWithDynamicValidatorComponent,
 						add : EndsWithAddValidatorComponent,
 			  },

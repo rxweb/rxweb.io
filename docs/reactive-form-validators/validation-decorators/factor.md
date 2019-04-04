@@ -17,6 +17,7 @@ Suppose you want to create a user form in which you want user to enter factor of
    <li>Apply factor validation based on matched condition in the form, like if the firstNumber  is '25' then the `thirdNumber` input must be a factor of the input enterred in firstNumber (conditional Expression with String).</li>
    <li>Apply factor validation on `fourthNumber` field based of dividend. dividend is the value for which factors are calculated.</li>
    <li>Adding the Custom Validation Message on `sixthNumber` field.</li>
+   <li>Shows the custom message on `Seventh Number` field by using `messageKey` property.</li>
    <data-scope scope="['decorator','validator']">
       <li>Apply factor validation dynamically based on server rules.</li>
    </data-scope>
@@ -83,6 +84,7 @@ Below options are not mandatory to use in the `factor` validation. If needed the
 <tr><td><a href="#fieldName" (click)='scrollTo("#fieldName")' title="fieldName">fieldName</a></td><td>fieldName property is the name of the name of field for which the factors needed to be entered.</td></tr>
 <tr><td><a href="#conditionalExpression" (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Factor validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
 <tr><td><a href="#message" (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a href="#messageKey" (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## dividend 
@@ -123,6 +125,14 @@ To override the global configuration message and set the custom error message on
 
 <div component="app-code" key="factor-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-factor-message" title="factor {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="factor-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-factor-messageKey" title="factor {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete Factor Example
 

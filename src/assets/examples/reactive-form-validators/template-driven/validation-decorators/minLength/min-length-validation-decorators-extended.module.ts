@@ -9,6 +9,7 @@ import { MinLengthCompleteTemplateDrivenValidationDecoratorsComponent } from './
 import { MinLengthValueTemplateDrivenValidationDecoratorsComponent } from './value/min-length-value.component';
 import { MinLengthMessageTemplateDrivenValidationDecoratorsComponent } from './message/min-length-message.component';
 import { MinLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/min-length-conditional-expression.component';
+import { MinLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/min-length-message-key.component';
 import { MinLengthAddTemplateDrivenValidationDecoratorsComponent } from './add/min-length-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MinLengthAddTemplateDrivenValidationDecoratorsComponent } from './add/m
 	MinLengthValueTemplateDrivenValidationDecoratorsComponent,
 	MinLengthMessageTemplateDrivenValidationDecoratorsComponent,
 	MinLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	MinLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MinLengthAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	MinLengthValueTemplateDrivenValidationDecoratorsComponent,
 	MinLengthMessageTemplateDrivenValidationDecoratorsComponent,
 	MinLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	MinLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MinLengthAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	MinLengthValueTemplateDrivenValidationDecoratorsComponent,
 	MinLengthMessageTemplateDrivenValidationDecoratorsComponent,
 	MinLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	MinLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MinLengthAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

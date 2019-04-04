@@ -20,7 +20,7 @@ export class MacDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/mac/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var macAddressInfo = { device:'', macAddress:'', localMacAddress:'', systemMacAddress:'',  }
+			var macAddressInfo = { device:'', macAddress:'', localMacAddress:'', systemMacAddress:'', serverMacAddress:'',  }
 			this.macAddressInfoFormGroup = this.formBuilder.group(macAddressInfo,formBuilderConfiguration);
 		})
     }

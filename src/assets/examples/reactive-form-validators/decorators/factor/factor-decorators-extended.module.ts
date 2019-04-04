@@ -10,6 +10,7 @@ import { FactorFieldNameComponent } from './fieldName/factor-field-name.componen
 import { FactorConditionalExpressionComponent } from './conditionalExpression/factor-conditional-expression.component';
 import { FactorDividendComponent } from './dividend/factor-dividend.component';
 import { FactorMessageComponent } from './message/factor-message.component';
+import { FactorMessageKeyComponent } from './messageKey/factor-message-key.component';
 import { FactorDynamicComponent } from './dynamic/factor-dynamic.component';
 import { FactorAddComponent } from './add/factor-add.component';
 import { FactorEditComponent } from './edit/factor-edit.component';
@@ -21,6 +22,7 @@ import { FactorEditComponent } from './edit/factor-edit.component';
 	FactorConditionalExpressionComponent,
 	FactorDividendComponent,
 	FactorMessageComponent,
+	FactorMessageKeyComponent,
 	FactorDynamicComponent,
 	FactorAddComponent,
 	FactorEditComponent,
@@ -31,6 +33,7 @@ entryComponents: [
 	FactorConditionalExpressionComponent,
 	FactorDividendComponent,
 	FactorMessageComponent,
+	FactorMessageKeyComponent,
 	FactorDynamicComponent,
 	FactorAddComponent,
 	FactorEditComponent,
@@ -47,6 +50,7 @@ entryComponents: [
 	FactorConditionalExpressionComponent,
 	FactorDividendComponent,
 	FactorMessageComponent,
+	FactorMessageKeyComponent,
 	FactorDynamicComponent,
 	FactorAddComponent,
 	FactorEditComponent,

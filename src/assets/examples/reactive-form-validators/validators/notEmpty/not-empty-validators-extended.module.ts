@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { NotEmptyCompleteValidatorComponent } from './complete/not-empty-complete.component';
 import { NotEmptyConditionalExpressionValidatorComponent } from './conditionalExpression/not-empty-conditional-expression.component';
 import { NotEmptyMessageValidatorComponent } from './message/not-empty-message.component';
+import { NotEmptyMessageKeyValidatorComponent } from './messageKey/not-empty-message-key.component';
 import { NotEmptyDynamicValidatorComponent } from './dynamic/not-empty-dynamic.component';
 import { NotEmptyAddValidatorComponent } from './add/not-empty-add.component';
 
@@ -16,6 +17,7 @@ import { NotEmptyAddValidatorComponent } from './add/not-empty-add.component';
 	NotEmptyCompleteValidatorComponent,
 	NotEmptyConditionalExpressionValidatorComponent,
 	NotEmptyMessageValidatorComponent,
+	NotEmptyMessageKeyValidatorComponent,
 	NotEmptyDynamicValidatorComponent,
 	NotEmptyAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	NotEmptyCompleteValidatorComponent,
 	NotEmptyConditionalExpressionValidatorComponent,
 	NotEmptyMessageValidatorComponent,
+	NotEmptyMessageKeyValidatorComponent,
 	NotEmptyDynamicValidatorComponent,
 	NotEmptyAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	NotEmptyCompleteValidatorComponent,
 	NotEmptyConditionalExpressionValidatorComponent,
 	NotEmptyMessageValidatorComponent,
+	NotEmptyMessageKeyValidatorComponent,
 	NotEmptyDynamicValidatorComponent,
 	NotEmptyAddValidatorComponent,
   ],

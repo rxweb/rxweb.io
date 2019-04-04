@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { EmailCompleteValidatorComponent } from './complete/email-complete.component';
 import { EmailConditionalExpressionValidatorComponent } from './conditionalExpression/email-conditional-expression.component';
 import { EmailMessageValidatorComponent } from './message/email-message.component';
+import { EmailMessageKeyValidatorComponent } from './messageKey/email-message-key.component';
 import { EmailDynamicValidatorComponent } from './dynamic/email-dynamic.component';
 import { EmailAddValidatorComponent } from './add/email-add.component';
 
@@ -16,6 +17,7 @@ import { EmailAddValidatorComponent } from './add/email-add.component';
 	EmailCompleteValidatorComponent,
 	EmailConditionalExpressionValidatorComponent,
 	EmailMessageValidatorComponent,
+	EmailMessageKeyValidatorComponent,
 	EmailDynamicValidatorComponent,
 	EmailAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	EmailCompleteValidatorComponent,
 	EmailConditionalExpressionValidatorComponent,
 	EmailMessageValidatorComponent,
+	EmailMessageKeyValidatorComponent,
 	EmailDynamicValidatorComponent,
 	EmailAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	EmailCompleteValidatorComponent,
 	EmailConditionalExpressionValidatorComponent,
 	EmailMessageValidatorComponent,
+	EmailMessageKeyValidatorComponent,
 	EmailDynamicValidatorComponent,
 	EmailAddValidatorComponent,
   ],

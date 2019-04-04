@@ -11,4 +11,7 @@ export class HexcolorInfo {
 	@prop()
 	bodyHexcolorCode: string;
 
+	@prop()
+	titleHexcolorCode: string;
+
 }

@@ -20,4 +20,8 @@ export class HexcolorInfo {
 	bodyHexcolorCode: string;
 	
 	
+	@hexColor({messageKey:'hexColorMessageKey' }) 
+	titleHexcolorCode: string;
+	
+	
 }

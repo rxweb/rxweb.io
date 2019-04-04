@@ -1,9 +1,20 @@
-import {  cusip, } from   "@rxweb/reactive-form-validators"   
+import {  cusip,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class CompanyInfo {
 
-	@cusip() 
+	@prop()
+	companyName: string;
+
+	@prop()
 	oracleCorporationCusipCode: string;
-	
-	
+
+	@prop()
+	microsoftCorporationCusipCode: string;
+
+	@prop()
+	appleIncCusipCode: string;
+
+	@prop()
+	amazonCorporationCusipCode: string;
+
 }

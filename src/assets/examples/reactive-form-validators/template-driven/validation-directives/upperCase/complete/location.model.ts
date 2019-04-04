@@ -13,4 +13,7 @@ export class Location {
 	colonyName: string;
 	
 	
+	streetName: string;
+	
+	
 }

@@ -15,6 +15,7 @@ Suppose you want to create a user form in which you want to compare two differen
 <ol class='showHideElement'>
 	<li>Apply compare validator on Confirm Email field to compare its input with Email field.</li>
     <li>Displaying the Custom Message on ConfirmPassword field and compare its input with Password field input.</li>
+    <li>Shows the custom message on `Confirm Contact Number` field by using `messageKey` property.</li>
     <data-scope scope="['decorator','validator']">
         <li>Apply compare validation dynamically based on server rules.</li>
     </data-scope>
@@ -52,6 +53,7 @@ Below options are not mandatory to use in the `compare` validation. If needed th
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a (click)='scrollTo("#fieldName")' title="fieldName">fieldName</a></td><td>Current property is matched with the particular property. So we need to pass particular property name.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>	To override the global configuration message and set the custom error message on respective FormControl.</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## fieldName 
@@ -69,6 +71,14 @@ To override the global configuration message and set the custom error message on
 
 <div component="app-code" key="compare-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-compare-message" title="compare {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="compare-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-compare-messageKey" title="compare {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete Compare Example
 

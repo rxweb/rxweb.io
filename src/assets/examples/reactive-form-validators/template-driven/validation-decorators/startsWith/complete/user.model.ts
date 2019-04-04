@@ -20,4 +20,8 @@ export class User {
 	company: string;
 	
 	
+	@startsWith({value:'A'  ,messageKey:'startsWithMessageKey' }) 
+	skill: string;
+	
+	
 }

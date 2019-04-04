@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { CusipCompleteValidatorComponent } from './complete/cusip-complete.component';
 import { CusipConditionalExpressionValidatorComponent } from './conditionalExpression/cusip-conditional-expression.component';
 import { CusipMessageValidatorComponent } from './message/cusip-message.component';
+import { CusipMessageKeyValidatorComponent } from './messageKey/cusip-message-key.component';
 import { CusipDynamicValidatorComponent } from './dynamic/cusip-dynamic.component';
 import { CusipAddValidatorComponent } from './add/cusip-add.component';
 
@@ -16,6 +17,7 @@ import { CusipAddValidatorComponent } from './add/cusip-add.component';
 	CusipCompleteValidatorComponent,
 	CusipConditionalExpressionValidatorComponent,
 	CusipMessageValidatorComponent,
+	CusipMessageKeyValidatorComponent,
 	CusipDynamicValidatorComponent,
 	CusipAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	CusipCompleteValidatorComponent,
 	CusipConditionalExpressionValidatorComponent,
 	CusipMessageValidatorComponent,
+	CusipMessageKeyValidatorComponent,
 	CusipDynamicValidatorComponent,
 	CusipAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	CusipCompleteValidatorComponent,
 	CusipConditionalExpressionValidatorComponent,
 	CusipMessageValidatorComponent,
+	CusipMessageKeyValidatorComponent,
 	CusipDynamicValidatorComponent,
 	CusipAddValidatorComponent,
   ],

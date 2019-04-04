@@ -14,6 +14,10 @@ import { StartsWithMessageComponent } from "src/assets/examples/reactive-form-va
 import { StartsWithMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/startsWith/message/starts-with-message.component";
 import { StartsWithMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/startsWith/message/starts-with-message.component";
 import { StartsWithMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/startsWith/message/starts-with-message.component";
+import { StartsWithMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/startsWith/messageKey/starts-with-message-key.component";
+import { StartsWithMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/startsWith/messageKey/starts-with-message-key.component";
+import { StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/startsWith/messageKey/starts-with-message-key.component";
+import { StartsWithMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/startsWith/messageKey/starts-with-message-key.component";
 import { StartsWithDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/startsWith/dynamic/starts-with-dynamic.component";
 import { StartsWithDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/startsWith/dynamic/starts-with-dynamic.component";
 import { StartsWithAddComponent } from "src/assets/examples/reactive-form-validators/decorators/startsWith/add/starts-with-add.component";
@@ -28,6 +32,7 @@ export const STARTS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : StartsWithValueComponent,
 						conditionalExpression : StartsWithConditionalExpressionComponent,
 						message : StartsWithMessageComponent,
+						messageKey : StartsWithMessageKeyComponent,
 						dynamic : StartsWithDynamicComponent,
 						add : StartsWithAddComponent,
 						edit : StartsWithEditComponent,
@@ -37,6 +42,7 @@ export const STARTS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : StartsWithValueTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : StartsWithConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : StartsWithMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : StartsWithMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : StartsWithAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const STARTS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : StartsWithValueTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : StartsWithMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : StartsWithAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const STARTS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : StartsWithValueValidatorComponent,
 						conditionalExpression : StartsWithConditionalExpressionValidatorComponent,
 						message : StartsWithMessageValidatorComponent,
+						messageKey : StartsWithMessageKeyValidatorComponent,
 						dynamic : StartsWithDynamicValidatorComponent,
 						add : StartsWithAddValidatorComponent,
 			  },

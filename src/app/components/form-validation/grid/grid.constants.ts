@@ -10,6 +10,10 @@ import { GridMessageComponent } from "src/assets/examples/reactive-form-validato
 import { GridMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/grid/message/grid-message.component";
 import { GridMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/grid/message/grid-message.component";
 import { GridMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/grid/message/grid-message.component";
+import { GridMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/grid/messageKey/grid-message-key.component";
+import { GridMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/grid/messageKey/grid-message-key.component";
+import { GridMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/grid/messageKey/grid-message-key.component";
+import { GridMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/grid/messageKey/grid-message-key.component";
 import { GridDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/grid/dynamic/grid-dynamic.component";
 import { GridDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/grid/dynamic/grid-dynamic.component";
 import { GridAddComponent } from "src/assets/examples/reactive-form-validators/decorators/grid/add/grid-add.component";
@@ -23,6 +27,7 @@ export const GRID_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : GridCompleteComponent,
 						conditionalExpression : GridConditionalExpressionComponent,
 						message : GridMessageComponent,
+						messageKey : GridMessageKeyComponent,
 						dynamic : GridDynamicComponent,
 						add : GridAddComponent,
 						edit : GridEditComponent,
@@ -31,18 +36,21 @@ export const GRID_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : GridCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : GridConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : GridMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : GridMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : GridAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : GridCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : GridConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : GridMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : GridMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : GridAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : GridCompleteValidatorComponent,
 						conditionalExpression : GridConditionalExpressionValidatorComponent,
 						message : GridMessageValidatorComponent,
+						messageKey : GridMessageKeyValidatorComponent,
 						dynamic : GridDynamicValidatorComponent,
 						add : GridAddValidatorComponent,
 			  },

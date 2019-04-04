@@ -1,9 +1,17 @@
-import {  contains, } from   "@rxweb/reactive-form-validators"   
+import {  contains,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@contains({value:'@gmail.com' }) 
+	@prop()
 	emailAddress: string;
-	
-	
+
+	@prop()
+	recoveryEmailAddress: string;
+
+	@prop()
+	otherEmailAddress: string;
+
+	@prop()
+	organizationEmailAddress: string;
+
 }

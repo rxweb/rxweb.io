@@ -19,4 +19,7 @@ export class EmployeeInfo {
 
   @choice({ maxLength: 4, message: "You can select upto 4 hobbies" })
   hobbies: string;
+
+  @choice({ minLength: 4, messageKey: 'choiceMessageKey' })
+  certifications: string;
 }

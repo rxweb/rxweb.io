@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { UrlCompleteValidatorComponent } from './complete/url-complete.component';
 import { UrlConditionalExpressionValidatorComponent } from './conditionalExpression/url-conditional-expression.component';
 import { UrlMessageValidatorComponent } from './message/url-message.component';
+import { UrlMessageKeyValidatorComponent } from './messageKey/url-message-key.component';
 import { UrlDynamicValidatorComponent } from './dynamic/url-dynamic.component';
 import { UrlAddValidatorComponent } from './add/url-add.component';
 
@@ -16,6 +17,7 @@ import { UrlAddValidatorComponent } from './add/url-add.component';
 	UrlCompleteValidatorComponent,
 	UrlConditionalExpressionValidatorComponent,
 	UrlMessageValidatorComponent,
+	UrlMessageKeyValidatorComponent,
 	UrlDynamicValidatorComponent,
 	UrlAddValidatorComponent,
   ],
@@ -23,6 +25,7 @@ entryComponents: [
 	UrlCompleteValidatorComponent,
 	UrlConditionalExpressionValidatorComponent,
 	UrlMessageValidatorComponent,
+	UrlMessageKeyValidatorComponent,
 	UrlDynamicValidatorComponent,
 	UrlAddValidatorComponent,
   ],
@@ -36,6 +39,7 @@ entryComponents: [
 	UrlCompleteValidatorComponent,
 	UrlConditionalExpressionValidatorComponent,
 	UrlMessageValidatorComponent,
+	UrlMessageKeyValidatorComponent,
 	UrlDynamicValidatorComponent,
 	UrlAddValidatorComponent,
   ],

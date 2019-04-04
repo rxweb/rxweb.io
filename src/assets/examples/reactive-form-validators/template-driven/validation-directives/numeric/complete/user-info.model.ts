@@ -18,4 +18,7 @@ export class UserInfo {
 	positiveNumber: number;
 	
 	
+	positiveNonDecimalNumber: number;
+	
+	
 }

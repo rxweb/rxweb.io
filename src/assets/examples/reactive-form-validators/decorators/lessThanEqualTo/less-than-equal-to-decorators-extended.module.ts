@@ -9,6 +9,7 @@ import { LessThanEqualToCompleteComponent } from './complete/less-than-equal-to-
 import { LessThanEqualToFieldNameComponent } from './fieldName/less-than-equal-to-field-name.component';
 import { LessThanEqualToConditionalExpressionComponent } from './conditionalExpression/less-than-equal-to-conditional-expression.component';
 import { LessThanEqualToMessageComponent } from './message/less-than-equal-to-message.component';
+import { LessThanEqualToMessageKeyComponent } from './messageKey/less-than-equal-to-message-key.component';
 import { LessThanEqualToDynamicComponent } from './dynamic/less-than-equal-to-dynamic.component';
 import { LessThanEqualToAddComponent } from './add/less-than-equal-to-add.component';
 import { LessThanEqualToEditComponent } from './edit/less-than-equal-to-edit.component';
@@ -19,6 +20,7 @@ import { LessThanEqualToEditComponent } from './edit/less-than-equal-to-edit.com
 	LessThanEqualToFieldNameComponent,
 	LessThanEqualToConditionalExpressionComponent,
 	LessThanEqualToMessageComponent,
+	LessThanEqualToMessageKeyComponent,
 	LessThanEqualToDynamicComponent,
 	LessThanEqualToAddComponent,
 	LessThanEqualToEditComponent,
@@ -28,6 +30,7 @@ entryComponents: [
 	LessThanEqualToFieldNameComponent,
 	LessThanEqualToConditionalExpressionComponent,
 	LessThanEqualToMessageComponent,
+	LessThanEqualToMessageKeyComponent,
 	LessThanEqualToDynamicComponent,
 	LessThanEqualToAddComponent,
 	LessThanEqualToEditComponent,
@@ -43,6 +46,7 @@ entryComponents: [
 	LessThanEqualToFieldNameComponent,
 	LessThanEqualToConditionalExpressionComponent,
 	LessThanEqualToMessageComponent,
+	LessThanEqualToMessageKeyComponent,
 	LessThanEqualToDynamicComponent,
 	LessThanEqualToAddComponent,
 	LessThanEqualToEditComponent,

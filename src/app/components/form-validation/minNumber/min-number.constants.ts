@@ -14,6 +14,10 @@ import { MinNumberConditionalExpressionComponent } from "src/assets/examples/rea
 import { MinNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/minNumber/conditionalExpression/min-number-conditional-expression.component";
 import { MinNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/minNumber/conditionalExpression/min-number-conditional-expression.component";
 import { MinNumberConditionalExpressionValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/minNumber/conditionalExpression/min-number-conditional-expression.component";
+import { MinNumberMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/minNumber/messageKey/min-number-message-key.component";
+import { MinNumberMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/minNumber/messageKey/min-number-message-key.component";
+import { MinNumberMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/minNumber/messageKey/min-number-message-key.component";
+import { MinNumberMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/minNumber/messageKey/min-number-message-key.component";
 import { MinNumberDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/minNumber/dynamic/min-number-dynamic.component";
 import { MinNumberDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/minNumber/dynamic/min-number-dynamic.component";
 import { MinNumberAddComponent } from "src/assets/examples/reactive-form-validators/decorators/minNumber/add/min-number-add.component";
@@ -28,6 +32,7 @@ export const MIN_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MinNumberValueComponent,
 						message : MinNumberMessageComponent,
 						conditionalExpression : MinNumberConditionalExpressionComponent,
+						messageKey : MinNumberMessageKeyComponent,
 						dynamic : MinNumberDynamicComponent,
 						add : MinNumberAddComponent,
 						edit : MinNumberEditComponent,
@@ -37,6 +42,7 @@ export const MIN_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MinNumberValueTemplateDrivenValidationDirectivesComponent,
 						message : MinNumberMessageTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : MinNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent,
+						messageKey : MinNumberMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : MinNumberAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -44,6 +50,7 @@ export const MIN_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MinNumberValueTemplateDrivenValidationDecoratorsComponent,
 						message : MinNumberMessageTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : MinNumberConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+						messageKey : MinNumberMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : MinNumberAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -51,6 +58,7 @@ export const MIN_NUMBER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						value : MinNumberValueValidatorComponent,
 						message : MinNumberMessageValidatorComponent,
 						conditionalExpression : MinNumberConditionalExpressionValidatorComponent,
+						messageKey : MinNumberMessageKeyValidatorComponent,
 						dynamic : MinNumberDynamicValidatorComponent,
 						add : MinNumberAddValidatorComponent,
 			  },

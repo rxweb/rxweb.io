@@ -1,9 +1,17 @@
-import {  date, } from   "@rxweb/reactive-form-validators"   
+import {  date,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class UserInfo {
 
-	@date() 
+	@prop()
 	birthDate: string;
-	
-	
+
+	@prop()
+	enrollmentDate: string;
+
+	@prop()
+	allocationDate: string;
+
+	@prop()
+	confirmationDate: string;
+
 }

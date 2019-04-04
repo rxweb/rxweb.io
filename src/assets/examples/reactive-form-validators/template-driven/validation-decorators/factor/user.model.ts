@@ -1,9 +1,23 @@
-import {  factor, } from   "@rxweb/reactive-form-validators"   
+import {  factor,prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@factor({dividend:50 }) 
-	firstNumber: Number;
-	
-	
+	@prop()
+	firstNumber: number;
+
+	@prop()
+	fifthNumber: number;
+
+	@prop()
+	thirdNumber: number;
+
+	@prop()
+	fourthNumber: number;
+
+	@prop()
+	sixthNumber: number;
+
+	@prop()
+	seventhNumber: number;
+
 }

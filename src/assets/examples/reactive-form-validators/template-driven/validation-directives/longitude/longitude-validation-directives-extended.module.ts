@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { LongitudeCompleteTemplateDrivenValidationDirectivesComponent } from './complete/longitude-complete.component';
 import { LongitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/longitude-conditional-expression.component';
 import { LongitudeMessageTemplateDrivenValidationDirectivesComponent } from './message/longitude-message.component';
+import { LongitudeMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/longitude-message-key.component';
 import { LongitudeAddTemplateDrivenValidationDirectivesComponent } from './add/longitude-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { LongitudeAddTemplateDrivenValidationDirectivesComponent } from './add/l
 	LongitudeCompleteTemplateDrivenValidationDirectivesComponent,
 	LongitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LongitudeMessageTemplateDrivenValidationDirectivesComponent,
+	LongitudeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LongitudeAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	LongitudeCompleteTemplateDrivenValidationDirectivesComponent,
 	LongitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LongitudeMessageTemplateDrivenValidationDirectivesComponent,
+	LongitudeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LongitudeAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	LongitudeCompleteTemplateDrivenValidationDirectivesComponent,
 	LongitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LongitudeMessageTemplateDrivenValidationDirectivesComponent,
+	LongitudeMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LongitudeAddTemplateDrivenValidationDirectivesComponent,
   ],
 

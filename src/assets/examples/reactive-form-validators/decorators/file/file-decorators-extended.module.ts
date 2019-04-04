@@ -10,6 +10,7 @@ import { FileMaxFilesComponent } from './maxFiles/file-max-files.component';
 import { FileMinFilesComponent } from './minFiles/file-min-files.component';
 import { FileConditionalExpressionComponent } from './conditionalExpression/file-conditional-expression.component';
 import { FileMessageComponent } from './message/file-message.component';
+import { FileMessageKeyComponent } from './messageKey/file-message-key.component';
 import { FileDynamicComponent } from './dynamic/file-dynamic.component';
 import { FileAddComponent } from './add/file-add.component';
 import { FileEditComponent } from './edit/file-edit.component';
@@ -21,6 +22,7 @@ import { FileEditComponent } from './edit/file-edit.component';
 	FileMinFilesComponent,
 	FileConditionalExpressionComponent,
 	FileMessageComponent,
+	FileMessageKeyComponent,
 	FileDynamicComponent,
 	FileAddComponent,
 	FileEditComponent,
@@ -31,6 +33,7 @@ entryComponents: [
 	FileMinFilesComponent,
 	FileConditionalExpressionComponent,
 	FileMessageComponent,
+	FileMessageKeyComponent,
 	FileDynamicComponent,
 	FileAddComponent,
 	FileEditComponent,
@@ -47,6 +50,7 @@ entryComponents: [
 	FileMinFilesComponent,
 	FileConditionalExpressionComponent,
 	FileMessageComponent,
+	FileMessageKeyComponent,
 	FileDynamicComponent,
 	FileAddComponent,
 	FileEditComponent,

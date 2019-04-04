@@ -20,4 +20,8 @@ export class User {
 	userName: string;
 	
 	
+	@notEmpty({messageKey:'notEmptyMessageKey' }) 
+	fullName: string;
+	
+	
 }

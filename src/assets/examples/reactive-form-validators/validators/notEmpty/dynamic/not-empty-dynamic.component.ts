@@ -20,7 +20,7 @@ export class NotEmptyDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/notEmpty/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { firstName:'', middleName:'', lastName:'', userName:'',  }
+			var user = { firstName:'', middleName:'', lastName:'', userName:'', fullName:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

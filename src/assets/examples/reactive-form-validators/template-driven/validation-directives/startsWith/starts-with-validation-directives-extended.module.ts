@@ -9,6 +9,7 @@ import { StartsWithCompleteTemplateDrivenValidationDirectivesComponent } from '.
 import { StartsWithValueTemplateDrivenValidationDirectivesComponent } from './value/starts-with-value.component';
 import { StartsWithConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/starts-with-conditional-expression.component';
 import { StartsWithMessageTemplateDrivenValidationDirectivesComponent } from './message/starts-with-message.component';
+import { StartsWithMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/starts-with-message-key.component';
 import { StartsWithAddTemplateDrivenValidationDirectivesComponent } from './add/starts-with-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { StartsWithAddTemplateDrivenValidationDirectivesComponent } from './add/
 	StartsWithValueTemplateDrivenValidationDirectivesComponent,
 	StartsWithConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	StartsWithMessageTemplateDrivenValidationDirectivesComponent,
+	StartsWithMessageKeyTemplateDrivenValidationDirectivesComponent,
 	StartsWithAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	StartsWithValueTemplateDrivenValidationDirectivesComponent,
 	StartsWithConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	StartsWithMessageTemplateDrivenValidationDirectivesComponent,
+	StartsWithMessageKeyTemplateDrivenValidationDirectivesComponent,
 	StartsWithAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	StartsWithValueTemplateDrivenValidationDirectivesComponent,
 	StartsWithConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	StartsWithMessageTemplateDrivenValidationDirectivesComponent,
+	StartsWithMessageKeyTemplateDrivenValidationDirectivesComponent,
 	StartsWithAddTemplateDrivenValidationDirectivesComponent,
   ],
 

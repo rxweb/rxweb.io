@@ -61,6 +61,13 @@
       <small class="form-text text-muted">If you want to apply conditional validation on 'Diners Club Card' then you need to add 'card type' input as 'DinersClub'.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.dinersClubCard?.errors">{{userForm.controls?.dinersClubCard?.errors?.creditCard.message}}<br/></small>	
     </div>
+    <div class="form-group">
+      <label>Other Master Card</label>
+	    <input type="text" name="otherMasterCard" [(ngModel)]="user.otherMasterCard"  class="form-control" [creditCard]="{'fieldName':'cardType','conditionalExpression':'x => x.cardType == \'MasterCard\'','messageKey':'creditCardMessageKey'}"/>
+
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherMasterCard?.errors">{{userForm.controls?.otherMasterCard?.errors?.creditCard.message}}<br/></small>	
+    </div>
     <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
   </form>
 </div>

@@ -19,6 +19,7 @@ export class PrimeNumberCompleteValidatorComponent implements OnInit {
             secondNumber:['', RxwebValidators.primeNumber({conditionalExpression:(x,y) => x.numberType == "Prime"  })], 
             thirdNumber:['', RxwebValidators.primeNumber({conditionalExpression:'x => x.numberType =="Prime"' })], 
             firstNumber:['', RxwebValidators.primeNumber({message:'{{0}} is not a prime number' })], 
+            fourthNumber:['', RxwebValidators.primeNumber({messageKey:'primeNumberMessageKey' })], 
         });
     }
 }

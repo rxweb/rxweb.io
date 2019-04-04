@@ -1,0 +1,10 @@
+<div>
+  <form  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>Passport</label>
+      <input type="file" formControlName="passport" class="form-control"  />
+	<small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.passport.errors">{{userInfoFormGroup.controls.passport.errors.image.message}}<br/></small>
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

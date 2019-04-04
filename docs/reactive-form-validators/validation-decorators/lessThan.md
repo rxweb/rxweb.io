@@ -15,6 +15,7 @@ Suppose you want to create a User form, which contains fields like ObtainedMarks
     <li>Allow numbers which are less than a perticular field like in PassingMarks.</li>
     <li>Apply lessThan validation based on matched condition in the form, like if the ObtainedMarks is less than 35, then only the greater than validation will be applied to PassingMarks field.</li>
     <li>Adding Custom Message on OtherMarks Field.</li>
+    <li>Shows the custom message on `Discipline Marks` field by using `messageKey` property.</li>
     <data-scope scope="['decorator','validator']">
     <li>Apply lessThan validation dynamically based on server rules.</li>
     </data-scope>
@@ -79,6 +80,7 @@ Below options are not mandatory to use in the `lessThan` validation. If needed t
 <tr><td><a title="fieldName">fieldName</a></td><td>Less than validation should be applied based on the `fieldName` for compare other field value</td></tr>
 <tr><td><a  title="conditionalExpression">conditionalExpression</a></td><td>Less than validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function. For boolean variables, if you want to apply conditionalExpression, you must use `===` instead of `==`.</td></tr>
 <tr><td><a  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
 ## fieldName 
@@ -112,6 +114,14 @@ To override the global configuration message and set the custom message on respe
  
 <div component="app-code" key="lessThan-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-lessThan-message" title="lessThan {{validatorType}} with message" key="message"></div>
+
+## messageKey
+Type : `string`
+
+messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.
+
+<div component="app-code" key="lessThan-messageKeyExample-model"></div> 
+<div component="app-example-runner" ref-component="app-lessThan-messageKey" title="lessThan {{validatorType}} with messageKey" key="messageKey"></div>
 
 # Complete lessThan Example
 

@@ -10,6 +10,10 @@ import { UpperCaseMessageComponent } from "src/assets/examples/reactive-form-val
 import { UpperCaseMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/upperCase/message/upper-case-message.component";
 import { UpperCaseMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/upperCase/message/upper-case-message.component";
 import { UpperCaseMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/upperCase/message/upper-case-message.component";
+import { UpperCaseMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/upperCase/messageKey/upper-case-message-key.component";
+import { UpperCaseMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/upperCase/messageKey/upper-case-message-key.component";
+import { UpperCaseMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/upperCase/messageKey/upper-case-message-key.component";
+import { UpperCaseMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/upperCase/messageKey/upper-case-message-key.component";
 import { UpperCaseDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/upperCase/dynamic/upper-case-dynamic.component";
 import { UpperCaseDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/upperCase/dynamic/upper-case-dynamic.component";
 import { UpperCaseAddComponent } from "src/assets/examples/reactive-form-validators/decorators/upperCase/add/upper-case-add.component";
@@ -23,6 +27,7 @@ export const UPPER_CASE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : UpperCaseCompleteComponent,
 						conditionalExpression : UpperCaseConditionalExpressionComponent,
 						message : UpperCaseMessageComponent,
+						messageKey : UpperCaseMessageKeyComponent,
 						dynamic : UpperCaseDynamicComponent,
 						add : UpperCaseAddComponent,
 						edit : UpperCaseEditComponent,
@@ -31,18 +36,21 @@ export const UPPER_CASE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						complete : UpperCaseCompleteTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : UpperCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : UpperCaseMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : UpperCaseMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : UpperCaseAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : UpperCaseCompleteTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : UpperCaseConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : UpperCaseMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : UpperCaseMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : UpperCaseAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : UpperCaseCompleteValidatorComponent,
 						conditionalExpression : UpperCaseConditionalExpressionValidatorComponent,
 						message : UpperCaseMessageValidatorComponent,
+						messageKey : UpperCaseMessageKeyValidatorComponent,
 						dynamic : UpperCaseDynamicValidatorComponent,
 						add : UpperCaseAddValidatorComponent,
 			  },

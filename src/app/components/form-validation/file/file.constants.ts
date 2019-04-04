@@ -18,6 +18,10 @@ import { FileMessageComponent } from "src/assets/examples/reactive-form-validato
 import { FileMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/file/message/file-message.component";
 import { FileMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/file/message/file-message.component";
 import { FileMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/file/message/file-message.component";
+import { FileMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/file/messageKey/file-message-key.component";
+import { FileMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/file/messageKey/file-message-key.component";
+import { FileMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/file/messageKey/file-message-key.component";
+import { FileMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/file/messageKey/file-message-key.component";
 import { FileDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/file/dynamic/file-dynamic.component";
 import { FileDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/file/dynamic/file-dynamic.component";
 import { FileAddComponent } from "src/assets/examples/reactive-form-validators/decorators/file/add/file-add.component";
@@ -33,6 +37,7 @@ export const FILE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minFiles : FileMinFilesComponent,
 						conditionalExpression : FileConditionalExpressionComponent,
 						message : FileMessageComponent,
+						messageKey : FileMessageKeyComponent,
 						dynamic : FileDynamicComponent,
 						add : FileAddComponent,
 						edit : FileEditComponent,
@@ -43,6 +48,7 @@ export const FILE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minFiles : FileMinFilesTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : FileConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : FileMessageTemplateDrivenValidationDirectivesComponent,
+						messageKey : FileMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : FileAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
@@ -51,6 +57,7 @@ export const FILE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minFiles : FileMinFilesTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : FileConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						message : FileMessageTemplateDrivenValidationDecoratorsComponent,
+						messageKey : FileMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : FileAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
@@ -59,6 +66,7 @@ export const FILE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						minFiles : FileMinFilesValidatorComponent,
 						conditionalExpression : FileConditionalExpressionValidatorComponent,
 						message : FileMessageValidatorComponent,
+						messageKey : FileMessageKeyValidatorComponent,
 						dynamic : FileDynamicValidatorComponent,
 						add : FileAddValidatorComponent,
 			  },

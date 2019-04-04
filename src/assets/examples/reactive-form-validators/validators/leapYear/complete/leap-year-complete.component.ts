@@ -19,6 +19,7 @@ export class LeapYearCompleteValidatorComponent implements OnInit {
             birthYear:['', RxwebValidators.leapYear({conditionalExpression:(x,y) => x.name == "Bharat"  })], 
             admissionYear:['', RxwebValidators.leapYear({conditionalExpression:'x => x.name == "Bharat"' })], 
             joiningYear:['', RxwebValidators.leapYear({message:'{{0}} is not a leap year' })], 
+            promotionYear:['', RxwebValidators.leapYear({messageKey:'leapYearMessageKey' })], 
         });
     }
 }

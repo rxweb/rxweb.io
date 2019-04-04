@@ -9,6 +9,7 @@ import { CreditCardCompleteTemplateDrivenValidationDirectivesComponent } from '.
 import { CreditCardFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/credit-card-field-name.component';
 import { CreditCardConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/credit-card-conditional-expression.component';
 import { CreditCardMessageTemplateDrivenValidationDirectivesComponent } from './message/credit-card-message.component';
+import { CreditCardMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/credit-card-message-key.component';
 import { CreditCardAddTemplateDrivenValidationDirectivesComponent } from './add/credit-card-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { CreditCardAddTemplateDrivenValidationDirectivesComponent } from './add/
 	CreditCardFieldNameTemplateDrivenValidationDirectivesComponent,
 	CreditCardConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	CreditCardMessageTemplateDrivenValidationDirectivesComponent,
+	CreditCardMessageKeyTemplateDrivenValidationDirectivesComponent,
 	CreditCardAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	CreditCardFieldNameTemplateDrivenValidationDirectivesComponent,
 	CreditCardConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	CreditCardMessageTemplateDrivenValidationDirectivesComponent,
+	CreditCardMessageKeyTemplateDrivenValidationDirectivesComponent,
 	CreditCardAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	CreditCardFieldNameTemplateDrivenValidationDirectivesComponent,
 	CreditCardConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	CreditCardMessageTemplateDrivenValidationDirectivesComponent,
+	CreditCardMessageKeyTemplateDrivenValidationDirectivesComponent,
 	CreditCardAddTemplateDrivenValidationDirectivesComponent,
   ],
 

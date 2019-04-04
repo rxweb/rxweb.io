@@ -20,7 +20,7 @@ export class FactorDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/factor/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { firstNumber:'', fifthNumber:'', secondNumber:'', thirdNumber:'', fourthNumber:'', sixthNumber:'',  }
+			var user = { firstNumber:'', fifthNumber:'', secondNumber:'', thirdNumber:'', fourthNumber:'', sixthNumber:'', seventhNumber:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

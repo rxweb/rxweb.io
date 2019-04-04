@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { DigitCompleteTemplateDrivenValidationDirectivesComponent } from './complete/digit-complete.component';
 import { DigitConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/digit-conditional-expression.component';
 import { DigitMessageTemplateDrivenValidationDirectivesComponent } from './message/digit-message.component';
+import { DigitMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/digit-message-key.component';
 import { DigitAddTemplateDrivenValidationDirectivesComponent } from './add/digit-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { DigitAddTemplateDrivenValidationDirectivesComponent } from './add/digit
 	DigitCompleteTemplateDrivenValidationDirectivesComponent,
 	DigitConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	DigitMessageTemplateDrivenValidationDirectivesComponent,
+	DigitMessageKeyTemplateDrivenValidationDirectivesComponent,
 	DigitAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	DigitCompleteTemplateDrivenValidationDirectivesComponent,
 	DigitConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	DigitMessageTemplateDrivenValidationDirectivesComponent,
+	DigitMessageKeyTemplateDrivenValidationDirectivesComponent,
 	DigitAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	DigitCompleteTemplateDrivenValidationDirectivesComponent,
 	DigitConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	DigitMessageTemplateDrivenValidationDirectivesComponent,
+	DigitMessageKeyTemplateDrivenValidationDirectivesComponent,
 	DigitAddTemplateDrivenValidationDirectivesComponent,
   ],
 

@@ -19,4 +19,8 @@ export class Country {
 	firstCountry: string;
 	
 	
+	@latLong({messageKey:'latLongMessageKey' }) 
+	fourthCountry: string;
+	
+	
 }

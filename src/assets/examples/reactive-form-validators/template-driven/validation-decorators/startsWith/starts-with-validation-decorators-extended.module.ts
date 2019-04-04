@@ -9,6 +9,7 @@ import { StartsWithCompleteTemplateDrivenValidationDecoratorsComponent } from '.
 import { StartsWithValueTemplateDrivenValidationDecoratorsComponent } from './value/starts-with-value.component';
 import { StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/starts-with-conditional-expression.component';
 import { StartsWithMessageTemplateDrivenValidationDecoratorsComponent } from './message/starts-with-message.component';
+import { StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/starts-with-message-key.component';
 import { StartsWithAddTemplateDrivenValidationDecoratorsComponent } from './add/starts-with-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { StartsWithAddTemplateDrivenValidationDecoratorsComponent } from './add/
 	StartsWithValueTemplateDrivenValidationDecoratorsComponent,
 	StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	StartsWithMessageTemplateDrivenValidationDecoratorsComponent,
+	StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	StartsWithAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	StartsWithValueTemplateDrivenValidationDecoratorsComponent,
 	StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	StartsWithMessageTemplateDrivenValidationDecoratorsComponent,
+	StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	StartsWithAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	StartsWithValueTemplateDrivenValidationDecoratorsComponent,
 	StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	StartsWithMessageTemplateDrivenValidationDecoratorsComponent,
+	StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	StartsWithAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

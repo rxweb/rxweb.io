@@ -19,6 +19,7 @@ export class StartsWithCompleteValidatorComponent implements OnInit {
             profession:['', RxwebValidators.startsWith({value:'Senior'  ,conditionalExpression:(x,y) => x.name == "Bharat"  })], 
             taskId:['', RxwebValidators.startsWith({value:'#'  ,conditionalExpression:'x => x.name =="Bharat"' })], 
             company:['', RxwebValidators.startsWith({value:'R'  ,message:'{{0}} does not starts with `R`' })], 
+            skill:['', RxwebValidators.startsWith({value:'A'  ,messageKey:'startsWithMessageKey' })], 
         });
     }
 }

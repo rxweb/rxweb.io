@@ -9,6 +9,7 @@ import { GreaterThanEqualToCompleteTemplateDrivenValidationDirectivesComponent }
 import { GreaterThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/greater-than-equal-to-field-name.component';
 import { GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/greater-than-equal-to-conditional-expression.component';
 import { GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent } from './message/greater-than-equal-to-message.component';
+import { GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/greater-than-equal-to-message-key.component';
 import { GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent } from './add/greater-than-equal-to-add.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent } from
 	GreaterThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -24,6 +26,7 @@ entryComponents: [
 	GreaterThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -37,6 +40,7 @@ entryComponents: [
 	GreaterThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
 

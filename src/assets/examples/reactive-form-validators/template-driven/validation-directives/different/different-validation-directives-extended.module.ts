@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { DifferentCompleteTemplateDrivenValidationDirectivesComponent } from './complete/different-complete.component';
 import { DifferentFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/different-field-name.component';
 import { DifferentMessageTemplateDrivenValidationDirectivesComponent } from './message/different-message.component';
+import { DifferentMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/different-message-key.component';
 import { DifferentAddTemplateDrivenValidationDirectivesComponent } from './add/different-add.component';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { DifferentAddTemplateDrivenValidationDirectivesComponent } from './add/d
 	DifferentCompleteTemplateDrivenValidationDirectivesComponent,
 	DifferentFieldNameTemplateDrivenValidationDirectivesComponent,
 	DifferentMessageTemplateDrivenValidationDirectivesComponent,
+	DifferentMessageKeyTemplateDrivenValidationDirectivesComponent,
 	DifferentAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	DifferentCompleteTemplateDrivenValidationDirectivesComponent,
 	DifferentFieldNameTemplateDrivenValidationDirectivesComponent,
 	DifferentMessageTemplateDrivenValidationDirectivesComponent,
+	DifferentMessageKeyTemplateDrivenValidationDirectivesComponent,
 	DifferentAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
@@ -33,6 +36,7 @@ entryComponents: [
 	DifferentCompleteTemplateDrivenValidationDirectivesComponent,
 	DifferentFieldNameTemplateDrivenValidationDirectivesComponent,
 	DifferentMessageTemplateDrivenValidationDirectivesComponent,
+	DifferentMessageKeyTemplateDrivenValidationDirectivesComponent,
 	DifferentAddTemplateDrivenValidationDirectivesComponent,
   ],
 
