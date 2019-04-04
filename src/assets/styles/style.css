@@ -683,7 +683,7 @@ body .page-tabs>li.active>a, body .page-tabs li.active a:hover, body .page-tabs 
 .title > h1 .link-header{margin-right:auto;}
 /* .title > h1 .hpanel{margin:10px 0;} */
 .title > h1 .hpanel .nav-tabs.page-tabs{padding-left:0;border-bottom:0;}
-.hpanel .h2, .hpanel h2 { font-size: 20px; line-height:26px; margin-top: 15px;     color: #3c4043;}
+.hpanel .h2, .hpanel h2 { font-size: 20px; line-height:26px; margin-top: 15px;     color: #3c4043;font-weight:600;}
 .hpanel p, .hpanel  .p { margin: 15px 0; }
 .d-flex {display: -ms-flexbox; display: flex; }
 .align-items-center  {  -ms-flex-align: center;  align-items: center;}
@@ -5663,6 +5663,7 @@ pre {
   font-size: 15px !important;
     line-height: 17px !important;
     white-space: pre;
+    color:  #77838f !important;
 }
 
 .padding-zero-tab {
@@ -6661,6 +6662,9 @@ body.hide-sidebar #menu .header-link {
 .header-links > ul > li {
     position: relative;
 }
+.header-links > ul > li > a.active{
+    font-weight: 600;
+}
 .header-links > ul > li > .mega-menu {
     position: absolute;
     z-index: 99999;
@@ -6775,6 +6779,7 @@ padding: 2px 0;
 }
 .title > h1 span {
     margin: 10px 0;
+    font-weight: 400;
 }
 #searchlist-content div.ng-star-inserted {
     padding: 10px;

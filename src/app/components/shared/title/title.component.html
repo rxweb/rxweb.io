@@ -6,7 +6,7 @@
             <ul class="nav nav-tabs page-tabs ng-star-inserted"
                 *ngIf="mainType !== 'community' && mainType !== 'changelog'">
                 <li class="ng-star-inserted" [class.active]="activeTab == 'validators'"
-                    *ngIf="(mainType == 'form-validations' || mainType == 'how-to')  && validationName !== 'rule' && validationName !== 'async' && validationName !== 'stronglyType'">
+                    *ngIf="(mainType == 'form-validations' || mainType == 'how-to')  && validationName !== 'rule' && validationName !== 'async' && validationName !== 'stronglyType' && validationName !== 'classAbstraction'">
                     <a (click)="route('validators')">Validator</a>
                 </li>
                 <li class="ng-star-inserted"

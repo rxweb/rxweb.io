@@ -366,7 +366,7 @@
     },
     {
         "title": "escape",
-        "link": "/sanitization/escape/validators",
+        "link": "/sanitization/escape/decorators",
         "linkTree":["/sanitization"]
     },
     {

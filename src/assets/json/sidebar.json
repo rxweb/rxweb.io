@@ -517,10 +517,15 @@
             "isActive": false
           },
           {
-            "title":"Use multiple validations using logical operators.",
+            "title":"Use multiple validations using logical operators",
             "uri":"/how-to/logicalOperators/validators",
             "isActive": false
-          }        
+          },
+          {
+            "title":"Class Abstraction",
+            "uri":"/how-to/classAbstraction/decorators",
+            "isActive": false
+          }         
       ]
     },
     {

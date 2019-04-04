@@ -9,6 +9,8 @@ export class WhatsNewComponent implements OnInit {
     sticky: boolean = false;
     showComponent:boolean = false;
     rightSidebarLinks:any=[
+        
+        {"id":"classAbstraction","title":"1.8.5","subLink":null},
         {"id":"stronglyType","title":"1.8.4","subLink":null},
         {"id":"boolean","title":"1.8.3","subLink":null},
         {"id":"patchmodel","title":"1.8.2","subLink":null},

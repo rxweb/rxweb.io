@@ -12,7 +12,7 @@ This gives flixibility to add new properties or exclude the properties while usi
 While using nested formGroup in reactive forms, if your nested object property is undefined then the formbuilder will not create the nested formgroup, In such case you need to pass dynamic configuration which is done through FormBuilderConfiguration.
 
 # Create an object instance
-If you have nested formGroup in your component and you may not have that particular property in your model class in your component, decorator cannot configure property  
+If you have nested formGroup in your component and you may not have that particular property in your model class in your component, decorator cannot configure property.  
 
 In such case, object property instance can be created using `objectPropInstanceConfig` which comes under `AutoInstanceConfig` interface,you need to set the propertyName of the object into it.
 

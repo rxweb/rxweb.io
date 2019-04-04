@@ -38,5 +38,9 @@ const HOWTO_ROUTES: Routes = [
 	path:'logicalOperators',
 	loadChildren: './logicalOperators/logical-operators.module#LogicalOperatorsModule',
 },
+{
+	path:'classAbstraction',
+	loadChildren: './classAbstraction/class-abstraction.module#ClassAbstractionModule',
+},
 ];
 export const HOWTO_ROUTING: ModuleWithProviders = RouterModule.forChild(HOWTO_ROUTES);
