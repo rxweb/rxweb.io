@@ -40,8 +40,23 @@
         "linkTree":["How to"]
     },
     {
+        "title": "Class Abstraction",
+        "link": "/how-to/classAbstraction/decorators",
+        "linkTree":["How to"]
+    },
+    {
+        "title": "Generic property support in propObject and propArray decorator",
+        "link": "/how-to/genericModel/decorators",
+        "linkTree":["How to"]
+    },
+    {
         "title": "RxFormBuilder",
         "link": "/api/RxFormBuilder/decorators",
+        "linkTrees": ["api"]
+    },
+    {
+        "title": "FormBuilderConfiguration",
+        "link": "/api/FormBuilderConfiguration/decorators",
         "linkTrees": ["api"]
     },
     {
@@ -67,6 +82,17 @@
     {
         "title": "error",
         "link": "/decorators/error/decorators",
+        "linkTree":["Decorators"]
+    },
+    {
+        "title": "Apply a class conditionally to the form control element",
+        "link": "/decorators/elementClass/decorators",
+        "description": "",
+        "linkTree":["Decorators"]
+    },
+    {
+        "title": "Apply same validation set on multiple properties",
+        "link": "/decorators/model/decorators",
         "linkTree":["Decorators"]
     },
     {
@@ -285,6 +311,11 @@
         "linkTree":["Form Validations","Numeric"]
     },
     {
+        "title": "NotEmpty",
+        "link": "form-validations/notEmpty/validators",
+        "linkTree":["Form Validations"]
+    },
+    {
         "title": "noneOf",
         "link": "/form-validations/noneOf/validators",
         "linkTree":["Form Validations","Array"]
@@ -362,61 +393,76 @@
     {
         "title": "blacklist",
         "link": "/sanitization/blacklist/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "escape",
         "link": "/sanitization/escape/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "ltrim",
         "link": "/sanitization/ltrim/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "trim",
         "link": "/sanitization/rtrim/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "toBoolean",
         "link": "/sanitization/toBoolean/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "toDate",
         "link": "/sanitization/toDate/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "toDouble",
         "link": "/sanitization/toDouble/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "toFloat",
         "link": "/sanitization/toFloat/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "toInt",
         "link": "/sanitization/toInt/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "toString",
         "link": "/sanitization/toString/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "trim",
         "link": "/sanitization/trim/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
     },
     {
         "title": "whitelist",
         "link": "/sanitization/whitelist/decorators",
-        "linkTree":["/sanitization"]
+        "linkTree":["sanitization"]
+    },
+    {
+        "title": "Suffix",
+        "link": "/sanitization/suffix/decorators",
+        "linkTree":["sanitization"]
+    },
+    {
+        "title": "Custom",
+        "link": "/sanitization/sanitize/decorators",
+        "linkTree":["sanitization"]
+    },
+    {
+        "title": "Prefix",
+        "link": "/sanitization/prefix/decorators",
+        "linkTree":["sanitization"]
     }
 ]

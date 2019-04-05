@@ -13,7 +13,6 @@ Suppose you have a Order class which has properties like OrderId and OrderType a
 # Example
 
 <data-scope scope="['decorator']">
-First we need to create a user class and define properties in the model.
 <div component="app-code" key="class-complete-model"></div> 
 </data-scope>
 <div component="app-code" key="class-complete-component"></div> 

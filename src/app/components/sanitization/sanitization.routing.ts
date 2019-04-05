@@ -54,5 +54,17 @@ const SANITIZATION_ROUTES: Routes = [
 	path:'escape',
 	loadChildren: './escape/escape.module#EscapeModule',
 },
+{
+	path:'sanitize',
+	loadChildren: './sanitize/sanitize.module#SanitizeModule',
+},
+{
+	path:'prefix',
+	loadChildren: './prefix/prefix.module#PrefixModule',
+},
+{
+	path:'suffix',
+	loadChildren: './suffix/suffix.module#SuffixModule',
+},
 ];
 export const SANITIZATION_ROUTING: ModuleWithProviders = RouterModule.forChild(SANITIZATION_ROUTES);

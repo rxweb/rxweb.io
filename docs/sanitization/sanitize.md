@@ -7,10 +7,7 @@ type:decorators
 linktitle: custom
 ---
  
-<div class="title-bar"><p>Allows you to use conditional sanitizer based on your custom rule.</p></div>
-
-# When to use
-If you want to add a condition based upon which you want the string to be sanitized, you need to set the condition in custom sanitizer. Whenever a user enters a value in the HTML control it will sanitize it based upon the condition in the `custom` property.
+<div class="title-bar"><p>You can sanitize the value based upon your business logic.</p></div>
 
 # Example  
 let's create a user model and define a property of freeText in the model.

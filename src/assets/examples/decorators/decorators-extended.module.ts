@@ -17,6 +17,8 @@ import { PropObjectDefaultComponent } from './propObject/defaultValue/prop-objec
 import { PropObjectServerComponent } from './propObject/bindingServerProperty/prop-object-server.component';
 import { DisableAddComponent } from './disable/add/disable-add.component';
 import { ErrorAddComponent } from './error/add/error-add.component';
+import { ElementClassAddComponent } from './elementClass/add/element-add.component';
+import { ModelAddComponent } from './model/add/model-add.component';
 
 
 
@@ -32,7 +34,9 @@ import { ErrorAddComponent } from './error/add/error-add.component';
   PropObjectServerComponent,
   PropDefaultComponent,
   DisableAddComponent,
-  ErrorAddComponent
+  ErrorAddComponent,
+  ElementClassAddComponent,
+  ModelAddComponent
   ],
 entryComponents: [
   PropAddComponent,
@@ -45,7 +49,9 @@ entryComponents: [
   PropObjectServerComponent,
   PropDefaultComponent,
   DisableAddComponent,
-  ErrorAddComponent
+  ErrorAddComponent,
+  ElementClassAddComponent,
+  ModelAddComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -58,7 +64,9 @@ entryComponents: [
     PropArrayAddComponent,
   PropObjectAddComponent,
   DisableAddComponent,
-  ErrorAddComponent
+  ErrorAddComponent,
+  ElementClassAddComponent,
+  ModelAddComponent
   ],
 
 })

@@ -1,0 +1,10 @@
+{
+    "add": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup } from \"@angular/forms\";\r\nimport { RxFormBuilder } from '@rxweb/reactive-form-validators';\r\nimport { User } from './user.model';\r\n@Component({\r\n    selector: 'app-elementClass-add',\r\n    templateUrl: './element-class-add.component.html'\r\n})\r\nexport class ElementClassAddComponent implements OnInit {\r\n  \r\n    userFormGroup: FormGroup;\r\n    constructor(private formBuilder: RxFormBuilder) { }\r\n    ngOnInit() {\r\n        let user = new User();\r\n        this.userFormGroup = this.formBuilder.formGroup(user);\r\n    }\r\n   \r\n}\r\n",
+        "html": "<form *ngIf=\"userFormGroup\" [formGroup]=\"userFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>User Name</label>\r\n      <input type=\"text\" formControlName=\"userName\" class=\"form-control\"  />\r\n   </div>  \r\n    <div class=\"form-group\">\r\n     <label>Password</label>\r\n      <input type=\"text\" formControlName=\"password\" class=\"form-control\"  />  \r\n  </div>\r\n  </form>",
+        "model": "import {  prop,elementClass } from \"@rxweb/reactive-form-validators\"\r\nimport { AbstractControl } from \"@angular/forms\"\r\n\r\nexport class User {\r\n\r\n   @prop()\r\n   @elementClass({\r\n       conditionalExpression: function (c) {\r\n           return this.password == \"complex\" && c.dirty == true ? 'dirty' : '';\r\n       }})\r\n   userName: string;\r\n\r\n   @prop()\r\n   password: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    }
+}

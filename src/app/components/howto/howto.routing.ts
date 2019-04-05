@@ -42,5 +42,9 @@ const HOWTO_ROUTES: Routes = [
 	path:'classAbstraction',
 	loadChildren: './classAbstraction/class-abstraction.module#ClassAbstractionModule',
 },
+{
+	path:'genericModel',
+	loadChildren: './genericModel/generic-model.module#GenericModelModule',
+},
 ];
 export const HOWTO_ROUTING: ModuleWithProviders = RouterModule.forChild(HOWTO_ROUTES);

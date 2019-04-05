@@ -145,7 +145,7 @@ isExistElement(){
         this.userModelFormGroup = this.rxFormBuilder.group({
           firstName:['Bharat']
         },
-        new FormBuilderConfiguration( { dynamicValidation: dynamicValidationConfiguration }));
+        new FormBuilderConfiguration( { dynamicValidation: dynamicValidationConfiguration,'genericEntities':{} }));
       this.showComponent = true;
       var t = setTimeout(() => { this.changeText();},500)
       });
