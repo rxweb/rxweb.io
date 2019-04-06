@@ -36,7 +36,7 @@ You can request a new feature by submitting an issue to our <a href="https://git
 ## Changing the Docs
 You can help to improve the rxweb guides by making them more coherent, consistent, or readable, adding missing information, correcting factual errors, fixing typos, or bringing them up to date with the latest edge rxweb.
 
-For documentation changes, click on edit icon, located at the top right side of the documentation on <a href="/">rxweb.io</a> site. This will take you to the source file on Github where you can submit a pull request with your changes. For documentation changes, you don’t need to set up in your local machine and do the changes.
+For documentation changes, click on edit icon, located at the right side of the documentation on site. This will take you to the source file on Github where you can submit a pull request with your changes. For documentation changes, you don’t need to set up in your local machine and do the changes.
 
 ## Changing the Code
 Checkout a new branch and name it accordingly to what you intend to do:

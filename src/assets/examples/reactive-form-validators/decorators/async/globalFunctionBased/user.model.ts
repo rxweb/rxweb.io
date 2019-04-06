@@ -13,7 +13,7 @@ function isUniqueUserName(control: FormControl) {
 		if (!control.value == false)
 			resolve(null)
 		else
-		resolve({ 'async': 'You must enter a value' })
+		resolve({ 'async':{message: 'You must enter a value'} })
 	});
 	return promise;
 }

@@ -13,7 +13,7 @@ Help others is also the best way to starts in, If someone needs help on our <a h
 # Robust documentation
 To make robust documentation is also one of the most valuable contributions in open source projects and also in the rxweb framework because improving the documentation is very valuable for those who want to use the rxweb framework.
 
-All the documentation is available in <a href="https://github.com/rxweb/rxweb/tree/master/docs" target="_blank" rel="noopener">docs/</a>
+All the documentation is available in <a href="https://github.com/rxweb/rxweb.io/tree/master/docs" target="_blank" rel="noopener">docs/</a>
 
 # Fix something that helps others too
 If you find a bug and that helps other users too, then try to find an existing issue. If it doesn’t exist yet, create one. Look into the code and do the changes. After that send a pull request and let give a chance to other contributors to use their brains to review the request.

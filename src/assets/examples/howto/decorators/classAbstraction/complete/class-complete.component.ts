@@ -3,7 +3,7 @@ import { FormGroup } from "@angular/forms"
 
 import { RxFormBuilder } from '@rxweb/reactive-form-validators';
 
-import { Product } from './order.model';
+import { Order } from './order.model';
 
 @Component({
     selector: 'app-class-complete',
@@ -18,7 +18,7 @@ export class ClassCompleteComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        let product = new Product();
-        this.userFormGroup = this.formBuilder.formGroup(product);
+        let order = new Order();
+        this.userFormGroup = this.formBuilder.formGroup(order);
     }
 }
