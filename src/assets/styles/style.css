@@ -7155,5 +7155,65 @@ padding: 2px 0;
 .fas{
     color: #E8E8E8;
 }
+.btn:not([href]):not([type]):not(:disabled):not(.disabled) {
+    cursor: default;
+}
+.font-weight-semi-bold {
+    font-weight: 600 !important;
+}
+.btn-xs{
+font-size: 15px;
+font-weight: 400;
+padding: 0.4375rem 0.9375rem;
+}
+.h4{
+    font-size: 20px;
+}
+.btn.btn-soft-primary {
+    color: #377dff;
+}
+.btn-soft-primary {
+    color: #377dff;
+    background: rgba(55, 125, 255, 0.1);
+    border-color: transparent;
+}
+.mr-2, .mx-2 {
+    margin-right: 0.5rem !important;
+}
+.rounded {
+    border-radius: 0.3125rem !important;
+}
+.btn.btn-soft-danger {
+    color: #de4437;
+}
+.btn-soft-danger {
+    color: #de4437;
+    background: rgba(222, 68, 55, 0.1);
+    border-color: transparent;
+}
+.highlighter-rouge{
+    color:#007dc5;
+    font-size: 25px;
+}
+.btn.btn-soft-success {
+    color: #00c9a7;
+}
+.btn-soft-success {
+    color: #00c9a7;
+    background: rgba(0, 201, 167, 0.1);
+    border-color: transparent;
+}
+.btn.btn-soft-warning {
+    color: #ffc107;
+}
+.btn-soft-warning {
+    color: #ffc107;
+    background: rgba(255, 193, 7, 0.1);
+    border-color: transparent;
+}
+.log-link{ font-size: 18px; }
+.log-link:hover{ text-decoration: underline;  }
+
+
 /*-------- do not add any css here ---------- */
 

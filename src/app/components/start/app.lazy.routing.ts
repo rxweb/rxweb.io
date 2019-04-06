@@ -11,6 +11,7 @@ import { TextPageComponent } from "../text-page/text-page.component";
 import { WhatsNextComponent } from "../whats-next/whats-next.component";
 import { WhatsNewComponent } from "../whats-new/whats-new.component";
 import { WhyRxwebComponent } from "../why/why-component";
+import { ChangeLogComponent } from "../changelog/change-log.component";
 
 
 
@@ -27,10 +28,10 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'getting-started', component: GettingStartedComponent
   },
-  {
-    path: 'changelog', component: TextPageComponent
-    //loadChildren: 'src/app/components/text-page/text-page.module#TextPageModule',
-  },
+  // {
+  //   path: 'changelog', component: TextPageComponent
+  //   //loadChildren: 'src/app/components/text-page/text-page.module#TextPageModule',
+  // },
   {
     path:'api/reactive-form-config',component:ReactiveFormConfigComponent
   },
@@ -42,6 +43,9 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path:'why',component:WhyRxwebComponent
+  },
+  {
+    path:'changelog',component:ChangeLogComponent
   },
   {
     path:'how-to',
