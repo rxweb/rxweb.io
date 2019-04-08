@@ -41,6 +41,11 @@ export class StackBlitzService {
           configObject['internationalization'] = {};
           configObject['internationalization'] = VALIDATION_MESSAGES["internationalization"]
         }
+        else if(validationName == "errormessage" || validationName == "model")
+        {
+          configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
+          fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
+        }
         configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
         fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
       }

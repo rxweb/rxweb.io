@@ -6382,6 +6382,7 @@ body.hide-sidebar #menu .header-link {
     border-bottom: 1px solid #eee;
 } */
 .plain-text a {
+    color: #007dc5;
     font-weight: bold;
 }
 .plain-text ul li{
