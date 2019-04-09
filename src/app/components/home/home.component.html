@@ -1,51 +1,27 @@
-
-<div class="home-page" *ngIf="showComponent">
-        <app-top-bar></app-top-bar>
-        <div class="banner">
-          <div class="banner-text">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                  <h1 style="text-align:center">Clean Code. Built with Purpose</h1>
-                  <p style="text-align:center">The most powerful framework with tons of Angular Forms scenarios, which fulfil every large scale Angular Based Enterprise Application’s need.</p>
-
-
-                  <!--<div><span>RxwebValidators.</span><span>compare(&#123;fieldName:</span><span>'password'</span><span>&#125;);</span></div>-->
-                  <!--<span class="hljs-selector-tag">RxwebValidators</span>-->
-                  <!--<a routerLink="/getting-started" class="doc-btn">Documentation <i class="fa fa-angle-right" aria-hidden="true"></i></a>-->                    <!--<a routerLink="/getting-started" class="doc-btn">Documentation <i class="fa fa-angle-right" aria-hidden="true"></i></a>-->
-                </div>
-              </div>
-
-            </div>
-            <div class="typeit" id="code_change">
-              <!--<span class="typeit-start-text">RxwebValidators</span><span>.required</span><span>(conditionalExpression:(x:any)=> x.country == </span><span class="typeit-string-text">'India'</span><span>)</span>;-->
-              
-            </div>
-            <div class="highlights text-center">
-              <div class="container">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-4">
-                    <div class="point">
-                      <h3>Conditional Validation</h3>
-                      <p>Binds validation conditions with the validators, without writing additional code like valueChanges subscription/ global validator.</p>
-                    </div>
-                  </div>
-                  <div class="col-xs-12 col-sm-4">
-                    <div class="point">
-                      <h3>Simplified Error Messages</h3>
-                      <p>Without putting more *ngIf to show the error messages easily</p>
-                    </div>
-                  </div>
-                  <div class="col-xs-12 col-sm-4 ">
-                    <div class="point">
-                      <h3>Strongly Typed Forms</h3>
-                      <p>Binds the Reactive Form with your model and that completely strongly type Typescript to HTML. </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-
+<div class="main-header">
+  <div class="home">
+      <div class="main-heading">Clean Code. Built with Purpose</div>
+      <p class="text-content">The most powerful framework with tons of Angular Forms scenarios, which fulfil every large scale Angular Based Enterprise Application’s need.</p>
+      <section class="rw-wrapper">
+      <h2 class="rw-sentence">
+        <span>It's easy to</span>
+  
+        <div class="rw-words rw-words-1">        
+          <span>apply conditional validation</span>
+          <span>validate the currency</span>
+          <span>compare two fields</span>
+          <span>manage date validation</span>
+          <span>validate the file</span>
+          <span>validate unique value</span>     
+        </div>
+      </h2>
+      </section>
+      <div style="text-align: left!important;width: 60%;max-width: 820px;margin-bottom: 30px;margin-top: 15px;">
+        <!-- <span style="text-align:left;color: #383b47;font-weight: bold;padding-right:15px;font-size: 20px;">Why?</span> -->
+        <span class="typeit" id="code_change"></span>
+      </div>
+      <div class="inline">
+        <button routerLink="/getting-started" class="btn home-page-links"><span class="btn-label">Let's get started</span></button>
+      </div>
+  </div>
 </div>

@@ -33,19 +33,19 @@ export class HomeComponent implements OnInit,OnDestroy {
       type: 'code', fixText: 'RxwebValidators.', codes: [{ text: 'RxwebValidators.', class: 'typeit-start-text' },{ text: 'required({conditionalExpression:(x:', class: '' }, { text: 'any', class: 'typeit-parameter-type' }, { text: ')=> x.country == ', class: '' }, { text: `'India'`, class: 'typeit-string-text' }, { text: `})`, class: '' }]
     },
     {
-      type: 'code', fixText: 'RxwebValidators.', codes: [{ text: 'numeric({ allowDecimal:', class: '' }, { text: ' true', class: 'typeit-start-text' }, { text: ', isFormat: ', class: '' }, { text: `true `, class: 'typeit-start-text' }, { text: `})`, class: '' }]
+      type: 'code', fixText: 'RxwebValidators.', codes: [{ text: 'numeric({ allowDecimal:', class: '' }, { text: ' true', class: 'typeit-start-text' }, { text: ', isFormat: ', class: '' }, { text: `true `, class: 'typeit-start-text' }, { text: `})`, class: '' },{ text: `                      `, class: '' }]
     },
     {
-      type: 'code', fixText: 'RxwebValidators.', codes: [ { text: 'compare({ fieldName:', class: '' }, { text: ` 'password' `, class: 'typeit-string-text' }, { text: `})`, class: '' }]
+      type: 'code', fixText: 'RxwebValidators.', codes: [ { text: 'compare({ fieldName:', class: '' }, { text: ` 'password' `, class: 'typeit-string-text' }, { text: `})`, class: '' },{ text: `                                 `, class: '' }]
     },
     {
-      type: 'code', fixText: 'RxwebValidators.', codes: [{ text: 'maxDate({ fieldName:', class: '' }, { text: ` 'todayDate' `, class: 'typeit-string-text' }, { text: `})`, class: '' }]
+      type: 'code', fixText: 'RxwebValidators.', codes: [{ text: 'maxDate({ fieldName:', class: '' }, { text: ` 'todayDate' `, class: 'typeit-string-text' }, { text: `})`, class: '' },{ text: `                                `, class: '' }]
     },
     {
-      type: 'code', fixText: 'RxwebValidators.', codes: [{ text: 'file({ minFiles:', class: '' }, { text: ' 1', class: 'typeit-start-text' }, { text: ', maxFiles: ', class: '' }, { text: `5 `, class: 'typeit-start-text' }, { text: `})`, class: '' }]
+      type: 'code', fixText: 'RxwebValidators.', codes: [{ text: 'file({ minFiles:', class: '' }, { text: ' 1', class: 'typeit-start-text' }, { text: ', maxFiles: ', class: '' }, { text: `5 `, class: 'typeit-start-text' }, { text: `})`, class: '' },{ text: `                      `, class: '' },{ text: `             `, class: '' }]
     },
     {
-      type: 'code', fixText: '', codes: [{ text: 'unique()', class: '' }]
+      type: 'code', fixText: '', codes: [{ text: 'unique()', class: '' },{ text: `                      `, class: '' },{ text: `                      `, class: '' },{ text: `           `, class: '' }]
     }
   ]
   textIndex: number = 0;
@@ -67,7 +67,7 @@ isExistElement(){
       if (codeElement.children.length > this.currentTextGroup.fixText.length) {
         if(this.isExistElement())
           document.getElementById("code_change").removeChild(codeElement.children.item(codeElement.children.length - 1))
-        var t = setTimeout(() => this.removeChildNodes(), 20);
+        var t = setTimeout(() => this.removeChildNodes(), 10);
       } else {
         this.totalIndex++;
         this.codeIndex = 0;
@@ -101,7 +101,7 @@ isExistElement(){
           this.processCharacters(this.typeItTexts[this.totalIndex].codes[this.codeIndex])
           this.codeIndex++;
         } else {
-          var t = setTimeout(() => this.removeChildNodes(), 600);
+          var t = setTimeout(() => this.removeChildNodes(), 10);
   
           //this.changeCodeText();
         }
