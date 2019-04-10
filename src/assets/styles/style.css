@@ -7337,7 +7337,7 @@ padding: 0.4375rem 0.9375rem;
         vertical-align: middle;
         text-align: center;
         font-size: 0;
-        cursor: pointer;
+        cursor: pointer!important;
         margin: 5px;
     }
     
@@ -7372,6 +7372,21 @@ padding: 0.4375rem 0.9375rem;
       .parser-text {
         color:#8C1B65;
       }
+     
+      .home-footer{
+        box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .home-footer .space-left-sidebar{
+          display: none;
+      }
+      .home-footer .space-left-sidebar+div{
+          margin: 0 auto; float:none;
+      }
+      .home{
+        padding-bottom: 0;
+        top:0;
+      }
       @media (min-width: 1600px) {
           .typeit {
             font-size: 18px;
@@ -7391,15 +7406,76 @@ padding: 0.4375rem 0.9375rem;
           font-size: 13px;
           
         }
+        .home-footer .space-left-sidebar + div {
+            width: calc(100% - 15px);
+        }
       }
       @media (max-width: 768px) {
         .typeit {
+      
           font-size: 13px;
         }
+        .home h2.rw-sentence{
+            font-size: 14px;
+            margin-right:285px;
+        }
       }
+@media (max-width: 640px) {
+      .home h2.rw-sentence {
+        font-size: 6px;
+        margin-right: 139px;
+    }
+    .home .main-heading{
+        font-size: 28px;
+    }
+}
       @media (max-width: 576px) {
         .typeit {
+            margin-right: 10px;
           font-size: 13px;
+        }
+          }
+      @media (min-width: 1600px) {
+        .rw-sentence {
+          font-size: 18px;
+          font-weight: 900;
+        }
+      }
+      
+    @media (min-width: 1200px) {
+      .rw-sentencet {
+        font-size:18px;
+        font-weight: 900;
+      }
+    }
+    @media (min-width: 667px) {
+        .rw-sentencet {
+          font-size:18px;
+          font-weight: 900;
+        }
+      }
+    @media (max-width: 992px) {
+      .rw-sentence {
+        font-size: 11px;
+        text-align: left;
+      }
+    }
+    @media (max-width: 768px) {
+      .rw-sentence {
+        font-size: 11px;
+        text-align: left;
+      }
+    }
+    @media (max-width: 576px) {
+      .rw-sentence {
+        font-size: 11px;
+        text-align: left;
+      }
+    }
+    @media (max-width: 568px) {
+        .rw-sentence {
+          font-size: 11px;
+          text-align: left;
         }
       }
       .rw-sentence{
@@ -7489,6 +7565,12 @@ padding: 0.4375rem 0.9375rem;
     @media screen and (max-width: 320px){
         .rw-sentence { font-size: 9px; }
     } 
-
+    @media only screen and (max-width: 991px)
+    {
+    .footer {
+        font-size: 10px;
+        padding: 15px;
+    }
+    }
 /*-------- do not add any css here ---------- */
 

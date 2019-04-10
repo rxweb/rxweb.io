@@ -17,7 +17,7 @@
     </div>
     <!-- <app-right-sidebar *ngIf="rightSidebarLinks" [sidebarLinks]="rightSidebarLinks"></app-right-sidebar> -->
   </main>
-  <div *ngIf="showFooter">
+  <div *ngIf="showFooter" [class.home-footer]="isHome">
     <app-footer></app-footer>
   </div>
 </div>
