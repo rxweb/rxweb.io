@@ -7389,7 +7389,12 @@ padding: 0.4375rem 0.9375rem;
       .home{
         padding-bottom: 0;
         top:0;
+         min-height: calc( 100vh - 60px );
       }
+     .home  .rw-sentence span{
+        line-height: 35px;
+     }
+  
       @media (min-width: 1600px) {
           .typeit {
             font-size: 18px;
@@ -7422,14 +7427,44 @@ padding: 0.4375rem 0.9375rem;
             font-size: 14px;
             margin-right:285px;
         }
+        .home{   
+            padding-top: 40px;
+            padding-bottom: 40px;
+         
+        }
       }
 @media (max-width: 640px) {
       .home h2.rw-sentence {
         font-size: 6px;
         margin-right: 139px;
     }
+    .home  .rw-sentence span{
+        line-height: 20px;
+     }
     .home .main-heading{
         font-size: 28px;
+    }
+    .home .rw-wrapper+div, .home .main-heading, .home .text-content{
+        width: 100%; padding-left:15px;
+        padding-right:15px;
+    }
+    .home .rw-wrapper+div{
+        width:100%!important;
+        text-align: center!important;
+    }
+    .home .rw-wrapper+div .typeit{
+        margin-left: 0;
+    }
+    .main-header{min-height: auto;}
+    .home-footer{text-align: center;}
+
+    .home-footer .content .pull-right{width: 100%;
+        margin-top: 10px;}
+
+.home{    min-height: calc( 100vh - 0px );
+        padding-top:30px;
+        padding-bottom:140px;
+        position: relative;
     }
 }
       @media (max-width: 576px) {
