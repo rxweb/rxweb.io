@@ -31,7 +31,7 @@ export class FileSizeCompleteValidatorComponent implements OnInit {
             documentFile:['', RxwebValidators.fileSize({maxSize:10  ,conditionalExpression:'(x,y) => x.fileType == "Document"' })], 
             contactFile:['', RxwebValidators.fileSize({maxSize:10  ,message:'File exceed maximum size.' })], 
             profilePicture:['', RxwebValidators.fileSize({maxSize:50 })], 
-            excelFile:['', RxwebValidators.fileSize({maxSize:50  ,messageKey:'fileSizeMessageKey' })], 
+            excelFile:['', RxwebValidators.fileSize({maxSize:100  ,messageKey:'fileSizeMessageKey' })], 
         });
     }
 }

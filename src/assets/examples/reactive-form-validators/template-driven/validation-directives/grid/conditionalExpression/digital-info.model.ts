@@ -7,5 +7,7 @@ export class DigitalInfo {
 	photographGrid: string;
 	
 	
+	audioVisualRecordingGrid: string;
+	
 	
 }

@@ -15,7 +15,7 @@ export class FileSizeMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            excelFile:['', RxwebValidators.fileSize({maxSize:50  ,messageKey:'fileSizeMessageKey' })], 
+            excelFile:['', RxwebValidators.fileSize({maxSize:100  ,messageKey:'fileSizeMessageKey' })], 
         });
     }
 }

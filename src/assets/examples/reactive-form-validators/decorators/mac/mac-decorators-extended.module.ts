@@ -8,6 +8,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { MacCompleteComponent } from './complete/mac-complete.component';
 import { MacConditionalExpressionComponent } from './conditionalExpression/mac-conditional-expression.component';
 import { MacMessageComponent } from './message/mac-message.component';
+import { MacMessageKeyComponent } from './messageKey/mac-message-key.component';
 import { MacDynamicComponent } from './dynamic/mac-dynamic.component';
 import { MacAddComponent } from './add/mac-add.component';
 import { MacEditComponent } from './edit/mac-edit.component';
@@ -18,6 +19,7 @@ import { MacMessageKeyComponent } from './messageKey/mac-message-key.component';
 	MacCompleteComponent,
 	MacConditionalExpressionComponent,
 	MacMessageComponent,
+	MacMessageKeyComponent,
 	MacDynamicComponent,
 	MacAddComponent,
 	MacEditComponent,
@@ -27,6 +29,7 @@ entryComponents: [
 	MacCompleteComponent,
 	MacConditionalExpressionComponent,
 	MacMessageComponent,
+	MacMessageKeyComponent,
 	MacDynamicComponent,
 	MacAddComponent,
 	MacEditComponent,
@@ -42,6 +45,7 @@ entryComponents: [
 	MacCompleteComponent,
 	MacConditionalExpressionComponent,
 	MacMessageComponent,
+	MacMessageKeyComponent,
 	MacDynamicComponent,
 	MacAddComponent,
 	MacEditComponent,

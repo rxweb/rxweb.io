@@ -9,6 +9,7 @@ import { MaxLengthCompleteTemplateDrivenValidationDecoratorsComponent } from './
 import { MaxLengthValueTemplateDrivenValidationDecoratorsComponent } from './value/max-length-value.component';
 import { MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/max-length-conditional-expression.component';
 import { MaxLengthMessageTemplateDrivenValidationDecoratorsComponent } from './message/max-length-message.component';
+import { MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/max-length-message-key.component';
 import { MaxLengthAddTemplateDrivenValidationDecoratorsComponent } from './add/max-length-add.component';
 import { MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/max-length-message-key.component';
 
@@ -18,6 +19,7 @@ import { MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from '
 	MaxLengthValueTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
+	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	MaxLengthValueTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
+	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	MaxLengthValueTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
+	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent
   ],

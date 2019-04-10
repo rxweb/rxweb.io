@@ -12,11 +12,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr [formGroup]="item" *ngFor="let item of employeeFormGroup.controls.certifications.controls; let i = index;">
+        <tr [formGroup]="item" *ngFor="let item of employeeFormGroup['controls']['certifications']['controls']; let i = index;">
           <th scope="row">{{ i + 1 }}</th>
           <td>
             <input type="text" formControlName="certificationName" class="form-control" />
-            <small class="form-text text-danger" *ngIf="item.controls.certificationName.errors">{{item.controls.certificationName.errors.unique.message}}<br /></small>
+            <small class="form-text text-danger" *ngIf="item['controls']['certificationName']['errors']">{{item['controls']['certificationName']['errors']['unique']['message']}}<br /></small>
           </td>
         </tr>
       </tbody>
