@@ -1,4 +1,4 @@
-import { OrCompleteComponent } from "src/assets/examples/howto/decorators/logicalOperators/or/Complete/or-complete.component";
+import { OrCompleteComponent } from "src/assets/examples/howto/decorators/logicalOperators/or/complete/or-complete.component";
 import { OrCompleteValidatorComponent } from "src/assets/examples/howto/validators/logicalOperators/or/complete/or-complete.component";
 import { AndAddValidatorComponent } from "src/assets/examples/howto/validators/logicalOperators/and/add/and-add.component";
 import { AndAddComponent } from "src/assets/examples/howto/decorators/logicalOperators/and/and-add.component";

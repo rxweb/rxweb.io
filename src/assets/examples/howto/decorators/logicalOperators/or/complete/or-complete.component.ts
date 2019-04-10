@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from "@angular/forms"
-import { RxFormBuilder } from '@rxweb/reactive-form-validators';
+import {RxwebValidators, RxFormBuilder } from '@rxweb/reactive-form-validators';
 
 import { User } from './user.model';
 

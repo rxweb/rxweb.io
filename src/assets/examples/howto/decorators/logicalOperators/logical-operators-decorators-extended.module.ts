@@ -3,9 +3,10 @@ import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
-import { OrCompleteComponent } from './or/Complete/or-complete.component';
+
 import { AndAddComponent } from './and/and-add.component';
 import { NotDigitComponent } from './not/digit/not-digit.component';
+import { OrCompleteComponent } from './or/complete/or-complete.component';
 
 
 @NgModule({
