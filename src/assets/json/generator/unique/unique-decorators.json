@@ -35,6 +35,24 @@
     "jsonName": null,
     "json": null
   },
+  "messageKeyExample": {
+    "notes": null,
+    "component": null,
+    "html": null,
+    "model": "@unique({ messageKey: 'uniqueMessageKey' })\r\n\tcertificationName: string[];",
+    "modelName": null,
+    "jsonName": null,
+    "json": null
+  },
+  "messageKey": {
+    "notes": null,
+    "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormArray } from \"@angular/forms\"\r\nimport { RxFormBuilder } from '@rxweb/reactive-form-validators';\r\n\r\nimport { Employee, Certification } from './employee.model';\r\n\r\n@Component({\r\n  selector: 'app-unique-messageKey',\r\n  templateUrl: './unique-message-key.component.html'\r\n})\r\nexport class UniqueMessageKeyComponent implements OnInit {\r\n  employeeFormGroup: FormGroup\r\n\r\n  constructor(\r\n    private formBuilder: RxFormBuilder) { }\r\n\r\n  ngOnInit() {\r\n    let employee = new Employee();\r\n    employee.certifications = new Array<Certification>();\r\n    let certification = new Certification();\r\n    employee.certifications.push(certification);\r\n    this.employeeFormGroup = this.formBuilder.formGroup(employee);\r\n  }\r\n\r\n  addCertification() {\r\n    let certifications = this.employeeFormGroup.controls.certifications as FormArray;\r\n    certifications.push(this.formBuilder.formGroup(Certification));\r\n  }\r\n}",
+    "html": "<div>\r\n  <form [formGroup]=\"employeeFormGroup\">\r\n    <div class=\"form-group\">\r\n      <h4>Certifications</h4>\r\n      <button class=\"btn btn-primary\" (click)=\"addCertification()\">Add Certification</button>\r\n    </div>\r\n    <table class=\"table\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">#</th>\r\n          <th scope=\"col\">Certification Name</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr [formGroup]=\"item\" *ngFor=\"let item of employeeFormGroup.controls.certifications.controls; let i = index;\">\r\n          <th scope=\"row\">{{ i + 1 }}</th>\r\n          <td>\r\n            <input type=\"text\" formControlName=\"certificationName\" class=\"form-control\" />\r\n            <small class=\"form-text text-danger\" *ngIf=\"item.controls.certificationName.errors\">{{item.controls.certificationName.errors.unique.message}}<br /></small>\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n    <button [disabled]=\"!employeeFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>",
+    "model": "import {  unique, prop, propArray, } from \"@rxweb/reactive-form-validators\"\r\n\r\nexport class Certification {\r\n\r\n  @unique({ messageKey: 'uniqueMessageKey' })\r\n   certificationName: string[];\r\n}\r\n\r\nexport class Employee {\r\n\r\n    @propArray(Certification)\r\n    certifications: Certification[];\r\n}",
+    "modelName": "employee.model.ts",
+    "jsonName": null,
+    "json": null
+  },
   "add": {
     "notes": null,
     "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormArray } from \"@angular/forms\"\r\nimport { RxFormBuilder } from '@rxweb/reactive-form-validators';\r\n\r\nimport { Employee, Skill } from './employee.model';\r\n\r\n@Component({\r\n    selector: 'app-unique-add',\r\n    templateUrl: './unique-add.component.html'\r\n})\r\nexport class UniqueAddComponent implements OnInit {\r\n    employeeFormGroup: FormGroup\r\n\r\n    constructor(\r\n        private formBuilder: RxFormBuilder) { }\r\n\r\n    ngOnInit() {\r\n        let employee = new Employee();\r\n        employee.skills = new Array<Skill>();\r\n        let skill = new Skill();\r\n        employee.skills.push(skill);\r\n        this.employeeFormGroup = this.formBuilder.formGroup(employee);\r\n    }\r\n\r\n    addSkill(){\r\n        let  skills = this.employeeFormGroup.controls.skills as FormArray;\r\n        skills.push(this.formBuilder.formGroup(Skill));\r\n      }\r\n\r\n}",
