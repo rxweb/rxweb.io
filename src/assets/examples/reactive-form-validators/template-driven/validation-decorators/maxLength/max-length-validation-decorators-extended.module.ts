@@ -10,6 +10,7 @@ import { MaxLengthValueTemplateDrivenValidationDecoratorsComponent } from './val
 import { MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/max-length-conditional-expression.component';
 import { MaxLengthMessageTemplateDrivenValidationDecoratorsComponent } from './message/max-length-message.component';
 import { MaxLengthAddTemplateDrivenValidationDecoratorsComponent } from './add/max-length-add.component';
+import { MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/max-length-message-key.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MaxLengthAddTemplateDrivenValidationDecoratorsComponent } from './add/m
 	MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
+	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent
   ],
 entryComponents: [
 	MaxLengthCompleteTemplateDrivenValidationDecoratorsComponent,
@@ -25,6 +27,7 @@ entryComponents: [
 	MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
+	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -38,6 +41,7 @@ entryComponents: [
 	MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
+	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent
   ],
 
 })

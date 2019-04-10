@@ -7494,6 +7494,7 @@ padding: 0.4375rem 0.9375rem;
         text-indent: 10px;
     }
     .rw-words-1 span{
+        font-weight: bold;
         position: absolute;
         opacity: 0;
         overflow: hidden;
