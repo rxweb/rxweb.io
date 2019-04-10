@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit,OnDestroy {
   isCurrentTextDone: boolean = false;
   totalIndex = 0;
   codeIndex: number = 0;
+  isAnimated: boolean = true;
   currentTextGroup: {[key:string]:any}
   typeItTexts = [
     {
@@ -122,6 +123,7 @@ isExistElement(){
 
   ngOnInit(): void {
     
+    window.setTimeout(() => { this.isAnimated = false },1000)
     
     this.isLoggedIn = false;
     if (localStorage.getItem('isLoggedIn') === 'true') {

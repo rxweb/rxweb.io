@@ -7275,7 +7275,10 @@ padding: 0.4375rem 0.9375rem;
     
 }
 
-    
+.animate {
+    transition-delay: 1s;
+    opacity: 1;
+}
     
       .home {
         height: 100%;

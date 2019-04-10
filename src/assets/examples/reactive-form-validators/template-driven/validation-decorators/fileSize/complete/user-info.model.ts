@@ -29,7 +29,7 @@ export class UserInfo {
 	profilePicture: string;
 	
 	
-	@fileSize({maxSize:50  ,messageKey:'fileSizeMessageKey' }) 
+	@fileSize({maxSize:100  ,messageKey:'fileSizeMessageKey' }) 
 	excelFile: string;
 	
 	
