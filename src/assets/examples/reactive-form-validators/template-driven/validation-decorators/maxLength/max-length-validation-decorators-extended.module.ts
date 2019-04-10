@@ -11,7 +11,6 @@ import { MaxLengthConditionalExpressionTemplateDrivenValidationDecoratorsCompone
 import { MaxLengthMessageTemplateDrivenValidationDecoratorsComponent } from './message/max-length-message.component';
 import { MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/max-length-message-key.component';
 import { MaxLengthAddTemplateDrivenValidationDecoratorsComponent } from './add/max-length-add.component';
-import { MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/max-length-message-key.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent } from '
 	MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
-	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent
   ],
 entryComponents: [
 	MaxLengthCompleteTemplateDrivenValidationDecoratorsComponent,
@@ -30,7 +28,6 @@ entryComponents: [
 	MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
-	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -45,7 +42,6 @@ entryComponents: [
 	MaxLengthMessageTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	MaxLengthAddTemplateDrivenValidationDecoratorsComponent,
-	MaxLengthMessageKeyTemplateDrivenValidationDecoratorsComponent
   ],
 
 })

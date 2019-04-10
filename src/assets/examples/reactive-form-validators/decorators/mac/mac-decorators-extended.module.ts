@@ -12,7 +12,6 @@ import { MacMessageKeyComponent } from './messageKey/mac-message-key.component';
 import { MacDynamicComponent } from './dynamic/mac-dynamic.component';
 import { MacAddComponent } from './add/mac-add.component';
 import { MacEditComponent } from './edit/mac-edit.component';
-import { MacMessageKeyComponent } from './messageKey/mac-message-key.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { MacMessageKeyComponent } from './messageKey/mac-message-key.component';
 	MacDynamicComponent,
 	MacAddComponent,
 	MacEditComponent,
-	MacMessageKeyComponent
   ],
 entryComponents: [
 	MacCompleteComponent,
@@ -33,7 +31,6 @@ entryComponents: [
 	MacDynamicComponent,
 	MacAddComponent,
 	MacEditComponent,
-	MacMessageKeyComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -49,7 +46,6 @@ entryComponents: [
 	MacDynamicComponent,
 	MacAddComponent,
 	MacEditComponent,
-	MacMessageKeyComponent
   ],
 
 })
