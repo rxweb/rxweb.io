@@ -7392,6 +7392,7 @@ padding: 0.4375rem 0.9375rem;
          min-height: calc( 100vh - 60px );
       }
      .home  .rw-sentence span{
+ 
         line-height: 35px;
      }
   
@@ -7532,7 +7533,7 @@ padding: 0.4375rem 0.9375rem;
         text-indent: 10px;
     }
     .rw-words-1 span{
-        font-weight: bold;
+        font-weight: bolder;
         position: absolute;
         opacity: 0;
         overflow: hidden;

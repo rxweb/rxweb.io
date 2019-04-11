@@ -9,6 +9,7 @@
     "ngsw-copy": "copy node_modules/@angular/service-worker/ngsw-worker.js dist/ngsw-worker.js",
     "build-prod-ngsw": "node --max-old-space-size=4096 node_modules/@angular/cli/bin/ng build --prod",
     "serve-prod-ngsw": "npm run build-prod-ngsw && http-server dist -p 8080",
+    "build:prod":"npm run build -- --prod --aot",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
