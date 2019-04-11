@@ -8,26 +8,26 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { GridCompleteValidatorComponent } from './complete/grid-complete.component';
 import { GridConditionalExpressionValidatorComponent } from './conditionalExpression/grid-conditional-expression.component';
 import { GridMessageValidatorComponent } from './message/grid-message.component';
-import { GridMessageKeyValidatorComponent } from './messageKey/grid-message-key.component';
 import { GridDynamicValidatorComponent } from './dynamic/grid-dynamic.component';
 import { GridAddValidatorComponent } from './add/grid-add.component';
+import { GridMessageKeyValidatorComponent } from './messageKey/grid-message-key.component';
 
-@NgModule({
+@NgModule({ 
   declarations: [
 	GridCompleteValidatorComponent,
 	GridConditionalExpressionValidatorComponent,
 	GridMessageValidatorComponent,
-	GridMessageKeyValidatorComponent,
 	GridDynamicValidatorComponent,
 	GridAddValidatorComponent,
+	GridMessageKeyValidatorComponent
   ],
 entryComponents: [
 	GridCompleteValidatorComponent,
 	GridConditionalExpressionValidatorComponent,
 	GridMessageValidatorComponent,
-	GridMessageKeyValidatorComponent,
 	GridDynamicValidatorComponent,
 	GridAddValidatorComponent,
+	GridMessageKeyValidatorComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -39,9 +39,9 @@ entryComponents: [
 	GridCompleteValidatorComponent,
 	GridConditionalExpressionValidatorComponent,
 	GridMessageValidatorComponent,
-	GridMessageKeyValidatorComponent,
 	GridDynamicValidatorComponent,
 	GridAddValidatorComponent,
+	GridMessageKeyValidatorComponent
   ],
 
 })
