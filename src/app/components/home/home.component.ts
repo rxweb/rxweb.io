@@ -123,7 +123,7 @@ isExistElement(){
 
   ngOnInit(): void {
     
-    window.setTimeout(() => { this.isAnimated = true },1000)
+    window.setTimeout(() => { this.isAnimated = true },500)
     
     this.isLoggedIn = false;
     if (localStorage.getItem('isLoggedIn') === 'true') {
