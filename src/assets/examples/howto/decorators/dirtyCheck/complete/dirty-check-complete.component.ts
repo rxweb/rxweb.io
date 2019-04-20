@@ -5,10 +5,10 @@ import { RxFormBuilder,FormBuilderConfiguration,FormGroupExtension } from '@rxwe
 import {User} from './user.model'
 
 @Component({
-    selector: 'app-dirty-check-complete',
+    selector: 'app-dirty-complete',
     templateUrl: './dirty-check-complete.component.html'
 })
-export class DirtyCheckCompleteComponent implements OnInit {
+export class DirtyCompleteComponent implements OnInit {
 
    editForm:FormGroup;
 
@@ -17,11 +17,6 @@ export class DirtyCheckCompleteComponent implements OnInit {
   ngOnInit(){
    let user = new User();
    this.editForm = this.formBuilder.formGroup(user);
-   this.IsDirty();
   }
-  IsDirty()
-  {
-    let isDirty = (<FormGroupExtension>this.editForm).isDirty();
-    
-  }
+
 }

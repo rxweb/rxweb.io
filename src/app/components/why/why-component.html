@@ -1,8 +1,64 @@
-<div id="wrapper" *ngIf="showComponent">
-    <div class="content">
-        <div class="title" id="whats-new" [class.sticky]="sticky">
-            <h1>Why Rxweb</h1>
+<div class="why" *ngIf="showComponent">
+    <section class="row" id="model-based-validation">
+        <div class="col-lg-3 animated slideInLeft delay-1s">
+            <h1 class="why-heading">Model Based Validation</h1>
+            <p class="why-p">Creates angular reactive form based on existing data model with validations.</p>
         </div>
+        <div class="col-lg-8 animated slideInRight delay-1s">
+            <img class="why-image" src="assets/images/model2.gif" />
+        </div>
+    </section>
+ 
+    <section class="row" id="conditional-validation">
+        <div class="col-lg-8">
+            <img class="why-image1" src="assets/images/conditional-validation.gif" />
+        </div>
+        <div class="col-lg-4">
+            <h1 class="why-heading1">Conditional Validation</h1>
+            <p class="why-p">Binds validation conditions with the validators, without writing additional code like
+                valueChanges subscription/global validator.</p>
+        </div>
+    </section>
 
-    </div>
+    <section class="row" id="compare-password">
+        <div class="col-lg-3">
+            <h1 class="why-heading">Compare Password</h1>
+            <p class="why-p">Compares password with optimum approach without creating custom directives.</p>
+        </div>
+        <div class="col-lg-9">
+            <img class="why-image" src="assets/images/compare-password.gif" />
+        </div>
+    </section>
+
+    <section class="row" id="simplified-errormessage">
+        <div class="col-lg-8">
+            <img class="why-image1" src="assets/images/simplified-errormessage.gif" />
+        </div>
+        <div class="col-lg-4">
+            <h1 class="why-heading1">Simplified Way to Show Error Messages</h1>
+            <p class="why-p">Without putting more *ngIf to show the error messages easily.</p>
+        </div>
+    </section>
+    <section class="row" id="strongly-type">
+        <div class="col-lg-3">
+            <h1 class="why-heading">Strongly Typed Forms</h1>
+            <p class="why-p">Binds the Reactive Form with your model and with completely strongly typed Typescript
+                to
+                HTML.</p>
+        </div>
+        <div class="col-lg-9">
+            <img class="why-image" src="assets/images/strongly-type.gif" />
+        </div>
+    </section>
+    <section class="row" id="multiple-fileupload">
+        <div class="col-lg-8">
+            <img class="why-image1" src="assets/images/multiple-file-upload.gif" />
+        </div>
+        <div class="col-lg-4">
+            <h1 class="why-heading1">Receive multiple file upload</h1>
+            <p class="why-p">Uploads multiple files in reactive forms to rest api by setting html attribute instead
+                of
+                custom events.</p>
+        </div>
+    </section>
 </div>

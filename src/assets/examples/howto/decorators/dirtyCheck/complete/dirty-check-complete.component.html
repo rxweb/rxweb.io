@@ -12,6 +12,6 @@
         <label>Designation</label>
         <input type="text" formControlName="designation" class="form-control"  />
     </div>
-    <button [disabled]="!(editForm['isDirty']())" class="btn btn-primary">Is Form Dirty</button>
+    <button [disabled]="!editForm.isDirty()" (click)="IsDirty()" class="btn btn-primary">Is Form Dirty</button>
     </form> 
 </div>

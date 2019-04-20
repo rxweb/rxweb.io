@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { OnInit } from "@angular/core";
-import { ReactiveFormConfig } from "@rxweb/reactive-form-validators";
+import { ReactiveFormConfig, ErrorMessageBindingStrategy } from "@rxweb/reactive-form-validators";
 import { Router, RouterOutlet } from "@angular/router";
 import { NavigationEnd } from "@angular/router";
 import { HostListener } from "@angular/core";
@@ -57,6 +57,7 @@ import { ApplicationBroadcaster } from '@rx/core';
 export class AppComponent implements OnInit {
   title = 'rx.web.io';
   isHome = false;
+  isWhy:boolean=false;
   showFooter = false;
   // getRouteAnimation(outlet) {
   //   return outlet.activatedRouteData.animation
@@ -70,8 +71,12 @@ export class AppComponent implements OnInit {
       this.rightSidebarLinks = t.rightSidebarLinks;
     })
     router.events.subscribe((val) => {
+      
       if (val instanceof NavigationEnd) {
-        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder")
+        if(val.url == "/why"){
+          this.isWhy = true;
+        }
+        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url == "/why" || val.url == "/why#conditional-validation")
           this.isHome = true;
         else{
           this.isHome = false;
@@ -109,6 +114,7 @@ export class AppComponent implements OnInit {
   // }
 
   ngOnInit() {
+   
     // if (localStorage.getItem('isLoggedIn') === 'true') {
     //   this.auth.renewSession();
     // }
@@ -238,7 +244,11 @@ export class AppComponent implements OnInit {
         "choiceMessageKey": "The input selected must be in the range provided in cofig value",
         "oneOfMessageKey": "Your selected options must include atleast one of the values passed in config values",
         "uniqueMessageKey":"Enterred value must be unique"
-      }
+      },
+      "reactiveForm": {
+        "errorMessageBindingStrategy": 
+          ErrorMessageBindingStrategy.OnSubmit
+    }
     });
   }
   homeInit(isHome){

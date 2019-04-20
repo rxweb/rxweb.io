@@ -1,6 +1,7 @@
 import { FILES } from "./files"
 import { PACKAGE } from './files/package.string'
 import { VALIDATION_MESSAGES } from "src/app/components/shared/stackblitz/files/validation-messages.const";
+import { config } from "rxjs";
 const STACKBLITZ_ANGULAR_TEMPLATE_URI = 'https://run.stackblitz.com/api/angular/v1';
 
 
@@ -37,9 +38,14 @@ export class StackBlitzService {
       fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
       if (fileName.indexOf("app.component.ts")) {
         let configObject = { validationMessage: {} };
-        if (validationName.indexOf("Date") >= 0) {
+        if (validationName.indexOf("Date") >= 0 || validationName.indexOf("date") == 0) {
           configObject['internationalization'] = {};
           configObject['internationalization'] = VALIDATION_MESSAGES["internationalization"]
+        }
+        else if(validationName == "errormessagestrategy")
+        {
+          configObject['reactiveForm'] = VALIDATION_MESSAGES["reactiveForm"]
+          configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
         }
         else if(validationName == "errormessage" || validationName == "model")
         {

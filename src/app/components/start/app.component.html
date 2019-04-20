@@ -3,7 +3,7 @@
   <rx-dialog></rx-dialog>
   <rx-popup></rx-popup>
   <rx-spinner></rx-spinner>
-  <app-top-bar *ngIf="!isHome"></app-top-bar>
+  <app-top-bar *ngIf="!isHome || isWhy"></app-top-bar>
   <main class="main">
     <div class="row">
       <div class="col-sm-2 space-left-sidebar" *ngIf="!isHome">

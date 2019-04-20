@@ -10,6 +10,11 @@
         "linkTree":["How to"]
     },
     {
+        "title": "Globally Bind Error Message Strategy",
+        "link": "how-to/errorMessageStrategy/validators",
+        "linkTrees": ["How to"]
+    },
+    {
         "title": "Post Image through formData",
         "link": "/how-to/fileObject/validators",
         "linkTree":["How to"]

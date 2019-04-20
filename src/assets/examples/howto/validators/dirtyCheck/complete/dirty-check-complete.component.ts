@@ -21,10 +21,6 @@ export class DirtyCompleteValidatorComponent implements OnInit {
       name: ["Bharat" ],
       designation: ["Software Engg."]
     });
-   this.IsDirty();
   }
-  IsDirty()
-  {
-    let isDirty = (<FormGroupExtension>this.editForm).isDirty();
-  }
+
 }

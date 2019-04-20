@@ -1,3 +1,5 @@
+import { ErrorMessageBindingStrategy } from "@rxweb/reactive-form-validators";
+
 export const VALIDATION_MESSAGES:{[key:string]:any} =  {
     "internationalization": {
         "dateFormat": "dmy",
@@ -124,5 +126,9 @@ export const VALIDATION_MESSAGES:{[key:string]:any} =  {
         "choiceMessageKey": "The input selected must be in the range provided in cofig value",
         "oneOfMessageKey": "Your selected options must include atleast one of the values passed in config values",
         "uniqueMessageKey":"Enterred value must be unique"
-      }
+      },
+      "reactiveForm": {
+        "errorMessageBindingStrategy": 
+          ErrorMessageBindingStrategy.OnSubmit
+    }
 }

@@ -9,7 +9,7 @@
     "ngsw-copy": "copy node_modules/@angular/service-worker/ngsw-worker.js dist/ngsw-worker.js",
     "build-prod-ngsw": "node --max-old-space-size=4096 node_modules/@angular/cli/bin/ng build --prod",
     "serve-prod-ngsw": "npm run build-prod-ngsw && http-server dist -p 8080",
-    "build:prod":"npm run build -- --prod --aot",
+    "build:prod": "npm run build -- --prod --aot",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -27,7 +27,7 @@
     "@angular/pwa": "^0.11.3",
     "@angular/router": "^7.1.0",
     "@angular/service-worker": "^7.1.4",
-    "@rxweb/reactive-form-validators": "^1.8.8",
+    "@rxweb/reactive-form-validators": "^1.8.9",
     "angular-instantsearch": "^2.1.0",
     "auth0-lock": "^11.12.1",
     "core-js": "^2.5.4",

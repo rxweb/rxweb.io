@@ -501,6 +501,11 @@
           "isActive": false
         },
         {
+          "title": "Globally Bind Error Message Strategy",
+          "uri": "/how-to/errorMessageStrategy/validators",
+          "isActive": false
+        },
+        {
           "title": "On demand validation config",
           "uri": "/how-to/bindConfig/validators",
           "isActive": false

@@ -46,5 +46,9 @@ const HOWTO_ROUTES: Routes = [
 	path:'genericModel',
 	loadChildren: './genericModel/generic-model.module#GenericModelModule',
 },
+{
+	path:'errorMessageStrategy',
+	loadChildren: './errorMessageStrategy/error-message-strategy.module#ErrorMessageStrategyModule',
+},
 ];
 export const HOWTO_ROUTING: ModuleWithProviders = RouterModule.forChild(HOWTO_ROUTES);
