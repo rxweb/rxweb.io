@@ -20,7 +20,7 @@ Based upon your need you can set the errorMessageBindingStrategy to these Strate
 Whenever the `RxFormGroup` property `submitted` is true then the invalid FormControl error messages will be bind.
 
 # ErrorBindingStrategy.OnDirty
-Once the FormControl is dirty, after that invalid FormControl error messages will be bind accordingly. The FormControl should be marked as touched using `markAsDirty()`
+Once the FormControl is dirty, after that invalid FormControl error messages will be bind accordingly. The FormControl should be marked as dirty using `markAsDirty()`
 
 # ErrorBindingStrategy.OnTouched
 Once the FormControl is touched, after that invalid FormControl error messages will be bind when we set accordingly, The FormControl should be marked as touched using `markAsTouched()`
