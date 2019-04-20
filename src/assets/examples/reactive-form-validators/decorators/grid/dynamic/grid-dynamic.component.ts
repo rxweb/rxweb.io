@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from "@angular/forms"
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { RxFormBuilder } from '@rxweb/reactive-form-validators';
 import { FormBuilderConfiguration,} from '@rxweb/reactive-form-validators';
 
 import { DigitalInfo } from './digital-info.model';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-grid-dynamic',
@@ -20,7 +20,7 @@ export class GridDynamicComponent implements OnInit {
     ngOnInit() {
         let digitalInfo = new DigitalInfo();
         let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/decorators/grid/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+		this.http.get('assets/examples/reactive-form-validators/decorators/grid/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
             formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			this.digitalInfoFormGroup = this.formBuilder.formGroup(digitalInfo,formBuilderConfiguration);
         })

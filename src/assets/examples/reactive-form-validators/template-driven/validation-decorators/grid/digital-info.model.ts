@@ -1,4 +1,4 @@
-import {  grid,prop, } from   "@rxweb/reactive-form-validators"   
+import {  grid,prop, } from "@rxweb/reactive-form-validators"
 
 export class DigitalInfo {
 
@@ -10,8 +10,5 @@ export class DigitalInfo {
 
 	@prop()
 	graphicImageGrid: string;
-
-	@prop()
-	videoGraphicGrid: string;
 
 }

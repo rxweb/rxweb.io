@@ -1,5 +1,5 @@
 
-export class DigitalInfo {
+export class User {
 
 	soundRecordingGrid: string;
 

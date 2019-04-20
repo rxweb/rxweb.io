@@ -1,6 +1,6 @@
 import {  grid, } from "@rxweb/reactive-form-validators"
 
-export class DigitalInfo {
+export class User {
 
 	@grid() 
 	soundRecordingGrid: string;
