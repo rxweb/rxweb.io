@@ -46,7 +46,7 @@ Here we have covered Add form operations.
 <div component="app-code" key="maxNumber-add-component"></div> 
 Next, we need to write html code.
 <div component="app-code" key="maxNumber-add-html"></div> 
-<div component="app-example-runner" ref-component="app-MaxNumber-add"></div>
+<div component="app-example-runner" ref-component="app-maxNumber-add"></div>
 # [/Add]
 # [Edit](#tab\basicedit)
 <div component="app-code" key="maxNumber-edit-component"></div> 
@@ -54,7 +54,7 @@ The below code is `subject-detail-data.json` for getting data from the server
 <div component="app-code" key="maxNumber-edit-json"></div> 
 Next, we need to write html code.
 <div component="app-code" key="maxNumber-edit-html"></div> 
-<div component="app-example-runner" ref-component="app-MaxNumber-edit"></div>
+<div component="app-example-runner" ref-component="app-maxNumber-edit"></div>
 # [/Edit]
 ***
 </data-scope>
@@ -63,7 +63,7 @@ Next, we need to write html code.
 <div component="app-code" key="maxNumber-add-component"></div> 
 Next, we need to write html code.
 <div component="app-code" key="maxNumber-add-html"></div> 
-<div component="app-example-runner" ref-component="app-MaxNumber-add"></div>
+<div component="app-example-runner" ref-component="app-maxNumber-add"></div>
 </data-scope>
 
 # NumberConfig 
@@ -133,7 +133,7 @@ This Complete MaxNumber example which includes all the NumberConfig properties w
 <div component="app-tabs" key="complete"></div>
 [!TabGroup]
 # [Example](#tab\completeexample)
-<div component="app-example-runner" ref-component="app-MaxNumber-complete"></div>
+<div component="app-example-runner" ref-component="app-maxNumber-complete"></div>
 # [/Example]
 <data-scope scope="['decorator','template-driven-directives','template-driven-decorators']">
 # [Model](#tab\completemodel)
@@ -157,7 +157,7 @@ This Dynamic MaxDate example which execute based on json passed. conditional exp
 
 [!TabGroup]
 # [Example](#tab\dynamicexample)
-<div component="app-example-runner" ref-component="app-MaxNumber-dynamic"></div>
+<div component="app-example-runner" ref-component="app-maxNumber-dynamic"></div>
 # [/Example]
 <data-scope scope="['decorator']">
 # [Model](#tab\dynamicmodel)
