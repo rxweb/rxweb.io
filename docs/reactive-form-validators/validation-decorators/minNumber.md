@@ -116,7 +116,7 @@ Type :  `number`
 enter value which you want to restrict number in the property
 
 <div component="app-code" key="minNumber-valueExample-model"></div> 
-<div component="app-example-runner" ref-component="minNumber-value-value" title="minNumber {{validatorType}} with value" key="value"></div>
+<div component="app-example-runner" ref-component="app-minNumber-value" title="minNumber {{validatorType}} with value" key="value"></div>
 
 ## messageKey
 Type : `string`
