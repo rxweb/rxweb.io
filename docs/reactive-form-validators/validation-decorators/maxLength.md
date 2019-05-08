@@ -117,7 +117,7 @@ Type :  `number`
 enter value which you want to restrict string length in the property
  
 <div component="app-code" key="maxLength-valueExample-model"></div> 
-<div component="app-example-runner" ref-component="maxLength-value-value" title="maxLength {{validatorType}} with value" key="value"></div>
+<div component="app-example-runner" ref-component="app-maxLength-value" title="maxLength {{validatorType}} with value" key="value"></div>
 
 ## messageKey
 Type : `string`
