@@ -144,7 +144,15 @@ export class StackBlitzService {
           let sourcePath:string= validationType == "templateDriven" ? `assets/examples/reactive-form-validators/template-driven/validation-${templateDrivenType}/${validationName}/${exampleName}/${prop}` :`assets/examples/reactive-form-validators/${validationType}s/${validationName}/${exampleName}/${prop}`;
           let destinationPath:string =  `assets/${prop}`
           this.addInputElement(form, `files[${exampleJsonFileName}]`, jsonObject[prop]);
-          if (obj["component"] != null)
+          if(exampleName == "dynamic")
+          {
+            obj["component"] = obj["component"].replace(sourcePath, destinationPath)
+            obj["component"] = obj["component"].replace("import { environment } from 'src/environments/environment';", "")
+            obj["component"] = obj["component"].replace("'assets/dynamic.json?v='+environment.appVersion", "'assets/dynamic.json'",)
+            obj["component"] = obj["component"].replace("'assets/dynamic.json?v=' + environment.appVersion", "'assets/dynamic.json'",)
+            console.log(obj["component"]);
+          }
+           else if (obj["component"] != null)
             obj["component"] = obj["component"].replace(sourcePath, destinationPath)
         }
       }
