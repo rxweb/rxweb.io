@@ -7,6 +7,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 import { MinTimeCompleteComponent } from './complete/min-time-complete.component';
 import { MinTimeValueComponent } from './value/min-time-value.component';
+import { MinTimeOperatorComponent } from './operator/min-time-operator.component';
 import { MinTimeConditionalExpressionComponent } from './conditionalExpression/min-time-conditional-expression.component';
 import { MinTimeFieldNameComponent } from './fieldName/min-time-field-name.component';
 import { MinTimeAllowSecondsComponent } from './allowSeconds/min-time-allow-seconds.component';
@@ -15,12 +16,12 @@ import { MinTimeMessageKeyComponent } from './messageKey/min-time-message-key.co
 import { MinTimeDynamicComponent } from './dynamic/min-time-dynamic.component';
 import { MinTimeAddComponent } from './add/min-time-add.component';
 import { MinTimeEditComponent } from './edit/min-time-edit.component';
-import { MinTimeOperatorComponent } from './operator/min-time-operator.component';
 
 @NgModule({
   declarations: [
 	MinTimeCompleteComponent,
 	MinTimeValueComponent,
+	MinTimeOperatorComponent,
 	MinTimeConditionalExpressionComponent,
 	MinTimeFieldNameComponent,
 	MinTimeAllowSecondsComponent,
@@ -29,11 +30,11 @@ import { MinTimeOperatorComponent } from './operator/min-time-operator.component
 	MinTimeDynamicComponent,
 	MinTimeAddComponent,
 	MinTimeEditComponent,
-	MinTimeOperatorComponent
   ],
 entryComponents: [
 	MinTimeCompleteComponent,
 	MinTimeValueComponent,
+	MinTimeOperatorComponent,
 	MinTimeConditionalExpressionComponent,
 	MinTimeFieldNameComponent,
 	MinTimeAllowSecondsComponent,
@@ -42,7 +43,6 @@ entryComponents: [
 	MinTimeDynamicComponent,
 	MinTimeAddComponent,
 	MinTimeEditComponent,
-	MinTimeOperatorComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -53,6 +53,7 @@ entryComponents: [
   exports: [
 	MinTimeCompleteComponent,
 	MinTimeValueComponent,
+	MinTimeOperatorComponent,
 	MinTimeConditionalExpressionComponent,
 	MinTimeFieldNameComponent,
 	MinTimeAllowSecondsComponent,
@@ -61,7 +62,6 @@ entryComponents: [
 	MinTimeDynamicComponent,
 	MinTimeAddComponent,
 	MinTimeEditComponent,
-	MinTimeOperatorComponent
   ],
 
 })

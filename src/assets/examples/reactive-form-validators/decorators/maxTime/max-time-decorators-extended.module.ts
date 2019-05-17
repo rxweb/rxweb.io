@@ -7,6 +7,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 import { MaxTimeCompleteComponent } from './complete/max-time-complete.component';
 import { MaxTimeValueComponent } from './value/max-time-value.component';
+import { MaxTimeOperatorComponent } from './operator/max-time-operator.component';
 import { MaxTimeConditionalExpressionComponent } from './conditionalExpression/max-time-conditional-expression.component';
 import { MaxTimeAllowSecondsComponent } from './allowSeconds/max-time-allow-seconds.component';
 import { MaxTimeMessageComponent } from './message/max-time-message.component';
@@ -15,13 +16,12 @@ import { MaxTimeMessageKeyComponent } from './messageKey/max-time-message-key.co
 import { MaxTimeDynamicComponent } from './dynamic/max-time-dynamic.component';
 import { MaxTimeAddComponent } from './add/max-time-add.component';
 import { MaxTimeEditComponent } from './edit/max-time-edit.component';
-import { MaxTimeOperatorComponent } from './operator/max-time-operator.component';
-
 
 @NgModule({
   declarations: [
 	MaxTimeCompleteComponent,
 	MaxTimeValueComponent,
+	MaxTimeOperatorComponent,
 	MaxTimeConditionalExpressionComponent,
 	MaxTimeAllowSecondsComponent,
 	MaxTimeMessageComponent,
@@ -30,11 +30,11 @@ import { MaxTimeOperatorComponent } from './operator/max-time-operator.component
 	MaxTimeDynamicComponent,
 	MaxTimeAddComponent,
 	MaxTimeEditComponent,
-	MaxTimeOperatorComponent
   ],
 entryComponents: [
 	MaxTimeCompleteComponent,
 	MaxTimeValueComponent,
+	MaxTimeOperatorComponent,
 	MaxTimeConditionalExpressionComponent,
 	MaxTimeAllowSecondsComponent,
 	MaxTimeMessageComponent,
@@ -43,7 +43,6 @@ entryComponents: [
 	MaxTimeDynamicComponent,
 	MaxTimeAddComponent,
 	MaxTimeEditComponent,
-	MaxTimeOperatorComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -54,6 +53,7 @@ entryComponents: [
   exports: [
 	MaxTimeCompleteComponent,
 	MaxTimeValueComponent,
+	MaxTimeOperatorComponent,
 	MaxTimeConditionalExpressionComponent,
 	MaxTimeAllowSecondsComponent,
 	MaxTimeMessageComponent,
@@ -62,7 +62,6 @@ entryComponents: [
 	MaxTimeDynamicComponent,
 	MaxTimeAddComponent,
 	MaxTimeEditComponent,
-	MaxTimeOperatorComponent
   ],
 
 })

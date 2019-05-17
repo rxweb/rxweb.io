@@ -11,6 +11,12 @@
      <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.closingTime.errors">{{attandanceDetailFormGroup.controls.closingTime.errors.maxTime.message}}<br/></small>	
     </div>
     <div class="form-group">
+      <label>Break Hours</label>
+      <input type="text" formControlName="breakHours" class="form-control"  />
+      <small class="form-text text-muted">Value should be less than 00:10<br/></small>
+     <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.breakHours.errors">{{attandanceDetailFormGroup.controls.breakHours.errors.maxTime.message}}<br/></small>	
+    </div>
+    <div class="form-group">
       <label>Entry Time</label>
       <input type="text" formControlName="entryTime" class="form-control"  />
       <small class="form-text text-muted">To apply the validation of maxTime on 'Entry Time' field, then enter the value of 'Main Entry Gate' in Entry Place textbox.<br/></small>

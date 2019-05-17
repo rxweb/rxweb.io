@@ -10,7 +10,7 @@ If you are using dirty check feature in your form and you want to maintain the d
 
 Let's see how it works.
 
-Here we are creating a three formcontrols which are Id, Name and Designation. Once it shows on the we update the data the dirty state should become false.
+Here we are creating a three formcontrols which are Id, Name and Designation. Once it shows that  data is updated the dirty state should become false.
 
 # Example
 

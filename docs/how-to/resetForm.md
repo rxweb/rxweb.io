@@ -7,7 +7,7 @@ linktitle: resetForm
 ---
 
 # About Reset Form
-Developing a enterprise level application there are lots of scenarios are comming for updating the form with the initially defined value.
+Developing an enterprise level application there are lots of scenarios are coming for updating the form with the initially defined value.
 
 Reset form provides these features:
 

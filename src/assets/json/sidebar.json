@@ -89,11 +89,6 @@
               "isActive": false
             },
             {
-              "title": "time",
-              "uri": "/form-validations/time/validators",
-              "isActive": false
-            },
-            {
               "title": "minTime",
               "uri": "/form-validations/minTime/validators",
               "isActive": false
@@ -102,7 +97,13 @@
               "title": "maxTime",
               "uri": "/form-validations/maxTime/validators",
               "isActive": false
+            },
+            {
+              "title": "time",
+              "uri": "/form-validations/time/validators",
+              "isActive": false
             }
+            
           ]
         },
         {

@@ -15,7 +15,7 @@ export class MaxTimeFieldNameValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.attandanceDetailFormGroup = this.formBuilder.group({
-            closingTime:['',], 
+            closingTime:['', RxwebValidators.maxTime({value:'23:30' })], 
             exitTime:['', RxwebValidators.maxTime({message:'You can enter only time format data'  ,fieldName:'closingTime' })], 
         });
     }

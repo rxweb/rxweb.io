@@ -5,9 +5,14 @@ export class AttandanceDetail {
 	@prop()
 	entryPlace: string;
 
-	@prop()
+	@minTime({value:'08:00' }) 
 	openingTime: string;
-
+	
+	
+	@minTime({operator:'>'  ,value:'08:30' }) 
+	requiredHours: string;
+	
+	
 	//If you want to apply conditional expression of type 'function'
 	@minTime({conditionalExpression:(x,y) => x.entryPlace == "Main Entry Gate"   ,fieldName:'netInTime' }) 
 	totalInTime: string;

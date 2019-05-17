@@ -15,7 +15,7 @@ export class MinTimeValueValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.attandanceDetailFormGroup = this.formBuilder.group({
-            openingTime:['',], 
+            openingTime:['', RxwebValidators.minTime({value:'08:00' })], 
         });
     }
 }

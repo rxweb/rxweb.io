@@ -9,6 +9,9 @@ export class AttandanceDetail {
 	openingTime: string;
 
 	@prop()
+	requiredHours: string;
+
+	@prop()
 	entryTime: string;
 
 	@prop()

@@ -9,6 +9,9 @@ export class AttandanceDetail {
 	closingTime: string;
 
 	@prop()
+	breakHours: string;
+
+	@prop()
 	entryTime: string;
 
 	@prop()

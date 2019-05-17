@@ -5,9 +5,14 @@ export class AttandanceDetail {
 	@prop()
 	entryPlace: string;
 
-	@prop()
+	@maxTime({value:'23:30' }) 
 	closingTime: string;
-
+	
+	
+	@maxTime({operator:'<'  ,value:'00:10' }) 
+	breakHours: string;
+	
+	
 	//If you want to apply conditional expression of type 'function'
 	@maxTime({conditionalExpression:(x,y) => x.entryPlace == "Main Entry Gate"   ,value:'12:00' }) 
 	totalInTime: string;

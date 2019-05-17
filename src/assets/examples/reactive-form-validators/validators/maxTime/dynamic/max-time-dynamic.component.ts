@@ -20,7 +20,7 @@ export class MaxTimeDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/maxTime/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var attandanceDetail = { entryPlace:'', closingTime:'', totalInTime:'', entryTime:'', totalOutTime:'', exitTime:'', netInTime:'',  }
+			var attandanceDetail = { entryPlace:'', closingTime:'', breakHours:'', totalInTime:'', entryTime:'', totalOutTime:'', exitTime:'', netInTime:'',  }
 			this.attandanceDetailFormGroup = this.formBuilder.group(attandanceDetail,formBuilderConfiguration);
 		})
     }

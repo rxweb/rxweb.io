@@ -11,6 +11,12 @@
      <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.openingTime.errors">{{attandanceDetailFormGroup.controls.openingTime.errors.minTime.message}}<br/></small>	
     </div>
     <div class="form-group">
+      <label>Required Hours</label>
+      <input type="text" formControlName="requiredHours" class="form-control"  />
+      <small class="form-text text-muted">Value should be greater than 8:30<br/></small>
+     <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.requiredHours.errors">{{attandanceDetailFormGroup.controls.requiredHours.errors.minTime.message}}<br/></small>	
+    </div>
+    <div class="form-group">
       <label>Entry Time</label>
       <input type="text" formControlName="entryTime" class="form-control"  />
       <small class="form-text text-muted">To apply the validation of minTime on 'Entry Time' field, then enter the value of 'Main Entry Gate' in Entry Place textbox.<br/></small>

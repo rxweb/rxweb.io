@@ -7,6 +7,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 import { MaxTimeCompleteValidatorComponent } from './complete/max-time-complete.component';
 import { MaxTimeValueValidatorComponent } from './value/max-time-value.component';
+import { MaxTimeOperatorValidatorComponent } from './operator/max-time-operator.component';
 import { MaxTimeConditionalExpressionValidatorComponent } from './conditionalExpression/max-time-conditional-expression.component';
 import { MaxTimeAllowSecondsValidatorComponent } from './allowSeconds/max-time-allow-seconds.component';
 import { MaxTimeMessageValidatorComponent } from './message/max-time-message.component';
@@ -14,12 +15,12 @@ import { MaxTimeFieldNameValidatorComponent } from './fieldName/max-time-field-n
 import { MaxTimeMessageKeyValidatorComponent } from './messageKey/max-time-message-key.component';
 import { MaxTimeDynamicValidatorComponent } from './dynamic/max-time-dynamic.component';
 import { MaxTimeAddValidatorComponent } from './add/max-time-add.component';
-import { MaxTimeOperatorValidatorComponent } from './operator/max-time-operator.component';
 
 @NgModule({
   declarations: [
 	MaxTimeCompleteValidatorComponent,
 	MaxTimeValueValidatorComponent,
+	MaxTimeOperatorValidatorComponent,
 	MaxTimeConditionalExpressionValidatorComponent,
 	MaxTimeAllowSecondsValidatorComponent,
 	MaxTimeMessageValidatorComponent,
@@ -27,11 +28,11 @@ import { MaxTimeOperatorValidatorComponent } from './operator/max-time-operator.
 	MaxTimeMessageKeyValidatorComponent,
 	MaxTimeDynamicValidatorComponent,
 	MaxTimeAddValidatorComponent,
-	MaxTimeOperatorValidatorComponent
   ],
 entryComponents: [
 	MaxTimeCompleteValidatorComponent,
 	MaxTimeValueValidatorComponent,
+	MaxTimeOperatorValidatorComponent,
 	MaxTimeConditionalExpressionValidatorComponent,
 	MaxTimeAllowSecondsValidatorComponent,
 	MaxTimeMessageValidatorComponent,
@@ -39,7 +40,6 @@ entryComponents: [
 	MaxTimeMessageKeyValidatorComponent,
 	MaxTimeDynamicValidatorComponent,
 	MaxTimeAddValidatorComponent,
-	MaxTimeOperatorValidatorComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -50,6 +50,7 @@ entryComponents: [
   exports: [
 	MaxTimeCompleteValidatorComponent,
 	MaxTimeValueValidatorComponent,
+	MaxTimeOperatorValidatorComponent,
 	MaxTimeConditionalExpressionValidatorComponent,
 	MaxTimeAllowSecondsValidatorComponent,
 	MaxTimeMessageValidatorComponent,
@@ -57,7 +58,6 @@ entryComponents: [
 	MaxTimeMessageKeyValidatorComponent,
 	MaxTimeDynamicValidatorComponent,
 	MaxTimeAddValidatorComponent,
-	MaxTimeOperatorValidatorComponent
   ],
 
 })

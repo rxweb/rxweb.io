@@ -16,7 +16,8 @@ export class MinTimeCompleteValidatorComponent implements OnInit {
     ngOnInit() {
         this.attandanceDetailFormGroup = this.formBuilder.group({
             entryPlace:['',], 
-            openingTime:['',], 
+            openingTime:['', RxwebValidators.minTime({value:'08:00' })], 
+            requiredHours:['', RxwebValidators.minTime({operator:'>'  ,value:'08:30' })], 
             totalInTime:['', RxwebValidators.minTime({conditionalExpression:(x,y) => x.entryPlace == "Main Entry Gate"   ,fieldName:'netInTime' })], 
             entryTime:['', RxwebValidators.minTime({conditionalExpression:'x => x.entryPlace == "Main Entry Gate"'  ,fieldName:'openingTime' })], 
             totalOutTime:['', RxwebValidators.minTime({allowSeconds:true  ,value:'00:10:00' })], 

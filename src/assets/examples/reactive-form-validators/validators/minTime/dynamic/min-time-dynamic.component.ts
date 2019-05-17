@@ -20,7 +20,7 @@ export class MinTimeDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/minTime/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var attandanceDetail = { entryPlace:'', openingTime:'', totalInTime:'', entryTime:'', totalOutTime:'', exitTime:'', netInTime:'',  }
+			var attandanceDetail = { entryPlace:'', openingTime:'', requiredHours:'', totalInTime:'', entryTime:'', totalOutTime:'', exitTime:'', netInTime:'',  }
 			this.attandanceDetailFormGroup = this.formBuilder.group(attandanceDetail,formBuilderConfiguration);
 		})
     }

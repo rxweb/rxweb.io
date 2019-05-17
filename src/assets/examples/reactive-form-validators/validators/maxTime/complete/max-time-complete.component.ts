@@ -16,7 +16,8 @@ export class MaxTimeCompleteValidatorComponent implements OnInit {
     ngOnInit() {
         this.attandanceDetailFormGroup = this.formBuilder.group({
             entryPlace:['',], 
-            closingTime:['',], 
+            closingTime:['', RxwebValidators.maxTime({value:'23:30' })], 
+            breakHours:['', RxwebValidators.maxTime({operator:'<'  ,value:'00:10' })], 
             totalInTime:['', RxwebValidators.maxTime({conditionalExpression:(x,y) => x.entryPlace == "Main Entry Gate"   ,value:'12:00' })], 
             entryTime:['', RxwebValidators.maxTime({conditionalExpression:'x => x.entryPlace == "Main Entry Gate"'  ,value:'11:00' })], 
             totalOutTime:['', RxwebValidators.maxTime({allowSeconds:true  ,value:'02:00:00' })], 
