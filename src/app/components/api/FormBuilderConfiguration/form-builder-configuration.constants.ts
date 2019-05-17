@@ -2,6 +2,8 @@ import { FormbuilderconfigurationCompleteComponent } from "src/assets/examples/a
 import { FormbuilderconfigurationObjectComponent } from "src/assets/examples/api/FormBuilderConfiguration/object/formbuilderconfiguration-object.component";
 import { FormbuilderconfigurationArrayobjectComponent } from "src/assets/examples/api/FormBuilderConfiguration/arrayobject/formbuilderconfiguration-arrayobject.component";
 import { FormbuilderconfigurationIncludepropsComponent } from "src/assets/examples/api/FormBuilderConfiguration/includeprops/formbuilderconfiguration-includeprops.component";
+import { FormbuilderconfigurationIgnoreundefinedpropsComponent } from "src/assets/examples/api/FormBuilderConfiguration/ignoreUndefinedProps/formbuilderconfiguration-ignoreundefinedprops.component";
+import { FormbuilderconfigurationDynamicdefaultComponent } from "src/assets/examples/api/FormBuilderConfiguration/dynamicDefaultValue/formbuilderconfiguration-dynamic.component";
 
 
 
@@ -12,6 +14,8 @@ export const FORM_BUILDER_CONFIGURATION_COMPONENT_EXAMPLE_CONSTANT: { [key: stri
         complete: FormbuilderconfigurationCompleteComponent,
         object:FormbuilderconfigurationObjectComponent,
         arrayobject:FormbuilderconfigurationArrayobjectComponent,
-        includeprops:FormbuilderconfigurationIncludepropsComponent
+        includeprops:FormbuilderconfigurationIncludepropsComponent,
+        ignoreundefined:FormbuilderconfigurationIgnoreundefinedpropsComponent,
+        dynamicdefault:FormbuilderconfigurationDynamicdefaultComponent
     },
 }

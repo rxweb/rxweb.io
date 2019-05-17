@@ -9,6 +9,7 @@ import { LessThanCompleteTemplateDrivenValidationDecoratorsComponent } from './c
 import { LessThanFieldNameTemplateDrivenValidationDecoratorsComponent } from './fieldName/less-than-field-name.component';
 import { LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/less-than-conditional-expression.component';
 import { LessThanMessageTemplateDrivenValidationDecoratorsComponent } from './message/less-than-message.component';
+import { LessThanValueTemplateDrivenValidationDecoratorsComponent } from './value/less-than-value.component';
 import { LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/less-than-message-key.component';
 import { LessThanAddTemplateDrivenValidationDecoratorsComponent } from './add/less-than-add.component';
 
@@ -18,6 +19,7 @@ import { LessThanAddTemplateDrivenValidationDecoratorsComponent } from './add/le
 	LessThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LessThanMessageTemplateDrivenValidationDecoratorsComponent,
+	LessThanValueTemplateDrivenValidationDecoratorsComponent,
 	LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LessThanAddTemplateDrivenValidationDecoratorsComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	LessThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LessThanMessageTemplateDrivenValidationDecoratorsComponent,
+	LessThanValueTemplateDrivenValidationDecoratorsComponent,
 	LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LessThanAddTemplateDrivenValidationDecoratorsComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	LessThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	LessThanMessageTemplateDrivenValidationDecoratorsComponent,
+	LessThanValueTemplateDrivenValidationDecoratorsComponent,
 	LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	LessThanAddTemplateDrivenValidationDecoratorsComponent,
   ],

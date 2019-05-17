@@ -1,0 +1,19 @@
+<div>
+  <form #attandancedetailForm = "ngForm" [rxwebForm]="attandancedetailForm" [model]="attandancedetail">
+    <div class="form-group">
+      <label>Entry Place</label>
+	    <input type="text" name="entryPlace" [(ngModel)]="attandancedetail.entryPlace"  class="form-control" />
+
+	   <small class="form-text text-danger" *ngIf="attandancedetailForm.controls?.entryPlace?.errors">{{attandancedetailForm.controls?.entryPlace?.errors?.maxTime.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Entry Time</label>
+	    <input type="text" name="entryTime" [(ngModel)]="attandancedetail.entryTime"  class="form-control" [maxTime]="{'conditionalExpression':'x => x.entryPlace == \'Main Entry Gate\'','value':'11:00'}"/>
+
+      <small class="form-text text-muted">To apply the validation of maxTime on 'Entry Time' field, then enter the value of 'Main Entry Gate' in Entry Place textbox.<br/></small>
+      <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
+	   <small class="form-text text-danger" *ngIf="attandancedetailForm.controls?.entryTime?.errors">{{attandancedetailForm.controls?.entryTime?.errors?.maxTime.message}}<br/></small>	
+    </div>
+    <button [disabled]="!attandancedetailForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

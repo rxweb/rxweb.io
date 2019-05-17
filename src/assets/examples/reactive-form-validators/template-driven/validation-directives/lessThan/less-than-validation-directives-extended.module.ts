@@ -9,6 +9,7 @@ import { LessThanCompleteTemplateDrivenValidationDirectivesComponent } from './c
 import { LessThanFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/less-than-field-name.component';
 import { LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/less-than-conditional-expression.component';
 import { LessThanMessageTemplateDrivenValidationDirectivesComponent } from './message/less-than-message.component';
+import { LessThanValueTemplateDrivenValidationDirectivesComponent } from './value/less-than-value.component';
 import { LessThanMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/less-than-message-key.component';
 import { LessThanAddTemplateDrivenValidationDirectivesComponent } from './add/less-than-add.component';
 
@@ -18,6 +19,7 @@ import { LessThanAddTemplateDrivenValidationDirectivesComponent } from './add/le
 	LessThanFieldNameTemplateDrivenValidationDirectivesComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageTemplateDrivenValidationDirectivesComponent,
+	LessThanValueTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanAddTemplateDrivenValidationDirectivesComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	LessThanFieldNameTemplateDrivenValidationDirectivesComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageTemplateDrivenValidationDirectivesComponent,
+	LessThanValueTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanAddTemplateDrivenValidationDirectivesComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	LessThanFieldNameTemplateDrivenValidationDirectivesComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageTemplateDrivenValidationDirectivesComponent,
+	LessThanValueTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanAddTemplateDrivenValidationDirectivesComponent,
   ],

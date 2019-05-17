@@ -1,14 +1,9 @@
 
 export class User {
 
-	admissionAge: number;
+	age: number;
 
-	retiermentAge: number;
-
-	memberAge: number;
-
-	otherAge: number;
-
-	joiningAge: number;
-
+	voterAge: number;
+	
+	
 }

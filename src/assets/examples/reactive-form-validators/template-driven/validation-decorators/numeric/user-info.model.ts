@@ -1,23 +1,9 @@
-import {  numeric,prop, NumericValueType, } from   "@rxweb/reactive-form-validators"   
+import {  numeric, NumericValueType, } from   "@rxweb/reactive-form-validators"   
 
 export class UserInfo {
 
-	@prop()
-	dataType: string;
-
-	@prop()
-	negativeNumber: number;
-
-	@prop()
-	decimalNumber: number;
-
-	@prop()
-	realNumber: number;
-
-	@prop()
-	positiveNumber: number;
-
-	@prop()
-	positiveNonDecimalNumber: number;
-
+	@numeric({acceptValue:NumericValueType.PositiveNumber  ,allowDecimal:false }) 
+	integerNumber: number;
+	
+	
 }

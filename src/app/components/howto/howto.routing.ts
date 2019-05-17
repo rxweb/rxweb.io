@@ -50,5 +50,13 @@ const HOWTO_ROUTES: Routes = [
 	path:'errorMessageStrategy',
 	loadChildren: './errorMessageStrategy/error-message-strategy.module#ErrorMessageStrategyModule',
 },
+{
+	path:'commit',
+	loadChildren: './commit/commit.module#CommitModule',
+},
+{
+	path:'modifiedValue',
+	loadChildren: './modifiedValue/modified-value.module#ModifiedValueModule',
+},
 ];
 export const HOWTO_ROUTING: ModuleWithProviders = RouterModule.forChild(HOWTO_ROUTES);

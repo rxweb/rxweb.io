@@ -27,6 +27,10 @@ export class UserInfo {
 	positiveNumber: number;
 	
 	
+	@numeric({isFormat:true }) 
+	totalAmount: number;
+	
+	
 	@numeric({messageKey:'numericMessageKey' }) 
 	positiveNonDecimalNumber: number;
 	

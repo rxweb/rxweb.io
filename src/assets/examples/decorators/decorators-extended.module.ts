@@ -19,6 +19,11 @@ import { DisableAddComponent } from './disable/add/disable-add.component';
 import { ErrorAddComponent } from './error/add/error-add.component';
 import { ElementClassAddComponent } from './elementClass/add/element-add.component';
 import { ModelAddComponent } from './model/add/model-add.component';
+import { PropExcludeComponent } from './prop/excludeProps/prop-exclude.component';
+import { ModelExcludeComponent } from './model/excludeProps/model-exclude.component';
+import { ModelErrorComponent } from './model/error/model-error.component';
+import { ModelElementComponent } from './model/elementClass/model-element.component';
+import { PropPrimaryComponent } from './prop/primaryKey/prop-primary.component';
 
 
 
@@ -36,7 +41,12 @@ import { ModelAddComponent } from './model/add/model-add.component';
   DisableAddComponent,
   ErrorAddComponent,
   ElementClassAddComponent,
-  ModelAddComponent
+  ModelAddComponent,
+  PropExcludeComponent,
+  PropPrimaryComponent,
+  ModelExcludeComponent,
+  ModelErrorComponent,
+  ModelElementComponent
   ],
 entryComponents: [
   PropAddComponent,
@@ -48,10 +58,15 @@ entryComponents: [
   PropObjectDefaultComponent,
   PropObjectServerComponent,
   PropDefaultComponent,
+  PropPrimaryComponent,
   DisableAddComponent,
   ErrorAddComponent,
   ElementClassAddComponent,
-  ModelAddComponent
+  ModelAddComponent,
+  PropExcludeComponent,
+  ModelExcludeComponent,
+  ModelErrorComponent,
+  ModelElementComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -63,10 +78,15 @@ entryComponents: [
     PropAddComponent,
     PropArrayAddComponent,
   PropObjectAddComponent,
+  PropPrimaryComponent,
   DisableAddComponent,
   ErrorAddComponent,
   ElementClassAddComponent,
-  ModelAddComponent
+  ModelAddComponent,
+  PropExcludeComponent,
+  ModelExcludeComponent,
+  ModelErrorComponent,
+  ModelElementComponent
   ],
 
 })

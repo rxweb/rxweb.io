@@ -10,13 +10,23 @@
         "linkTree":["How to"]
     },
     {
+        "title": "commit",
+        "link": "/how-to/commit/validators",        
+        "linkTree":["How to"]
+    },
+    {
         "title": "Globally Bind Error Message Strategy",
-        "link": "how-to/errorMessageStrategy/validators",
+        "link": "/how-to/errorMessageStrategy/validators",
         "linkTrees": ["How to"]
     },
     {
         "title": "Post Image through formData",
         "link": "/how-to/fileObject/validators",
+        "linkTree":["How to"]
+    },
+    {
+        "title": "Patch value by sending modifiedValue",
+        "link": "/how-to/modifiedValue/validators",
         "linkTree":["How to"]
     },
     {
@@ -30,7 +40,7 @@
         "linkTree":["How to"]
     },
     {
-        "title": "Strongly Typed Angular Reactive Form",
+        "title": "StronglyTyped Angular Reactive Form",
         "link": "/how-to/stronglyType/decorators",
         "linkTree":["How to"]
     },
@@ -42,6 +52,11 @@
     {
         "title": "Use multiple validations using logical operators.",
         "link": "/how-to/logicalOperators/validators",
+        "linkTree":["How to"]
+    },
+    {
+        "title": "Patch Model Value.",
+        "link": "/how-to/patchModelValue/validators",
         "linkTree":["How to"]
     },
     {
@@ -57,12 +72,18 @@
     {
         "title": "RxFormBuilder",
         "link": "/api/RxFormBuilder/decorators",
-        "linkTrees": ["api"]
+        "linkTree":["api"]
+    },
+   
+    {
+        "title": "ReactiveFormConfig",
+        "link": "/api/reactive-form-config/decorators",
+        "linkTree":["api"]
     },
     {
-        "title": "FormBuilderConfiguration",
-        "link": "/api/FormBuilderConfiguration/decorators",
-        "linkTrees": ["api"]
+        "title": "RxFormGroup",
+        "link": "/how-to/dirtyCheck/validators",
+        "linkTree":["api"]
     },
     {
         "title": "prop",
@@ -90,7 +111,7 @@
         "linkTree":["Decorators"]
     },
     {
-        "title": "Apply a class conditionally to the form control element",
+        "title": "elementClass",
         "link": "/decorators/elementClass/decorators",
         "description": "",
         "linkTree":["Decorators"]
@@ -306,6 +327,16 @@
         "linkTree":["Form Validations","Date and time"]
     },
     {
+        "title": "MinTime",
+        "link": "/form-validations/minTime/validators",
+        "linkTree":["Form Validations","Date and time"]
+    },
+    {
+        "title": "MaxTime",
+        "link": "/form-validations/maxTime/validators",      
+        "linkTree":["Form Validations","Date and time"]
+    },
+    {
         "title": "minLength",
         "link": "/form-validations/minLength/validators",
         "linkTree":["Form Validations","String"]
@@ -317,7 +348,7 @@
     },
     {
         "title": "NotEmpty",
-        "link": "form-validations/notEmpty/validators",
+        "link": "/form-validations/notEmpty/validators",
         "linkTree":["Form Validations"]
     },
     {

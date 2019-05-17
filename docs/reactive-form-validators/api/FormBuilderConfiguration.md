@@ -38,3 +38,17 @@ While accessing the data in formGroup, based upon the operation you want to perf
 <div component="app-example-runner" ref-component="app-formbuilderconfiguration-includeprops" title="Include and exclude properties" key="includeprops"></div> 
 </data-scope>
 
+# Dynamically set default value
+This is mainly used to apply the default value through the component instead of defining into the decorator.  
+
+<div component="app-code" key="FormBuilderConfiguration-dynamicdefault-component"></div> 
+<div component="app-example-runner" ref-component="app-formbuilderconfiguration-dynamicdefault" title="Setting default value dynamically with prop" key="dynamicdefault"></div>
+
+# ignoreUndefinedProps
+This is used to ignore the undefined properties dynamically using `formBuilderConfiguration`.
+
+<data-scope scope="['decorator']">
+<div component="app-code" key="FormBuilderConfiguration-ignoreundefined-component"></div> 
+<div component="app-example-runner" ref-component="app-formbuilderconfiguration-ignoreundefined" title="ignoreundefined properties" key="ignoreundefined"></div> 
+</data-scope>
+

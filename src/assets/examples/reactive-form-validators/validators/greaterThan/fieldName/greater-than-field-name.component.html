@@ -10,7 +10,7 @@
       <label>Retirement Age</label>
       <input type="text" formControlName="retiermentAge" class="form-control"  />
       <small class="form-text text-muted">Retirement Age should be greater than age<br/></small>
-	<small class="form-text text-danger" *ngIf="userFormGroup.controls.retiermentAge.errors">{{userFormGroup.controls.retiermentAge.errors.greaterThan.message}}<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.retiermentAge.errors">{{userFormGroup.controls.retiermentAge.errors.greaterThan.message}}<br/></small>	
     </div>
     <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
   </form>

@@ -30,6 +30,12 @@
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherMarks?.errors">{{userForm.controls?.otherMarks?.errors?.lessThanEqualTo.message}}<br/></small>	
     </div>
     <div class="form-group">
+      <label>Maximum Age</label>
+	    <input type="text" name="maximumAge" [(ngModel)]="user.maximumAge"  class="form-control" [lessThanEqualTo]="{'value':60}"/>
+
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.maximumAge?.errors">{{userForm.controls?.maximumAge?.errors?.lessThanEqualTo.message}}<br/></small>	
+    </div>
+    <div class="form-group">
       <label>Discipline Marks</label>
 	    <input type="text" name="disciplineMarks" [(ngModel)]="user.disciplineMarks"  class="form-control" [lessThanEqualTo]="{'fieldName':'totalMarks','messageKey':'lessThanEqualToMessageKey'}"/>
 

@@ -64,6 +64,8 @@ export const VALIDATION_MESSAGES:{[key:string]:any} =  {
         "unique": "Enter unique value in the input",
         "ip": "Enter correct ip address.",
         "compose": "Please enter valid value",
+        "maxTime": "Maximum time does not matched",
+      "minTime": "Minimum time does not matched",
         "composeMessageKey":"Please enter valid inputs",
         "cusip": "Enter a valid cusip code",
         "date": "Please enter a valid date.",
@@ -125,7 +127,9 @@ export const VALIDATION_MESSAGES:{[key:string]:any} =  {
         "urlMessageKey": "The input enterred must be in a valid url format only",
         "choiceMessageKey": "The input selected must be in the range provided in cofig value",
         "oneOfMessageKey": "Your selected options must include atleast one of the values passed in config values",
-        "uniqueMessageKey":"Enterred value must be unique"
+        "uniqueMessageKey":"Enterred value must be unique",
+        "maxTimeMessageKey": "The input time enterred must be less than the value mentioned in config",
+        "minTimeMessageKey": "The input time enterred must be greater than the value mentioned in config"
       },
       "reactiveForm": {
         "errorMessageBindingStrategy": 

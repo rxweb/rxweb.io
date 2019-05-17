@@ -9,6 +9,7 @@ import { GreaterThanCompleteTemplateDrivenValidationDecoratorsComponent } from '
 import { GreaterThanFieldNameTemplateDrivenValidationDecoratorsComponent } from './fieldName/greater-than-field-name.component';
 import { GreaterThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/greater-than-conditional-expression.component';
 import { GreaterThanMessageTemplateDrivenValidationDecoratorsComponent } from './message/greater-than-message.component';
+import { GreaterThanValueTemplateDrivenValidationDecoratorsComponent } from './value/greater-than-value.component';
 import { GreaterThanMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/greater-than-message-key.component';
 import { GreaterThanAddTemplateDrivenValidationDecoratorsComponent } from './add/greater-than-add.component';
 
@@ -18,6 +19,7 @@ import { GreaterThanAddTemplateDrivenValidationDecoratorsComponent } from './add
 	GreaterThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanMessageTemplateDrivenValidationDecoratorsComponent,
+	GreaterThanValueTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanAddTemplateDrivenValidationDecoratorsComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	GreaterThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanMessageTemplateDrivenValidationDecoratorsComponent,
+	GreaterThanValueTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanAddTemplateDrivenValidationDecoratorsComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	GreaterThanFieldNameTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanMessageTemplateDrivenValidationDecoratorsComponent,
+	GreaterThanValueTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	GreaterThanAddTemplateDrivenValidationDecoratorsComponent,
   ],

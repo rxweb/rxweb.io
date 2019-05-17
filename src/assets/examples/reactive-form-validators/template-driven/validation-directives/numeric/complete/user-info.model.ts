@@ -18,6 +18,9 @@ export class UserInfo {
 	positiveNumber: number;
 	
 	
+	totalAmount: number;
+	
+	
 	positiveNonDecimalNumber: number;
 	
 	

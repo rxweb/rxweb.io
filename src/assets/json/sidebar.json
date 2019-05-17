@@ -92,6 +92,16 @@
               "title": "time",
               "uri": "/form-validations/time/validators",
               "isActive": false
+            },
+            {
+              "title": "minTime",
+              "uri": "/form-validations/minTime/validators",
+              "isActive": false
+            },
+            {
+              "title": "maxTime",
+              "uri": "/form-validations/maxTime/validators",
+              "isActive": false
             }
           ]
         },
@@ -496,6 +506,11 @@
           "isActive": false
         },
         {
+          "title": "commit",
+          "uri": "/how-to/commit/validators",
+          "isActive": false
+        },
+        {
           "title": "Dirty Check",
           "uri": "/how-to/dirtyCheck/validators",
           "isActive": false
@@ -513,6 +528,11 @@
         {
           "title": "Manage generic nested level properties",
           "uri": "/how-to/genericModel/decorators",
+          "isActive": false
+        },
+        {
+          "title": "Modified Value",
+          "uri": "/how-to/modifiedValue/validators",
           "isActive": false
         },
         {

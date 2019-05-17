@@ -6,18 +6,22 @@ import { LessThanFieldNameComponent } from "src/assets/examples/reactive-form-va
 import { LessThanFieldNameTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThan/fieldName/less-than-field-name.component";
 import { LessThanFieldNameTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThan/fieldName/less-than-field-name.component";
 import { LessThanFieldNameValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/fieldName/less-than-field-name.component";
+import { LessThanValueComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/value/less-than-value.component";
+import { LessThanValueTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThan/value/less-than-value.component";
+import { LessThanValueTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThan/value/less-than-value.component";
+import { LessThanValueValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/value/less-than-value.component";
 import { LessThanConditionalExpressionComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/conditionalExpression/less-than-conditional-expression.component";
 import { LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThan/conditionalExpression/less-than-conditional-expression.component";
 import { LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThan/conditionalExpression/less-than-conditional-expression.component";
 import { LessThanConditionalExpressionValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/conditionalExpression/less-than-conditional-expression.component";
-import { LessThanMessageComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/message/less-than-message.component";
-import { LessThanMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThan/message/less-than-message.component";
-import { LessThanMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThan/message/less-than-message.component";
-import { LessThanMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/message/less-than-message.component";
 import { LessThanMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/messageKey/less-than-message-key.component";
 import { LessThanMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThan/messageKey/less-than-message-key.component";
 import { LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThan/messageKey/less-than-message-key.component";
 import { LessThanMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/messageKey/less-than-message-key.component";
+import { LessThanMessageComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/message/less-than-message.component";
+import { LessThanMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThan/message/less-than-message.component";
+import { LessThanMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThan/message/less-than-message.component";
+import { LessThanMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/message/less-than-message.component";
 import { LessThanDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/dynamic/less-than-dynamic.component";
 import { LessThanDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThan/dynamic/less-than-dynamic.component";
 import { LessThanAddComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThan/add/less-than-add.component";
@@ -30,9 +34,10 @@ export const LESS_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
 						complete : LessThanCompleteComponent,
 						fieldName : LessThanFieldNameComponent,
+						value : LessThanValueComponent,
 						conditionalExpression : LessThanConditionalExpressionComponent,
-						message : LessThanMessageComponent,
 						messageKey : LessThanMessageKeyComponent,
+						message : LessThanMessageComponent,
 						dynamic : LessThanDynamicComponent,
 						add : LessThanAddComponent,
 						edit : LessThanEditComponent,
@@ -40,25 +45,28 @@ export const LESS_THAN_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	template_driven_validation_directives:{
 						complete : LessThanCompleteTemplateDrivenValidationDirectivesComponent,
 						fieldName : LessThanFieldNameTemplateDrivenValidationDirectivesComponent,
+						value : LessThanValueTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
-						message : LessThanMessageTemplateDrivenValidationDirectivesComponent,
 						messageKey : LessThanMessageKeyTemplateDrivenValidationDirectivesComponent,
+						message : LessThanMessageTemplateDrivenValidationDirectivesComponent,
 						add : LessThanAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : LessThanCompleteTemplateDrivenValidationDecoratorsComponent,
 						fieldName : LessThanFieldNameTemplateDrivenValidationDecoratorsComponent,
+						value : LessThanValueTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : LessThanConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
-						message : LessThanMessageTemplateDrivenValidationDecoratorsComponent,
 						messageKey : LessThanMessageKeyTemplateDrivenValidationDecoratorsComponent,
+						message : LessThanMessageTemplateDrivenValidationDecoratorsComponent,
 						add : LessThanAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : LessThanCompleteValidatorComponent,
 						fieldName : LessThanFieldNameValidatorComponent,
+						value : LessThanValueValidatorComponent,
 						conditionalExpression : LessThanConditionalExpressionValidatorComponent,
-						message : LessThanMessageValidatorComponent,
 						messageKey : LessThanMessageKeyValidatorComponent,
+						message : LessThanMessageValidatorComponent,
 						dynamic : LessThanDynamicValidatorComponent,
 						add : LessThanAddValidatorComponent,
 			  },

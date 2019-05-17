@@ -10,6 +10,7 @@ export class WhatsNewComponent implements OnInit {
     showComponent:boolean = false;
     rightSidebarLinks:any=[
         {"id":"generic","title":"1.8.6","subLink":null},
+        {"id":"value","title":"1.9.0","subLink":null},
         {"id":"globalBind","title":"1.8.9","subLink":null},
         {"id":"generic","title":"1.8.6","subLink":null},
         {"id":"stronglyType","title":"1.8.4","subLink":null},

@@ -88,6 +88,14 @@ Below options are not mandatory to use in the `numeric` validation. If needed th
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
+    
+## isFormat
+Type: `Boolean`
+
+This will format a particular control property.The default value is `false`.
+
+<div component="app-code" key="numeric-isFormatExample-model"></div> 
+<div component="app-example-runner" ref-component="app-numeric-isFormat" title="numeric {{validatorType}} with isFormat" key="isFormat"></div>
 
 ## acceptValue 
 Type :  `NumericValueType` 

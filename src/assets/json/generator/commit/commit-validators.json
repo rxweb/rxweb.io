@@ -1,0 +1,12 @@
+{
+    "dynamic": {
+        "notes": null,
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup,Validators } from \"@angular/forms\"\r\n\r\nimport { RxFormBuilder,FormBuilderConfiguration,FormGroupExtension,RxFormGroup } from '@rxweb/reactive-form-validators';\r\nimport { HttpClient } from '@angular/common/http';\r\n\r\n\r\n@Component({\r\n    selector: 'app-commit-dynamic-validator',\r\n    templateUrl: './commit-dynamic.component.html'\r\n})\r\nexport class CommitDynamicValidatorComponent implements OnInit {\r\n\r\n  editForm: RxFormGroup\r\n\r\n    constructor(\r\n        private formBuilder: RxFormBuilder,private http: HttpClient    ) { }\r\n\r\n    ngOnInit() {  \r\n  this.editForm = <RxFormGroup>this.formBuilder.group({\r\n      id:[1],\r\n      name: [''],\r\n      designation: ['']\r\n      })  \r\n      }\r\n\r\n\r\n  update(){\r\n   this.http.get('assets/dynamic.json').subscribe(dynamic => {\r\n    this.editForm.patchModelValue(dynamic);\r\n      this.editForm.commit();\r\n        })\r\n  }\r\n\r\n}\r\n",
+        "html": "<div>\r\n\r\n    <form [formGroup]=\"editForm\">\r\n        <div class=\"form-group\">\r\n            <label>Id</label>\r\n            <input type=\"text\" formControlName=\"id\" class=\"form-control\" />\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label>Name</label>\r\n            <input type=\"text\" formControlName=\"name\" class=\"form-control\" />\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label>Designation</label>\r\n            <input type=\"text\" formControlName=\"designation\" class=\"form-control\" />\r\n        </div>\r\n        <button (click)=\"update()\" [disabled]=\"!editForm.valid\" class=\"btn btn-primary\">Update</button>\r\n\r\n    </form>\r\n</div>",
+        "model":null,
+        "modelName": null,
+        "json": {
+            "dynamic.json": "{\r\n    \"name\":\"John\",\r\n    \"designation\":\"Network Admin\"\r\n}"
+        }
+    }
+}

@@ -174,6 +174,8 @@ export class AppComponent implements OnInit {
         "required": "This field is required",
         "startsWith": "Please enter a valid input",
         "time": "Input must be a proper time",
+        "minTime":"Minimum time does not match",
+        "maxTime":"Maximum time does not match",
         "upperCase": "Input must be in Uppercase",
         "url": "Input must be an url",
         "extension": "Enter a valid extension.",
@@ -243,7 +245,9 @@ export class AppComponent implements OnInit {
         "urlMessageKey": "The input enterred must be in a valid url format only",
         "choiceMessageKey": "The input selected must be in the range provided in cofig value",
         "oneOfMessageKey": "Your selected options must include atleast one of the values passed in config values",
-        "uniqueMessageKey":"Enterred value must be unique"
+        "uniqueMessageKey":"Enterred value must be unique",
+        "maxTimeMessageKey": "The input time enterred must be less than the value mentioned in config",
+        "minTimeMessageKey": "The input time enterred must be greater than the value mentioned in config"
       },
       "reactiveForm": {
         "errorMessageBindingStrategy": 

@@ -10,6 +10,7 @@ import { NumericAcceptValueComponent } from './acceptValue/numeric-accept-value.
 import { NumericAllowDecimalComponent } from './allowDecimal/numeric-allow-decimal.component';
 import { NumericConditionalExpressionComponent } from './conditionalExpression/numeric-conditional-expression.component';
 import { NumericMessageComponent } from './message/numeric-message.component';
+import { NumericIsFormatComponent } from './isFormat/numeric-is-format.component';
 import { NumericMessageKeyComponent } from './messageKey/numeric-message-key.component';
 import { NumericDynamicComponent } from './dynamic/numeric-dynamic.component';
 import { NumericAddComponent } from './add/numeric-add.component';
@@ -22,6 +23,7 @@ import { NumericEditComponent } from './edit/numeric-edit.component';
 	NumericAllowDecimalComponent,
 	NumericConditionalExpressionComponent,
 	NumericMessageComponent,
+	NumericIsFormatComponent,
 	NumericMessageKeyComponent,
 	NumericDynamicComponent,
 	NumericAddComponent,
@@ -33,6 +35,7 @@ entryComponents: [
 	NumericAllowDecimalComponent,
 	NumericConditionalExpressionComponent,
 	NumericMessageComponent,
+	NumericIsFormatComponent,
 	NumericMessageKeyComponent,
 	NumericDynamicComponent,
 	NumericAddComponent,
@@ -50,6 +53,7 @@ entryComponents: [
 	NumericAllowDecimalComponent,
 	NumericConditionalExpressionComponent,
 	NumericMessageComponent,
+	NumericIsFormatComponent,
 	NumericMessageKeyComponent,
 	NumericDynamicComponent,
 	NumericAddComponent,

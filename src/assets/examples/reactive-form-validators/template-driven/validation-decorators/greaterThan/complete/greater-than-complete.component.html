@@ -29,6 +29,12 @@
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherAge?.errors">{{userForm.controls?.otherAge?.errors?.greaterThan.message}}<br/></small>	
     </div>
     <div class="form-group">
+      <label>Minimum Age</label>
+	    <input type="text" name="minimumAge" [(ngModel)]="user.minimumAge"  class="form-control" />
+
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.minimumAge?.errors">{{userForm.controls?.minimumAge?.errors?.greaterThan.message}}<br/></small>	
+    </div>
+    <div class="form-group">
       <label>Joining Age</label>
 	    <input type="text" name="joiningAge" [(ngModel)]="user.joiningAge"  class="form-control" />
 

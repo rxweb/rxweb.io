@@ -20,6 +20,7 @@ export class GreaterThanEqualToCompleteValidatorComponent implements OnInit {
             voterAge:['', RxwebValidators.greaterThanEqualTo({fieldName:'admissionAge'  ,conditionalExpression:(x,y) => x.admissionAge >= 18  })], 
             memberAge:['', RxwebValidators.greaterThanEqualTo({fieldName:'admissionAge'  ,conditionalExpression:'x => x.admissionAge >= 18 ' })], 
             otherAge:['', RxwebValidators.greaterThanEqualTo({fieldName:'admissionAge'  ,message:'Please enter number greater than or equal to 1.' })], 
+            minimumAge:['', RxwebValidators.greaterThanEqualTo({value:18 })], 
             joiningAge:['', RxwebValidators.greaterThanEqualTo({fieldName:'admissionAge'  ,messageKey:'greaterThanEqualToMessageKey' })], 
         });
     }

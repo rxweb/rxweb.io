@@ -9,6 +9,7 @@ import { GreaterThanEqualToCompleteTemplateDrivenValidationDirectivesComponent }
 import { GreaterThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/greater-than-equal-to-field-name.component';
 import { GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/greater-than-equal-to-conditional-expression.component';
 import { GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent } from './message/greater-than-equal-to-message.component';
+import { GreaterThanEqualToValueTemplateDrivenValidationDirectivesComponent } from './value/greater-than-equal-to-value.component';
 import { GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/greater-than-equal-to-message-key.component';
 import { GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent } from './add/greater-than-equal-to-add.component';
 
@@ -18,6 +19,7 @@ import { GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent } from
 	GreaterThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	GreaterThanEqualToValueTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	GreaterThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	GreaterThanEqualToValueTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	GreaterThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	GreaterThanEqualToValueTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],

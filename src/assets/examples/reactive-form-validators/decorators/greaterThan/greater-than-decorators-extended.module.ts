@@ -9,6 +9,7 @@ import { GreaterThanCompleteComponent } from './complete/greater-than-complete.c
 import { GreaterThanFieldNameComponent } from './fieldName/greater-than-field-name.component';
 import { GreaterThanConditionalExpressionComponent } from './conditionalExpression/greater-than-conditional-expression.component';
 import { GreaterThanMessageComponent } from './message/greater-than-message.component';
+import { GreaterThanValueComponent } from './value/greater-than-value.component';
 import { GreaterThanMessageKeyComponent } from './messageKey/greater-than-message-key.component';
 import { GreaterThanDynamicComponent } from './dynamic/greater-than-dynamic.component';
 import { GreaterThanAddComponent } from './add/greater-than-add.component';
@@ -20,6 +21,7 @@ import { GreaterThanEditComponent } from './edit/greater-than-edit.component';
 	GreaterThanFieldNameComponent,
 	GreaterThanConditionalExpressionComponent,
 	GreaterThanMessageComponent,
+	GreaterThanValueComponent,
 	GreaterThanMessageKeyComponent,
 	GreaterThanDynamicComponent,
 	GreaterThanAddComponent,
@@ -30,6 +32,7 @@ entryComponents: [
 	GreaterThanFieldNameComponent,
 	GreaterThanConditionalExpressionComponent,
 	GreaterThanMessageComponent,
+	GreaterThanValueComponent,
 	GreaterThanMessageKeyComponent,
 	GreaterThanDynamicComponent,
 	GreaterThanAddComponent,
@@ -46,6 +49,7 @@ entryComponents: [
 	GreaterThanFieldNameComponent,
 	GreaterThanConditionalExpressionComponent,
 	GreaterThanMessageComponent,
+	GreaterThanValueComponent,
 	GreaterThanMessageKeyComponent,
 	GreaterThanDynamicComponent,
 	GreaterThanAddComponent,

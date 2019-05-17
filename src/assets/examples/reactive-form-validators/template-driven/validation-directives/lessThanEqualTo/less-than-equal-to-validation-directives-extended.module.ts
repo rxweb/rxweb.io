@@ -9,6 +9,7 @@ import { LessThanEqualToCompleteTemplateDrivenValidationDirectivesComponent } fr
 import { LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/less-than-equal-to-field-name.component';
 import { LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/less-than-equal-to-conditional-expression.component';
 import { LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent } from './message/less-than-equal-to-message.component';
+import { LessThanEqualToValueTemplateDrivenValidationDirectivesComponent } from './value/less-than-equal-to-value.component';
 import { LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/less-than-equal-to-message-key.component';
 import { LessThanEqualToAddTemplateDrivenValidationDirectivesComponent } from './add/less-than-equal-to-add.component';
 
@@ -18,6 +19,7 @@ import { LessThanEqualToAddTemplateDrivenValidationDirectivesComponent } from '.
 	LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	LessThanEqualToValueTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
@@ -26,6 +28,7 @@ entryComponents: [
 	LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	LessThanEqualToValueTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],
@@ -40,6 +43,7 @@ entryComponents: [
 	LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
+	LessThanEqualToValueTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanEqualToAddTemplateDrivenValidationDirectivesComponent,
   ],

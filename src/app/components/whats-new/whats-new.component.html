@@ -7,6 +7,49 @@
                 <div class="hpanel">
                     <div class="panel-body validation-tab">
                         <div class=' page-section whats-new'>
+                                <div class='card' id="value">
+                                        <h3 class="card-header">1.9.0<a title="Link to this heading" class="link-header"
+                                                routerLink="/whats-new" fragment="value"><i
+                                                    class="fa fa-link"></i></a></h3>
+                                          <div class="card-body px-0">
+                                                 <a routerLink="/form-validations/greaterThan/validators" fragment="value" class="card-link">
+                                                    <h4>add value property in <span class="highlighted">greaterThan</span> and <span class="highlighted">greaterThanEqualTo</span> validator config </h4>
+                                                    <p>New value property in greaterThan and greaterThanEqualTo through configuring it the validation can be done based upon a static value.</p>
+                                                 </a> 
+                                                 <a routerLink="/how-to/commit/validators" class="card-link">
+                                                    <h4>add a new method of <span class="highlighted">commit</span> in RxFormGroup </h4>
+                                                    <p>commit method is used to update the value of the baseObject in RxFormGroup, It will take the whole snapshot of the FormControls.</p>
+                                                 </a> 
+                                                 <a routerLink="/how-to/dirtyCheck/validators" class="card-link">
+                                                    <h4>add new property of <span class="highlighted">isModified</span> in RxFormGroup</h4>
+                                                    <p>isModified is used to check whether there are any changes in the formControls.</p>
+                                                 </a> 
+                                                 <a routerLink="/how-to/modifiedValue/validators" class="card-link">
+                                                    <h4>add new property of <span class="highlighted">modifiedValue</span> in RxFormGroup</h4>
+                                                    <p>modifiedValue is used to patch value by sending only the data which is changed instead of sending the whole form data.</p>
+                                                 </a> 
+                                                 <a routerLink="/api/FormBuilderConfiguration/decorators" fragment="dynamicallysetdefaultvalue" class="card-link">
+                                                    <h4>dynamically set default value in propconfig</h4>
+                                                    <p>To set the default value dynamically from the component at any point in time.</p>
+                                                 </a>                                                
+                                                 <a routerLink="/decorators/prop/decorators" fragment="excludepropertiesconditionally" class="card-link">
+                                                    <h4>Exclude properties conditionally</h4>
+                                                    <p>To exclude properties dynamically based on specific condition.</p>
+                                                 </a> 
+                                                 <a routerLink="/how-to/resetForm/validators" class="card-link">
+                                                    <h4>Extend feature of resetForm method</h4>
+                                                    <p>New features of reseting formControls,formGroups and formArrays including nested level.</p>
+                                                    </a> 
+                                                 <a routerLink="/form-validations/minTime/validators" class="card-link">
+                                                   <h4>minTime and maxTime Validations</h4>
+                                                   <p>New minTime and maxTime validations with operator and value properties.</p>
+                                                </a> 
+                                                <a routerLink="/api/FormBuilderConfiguration/decorators" fragment="ignoreundefinedprops"  class="card-link">
+                                                   <h4>ignore Undefined Props</h4>
+                                                   <p>This is used to ignore the undefined properties dynamically.</p>
+                                                </a> 
+                                    </div>
+                                </div>
                                 <div class='card' id="globalBind">
                                         <h3 class="card-header">1.8.9<a title="Link to this heading" class="link-header"
                                                 routerLink="/whats-new" fragment="globalBind"><i

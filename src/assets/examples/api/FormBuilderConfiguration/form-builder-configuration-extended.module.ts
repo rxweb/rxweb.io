@@ -7,15 +7,17 @@ import { FormbuilderconfigurationCompleteComponent } from './complete/formbuilde
 import { FormbuilderconfigurationObjectComponent } from './object/formbuilderconfiguration-object.component';
 import { FormbuilderconfigurationArrayobjectComponent } from './arrayobject/formbuilderconfiguration-arrayobject.component';
 import { FormbuilderconfigurationIncludepropsComponent } from './includeprops/formbuilderconfiguration-includeprops.component';
+import { FormbuilderconfigurationIgnoreundefinedpropsComponent } from './ignoreUndefinedProps/formbuilderconfiguration-ignoreundefinedprops.component';
+import { FormbuilderconfigurationDynamicdefaultComponent } from './dynamicDefaultValue/formbuilderconfiguration-dynamic.component';
 
 
 
 @NgModule({
   declarations: [
-    FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent
+    FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent,FormbuilderconfigurationIgnoreundefinedpropsComponent,FormbuilderconfigurationDynamicdefaultComponent
   ],
 entryComponents: [
-	FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent
+	FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent,FormbuilderconfigurationIgnoreundefinedpropsComponent,FormbuilderconfigurationDynamicdefaultComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -24,7 +26,7 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-    FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent
+    FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent,FormbuilderconfigurationIgnoreundefinedpropsComponent,FormbuilderconfigurationDynamicdefaultComponent
   ],
 
 })

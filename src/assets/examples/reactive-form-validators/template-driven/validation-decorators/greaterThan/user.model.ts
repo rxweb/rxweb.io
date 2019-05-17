@@ -5,16 +5,8 @@ export class User {
 	@prop()
 	age: number;
 
-	@prop()
-	retiermentAge: number;
-
-	@prop()
+	@greaterThan({fieldName:'age' }) 
 	voterAge: number;
-
-	@prop()
-	otherAge: number;
-
-	@prop()
-	joiningAge: number;
-
+	
+	
 }

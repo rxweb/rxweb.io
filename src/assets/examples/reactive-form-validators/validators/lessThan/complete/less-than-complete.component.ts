@@ -20,6 +20,7 @@ export class LessThanCompleteValidatorComponent implements OnInit {
             practicalExamMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,conditionalExpression:(x,y) =>  x.obtainedMarks < 35 })], 
             passingMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,conditionalExpression:'x => x.obtainedMarks < 35' })], 
             otherMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,message:'Please enter number greater than 100.' })], 
+            maximumAge:['', RxwebValidators.lessThan({value:60 })], 
             disciplineMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,messageKey:'lessThanMessageKey' })], 
         });
     }

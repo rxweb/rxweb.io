@@ -39,6 +39,12 @@
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.positiveNumber?.errors">{{userinfoForm.controls?.positiveNumber?.errors?.numeric.message}}<br/></small>	
     </div>
     <div class="form-group">
+      <label>Total Amount</label>
+	    <input type="text" name="totalAmount" [(ngModel)]="userinfo.totalAmount"  class="form-control" />
+
+	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.totalAmount?.errors">{{userinfoForm.controls?.totalAmount?.errors?.numeric.message}}<br/></small>	
+    </div>
+    <div class="form-group">
       <label>Positive Non Decimal Number</label>
 	    <input type="text" name="positiveNonDecimalNumber" [(ngModel)]="userinfo.positiveNonDecimalNumber"  class="form-control" />
 

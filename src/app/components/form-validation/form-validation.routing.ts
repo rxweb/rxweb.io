@@ -235,6 +235,14 @@ const FORM_VALIDATION_ROUTES: Routes = [
 	loadChildren: './time/time.module#TimeModule',
 },
 {
+	path:'maxTime',
+	loadChildren: './maxTime/max-time.module#MaxTimeModule',
+},
+{
+	path:'minTime',
+	loadChildren: './minTime/min-time.module#MinTimeModule',
+},
+{
 	path:'unique',
 	loadChildren: './unique/unique.module#UniqueModule',
 },

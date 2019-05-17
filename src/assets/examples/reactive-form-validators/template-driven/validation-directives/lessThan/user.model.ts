@@ -1,14 +1,9 @@
 
 export class User {
 
-	obtainedMarks: number;
-
-	otherActivityMarks: number;
+	marks: number;
 
 	passingMarks: number;
-
-	otherMarks: number;
-
-	disciplineMarks: number;
-
+	
+	
 }

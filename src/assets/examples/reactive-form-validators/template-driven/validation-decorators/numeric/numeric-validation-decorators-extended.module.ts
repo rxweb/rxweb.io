@@ -10,6 +10,7 @@ import { NumericAcceptValueTemplateDrivenValidationDecoratorsComponent } from '.
 import { NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent } from './allowDecimal/numeric-allow-decimal.component';
 import { NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/numeric-conditional-expression.component';
 import { NumericMessageTemplateDrivenValidationDecoratorsComponent } from './message/numeric-message.component';
+import { NumericIsFormatTemplateDrivenValidationDecoratorsComponent } from './isFormat/numeric-is-format.component';
 import { NumericMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/numeric-message-key.component';
 import { NumericAddTemplateDrivenValidationDecoratorsComponent } from './add/numeric-add.component';
 
@@ -20,6 +21,7 @@ import { NumericAddTemplateDrivenValidationDecoratorsComponent } from './add/num
 	NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageTemplateDrivenValidationDecoratorsComponent,
+	NumericIsFormatTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	NumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
@@ -29,6 +31,7 @@ entryComponents: [
 	NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageTemplateDrivenValidationDecoratorsComponent,
+	NumericIsFormatTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	NumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
@@ -44,6 +47,7 @@ entryComponents: [
 	NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageTemplateDrivenValidationDecoratorsComponent,
+	NumericIsFormatTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	NumericAddTemplateDrivenValidationDecoratorsComponent,
   ],

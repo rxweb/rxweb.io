@@ -10,6 +10,7 @@ import { NumericAcceptValueTemplateDrivenValidationDirectivesComponent } from '.
 import { NumericAllowDecimalTemplateDrivenValidationDirectivesComponent } from './allowDecimal/numeric-allow-decimal.component';
 import { NumericConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/numeric-conditional-expression.component';
 import { NumericMessageTemplateDrivenValidationDirectivesComponent } from './message/numeric-message.component';
+import { NumericIsFormatTemplateDrivenValidationDirectivesComponent } from './isFormat/numeric-is-format.component';
 import { NumericMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/numeric-message-key.component';
 import { NumericAddTemplateDrivenValidationDirectivesComponent } from './add/numeric-add.component';
 
@@ -20,6 +21,7 @@ import { NumericAddTemplateDrivenValidationDirectivesComponent } from './add/num
 	NumericAllowDecimalTemplateDrivenValidationDirectivesComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	NumericMessageTemplateDrivenValidationDirectivesComponent,
+	NumericIsFormatTemplateDrivenValidationDirectivesComponent,
 	NumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 	NumericAddTemplateDrivenValidationDirectivesComponent,
   ],
@@ -29,6 +31,7 @@ entryComponents: [
 	NumericAllowDecimalTemplateDrivenValidationDirectivesComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	NumericMessageTemplateDrivenValidationDirectivesComponent,
+	NumericIsFormatTemplateDrivenValidationDirectivesComponent,
 	NumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 	NumericAddTemplateDrivenValidationDirectivesComponent,
   ],
@@ -44,6 +47,7 @@ entryComponents: [
 	NumericAllowDecimalTemplateDrivenValidationDirectivesComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	NumericMessageTemplateDrivenValidationDirectivesComponent,
+	NumericIsFormatTemplateDrivenValidationDirectivesComponent,
 	NumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 	NumericAddTemplateDrivenValidationDirectivesComponent,
   ],

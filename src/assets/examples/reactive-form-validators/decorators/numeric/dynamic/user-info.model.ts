@@ -18,6 +18,9 @@ export class UserInfo {
 	positiveNumber: number;
 
 	@prop()
+	totalAmount: number;
+
+	@prop()
 	positiveNonDecimalNumber: number;
 
 }

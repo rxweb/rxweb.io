@@ -6,18 +6,22 @@ import { LessThanEqualToFieldNameComponent } from "src/assets/examples/reactive-
 import { LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThanEqualTo/fieldName/less-than-equal-to-field-name.component";
 import { LessThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThanEqualTo/fieldName/less-than-equal-to-field-name.component";
 import { LessThanEqualToFieldNameValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThanEqualTo/fieldName/less-than-equal-to-field-name.component";
+import { LessThanEqualToValueComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThanEqualTo/value/less-than-equal-to-value.component";
+import { LessThanEqualToValueTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThanEqualTo/value/less-than-equal-to-value.component";
+import { LessThanEqualToValueTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThanEqualTo/value/less-than-equal-to-value.component";
+import { LessThanEqualToValueValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThanEqualTo/value/less-than-equal-to-value.component";
 import { LessThanEqualToConditionalExpressionComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThanEqualTo/conditionalExpression/less-than-equal-to-conditional-expression.component";
 import { LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThanEqualTo/conditionalExpression/less-than-equal-to-conditional-expression.component";
 import { LessThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThanEqualTo/conditionalExpression/less-than-equal-to-conditional-expression.component";
 import { LessThanEqualToConditionalExpressionValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThanEqualTo/conditionalExpression/less-than-equal-to-conditional-expression.component";
-import { LessThanEqualToMessageComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThanEqualTo/message/less-than-equal-to-message.component";
-import { LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThanEqualTo/message/less-than-equal-to-message.component";
-import { LessThanEqualToMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThanEqualTo/message/less-than-equal-to-message.component";
-import { LessThanEqualToMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThanEqualTo/message/less-than-equal-to-message.component";
 import { LessThanEqualToMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThanEqualTo/messageKey/less-than-equal-to-message-key.component";
 import { LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThanEqualTo/messageKey/less-than-equal-to-message-key.component";
 import { LessThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThanEqualTo/messageKey/less-than-equal-to-message-key.component";
 import { LessThanEqualToMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThanEqualTo/messageKey/less-than-equal-to-message-key.component";
+import { LessThanEqualToMessageComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThanEqualTo/message/less-than-equal-to-message.component";
+import { LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/lessThanEqualTo/message/less-than-equal-to-message.component";
+import { LessThanEqualToMessageTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/lessThanEqualTo/message/less-than-equal-to-message.component";
+import { LessThanEqualToMessageValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThanEqualTo/message/less-than-equal-to-message.component";
 import { LessThanEqualToDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThanEqualTo/dynamic/less-than-equal-to-dynamic.component";
 import { LessThanEqualToDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/lessThanEqualTo/dynamic/less-than-equal-to-dynamic.component";
 import { LessThanEqualToAddComponent } from "src/assets/examples/reactive-form-validators/decorators/lessThanEqualTo/add/less-than-equal-to-add.component";
@@ -30,9 +34,10 @@ export const LESS_THAN_EQUAL_TO_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any
 	decorators:{
 						complete : LessThanEqualToCompleteComponent,
 						fieldName : LessThanEqualToFieldNameComponent,
+						value : LessThanEqualToValueComponent,
 						conditionalExpression : LessThanEqualToConditionalExpressionComponent,
-						message : LessThanEqualToMessageComponent,
 						messageKey : LessThanEqualToMessageKeyComponent,
+						message : LessThanEqualToMessageComponent,
 						dynamic : LessThanEqualToDynamicComponent,
 						add : LessThanEqualToAddComponent,
 						edit : LessThanEqualToEditComponent,
@@ -40,25 +45,28 @@ export const LESS_THAN_EQUAL_TO_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any
 	template_driven_validation_directives:{
 						complete : LessThanEqualToCompleteTemplateDrivenValidationDirectivesComponent,
 						fieldName : LessThanEqualToFieldNameTemplateDrivenValidationDirectivesComponent,
+						value : LessThanEqualToValueTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : LessThanEqualToConditionalExpressionTemplateDrivenValidationDirectivesComponent,
-						message : LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
 						messageKey : LessThanEqualToMessageKeyTemplateDrivenValidationDirectivesComponent,
+						message : LessThanEqualToMessageTemplateDrivenValidationDirectivesComponent,
 						add : LessThanEqualToAddTemplateDrivenValidationDirectivesComponent,
 			  },
 	template_driven_validation_decorators:{
 						complete : LessThanEqualToCompleteTemplateDrivenValidationDecoratorsComponent,
 						fieldName : LessThanEqualToFieldNameTemplateDrivenValidationDecoratorsComponent,
+						value : LessThanEqualToValueTemplateDrivenValidationDecoratorsComponent,
 						conditionalExpression : LessThanEqualToConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
-						message : LessThanEqualToMessageTemplateDrivenValidationDecoratorsComponent,
 						messageKey : LessThanEqualToMessageKeyTemplateDrivenValidationDecoratorsComponent,
+						message : LessThanEqualToMessageTemplateDrivenValidationDecoratorsComponent,
 						add : LessThanEqualToAddTemplateDrivenValidationDecoratorsComponent,
 			  },
 	validators:{
 						complete : LessThanEqualToCompleteValidatorComponent,
 						fieldName : LessThanEqualToFieldNameValidatorComponent,
+						value : LessThanEqualToValueValidatorComponent,
 						conditionalExpression : LessThanEqualToConditionalExpressionValidatorComponent,
-						message : LessThanEqualToMessageValidatorComponent,
 						messageKey : LessThanEqualToMessageKeyValidatorComponent,
+						message : LessThanEqualToMessageValidatorComponent,
 						dynamic : LessThanEqualToDynamicValidatorComponent,
 						add : LessThanEqualToAddValidatorComponent,
 			  },
