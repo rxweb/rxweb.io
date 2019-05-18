@@ -20,7 +20,7 @@ export class FormbuilderconfigurationDynamicdefaultComponent implements OnInit {
     ngOnInit() {
       let user = new User();
        var formBuilderConfig = new FormBuilderConfiguration();
-        formBuilderConfig.propsConfig = {'emailAddress':{defaultValue:"bharatpatel@gmail.com"}}
+        formBuilderConfig.propsConfig = {'emailAddress':{defaultValue:"bharat@gmail.com"}}
          this.userFormGroup = this.formBuilder.formGroup(user,formBuilderConfig);
         
     }
