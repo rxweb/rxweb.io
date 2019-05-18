@@ -6,7 +6,7 @@ export class User {
    @prop()
    @elementClass({
        conditionalExpression: function (c) {
-           return this.password == "complex" && c.dirty == true ? 'dirty' : '';
+           return this.password == "complex" && c.dirty == true ? 'ng-invalid' : '';
        }})
    userName: string;
 
