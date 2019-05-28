@@ -171,7 +171,7 @@ This Complete numeric example which includes all the NumericConfig properties wi
 <data-scope scope="['decorator','validator']">
 # Dynamic numeric Example
 
-This Dynamic numeric example which execute based on json passed. conditional expression with function would be not apply in dynamic numeric example. 
+This Dynamic numeric example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic numeric example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

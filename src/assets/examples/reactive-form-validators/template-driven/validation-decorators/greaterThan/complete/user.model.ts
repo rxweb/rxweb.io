@@ -23,10 +23,6 @@ export class User {
 	otherAge: number;
 	
 	
-	@greaterThan({value:18 }) 
-	minimumAge: number;
-	
-	
 	@greaterThan({fieldName:'age'  ,messageKey:'greaterThanMessageKey' }) 
 	joiningAge: number;
 	

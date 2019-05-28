@@ -162,7 +162,7 @@ This Complete greaterThan example which includes all the RelationalOperatorConfi
 <data-scope scope="['decorator','validator']">
 # Dynamic greaterThan Example
 
-This Dynamic GreaterThan example which execute based on json passed. conditional expression with function would be not apply in dynamic greaterThan example. 
+This Dynamic greaterThan example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic greaterThan example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

@@ -142,7 +142,7 @@ This Complete longitude example which includes all the RelationalOperatorConfig 
 <data-scope scope="['decorator','validator']">
 # Dynamic longitude Example
 
-This Dynamic longitude example which execute based on json passed. conditional expression with function would be not apply in dynamic longitude example. 
+This Dynamic longitude example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic longitude example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

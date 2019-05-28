@@ -151,7 +151,7 @@ This Complete minNumber example which includes all the NumberConfig properties w
 <data-scope scope="['decorator','validator']">
 # Dynamic minNumber Example
 
-This Dynamic minNumber example which execute based on json passed. conditional expression with function would be not apply in dynamic minNumber example. 
+This Dynamic minNumber example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic minNumber example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

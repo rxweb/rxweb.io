@@ -8,23 +8,23 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { GridCompleteTemplateDrivenValidationDirectivesComponent } from './complete/grid-complete.component';
 import { GridConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/grid-conditional-expression.component';
 import { GridMessageTemplateDrivenValidationDirectivesComponent } from './message/grid-message.component';
-import { GridAddTemplateDrivenValidationDirectivesComponent } from './add/grid-add.component';
 import { GridMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/grid-message-key.component';
+import { GridAddTemplateDrivenValidationDirectivesComponent } from './add/grid-add.component';
 
-@NgModule({ 
+@NgModule({
   declarations: [
 	GridCompleteTemplateDrivenValidationDirectivesComponent,
 	GridConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GridMessageTemplateDrivenValidationDirectivesComponent,
+	GridMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GridAddTemplateDrivenValidationDirectivesComponent,
-	GridMessageKeyTemplateDrivenValidationDirectivesComponent
   ],
 entryComponents: [
 	GridCompleteTemplateDrivenValidationDirectivesComponent,
 	GridConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GridMessageTemplateDrivenValidationDirectivesComponent,
+	GridMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GridAddTemplateDrivenValidationDirectivesComponent,
-	GridMessageKeyTemplateDrivenValidationDirectivesComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -36,8 +36,8 @@ entryComponents: [
 	GridCompleteTemplateDrivenValidationDirectivesComponent,
 	GridConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GridMessageTemplateDrivenValidationDirectivesComponent,
+	GridMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GridAddTemplateDrivenValidationDirectivesComponent,
-	GridMessageKeyTemplateDrivenValidationDirectivesComponent
   ],
 
 })

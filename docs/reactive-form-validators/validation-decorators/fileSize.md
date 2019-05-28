@@ -16,7 +16,7 @@ Suppose you want to create a UserInfo form, which contains fields like fileType 
    <li>Apply validation on documentFile field based on matched condition in the form, like if the fileType is 'Document', then the documentFile must be a size format (Used as a function).</li>
    <li>Apply validation on imageFile field based on matched condition in the form, like if the device is 'SmartPhone', then the imageFile must be a size format (Used as a string datatype).</li>
    <li>Adding custom message on ContactFile field</li>
-  `<li>Shows the custom message on `Excel File` field by using `messageKey` property.</li>
+   <li>Shows the custom message on `Excel File` field by using `messageKey` property.</li>
    <data-scope scope="['decorator','validator']">
    <li>Apply fileSize validation dynamically based on server rules.</li>
    </data-scope>

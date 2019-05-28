@@ -4,7 +4,6 @@
       <label>Country Name</label>
 	    <input type="text" name="countryName" [(ngModel)]="location.countryName"  class="form-control" />
 
-      <small class="form-text text-muted">Enter the 'INDIA' in 'Country Name' or 'City Name' text box to see the validation in 'State Name' text box.<br/></small>
 	   <small class="form-text text-danger" *ngIf="locationForm.controls?.countryName?.errors">{{locationForm.controls?.countryName?.errors?.upperCase.message}}<br/></small>	
     </div>
     <div class="form-group">

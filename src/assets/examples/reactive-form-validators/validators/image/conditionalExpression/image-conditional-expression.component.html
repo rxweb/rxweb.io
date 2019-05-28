@@ -9,7 +9,7 @@
     <div class="form-group">
       <label>Pan Card</label>
       <input type="file" formControlName="panCard" class="form-control"  />
-      <small class="form-text text-muted">If you want to apply conditional validation on 'Document File' then you need to add 'File Type' input as 'IdentityCard'.<br/></small>
+      <small class="form-text text-muted">If you want to apply conditional validation on 'Pan Card' then you need to add 'Image Type' input as 'IdentityCard'.<br/></small>
 	<small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.panCard.errors">{{userInfoFormGroup.controls.panCard.errors.image.message}}<br/></small>
     </div>
     <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>

@@ -4,7 +4,6 @@
       <label>Username</label>
 	    <input type="text" name="username" [(ngModel)]="user.username"  class="form-control" lowerCase/>
 
-      <small class="form-text text-muted">If you want to apply conditional validation on 'First name' or 'Middle Name', then you need to add 'username' input as 'jonathan.feldman'<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.username?.errors">{{userForm.controls?.username?.errors?.lowerCase.message}}<br/></small>	
     </div>
     <div class="form-group">

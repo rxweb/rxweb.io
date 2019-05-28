@@ -4,7 +4,6 @@
       <label>Color Picker</label>
 	    <input type="text" name="color" [(ngModel)]="hexcolorinfo.color"  class="form-control" hexColor/>
 
-      <small class="form-text text-muted">If you want to apply conditional validation on 'Footer Hexcode' or 'Header Hexcode', then you need to add 'Color Picker' input as '#AFAFAF'<br/></small>
 	   <small class="form-text text-danger" *ngIf="hexcolorinfoForm.controls?.color?.errors">{{hexcolorinfoForm.controls?.color?.errors?.hexColor.message}}<br/></small>	
     </div>
     <div class="form-group">

@@ -165,7 +165,7 @@ This Complete Ip example which includes all the IpConfig properties will fulfil 
 <data-scope scope="['decorator','validator']">
 # Dynamic Ip Example
 
-This Dynamic Ip example which execute based on json passed. conditional expression with function would be not apply in dynamic ip example. 
+This Dynamic ip example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic ip example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 [!TabGroup]

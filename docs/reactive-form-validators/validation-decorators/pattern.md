@@ -124,7 +124,7 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 
 # Complete pattern Example
 
-This Complete pattern example which includes all the PatternConfig properties will fulfil the requirement of scenarios 1, 2 and 3.
+This Complete pattern example which includes all the PatternConfig properties will fulfil the requirement of scenarios 1, 2, 3 and 4.
 
 <div component="app-tabs" key="complete"></div>
 [!TabGroup]
@@ -147,7 +147,7 @@ This Complete pattern example which includes all the PatternConfig properties wi
 <data-scope scope="['decorator','validator']">
 # Dynamic pattern Example
 
-This Dynamic pattern example which execute based on json passed. conditional expression with function would be not apply in dynamic pattern example. 
+This Dynamic Pattern example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic pattern example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

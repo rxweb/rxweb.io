@@ -139,7 +139,7 @@ This Complete Json example which includes all the DefaultConfig properties will 
 <data-scope scope="['decorator','validator']">
 # Dynamic Json Example
 
-This Dynamic json example which execute based on json passed. conditional expression with function would be not apply in dynamic json example. 
+This Dynamic json example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic json example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

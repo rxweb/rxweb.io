@@ -23,10 +23,6 @@ export class User {
 	otherMarks: number;
 	
 	
-	@lessThan({value:60 }) 
-	maximumAge: number;
-	
-	
 	@lessThan({fieldName:'obtainedMarks'  ,messageKey:'lessThanMessageKey' }) 
 	disciplineMarks: number;
 	

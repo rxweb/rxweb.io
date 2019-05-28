@@ -133,7 +133,7 @@ export class AppComponent implements OnInit {
             "seperator": "/"
           },
           "validationMessage": {
-            "allOf": "Please select all options",
+            "allOf": "Please select all options based on the config parameters",
             "onlyAlpha": "Only alphabets are allowed.",
             "zipCode": "Please enter zipcode.",
             "onlyDigit": "Only digit are allowed.",
@@ -174,7 +174,7 @@ export class AppComponent implements OnInit {
             "noneOf": "You can not select any option",
             "numeric": "Please enter valid number",
             "odd": "Please enter an odd number",
-            "oneOf": "You must select any one option",
+            "oneOf": "You must select atleast one option",
             "password": "Input does not match the password requirements",
             "pattern": "Input does not match the pattern requirements",
             "port": "Please enter a valid port number",

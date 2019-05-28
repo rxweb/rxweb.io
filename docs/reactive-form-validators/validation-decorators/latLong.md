@@ -105,7 +105,7 @@ Type :  `string`
 
 To override the global configuration message and set the custom message on respective FormControl.
 
-[<div component="app-code" key="latLong-messageExample-model"></div> 
+<div component="app-code" key="latLong-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-latLong-message" title="latLong {{validatorType}} with message" key="message"></div>
 
 ## messageKey
@@ -141,7 +141,7 @@ This Complete latLong example which includes all the BaseConfig properties will 
 <data-scope scope="['decorator','validator']">
 # Dynamic latLong Example
 
-This Dynamic latLong example which execute based on json passed. conditional expression with function would be not apply in dynamic latLong example. 
+This Dynamic latLong example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic latLong example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

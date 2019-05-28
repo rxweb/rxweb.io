@@ -8,7 +8,7 @@
         </h4>
       </div>
       <br>
-      <small class="form-text text-muted">You must select all values.</small><br>
+      <small class="form-text text-muted">You must select atleast all option provided in the config parameters.</small><br>
       <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.projectDomains.errors">{{employeeInfoFormGroup.controls.projectDomains.errors.allOf.message}}<br></small>
     </div>
     <button [disabled]="!employeeInfoFormGroup.valid" class="btn btn-primary">Submit</button>

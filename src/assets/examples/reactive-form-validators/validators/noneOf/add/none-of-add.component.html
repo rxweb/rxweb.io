@@ -9,9 +9,8 @@
         </div>
         <br>
         <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.projectDomains.errors">{{employeeInfoFormGroup.controls.projectDomains.errors.noneOf.message}}</small><br>
-        <small class="form-text text-muted">You must not select any option.</small>
+        <small class="form-text text-muted">You can not select any option.</small>
       </div>
       <button [disabled]="!employeeInfoFormGroup.valid" class="btn btn-primary">Submit</button>
     </form>
   </div>
-  

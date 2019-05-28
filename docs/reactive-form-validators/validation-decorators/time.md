@@ -128,7 +128,7 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 # Complete time Example
 
-This Complete time example which includes all the TimeConfig properties will fulfil the requirement of scenarios 1, 2 and 3.
+This Complete time example which includes all the TimeConfig properties will fulfil the requirement of scenarios 1, 2, 3, 4 and 5.
 
 <div component="app-tabs" key="complete"></div>
 [!TabGroup]
@@ -151,7 +151,7 @@ This Complete time example which includes all the TimeConfig properties will ful
 <data-scope scope="['decorator','validator']">
 # Dynamic time Example
 
-This Dynamic time example which execute based on json passed. conditional expression with function would be not apply in dynamic time example. 
+This Dynamic time example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic time example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

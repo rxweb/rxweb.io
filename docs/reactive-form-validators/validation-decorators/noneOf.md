@@ -1,6 +1,6 @@
 ---
 title: noneOf
-description: noneOf validation  {{validatorType}}  will check whether the user has entered none of the value is selected from the given inputs.
+description: noneOf validation  {{validatorType}}  will check whether the none of the values is selected from the given inputs.
 author: rxcontributorone
 category: form-validations
 subcategory: Array
@@ -8,7 +8,7 @@ type:tabs
 linktitle: noneOf
 ---
 
-<div class="title-bar"><p>noneOf validation  {{validatorType}}  will check whether the user has entered none of the value is selected from the given inputs.</p></div>
+<div class="title-bar"><p>noneOf validation  {{validatorType}}  will check whether the none of the values is selected from the given inputs.</p></div>
 
 # When to use
 Let's assume that you are creating a employee form in which you want employee to enter none of the value of a particular value which contains fields like department, hobbies and skills.Here the field is taken in the form of array and according to that the choice is applied on the property by applying matchvalues. Here depending upon the requirement these scenarios may arise.
@@ -108,7 +108,7 @@ The noneOf validator can also validate the textbox value, which is a non array v
 
 # Complete noneOf Example
 
-This Complete noneOf example which includes all the ArrayConfig properties will fulfil the requirement of scenarios 1, 2 and 3.
+This Complete noneOf example which includes all the ArrayConfig properties will fulfil the requirement of scenarios 1, 2, 3 and 4.
 
 <div component="app-tabs" key="complete"></div>
 [!TabGroup]
@@ -131,7 +131,7 @@ This Complete noneOf example which includes all the ArrayConfig properties will 
 <data-scope scope="['decorator','validator']">
 # Dynamic noneOf Example
 
-This Dynamic noneOf example which execute based on json passed. conditional expression with function would be not apply in dynamic noneOf example. 
+This Dynamic NoneOf example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic noneOf example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

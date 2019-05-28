@@ -15,9 +15,6 @@ export class User {
 	otherMarks: number;
 
 	@prop()
-	maximumAge: number;
-
-	@prop()
 	disciplineMarks: number;
 
 }

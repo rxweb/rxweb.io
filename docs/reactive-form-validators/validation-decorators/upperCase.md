@@ -137,7 +137,7 @@ This Complete upperCase example which includes all the MessageConfig properties 
 <data-scope scope="['decorator','validator']">
 # Dynamic upperCase Example
 
-This Dynamic upperCase example which execute based on json passed. conditional expression with function would be not apply in dynamic upperCase example. 
+This Dynamic upperCase example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic upperCase example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

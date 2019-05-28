@@ -7,4 +7,6 @@ export class DigitalInfo {
 
 	graphicImageGrid: string;
 
+	videoGraphicGrid: string;
+
 }

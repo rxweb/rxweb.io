@@ -20,7 +20,7 @@ export class LessThanDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/lessThan/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { obtainedMarks:'', otherActivityMarks:'', practicalExamMarks:'', passingMarks:'', otherMarks:'', maximumAge:'', disciplineMarks:'',  }
+			var user = { obtainedMarks:'', otherActivityMarks:'', practicalExamMarks:'', passingMarks:'', otherMarks:'', disciplineMarks:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

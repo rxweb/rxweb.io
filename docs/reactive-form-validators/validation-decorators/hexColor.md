@@ -145,7 +145,7 @@ This Complete hexColor example which includes all the HexColorConfig properties 
 <data-scope scope="['decorator','validator']">
 # Dynamic hexColor Example
 
-This Dynamic hexColor example which execute based on json passed. conditional expression with function would be not apply in dynamic hexColor example. 
+This Dynamic hexColor example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic hexColor example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

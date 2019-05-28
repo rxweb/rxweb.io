@@ -142,7 +142,7 @@ This Complete LeapYear example which includes all the BaseConfig properties will
 <data-scope scope="['decorator','validator']">
 # Dynamic LeapYear Example
 
-This Dynamic LeapYear example which execute based on json passed. conditional expression with function would be not apply in dynamic leapYear example. 
+This Dynamic leapYear example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic leapYear example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

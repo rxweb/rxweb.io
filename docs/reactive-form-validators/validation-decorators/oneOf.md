@@ -101,7 +101,7 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 # Complete oneOf Example
 
-This Complete oneOf example which includes all the ArrayConfig properties will fulfil the requirement of scenarios 1, 2 and 3.
+This Complete oneOf example which includes all the ArrayConfig properties will fulfil the requirement of scenarios 1, 2, 3 and 4.
 
 <div component="app-tabs" key="complete"></div>
 [!TabGroup]
@@ -124,7 +124,7 @@ This Complete oneOf example which includes all the ArrayConfig properties will f
 <data-scope scope="['decorator','validator']">
 # Dynamic oneOf Example
 
-This Dynamic oneOf example which execute based on json passed. conditional expression with function would be not apply in dynamic oneOf example. 
+This Dynamic OneOf example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic oneOf example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

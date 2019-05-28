@@ -151,7 +151,7 @@ This Complete MinLength example which includes all the NumberConfig properties w
 <data-scope scope="['decorator','validator']">
 # Dynamic MinLength Example
 
-This Dynamic Alpha example which execute based on json passed. conditional expression with function would be not apply in dynamic minLength example. 
+This Dynamic minLength example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic minLength example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

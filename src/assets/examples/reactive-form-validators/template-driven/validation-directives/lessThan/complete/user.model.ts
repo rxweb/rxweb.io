@@ -15,9 +15,6 @@ export class User {
 	otherMarks: number;
 	
 	
-	maximumAge: number;
-	
-	
 	disciplineMarks: number;
 	
 	

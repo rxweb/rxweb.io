@@ -25,7 +25,7 @@
       </div>
       <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.qualifications.errors"><br />{{employeeInfoFormGroup.controls.qualifications.errors.choice.message}}</small>
       <br />
-      <small class="form-text text-muted">To apply the validation on 'Qualifications' field, enter 'DotNet' in 'Department' field</small>
+      <small class="form-text text-muted">You can select upto 4 values</small>
       <br />
     </div>
     <div class="form-group">
@@ -37,7 +37,8 @@
       </div>
       <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.languages.errors"><br />{{employeeInfoFormGroup.controls.languages.errors.choice.message}}</small>
       <br />
-      <small class="form-text text-muted">To apply the validation on 'Qualifications' field, enter 'DotNet' in 'Department' field</small><br>
+      <small class="form-text text-muted">To apply the validation on 'Languages' field, enter 'DotNet' in 'Department' field</small><br>
+      <small class="form-text text-muted">You must select minimum 2 values</small><br>
     </div>
     <div class="form-group">
       <label>Skills</label><small>( With Conditional Expression )</small><br>
@@ -49,6 +50,7 @@
       <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.skills.errors"><br />{{employeeInfoFormGroup.controls.skills.errors.choice.message}}</small>
       <br />
       <small class="form-text text-muted">To apply the validation on 'Skills' field, enter 'DotNet' in 'Department' field</small><br>
+      <small class="form-text text-muted">You must select minimum 2 values</small><br>
     </div>
     <div class="form-group">
       <label>Hobbies</label>
@@ -59,6 +61,7 @@
       </div>
       <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.hobbies.errors"><br />{{employeeInfoFormGroup.controls.hobbies.errors.choice.message}}</small>
       <br />
+      <small class="form-text text-muted">You can select upto 4 values</small><br>
       <small class="form-text text-muted">Shows custom message</small><br>
     </div>
     <div class="form-group">

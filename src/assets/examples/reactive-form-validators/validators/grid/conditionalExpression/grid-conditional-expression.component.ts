@@ -17,7 +17,7 @@ export class GridConditionalExpressionValidatorComponent implements OnInit {
         this.digitalInfoFormGroup = this.formBuilder.group({
             soundRecordingGrid:['', RxwebValidators.grid()], 
             photographGrid:['', RxwebValidators.grid({conditionalExpression:'x => x.soundRecordingGrid =="A12425GABC1234002M"' })], 
-            audioVisualRecordingGrid:['', RxwebValidators.grid({conditionalExpression:(x,y) => x.soundRecordingGrid == "A12425GABC1234002M"  })], 
+            audioVisualRecordingGrid:['', RxwebValidators.grid({conditionalExpression:(x,y) => x.soundRecordingGrid == "A12425GABC1234002M" })], 
         });
     }
 }

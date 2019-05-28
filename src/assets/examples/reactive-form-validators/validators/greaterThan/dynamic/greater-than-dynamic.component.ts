@@ -20,7 +20,7 @@ export class GreaterThanDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/greaterThan/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var user = { age:'', retiermentAge:'', memberAge:'', voterAge:'', otherAge:'', minimumAge:'', joiningAge:'',  }
+			var user = { age:'', retiermentAge:'', memberAge:'', voterAge:'', otherAge:'', joiningAge:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);
 		})
     }

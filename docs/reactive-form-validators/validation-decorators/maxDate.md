@@ -154,7 +154,7 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 # Complete MaxDate Example
 
-This Complete MaxDate example which includes all the DateConfig properties will fulfil the requirement of scenarios 1, 2, 3 and 4.
+This Complete MaxDate example which includes all the DateConfig properties will fulfil the requirement of scenarios 1, 2, 3, 4, 5 and 6.
 
 <div component="app-tabs" key="complete"></div>
 
@@ -178,7 +178,7 @@ This Complete MaxDate example which includes all the DateConfig properties will 
 <data-scope scope="['decorator','validator']">
 # Dynamic MaxDate Example
 
-This Dynamic MaxDate example which execute based on json passed. conditional expression with function would be not apply in dynamic maxDate example. 
+This Dynamic maxDate example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic maxDate example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

@@ -121,7 +121,7 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 # Complete digit Example
 
-This Complete digit example which includes all the DigitConfig properties will fulfil the requirement of scenarios 1, 2 and 3
+This Complete digit example which includes all the DigitConfig properties will fulfil the requirement of scenarios 1, 2, 3, 4 and 5
 
 <div component="app-tabs" key="complete"></div>
 [!TabGroup]

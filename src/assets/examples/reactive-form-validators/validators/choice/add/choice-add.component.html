@@ -9,9 +9,8 @@
         </div>
         <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls?.projectDomains?.errors"><br />{{employeeInfoFormGroup.controls.projectDomains?.errors?.choice?.message}}</small>
         <br>
-        <small class="form-text text-muted">You must select atleast 2 option.</small>
+        <small class="form-text text-muted">You must select atleast 3 option.</small>
       </div>
       <button [disabled]="!employeeInfoFormGroup.valid" class="btn btn-primary">Submit</button>
     </form>
   </div>
-  

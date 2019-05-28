@@ -160,7 +160,7 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 # Complete image Example
 
-This Complete image example which includes all the imageConfig properties will fulfil the requirement of scenarios 1, 2, 3,4 and 5
+This Complete image example which includes all the imageConfig properties will fulfil the requirement of scenarios 1, 2, 3, 4, 5, 6 and 7
 
 <div component="app-tabs" key="complete"></div>
 [!TabGroup]
@@ -183,7 +183,7 @@ This Complete image example which includes all the imageConfig properties will f
 <data-scope scope="['decorator','validator']">
 # Dynamic image Example
 
-This Dynamic image example which execute based on json passed. conditional expression with function would be not apply in dynamic image example. 
+This Dynamic FileSize example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic fileSize example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

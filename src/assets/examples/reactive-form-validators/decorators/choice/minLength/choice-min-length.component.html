@@ -9,7 +9,7 @@
       </div>
       <br>
       <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.qualifications.errors">{{employeeInfoFormGroup.controls.qualifications.errors.choice.message}}</small><br />
-    <small class="form-text text-muted">You must select minimum 3 values</small><br>
+    <small class="form-text text-muted">You must select minimum 2 values</small><br>
   </div>
   <button [disabled]="!employeeInfoFormGroup.valid" class="btn btn-primary">Submit</button>
 </form>

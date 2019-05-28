@@ -143,7 +143,7 @@ This Complete Port example which includes all the BaseConfig properties will ful
 <data-scope scope="['decorator','validator']">
 # Dynamic Port Example
 
-This Dynamic port example which execute based on json passed. conditional expression with function would be not apply in dynamic port example. 
+This Dynamic port example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic port example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

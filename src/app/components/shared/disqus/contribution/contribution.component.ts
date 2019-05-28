@@ -13,7 +13,7 @@ export class ContributionComponent implements OnInit{
     constructor(
     ) {
     }
-    gitEditUrl: string = "https://github.com/rxweb/rxweb/edit/master/docs/reactive-form-validators";
+    gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/docs/reactive-form-validators";
     pageName:string;
     ngOnInit(){
         var splitedArray = location.pathname.split("/");

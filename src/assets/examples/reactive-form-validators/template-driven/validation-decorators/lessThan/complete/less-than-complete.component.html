@@ -4,7 +4,6 @@
       <label>Obtained Marks</label>
 	    <input type="text" name="obtainedMarks" [(ngModel)]="user.obtainedMarks"  class="form-control" />
 
-      <small class="form-text text-muted">If you want to apply conditional validation on 'Practical Exam Marks' or 'Passing Marks', then Obtained Marks must be less than '35'<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.obtainedMarks?.errors">{{userForm.controls?.obtainedMarks?.errors?.lessThan.message}}<br/></small>	
     </div>
     <div class="form-group">
@@ -28,12 +27,6 @@
 
       <small class="form-text text-muted">Shows custom message<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherMarks?.errors">{{userForm.controls?.otherMarks?.errors?.lessThan.message}}<br/></small>	
-    </div>
-    <div class="form-group">
-      <label>Maximum Age</label>
-	    <input type="text" name="maximumAge" [(ngModel)]="user.maximumAge"  class="form-control" />
-
-	   <small class="form-text text-danger" *ngIf="userForm.controls?.maximumAge?.errors">{{userForm.controls?.maximumAge?.errors?.lessThan.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Discipline Marks</label>

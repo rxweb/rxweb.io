@@ -159,7 +159,7 @@ This Complete greaterThanEqualTo example which includes all the RelationalOperat
 <data-scope scope="['decorator','validator']">
 # Dynamic greaterThanEqualTo Example
 
-This Dynamic greaterThanEqualTo example which execute based on json passed. conditional expression with function would be not apply in dynamic greaterThanEqualTo example. 
+This Dynamic greaterThanEqualTo example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic greaterThanEqualTo example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 

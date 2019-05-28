@@ -150,7 +150,7 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 # Complete minDate Example
 
-This Complete minDate example which includes all the DateConfig properties will fulfil the requirement of scenarios 1, 2 and 3.
+This Complete minDate example which includes all the DateConfig properties will fulfil the requirement of scenarios 1, 2, 3, 4 and 5.
 
 <div component="app-tabs" key="complete"></div>
 [!TabGroup]
@@ -173,7 +173,7 @@ This Complete minDate example which includes all the DateConfig properties will 
 <data-scope scope="['decorator','validator']">
 # Dynamic minDate Example
 
-This Dynamic minDate example which execute based on json passed. conditional expression with function would be not apply in dynamic minDate example. 
+This Dynamic minDate example is executed on the basis of json passed in the formBuilderConfiguration which comes under `RxFormBuilder` of reactive-form-validators. `conditionalExpression` with function would not be applied in dynamic minDate example. This example will fulfil the requirement of our last point.
 
 <div component="app-tabs" key="dynamic"></div>
 
