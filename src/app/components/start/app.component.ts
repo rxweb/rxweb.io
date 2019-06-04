@@ -132,6 +132,10 @@ export class AppComponent implements OnInit {
             "dateFormat": "dmy",
             "seperator": "/"
           },
+          "dynamicForm": {
+            "uiFramework": "bootstrap",
+           
+        },
           "validationMessage": {
             "allOf": "Please select all options based on the config parameters",
             "onlyAlpha": "Only alphabets are allowed.",

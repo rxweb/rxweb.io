@@ -2,7 +2,7 @@
   "links": [
     {
       "title": "Getting Started",
-      "uri": "getting-started",
+      "uri": "reactive-forms/getting-started",
       "otherUri": "getting-started",
       "isOpen": true,
       "isActive": false

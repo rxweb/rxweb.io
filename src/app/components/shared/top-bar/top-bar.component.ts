@@ -10,6 +10,8 @@ import { Router } from "@angular/router";
 })
 
 export class TopBarComponent  {
+  isReactive:boolean
+  isDynamic:boolean
   searchvalue1: string
   @ViewChild('search1') searchInput: ElementRef;
   titleData:any = {codeContent:{}};
@@ -19,7 +21,6 @@ export class TopBarComponent  {
     })
   }
 
- 
   hideSideBar(): void {
     const body = document.getElementsByTagName('body')[0];
     if (window.innerWidth < 769)

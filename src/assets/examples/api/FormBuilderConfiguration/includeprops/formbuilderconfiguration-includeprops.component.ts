@@ -18,7 +18,6 @@ export class FormbuilderconfigurationIncludepropsComponent implements OnInit {
         let user = new User();
         var formBuilderConfig = new FormBuilderConfiguration();
         formBuilderConfig.includeProps = ["firstName","lastName"]
-        formBuilderConfig.excludeProps = ["email"]
         this.userInfoFormGroup = <RxFormGroup>this.formBuilder.formGroup(user,formBuilderConfig);
     }
 }
