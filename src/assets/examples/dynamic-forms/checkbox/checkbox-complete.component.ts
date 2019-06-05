@@ -21,10 +21,9 @@ export class CheckBoxCompleteComponent implements OnInit {
     viewMode: string = "bootstrap-basic";
     uiBindings: string[] = ["hobbies"];
     dynamicFormBuildConfig: DynamicFormBuildConfig;
-    dynamicFormConfiguration: DynamicFormConfiguration;
     constructor(private formBuilder: RxFormBuilder) { }
     ngOnInit()
     {
-        this.dynamicFormBuildConfig = this.formBuilder.dynamicForm(this.serverData,this.dynamicFormConfiguration);
+        this.dynamicFormBuildConfig = this.formBuilder.dynamicForm(this.serverData);
     }
 }

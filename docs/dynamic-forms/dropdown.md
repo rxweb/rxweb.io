@@ -18,7 +18,21 @@ Next, we need to write html code.
 <div component="app-example-runner" ref-component="app-dropdown-static"></div>
 
 # Cascading Dropdown
-<div component="app-code" key="DropDown-cascading-component"></div> 
-Next, we need to write html code.
-<div component="app-code" key="DropDown-cascading-html"></div> 
+<div component="app-tabs" key="cascading"></div>
+
+[!TabGroup]
+# [Example](#tab\cascadingexample)
 <div component="app-example-runner" ref-component="app-dropdown-cascading"></div>
+# [/Example]
+# [Model](#tab\cascadingmodel)
+<div component="app-code" key="DropDown-cascading-model"></div> 
+# [/Model]
+# [Component](#tab\cascadingcomponent)
+<div component="app-code" key="DropDown-cascading-component"></div> 
+# [/Component]
+# [Html](#tab\cascadinghtml)
+<div component="app-code" key="DropDown-cascading-html"></div> 
+# [/Html]
+***
+
+

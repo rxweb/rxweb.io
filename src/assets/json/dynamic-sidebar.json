@@ -9,7 +9,8 @@
           },         
               {
                 "title": "Step-by-Step",
-              "otherUri": "dynamic-forms",
+              "otherUri": "stepbystep",
+              "uri":"dynamic-forms/stepbystep/validators",
               "isOpen": false,
               "isActive": false,
                 "childrens": [
@@ -17,7 +18,8 @@
                     "title": "Register The Module",
                     "uri": "dynamic-forms/stepbystep/validators#registerthemodule",
                     "isActive": false,
-                    "linkTitle": "stepbystep"
+                    "linkTitle": "stepbystep",
+                    "refUri":"registerthemodule"
                   },
                   {
                     "title": "Design The Json",
@@ -244,6 +246,7 @@
                   {
                     "title": "Textbox",
                     "uri": "dynamic-forms/textbox/validators",
+                    "otherUri":"textbox",
                     "isActive": false
                   },
                   {
