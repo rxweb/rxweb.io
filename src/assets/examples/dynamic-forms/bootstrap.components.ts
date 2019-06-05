@@ -190,7 +190,8 @@ export class SectionComponent extends AbstractDynamicControl { }
             'select': { component: BootstrapSelectComponent },
             'section': { component: SectionComponent },
             'textarea': { component: BootstrapTextareaComponent },
-            "range": { component: BootstrapRangeComponent }
+            "range": { component: BootstrapRangeComponent },
+            "radio":{component:BootstrapRadioButtonComponent}
         })
     ]
 })

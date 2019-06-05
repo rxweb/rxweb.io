@@ -2,22 +2,6 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const DYNAMIC_FORMS_ROUTES: Routes = [
-	{
-		path:'label',
-		loadChildren: './label/label.module#LabelModule',
-	},
-	{
-		path:'dynamicDisable',
-		loadChildren: './dynamicDisable/dynamic-disable.module#DynamicDisableModule',
-	},
-	{
-		path:'placeholder',
-		loadChildren: './placeholder/placeholder.module#PlaceholderModule',
-	},
-	{
-		path:'focus',
-		loadChildren: './focus/focus.module#FocusModule',
-	},
 {
 	path:'stepbystep',
 	loadChildren: './stepbystep/stepbystep.module#StepbystepModule',
