@@ -24,6 +24,7 @@ import { ModelExcludeComponent } from './model/excludeProps/model-exclude.compon
 import { ModelErrorComponent } from './model/error/model-error.component';
 import { ModelElementComponent } from './model/elementClass/model-element.component';
 import { PropPrimaryComponent } from './prop/primaryKey/prop-primary.component';
+import { PropArrayEntityComponent } from './propArray/entity/prop-array-entity.component';
 
 
 
@@ -46,7 +47,8 @@ import { PropPrimaryComponent } from './prop/primaryKey/prop-primary.component';
   PropPrimaryComponent,
   ModelExcludeComponent,
   ModelErrorComponent,
-  ModelElementComponent
+  ModelElementComponent,
+  PropArrayEntityComponent
   ],
 entryComponents: [
   PropAddComponent,
@@ -66,7 +68,8 @@ entryComponents: [
   PropExcludeComponent,
   ModelExcludeComponent,
   ModelErrorComponent,
-  ModelElementComponent
+  ModelElementComponent,
+  PropArrayEntityComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -86,7 +89,8 @@ entryComponents: [
   PropExcludeComponent,
   ModelExcludeComponent,
   ModelErrorComponent,
-  ModelElementComponent
+  ModelElementComponent,
+  PropArrayEntityComponent
   ],
 
 })

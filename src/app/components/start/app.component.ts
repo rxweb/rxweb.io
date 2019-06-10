@@ -94,7 +94,7 @@ export class AppComponent implements OnInit {
           if (tree.fragment) {
             const element = document.querySelector("#" + tree.fragment);
             if (element) {
-              element.scrollIntoView({behavior: "instant", block: "start", inline: "nearest"});
+              element.scrollIntoView({ block: "start", inline: "nearest"});
             }
           }
           let searchElement = <HTMLElement>document.getElementsByClassName("ais-SearchBox-input")[0];
@@ -120,7 +120,7 @@ export class AppComponent implements OnInit {
     // }
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
-      if(e.url.includes("/errorMessages")){
+      if(e.url.includes("/errorMessages") || e.url.includes("/compose/decorators")){
         ReactiveFormConfig.set(
           {"validationMessage":
           {"required":"This field is required",   "password": "Input does not match the password requirements",}, 
