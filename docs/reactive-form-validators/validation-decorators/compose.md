@@ -11,13 +11,14 @@ linktitle: compose
 <div class="title-bar"><p>compose validation {{validatorType}} is used to apply multiple validations on a particular formControl.</p></div>
 
 # When to use
+  <data-scope scope="['decorator','validator']">
 Suppose you want to create UserInfo form, which contains fields like firstName, lastName, age, cityName, countryName and apply multiple validations on these fields. Here depending upon the requirement these scenarios may arise.
 
 <ol class='showHideElement'>
     <li>Apply compose validation on firstName field.</li>
     <li>Apply compose validation on lastName field using message key.</li>
     <li>Apply compose validation on age field based on matched condition in the form, like if the firstName is 'Bharat', then only the age must be validated (Based on function).</li>
-    <li>Apply compose validation based on matched condition in the form, like if the firstName is 'Bharat', then only the cityName must be validated ( Based on string datatype).</li>
+    <li>Apply compose validation based on matched condition in the form, like if the firstName is   'Bharat', then only the cityName must be validated ( Based on string datatype).</li>
      <li>Apply compose validation on countryName field.</li>
     <data-scope scope="['decorator','validator']">
     <li>Apply compose validation dynamically based on server rules.</li>
@@ -27,7 +28,10 @@ Suppose you want to create UserInfo form, which contains fields like firstName, 
 Let’s see how compose {{validatorType}} fulfil the need.
 
 # Basic Compose Validation
-
+<data-scope scope="['decorator']">
+First we need to create a User Model class and define property of firstName in the model to achieve the functional need of point 1.
+<div component="app-code" key="compare-add-model"></div> 
+</data-scope>
 Through Angular FormBuilder service we create FormGroup in the component.
 Here we have covered Add form operations. 
 
@@ -62,9 +66,22 @@ Type :  `ValidatorFn[]`
 
 It is an array of rxwebValidators. Validators are set according to the relative requirement based on which validation you want to apply. Here you have to specify the name of validator which you want to use.
 
+<data-scope scope="['decorator']">
+You can create a custom validation function and mention that in the `@compose` decorator.
+</data-scope>
+
 <div component="app-code" key="compose-validatorsExample-model"></div> 
 <div component="app-example-runner" ref-component="app-compose-validators" title="Compose {{validatorType}} with validators" key="validators"></div>
 
+## message 
+Type :  `string` 
+
+To override the global configuration message and set the custom message on respective FormControl.
+
+<div component="app-code" key="compose-messageExample-model"></div> 
+<div component="app-example-runner" ref-component="app-compose-message" title="compose {{validatorType}} with message" key="message"></div>
+
+<data-scope scope="['validator']">
 ## messageKey
 Type :  `string`
 
@@ -72,6 +89,7 @@ messageKey option of compose validation is used to set the key based validation 
 
 <div component="app-code" key="compose-messageKeyExample-model"></div> 
 <div component="app-example-runner" ref-component="app-compose-messageKey" title="Compose {{validatorType}} with messageKey" key="messageKey"></div>
+</data-scope>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -89,7 +107,7 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 > Binding `conditionalExpression` with `string` object. 
 <div component="app-code" key="compose-conditionalExpressionExampleString-model"></div> 
 
-<div component="app-example-runner" ref-component="app-compose-conditionalExpression" title="alpha {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
+<div component="app-example-runner" ref-component="app-compose-conditionalExpression" title="compose {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
 
 # Complete Compose Example
 

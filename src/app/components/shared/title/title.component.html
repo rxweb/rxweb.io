@@ -15,12 +15,12 @@
                     <a (click)="route('template-driven','directives')">Template Driven</a>
                 </li>
                 <li class="ng-star-inserted" [class.active]="activeTab == 'decorators'"
-                    *ngIf="(mainType == 'form-validations' || mainType == 'how-to') && validationName !== 'ip' && validationName !== 'compose'  && validationName !== 'conditionalValidation'">
+                    *ngIf="(mainType == 'form-validations' || mainType == 'how-to') && validationName !== 'ip'   && validationName !== 'conditionalValidation'">
                     <a (click)="route('decorators')">Decorator</a>
                 </li>
                 <li class="ng-star-inserted"
                     [class.active]="activeTab == 'template-driven' && templateDrivenType == 'decorators'"
-                    *ngIf="mainType == 'form-validations' && (validationName !== 'minTime' && validationName !== 'maxTime' && validationName !== 'pattern' && validationName !== 'unique'  && validationName !== 'ip' && validationName !== 'compose' && validationName !== 'allOf' && validationName !== 'oneOf' && validationName !== 'noneOf' && validationName !== 'choice' && validationName !== 'async' && validationName !== 'rule')">
+                    *ngIf="mainType == 'form-validations' && (validationName !== 'minTime' && validationName !== 'maxTime'  && validationName !== 'unique'  && validationName !== 'ip' && validationName !== 'compose' && validationName !== 'allOf' && validationName !== 'oneOf' && validationName !== 'noneOf' && validationName !== 'choice' && validationName !== 'async' && validationName !== 'rule')">
                     <a (click)="route('template-driven','decorators')">Template Decorator</a>
                 </li>
             </ul>

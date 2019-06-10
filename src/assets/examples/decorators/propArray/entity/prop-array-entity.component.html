@@ -1,0 +1,46 @@
+<form *ngIf="userFormGroup" [formGroup]="userFormGroup">
+    <div class="form-group">
+      <input type="radio" value="Address" formControlName="contactType" (click)="changeValue($event.target.value)">address
+      <input type="radio" value="phone" formControlName="contactType" (click)="changeValue($event.target.value)">phone
+      
+  </div>
+  
+   <button class="btn btn-primary" *ngIf="userFormGroup.value.contactType == 'Address'" (click)="addAddress()">Add Address</button>
+      <table *ngIf="userFormGroup.value.contactType == 'Address'" class="table">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">City Name</th>
+                  <th scope="col">Country Name</th>
+  
+              </tr>
+          </thead>
+          <tbody>
+              <tr [formGroup]="address" *ngFor="let address of userFormGroup.controls.contacts.controls; let i = index">
+                  <th scope="row">{{i + 1}}</th>
+                  <td><input type="text" formControlName="city" class="form-control" />
+                  </td>
+                  <td><input type="text" formControlName="country" class="form-control" />
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  
+       <button class="btn btn-primary" *ngIf="userFormGroup.value.contactType == 'phone'" (click)="addTelephone()">Add PhoneNumber</button>
+      <table *ngIf="userFormGroup.value.contactType == 'phone'" class="table">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Mobile Number</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr [formGroup]="telephone" *ngFor="let telephone of userFormGroup.controls.contacts.controls; let i = index">
+                  <th scope="row">{{i + 1}}</th>
+                  <td><input type="text" formControlName="mobileNumber" class="form-control" />
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <button (click)="onSubmit()" [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button> 
+  </form>

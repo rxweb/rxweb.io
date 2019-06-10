@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RxReactiveFormsModule,RxDynamicReactiveFormsModule } from "@rxweb/reactive-form-validators"
+import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
@@ -53,7 +53,7 @@ import { WhyRxwebComponent } from './why/why-component';
 import { TitleComponent } from './shared/title/title.component';
 import { ChangeLogComponent } from './changelog/change-log.component';
 import { DynamicGettingStartedComponent } from './dynamic-getting-started/dynamic-getting-started.component';
-import { RxwebBootstrapModule } from 'src/assets/examples/dynamic-forms/bootstrap.components';
+
 
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
@@ -67,7 +67,7 @@ const monacoConfig: NgxMonacoEditorConfig = {
       AppComponent,DynamicGettingStartedComponent, SideBarComponent, TopBarComponent, TitleComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent,WhatsNextComponent,WhatsNewComponent,WhyRxwebComponent],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, DisqusSharedModule, BasicExamplesExtendedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
-    BrowserAnimationsModule,RxDynamicReactiveFormsModule,RxwebBootstrapModule,
+    BrowserAnimationsModule,
     NgxJsonViewerModule,
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,

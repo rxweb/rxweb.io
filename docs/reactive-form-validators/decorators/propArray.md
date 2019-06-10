@@ -11,7 +11,7 @@ linktitle: propArray
 
 # When to use
 Suppose you want to create a User form, which contains fields like CourseName in `User` class,
- which is an array of the instances of a class `Course` and you want to add the `@required` validation, then you can use @propArray() for this.
+which is an array of the instances of a class `Course` and you want to add the `@required` validation, then you can use @propArray() for this.
 
 Let's see how @propArray() decorator fulfil the need.
 
@@ -28,3 +28,13 @@ Next, we need to write html code.
 <div component="app-code" key="propArray-add-html"></div> 
 <div component="app-example-runner" ref-component="app-propArray-add"></div>
 
+# PropArray based on Entity Instance 
+If you want the entity of the propArray entity conditionally.
+
+If the 'contactType' property value equals to address then the Address model properties should be included in the nested formgroup of contact or the property value contains telephone then the Telephone model properties should be included in the nested formgroup. 
+
+<div component="app-code" key="propArray-entity-model"></div> 
+<div component="app-code" key="propArray-entity-component"></div> 
+Next, we need to write html code.
+<div component="app-code" key="propArray-entity-html"></div> 
+<div component="app-example-runner" ref-component="app-propArray-entity"></div>
