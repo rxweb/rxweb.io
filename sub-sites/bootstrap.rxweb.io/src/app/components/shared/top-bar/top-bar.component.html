@@ -1,0 +1,122 @@
+<header class="header">
+	<div class="row">
+		<div class="col-sm-2 logo space-left-sidebar">
+			<div class="header-link">
+				<a class="rxlogo" routerlink="/home" title="rxweb" routerLink="/home">rxweb</a>
+				<svg class="top-toggle-btn" (click)="openMenu()" width="25" height="25" focusable="false"
+					viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+				</svg>
+
+			</div>
+		</div>
+		<div class="col-sm-9">
+			<div class=" header-links content">
+
+				<ul class="list-unstyled list-inline">
+					<li routerLinkActive="active" class="list-inline-item">
+						<a routerLink="/getting-started">Learn</a>
+					</li>
+					<li class="list-inline-item"><a routerLink="/whats-new" routerLinkActive="active">What's New?</a>
+					</li>
+					<li class="list-inline-item"><a routerLink="/whats-next" routerLinkActive="active">What's Next?</a>
+					</li>
+					<li routerwLinkActive="active" class="list-inline-item"><a>Help</a>
+						<div class="mega-menu">
+							<ul class="list-unstyled">
+								<li><a target="_blank"
+										href="https://gitter.im/rxweb-project/rxweb?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=body_badge">Gitter
+										(Help)
+									</a></li>
+								<li><a target="_blank" href="https://forum.rxweb.io/">Forum </a></li>
+								<li><a target="_blank" href="https://github.com/rxweb/rxweb.io">Github</a></li>
+								<li><a target="_blank" href="https://stackoverflow.com/search?q=rxweb">StackOverflow</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li routerLinkActive="active" class="list-inline-item"><a>Community</a>
+						<div class="mega-menu">
+							<ul class="list-unstyled">
+								<li><a >Want to Contribute, but?</a></li>
+								<li><a >Contributing</a></li>
+								<li><a >Maintaining</a></li>
+								<li><a >Change Log</a></li>
+								<li><a target="_blank" href="https://dev.to/t/rxweb">Dev Community</a></li>
+								<li><a target="_blank"
+										href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3Abug">Open Issues</a></li>
+								<li><a target="_blank"
+										href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22">Feature Request</a></li>
+							</ul>
+						</div>
+					</li>
+
+					<li class=" top-search-page  position-relative">
+						<ais-instantsearch [config]="{
+						  apiKey: '4f3d9e65c9459b43e692a149f365c74e',
+						  appId: 'U3S057LEMB',
+						  indexName: 'rxwebio1'
+						}">
+							<div class="search-box position-relative">
+
+								<ais-search-box id="search1" placeholder='' type="text"
+									(keyup)="showsearchcontent1($event,searchvalue1)" #search1
+									[(ngModel)]="searchvalue1" name="searchvalue1" (blur)="hideSearch1()"
+									class="search-field search-field-focus ais-SearchBox-input" ngDefaultControl focus>
+								</ais-search-box>
+
+								<!-- <div class="search-btn">
+										<svg height="24" viewBox="0 0 50 50" width="24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
+									</div>  -->
+								<!-- <ais-search-box class="search-field"></ais-search-box>
+							  <	div class="search-btn">
+									<svg height="24" viewBox="0 0 50 50" width="24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
+								</div>  -->
+							</div>
+							<div id="searchlist-content" class="search-content">
+								<!-- <h2>Search results for : {{searchvalue}} </h2>
+							  <ais-stats></ais-stats>  -->
+								<ais-hits>
+
+									<ng-template let-hits="hits" let-results="results">
+										<div *ngIf="hits.length == 0">
+											Nothing found for
+											<strong>{{results.query}}</strong>.
+										</div>
+										<ul class="list-unstyled search-list">
+											<li *ngFor="let hit of hits">
+												<div class="search-title">
+													<a [routerLink]="hit.link"> {{hit.title}}</a>
+												</div>
+												<a [routerLink]="hit.link" class="search-decr"> {{hit.description}}</a>
+												<ul class="list-unstyled see-more-links" *ngIf="hits.length == 0">
+													<li class="bold">Go to : </li>
+													<li class="" *ngFor="let item of hit.refLinks">
+														<a [routerLink]="item.url">{{item.title}}</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</ng-template>
+								</ais-hits>
+							</div>
+						</ais-instantsearch>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="top-title-bar" id="title-bar">
+	<div class="row">
+		<div class="col-sm-2 space-left-sidebar"></div>
+		<div class="col-sm-12 col-md-9">
+
+			<app-title [title]="titleData.title" [description]="titleData.description" [mainType]="titleData.mainType"
+				[activeTab]="titleData.activeTab" [validationName]="titleData.validationName"
+				[validatorType]="titleData.validatorType" [validationTypeTitle]="titleData.validationTypeTitle"
+				[templateDrivenType]="titleData.templateDrivenType"></app-title>
+		</div>
+	</div>
+</div>

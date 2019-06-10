@@ -1,0 +1,16 @@
+<div style="position:relative;min-height:100vh;">
+  <app-top-bar *ngIf="!isHome"></app-top-bar>
+  <main class="main">
+    <div class="row">
+      <div class="col-sm-2 space-left-sidebar" *ngIf="!isHome">
+        <app-side-bar></app-side-bar>
+      </div>
+      <div class="main-content" [class.col-sm-9]="!isHome" [class.col-sm-12]="isHome">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </main>
+  <div *ngIf="showFooter" [class.home-footer]="isHome">
+    <app-footer></app-footer>
+  </div>
+</div>

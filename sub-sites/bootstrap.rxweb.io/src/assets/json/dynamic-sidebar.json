@@ -1,0 +1,342 @@
+{
+  "links": [
+    {
+      "title": "Getting Started",
+      "uri": null,
+      "otherUri": "getting-started",
+      "isOpen": false,
+      "isActive": false
+    },
+    {
+      "title": "Step-by-Step",
+      "otherUri": "stepbystep",
+      "uri": null,
+      "isOpen": false,
+      "isActive": false,
+      "childrens": [
+        {
+          "title": "Register The Module",
+          "uri": null,
+          "isActive": false,
+          "linkTitle": "stepbystep",
+          "refUri": "registerthemodule"
+        },
+        {
+          "title": "Design The Json",
+          "uri": null,
+          "isActive": false,
+          "linkTitle": "stepbystep"
+        },
+        {
+          "title": "Create The Form",
+          "uri": null,
+          "isActive": false,
+          "linkTitle": "stepbystep"
+        },
+        {
+          "title": "Html Implementation",
+          "uri": null,
+          "isActive": false,
+          "linkTitle": "stepbystep"
+        }
+      ]
+    },
+    {
+      "title": "Ui Features",
+      "otherUri": "ui-features",
+      "isActive": false,
+      "isOpen": false,
+      "childrens": [
+        {
+          "title": "cssClassNames",
+          "uri": null,
+          "isOpen": false,
+          "isActive": false,
+          "otherUri": "cssclassnames",
+          "childrens": [
+            {
+              "title": "Static cssClassNames",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": "csslassNames"
+            },
+            {
+              "title": "Conditional cssClassNames",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": "cssClassNames"
+            }
+          ]
+        },
+        {
+          "title": "description",
+          "uri": null,
+          "isActive": false,
+          "isOpen": false,
+          "linkTitle": null,
+          "otherUri": "description",
+          "childrens": [
+            {
+              "title": "Static description",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            },
+            {
+              "title": "Conditional description",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            }
+          ]
+        },
+        {
+          "title": "disable",
+          "uri": null,
+          "isOpen": false,
+          "isActive": false,
+          "linkTitle": null,
+          "otherUri": "dynamicdisable",
+          "childrens": [
+            {
+              "title": "Static disable",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            },
+            {
+              "title": "Conditional disable",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            }
+          ]
+        },
+        {
+          "title": "focus",
+          "uri": null,
+          "isActive": false,
+          "isOpen": false,
+          "linkTitle": null,
+          "value": "focus",
+          "childrens": [
+            {
+              "title": "Static focus",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            }
+          ]
+        },
+        {
+          "title": "hide",
+          "uri": null,
+          "isActive": false,
+          "isOpen": false,
+          "linkTitle": null,
+          "otherUri": "hide",
+          "childrens": [
+            {
+              "title": "Static hide",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            },
+            {
+              "title": "Conditional hide",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            }
+          ]
+        },
+        {
+          "title": "label",
+          "uri": null,
+          "isOpen": false,
+          "isActive": false,
+          "otherUri": "label",
+          "childrens": [
+            {
+              "title": "Static label",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": "label"
+            },
+            {
+              "title": "Conditional label",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": "label"
+            }
+          ]
+        },
+        {
+          "title": "placeholder",
+          "uri": null,
+          "isActive": false,
+          "isOpen": false,
+          "linkTitle": null,
+          "otherUri": "placeholder",
+          "childrens": [
+            {
+              "title": "Static placeholder",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            },
+            {
+              "title": "Conditional placeholder",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            }
+          ]
+        },
+        {
+          "title": "readonly",
+          "uri": null,
+          "isActive": false,
+          "isOpen": false,
+          "linkTitle": null,
+          "otherUri": "readonly",
+          "childrens": [
+            {
+              "title": "Static readonly",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            },
+            {
+              "title": "Conditional readonly",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            }
+          ]
+        },
+        {
+          "title": "value",
+          "uri": null,
+          "isActive": false,
+          "linkTitle": null,
+          "otherUri": "value"
+        }
+      ]
+    },
+    {
+      "title": "Controls",
+      "isOpen": false,
+      "isActive": false,
+      "childrens": [
+        {
+          "title": "Checkbox",
+          "uri": null,
+          "isActive": false
+        },
+        {
+          "title": "color",
+          "uri": null,
+          "isActive": false
+        },
+        {
+          "title": "date",
+          "uri": null,
+          "isActive": false
+        },
+       
+        {
+          "title": "DropDown",
+          "uri": null,
+          "isActive": false,
+          "linkTitle": null,
+          "childrens": [
+            {
+              "title": "Static",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null
+            },
+            {
+              "title": "Cascading",
+              "uri": null,
+              "isActive": false,
+              "linkTitle": null    
+            }
+          ]
+        },
+        {
+          "title": "email",
+          "uri": null,
+          "isActive": false
+        },
+        {
+          "title": "File",
+          "uri": null,
+          "isActive": false
+        },
+        {
+          "title": "password",
+          "uri": null,
+          "isActive": false
+        },
+        {
+          "title": "prepend-left-textbox",
+          "uri": null,
+          "isActive": false
+        },
+        {
+          "title": "Radio",
+          "uri": null,
+          "isActive": false
+        },
+        {
+          "title": "range",
+          "uri": null,
+          "isActive": false
+        },
+        {
+          "title": "textarea",
+          "uri": null,
+          "isActive": false
+        },
+        {
+          "title": "Textbox",
+          "uri": null,
+          "otherUri":"textbox",
+          "isActive": false
+        },
+        {
+          "title": "url",
+          "uri": null,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Validation",
+      "isOpen": false,
+      "isActive": false,
+      "childrens": []
+    },
+    {
+      "title": "Advance Dynamic Forms",
+      "isOpen": false,
+      "isActive": false,
+      "childrens": [
+        {
+          "title": "Bootstrap Horizontal",
+          "uri": null,
+          "isActive": false,
+          "linkTitle": null
+        },
+        {
+          "title": "Bootstrap Advance",
+          "uri": null,
+          "isActive": false,
+          "linkTitle": null
+        }
+      ]
+    }
+  ]
+}

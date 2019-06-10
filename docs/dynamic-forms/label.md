@@ -20,9 +20,9 @@ Next, we need to write html code.
 
 # Conditional Label
 
-To display the `label` conditionally in your dynamic form, you can set the label property of that particular `form control` by defining the label function through `@action` of `rxDynamicForm` over a model class which inherits the properties of `FormControlConfig`. In that action method, you must set a `modelName`, `keyName` and `actions` which will contain the condition to be applied on that formControl. Defined `modelName` and `keyName` will be set inside the `serverData` in your component.
+To display the `label` conditionally in your dynamic form, you can set the label property of that particular `form control` by defining the label function through `@action` of `rxDynamicForm` over a model class which inherits the properties of `FormControlConfig`. In that action method, you must set a `keyName` and `actions` which will contain the condition to be applied on that formControl. These `model` and `modelName` will be set inside the `dynamicFormConfiguration` and `serverData` in your component.
 
-<div component="app-tabs" key="static"></div>
+<div component="app-tabs" key="conditional"></div>
 
 [!TabGroup]
 # [Model](#tab\conditionalmodel)
