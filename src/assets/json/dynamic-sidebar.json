@@ -214,26 +214,6 @@
                         "linkTitle": null
                       }
                     ]
-                  },
-                  {
-                    "title": "focus",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null,
-                    "childrens": [
-                      {
-                        "title": "Static focus",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      },
-                      {
-                        "title": "Conditional focus",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      }
-                    ]
                   }
                 ]
               },

@@ -22,7 +22,19 @@ Next, we need to write html code.
 
 To display the `placeholder` conditionally in your dynamic form, you can set the placeholder property of that particular `form control` by defining the placeholder function through `@action` of `rxDynamicForm` over a model class which inherits the properties of `FormControlConfig`. In that action method, you must set a `modelName`, `keyName` and `actions` which will contain the condition to be applied on that formControl. Defined `modelName` and `keyName` will be set inside the `serverData` in your component.
 
-<div component="app-code" key="placeholder-conditional-component"></div>
-Next, we need to write html code.
-<div component="app-code" key="placeholder-conditional-html"></div>
+<div component="app-tabs" key="static"></div>
+
+[!TabGroup]
+# [Example](#tab\conditionalexample)
 <div component="app-example-runner" ref-component="app-placeholder-conditional"></div>
+# [/Example]
+# [Model](#tab\conditionalmodel)
+<div component="app-code" key="placeholder-conditional-model"></div> 
+# [/Model]
+# [Component](#tab\conditionalcomponent)
+<div component="app-code" key="placeholder-conditional-component"></div> 
+# [/Component]
+# [Html](#tab\statichtml)
+<div component="app-code" key="placeholder-conditional-html"></div> 
+# [/Html]
+***
