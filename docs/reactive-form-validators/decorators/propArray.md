@@ -31,7 +31,7 @@ Next, we need to write html code.
 # PropArray based on Entity Instance 
 If you want the entity of the propArray entity conditionally.
 
-If the 'contactType' property value equals to address then the Address model properties should be included in the nested formgroup of contact or the property value contains telephone then the Telephone model properties should be included in the nested formgroup. 
+If the contactType property value equals to address then the Address model properties should be included in the nested formgroup of contact or the property value contains telephone then the Telephone model properties should be included in the nested formgroup. 
 
 <div component="app-code" key="propArray-entity-model"></div> 
 <div component="app-code" key="propArray-entity-component"></div> 
