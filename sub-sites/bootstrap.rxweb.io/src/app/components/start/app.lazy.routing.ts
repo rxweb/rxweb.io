@@ -20,6 +20,10 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path: 'whats-next', component: WhatsNextComponent 
+  },
+  {
+    path: 'dynamic-forms',
+    loadChildren: 'src/app/components/dynamic-forms/dynamic-forms.module#DynamicFormsModule',
   }
 ]
 

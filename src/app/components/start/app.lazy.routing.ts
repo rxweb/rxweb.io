@@ -12,7 +12,6 @@ import { WhatsNextComponent } from "../whats-next/whats-next.component";
 import { WhatsNewComponent } from "../whats-new/whats-new.component";
 import { WhyRxwebComponent } from "../why/why-component";
 import { ChangeLogComponent } from "../changelog/change-log.component";
-import { DynamicGettingStartedComponent } from "../dynamic-getting-started/dynamic-getting-started.component";
 
 
 
@@ -28,9 +27,6 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path: 'reactive-forms/getting-started', component: GettingStartedComponent
-  },
-  {
-   path:'dynamic-forms/getting-started',component:DynamicGettingStartedComponent
   },
   // {
   //   path: 'changelog', component: TextPageComponent

@@ -22,7 +22,6 @@ export class SideBarComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster) { }
 
   ngOnInit(): void {
-    debugger
     this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
       this.links = response.links;
       var splitedArray = location.pathname.split('#')[0].split('/')
@@ -41,7 +40,6 @@ export class SideBarComponent implements OnInit {
                 }
               }
               else if (splitedArray[1].includes('ui-features')) {
-                debugger
                 currentArray[0].childrens.forEach(formvalidation => {
                   if (formvalidation.title != "value") {
                     formvalidation.childrens.forEach(element => {
@@ -81,7 +79,6 @@ export class SideBarComponent implements OnInit {
   }
 
   navigateTo(link: any, secondlevel: any, thirdlevel: any): void {
-    debugger
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;

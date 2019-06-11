@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
         "uiFramework": "bootstrap",
       },
       "validationMessage": {
-
+        
       }
     })
   }

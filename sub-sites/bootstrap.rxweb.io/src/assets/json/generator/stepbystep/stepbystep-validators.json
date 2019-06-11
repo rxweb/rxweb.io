@@ -1,0 +1,22 @@
+{
+    "module":{
+        "component":"import { BrowserModule } from '@angular/platform-browser';\r\nimport { NgModule } from '@angular/core';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { InputBindingComponent } from './input-binding/input-binding.component';\r\nimport { RxDynamicReactiveFormsModule, RxReactiveFormsModule } from '@rxweb/reactive-form-validators';\r\nimport { ReactiveFormsModule, FormsModule } from '@angular/forms';\r\nimport { RxwebBootstrapModule } from './dynamic-form/bootstrap.components'\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,InputBindingComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,RxwebBootstrapModule,FormsModule,RxDynamicReactiveFormsModule,RxReactiveFormsModule,ReactiveFormsModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n"
+    },
+    "serverData":{
+        "component":"serverData: Array<{ [key: string]: any }> = [{\r\n            name:\"firstName\",\r\n            type:\"textbox\"\r\n        }]"
+    },
+    "ui":{
+        "component":"uiBindings:string[] = [\"firstName\"];"
+    },
+    "form":{
+        "component":"  ngOnInit()\r\n         {\r\n          this.dynamicFormBuildConfig = this.formBuilder.dynamicForm(this.serverData,this.dynamicFormConfiguration);\r\n          }",
+        "html":"<form [rxDynamicForm]=\"dynamicFormBuildConfig\">\r\n                <rxweb-dynamic-form [viewMode]=\"viewMode\" [controlsConfig]=\"dynamicFormBuildConfig.controlsConfig\"\r\n                    [bindings]=\"uiBindings\">\r\n            </rxweb-dynamic-form>    \r\n               </form> "
+    },
+    "viewmode":{
+        "component":" viewMode: string = \"bootstrap-basic\";"
+    },
+    "complete":{
+       "component":"import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxFormBuilder } from \"@rxweb/reactive-form-validators\";\r\n\r\n@Component({\r\n    selector: 'app-dynamic-complete-validator',\r\n    templateUrl: './dynamic-complete.component.html'\r\n})\r\n\r\nexport class StepByStepComponent implements OnInit {\r\n    serverData: Array<{ [key: string]: any }> = [{\r\n            name:\"firstName\",\r\n            type:\"textbox\"\r\n        }]\r\n         viewMode:string = \"bootstrap-basic\";\r\n        uiBindings:string[] = [\"firstName\"];\r\n        dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n        dynamicFormConfiguration: DynamicFormConfiguration;\r\n        constructor(private formBuilder: RxFormBuilder) { }\r\n          ngOnInit()\r\n         {\r\n          this.dynamicFormBuildConfig = this.formBuilder.dynamicForm(this.serverData,this.dynamicFormConfiguration);\r\n          }\r\n}",
+       "html":"   <div>\r\n            <form [rxDynamicForm]=\"dynamicFormBuildConfig\">\r\n                <rxweb-dynamic-form [viewMode]=\"viewMode\" [controlsConfig]=\"dynamicFormBuildConfig.controlsConfig\"\r\n                    [bindings]=\"uiBindings\">\r\n            </rxweb-dynamic-form>    \r\n               </form>         \r\n        </div>       "
+    }
+}
