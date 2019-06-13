@@ -13,7 +13,7 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'getting-started', component: GettingStartedComponent
+    path: 'dynamic-forms/getting-started', component: GettingStartedComponent
   },
   {
     path: 'whats-new', component: WhatsNewComponent

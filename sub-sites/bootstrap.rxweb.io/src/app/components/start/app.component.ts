@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   title = 'bootstrap-rxweb-io';
 
   isHome = false;
-  isWhy: boolean = false;
   showFooter = false;
   rightSidebarLinks: any;
 
@@ -26,11 +25,11 @@ export class AppComponent implements OnInit {
     router.events.subscribe((val) => {
 
       if (val instanceof NavigationEnd) {
-        if (val.url == "/")
+        if (val.url == "/" || val.url == "/home")
           this.isHome = true;
-        else {
+        else 
           this.isHome = false;
-        }
+        
         var t = setTimeout(() => {
           this.showFooter = true;
         }, 500);
@@ -53,6 +52,7 @@ export class AppComponent implements OnInit {
         }, 500);
       }
       if (val instanceof NavigationStart) {
+        this.showFooter = false;
       }
     });
   }
@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
         "uiFramework": "bootstrap",
       },
       "validationMessage": {
-        
+
       }
     })
   }

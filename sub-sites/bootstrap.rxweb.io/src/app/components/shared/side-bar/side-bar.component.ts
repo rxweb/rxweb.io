@@ -105,7 +105,6 @@ export class SideBarComponent implements OnInit {
         thirdlevel.isOpen = true;
       }
       link.isActive = true;
-      link.isOpen = true;
       this.router.navigateByUrl(link.uri);
     }
   }
@@ -128,7 +127,7 @@ export class SideBarComponent implements OnInit {
       this.sticky = false;
     }
   }
-  
+
   showsearchcontent(event, searchvalue: string) {
     if (event.key == "Escape")
       this.hideSearch();
@@ -139,7 +138,7 @@ export class SideBarComponent implements OnInit {
         this.hideSearch();
     }
   }
-  
+
   hideSearch() {
     setTimeout(() => {
       this.searchInput['searchBox'].nativeElement.value = "";
@@ -148,7 +147,7 @@ export class SideBarComponent implements OnInit {
         document.getElementById("searchlist-content").style.display = "none";
     }, 300);
   }
-  
+
   hideAll(jObject: any[], isHide: boolean, isOpen: boolean) {
     for (var i = 0; i < jObject.length; i++) {
       jObject[i].isHide = isHide;
