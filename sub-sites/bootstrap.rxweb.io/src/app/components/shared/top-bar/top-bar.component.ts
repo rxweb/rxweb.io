@@ -6,15 +6,17 @@ import { ApplicationBroadcaster } from '@rx/core';
   templateUrl: './top-bar.component.html',
 })
 
-export class TopBarComponent  {
-  isReactive:boolean
-  isDynamic:boolean
+export class TopBarComponent {
+  isReactive: boolean
+  isDynamic: boolean
   searchvalue1: string
   @ViewChild('search1') searchInput: ElementRef;
-  titleData:any = {codeContent:{}};
-  constructor(private applicationBroadCaster:ApplicationBroadcaster){
-    this.applicationBroadCaster.topSubscriber.subscribe(t=>{
-      this.titleData = t;
+  titleData: any = { codeContent: {} };
+  constructor(private applicationBroadCaster: ApplicationBroadcaster) {
+    this.applicationBroadCaster.topSubscriber.subscribe(t => {
+      setTimeout(() => {
+        this.titleData = t;
+      }, 0);
     })
   }
 
@@ -39,11 +41,11 @@ export class TopBarComponent  {
     setTimeout(() => {
       this.searchInput['searchBox'].nativeElement.value = "";
       this.searchvalue1 = "";
-      if(document.getElementById("searchlist-content") != undefined)
+      if (document.getElementById("searchlist-content") != undefined)
         document.getElementById("searchlist-content").style.display = "none";
-    },300);
+    }, 300);
   }
- 
+
   openMenu(): void {
     const body = document.getElementsByClassName('header-links content')[0];
     if (window.innerWidth < 769) {
