@@ -60,10 +60,6 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/form-validation/form-validation.module#FormValidationModule',
   },
   {
-    path: 'dynamic-forms',
-    loadChildren: 'src/app/components/dynamic-forms/dynamic-forms.module#DynamicFormsModule',
-  },
-  {
     path: 'decorators',
     loadChildren: 'src/app/components/decorators/decorators.module#DecoratorsModule',
   },
