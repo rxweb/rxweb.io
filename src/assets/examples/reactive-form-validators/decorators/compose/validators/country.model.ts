@@ -3,12 +3,12 @@ import {AbstractControl} from '@angular/forms';
 
 export class Country {
 
-	@compose({validators:[uniqueCountryName()]}) 
+	@compose({validators:[uniqueCountryName()]})
 	countryName: string;
 
 }
 function uniqueCountryName() {
-    return (control: AbstractControl) => {
+  return (control: AbstractControl) => {
         if (control.value != "India")
             return null;
         else

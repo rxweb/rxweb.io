@@ -3,8 +3,6 @@ import { FormGroup } from "@angular/forms"
 import { RxFormBuilder } from '@rxweb/reactive-form-validators';
 import { Country } from './country.model';
 
-
-
 @Component({
     selector: 'app-compose-validators',
     templateUrl: './compose-validators.component.html'

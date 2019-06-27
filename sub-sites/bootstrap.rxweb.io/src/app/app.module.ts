@@ -24,11 +24,12 @@ import { WhatsNextComponent } from './components/whats-next/whats-next.component
 import { ClipboardModule } from 'ngx-clipboard';
 import { HighlightModule } from 'ngx-highlightjs';
 import { RxwebBootstrapModule } from 'src/assets/examples/dynamic-forms/bootstrap.components';
+import { TitleComponent } from './components/shared/title/title.component';
 
 @NgModule({
   declarations: [
     AppComponent,SideBarComponent,TopBarComponent,FooterComponent,
-    HomeComponent,GettingStartedComponent,WhatsNewComponent,WhatsNextComponent
+    HomeComponent,GettingStartedComponent,WhatsNewComponent,WhatsNextComponent, TitleComponent
   ],
   imports: [
     BrowserModule, FormsModule, RxDynamicReactiveFormsModule, ClipboardModule, HighlightModule.forRoot({ theme: 'default' }),

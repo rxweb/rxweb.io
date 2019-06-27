@@ -9,17 +9,17 @@
     },
     {
       "title": "Step-by-Step",
-    "otherUri": "stepbystep",
-    "uri":"dynamic-forms/stepbystep/validators",
-    "isOpen": false,
-    "isActive": false,
+      "uri": "dynamic-forms/stepbystep/validators",
+      "isOpen": false,
+      "isActive": false,
+      "otherUri": "stepbystep",
       "childrens": [
         {
           "title": "Register The Module",
           "uri": "dynamic-forms/stepbystep/validators#registerthemodule",
           "isActive": false,
           "linkTitle": "stepbystep",
-          "refUri":"registerthemodule"
+          "refUri": "registerthemodule"
         },
         {
           "title": "Design The Json",
@@ -94,9 +94,9 @@
           "title": "Placeholder",
           "uri": "dynamic-forms/placeholder/validators",
           "isActive": false,
-          "isOpen":false,
+          "isOpen": false,
           "linkTitle": null,
-          "otherUri":"placeholder",
+          "otherUri": "placeholder",
           "childrens": [
             {
               "title": "Static placeholder",
@@ -116,9 +116,9 @@
           "title": "focus",
           "uri": "dynamic-forms/focus/validators",
           "isActive": false,
-          "isOpen":false,
+          "isOpen": false,
           "linkTitle": null,
-          "value":"focus",
+          "value": "focus",
           "childrens": [
             {
               "title": "Static focus",
@@ -134,7 +134,7 @@
           "isActive": false,
           "isOpen": false,
           "linkTitle": null,
-          "otherUri":"value",
+          "otherUri": "value",
           "childrens": [
             {
               "title": "Static cssClassNames",
@@ -155,15 +155,15 @@
           "uri": "dynamic-forms/value/validators",
           "isActive": false,
           "linkTitle": null,
-          "otherUri":"value"
+          "otherUri": "value"
         },
         {
           "title": "hide",
           "uri": "dynamic-forms/hide/validators",
           "isActive": false,
-          "isOpen":false,
+          "isOpen": false,
           "linkTitle": null,
-          "otherUri":"hide",
+          "otherUri": "hide",
           "childrens": [
             {
               "title": "Static hide",
@@ -183,9 +183,9 @@
           "title": "description",
           "uri": "dynamic-forms/description/validators",
           "isActive": false,
-          "isOpen":false,
+          "isOpen": false,
           "linkTitle": null,
-          "otherUri":"description",
+          "otherUri": "description",
           "childrens": [
             {
               "title": "Static description",
@@ -205,9 +205,9 @@
           "title": "readonly",
           "uri": "dynamic-forms/readonly/validators",
           "isActive": false,
-          "isOpen":false,
+          "isOpen": false,
           "linkTitle": null,
-          "otherUri":"readonly",
+          "otherUri": "readonly",
           "childrens": [
             {
               "title": "Static readonly",
@@ -233,12 +233,12 @@
         {
           "title": "Textbox",
           "uri": "dynamic-forms/textbox/validators",
-          "otherUri":"textbox",
+          "otherUri": "textbox",
           "isActive": false
         },
         {
           "title": "DropDown",
-          "uri": null,
+          "uri": "dynamic-forms/dropdown/validators",
           "isActive": false,
           "linkTitle": null,
           "childrens": [
@@ -246,13 +246,13 @@
               "title": "Static",
               "uri": "dynamic-forms/dropdown/validators#staticdropdown",
               "isActive": false,
-              "linkTitle": null    
+              "linkTitle": null
             },
             {
               "title": "Cascading",
               "uri": "dynamic-forms/dropdown/validators#cascadingdropdown",
               "isActive": false,
-              "linkTitle": null    
+              "linkTitle": null
             }
           ]
         },
@@ -317,9 +317,7 @@
       "title": "Dynamic Validation",
       "isOpen": false,
       "isActive": false,
-      "childrens": [
-       
-      ]
+      "childrens": []
     },
     {
       "title": "Advance Dynamic Forms",
@@ -330,15 +328,15 @@
           "title": "Bootstrap Horizontal",
           "uri": "dynamic-forms/bootstraphorizontal/validators",
           "isActive": false,
-          "linkTitle": null    
+          "linkTitle": null
         },
         {
           "title": "Bootstrap Advance",
           "uri": "dynamic-forms/bootstrapadvance/validators",
           "isActive": false,
-          "linkTitle": null    
+          "linkTitle": null
         }
       ]
-    } 
+    }
   ]
 }

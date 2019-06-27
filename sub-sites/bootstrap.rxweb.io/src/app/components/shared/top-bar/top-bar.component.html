@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-sm-2 logo space-left-sidebar">
 			<div class="header-link">
-				<a class="rxlogo" routerlink="/home" title="rxweb" routerLink="/home">rxweb</a>
+				<a class="rxlogo" title="rxweb" routerLink="/">rxweb</a>
 				<svg class="top-toggle-btn" (click)="openMenu()" width="25" height="25" focusable="false"
 					viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 					<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
@@ -15,7 +15,7 @@
 
 				<ul class="list-unstyled list-inline">
 					<li routerLinkActive="active" class="list-inline-item">
-						<a routerLink="/getting-started">Learn</a>
+						<a routerLink="/dynamic-forms/getting-started">Learn</a>
 					</li>
 					<li class="list-inline-item"><a routerLink="/whats-new" routerLinkActive="active">What's New?</a>
 					</li>
@@ -39,15 +39,17 @@
 					<li routerLinkActive="active" class="list-inline-item"><a>Community</a>
 						<div class="mega-menu">
 							<ul class="list-unstyled">
-								<li><a >Want to Contribute, but?</a></li>
-								<li><a >Contributing</a></li>
-								<li><a >Maintaining</a></li>
-								<li><a >Change Log</a></li>
+								<li><a>Want to Contribute, but?</a></li>
+								<li><a>Contributing</a></li>
+								<li><a>Maintaining</a></li>
+								<li><a>Change Log</a></li>
 								<li><a target="_blank" href="https://dev.to/t/rxweb">Dev Community</a></li>
 								<li><a target="_blank"
-										href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3Abug">Open Issues</a></li>
+										href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3Abug">Open
+										Issues</a></li>
 								<li><a target="_blank"
-										href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22">Feature Request</a></li>
+										href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22">Feature
+										Request</a></li>
 							</ul>
 						</div>
 					</li>
@@ -112,11 +114,7 @@
 	<div class="row">
 		<div class="col-sm-2 space-left-sidebar"></div>
 		<div class="col-sm-12 col-md-9">
-
-			<app-title [title]="titleData.title" [description]="titleData.description" [mainType]="titleData.mainType"
-				[activeTab]="titleData.activeTab" [validationName]="titleData.validationName"
-				[validatorType]="titleData.validatorType" [validationTypeTitle]="titleData.validationTypeTitle"
-				[templateDrivenType]="titleData.templateDrivenType"></app-title>
+			<app-title [title]="titleData.title"></app-title>
 		</div>
 	</div>
 </div>

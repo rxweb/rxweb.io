@@ -6,7 +6,6 @@ export class User {
 	@compose({validators:[RxwebValidators.required(), RxwebValidators.alpha()] }) 
     firstName: string;
 
-
 	//If you want to apply conditional expression of type 'function'
 	@compose({validators:[RxwebValidators.digit()]  ,conditionalExpression:(x,y) => x.firstName == "Bharat" }) 
 	age: number;

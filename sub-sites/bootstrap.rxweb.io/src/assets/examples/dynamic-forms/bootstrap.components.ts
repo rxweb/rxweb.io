@@ -51,9 +51,9 @@ export class BootstrapInputUrlComponent extends AbstractDynamicControl { }
     template: `
     <div class="input-group">
         <div class="input-group-prepend">
-          <div class="input-group-text">{{controlConfig.prependText.left}}</div>
-        </div>
-      <input type='text' [rxwebAction]="['placeholder','focus','readonly','cssClassNames']" [formControl]="formControl"/>
+        <div class="input-group-text">{{controlConfig.prependText.left}}</div>
+        <input type='text' [rxwebAction]="['placeholder','focus','readonly','cssClassNames']" [formControl]="formControl"/>
+      </div>
       <span [rxwebError]="formControl.errorMessage" ></span>
       </div>
 `
