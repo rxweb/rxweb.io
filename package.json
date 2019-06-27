@@ -9,7 +9,7 @@
     "ngsw-copy": "copy node_modules/@angular/service-worker/ngsw-worker.js dist/ngsw-worker.js",
     "build-prod-ngsw": "node --max-old-space-size=4096 node_modules/@angular/cli/bin/ng build --prod",
     "serve-prod-ngsw": "npm run build-prod-ngsw && http-server dist -p 8080",
-    "build:prod": "npm run build --prod --aot",
+    "build:prod": "ng build --prod --aot",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -37,7 +37,7 @@
     "ngx-json-viewer": "^2.4.0",
     "ngx-monaco-editor": "^6.0.0",
     "ngx-slimscroll": "^5.2.2",
-    "rxjs": "^6.0.0",
+    "rxjs": "^6.4.0",
     "rxjs-compat": "^6.3.3",
     "time-ago-pipe": "^1.3.2",
     "zone.js": "~0.8.26"
