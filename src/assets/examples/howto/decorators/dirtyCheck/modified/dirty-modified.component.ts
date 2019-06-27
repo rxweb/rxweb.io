@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,Validators } from "@angular/forms"
 
-import { RxFormBuilder,FormBuilderConfiguration,FormGroupExtension } from '@rxweb/reactive-form-validators';
+import { RxFormBuilder,FormBuilderConfiguration,FormGroupExtension, RxFormGroup } from '@rxweb/reactive-form-validators';
 import {User} from './user.model'
 
 @Component({
@@ -10,13 +10,13 @@ import {User} from './user.model'
 })
 export class DirtyModifiedComponent implements OnInit {
 
-   editForm:FormGroup;
+   editForm:RxFormGroup;
 
   constructor(private formBuilder:RxFormBuilder){}
   
   ngOnInit(){
    let user = new User();
-   this.editForm = this.formBuilder.formGroup(user);
+   this.editForm = <RxFormGroup>this.formBuilder.formGroup(user);
   }
 
 }

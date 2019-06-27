@@ -3,7 +3,7 @@
           <div class="form-group">
             <label>First Name</label>
             <input type="text" formControlName="firstName" class="form-control"  />
-            <small class="form-text text-danger" *ngFor="let errorMessage of userFormGroup.controls.firstName.errorMessages">
+            <small class="form-text text-danger" *ngFor="let errorMessage of userFormGroup['controls'].firstName['errorMessages']">
                     {{errorMessage}}<br/>
                   </small>
           </div>
