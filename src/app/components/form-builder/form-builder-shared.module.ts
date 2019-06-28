@@ -11,10 +11,10 @@ import { RxFormsModule } from '@rx/forms';
 import { RxViewModule } from '@rx/view';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ClipboardModule } from 'ngx-clipboard';
-import { MonacoEditorModule } from 'ngx-monaco-editor'
+
 
 @NgModule({
- imports:      [FORM_BUILDER_ROUTING, CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,NgxJsonViewerModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule ,MonacoEditorModule ],
+ imports:      [FORM_BUILDER_ROUTING, CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,NgxJsonViewerModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
  declarations: [ ParameterItemsComponent,FormBuilderComponent ],
  exports:      [ ParameterItemsComponent,FormBuilderComponent,RouterModule ]
 })

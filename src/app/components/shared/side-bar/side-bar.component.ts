@@ -2,7 +2,7 @@ import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter, HostL
 import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { ApplicationBroadcaster } from "@rx/core";
-import { AuthService } from 'src/app/domain/auth.service';
+
 import { environment } from 'src/environments/environment';
 import { element } from '@angular/core/src/render3';
 
@@ -21,7 +21,7 @@ export class SideBarComponent implements OnInit {
   @ViewChild('search') searchInput: ElementRef;
 
   constructor(
-    private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster, private authService: AuthService, private activatedRoute: ActivatedRoute
+    private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster, private activatedRoute: ActivatedRoute
   ) {
   }
   ngOnInit(): void {
@@ -126,9 +126,7 @@ export class SideBarComponent implements OnInit {
       this.router.navigateByUrl(link.uri);
     }
   }
-  logOut(): void {
-    this.authService.logout()
-  }
+ 
   hideSideBar(): void {
     const body = document.getElementsByTagName('body')[0];
     if (window.innerWidth < 769) {

@@ -5,7 +5,6 @@ import { Router, RouterOutlet } from "@angular/router";
 import { NavigationEnd } from "@angular/router";
 import { HostListener } from "@angular/core";
 import { NavigationStart } from "@angular/router";
-import { AuthService } from '../../domain/auth.service';
 import {  trigger, style, animate, transition, query } from '@angular/animations';
 import { ApplicationBroadcaster } from '@rx/core';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
@@ -64,7 +63,7 @@ export class AppComponent implements OnInit {
   //   return outlet.activatedRouteData.animation
   // }
   rightSidebarLinks:any;
-  constructor(private router: Router,private applicationBroadCast:ApplicationBroadcaster,private auth:AuthService) {
+  constructor(private router: Router,private applicationBroadCast:ApplicationBroadcaster) {
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
     });

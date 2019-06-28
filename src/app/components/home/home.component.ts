@@ -6,7 +6,6 @@ import { RxwebValidators } from "@rxweb/reactive-form-validators"
 import {User} from "./model/user.model";
 import { FormBuilderConfiguration, RxFormBuilder } from "@rxweb/reactive-form-validators";
 import { ApplicationBroadcaster } from "@rx/core";
-import { AuthService } from 'src/app/domain/auth.service';
 import { environment } from 'src/environments/environment';
 @Component({
   templateUrl: './home.component.html'
@@ -50,7 +49,7 @@ export class HomeComponent implements OnInit,OnDestroy {
     }
   ]
   textIndex: number = 0;
-  constructor(private http: HttpClient, private formBuilder: FormBuilder,private rxFormBuilder:RxFormBuilder,private applicationBroadcast:ApplicationBroadcaster,private auth: AuthService
+  constructor(private http: HttpClient, private formBuilder: FormBuilder,private rxFormBuilder:RxFormBuilder,private applicationBroadcast:ApplicationBroadcaster
   ) {
   }
 
@@ -154,9 +153,7 @@ isExistElement(){
     })
   }
 
-  login():void{
-    this.auth.login();
-  }
+ 
 
   ngOnDestroy(){
     let childElement = document.getElementById("code_change");

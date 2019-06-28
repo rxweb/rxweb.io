@@ -32,7 +32,7 @@ import { PromptUpdateService } from '../services/prompt-update.service';
 import { LogUpdateService } from '../services/log-update.service';
 import { CheckForUpdateService } from '../services/check-for-update.service';
 import { FooterSharedModule } from './shared/footer/footer-shared.module';
-import { AuthService } from '../domain/auth.service';
+
 import { GettingStartedComponent } from './getting-started/getting-started.component';
 import { DisqusSharedModule } from './shared/disqus/disqus-shared.module';
 import { RightSideBarSharedModule } from './shared/right-sidebar/right-sidebar-shared.module';
@@ -45,7 +45,7 @@ import { ApplicationResponse } from '../domain/application-response';
 import { BasicExamplesExtendedModule } from 'src/assets/examples/reactive-form-validators/basic-examples/basic-examples-extended.module';
 export const API_HOST_URI: string = 'API_URL';
 
-import { MonacoEditorModule, NgxMonacoEditorConfig } from 'ngx-monaco-editor'
+
 import { TextPageModule } from './text-page/text-page.module';
 import { WhatsNextComponent } from './whats-next/whats-next.component';
 import { WhatsNewComponent } from './whats-new/whats-new.component';
@@ -56,9 +56,7 @@ import { ChangeLogComponent } from './changelog/change-log.component';
 
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
-const monacoConfig: NgxMonacoEditorConfig = {
-  baseUrl: '/assets'
-};
+
 
 
 @NgModule({
@@ -70,7 +68,7 @@ const monacoConfig: NgxMonacoEditorConfig = {
     NgxJsonViewerModule,
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
-    MonacoEditorModule.forRoot(monacoConfig)
+
   ],
   providers: [RxValidation, ApplicationBroadcaster,
     {
@@ -84,7 +82,7 @@ const monacoConfig: NgxMonacoEditorConfig = {
     },
     { provide: 'RequestHeaders', useClass: ApplicationRequestHeaders },
     { provide: 'ResponseResult', useClass: ApplicationResponse },
-    ApplicationBroadcaster, PromptUpdateService, LogUpdateService, CheckForUpdateService, AuthService
+    ApplicationBroadcaster, PromptUpdateService, LogUpdateService, CheckForUpdateService, 
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent],
