@@ -29,7 +29,7 @@ export class AllOfCompleteValidatorComponent implements OnInit {
     this.employeeInfoFormGroup = this.formBuilder.group({
       department: [''],
       projectDomains: ['', RxwebValidators.allOf({ matchValues: ["ECommerce", "Banking", "Educational", "Gaming"] })],
-      qualifications: ['', RxwebValidators.allOf({ matchValues: ["Secondary", "Senior Secondary", "B.Tech", "M.Tech", "B.C.A.", "M.C.A."], conditionalExpression: (x, y) => x.department == 'DotNet' })],
+      qualifications: ['', RxwebValidators.allOf({ matchValues: ["Secondary", "Senior Secondary", "B.Tech.", "M.Tech.", "B.C.A.", "M.C.A."], conditionalExpression: (x, y) => x.department == 'DotNet' })],
       skills: ['', RxwebValidators.allOf({ matchValues: ["MVC", "AngularJS", "Angular 5", "C#", "Web Api", "SQL Server"], conditionalExpression: "x => x.department =='DotNet'" })],
       hobbies: ['', RxwebValidators.allOf({ matchValues: ["Drawing", "Singing", "Dancing", "Travelling", "Sports"], message: "Please select all hobbies" })],
       languages: ['', RxwebValidators.allOf({ matchValues: ["English", "Spanish", "French"], messageKey: 'allOfMessageKey' })]
