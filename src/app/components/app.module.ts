@@ -14,7 +14,7 @@ import { APP_LAZY_ROUTING } from './start/app.lazy.routing';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ClipboardModule } from 'ngx-clipboard';
 import { NgAisModule } from 'angular-instantsearch';
-import { NgxJsonViewerModule } from 'ngx-json-viewer';
+
 
 import { environment } from 'src/environments/environment';
 
@@ -54,6 +54,7 @@ import { TitleComponent } from './shared/title/title.component';
 import { ChangeLogComponent } from './changelog/change-log.component';
 
 
+
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
 
@@ -65,7 +66,6 @@ import { ChangeLogComponent } from './changelog/change-log.component';
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, DisqusSharedModule, BasicExamplesExtendedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
     BrowserAnimationsModule,
-    NgxJsonViewerModule,
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
 

@@ -9,6 +9,7 @@ import { RequestOptions } from "@angular/http";
 import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
 import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-right-sidebar',
@@ -19,12 +20,13 @@ export class RightSideBarComponent implements OnInit {
     public feedbackForm: FormGroup
     sticky:boolean = false;
     validationName: string;
+    gitterAsideShow:boolean = false;
     mainType: string;
     toogleOpen:boolean = true;
     showExample: boolean = true;
     httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' })};
     constructor(
-        private http: HttpClient,private router: Router, private formBuilder: RxFormBuilder
+        private http: HttpClient,private router: Router, private formBuilder: RxFormBuilder, private sanitizer: DomSanitizer
     ) {
     }
     @Input('sidebarLinks') sidebarLinks: any = {};
@@ -40,7 +42,7 @@ export class RightSideBarComponent implements OnInit {
                 this.sticky = false;
             }
     }
-  
+
     ngOnInit(): void {
         var splitedArray = location.pathname.split("/");
         this.mainType = splitedArray[1];
@@ -81,6 +83,7 @@ export class RightSideBarComponent implements OnInit {
         }
         this.showComponent = true;
     }
+  
     scrollTo(section) {
         var node = document.querySelector('#' + section);
         node.scrollIntoView(true);
@@ -90,7 +93,12 @@ export class RightSideBarComponent implements OnInit {
         }
         return false;
     }
-   
+    gitUrl(){
+        return this.sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
+       }
+       gitterAside(){
+        this.gitterAsideShow = !this.gitterAsideShow;    
+      }
     routeExample() {
         this.toogleOpen = !this.toogleOpen;
         this.showExample = !this.showExample;

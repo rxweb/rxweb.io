@@ -10,9 +10,14 @@
     "build-prod-ngsw": "node --max-old-space-size=8192 node_modules/@angular/cli/bin/ng build --prod",
     "serve-prod-ngsw": "npm run build-prod-ngsw && http-server dist -p 8080",
     "build:prod": "ng build --prod --aot",
+    "analyze": "webpack-bundle-analyzer dist/stats.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
+  },
+  "window": {
+    "show": true,
+    "frame": true
   },
   "private": true,
   "dependencies": {
@@ -29,17 +34,12 @@
     "@angular/service-worker": "^7.1.4",
     "@rxweb/reactive-form-validators": "^1.9.1",
     "angular-instantsearch": "^2.1.0",
-    "auth0-lock": "^11.12.1",
     "core-js": "^2.5.4",
     "http-server": "^0.11.1",
     "ngx-clipboard": "^11.1.9",
     "ngx-highlightjs": "^2.1.1",
-    "ngx-json-viewer": "^2.4.0",
-    "ngx-monaco-editor": "^6.0.0",
-    "ngx-slimscroll": "^5.2.2",
     "rxjs": "^6.4.0",
     "rxjs-compat": "^6.3.3",
-    "time-ago-pipe": "^1.3.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

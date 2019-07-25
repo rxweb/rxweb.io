@@ -11,6 +11,7 @@ import {
 } from '@angular/animations';
 import { environment } from 'src/environments/environment';
 import { ApplicationBroadcaster } from '@rx/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   templateUrl: './page.component.html',
@@ -37,6 +38,7 @@ export class PageComponent implements OnInit {
   codeContent: any = "";
   jsonContent: any = "";
   activeTab: string = "validators";
+ 
   element: HTMLElement;
   typeName: string;
   validationName: string;
@@ -49,7 +51,8 @@ export class PageComponent implements OnInit {
     private http: HttpClient, private elementRef: ElementRef,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private applicationBroadcaster:ApplicationBroadcaster
+    private applicationBroadcaster:ApplicationBroadcaster,
+    private sanitizer: DomSanitizer
   ) {
 
     this.applicationBroadcaster.topSubject.subscribe(t=>{
@@ -147,6 +150,7 @@ export class PageComponent implements OnInit {
   scrollTo(section) {
     window.location.hash = section;
   }
+
 
   routeExample() {
     this.showExample = !this.showExample;

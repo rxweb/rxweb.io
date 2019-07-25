@@ -138,19 +138,9 @@ isExistElement(){
       identityNumber:['',RxwebValidators.required({conditionalExpression:(x) => x.country == 'India' })]
     });
     this.user = new User();
-    this.userInfoFormGroup = this.rxFormBuilder.formGroup(this.user);
-    this.http.get('assets/json/home.json?v='+environment.appVersion).subscribe((response:object) => {
-        this.codeContent = response;
-    this.http.get('assets/json/dynamic-validation.json?v='+environment.appVersion).subscribe((dynamicValidationConfiguration:any) => {
-      
-        this.userModelFormGroup = this.rxFormBuilder.group({
-          firstName:['Bharat']
-        },
-        new FormBuilderConfiguration( { dynamicValidation: dynamicValidationConfiguration,'genericEntities':{} }));
-      this.showComponent = true;
+    this.userInfoFormGroup = this.rxFormBuilder.formGroup(this.user);  
       var t = setTimeout(() => { this.changeText();},500)
-      });
-    })
+
   }
 
  

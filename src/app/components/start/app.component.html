@@ -1,23 +1,29 @@
 <div style="position:relative;min-height:100vh;">
-  <rx-toast></rx-toast>
-  <rx-dialog></rx-dialog>
-  <rx-popup></rx-popup>
-  <rx-spinner></rx-spinner>
-  <app-top-bar *ngIf="!isHome || isWhy"></app-top-bar>
-  <main class="main">
-    <div class="row">
-      <div class="col-sm-2 space-left-sidebar" *ngIf="!isHome">
-        <app-side-bar></app-side-bar>
+    <rx-toast></rx-toast>
+    <rx-dialog></rx-dialog>
+    <rx-popup></rx-popup>
+    <rx-spinner></rx-spinner>
+    <app-top-bar *ngIf="!isHome || isWhy"></app-top-bar>
+    <main class="main">
+  
+      <div class="row">
+        <div class="col-sm-2 space-left-sidebar" *ngIf="!isHome">
+          <app-side-bar></app-side-bar>
+        </div>
+        
+  
+        <!-- <div [@routerAnimation]="getRouteAnimation(route)"> -->
+        <div class="main-content" [class.col-sm-9]="!isHome" [class.col-sm-12]="isHome">
+          <router-outlet></router-outlet>
+        </div>
+      
+  
+        <!-- </div> -->
       </div>
-      <!-- <div [@routerAnimation]="getRouteAnimation(route)"> -->
-      <div class="main-content" [class.col-sm-9]="!isHome" [class.col-sm-12]="isHome">
-        <router-outlet></router-outlet>
-      </div>
-      <!-- </div> -->
+      <!-- <app-right-sidebar *ngIf="rightSidebarLinks" [sidebarLinks]="rightSidebarLinks"></app-right-sidebar> -->
+    </main>
+    <div *ngIf="showFooter" [class.home-footer]="isHome">
+      <app-footer></app-footer>
     </div>
-    <!-- <app-right-sidebar *ngIf="rightSidebarLinks" [sidebarLinks]="rightSidebarLinks"></app-right-sidebar> -->
-  </main>
-  <div *ngIf="showFooter" [class.home-footer]="isHome">
-    <app-footer></app-footer>
   </div>
-</div>
+  
