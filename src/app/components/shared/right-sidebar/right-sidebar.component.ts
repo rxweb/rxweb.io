@@ -1,3 +1,4 @@
+import { Pipe, PipeTransform } from '@angular/core';
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Input } from "@angular/core";
 import { FormGroup } from "@angular/forms";
@@ -9,7 +10,7 @@ import { RequestOptions } from "@angular/http";
 import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
 import { Router } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-right-sidebar',
@@ -19,6 +20,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class RightSideBarComponent implements OnInit {
     public feedbackForm: FormGroup
     sticky:boolean = false;
+    gitAsideUrl:SafeResourceUrl;
     validationName: string;
     gitterAsideShow:boolean = false;
     mainType: string;
@@ -28,6 +30,7 @@ export class RightSideBarComponent implements OnInit {
     constructor(
         private http: HttpClient,private router: Router, private formBuilder: RxFormBuilder, private sanitizer: DomSanitizer
     ) {
+       this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
     }
     @Input('sidebarLinks') sidebarLinks: any = {};
     showComponent: boolean = false;
@@ -42,7 +45,7 @@ export class RightSideBarComponent implements OnInit {
                 this.sticky = false;
             }
     }
-
+  
     ngOnInit(): void {
         var splitedArray = location.pathname.split("/");
         this.mainType = splitedArray[1];
@@ -93,11 +96,10 @@ export class RightSideBarComponent implements OnInit {
         }
         return false;
     }
-    gitUrl(){
-        return this.sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
-       }
+
        gitterAside(){
-        this.gitterAsideShow = !this.gitterAsideShow;    
+        this.gitterAsideShow = !this.gitterAsideShow;  
+      
       }
     routeExample() {
         this.toogleOpen = !this.toogleOpen;
