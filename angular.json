@@ -25,7 +25,7 @@
               { "glob": "**/*", "input": "../node_modules/ngx-monaco-editor/assets/monaco", "output": "./assets/monaco/" }
             ],
             "styles": [
-         
+              "src/styles.css"
             ],
             "scripts": [
               "src/assets/scripts/jquery.min.js",
@@ -90,7 +90,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-          
+              "src/styles.css"
             ],
             "scripts": [
             ],
