@@ -1,18 +1,8 @@
 
 
 
-<aside *ngIf="gitterAsideShow" class="gitter-chat-embed"><div class="gitter-chat-embed-action-bar">
-        <a class="gitter-icon" aria-label="Open Chat in Gitter.im" href="https://gitter.im/rxweb-project/rxweb?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=body_badge" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
-        <button (click)="gitterAside()" type="button" class="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-       
-    </div>
-    <div class="gitter-chat-embed-loading-wrapper">
-            <div class="gitter-chat-embed-loading-indicator gitter-icon"></div>
-          </div>
-    
-          <iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms" frameborder="0" [src]="gitAsideUrl"></iframe></aside>
+
+
 
 <ul class="quick-links list-unstyled">
     <li class="">
@@ -37,7 +27,6 @@
     <li>
         <a target="_blank" href="{{gitEditUrl}}" class="edit-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>
     </li>
-    <li><a target="_blank" (click)="gitterAside()"><i class="fa fa-comments"></i></a></li>
     <li><a target="_blank" href="https://github.com/rxweb/rxweb/"><i class="fa fa-github" aria-hidden="true"></i></a>
     </li>
     <li><a target="_blank" href="https://dev.to/t/rxweb"><i class="fab fa-dev" aria-hidden="true"></i></a>

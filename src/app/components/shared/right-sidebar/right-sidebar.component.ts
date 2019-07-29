@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform, Output, EventEmitter } from '@angular/core';
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Input } from "@angular/core";
 import { FormGroup } from "@angular/forms";
@@ -9,7 +9,7 @@ import { RequestOptionsArgs } from "@angular/http";
 import { RequestOptions } from "@angular/http";
 import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -18,11 +18,12 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 
 export class RightSideBarComponent implements OnInit {
+    
     public feedbackForm: FormGroup
     sticky:boolean = false;
     gitAsideUrl:SafeResourceUrl;
     validationName: string;
-    gitterAsideShow:boolean = false;
+  
     mainType: string;
     toogleOpen:boolean = true;
     showExample: boolean = true;
@@ -45,8 +46,9 @@ export class RightSideBarComponent implements OnInit {
                 this.sticky = false;
             }
     }
-  
+   
     ngOnInit(): void {
+
         var splitedArray = location.pathname.split("/");
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
@@ -85,6 +87,7 @@ export class RightSideBarComponent implements OnInit {
         this.sidebarLinks.splice(0,1);
         }
         this.showComponent = true;
+   
     }
   
     scrollTo(section) {
@@ -97,11 +100,9 @@ export class RightSideBarComponent implements OnInit {
         return false;
     }
 
-       gitterAside(){
-        this.gitterAsideShow = !this.gitterAsideShow;  
-      
-      }
+
     routeExample() {
+        debugger;
         this.toogleOpen = !this.toogleOpen;
         this.showExample = !this.showExample;
         var splitedArray = location.pathname.split('/');

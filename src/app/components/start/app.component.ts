@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { OnInit } from "@angular/core";
 import { ReactiveFormConfig, ErrorMessageBindingStrategy } from "@rxweb/reactive-form-validators";
 import { Router, RouterOutlet } from "@angular/router";
@@ -8,6 +8,9 @@ import { NavigationStart } from "@angular/router";
 import {  trigger, style, animate, transition, query } from '@angular/animations';
 import { ApplicationBroadcaster } from '@rx/core';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
+import { RightSideBarComponent } from '../shared/right-sidebar/right-sidebar.component';
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-root',
@@ -55,15 +58,19 @@ import { routerNgProbeToken } from '@angular/router/src/router_module';
   //]
 })
 export class AppComponent implements OnInit {
+  gitterAsideShow:boolean = false;
   title = 'rx.web.io';
   isHome = false;
   isWhy:boolean=false;
   showFooter = false;
+  gitAsideUrl:SafeResourceUrl;
   // getRouteAnimation(outlet) {
   //   return outlet.activatedRouteData.animation
   // }
   rightSidebarLinks:any;
-  constructor(private router: Router,private applicationBroadCast:ApplicationBroadcaster) {
+  //@ViewChild('rightSidenav') public rightsidenav: RightSideBarComponent;
+  constructor(private router: Router,private applicationBroadCast:ApplicationBroadcaster,private sanitizer: DomSanitizer) {
+    this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
     });
@@ -114,6 +121,9 @@ export class AppComponent implements OnInit {
   // }
 
   ngOnInit() {
+    debugger;
+    //this.rightsidenav.gitterAside();
+   // this.rightsidenav.gitterAsideShow = true;
         // if (localStorage.getItem('isLoggedIn') === 'true') {
     //   this.auth.renewSession();
     // }
@@ -271,6 +281,10 @@ export class AppComponent implements OnInit {
     });
   
     
+  }
+  gitterAside(){
+    this.gitterAsideShow = !this.gitterAsideShow; 
+   
   }
   homeInit(isHome){
     this.isHome = isHome;

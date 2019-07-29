@@ -6756,10 +6756,10 @@ padding: 2px 0;
     top: 70px !important;
 }
 .space-left-sidebar{width:300px;}
-.quick-links > li {border-bottom: 1px solid #ccc;position: relative;background: #fff;}
+.quick-links > li {border-bottom: 1px solid #ccc!important;position: relative;background: #fff;}
 .quick-links {position: fixed;
     right: 0px;
-    top: 180px;
+    top: 229px;
     border: 1px solid #ccc;
     border-bottom: 0;
 }
@@ -7647,7 +7647,7 @@ padding: 0.4375rem 0.9375rem;
     }
     .gitter-chat-embed {
         box-sizing: border-box;
-        z-index: 10005;
+        z-index: 100005;
         position: fixed;
         top: 0;
         left: 60%;
