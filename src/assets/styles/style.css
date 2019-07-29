@@ -6986,6 +6986,7 @@ padding: 2px 0;
         padding: 15px;
     }
     .hpanel .tab-content{padding-bottom:0;padding: 0;}
+    #gitter-aside {display: none;}
     app-right-sidebar {  display: none;  }
     .navbar-nav>li:last-child>a { padding-right: 0; }
     .header-link.hide-menu svg{margin-left:0;}

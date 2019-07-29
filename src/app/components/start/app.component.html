@@ -29,8 +29,8 @@
         <div class="main-content" [class.col-sm-9]="!isHome" [class.col-sm-12]="isHome">
           <router-outlet></router-outlet>
         </div>
-        <ul class="quick-links list-unstyled">
-          <li style="margin-top: -50px;"><a style="border: 1px solid #ccc;" target="_blank" (click)="gitterAside()"><i class="fa fa-comments"></i></a></li>
+        <ul id="gitter-aside" class="quick-links list-unstyled">
+          <li style="margin-top: -50px;"><a style="border-top: 1px solid #ccc;border-left: 1px solid #ccc;width: 51px;" target="_blank" (click)="gitterAside()"><i class="fa fa-comments"></i></a></li>
         </ul>
     
         <!-- </div> -->
