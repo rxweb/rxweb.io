@@ -82,6 +82,8 @@ Below options are not mandatory to use in the `numeric` validation. If needed th
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
+<tr><td><a (click)='scrollTo("#isFormat")' title="isFormat">isFormat</a></td><td> This will format a particular control property.The default value is `false`. </td></tr>
+<tr><td><a (click)='scrollTo("#digitsInfo")' title="digitsInfo">digitsInfo</a></td><td> Once the blur event is fired, digitsInfo option will limit the decimal input upto a finite number after the decimal. </td></tr>
 <tr><td><a (click)='scrollTo("#acceptValue")' title="acceptValue">acceptValue</a></td><td> To apply validation based on checking positive or negative value or both. </td></tr>
 <tr><td><a   (click)='scrollTo("#allowDecimal")' title="allowDecimal">allowDecimal</a></td><td>This will allow decimal in particular control property.The default value is `false`.</td></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Numeric validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
@@ -90,12 +92,20 @@ Below options are not mandatory to use in the `numeric` validation. If needed th
 </table>
     
 ## isFormat
-Type: `Boolean`
+Type: `boolean`
 
 This will format a particular control property.The default value is `false`.
 
 <div component="app-code" key="numeric-isFormatExample-model"></div> 
 <div component="app-example-runner" ref-component="app-numeric-isFormat" title="numeric {{validatorType}} with isFormat" key="isFormat"></div>
+
+## digitsInfo
+Type: `string`
+
+Once the blur event is fired, digitsInfo option will limit the decimal input upto a finite number after the decimal.
+
+<div component="app-code" key="numeric-digitsInfoExample-model"></div> 
+<div component="app-example-runner" ref-component="app-numeric-digitsInfo" title="numeric {{validatorType}} with digitsInfo" key="digitsInfo"></div>
 
 ## acceptValue 
 Type :  `NumericValueType` 
