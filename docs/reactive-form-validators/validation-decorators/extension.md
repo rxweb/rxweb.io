@@ -80,19 +80,11 @@ Below options are not mandatory to use in the `extension` validation. If needed 
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a (click)='scrollTo("#extensions")'  title="extensions">extensions</a></td><td>extensions property of ExtensionConfig is an array of multiple extensions which are allowed to be selected by the user.</td></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")'  title="conditionalExpression">conditionalExpression</a></td><td>extension validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
+<tr><td><a (click)='scrollTo("#extensions")'  title="extensions">extensions</a></td><td>extensions property of ExtensionConfig is an array of multiple extensions which are allowed to be selected by the user.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")'  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
-
-## extensions
-Type :  `string[]` 
-
-extensions property of ExtensionConfig is an array of multiple extensions which are allowed to be selected by the user.
-
-<div component="app-code" key="extension-extensionsExample-model"></div> 
-<div component="app-example-runner" ref-component="app-extension-extensions" title="extension {{validatorType}} with extensions" key="extensions"></div>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -111,6 +103,14 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 <div component="app-code" key="extension-conditionalExpressionExampleString-model"></div> 
 
 <div component="app-example-runner" ref-component="app-extension-conditionalExpression" title="extension {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
+
+## extensions
+Type :  `string[]` 
+
+extensions property of ExtensionConfig is an array of multiple extensions which are allowed to be selected by the user.
+
+<div component="app-code" key="extension-extensionsExample-model"></div> 
+<div component="app-example-runner" ref-component="app-extension-extensions" title="extension {{validatorType}} with extensions" key="extensions"></div>
 
 ## message 
 Type :  `string` 

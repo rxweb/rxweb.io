@@ -6,6 +6,9 @@ export class UserInfo {
 	negativeNumber: number;
 	
 	
+	totalAmount: number;
+	
+	
 	decimalNumber: number;
 	
 	
@@ -18,10 +21,10 @@ export class UserInfo {
 	positiveNumber: number;
 	
 	
-	totalAmount: number;
-	
-	
 	positiveNonDecimalNumber: number;
+	
+	
+	formattedDecimalNumber: number;
 	
 	
 }

@@ -16,6 +16,12 @@
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.negativeNumber?.errors">{{userinfoForm.controls?.negativeNumber?.errors?.numeric.message}}<br/></small>	
     </div>
     <div class="form-group">
+      <label>Total Amount</label>
+	    <input type="text" name="totalAmount" [(ngModel)]="userinfo.totalAmount"  class="form-control" [numeric]="{'isFormat':true}"/>
+
+	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.totalAmount?.errors">{{userinfoForm.controls?.totalAmount?.errors?.numeric.message}}<br/></small>	
+    </div>
+    <div class="form-group">
       <label>Decimal Number</label>
 	    <input type="text" name="decimalNumber" [(ngModel)]="userinfo.decimalNumber"  class="form-control" [numeric]="{'allowDecimal':true}"/>
 
@@ -39,17 +45,18 @@
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.positiveNumber?.errors">{{userinfoForm.controls?.positiveNumber?.errors?.numeric.message}}<br/></small>	
     </div>
     <div class="form-group">
-      <label>Total Amount</label>
-	    <input type="text" name="totalAmount" [(ngModel)]="userinfo.totalAmount"  class="form-control" [numeric]="{'isFormat':true}"/>
-
-	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.totalAmount?.errors">{{userinfoForm.controls?.totalAmount?.errors?.numeric.message}}<br/></small>	
-    </div>
-    <div class="form-group">
       <label>Positive Non Decimal Number</label>
 	    <input type="text" name="positiveNonDecimalNumber" [(ngModel)]="userinfo.positiveNonDecimalNumber"  class="form-control" [numeric]="{'messageKey':'numericMessageKey'}"/>
 
       <small class="form-text text-muted">Shows custom message based on message key<br/></small>
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.positiveNonDecimalNumber?.errors">{{userinfoForm.controls?.positiveNonDecimalNumber?.errors?.numeric.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Formatted Decimal Number</label>
+	    <input type="text" name="formattedDecimalNumber" [(ngModel)]="userinfo.formattedDecimalNumber"  class="form-control" [numeric]="{'digitsInfo':'1.0-2','isFormat':true,'allowDecimal':true}"/>
+
+      <small class="form-text text-muted">Format the decimal input upto 2 decimal places<br/></small>
+	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.formattedDecimalNumber?.errors">{{userinfoForm.controls?.formattedDecimalNumber?.errors?.numeric.message}}<br/></small>	
     </div>
     <button [disabled]="!userinfoForm.valid" class="btn btn-primary">Submit</button>
   </form>

@@ -79,19 +79,11 @@ Below options are not mandatory to use in the `creditCard` validation. If needed
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a (click)='scrollTo("#creditCardTypes")' title="creditCardTypes">creditCardTypes</a></td><td>CreditCardTypes is used to define the type of CreditCard enterred by user.</td></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>CreditCard validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
+<tr><td><a (click)='scrollTo("#creditCardTypes")' title="creditCardTypes">creditCardTypes</a></td><td>CreditCardTypes is used to define the type of CreditCard enterred by user.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
-
-## creditCardTypes 
-Type :  `string[]` 
-
-CreditCardTypes is used to define the type of CreditCard enterred by user.
-
-<div component="app-code" key="creditCard-creditCardTypesExample-model"></div> 
-Please refer creditcard with complete example which contains creditcardTypes parameter.
 
 ## conditionalExpression 
 Type :  `Function`  |  `string`
@@ -109,6 +101,14 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 <div component="app-code" key="creditCard-conditionalExpressionExampleString-model"></div> 
 
 <div component="app-example-runner" ref-component="app-creditCard-conditionalExpression" title="creditCard {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
+
+## creditCardTypes 
+Type :  `string[]` 
+
+CreditCardTypes is used to define the type of CreditCard enterred by user.
+
+<div component="app-code" key="creditCard-creditCardTypesExample-model"></div> 
+Please refer creditcard with complete example which contains creditcardTypes parameter.
 
 ## message 
 Type :  `string` 

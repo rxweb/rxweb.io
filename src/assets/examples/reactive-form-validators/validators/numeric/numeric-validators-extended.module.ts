@@ -7,11 +7,12 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 import { NumericCompleteValidatorComponent } from './complete/numeric-complete.component';
 import { NumericAcceptValueValidatorComponent } from './acceptValue/numeric-accept-value.component';
+import { NumericIsFormatValidatorComponent } from './isFormat/numeric-is-format.component';
 import { NumericAllowDecimalValidatorComponent } from './allowDecimal/numeric-allow-decimal.component';
 import { NumericConditionalExpressionValidatorComponent } from './conditionalExpression/numeric-conditional-expression.component';
 import { NumericMessageValidatorComponent } from './message/numeric-message.component';
-import { NumericIsFormatValidatorComponent } from './isFormat/numeric-is-format.component';
 import { NumericMessageKeyValidatorComponent } from './messageKey/numeric-message-key.component';
+import { NumericDigitsInfoValidatorComponent } from './digitsInfo/numeric-digits-info.component';
 import { NumericDynamicValidatorComponent } from './dynamic/numeric-dynamic.component';
 import { NumericAddValidatorComponent } from './add/numeric-add.component';
 
@@ -19,22 +20,24 @@ import { NumericAddValidatorComponent } from './add/numeric-add.component';
   declarations: [
 	NumericCompleteValidatorComponent,
 	NumericAcceptValueValidatorComponent,
+	NumericIsFormatValidatorComponent,
 	NumericAllowDecimalValidatorComponent,
 	NumericConditionalExpressionValidatorComponent,
 	NumericMessageValidatorComponent,
-	NumericIsFormatValidatorComponent,
 	NumericMessageKeyValidatorComponent,
+	NumericDigitsInfoValidatorComponent,
 	NumericDynamicValidatorComponent,
 	NumericAddValidatorComponent,
   ],
 entryComponents: [
 	NumericCompleteValidatorComponent,
 	NumericAcceptValueValidatorComponent,
+	NumericIsFormatValidatorComponent,
 	NumericAllowDecimalValidatorComponent,
 	NumericConditionalExpressionValidatorComponent,
 	NumericMessageValidatorComponent,
-	NumericIsFormatValidatorComponent,
 	NumericMessageKeyValidatorComponent,
+	NumericDigitsInfoValidatorComponent,
 	NumericDynamicValidatorComponent,
 	NumericAddValidatorComponent,
   ],
@@ -47,11 +50,12 @@ entryComponents: [
   exports: [
 	NumericCompleteValidatorComponent,
 	NumericAcceptValueValidatorComponent,
+	NumericIsFormatValidatorComponent,
 	NumericAllowDecimalValidatorComponent,
 	NumericConditionalExpressionValidatorComponent,
 	NumericMessageValidatorComponent,
-	NumericIsFormatValidatorComponent,
 	NumericMessageKeyValidatorComponent,
+	NumericDigitsInfoValidatorComponent,
 	NumericDynamicValidatorComponent,
 	NumericAddValidatorComponent,
   ],

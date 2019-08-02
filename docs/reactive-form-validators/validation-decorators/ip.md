@@ -83,28 +83,12 @@ Below options are not mandatory to use in the `ip` validation. If needed then us
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a (click)='scrollTo("#version")' title="version">version</a></td><td>Version option is used to define the version of ip address.</td></tr>
-<tr><td><a (click)='scrollTo("#isCidr")' title="isCidr">isCidr</a></td><td>isCidr option of ip validation is used to check whether the ip address is in CIDR notation or not.</td></tr>
 <tr><td><a (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Ip validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
+<tr><td><a (click)='scrollTo("#isCidr")' title="isCidr">isCidr</a></td><td>isCidr option of ip validation is used to check whether the ip address is in CIDR notation or not.</td></tr>
 <tr><td><a (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
+<tr><td><a (click)='scrollTo("#version")' title="version">version</a></td><td>Version option is used to define the version of ip address.</td></tr>
 </table>
-
-## version
-Type : `IpVersion`
-
-Version option is used to define the version of ip address.
-
-<div component="app-code" key="ip-versionExample-model"></div> 
-<div component="app-example-runner" ref-component="app-ip-version" title="ip {{validatorType}} with version" key="version"></div>
-
-## isCidr
-Type : `boolean`
-
-isCidr option of ip validation is used to check whether the ip address is in CIDR notation or not.
-
-<div component="app-code" key="ip-isCidrExample-model"></div> 
-<div component="app-example-runner" ref-component="app-ip-isCidr" title="ip {{validatorType}} with isCidr" key="isCidr"></div>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -124,6 +108,14 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 
 <div component="app-example-runner" ref-component="app-ip-conditionalExpression" title="ip {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
 
+## isCidr
+Type : `boolean`
+
+isCidr option of ip validation is used to check whether the ip address is in CIDR notation or not.
+
+<div component="app-code" key="ip-isCidrExample-model"></div> 
+<div component="app-example-runner" ref-component="app-ip-isCidr" title="ip {{validatorType}} with isCidr" key="isCidr"></div>
+
 ## message 
 Type :  `string` 
 
@@ -139,6 +131,14 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 <div component="app-code" key="ip-messageKeyExample-model"></div> 
 <div component="app-example-runner" ref-component="app-ip-messageKey" title="ip {{validatorType}} with messageKey" key="messageKey"></div>
+
+## version
+Type : `IpVersion`
+
+Version option is used to define the version of ip address.
+
+<div component="app-code" key="ip-versionExample-model"></div> 
+<div component="app-example-runner" ref-component="app-ip-version" title="ip {{validatorType}} with version" key="version"></div>
 
 # Complete Ip Example
 

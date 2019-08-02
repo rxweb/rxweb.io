@@ -124,7 +124,7 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 # Complete Email Example
 
-This Complete Email example which includes all the EmailConfig properties will fulfil the requirement of scenarios 1, 2 and
+This Complete Email example includes all the EmailConfig properties will fulfil the requirement of scenarios 1, 2 and
  3.
 
 <div component="app-tabs" key="complete"></div>

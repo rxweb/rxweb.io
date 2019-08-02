@@ -80,19 +80,11 @@ Below options are not mandatory to use in the `endsWith` validation. If needed t
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a (click)='scrollTo("#value")'   title="value">value</a></td><td>value property of DefaultConfig is used to assign a value based on which the user wants validation to be performed.</td></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")'   title="conditionalExpression">conditionalExpression</a></td><td>EndsWith validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")'  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
+<tr><td><a (click)='scrollTo("#value")'   title="value">value</a></td><td>value property of DefaultConfig is used to assign a value based on which the user wants validation to be performed.</td></tr>
 </table>
-
-## value
-Type :  `string` 
-
-value property of DefaultConfig is used to assign a value based on which the user wants validation to be performed.
-
-<div component="app-code" key="endsWith-valueExample-model"></div> 
-<div component="app-example-runner" ref-component="app-endsWith-value" title="endsWith {{validatorType}} with value" key="value"></div>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -127,6 +119,14 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 <div component="app-code" key="endsWith-messageKeyExample-model"></div> 
 <div component="app-example-runner" ref-component="app-endsWith-messageKey" title="endsWith {{validatorType}} with messageKey" key="messageKey"></div>
+
+## value
+Type :  `string` 
+
+value property of DefaultConfig is used to assign a value based on which the user wants validation to be performed.
+
+<div component="app-code" key="endsWith-valueExample-model"></div> 
+<div component="app-example-runner" ref-component="app-endsWith-value" title="endsWith {{validatorType}} with value" key="value"></div>
 
 # Complete endsWith Example
 

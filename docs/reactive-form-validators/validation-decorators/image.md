@@ -83,46 +83,14 @@ Below options are not mandatory to use in the `image` validation. If needed then
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a  title="maxWidth">maxWidth</a></td><td>To set the maximum Width of the Image</td></tr>
+<tr><td><a title="conditionalExpression">conditionalExpression</a></td><td>image validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a title="maxHeight">maxHeight</a></td><td>To set the maximum Height of the Image</td></tr>
-<tr><td><a title="minWidth">minWidth</a></td><td>To set the minimum Width of the Image</td></tr>
+<tr><td><a title="maxWidth">maxWidth</a></td><td>To set the maximum Width of the Image</td></tr>
+<tr><td><a title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 <tr><td><a title="minHeight">minHeight</a></td><td>To set the minimum Height of the Image</td></tr>
-<tr><td><a  title="conditionalExpression">conditionalExpression</a></td><td>image validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
-<tr><td><a  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
-<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
+<tr><td><a title="minWidth">minWidth</a></td><td>To set the minimum Width of the Image</td></tr>
 </table>
-
-## maxWidth
-Type :  `number` 
-
-To set the maximum Width of the Image.
-
-<div component="app-code" key="image-maxWidthExample-model"></div> 
-<div component="app-example-runner" ref-component="app-image-maxWidth" title="image {{validatorType}} with maxWidth" key="maxWidth"></div>
-
-## maxHeight
-Type :  `number` 
-
-To set the maximum Height of the Image.
-
-<div component="app-code" key="image-maxHeightExample-model"></div> 
-<div component="app-example-runner" ref-component="app-image-maxHeight" title="image {{validatorType}} with maxHeight" key="maxHeight"></div>
-
-## minWidth
-Type :  `number` 
-
-To set the minimum Width of the Image.
-
-<div component="app-code" key="image-minWidthExample-model"></div> 
-<div component="app-example-runner" ref-component="app-image-minWidth" title="image {{validatorType}} with minWidth" key="minWidth"></div>
-
-## minHeight
-Type :  `number` 
-
-To set the minimum Height of the Image.
-
-<div component="app-code" key="image-minHeightExample-model"></div> 
-<div component="app-example-runner" ref-component="app-image-minHeight" title="image {{validatorType}} with minHeight" key="minHeight"></div>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -142,6 +110,22 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 
 <div component="app-example-runner" ref-component="app-image-conditionalExpression" title="image {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
 
+## maxHeight
+Type :  `number` 
+
+To set the maximum Height of the Image.
+
+<div component="app-code" key="image-maxHeightExample-model"></div> 
+<div component="app-example-runner" ref-component="app-image-maxHeight" title="image {{validatorType}} with maxHeight" key="maxHeight"></div>
+
+## maxWidth
+Type :  `number` 
+
+To set the maximum Width of the Image.
+
+<div component="app-code" key="image-maxWidthExample-model"></div> 
+<div component="app-example-runner" ref-component="app-image-maxWidth" title="image {{validatorType}} with maxWidth" key="maxWidth"></div>
+
 ## message 
 Type :  `string` 
 
@@ -157,6 +141,22 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 <div component="app-code" key="image-messageKeyExample-model"></div> 
 <div component="app-example-runner" ref-component="app-image-messageKey" title="image {{validatorType}} with messageKey" key="messageKey"></div>
+
+## minHeight
+Type :  `number` 
+
+To set the minimum Height of the Image.
+
+<div component="app-code" key="image-minHeightExample-model"></div> 
+<div component="app-example-runner" ref-component="app-image-minHeight" title="image {{validatorType}} with minHeight" key="minHeight"></div>
+
+## minWidth
+Type :  `number` 
+
+To set the minimum Width of the Image.
+
+<div component="app-code" key="image-minWidthExample-model"></div> 
+<div component="app-example-runner" ref-component="app-image-minWidth" title="image {{validatorType}} with minWidth" key="minWidth"></div>
 
 # Complete image Example
 

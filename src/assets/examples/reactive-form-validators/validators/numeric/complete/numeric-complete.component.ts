@@ -18,6 +18,7 @@ export class NumericCompleteValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: FormBuilder )
 	{ }
@@ -26,12 +27,13 @@ export class NumericCompleteValidatorComponent implements OnInit {
         this.userInfoFormGroup = this.formBuilder.group({
             dataType:['',], 
             negativeNumber:['', RxwebValidators.numeric({acceptValue:NumericValueType.NegativeNumber })], 
+            totalAmount:['', RxwebValidators.numeric({isFormat:true })], 
             decimalNumber:['', RxwebValidators.numeric({allowDecimal:true })], 
             integerNumber:['', RxwebValidators.numeric({acceptValue:NumericValueType.PositiveNumber  ,conditionalExpression:(x,y) => x.dataType == "Integer"  })], 
             realNumber:['', RxwebValidators.numeric({acceptValue:NumericValueType.Both  ,conditionalExpression:'x => x.dataType == "Real"' })], 
             positiveNumber:['', RxwebValidators.numeric({message:'{{0}} is not a positive number' })], 
-            totalAmount:['', RxwebValidators.numeric({isFormat:true })], 
             positiveNonDecimalNumber:['', RxwebValidators.numeric({messageKey:'numericMessageKey' })], 
+            formattedDecimalNumber:['', RxwebValidators.numeric({digitsInfo:'1.0-2'  ,isFormat:true  ,allowDecimal:true })], 
         });
     }
 }
