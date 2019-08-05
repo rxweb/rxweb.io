@@ -85,14 +85,21 @@ Below options are not mandatory to use in the `minTime` validation. If needed th
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>minTime validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
-<tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#allowseconds")' title="allowseconds">allowseconds</a></td><td>If you are allowed seconds in time format then you need to put this as true.</td></tr>
-<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
-<tr><td><a (click)='scrollTo("#value")' title="value">value</a></td><td>value property of TimeRelationConfig can be used when the user wants to restricts the input time to be greater than any particular time.</td></tr>
+<tr><td><a (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>minTime validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a (click)='scrollTo("#fieldName")' title="fieldName">fieldName</a></td><td>fieldName property of TimeRelationConfig can be used when the user wants to restricts the input time to be greater than any particular field input.</td></tr>
+<tr><td><a (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
+<tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 <tr><td><a (click)='scrollTo("#operator")' title="operator">operator</a></td><td>operator is used to validate time based upon greater than or greater than equal to a particular value, The default validation is based upon greater than equal to.</td></tr>
+<tr><td><a (click)='scrollTo("#value")' title="value">value</a></td><td>value property of TimeRelationConfig can be used when the user wants to restricts the input time to be greater than any particular time.</td></tr>
 </table >
+
+## allowSeconds 
+Type :  `boolean` 
+If you are allowed seconds in time format then you need to put this as true.
+
+<div component="app-code" key="minTime-allowSecondsExample-model"></div> 
+<div component="app-example-runner" ref-component="app-minTime-allowSeconds" title="minTime {{validatorType}} with allowSeconds" key="allowSeconds"></div>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -111,20 +118,12 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 
 <div component="app-example-runner" ref-component="app-minTime-conditionalExpression" title="minTime {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
 
-## operator
+## fieldName 
 Type :  `string` 
+fieldName property of TimeRelationConfig can be used when the user wants to restricts the input time to be greater than any particular field input.
 
-`operator` is used to validate time based upon greater than or greater than equal to a particular value, The default validation is based upon greater than equal to.
-
-<div component="app-code" key="minTime-operatorExample-model"></div> 
-<div component="app-example-runner" ref-component="app-minTime-operator" title="minTime {{validatorType}} with operator" key="operator"></div>
-
-## allowSeconds 
-Type :  `boolean` 
-If you are allowed seconds in time format then you need to put this as true.
-
-<div component="app-code" key="minTime-allowSecondsExample-model"></div> 
-<div component="app-example-runner" ref-component="app-minTime-allowSeconds" title="minTime {{validatorType}} with allowSeconds" key="allowSeconds"></div>
+<div component="app-code" key="minTime-fieldNameExample-model"></div> 
+<div component="app-example-runner" ref-component="app-minTime-fieldName" title="minTime {{validatorType}} with fieldName" key="fieldName"></div>
 
 ## message 
 Type :  `string` 
@@ -141,19 +140,20 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 <div component="app-code" key="minTime-messageKeyExample-model"></div> 
 <div component="app-example-runner" ref-component="app-minTime-messageKey" title="minTime {{validatorType}} with messageKey" key="messageKey"></div>
 
+## operator
+Type :  `string` 
+
+`operator` is used to validate time based upon greater than or greater than equal to a particular value, The default validation is based upon greater than equal to.
+
+<div component="app-code" key="minTime-operatorExample-model"></div> 
+<div component="app-example-runner" ref-component="app-minTime-operator" title="minTime {{validatorType}} with operator" key="operator"></div>
+
 ## value 
 Type :  `string` 
 value property of TimeRelationConfig can be used when the user wants to restricts the input time to be greater than any particular time.
 
 <div component="app-code" key="minTime-valueExample-model"></div> 
 <div component="app-example-runner" ref-component="app-minTime-value" title="minTime {{validatorType}} with value" key="value"></div>
-
-## fieldName 
-Type :  `string` 
-fieldName property of TimeRelationConfig can be used when the user wants to restricts the input time to be greater than any particular field input.
-
-<div component="app-code" key="minTime-fieldNameExample-model"></div> 
-<div component="app-example-runner" ref-component="app-minTime-fieldName" title="minTime {{validatorType}} with fieldName" key="fieldName"></div>
 
 # Complete minTime Example
 
