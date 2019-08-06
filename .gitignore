@@ -42,3 +42,4 @@ Thumbs.db
 /rxwebio.csproj.user
 /package-lock.json
 /test/dist/assets/json
+/.vs

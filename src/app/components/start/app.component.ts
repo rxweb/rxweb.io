@@ -80,12 +80,13 @@ export class AppComponent implements OnInit {
     router.events.subscribe((val) => {
       
       if (val instanceof NavigationEnd) {
-        if(val.url == "/why"){
-          this.isWhy = true;
-        }
-        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url == "/why" || val.url == "/why#conditional-validation")
+        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url == "/home"){      
           this.isHome = true;
-        else{
+      
+        }     
+      
+        else{      
+            
           this.isHome = false;
         }
         var t = setTimeout(() => {
@@ -121,18 +122,13 @@ export class AppComponent implements OnInit {
   // }
 
   ngOnInit() {
-    debugger;
-    //this.rightsidenav.gitterAside();
-   // this.rightsidenav.gitterAsideShow = true;
-        // if (localStorage.getItem('isLoggedIn') === 'true') {
-    //   this.auth.renewSession();
-    // }
+
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
       if(e.url.includes("/errorMessages") || e.url.includes("/compose/decorators")){
         ReactiveFormConfig.set(
           {"validationMessage":
-          {"required":"This field is required",   "password": "Input does not match the password requirements",}, 
+          {"required":"This field is required",  "alpha":"Only alphabets are allowed", "password": "Input does not match the password requirements",}, 
        });
       }
       else{
@@ -210,6 +206,9 @@ export class AppComponent implements OnInit {
             "cusip": "Enter a valid cusip code",
             "date": "Please enter a valid date.",
             "async": "Enter valid value",
+            "or":"or condition failed",
+            "and":"and condition failed",
+            "not":"not condition failed",
             "notEmpty": "You cannot keep this field empty.",
             "allOfMessageKey": "Your selected options must match the requirement of config values",
             "noneOfMessageKey": "Your selected options must not include the values passed in config values",
@@ -279,13 +278,24 @@ export class AppComponent implements OnInit {
       }
       }
     });
-  
-    
+
+  }
+  iswhyClick(){
+    debugger;
+    this.isWhy = false;
+    if (typeof(Storage) !== "undefined") {
+
+      if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount)+1;
+      } else {
+        localStorage.clickcount = 1;
+      }
+    }
   }
   gitterAside(){
-    this.gitterAsideShow = !this.gitterAsideShow; 
-   
+    this.gitterAsideShow = !this.gitterAsideShow;    
   }
+
   homeInit(isHome){
     this.isHome = isHome;
   }

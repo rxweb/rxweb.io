@@ -16,7 +16,7 @@
     <rx-dialog></rx-dialog>
     <rx-popup></rx-popup>
     <rx-spinner></rx-spinner>
-    <app-top-bar *ngIf="!isHome || isWhy"></app-top-bar>
+    <app-top-bar *ngIf="!isHome"></app-top-bar>
     <main class="main">
   
       <div class="row">
@@ -24,19 +24,22 @@
           <app-side-bar></app-side-bar>
         </div>
         
-  
+      
         <!-- <div [@routerAnimation]="getRouteAnimation(route)"> -->
         <div class="main-content" [class.col-sm-9]="!isHome" [class.col-sm-12]="isHome">
           <router-outlet></router-outlet>
         </div>
-        <ul id="gitter-aside" class="quick-links list-unstyled">
+      
+        <ul *ngIf="!isHome" id="gitter-aside" class="quick-links list-unstyled">
           <li style="margin-top: -50px;"><a style="border-top: 1px solid #ccc;border-left: 1px solid #ccc;width: 51px;" target="_blank" (click)="gitterAside()"><i class="fa fa-comments"></i></a></li>
         </ul>
     
         <!-- </div> -->
       </div>
       <!-- <app-right-sidebar *ngIf="rightSidebarLinks" [sidebarLinks]="rightSidebarLinks"></app-right-sidebar> -->
+   
     </main>
+   
     <div *ngIf="showFooter" [class.home-footer]="isHome">
       <app-footer></app-footer>
     </div>
