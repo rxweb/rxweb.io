@@ -77,27 +77,12 @@ Below options are not mandatory to use in the `lessThanEqualTo` validation. If n
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a (click)='scrollTo("#fieldName")' title="fieldName">fieldName</a></td><td>Current property is matched with the particular property. so we need to pass particular property name.</td></tr>
-<tr><td><a (click)='scrollTo("#value")' title="value">value</a></td><td>Less than Equal To validation provides `value` property which is used To validate the formControl based upon configured static value.</td></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>lessThanEqualTo validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
+<tr><td><a (click)='scrollTo("#fieldName")' title="fieldName">fieldName</a></td><td>Current property is matched with the particular property. so we need to pass particular property name.</td></tr>
 <tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
+<tr><td><a (click)='scrollTo("#value")' title="value">value</a></td><td>Less than Equal To validation provides `value` property which is used To validate the formControl based upon configured static value.</td></tr>
 </table>
-
-## value
-Type : `number`
-
-Less than Equal To validation provides `value` property which is used To validate the formControl based upon configured static value.
-
-<div component="app-code" key="lessThanEqualTo-valueExample-model"></div> 
-<div component="app-example-runner" ref-component="app-lessThanEqualTo-value" title="lessThanEqualTo {{validatorType}} with value" key="value"></div>
-
-## fieldName 
-Type :  `string` 
-Less than Equal to validation should be applied based on the `fieldName` for compare other field value. 
-
-<div component="app-code" key="lessThanEqualTo-fieldNameExample-model"></div> 
-<div component="app-example-runner" ref-component="app-lessThanEqualTo-fieldName" title="lessThanEqualTo {{validatorType}} with fieldName" key="fieldName"></div>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -116,6 +101,13 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 
 <div component="app-example-runner" ref-component="app-lessThanEqualTo-conditionalExpression" title="lessThanEqualTo {{validatorType}} with conditionalExpression" key="conditionalExpression"></div> 
 
+## fieldName 
+Type :  `string` 
+Less than Equal to validation should be applied based on the `fieldName` for compare other field value. 
+
+<div component="app-code" key="lessThanEqualTo-fieldNameExample-model"></div> 
+<div component="app-example-runner" ref-component="app-lessThanEqualTo-fieldName" title="lessThanEqualTo {{validatorType}} with fieldName" key="fieldName"></div>
+
 ## message 
 Type :  `string` 
 
@@ -131,6 +123,14 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 <div component="app-code" key="lessThanEqualTo-messageKeyExample-model"></div> 
 <div component="app-example-runner" ref-component="app-lessThanEqualTo-messageKey" title="lessThanEqualTo {{validatorType}} with messageKey" key="messageKey"></div>
+
+## value
+Type : `number`
+
+Less than Equal To validation provides `value` property which is used To validate the formControl based upon configured static value.
+
+<div component="app-code" key="lessThanEqualTo-valueExample-model"></div> 
+<div component="app-example-runner" ref-component="app-lessThanEqualTo-value" title="lessThanEqualTo {{validatorType}} with value" key="value"></div>
 
 # Complete lessThanEqualTo Example
 

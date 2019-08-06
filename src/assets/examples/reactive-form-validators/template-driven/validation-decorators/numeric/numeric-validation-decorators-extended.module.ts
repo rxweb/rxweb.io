@@ -7,32 +7,35 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 import { NumericCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/numeric-complete.component';
 import { NumericAcceptValueTemplateDrivenValidationDecoratorsComponent } from './acceptValue/numeric-accept-value.component';
+import { NumericIsFormatTemplateDrivenValidationDecoratorsComponent } from './isFormat/numeric-is-format.component';
 import { NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent } from './allowDecimal/numeric-allow-decimal.component';
 import { NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/numeric-conditional-expression.component';
 import { NumericMessageTemplateDrivenValidationDecoratorsComponent } from './message/numeric-message.component';
-import { NumericIsFormatTemplateDrivenValidationDecoratorsComponent } from './isFormat/numeric-is-format.component';
 import { NumericMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/numeric-message-key.component';
+import { NumericDigitsInfoTemplateDrivenValidationDecoratorsComponent } from './digitsInfo/numeric-digits-info.component';
 import { NumericAddTemplateDrivenValidationDecoratorsComponent } from './add/numeric-add.component';
 
 @NgModule({
   declarations: [
 	NumericCompleteTemplateDrivenValidationDecoratorsComponent,
 	NumericAcceptValueTemplateDrivenValidationDecoratorsComponent,
+	NumericIsFormatTemplateDrivenValidationDecoratorsComponent,
 	NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageTemplateDrivenValidationDecoratorsComponent,
-	NumericIsFormatTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
+	NumericDigitsInfoTemplateDrivenValidationDecoratorsComponent,
 	NumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
 entryComponents: [
 	NumericCompleteTemplateDrivenValidationDecoratorsComponent,
 	NumericAcceptValueTemplateDrivenValidationDecoratorsComponent,
+	NumericIsFormatTemplateDrivenValidationDecoratorsComponent,
 	NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageTemplateDrivenValidationDecoratorsComponent,
-	NumericIsFormatTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
+	NumericDigitsInfoTemplateDrivenValidationDecoratorsComponent,
 	NumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
@@ -44,11 +47,12 @@ entryComponents: [
   exports: [
 	NumericCompleteTemplateDrivenValidationDecoratorsComponent,
 	NumericAcceptValueTemplateDrivenValidationDecoratorsComponent,
+	NumericIsFormatTemplateDrivenValidationDecoratorsComponent,
 	NumericAllowDecimalTemplateDrivenValidationDecoratorsComponent,
 	NumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageTemplateDrivenValidationDecoratorsComponent,
-	NumericIsFormatTemplateDrivenValidationDecoratorsComponent,
 	NumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
+	NumericDigitsInfoTemplateDrivenValidationDecoratorsComponent,
 	NumericAddTemplateDrivenValidationDecoratorsComponent,
   ],
 

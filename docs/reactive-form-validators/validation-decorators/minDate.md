@@ -82,29 +82,13 @@ Below options are not mandatory to use in the `minDate` validation. If needed th
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
+<tr><td><a (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>MinDate validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a (click)='scrollTo("#fieldName")' title="fieldName">fieldName</a></td><td>FieldName for which the minDate has to be set.</td></tr>
-<tr><td><a  (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>MinDate validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
-<tr><td><a  (click)='scrollTo("#message")'  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
-<tr><td><a (click)='scrollTo("#value")'  title="value">value</a></td><td>Enter date value which you want to restrict in the property. </td></tr>
-<tr><td><a (click)='scrollTo("#operator")' title="operator">operator</a></td><td>operator is used to validate date based upon greater than or greater than equal to a particular value, The default validation is based upon greater than equal to.</td></tr>
+<tr><td><a (click)='scrollTo("#message")'  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
+<tr><td><a (click)='scrollTo("#operator")' title="operator">operator</a></td><td>operator is used to validate date based upon greater than or greater than equal to a particular value, The default validation is based upon greater than equal to.</td></tr>
+<tr><td><a (click)='scrollTo("#value")'  title="value">value</a></td><td>Enter date value which you want to restrict in the property. </td></tr>
 </table>
-
-## operator
-Type :  `string` 
-
-`operator` is used to validate date based upon greater than or greater than equal to a particular value, The default validation is based upon greater than equal to.
-
-<div component="app-code" key="minDate-operatorExample-model"></div> 
-<div component="app-example-runner" ref-component="app-minDate-operator" title="minDate {{validatorType}} with operator" key="operator"></div>
-
-## fieldName
-Type :  `string` 
-
-MinDate validation should be applied based on the `fieldName` on which the minDate has to be set.
-
-<div component="app-code" key="minDate-fieldNameExample-model"></div> 
-<div component="app-example-runner" ref-component="app-minDate-fieldName" title="minDate {{validatorType}} with fieldName" key="fieldName"></div>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -124,6 +108,14 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 
 <div component="app-example-runner" ref-component="app-minDate-conditionalExpression" title="minDate {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
 
+## fieldName
+Type :  `string` 
+
+MinDate validation should be applied based on the `fieldName` on which the minDate has to be set.
+
+<div component="app-code" key="minDate-fieldNameExample-model"></div> 
+<div component="app-example-runner" ref-component="app-minDate-fieldName" title="minDate {{validatorType}} with fieldName" key="fieldName"></div>
+
 ## message 
 Type :  `string` 
 
@@ -132,14 +124,6 @@ To override the global configuration message and set the custom message on respe
 <div component="app-code" key="minDate-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-minDate-message" title="minDate {{validatorType}} with message" key="message"></div>
 
-## value 
-Type :  `Date` | `string`
-
-Enter date value which you want to restrict in the property. 
-
-<div component="app-code" key="minDate-valueExample-model"></div> 
-<div component="app-example-runner" ref-component="minDate-value-value" title="minDate {{validatorType}} with value" key="value"></div>
-
 ## messageKey
 Type : `string`
 
@@ -147,6 +131,22 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 <div component="app-code" key="minDate-messageKeyExample-model"></div> 
 <div component="app-example-runner" ref-component="app-minDate-messageKey" title="minDate {{validatorType}} with messageKey" key="messageKey"></div>
+
+## operator
+Type :  `string` 
+
+`operator` is used to validate date based upon greater than or greater than equal to a particular value, The default validation is based upon greater than equal to.
+
+<div component="app-code" key="minDate-operatorExample-model"></div> 
+<div component="app-example-runner" ref-component="app-minDate-operator" title="minDate {{validatorType}} with operator" key="operator"></div>
+
+## value 
+Type :  `Date` | `string`
+
+Enter date value which you want to restrict in the property. 
+
+<div component="app-code" key="minDate-valueExample-model"></div> 
+<div component="app-example-runner" ref-component="minDate-value-value" title="minDate {{validatorType}} with value" key="value"></div>
 
 # Complete minDate Example
 

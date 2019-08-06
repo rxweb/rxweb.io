@@ -80,27 +80,12 @@ Below options are not mandatory to use in the `greaterThanEqualTo` validation. I
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a title="fieldName">fieldName</a></td><td>Greater than Equal to validation should be applied based on the `fieldName` for compare other field value</td></tr>
-<tr><td><a (click)='scrollTo("#value")' title="value">value</a></td><td>Greater than Equal to validation provides `value` property which is used To validate the formControl based upon configured static value.</td></tr>
 <tr><td><a  title="conditionalExpression">conditionalExpression</a></td><td>GreaterThanEqualTo validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
+<tr><td><a title="fieldName">fieldName</a></td><td>Greater than Equal to validation should be applied based on the `fieldName` for compare other field value</td></tr>
 <tr><td><a  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
+<tr><td><a (click)='scrollTo("#value")' title="value">value</a></td><td>Greater than Equal to validation provides `value` property which is used To validate the formControl based upon configured static value.</td></tr>
 </table>
-
-## value
-Type : `number`
-
-Greater than Equal to validation provides `value` property which is used To validate the formControl based upon configured static value.
-
-<div component="app-code" key="greaterThanEqualTo-valueExample-model"></div> 
-<div component="app-example-runner" ref-component="app-greaterThanEqualTo-value" title="greaterThanEqualTo {{validatorType}} with value" key="value"></div>
-
-## fieldName 
-Type :  `string` 
-Greater than Equal to validation should be applied based on the `fieldName` for compare other field value 
-
-<div component="app-code" key="greaterThanEqualTo-fieldNameExample-model"></div> 
-<div component="app-example-runner" ref-component="app-greaterThanEqualTo-fieldName" title="greaterThanEqualTo {{validatorType}} with fieldName" key="fieldName"></div>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -119,6 +104,13 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 
 <div component="app-example-runner" ref-component="app-greaterThanEqualTo-conditionalExpression" title="greaterThanEqualTo {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
 
+## fieldName 
+Type :  `string` 
+Greater than Equal to validation should be applied based on the `fieldName` for compare other field value 
+
+<div component="app-code" key="greaterThanEqualTo-fieldNameExample-model"></div> 
+<div component="app-example-runner" ref-component="app-greaterThanEqualTo-fieldName" title="greaterThanEqualTo {{validatorType}} with fieldName" key="fieldName"></div>
+
 ## message 
 Type :  `string`
 To override the global configuration message and set the custom message on respective FormControl.
@@ -133,6 +125,14 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 <div component="app-code" key="greaterThanEqualTo-messageKeyExample-model"></div> 
 <div component="app-example-runner" ref-component="app-greaterThanEqualTo-messageKey" title="greaterThanEqualTo {{validatorType}} with messageKey" key="messageKey"></div>
+
+## value
+Type : `number`
+
+Greater than Equal to validation provides `value` property which is used To validate the formControl based upon configured static value.
+
+<div component="app-code" key="greaterThanEqualTo-valueExample-model"></div> 
+<div component="app-example-runner" ref-component="app-greaterThanEqualTo-value" title="greaterThanEqualTo {{validatorType}} with value" key="value"></div>
 
 # Complete greaterThanEqualTo Example
 

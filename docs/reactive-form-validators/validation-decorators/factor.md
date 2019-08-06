@@ -81,28 +81,12 @@ Below options are not mandatory to use in the `factor` validation. If needed the
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
+<tr><td><a href="#conditionalExpression" (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Factor validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a href="#dividend" (click)='scrollTo("#dividend")' title="dividend">dividend</a></td><td>dividend property of FactorConfig is used to assign a value whose factors to be enterred as input.</td></tr>
 <tr><td><a href="#fieldName" (click)='scrollTo("#fieldName")' title="fieldName">fieldName</a></td><td>fieldName property is the name of the name of field for which the factors needed to be entered.</td></tr>
-<tr><td><a href="#conditionalExpression" (click)='scrollTo("#conditionalExpression")' title="conditionalExpression">conditionalExpression</a></td><td>Factor validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
 <tr><td><a href="#message" (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a href="#messageKey" (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
-
-## dividend 
-Type :  `string` 
-
-dividend property of FactorConfig is used to assign a value whose factors to be enterred as input.
-
-<div component="app-code" key="factor-dividendExample-model"></div> 
-<div component="app-example-runner" ref-component="app-factor-dividend" title="factor {{validatorType}} with dividend" key="dividend"></div>
-
-## fieldName 
-Type :  `string` 
-
-fieldName property is the name of the name of field for which the factors needed to be entered.
-
-<div component="app-code" key="factor-fieldNameExample-model"></div> 
-<div component="app-example-runner" ref-component="app-factor-fieldName" title="factor {{validatorType}} with fieldName" key="fieldName"></div>
 
 ## conditionalExpression 
 Type :  `Function`  |  `string` 
@@ -121,6 +105,22 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 <div component="app-code" key="factor-conditionalExpressionExampleString-model"></div> 
 
 <div component="app-example-runner" ref-component="app-factor-conditionalExpression" title="factor {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
+
+## dividend 
+Type :  `string` 
+
+dividend property of FactorConfig is used to assign a value whose factors to be enterred as input.
+
+<div component="app-code" key="factor-dividendExample-model"></div> 
+<div component="app-example-runner" ref-component="app-factor-dividend" title="factor {{validatorType}} with dividend" key="dividend"></div>
+
+## fieldName 
+Type :  `string` 
+
+fieldName property is the name of the name of field for which the factors needed to be entered.
+
+<div component="app-code" key="factor-fieldNameExample-model"></div> 
+<div component="app-example-runner" ref-component="app-factor-fieldName" title="factor {{validatorType}} with fieldName" key="fieldName"></div>
 
 ## message
 Type :  `string` 

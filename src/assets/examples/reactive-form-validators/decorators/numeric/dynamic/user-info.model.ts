@@ -9,6 +9,9 @@ export class UserInfo {
 	negativeNumber: number;
 
 	@prop()
+	totalAmount: number;
+
+	@prop()
 	decimalNumber: number;
 
 	@prop()
@@ -18,9 +21,9 @@ export class UserInfo {
 	positiveNumber: number;
 
 	@prop()
-	totalAmount: number;
+	positiveNonDecimalNumber: number;
 
 	@prop()
-	positiveNonDecimalNumber: number;
+	formattedDecimalNumber: number;
 
 }

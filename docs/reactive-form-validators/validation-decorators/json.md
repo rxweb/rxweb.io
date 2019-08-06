@@ -103,7 +103,7 @@ Type :  `string`
 
 To override the global configuration message and set the custom message on respective FormControl.
 
-[<div component="app-code" key="json-messageExample-model"></div> 
+<div component="app-code" key="json-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-json-message" title="json {{validatorType}} with message" key="message"></div>
 
 ## messageKey

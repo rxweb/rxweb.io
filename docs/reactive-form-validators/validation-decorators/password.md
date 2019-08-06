@@ -78,9 +78,9 @@ Below options are not mandatory to use in the `password` validation. If needed t
 
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td><a  (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
-<tr><td><a href="#validation" (click)='scrollTo("#validation")'  title="validation">validation</a></td><td> Validation is used for setting the parameters for password validation, In Password validation there is validations on digit, alphabets, contains, lowerCase, upperCase, specialCharacter, minLength, maxLength.</td></tr>
+<tr><td><a (click)='scrollTo("#message")' title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
+<tr><td><a (click)='scrollTo("#validation")' title="validation">validation</a></td><td> Validation is used for setting the parameters for password validation, In Password validation there is validations on digit, alphabets, contains, lowerCase, upperCase, specialCharacter, minLength, maxLength.</td></tr>
 </table>
 
 ## message 
@@ -90,14 +90,6 @@ To override the global configuration message and set the custom error message on
 <div component="app-code" key="password-messageExample-model"></div> 
 <div component="app-example-runner" ref-component="app-password-message" title="password {{validatorType}} with message" key="message"></div>
 
-## validation 
-Type :  `PasswordValidation`
-
-Password Validation is used for setting the parameters for password validation, In Password validation there is validation on digit, alphabets, contains, lowerCase, upperCase, specialCharacter, minLength, maxLength.
-
-<div component="app-code" key="password-validationExample-model"></div> 
-<div component="app-example-runner" ref-component="app-password-validation" title="password {{validatorType}} with validation" key="validation"></div>
-
 ## messageKey
 Type : `string`
 
@@ -105,6 +97,14 @@ messageKey property of BaseConfig can be used when the user wants to show a diff
 
 <div component="app-code" key="password-messageKeyExample-model"></div> 
 <div component="app-example-runner" ref-component="app-password-messageKey" title="password {{validatorType}} with messageKey" key="messageKey"></div>
+
+## validation 
+Type :  `PasswordValidation`
+
+Password Validation is used for setting the parameters for password validation, In Password validation there is validation on digit, alphabets, contains, lowerCase, upperCase, specialCharacter, minLength, maxLength.
+
+<div component="app-code" key="password-validationExample-model"></div> 
+<div component="app-example-runner" ref-component="app-password-validation" title="password {{validatorType}} with validation" key="validation"></div>
 
 # Complete password Example
 

@@ -9,6 +9,10 @@ export class UserInfo {
 	negativeNumber: number;
 	
 	
+	@numeric({isFormat:true }) 
+	totalAmount: number;
+	
+	
 	@numeric({allowDecimal:true }) 
 	decimalNumber: number;
 	
@@ -27,12 +31,12 @@ export class UserInfo {
 	positiveNumber: number;
 	
 	
-	@numeric({isFormat:true }) 
-	totalAmount: number;
-	
-	
 	@numeric({messageKey:'numericMessageKey' }) 
 	positiveNonDecimalNumber: number;
+	
+	
+	@numeric({digitsInfo:'1.0-2'  ,isFormat:true  ,allowDecimal:true }) 
+	formattedDecimalNumber: number;
 	
 	
 }
