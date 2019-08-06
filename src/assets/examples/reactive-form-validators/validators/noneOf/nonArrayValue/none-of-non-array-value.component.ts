@@ -5,7 +5,7 @@ import { RxFormBuilder, RxwebValidators } from '@rxweb/reactive-form-validators'
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-    selector: 'app-noneOf-nonArrayValue',
+    selector: 'app-noneOf-nonArrayValue-validator',
     templateUrl: './none-of-non-array-value.component.html'
 })
 export class NoneOfNonArrayValueValidatorComponent implements OnInit {

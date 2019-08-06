@@ -10,22 +10,24 @@ import { ComposeValidatorsComponent } from "src/assets/examples/reactive-form-va
 import { ComposeMessageComponent } from "src/assets/examples/reactive-form-validators/decorators/compose/message/compose-message.component";
 import { ComposeConditionalExpressionComponent } from "src/assets/examples/reactive-form-validators/decorators/compose/conditionalExpression/compose-conditional-expression.component";
 import { ComposeCompleteComponent } from "src/assets/examples/reactive-form-validators/decorators/compose/complete/compose-complete.component";
+import { ComposeMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/compose/messageKey/compose-message-key.component";
 
 export const COMPOSE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
-	validators:{
-						complete : ComposeCompleteValidatorComponent,
-						validators : ComposeValidatorsValidatorComponent,
-						messageKey : ComposeMessageKeyValidatorComponent,
-						conditionalExpression : ComposeConditionalExpressionValidatorComponent,
-						message : ComposeMessageValidatorComponent,
-						dynamic : ComposeDynamicValidatorComponent,
-						add : ComposeAddValidatorComponent,
-			  },
-			  decorators:{
-				add : ComposeAddComponent,
-				validators : ComposeValidatorsComponent,
-				message:ComposeMessageComponent,
-				conditionalExpression:ComposeConditionalExpressionComponent,
-				complete:ComposeCompleteComponent
-	  },
+	validators: {
+		complete: ComposeCompleteValidatorComponent,
+		validators: ComposeValidatorsValidatorComponent,
+		messageKey: ComposeMessageKeyValidatorComponent,
+		conditionalExpression: ComposeConditionalExpressionValidatorComponent,
+		message: ComposeMessageValidatorComponent,
+		dynamic: ComposeDynamicValidatorComponent,
+		add: ComposeAddValidatorComponent,
+	},
+	decorators: {
+		add: ComposeAddComponent,
+		validators: ComposeValidatorsComponent,
+		message: ComposeMessageComponent,
+		conditionalExpression: ComposeConditionalExpressionComponent,
+		complete: ComposeCompleteComponent,
+		messageKey: ComposeMessageKeyComponent
+	},
 }

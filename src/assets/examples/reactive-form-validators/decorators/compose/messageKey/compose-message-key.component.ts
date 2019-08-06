@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from "@angular/forms"
 import { RxFormBuilder } from '@rxweb/reactive-form-validators';
-import {User} from './user.model';
+
+import { User } from './user.model';
 
 @Component({
-    selector: 'app-compose-add',
-    templateUrl: './compose-add.component.html'
+    selector: 'app-compose-messageKey',
+    templateUrl: './compose-message-key.component.html'
 })
-export class ComposeAddComponent implements OnInit {
+export class ComposeMessageKeyComponent implements OnInit {
     userFormGroup: FormGroup
 
-    constructor(private formBuilder: RxFormBuilder) { }
+    constructor(
+        private formBuilder: RxFormBuilder    ) { }
 
     ngOnInit() {
         let user = new User();

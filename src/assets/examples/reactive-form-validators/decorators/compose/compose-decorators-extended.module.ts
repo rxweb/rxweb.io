@@ -9,6 +9,7 @@ import { ComposeValidatorsComponent } from './validators/compose-validators.comp
 import { ComposeMessageComponent } from './message/compose-message.component';
 import { ComposeConditionalExpressionComponent } from './conditionalExpression/compose-conditional-expression.component';
 import { ComposeCompleteComponent } from './complete/compose-complete.component';
+import { ComposeMessageKeyComponent } from './messageKey/compose-message-key.component';
 
 
 @NgModule({
@@ -17,14 +18,16 @@ import { ComposeCompleteComponent } from './complete/compose-complete.component'
     ComposeValidatorsComponent,
     ComposeMessageComponent,
     ComposeConditionalExpressionComponent,
-    ComposeCompleteComponent
+    ComposeCompleteComponent,
+    ComposeMessageKeyComponent
   ],
 entryComponents: [
     ComposeAddComponent,
     ComposeValidatorsComponent,
     ComposeMessageComponent,
     ComposeConditionalExpressionComponent,
-    ComposeCompleteComponent
+    ComposeCompleteComponent,
+    ComposeMessageKeyComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -37,7 +40,8 @@ entryComponents: [
     ComposeValidatorsComponent,
     ComposeMessageComponent,
     ComposeConditionalExpressionComponent,
-    ComposeCompleteComponent
+    ComposeCompleteComponent,
+    ComposeMessageKeyComponent
   ],
 
 })
