@@ -70,6 +70,9 @@ export const VALIDATION_MESSAGES:{[key:string]:any} =  {
         "cusip": "Enter a valid cusip code",
         "date": "Please enter a valid date.",
         "async": "Enter valid value",
+        "or":"or condition failed",
+        "and":"and condition failed",
+        "not":"not condition failed",
         "notEmpty": "You cannot keep this field empty.",
         "allOfMessageKey": "Your selected options must match the requirement of config values",
         "noneOfMessageKey": "Your selected options must not include the values passed in config values",
@@ -129,7 +132,13 @@ export const VALIDATION_MESSAGES:{[key:string]:any} =  {
         "oneOfMessageKey": "Your selected options must include atleast one of the values passed in config values",
         "uniqueMessageKey":"Enterred value must be unique",
         "maxTimeMessageKey": "The input time enterred must be less than the value mentioned in config",
-        "minTimeMessageKey": "The input time enterred must be greater than the value mentioned in config"
+        "minTimeMessageKey": "The input time enterred must be greater than the value mentioned in config",
+      },
+      "expression":{
+        "onlyAlpha":"Only alphabets are allowed",
+        "zipCode":"Zip code should match 12345 or 12345-6789",
+        "onlyDigit":"Only digits are allowed",
+        "pinCode":"Invalid Pincode"
       },
       "reactiveForm": {
         "errorMessageBindingStrategy": 

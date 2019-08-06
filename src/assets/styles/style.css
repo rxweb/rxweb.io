@@ -5641,6 +5641,7 @@ float: left;
     /*23-11-2018*/
     #side-menu .input-group { margin-left: 20px; }
     #search-input { width: 100%; }
+    a.fas.fa-chevron-right{  margin-left: 1482px;}
 }
 .validation-tab p  {
   color: rgba(0,0,0,.87);
@@ -6924,6 +6925,11 @@ padding: 2px 0;
     .header-links > ul > li > a {    padding: 10px 12px;font-size: 15px}
     .search-box .search-field .ais-SearchBox-input{padding: 3px 34px 5px 10px;}
 }
+@media only screen and (max-width:1200px){
+    a#why{
+        display: none;
+    }
+}
 @media only screen and (max-width:991px){
     .downloads-counter{
         max-width: 300px;
@@ -6988,6 +6994,13 @@ padding: 2px 0;
     .hpanel .tab-content{padding-bottom:0;padding: 0;}
     #gitter-aside {display: none;}
     app-right-sidebar {  display: none;  }
+    img.why-icon{
+        height: 90px;    
+        position: fixed;
+        top: 200px;   
+      ;
+    }
+  
     .navbar-nav>li:last-child>a { padding-right: 0; }
     .header-link.hide-menu svg{margin-left:0;}
     body.hide-sidebar #menu #navigation {
@@ -7729,6 +7742,55 @@ padding: 0.4375rem 0.9375rem;
             margin-top: 715px;
             padding-left: 0px;
         }
-    
+        button.close.why-close{
+            color: gray;
+            top: 706px;
+            position: fixed;
+            font-size: 40px!important;
+            margin-left: 45px;
+        }
+        #why-icon{
+            display: none 
+        }
+        img.why-icon{         
+            height: 90px;           
+            position: fixed;
+            top: 740px;   
+          ;
+        }
+        img.why-image{
+        height:600px;
+        background-size: contain;
+        }
+        .pl-0{
+            padding-left: 0px!important;
+        }
+        .pr-0{
+            padding-right: 0px!important;
+        }
+        img.play {
+            height: 100px;
+            top: 200px;
+            margin-left: 500px;
+            position: absolute;
+        }
+        img.play:hover{
+            cursor: pointer;
+        }
+        
+        a.stop {
+            color: gray;
+            height: 100px;
+            top: 1px;
+            margin-left: 724px;
+               position: absolute;
+        }
+        a.stop:hover{
+            cursor: pointer;
+        }  
+        .why-heading{
+            padding-top: 20%;
+        }
+     
 /*-------- do not add any css here ---------- */
 
