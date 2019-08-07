@@ -47,6 +47,10 @@ export class StackBlitzService {
           configObject['internationalization'] = {};
           configObject['internationalization'] = VALIDATION_MESSAGES["internationalization"]
         }
+        else if(exampleName == "dynamic"){
+          configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
+          configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
+        }
         else if(validationName == "formbuilderconfiguration"){
           configObject.validationMessage = {
             "required":"This field is required", 

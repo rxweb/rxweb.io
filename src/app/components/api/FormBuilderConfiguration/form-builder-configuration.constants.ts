@@ -5,6 +5,7 @@ import { FormbuilderconfigurationIncludepropsComponent } from "src/assets/exampl
 import { FormbuilderconfigurationIgnoreundefinedpropsComponent } from "src/assets/examples/api/FormBuilderConfiguration/ignoreUndefinedProps/formbuilderconfiguration-ignoreundefinedprops.component";
 import { FormbuilderconfigurationDynamicdefaultComponent } from "src/assets/examples/api/FormBuilderConfiguration/dynamicDefaultValue/formbuilderconfiguration-dynamic.component";
 import { FormbuilderconfigurationAllPropsComponent } from "src/assets/examples/api/FormBuilderConfiguration/allProps/formbuilderconfiguration-allprops.component";
+import { FormbuilderconfigurationGenericEntitiesComponent } from "src/assets/examples/api/FormBuilderConfiguration/genericEntities/formbuilderconfiguration-genericentities.component";
 
 
 
@@ -18,6 +19,7 @@ export const FORM_BUILDER_CONFIGURATION_COMPONENT_EXAMPLE_CONSTANT: { [key: stri
         includeprops:FormbuilderconfigurationIncludepropsComponent,
         ignoreundefined:FormbuilderconfigurationIgnoreundefinedpropsComponent,
         dynamicdefault:FormbuilderconfigurationDynamicdefaultComponent,
-        allprops:FormbuilderconfigurationAllPropsComponent
+        allprops:FormbuilderconfigurationAllPropsComponent,
+        genericentities:FormbuilderconfigurationGenericEntitiesComponent
     },
 }

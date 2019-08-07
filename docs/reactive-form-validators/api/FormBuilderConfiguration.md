@@ -50,6 +50,12 @@ This is mainly used to apply the default value through the component instead of 
 <div component="app-code" key="FormBuilderConfiguration-dynamicdefault-component"></div> 
 <div component="app-example-runner" ref-component="app-formbuilderconfiguration-dynamicdefault" title="Setting default value dynamically with prop" key="dynamicdefault"></div>
 
+# Generic Entities
+It is used to set generic entity which needs to be accessed in the formGroup using `genericEntities` property by passing entity with abstract class.
+
+<div component="app-code" key="FormBuilderConfiguration-genericentities-component"></div> 
+<div component="app-example-runner" ref-component="app-formbuilderconfiguration-genericentities" title="Setting generic entities" key="genericentities"></div>
+
 # ignoreUndefinedProps
 This is used to ignore the undefined properties dynamically using `formBuilderConfiguration`.
 
