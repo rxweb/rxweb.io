@@ -24,78 +24,87 @@ export class SideBarComponent implements OnInit {
   ) {
   }
   ngOnInit(): void {
-          if(this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home"){
-          this.http.get('assets/json/sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
-            this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
-            this.links = response.links;
-            var splitedArray = location.pathname.split('#')[0].split('/')
-            if (splitedArray[1]) {
-              var currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);
-              if (currentArray && currentArray.length > 0) {
-                currentArray[0].isActive = true;
-                currentArray[0].isOpen = true;
-                if (splitedArray[2]) {
-                  if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-                    if (splitedArray[1].includes('api')) {
-                      var currentObj = currentArray[0].childrens[1].childrens.filter(a => a.linkTitle == splitedArray[2]);
-                      if (currentObj && currentObj.length > 0) {
-                        currentObj[0].isActive = true;
-                        currentObj[0].isOpen = true;
-                      }
-                      else {
-                        var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]);
-                        if (currentObj && currentObj.length > 0) {
-                          currentObj[0].isActive = true;
-                          currentObj[0].isOpen = true;
-                        }
-                      }
-                    }
-                    else if (splitedArray[1].includes('decorators') || splitedArray[1].includes('sanitization')) {
-                      var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
-                      if (currentObj && currentObj.length > 0) {
-                        currentObj[0].isActive = true;
-                        currentObj[0].isOpen = true;
-                      }
-                    }
-                    else if (splitedArray[1].includes('form-validation')) {     
-      
-                      currentArray[0].childrens.forEach(formvalidation => {
-                        if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
-                          formvalidation.childrens.forEach(element => {
-                            if (element.title == splitedArray[2]) {
-                              formvalidation.isOpen = true;
-                              formvalidation.isActive = true;
-                              element.isActive = true;
-                              element.isOpen = true;
-                            }
-                          });
-                        }
-                      })
+    if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") {
+      this.http.get('assets/json/sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
+        this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
+        this.links = response.links;
+        var splitedArray = location.pathname.split('#')[0].split('/')
+        if (splitedArray[1]) {
+          var currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);
+          if (currentArray && currentArray.length > 0) {
+            currentArray[0].isActive = true;
+            currentArray[0].isOpen = true;
+            if (splitedArray[2]) {
+              if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
+                if (splitedArray[1].includes('api')) {
+                  var currentObj;
+                  if (currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]).length != 0) {
+                    currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2])
+                  }
+                  else {
+                    var currentChildArray = currentArray[0].childrens.filter(a => a.otherUri == splitedArray[2]);
+                    currentChildArray[0].isActive = true
+                    currentChildArray[0].isOpen = true
+                    currentObj = currentChildArray[0].childrens.filter(a => a.uri.split('#')[1] == window.location.hash.substring(1))
+                  }
+                  if (currentObj && currentObj.length > 0) {
+                    currentObj[0].isActive = true;
+                    currentObj[0].isOpen = true;
+                  }
+                  else {
+                    var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]);
+                    if (currentObj && currentObj.length > 0) {
+                      currentObj[0].isActive = true;
+                      currentObj[0].isOpen = true;
                     }
                   }
                 }
-              }
-              else {
-                var children = this.links[1]['childrens'];
-                var currentArray = children.filter(a => a.uri == splitedArray[1]);
-                if (currentArray && currentArray.length > 0) {
-                  currentArray[0].isActive = true;
-                  currentArray[0].isOpen = true;
-                  if (splitedArray[2]) {
-                    if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-                      var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
-                      if (currentObj && currentObj.length > 0) {
-                        currentObj[0].isActive = true;
-                        currentObj[0].isOpen = true;
-                      }
+                else if (splitedArray[1].includes('decorators') || splitedArray[1].includes('sanitization')) {
+                  var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
+                  if (currentObj && currentObj.length > 0) {
+                    currentObj[0].isActive = true;
+                    currentObj[0].isOpen = true;
+                  }
+                }
+                else if (splitedArray[1].includes('form-validation')) {
+
+                  currentArray[0].childrens.forEach(formvalidation => {
+                    if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
+                      formvalidation.childrens.forEach(element => {
+                        if (element.title == splitedArray[2]) {
+                          formvalidation.isOpen = true;
+                          formvalidation.isActive = true;
+                          element.isActive = true;
+                          element.isOpen = true;
+                        }
+                      });
                     }
+                  })
+                }
+              }
+            }
+          }
+          else {
+            var children = this.links[1]['childrens'];
+            var currentArray = children.filter(a => a.uri == splitedArray[1]);
+            if (currentArray && currentArray.length > 0) {
+              currentArray[0].isActive = true;
+              currentArray[0].isOpen = true;
+              if (splitedArray[2]) {
+                if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
+                  var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
+                  if (currentObj && currentObj.length > 0) {
+                    currentObj[0].isActive = true;
+                    currentObj[0].isOpen = true;
                   }
                 }
               }
             }
-            this.showComponent = true;
-          });
           }
+        }
+        this.showComponent = true;
+      });
+    }
   }
   navigateTo(link: any, secondlevel: any, thirdlevel: any): void {
     if (link != null && link.uri != null) {
@@ -127,7 +136,7 @@ export class SideBarComponent implements OnInit {
       this.router.navigateByUrl(link.uri);
     }
   }
- 
+
   hideSideBar(): void {
     const body = document.getElementsByTagName('body')[0];
     if (window.innerWidth < 769) {
