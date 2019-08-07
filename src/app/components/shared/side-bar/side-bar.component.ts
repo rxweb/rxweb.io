@@ -188,6 +188,11 @@ export class SideBarComponent implements OnInit {
             if (refObject) {
               refObject.isHide = false;
               refObject.isOpen = true;
+              if (refObject.childrens) {
+                refObject.childrens.forEach(element => {
+                  element.isHide = false;
+                });
+              }
             }
           }
         })
