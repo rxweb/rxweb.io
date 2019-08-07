@@ -10,5 +10,9 @@ const API_ROUTES: Routes = [
 	path:'FormBuilderConfiguration',
 	loadChildren: './FormBuilderConfiguration/form-builder-configuration.module#FormBuilderConfigurationModule',
 },
+{
+	path:'RxFormGroup',
+	loadChildren: './RxFormGroup/rx-form-group.module#RxFormGroupModule',
+},
 ];
 export const API_ROUTING: ModuleWithProviders = RouterModule.forChild(API_ROUTES);

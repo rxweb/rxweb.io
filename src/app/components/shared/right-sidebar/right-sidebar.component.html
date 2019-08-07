@@ -24,7 +24,7 @@
     <li><a target="_blank" (click)="routeExample()"
         *ngIf="mainType != 'community' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'">
         <i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen" class="fa" data-toggle="tooltip" title="Examples Only" aria-hidden="true"></i></a></li>
-    <li>
+        <li *ngIf="mainType != 'getting-started'">
         <a target="_blank" href="{{gitEditUrl}}" class="edit-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>
     </li>
     <li><a target="_blank" href="https://github.com/rxweb/rxweb/"><i class="fa fa-github" aria-hidden="true"></i></a>

@@ -48,6 +48,14 @@
         "modelName": "user.model.ts",
         "json": {}
     },
+    "allprops":{
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { RxFormBuilder, FormBuilderConfiguration, RxFormGroup, RxwebValidators } from '@rxweb/reactive-form-validators';\r\nimport { ValidatorFn, AbstractControl, FormControl } from '@angular/forms';\r\n\r\n@Component({\r\n  selector: 'app-formbuilderconfiguration-allprops',\r\n  templateUrl: './formbuilderconfiguration-allprops.component.html'\r\n})\r\nexport class FormbuilderconfigurationAllpropsComponent implements OnInit {\r\n  userInfoFormGroup: RxFormGroup\r\n\r\n  constructor(\r\n    private formBuilder: RxFormBuilder) { }\r\n\r\n  ngOnInit() {\r\n    var formBuilderConfig = new FormBuilderConfiguration();\r\n    formBuilderConfig.applyAllProps = [RxwebValidators.required()]\r\n    this.userInfoFormGroup = <RxFormGroup>this.formBuilder.group({\r\n      firstName: [''],\r\n      lastName: ['']\r\n    }, formBuilderConfig)\r\n  }\r\n\r\n}\r\n",
+        "html": "<div>\r\n\t<form [formGroup]=\"userInfoFormGroup\">\r\n\t\t<div class=\"form-group\">\r\n\t\t\t<label>First Name</label>\r\n        <input type=\"text\" formControlName=\"firstName\" class=\"form-control\"  />\r\n        <small class=\"text-danger\">{{ userInfoFormGroup.controls.firstName.errors?.required?.message}}</small>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label>Last Name</label>\r\n        <input type=\"text\" formControlName=\"lastName\" class=\"form-control\"  />  \r\n        <small class=\"text-danger\">{{ userInfoFormGroup.controls.lastName.errors?.required?.message}}</small>\r\n      </div>\r\n\r\n      <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
     "arrayinstance":{"component":" var formBuilderConfig = new FormBuilderConfiguration();\r\n        formBuilderConfig.autoInstanceConfig = {\r\n                arrayPropInstanceConfig: [{\r\n                            propertyName: 'skills',\r\n                            rowItems: 2\r\n                        }]\r\n                    } \r\n this.userInfoFormGroup = <RxFormGroup>this.formBuilder.formGroup(user,formBuilderConfig);"},
     "objectinstance":{"component":"   var formBuilderConfig = new FormBuilderConfiguration();\r\n        formBuilderConfig.autoInstanceConfig = {\r\n                        objectPropInstanceConfig: [{\r\n                            propertyName: 'address',\r\n                            \r\n                        }]\r\n        }"},
     "include":{"component":"formBuilderConfig.includeProps = [\"userName\",\"password\",\"confirmPassword\"]\r\n     "}

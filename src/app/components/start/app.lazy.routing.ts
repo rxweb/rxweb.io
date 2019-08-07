@@ -26,7 +26,7 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'reactive-forms/getting-started', component: GettingStartedComponent
+    path: 'getting-started', component: GettingStartedComponent
   },
   // {
   //   path: 'changelog', component: TextPageComponent
@@ -79,6 +79,10 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'api/RxFormBuilder',
     loadChildren: 'src/app/components/api/RxFormBuilder/rx-form-builder.module#RxFormBuilderModule',
+  },
+  {
+    path: 'api/RxFormGroup',
+    loadChildren: 'src/app/components/api/RxFormGroup/rx-form-group.module#RxFormGroupModule',
   },
   {
     path: 'api/FormBuilderConfiguration',

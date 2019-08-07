@@ -2,7 +2,7 @@
   "links": [
     {
       "title": "Getting Started",
-      "uri": "reactive-forms/getting-started",
+      "uri": "getting-started",
       "otherUri": "getting-started",
       "isOpen": true,
       "isActive": false
@@ -416,6 +416,18 @@
           "isOpen": false,
           "otherUri": "RxFormGroup",
           "childrens": [
+            {
+              "title": "modelInstance",
+              "uri": "api/RxFormGroup/decorators#usingmodelinstancetogetmodelobjectvalue",
+              "isActive": false,
+              "linkTitle": "RxFormGroup"
+            },
+            {
+              "title": "errorMessageSummary",
+              "uri": "api/RxFormGroup/decorators#bindingerrormessagesatonce",
+              "isActive": false,
+              "linkTitle": "RxFormGroup"
+            },
             {
               "title": "isDirty",
               "uri": "how-to/dirtyCheck/validators",

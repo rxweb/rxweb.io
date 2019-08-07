@@ -38,6 +38,12 @@ While accessing the data in formGroup, based upon the operation you want to perf
 <div component="app-example-runner" ref-component="app-formbuilderconfiguration-includeprops" title="Include and exclude properties" key="includeprops"></div> 
 </data-scope>
 
+# Apply validation to all props
+This is used when to want to apply validation to all formControls. It can be done using `allProps` property 
+
+<div component="app-code" key="FormBuilderConfiguration-allprops-component"></div> 
+<div component="app-example-runner" ref-component="app-formbuilderconfiguration-allprops" title="AllProps to set validation to all formControls" key="allprops"></div>
+
 # Dynamically set default value
 This is mainly used to apply the default value through the component instead of defining into the decorator.  
 

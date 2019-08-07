@@ -33,6 +33,7 @@ export class StackBlitzService {
       componentName = `${this.pascalCase(validationName)}${this.pascalCase(exampleName)}Component`;
     }
     for (var fileName in FILES) {
+      debugger;
       let fileContent = FILES[fileName]
       fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
       fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
@@ -45,6 +46,18 @@ export class StackBlitzService {
           }
           configObject['internationalization'] = {};
           configObject['internationalization'] = VALIDATION_MESSAGES["internationalization"]
+        }
+        else if(validationName == "formbuilderconfiguration"){
+          configObject.validationMessage = {
+            "required":"This field is required", 
+            
+          }
+          }
+        else if(validationName == "RxFormGroup"){
+          configObject.validationMessage = {
+            "required":"This field is required", 
+            "alpha":"Only alphabets are allowed.", 
+          }
         }
         else if(validationName == "compose"){
           configObject.validationMessage = {
