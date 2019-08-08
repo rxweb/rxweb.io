@@ -1,9 +1,11 @@
-import {  lessThan, } from   "@rxweb/reactive-form-validators"   
+import {  lessThan, prop, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
-	@lessThan({fieldName:'obtainedMarks'  ,message:'Please enter number greater than 100.' }) 
+	@prop()
+	obtainedMarks: number;
+
+	@lessThan({fieldName:'obtainedMarks'  ,message:'Please enter number which is less than above field input.' }) 
 	otherMarks: number;
-	
-	
+		
 }

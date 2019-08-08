@@ -19,7 +19,7 @@ export class User {
 	voterAge: number;
 	
 	
-	@greaterThan({fieldName:'age'  ,message:'Please enter number greater than 0.' }) 
+	@greaterThan({fieldName:'age'  ,message:'Please enter number which is greater than above field input.' }) 
 	otherAge: number;
 	
 	

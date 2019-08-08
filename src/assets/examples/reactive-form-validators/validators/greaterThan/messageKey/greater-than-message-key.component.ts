@@ -15,6 +15,7 @@ export class GreaterThanMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userFormGroup = this.formBuilder.group({
+            age:['',], 
             joiningAge:['', RxwebValidators.greaterThan({fieldName:'age'  ,messageKey:'greaterThanMessageKey' })], 
         });
     }

@@ -21,7 +21,7 @@ export class MaxTimeCompleteValidatorComponent implements OnInit {
             totalInTime:['', RxwebValidators.maxTime({conditionalExpression:(x,y) => x.entryPlace == "Main Entry Gate"   ,value:'12:00' })], 
             entryTime:['', RxwebValidators.maxTime({conditionalExpression:'x => x.entryPlace == "Main Entry Gate"'  ,value:'11:00' })], 
             totalOutTime:['', RxwebValidators.maxTime({allowSeconds:true  ,value:'02:00:00' })], 
-            exitTime:['', RxwebValidators.maxTime({message:'You can enter only time format data'  ,fieldName:'closingTime' })], 
+            exitTime:['', RxwebValidators.maxTime({message:'Please enter valid input'  ,fieldName:'closingTime' })], 
             netInTime:['', RxwebValidators.maxTime({messageKey:'maxTimeMessageKey'  ,fieldName:'totalInTime' })], 
         });
     }

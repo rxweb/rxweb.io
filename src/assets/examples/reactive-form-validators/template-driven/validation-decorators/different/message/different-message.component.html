@@ -1,6 +1,10 @@
 <div>
   <form #accountinfoForm = "ngForm" [rxwebForm]="accountinfoForm" [model]="accountinfo">
     <div class="form-group">
+      <label>First Name</label>
+      <input type="text" name="firstName" [(ngModel)]="accountinfo.firstName"  class="form-control" />
+    </div>
+    <div class="form-group">
       <label>Middle Name</label>
 	    <input type="text" name="middleName" [(ngModel)]="accountinfo.middleName"  class="form-control" />
 

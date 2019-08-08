@@ -22,7 +22,7 @@ export class MinTimeCompleteValidatorComponent implements OnInit {
             entryTime:['', RxwebValidators.minTime({conditionalExpression:'x => x.entryPlace == "Main Entry Gate"'  ,fieldName:'openingTime' })], 
             totalOutTime:['', RxwebValidators.minTime({allowSeconds:true  ,value:'00:10:00' })], 
             exitTime:['', RxwebValidators.minTime({message:'You can enter only time format data greater than config value'  ,value:'07:00' })], 
-            netInTime:['',], 
+            netInTime:['',RxwebValidators.minTime({value:'08:30', messageKey: 'minTimeMessageKey'})], 
         });
     }
 }

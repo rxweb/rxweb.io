@@ -19,7 +19,7 @@ export class User {
 	practicalExamMarks: number;
 	
 	
-	@lessThanEqualTo({fieldName:'totalMarks'  ,message:'Please enter number less than 100.' }) 
+	@lessThanEqualTo({fieldName:'totalMarks'  ,message:'Please enter number which is less than above field input.' }) 
 	otherMarks: number;
 	
 	

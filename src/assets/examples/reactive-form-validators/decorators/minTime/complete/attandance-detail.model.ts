@@ -31,7 +31,7 @@ export class AttandanceDetail {
 	exitTime: string;
 	
 	
-	@prop()
+	@minTime({messageKey:'minTimeMessageKey', value:'00:08:30'})
 	netInTime: string;
 
 }

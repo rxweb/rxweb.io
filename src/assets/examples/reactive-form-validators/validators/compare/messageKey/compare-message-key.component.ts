@@ -15,6 +15,7 @@ export class CompareMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userFormGroup = this.formBuilder.group({
+            contactNumber:['',], 
             confirmContactNumber:['', RxwebValidators.compare({fieldName:'contactNumber'  ,messageKey:'compareMessageKey' })], 
         });
     }

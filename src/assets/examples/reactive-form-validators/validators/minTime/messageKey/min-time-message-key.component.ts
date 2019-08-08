@@ -15,7 +15,7 @@ export class MinTimeMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.attandanceDetailFormGroup = this.formBuilder.group({
-            netInTime:['',], 
+            netInTime:['',RxwebValidators.minTime({messageKey:'minTimeMessageKey'  ,value:'08:30' })], 
         });
     }
 }

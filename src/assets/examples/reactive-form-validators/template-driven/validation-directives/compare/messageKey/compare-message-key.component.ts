@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,Validators } from "@angular/forms"
+import { FormGroup, Validators } from "@angular/forms"
 import { User } from './user.model';
 
 @Component({
@@ -8,11 +8,10 @@ import { User } from './user.model';
 })
 export class CompareMessageKeyTemplateDrivenValidationDirectivesComponent implements OnInit {
     user: User
-	
-    constructor(
-    ) { }
+
+    constructor() { }
 
     ngOnInit() {
-       this.user= new User()
+        this.user = new User()
     }
 }

@@ -15,6 +15,7 @@ export class DifferentMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.accountInfoFormGroup = this.formBuilder.group({
+            emailAddress:['',], 
             recoveryEmailAddress:['', RxwebValidators.different({fieldName:'emailAddress'  ,messageKey:'differentMessageKey' })], 
         });
     }

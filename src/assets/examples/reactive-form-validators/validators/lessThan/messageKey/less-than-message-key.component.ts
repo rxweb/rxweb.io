@@ -15,6 +15,7 @@ export class LessThanMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userFormGroup = this.formBuilder.group({
+            obtainedMarks:['',], 
             disciplineMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,messageKey:'lessThanMessageKey' })], 
         });
     }

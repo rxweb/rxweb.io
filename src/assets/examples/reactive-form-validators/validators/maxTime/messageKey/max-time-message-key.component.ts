@@ -15,6 +15,7 @@ export class MaxTimeMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.attandanceDetailFormGroup = this.formBuilder.group({
+            totalInTime:['', RxwebValidators.maxTime({value:'12:00' })], 
             netInTime:['', RxwebValidators.maxTime({messageKey:'maxTimeMessageKey'  ,fieldName:'totalInTime' })], 
         });
     }
