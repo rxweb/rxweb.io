@@ -34,7 +34,7 @@ When you want to set the default value of the property, you have to set the defa
 
 <div component="app-example-runner" ref-component="app-prop-default" title="Setting default value with prop" key="default"></div>
 
-# Exclude properties conditionally.
+# Exclude properties conditionally
 When you want to exclude the properties based upon some specific condition, You must add `ignore` property in the `propConfig`.
 
 <div component="app-example-runner" ref-component="app-prop-exclude" title="exclude with prop" key="exclude"></div>

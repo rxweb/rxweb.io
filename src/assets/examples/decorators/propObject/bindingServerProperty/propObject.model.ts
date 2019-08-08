@@ -1,10 +1,10 @@
 import { prop, propObject } from "@rxweb/reactive-form-validators"
 
 export class Address {
-    @prop({name:'City'})
+    @prop()
     city: string;
   
-    @prop({name:'Country'})
+    @prop()
     country: string;
   }
   
@@ -13,6 +13,6 @@ export class Address {
     @prop({name:'email_address'})
     emailAddress: string;
     
-    @propObject(Address)
+    @propObject(Address,{name:'user_address'})
     address: Address;
   }

@@ -38,3 +38,8 @@ If the contactType property value equals to address then the Address model prope
 Next, we need to write html code.
 <div component="app-code" key="propArray-entity-html"></div> 
 <div component="app-example-runner" ref-component="app-propArray-entity"></div>
+
+# Binding Name of server side property on propArray
+If the client property name and server property name is different. Then to bind the server property name of propArray to client side.
+
+<div component="app-example-runner" ref-component="app-propArray-server" title="Binding server side name with propArray" key="server"></div>

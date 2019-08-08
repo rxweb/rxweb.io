@@ -48,12 +48,13 @@ export class RightSideBarComponent implements OnInit {
     }
    
     ngOnInit(): void {
-
+        debugger;
         var splitedArray = location.pathname.split("/");
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
         if(splitedArray.length > 0 && splitedArray[1])
         {
+            debugger;
             switch(splitedArray[1])
             {
                 case "decorators":
@@ -63,13 +64,10 @@ export class RightSideBarComponent implements OnInit {
                     this.gitEditUrl += "docs/reactive-form-validators/validation-decorators/" + splitedArray[2] + ".md"    
                     break;
                 case "api":
-                    this.gitEditUrl += "docs/reactive-form-validators/api/ReactiveFormConfig.md"    
+                    this.gitEditUrl += "docs/reactive-form-validators/api/" + splitedArray[2] + ".md"    
                     break;
                 case "community":
                     this.gitEditUrl += "docs/community/" + splitedArray[2] + ".md"
-                    break;
-                case "getting-started":
-                    this.gitEditUrl += "docs/reactive-form-validators/getting-started.md"    
                     break;
                 case "sanitization":
                     this.gitEditUrl += "docs/sanitization/" + splitedArray[2]+".md"    
@@ -102,7 +100,6 @@ export class RightSideBarComponent implements OnInit {
 
 
     routeExample() {
-        debugger;
         this.toogleOpen = !this.toogleOpen;
         this.showExample = !this.showExample;
         var splitedArray = location.pathname.split('/');
