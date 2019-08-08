@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class WhyRxwebComponent implements OnInit {
   modelSource:string = "assets/images/model2ss.png";
-    rightSidebarLinks:any=[{"id":"why-rxweb","title":" Why Rxweb","subLink":null},{"id":"model-based-validation","title":"Model Based Validation"},{"id":"conditional-validation","title":"Conditional Validation"}];
+    rightSidebarLinks:any=[{"id":"why-rxweb","title":" Why Rxweb","subLink":null},{"id":"model-based-validation","title":"Model Based Validation"},{"id":"conditional-validation","title":"Conditional Validation"},{"id":"compare-password","title":"Compare Password"},{"id":"simplified-errormessage","title":"Simplified Errormessage"},{"id":"strongly-type","title":"Strongly Typed Reactive Forms"},{"id":"multiple-fileupload","title":"Receive Multiple file upload"},{"id":"unique","title":"Unique Validation"}];
     pageTitle:any = this.rightSidebarLinks[0];
     constructor(private router: Router,private applicationBroadcaster: ApplicationBroadcaster) {
        

@@ -48,13 +48,11 @@ export class RightSideBarComponent implements OnInit {
     }
    
     ngOnInit(): void {
-        debugger;
         var splitedArray = location.pathname.split("/");
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
         if(splitedArray.length > 0 && splitedArray[1])
         {
-            debugger;
             switch(splitedArray[1])
             {
                 case "decorators":
