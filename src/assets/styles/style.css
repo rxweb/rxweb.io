@@ -8190,7 +8190,7 @@ img.why-image {
 img.play {
     height: 100px;
     top: calc(100% - 350px);
-    margin-left: calc(100% - 350px);
+    margin-left: calc(100% - 400px);
     position: absolute;
 }
 
