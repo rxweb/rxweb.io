@@ -8214,6 +8214,18 @@ a.stop:hover {
     padding-top: 20%;
 }
 
+@media only screen and (max-width: 1200px) {
+    img.play {
+        height: 100px;
+        top: calc(100% - 350px);
+        margin-left: calc(100% - 400px);
+        position: absolute;
+    }
+    .why-image {
+        width: 90%;
+    }
+}
+
 @media only screen and (max-width: 1065px) {
     img.play {
         height: 100px;
@@ -8257,7 +8269,17 @@ a.stop:hover {
         width: 100%;
         bottom: calc(10px);
     }
-}
+    #compare-password, #strongly-type, #unique {
+        margin-top: 0px!important;  
+    }
+    img.play {
+        top: calc(100% - 350px)!important;
+        margin-left: calc(100% - 400px)!important;
+    }
+    .bg-white.border-radius {
+        margin-top: 20px!important;
+    }
+}   
 
 @media (max-width: 1024px) {
     img.why-image {
@@ -8280,8 +8302,8 @@ a.stop:hover {
         /* width: 100%; */
     }
     img.play {
-        top: calc(100% - 300px);
-        margin-left: calc(100% - 400px);
+        top: calc(100% - 300px)!important;
+        margin-left: calc(100% - 400px)!important;
     }
     a.stop {
         margin-left: 300px;
