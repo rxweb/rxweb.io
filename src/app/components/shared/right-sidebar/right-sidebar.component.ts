@@ -18,78 +18,73 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 
 export class RightSideBarComponent implements OnInit {
-    
+
     public feedbackForm: FormGroup
-    sticky:boolean = false;
-    gitAsideUrl:SafeResourceUrl;
+    sticky: boolean = false;
+    gitAsideUrl: SafeResourceUrl;
     validationName: string;
     isGitEditUrlShow: boolean = true;
     mainType: string;
-    toogleOpen:boolean = true;
+    toogleOpen: boolean = true;
     showExample: boolean = true;
-    httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' })};
+    httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     constructor(
-        private http: HttpClient,private router: Router, private formBuilder: RxFormBuilder, private sanitizer: DomSanitizer
+        private http: HttpClient, private router: Router, private formBuilder: RxFormBuilder, private sanitizer: DomSanitizer
     ) {
-       this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
+        this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
     }
     @Input('sidebarLinks') sidebarLinks: any = {};
     showComponent: boolean = false;
     contributorList: any = [];
     gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/";
     @HostListener('window:scroll', ['$event'])
-    handleScroll(){
+    handleScroll() {
         const windowScroll = document.documentElement.scrollTop;
-            if(windowScroll >= 50){
-                this.sticky = true;
-            } else {
-                this.sticky = false;
-            }
+        if (windowScroll >= 50) {
+            this.sticky = true;
+        } else {
+            this.sticky = false;
+        }
     }
-   
+
     ngOnInit(): void {
-        debugger;
         if (this.router.url.includes('whats-new') || this.router.url.includes('whats-next') || this.router.url.includes('why') || this.router.url.includes('getting-started') || this.router.url.includes('reactive-form-config'))
             this.isGitEditUrlShow = false;
         var splitedArray = location.pathname.split("/");
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
-        if(splitedArray.length > 0 && splitedArray[1])
-        {
-            debugger;
-            switch(splitedArray[1])
-            {
+        if (splitedArray.length > 0 && splitedArray[1]) {
+            switch (splitedArray[1]) {
                 case "decorators":
-                    this.gitEditUrl += "docs/reactive-form-validators/decorators/" + splitedArray[2] + ".md"    
+                    this.gitEditUrl += "docs/reactive-form-validators/decorators/" + splitedArray[2] + ".md"
                     break;
                 case "form-validations":
-                    this.gitEditUrl += "docs/reactive-form-validators/validation-decorators/" + splitedArray[2] + ".md"    
+                    this.gitEditUrl += "docs/reactive-form-validators/validation-decorators/" + splitedArray[2] + ".md"
                     break;
                 case "api":
-                    this.gitEditUrl += "docs/reactive-form-validators/api/" + splitedArray[2] + ".md"    
+                    this.gitEditUrl += "docs/reactive-form-validators/api/" + splitedArray[2] + ".md"
                     break;
                 case "community":
                     this.gitEditUrl += "docs/community/" + splitedArray[2] + ".md"
                     break;
                 case "sanitization":
-                    this.gitEditUrl += "docs/sanitization/" + splitedArray[2]+".md"    
+                    this.gitEditUrl += "docs/sanitization/" + splitedArray[2] + ".md"
                     break
                 case "how-to":
-                    this.gitEditUrl += "docs/how-to/" + splitedArray[2]+".md"    
+                    this.gitEditUrl += "docs/how-to/" + splitedArray[2] + ".md"
                     break
             }
         }
-        else if(splitedArray.length > 0 && splitedArray[0]== "changelog"){
-            this.gitEditUrl += "CHANGELOG.md"    
+        else if (splitedArray.length > 0 && splitedArray[0] == "changelog") {
+            this.gitEditUrl += "CHANGELOG.md"
         }
-        if(this.mainType != "community")
-        {
-        this.sidebarLinks.splice(0,1);
+        if (this.mainType != "community") {
+            this.sidebarLinks.splice(0, 1);
         }
         this.showComponent = true;
-   
+
     }
-  
+
     scrollTo(section) {
         var node = document.querySelector('#' + section);
         node.scrollIntoView(true);
@@ -106,9 +101,9 @@ export class RightSideBarComponent implements OnInit {
         this.showExample = !this.showExample;
         var splitedArray = location.pathname.split('/');
         if (splitedArray[4])
-    
-        this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+
+            this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
         else
-          this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
-      }
+            this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+    }
 }
