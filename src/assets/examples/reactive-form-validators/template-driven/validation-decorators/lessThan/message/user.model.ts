@@ -5,7 +5,7 @@ export class User {
 	@prop()
 	obtainedMarks: number;
 
-	@lessThan({fieldName:'obtainedMarks'  ,message:'Please enter number greater than 100.' }) 
+	@lessThan({fieldName:'obtainedMarks'  ,message:'Please enter number which is less than above field input.' }) 
 	otherMarks: number;
 		
 }

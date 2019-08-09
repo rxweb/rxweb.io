@@ -19,7 +19,7 @@ export class GreaterThanCompleteValidatorComponent implements OnInit {
             retiermentAge:['', RxwebValidators.greaterThan({fieldName:'age' })], 
             memberAge:['', RxwebValidators.greaterThan({fieldName:'age'  ,conditionalExpression:(x,y) => x.age > 17  })], 
             voterAge:['', RxwebValidators.greaterThan({fieldName:'age'  ,conditionalExpression:'x => x.age > 17' })], 
-            otherAge:['', RxwebValidators.greaterThan({fieldName:'age'  ,message:'Please enter number greater than 0.' })], 
+            otherAge:['', RxwebValidators.greaterThan({fieldName:'age'  ,message:'Please enter number which is greater than above field input.' })], 
             joiningAge:['', RxwebValidators.greaterThan({fieldName:'age'  ,messageKey:'greaterThanMessageKey' })], 
         });
     }

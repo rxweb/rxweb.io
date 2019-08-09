@@ -19,7 +19,7 @@ export class User {
 	memberAge: number;
 	
 	
-	@greaterThanEqualTo({fieldName:'admissionAge'  ,message:'Please enter number greater than or equal to 1.' }) 
+	@greaterThanEqualTo({fieldName:'admissionAge'  ,message:'Please enter number which is greater than or equal to above field input.' }) 
 	otherAge: number;
 	
 	

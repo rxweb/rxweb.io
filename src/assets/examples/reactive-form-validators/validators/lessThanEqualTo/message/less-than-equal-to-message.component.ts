@@ -16,7 +16,7 @@ export class LessThanEqualToMessageValidatorComponent implements OnInit {
     ngOnInit() {
         this.userFormGroup = this.formBuilder.group({
             totalMarks:['',], 
-            otherMarks:['', RxwebValidators.lessThanEqualTo({fieldName:'totalMarks'  ,message:'Please enter number less than 100.' })], 
+            otherMarks:['', RxwebValidators.lessThanEqualTo({fieldName:'totalMarks'  ,message:'Please enter number which is less than or equal to above field input.' })], 
         });
     }
 }

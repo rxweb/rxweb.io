@@ -16,7 +16,7 @@ export class LessThanMessageValidatorComponent implements OnInit {
     ngOnInit() {
         this.userFormGroup = this.formBuilder.group({
             obtainedMarks:['',], 
-            otherMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,message:'Please enter number greater than 100.' })], 
+            otherMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,message:'Please enter number which is less than above field input.' })], 
         });
     }
 }

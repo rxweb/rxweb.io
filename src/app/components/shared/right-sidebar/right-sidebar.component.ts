@@ -23,7 +23,7 @@ export class RightSideBarComponent implements OnInit {
     sticky:boolean = false;
     gitAsideUrl:SafeResourceUrl;
     validationName: string;
-  
+    isGitEditUrlShow: boolean = true;
     mainType: string;
     toogleOpen:boolean = true;
     showExample: boolean = true;
@@ -49,6 +49,8 @@ export class RightSideBarComponent implements OnInit {
    
     ngOnInit(): void {
         debugger;
+        if (this.router.url.includes('whats-new') || this.router.url.includes('whats-next') || this.router.url.includes('why') || this.router.url.includes('getting-started') || this.router.url.includes('reactive-form-config'))
+            this.isGitEditUrlShow = false;
         var splitedArray = location.pathname.split("/");
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];

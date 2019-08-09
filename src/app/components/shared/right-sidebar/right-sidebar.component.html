@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <ul class="quick-links list-unstyled">
     <li class="">
         <a class="more-links"> <i class="fa fa-bars" aria-hidden="true"></i> </a>
@@ -20,18 +14,19 @@
             </li>
         </ul>
     </li>
-    
+
     <li><a target="_blank" (click)="routeExample()"
-        *ngIf="mainType != 'community' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'">
-        <i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen" class="fa" data-toggle="tooltip" title="Examples Only" aria-hidden="true"></i></a></li>
-        <li *ngIf="mainType != 'getting-started'">
+            *ngIf="mainType != 'community' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'">
+            <i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen" class="fa" data-toggle="tooltip"
+                title="Examples Only" aria-hidden="true"></i></a></li>
+    <li *ngIf="isGitEditUrlShow">
         <a target="_blank" href="{{gitEditUrl}}" class="edit-link"><i class="fa fa-pencil" aria-hidden="true"></i></a>
     </li>
     <li><a target="_blank" href="https://github.com/rxweb/rxweb/"><i class="fa fa-github" aria-hidden="true"></i></a>
     </li>
     <li><a target="_blank" href="https://dev.to/t/rxweb"><i class="fab fa-dev" aria-hidden="true"></i></a>
     </li>
-  
+
     <!-- <span rxTooltip="left" message="Examples" tipTrigger="hover" class="fa fa-toggle-on" aria-hidden="true"></span></a></li> -->
 </ul>
 <!-- 

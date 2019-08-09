@@ -23,7 +23,7 @@
     </div>
     <div class="form-group">
       <label>Other Marks</label>
-	    <input type="text" name="otherMarks" [(ngModel)]="user.otherMarks"  class="form-control" [lessThanEqualTo]="{'fieldName':'totalMarks','message':'Please enter number less than 100.'}"/>
+	    <input type="text" name="otherMarks" [(ngModel)]="user.otherMarks"  class="form-control" [lessThanEqualTo]="{'fieldName':'totalMarks','message':'Please enter number which is less than or equal to above field input.'}"/>
 
       <small class="form-text text-muted">Shows custom message<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherMarks?.errors">{{userForm.controls?.otherMarks?.errors?.lessThanEqualTo.message}}<br/></small>	

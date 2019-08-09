@@ -19,7 +19,7 @@ export class LessThanCompleteValidatorComponent implements OnInit {
             otherActivityMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks' })], 
             practicalExamMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,conditionalExpression:(x,y) =>  x.obtainedMarks < 35 })], 
             passingMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,conditionalExpression:'x => x.obtainedMarks < 35' })], 
-            otherMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,message:'Please enter number greater than 100.' })], 
+            otherMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,message:'Please enter number which is less than above field input.' })], 
             disciplineMarks:['', RxwebValidators.lessThan({fieldName:'obtainedMarks'  ,messageKey:'lessThanMessageKey' })], 
         });
     }
