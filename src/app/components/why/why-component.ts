@@ -17,12 +17,11 @@ export class WhyRxwebComponent implements OnInit {
     }
     showComponent:boolean = false;
   
-    ngOnInit() {        
-  
+    ngOnInit() {          
         this.showComponent = true;
-        this.applicationBroadcaster.topSubject.next(this.pageTitle);
-       
+        this.applicationBroadcaster.topSubject.next(this.pageTitle);       
     }
+    
     startGif(event){
       var target = event.target || event.srcElement || event.currentTarget;
       var gifImage = event.currentTarget.offsetParent.children[1];
@@ -46,15 +45,16 @@ export class WhyRxwebComponent implements OnInit {
     }
 
     scrollEvent(event){
-      var i = 280;
+      var i = 200;
       var target = event.currentTarget.getElementsByClassName("col-lg-4");
-       Array.prototype.forEach.call(target,element => {        
+       Array.prototype.forEach.call(target,element => {   
+         console.log(document.body.scrollTop);     
         if(document.body.scrollTop >= i){
          element.children[0].className = "animated fadeInUp";
          element.children[0].style.display = "block";
          element.children[1].className = "animated fadeInUp delay-1s";
          element.children[1].style.display = "block";
-         i = i+280;
+         i = i+200;
         }         
       });
     }
