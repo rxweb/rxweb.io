@@ -6,5 +6,13 @@
         "model": null,
         "modelName": null,
         "json": {}
+    },
+    "return": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators, NumericValueType } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-bind-return-validator',\r\n    templateUrl: './bind-return.component.html'\r\n})\r\nexport class BindReturnValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n    constructor(\r\n        private formBuilder: FormBuilder) { }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            negativeNumber: ['', RxwebValidators.numeric({\r\n                dynamicConfig: (x, y) => {\r\n                    if (x.typeValue == 1)\r\n                        return { acceptValue: NumericValueType.PositiveNumber }\r\n                    else\r\n                        return { acceptValue: NumericValueType.NegativeNumber }\r\n                },\r\n                allowDecimal: false,\r\n                message: 'Positive Integer'\r\n            })\r\n            ]\r\n\r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form [formGroup]=\"userInfoFormGroup\">\r\n\r\n        <div class=\"form-group\">\r\n            <label>Negative Number</label>\r\n            <input type=\"text\" formControlName=\"negativeNumber\" class=\"form-control\" />\r\n            <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.negativeNumber.errors\">\r\n                {{userInfoFormGroup.controls.negativeNumber.errors.numeric.message}}<br /></small>\r\n        </div>\r\n\r\n        <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n</div>",
+        "model": null,
+        "modelName": null,
+        "json": {}
     }
 }

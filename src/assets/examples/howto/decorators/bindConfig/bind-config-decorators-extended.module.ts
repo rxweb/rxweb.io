@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { BindConfigCompleteComponent } from './complete/bind-config-complete.component';
+import { BindConfigReturnComponent } from './return/bind-config-return.component';
 
 
 
@@ -11,10 +12,10 @@ import { BindConfigCompleteComponent } from './complete/bind-config-complete.com
 
 @NgModule({
   declarations: [
-    BindConfigCompleteComponent
+    BindConfigCompleteComponent,BindConfigReturnComponent
   ],
 entryComponents: [
-	BindConfigCompleteComponent
+	BindConfigCompleteComponent,BindConfigReturnComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -23,7 +24,7 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-    BindConfigCompleteComponent
+    BindConfigCompleteComponent,BindConfigReturnComponent
   ],
 
 })

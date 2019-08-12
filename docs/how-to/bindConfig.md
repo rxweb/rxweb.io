@@ -23,4 +23,18 @@ Next, we need to write html code.
 <div component="app-code" key="bind-complete-html"></div> 
 <div component="app-example-runner" ref-component="app-bind-complete"></div>
 
+# Merge dynamicConfig returned object with base config
+Only those properties you want to return dynamically needs to be configured rest all are already defined while initializing the respective validator.
+
+Here in this example, Only `acceptValue` is returned through the `dynamicConfig` whereas `allowDecimal` and `message` are already configured. So in this case if the validation fails in the field negativeNumber it will display message `Positive Number`
+
+<data-scope scope="['decorator']">
+First we need to create a user class and define properties in the model.
+<div component="app-code" key="bind-return-model"></div> 
+</data-scope>
+<div component="app-code" key="bind-return-component"></div> 
+Next, we need to write html code.
+<div component="app-code" key="bind-return-html"></div> 
+<div component="app-example-runner" ref-component="app-bind-return"></div>
+
 ***
