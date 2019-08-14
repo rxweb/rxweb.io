@@ -23,6 +23,7 @@ export class SideBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
+      debugger;
       this.links = response.links;
       var splitedArray = location.pathname.split('#')[0].split('/')
       if (splitedArray[1]) {
@@ -30,20 +31,44 @@ export class SideBarComponent implements OnInit {
         if (currentArray && currentArray.length > 0) {
           currentArray[0].isActive = true;
           currentArray[0].isOpen = true;
-          if (splitedArray[1]) {
+          if (splitedArray[2]) {
             if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-              if (splitedArray[1].includes('decorators') || splitedArray[1].includes('sanitization')) {
+              if (splitedArray[1].includes('static-binding')) {
+                var currentObj;
+                if (currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]).length != 0) {
+                  currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2])
+                }
+                else {
+                  var currentChildArray = currentArray[0].childrens.filter(a => a.otherUri == splitedArray[2]);
+                  currentChildArray[0].isActive = true
+                  currentChildArray[0].isOpen = true
+                  currentObj = currentChildArray[0].childrens.filter(a => a.uri.split('#')[1] == window.location.hash.substring(1))
+                }
+                if (currentObj && currentObj.length > 0) {
+                  currentObj[0].isActive = true;
+                  currentObj[0].isOpen = true;
+                }
+                else {
+                  var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]);
+                  if (currentObj && currentObj.length > 0) {
+                    currentObj[0].isActive = true;
+                    currentObj[0].isOpen = true;
+                  }
+                }
+              }
+              else if (splitedArray[1].includes('decorators') || splitedArray[1].includes('sanitization')) {
                 var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
                 if (currentObj && currentObj.length > 0) {
                   currentObj[0].isActive = true;
                   currentObj[0].isOpen = true;
                 }
               }
-              else if (splitedArray[1].includes('ui-features')) {
+              else if (splitedArray[1].includes('static-binding')) {
+                     debugger;
                 currentArray[0].childrens.forEach(formvalidation => {
-                  if (formvalidation.title != "value") {
+                  if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
                     formvalidation.childrens.forEach(element => {
-                      if (element.title == splitedArray[1]) {
+                      if (element.title == splitedArray[2]) {
                         formvalidation.isOpen = true;
                         formvalidation.isActive = true;
                         element.isActive = true;
@@ -75,7 +100,7 @@ export class SideBarComponent implements OnInit {
         }
       }
       this.showComponent = true;
-    })
+    });
   }
 
   navigateTo(link: any, secondlevel: any, thirdlevel: any): void {

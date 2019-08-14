@@ -9,334 +9,326 @@
     },
     {
       "title": "Step-by-Step",
-      "uri": "dynamic-forms/stepbystep/validators",
+      "uri": "dynamic-forms/stepbystep",
       "isOpen": false,
       "isActive": false,
-      "otherUri": "stepbystep",
+      "otherUri": "dynamic-forms",
       "childrens": [
         {
           "title": "Register The Module",
-          "uri": "dynamic-forms/stepbystep/validators#registerthemodule",
+          "uri": "dynamic-forms/stepbystep/#registerthemodule",
           "isActive": false,
           "linkTitle": "stepbystep",
           "refUri": "registerthemodule"
         },
         {
           "title": "Design The Json",
-          "uri": "dynamic-forms/stepbystep/validators#designthejson",
+          "uri": "dynamic-forms/stepbystep/#designthejson",
           "isActive": false,
           "linkTitle": "stepbystep"
         },
         {
           "title": "Create The Form",
-          "uri": "dynamic-forms/stepbystep/validators#createtheform",
+          "uri": "dynamic-forms/stepbystep/#createtheform",
           "isActive": false,
           "linkTitle": "stepbystep"
         },
         {
           "title": "Html Implementation",
-          "uri": "dynamic-forms/stepbystep/validators#htmlimplementation",
+          "uri": "dynamic-forms/stepbystep/#htmlimplementation",
           "isActive": false,
           "linkTitle": "stepbystep"
         }
       ]
     },
     {
-      "title": "Ui Features",
-      "otherUri": "ui-features",
+      "title": "Ui Bindings",
+      "otherUri": "ui-bindings",
       "isActive": false,
       "isOpen": false,
       "childrens": [
         {
-          "title": "label",
-          "uri": "dynamic-forms/label/validators",
+          "title": "controls",
+          "uri": null,
           "isOpen": false,
           "isActive": false,
-          "otherUri": "label",
+          "otherUri": "controls",
           "childrens": [
             {
-              "title": "Static label",
-              "uri": "dynamic-forms/label/validators#staticLabel",
+              "title": "checkbox",
+              "uri": "dynamic-forms/checkbox/validators",
+              "isActive": false,
+              "linkTitle": "checkbox"
+            },
+            {
+              "title": "checkbox",
+              "uri": "dynamic-forms/checkbox/validators",
+              "isActive": false,
+              "linkTitle": "checkbox"
+            },
+            {
+              "title": "date",
+              "uri": "dynamic-forms/date/validators",
+              "isActive": false,
+              "linkTitle": "date"
+            },
+            {
+              "title": "dropdown",
+              "uri": "dynamic-forms/dropdown/validators",
+              "isActive": false,
+              "linkTitle": "dropdown"
+            },
+            {
+              "title": "email",
+              "uri": "dynamic-forms/email/validators",
+              "isActive": false,
+              "linkTitle": "email"
+            },
+            {
+              "title": "file",
+              "uri": "dynamic-forms/file/validators",
+              "isActive": false,
+              "linkTitle": "file"
+            },
+            {
+              "title": "password",
+              "uri": "dynamic-forms/password/validators",
+              "isActive": false,
+              "linkTitle": "password"
+            },
+            {
+              "title": "radio",
+              "uri": "dynamic-forms/radio/validators",
+              "isActive": false,
+              "linkTitle": "radio"
+            },
+            {
+              "title": "range",
+              "uri": "dynamic-forms/range/validators",
+              "isActive": false,
+              "linkTitle": "range"
+            },
+            {
+              "title": "textarea",
+              "uri": "dynamic-forms/textarea/validators",
+              "isActive": false,
+              "linkTitle": "textarea"
+            },
+            {
+              "title": "textbox",
+              "uri": "dynamic-forms/textbox/validators",
+              "isActive": false,
+              "linkTitle": "textbox"
+            },
+            {
+              "title": "url",
+              "uri": "dynamic-forms/url/validators",
+              "isActive": false,
+              "linkTitle": "url"
+            }
+          ]
+        },
+        {
+          "title": "Static Binding",
+          "uri": "static-binding",
+          "isOpen": false,
+          "isActive": false,
+          "otherUri": "static-binding",
+          "childrens": [
+            {
+              "title": "class",
+              "uri": "static-binding/class",
+              "isActive": false,
+              "linkTitle": "class"
+            },
+            {
+              "title": "description",
+              "uri": "static-binding/description",
+              "isActive": false,
+              "linkTitle": "description"
+            },
+            {
+              "title": "disabled",
+              "uri": "static-binding/disabled",
+              "isActive": false,
+              "linkTitle": "disabled"
+            },
+            {
+              "title": "focus",
+              "uri": "static-binding/focus",
+              "isActive": false,
+              "linkTitle": "focus"
+            },
+            {
+              "title": "hide",
+              "uri": "static-binding/hide",
+              "isActive": false,
+              "linkTitle": "hide"
+            },
+            {
+              "title": "label",
+              "uri": "static-binding/label",
               "isActive": false,
               "linkTitle": "label"
             },
             {
-              "title": "Conditional label",
-              "uri": "dynamic-forms/label/validators#conditionalLabel",
+              "title": "placeholder",
+              "uri": "static-binding/placeholder",
               "isActive": false,
-              "linkTitle": "label"
-            }
-          ]
-        },
-        {
-          "title": "Disable",
-          "uri": "dynamic-forms/dynamicdisable/validators",
-          "isOpen": false,
-          "isActive": false,
-          "linkTitle": null,
-          "otherUri": "dynamicdisable",
-          "childrens": [
-            {
-              "title": "Static disable",
-              "uri": "dynamic-forms/dynamicdisable/validators#staticdisable",
-              "isActive": false,
-              "linkTitle": null
+              "linkTitle": "placeholder"
             },
             {
-              "title": "Conditional disable",
-              "uri": "dynamic-forms/dynamicdisable/validators#conditionaldisable",
+              "title": "readonly",
+              "uri": "static-binding/readonly",
               "isActive": false,
-              "linkTitle": null
-            }
-          ]
-        },
-        {
-          "title": "Placeholder",
-          "uri": "dynamic-forms/placeholder/validators",
-          "isActive": false,
-          "isOpen": false,
-          "linkTitle": null,
-          "otherUri": "placeholder",
-          "childrens": [
-            {
-              "title": "Static placeholder",
-              "uri": "dynamic-forms/placeholder/validators#staticplaceholder",
-              "isActive": false,
-              "linkTitle": null
+              "linkTitle": "readonly"
             },
             {
-              "title": "Conditional placeholder",
-              "uri": "dynamic-forms/placeholder/validators#conditionalplaceholder",
+              "title": "source",
+              "uri": "static-binding/source",
               "isActive": false,
-              "linkTitle": null
-            }
-          ]
-        },
-        {
-          "title": "focus",
-          "uri": "dynamic-forms/focus/validators",
-          "isActive": false,
-          "isOpen": false,
-          "linkTitle": null,
-          "value": "focus",
-          "childrens": [
-            {
-              "title": "Static focus",
-              "uri": "dynamic-forms/focus/validators#staticfocus",
-              "isActive": false,
-              "linkTitle": null
-            }
-          ]
-        },
-        {
-          "title": "cssClassNames",
-          "uri": "dynamic-forms/cssclassnames/validators",
-          "isActive": false,
-          "isOpen": false,
-          "linkTitle": null,
-          "otherUri": "value",
-          "childrens": [
-            {
-              "title": "Static cssClassNames",
-              "uri": "dynamic-forms/cssclassnames/validators#staticcssclassnames",
-              "isActive": false,
-              "linkTitle": null
+              "linkTitle": "source"
             },
             {
-              "title": "Conditional cssClassNames",
-              "uri": "dynamic-forms/cssclassnames/validators#conditionalcssclassnames",
+              "title": "value",
+              "uri": "static-binding/value",
               "isActive": false,
-              "linkTitle": null
+              "linkTitle": "value"
             }
           ]
         },
         {
-          "title": "value",
-          "uri": "dynamic-forms/value/validators",
-          "isActive": false,
-          "linkTitle": null,
-          "otherUri": "value"
-        },
-        {
-          "title": "hide",
-          "uri": "dynamic-forms/hide/validators",
-          "isActive": false,
+          "title": "Conditional Binding",
+          "uri": null,
           "isOpen": false,
-          "linkTitle": null,
-          "otherUri": "hide",
+          "isActive": false,
+          "otherUri": "static",
           "childrens": [
             {
-              "title": "Static hide",
-              "uri": "dynamic-forms/hide/validators#statichide",
+              "title": "class",
+              "uri": "conditional-binding/conditionalclass",
               "isActive": false,
-              "linkTitle": null
+              "linkTitle": "class"
             },
             {
-              "title": "Conditional hide",
+              "title": "description",
+              "uri": "dynamic-forms/description/validators",
+              "isActive": false,
+              "linkTitle": "description"
+            },
+            {
+              "title": "disabled",
+              "uri": "dynamic-forms/disabled/validators",
+              "isActive": false,
+              "linkTitle": "disabled"
+            },
+            {
+              "title": "hide",
               "uri": "dynamic-forms/hide/validators",
               "isActive": false,
-              "linkTitle": null
-            }
-          ]
-        },
-        {
-          "title": "description",
-          "uri": "dynamic-forms/description/validators",
-          "isActive": false,
-          "isOpen": false,
-          "linkTitle": null,
-          "otherUri": "description",
-          "childrens": [
-            {
-              "title": "Static description",
-              "uri": "dynamic-forms/description/validators#staticdescription",
-              "isActive": false,
-              "linkTitle": null
+              "linkTitle": "hide"
             },
             {
-              "title": "Conditional description",
-              "uri": "dynamic-forms/description/validators#conditionaldescription",
+              "title": "label",
+              "uri": "dynamic-forms/label/validators",
               "isActive": false,
-              "linkTitle": null
-            }
-          ]
-        },
-        {
-          "title": "readonly",
-          "uri": "dynamic-forms/readonly/validators",
-          "isActive": false,
-          "isOpen": false,
-          "linkTitle": null,
-          "otherUri": "readonly",
-          "childrens": [
-            {
-              "title": "Static readonly",
-              "uri": "dynamic-forms/readonly/validators#staticreadonly",
-              "isActive": false,
-              "linkTitle": null
+              "linkTitle": "label"
             },
             {
-              "title": "Conditional readonly",
-              "uri": "dynamic-forms/readonly/validators#conditionalradonly",
+              "title": "placeholder",
+              "uri": "dynamic-forms/placeholder/validators",
               "isActive": false,
-              "linkTitle": null
+              "linkTitle": "placeholder"
+            },
+            {
+              "title": "readonly",
+              "uri": "dynamic-forms/readonly/validators",
+              "isActive": false,
+              "linkTitle": "readonly"
+            },
+            {
+              "title": "source",
+              "uri": "dynamic-forms/source/validators",
+              "isActive": false,
+              "linkTitle": "source"
+            },
+            {
+              "title": "value",
+              "uri": "dynamic-forms/value/validators",
+              "isActive": false,
+              "linkTitle": "value"
             }
           ]
         }
       ]
     },
     {
-      "title": "Controls",
+      "title": "Advance Form Design",
       "isOpen": false,
       "isActive": false,
       "childrens": [
         {
-          "title": "Textbox",
-          "uri": "dynamic-forms/textbox/validators",
-          "otherUri": "textbox",
-          "isActive": false
-        },
-        {
-          "title": "DropDown",
-          "uri": "dynamic-forms/dropdown/validators",
+          "title": "nested formgroup",
+          "uri": "dynamic-forms/nestedformgroup/validators",
           "isActive": false,
-          "linkTitle": null,
-          "childrens": [
-            {
-              "title": "Static",
-              "uri": "dynamic-forms/dropdown/validators#staticdropdown",
-              "isActive": false,
-              "linkTitle": null
-            },
-            {
-              "title": "Cascading",
-              "uri": "dynamic-forms/dropdown/validators#cascadingdropdown",
-              "isActive": false,
-              "linkTitle": null
-            }
-          ]
+          "linkTitle": null
         },
         {
-          "title": "Checkbox",
-          "uri": "dynamic-forms/checkbox/validators",
-          "isActive": false
+          "title": "nested formarray",
+          "uri": "dynamic-forms/nestedformarray/validators",
+          "isActive": false,
+          "linkTitle": null
         },
         {
-          "title": "Radio",
-          "uri": "dynamic-forms/radio/validators",
-          "isActive": false
-        },
-        {
-          "title": "File",
-          "uri": "dynamic-forms/dynamicfile/validators",
-          "isActive": false
-        },
-        {
-          "title": "color",
-          "uri": "dynamic-forms/color/validators",
-          "isActive": false
-        },
-        {
-          "title": "date",
-          "uri": "dynamic-forms/dynamicdate/validators",
-          "isActive": false
-        },
-        {
-          "title": "email",
-          "uri": "dynamic-forms/dynamicemail/validators",
-          "isActive": false
-        },
-        {
-          "title": "password",
-          "uri": "dynamic-forms/dynamicpassword/validators",
-          "isActive": false
-        },
-        {
-          "title": "url",
-          "uri": "dynamic-forms/dynamicurl/validators",
-          "isActive": false
-        },
-        {
-          "title": "textarea",
-          "uri": "dynamic-forms/textarea/validators",
-          "isActive": false
-        },
-        {
-          "title": "prepend-left-textbox",
-          "uri": "dynamic-forms/prependLeftTextbox/validators",
-          "isActive": false
-        },
-        {
-          "title": "range",
-          "uri": "dynamic-forms/dynamicrange/validators",
-          "isActive": false
+          "title": "customized design",
+          "uri": "dynamic-forms/customizeddesign/validators",
+          "isActive": false,
+          "linkTitle": null
         }
       ]
+    },
+    {
+      "title": "Power of Dynamic Form",
+      "isOpen": false,
+      "isActive": false,
+      "childrens": [
+        {
+          "title": "bootstrap forms",
+          "uri": "dynamic-forms/bootstrapforms/validators",
+          "isActive": false,
+          "linkTitle": null
+        }
+      ]
+    },
+    {
+      "title": "Reset Form",
+      "isOpen": false,
+      "isActive": false,
+      "uri": "dynamic-forms/resetform/validators"
     },
     {
       "title": "Dynamic Validation",
       "isOpen": false,
       "isActive": false,
-      "childrens": []
+      "uri": "dynamic-forms/dynamicvalidations/validators"
     },
     {
-      "title": "Advance Dynamic Forms",
+      "title": "Async Validation",
       "isOpen": false,
       "isActive": false,
-      "childrens": [
-        {
-          "title": "Bootstrap Horizontal",
-          "uri": "dynamic-forms/bootstraphorizontal/validators",
-          "isActive": false,
-          "linkTitle": null
-        },
-        {
-          "title": "Bootstrap Advance",
-          "uri": "dynamic-forms/bootstrapadvance/validators",
-          "isActive": false,
-          "linkTitle": null
-        }
-      ]
+      "uri": "dynamic-forms/asyncvalidations/validators"
+    },
+    {
+      "title": "Custom Validation",
+      "isOpen": false,
+      "isActive": false,
+      "uri": "dynamic-forms/customvalidations/validators"
+    },
+    {
+      "title": "Error Messaging Strategy",
+      "isOpen": false,
+      "isActive": false,
+      "uri": "dynamic-forms/errormessagestrategy/validators"
     }
   ]
 }

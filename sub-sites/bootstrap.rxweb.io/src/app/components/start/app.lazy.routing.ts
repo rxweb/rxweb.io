@@ -24,6 +24,14 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'dynamic-forms',
     loadChildren: 'src/app/components/dynamic-forms/dynamic-forms.module#DynamicFormsModule',
+  },
+  {
+    path: 'static-binding',
+    loadChildren: 'src/app/components/static-binding/static-binding.module#StaticBindingModule',
+  },
+  {
+    path: 'conditional-binding',
+    loadChildren: 'src/app/components/conditional-binding/conditional-binding.module#ConditionalBindingModule',
   }
 ]
 

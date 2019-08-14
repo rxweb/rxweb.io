@@ -10,9 +10,10 @@ export class StackBlitzService {
   constructor() {
   }
 
-  buildForm(validationName: string, exampleName: string, validationType: string, templateDrivenType: string, exampleContent: { [key: string]: any }, title?: string) {
+  buildForm(category:string,validationName: string, exampleName: string, validationType: string, templateDrivenType: string, exampleContent: { [key: string]: any }, title?: string) {
+    debugger;
     if (title == null)
-      title = validationName + " " + validationType + " with " + exampleName;
+      title = category + ":" +validationName;
     let exampleComponentFileName = `src/app/${this.parseName(validationName)}-${this.parseName(exampleName)}.component.ts`
     let componentPath = `${this.parseName(validationName)}-${this.parseName(exampleName)}.component`;
     let exampleComponentHtmlFileName = `src/app/${this.parseName(validationName)}-${this.parseName(exampleName)}.component.html`
@@ -20,18 +21,10 @@ export class StackBlitzService {
     this.addDefaultElement(form, validationName, exampleName, validationType, templateDrivenType, title);
     let selectorName;
     let componentName;
-    if (validationType != undefined && validationType == "validator") {
-      selectorName = `app-${validationName}-${exampleName}-${this.dashCase(validationType)}`
-      componentName = `${this.pascalCase(validationName)}${this.pascalCase(exampleName)}${this.pascalCase(validationType)}Component`;
-    }
-    else if (validationType != undefined && validationType == "templateDriven") {
-      selectorName = `app-${validationName}-${exampleName}-${this.dashCase(validationType)}-validation-${templateDrivenType}`
-      componentName = `${this.pascalCase(validationName)}${this.pascalCase(exampleName)}${this.pascalCase(validationType)}Validation${this.pascalCase(templateDrivenType)}Component`;
-    }
-    else {
+   
       selectorName = `app-${validationName}-${exampleName}`;
       componentName = `${this.pascalCase(validationName)}${this.pascalCase(exampleName)}Component`;
-    }
+    
     for (var fileName in FILES) {
       let fileContent = FILES[fileName]
       fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);

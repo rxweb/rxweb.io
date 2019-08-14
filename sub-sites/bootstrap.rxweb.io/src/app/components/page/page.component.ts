@@ -106,8 +106,10 @@ export class PageComponent implements OnInit {
     let titleString = "";
     let codeUri = "";
     let htmlUri = ""
-    if (splitedArray[3] != undefined) {
+    if (splitedArray[3] != undefined && splitedArray[3] != "") {
+
       switch (splitedArray[3]) {
+     
         case "decorators":
           codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json';
           htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.validationName + '-' + this.typeName + '.json';
@@ -128,6 +130,12 @@ export class PageComponent implements OnInit {
           break;
       }
       document.title = "rxweb " + splitedArray[2] + " : " + titleString;
+    }
+    else{
+   
+      codeUri = 'assets/json/generator/' + this.validationName + '/' + 'validators' + '.json';
+      htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.validationName + '-' + 'validators' + '.json';
+      titleString = "validator";
     }
   
 

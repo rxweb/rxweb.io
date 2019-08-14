@@ -1,5 +1,5 @@
 import { Component,OnInit } from "@angular/core";
-import { DynamicFormBuildConfig, DynamicFormConfiguration, RxFormBuilder } from "@rxweb/reactive-form-validators";
+import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from "@rxweb/reactive-dynamic-forms";
 
 @Component({
     selector: 'app-dynamic-complete',
@@ -7,16 +7,17 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxFormBuilder } from 
 })
 
 export class StepByStepComponent implements OnInit {
-    serverData: Array<{ [key: string]: any }> = [{
-            name:"firstName",
-            type:"textbox"
-        }]
-         viewMode:string = "bootstrap-basic";
-        uiBindings:string[] = ["firstName"];
-        dynamicFormBuildConfig: DynamicFormBuildConfig;
-        constructor(private formBuilder: RxFormBuilder) { }
-          ngOnInit()
-         {
-          this.dynamicFormBuildConfig = this.formBuilder.dynamicForm(this.serverData);
-          }
+    serverData = [{
+        name:"firstName",
+        type:"text"
+    }]
+
+    uiBindings:string[] = ["firstName"];
+    dynamicFormBuildConfig: DynamicFormBuildConfig;
+
+    constructor(private formBuilder: RxDynamicFormBuilder) { }
+      ngOnInit()
+     {
+      this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData,{});
+      }
 }

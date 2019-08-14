@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from "@angular/router";
-import { RxDynamicReactiveFormsModule } from "@rxweb/reactive-form-validators";
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -23,8 +22,9 @@ import { WhatsNewComponent } from './components/whats-new/whats-new.component';
 import { WhatsNextComponent } from './components/whats-next/whats-next.component';
 import { ClipboardModule } from 'ngx-clipboard';
 import { HighlightModule } from 'ngx-highlightjs';
-import { RxwebBootstrapModule } from 'src/assets/examples/dynamic-forms/bootstrap.components';
 import { TitleComponent } from './components/shared/title/title.component';
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+import {RxReactiveFormsModule} from "@rxweb/reactive-form-validators";
 
 @NgModule({
   declarations: [
@@ -32,9 +32,9 @@ import { TitleComponent } from './components/shared/title/title.component';
     HomeComponent,GettingStartedComponent,WhatsNewComponent,WhatsNextComponent, TitleComponent
   ],
   imports: [
-    BrowserModule, FormsModule, RxDynamicReactiveFormsModule, ClipboardModule, HighlightModule.forRoot({ theme: 'default' }),
-    ReactiveFormsModule, HttpModule, HttpClientModule,RxwebBootstrapModule,
-    RouterModule, APP_LAZY_ROUTING, NgAisModule.forRoot(),BrowserAnimationsModule
+    BrowserModule, FormsModule, ClipboardModule, HighlightModule.forRoot({ theme: 'default' }),
+    ReactiveFormsModule, HttpModule, HttpClientModule,
+    RouterModule, APP_LAZY_ROUTING, NgAisModule.forRoot(),BrowserAnimationsModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule
   ],
   providers: [ApplicationBroadcaster, CheckForUpdateService, LogUpdateService, PromptUpdateService],
   exports: [RouterModule],

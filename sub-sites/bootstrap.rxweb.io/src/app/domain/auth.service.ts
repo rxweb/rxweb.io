@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import Auth0Lock from 'auth0-lock';
 import { environment } from 'src/environments/environment';
 
 @Injectable()
@@ -27,45 +26,6 @@ export class AuthService {
     },
   };
 
-  lock = new Auth0Lock(
-    environment.auth0.clientId,
-    environment.auth0.domain,
-    this.auth0Options
-  );
-
-  constructor(private router: Router) {
-    this.lock.on('authenticated', (authResult: any) => {
-      localStorage.setItem('isLoggedIn', "true");
-      this.lock.getUserInfo(authResult.accessToken, (error, profile) => {
-        if (error) {
-          throw new Error(error);
-        }
-        localStorage.setItem('token', authResult.idToken);
-        localStorage.setItem('profile', JSON.stringify(profile));
-        this.router.navigate(['/getting-started']);
-      });
-    });
-
-    this.lock.on('authorization_error', error => {
-      this.lock.show({
-        flashMessage: {
-          type: 'error',
-          text: error.error_description
-        }
-      });
-    });
-  }
-
-  login() {
-    this.lock.show();
-  }
-
-  logout() {
-    this.router.navigate(['/']);
-    localStorage.removeItem('profile');
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('token');
-  }
 
   isAuthenticated() {
     // ...implement logout

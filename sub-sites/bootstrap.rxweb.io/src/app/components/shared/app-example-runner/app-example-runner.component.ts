@@ -62,7 +62,7 @@ export class AppExampleRunnerComponent implements OnInit {
   }
   openStackblitz(){
      var stackBlitz = new StackBlitzService();
-     let form = stackBlitz.buildForm(this.decoratorName,this.exampleName,this.typeName,this.templateDrivenType,this.content,this.title)
+     let form = stackBlitz.buildForm(this.content['notes'],this.decoratorName,this.exampleName,this.typeName,this.templateDrivenType,this.content,this.title)
      document.body.appendChild(form);
      form.submit();
      document.body.removeChild(form);

@@ -60,15 +60,17 @@ export abstract class BaseComponentProvider implements OnDestroy {
         }
         params["content"] = jObject;
         if(refComponentString){
+            debugger;
             let refComponent = refComponentString.split('-');
             params["title"] = element.getAttribute('title');
             if(this.typeName == "template_driven" )
                 params["refComponent"] =this.exampleComponents[this.typeName+"_validation_" + this.templateDrivenType][refComponent[refComponent.length - 1]];
             else
-                params["refComponent"] =this.exampleComponents[this.typeName][refComponent[refComponent.length - 1]];
+                params["refComponent"] =this.exampleComponents["validators"][refComponent[refComponent.length - 1]];
             params["decoratorName"]=refComponent[1];
             params["exampleName"]=refComponent[2];
             params["templateDrivenType"] = this.templateDrivenType;
+            if(this.typeName){
             switch(this.typeName){
                 case "validators":
                     params["typeName"]="validator";
@@ -80,6 +82,10 @@ export abstract class BaseComponentProvider implements OnDestroy {
                     params["typeName"]="templateDriven";
                 break;
             }
+        }
+        else{
+            params["typeName"]="validator";
+        }
         }
         if(type == "app-tabs"){
             params["content"] = this.data;
