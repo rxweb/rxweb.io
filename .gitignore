@@ -43,3 +43,4 @@ Thumbs.db
 /package-lock.json
 /test/dist/assets/json
 /.vs
+/sub-sites/bootstrap.rxweb.io/node_modules

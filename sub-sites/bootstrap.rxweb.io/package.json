@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "^7.1.0",
     "@angular/router": "^7.1.0",
     "@angular/service-worker": "^7.1.4",
-    "@rxweb/reactive-dynamic-forms": "0.0.0-0",
+    "@rxweb/reactive-dynamic-forms": "0.0.0-1",
     "@rxweb/reactive-form-validators": "^1.9.2",
     "angular-instantsearch": "^2.1.0",
     "core-js": "^2.6.5",

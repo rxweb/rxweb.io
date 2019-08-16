@@ -6,5 +6,29 @@ const CONDITIONAL_BINDING_ROUTES: Routes = [
 	path:'conditionalclass',
 	loadChildren: './conditionalclass/conditionalclass.module#ConditionalclassModule',
 },
+{
+	path:'conditionaldescription',
+	loadChildren: './conditionaldescription/conditionaldescription.module#ConditionaldescriptionModule',
+},
+{
+	path:'conditionaldisabled',
+	loadChildren: './conditionaldisabled/conditionaldisabled.module#ConditionaldisabledModule',
+},
+{
+	path:'conditionalhide',
+	loadChildren: './conditionalhide/conditionalhide.module#ConditionalhideModule',
+},
+{
+	path:'conditionallabel',
+	loadChildren: './conditionallabel/conditionallabel.module#ConditionallabelModule',
+},
+{
+	path:'conditionalplaceholder',
+	loadChildren: './conditionalplaceholder/conditionalplaceholder.module#ConditionalplaceholderModule',
+},
+{
+	path:'conditionalreadonly',
+	loadChildren: './conditionalreadonly/conditionalreadonly.module#ConditionalreadonlyModule',
+},
 ];
 export const CONDITIONAL_BINDING_ROUTING: ModuleWithProviders = RouterModule.forChild(CONDITIONAL_BINDING_ROUTES);

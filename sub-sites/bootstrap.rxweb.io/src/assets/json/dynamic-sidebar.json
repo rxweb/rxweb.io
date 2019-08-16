@@ -130,7 +130,6 @@
         },
         {
           "title": "Static Binding",
-          "uri": "static-binding",
           "isOpen": false,
           "isActive": false,
           "otherUri": "static-binding",
@@ -212,37 +211,37 @@
             },
             {
               "title": "description",
-              "uri": "dynamic-forms/description/validators",
+              "uri": "conditional-binding/conditionaldescription",
               "isActive": false,
               "linkTitle": "description"
             },
             {
               "title": "disabled",
-              "uri": "dynamic-forms/disabled/validators",
+              "uri": "conditional-binding/conditionaldisabled",
               "isActive": false,
               "linkTitle": "disabled"
             },
             {
               "title": "hide",
-              "uri": "dynamic-forms/hide/validators",
+              "uri": "conditional-binding/conditionalhide",
               "isActive": false,
               "linkTitle": "hide"
             },
             {
               "title": "label",
-              "uri": "dynamic-forms/label/validators",
+              "uri": "conditional-binding/conditionallabel",
               "isActive": false,
               "linkTitle": "label"
             },
             {
               "title": "placeholder",
-              "uri": "dynamic-forms/placeholder/validators",
+              "uri": "conditional-binding/conditionalplaceholder",
               "isActive": false,
               "linkTitle": "placeholder"
             },
             {
               "title": "readonly",
-              "uri": "dynamic-forms/readonly/validators",
+              "uri": "conditional-binding/conditionalreadonly",
               "isActive": false,
               "linkTitle": "readonly"
             },
