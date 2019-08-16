@@ -13,7 +13,7 @@ export class ConditionalreadonlyConditionalComponent implements OnInit {
         {
             name: 'mode',
             type: 'select',
-    
+            value:1,
             source:[{text:"Edit",value:1},{text:"View",value:2}]  
         },
         {

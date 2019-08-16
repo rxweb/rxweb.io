@@ -5,7 +5,7 @@ export class UserModel extends FormControlConfig {
     private _readonly: boolean;
 
     get readonly() {
-        if (this.controlsConfig.mode.value == 1) {
+        if (this.controlsConfig.mode.value != 1) {
             return true
         }
         else {

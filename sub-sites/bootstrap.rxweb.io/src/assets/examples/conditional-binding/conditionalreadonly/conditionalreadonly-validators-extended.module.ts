@@ -6,7 +6,8 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 
 import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
-import { ConditionalreadonlyConditionalComponent } from './conditional/conditionalplaceholder-conditional.component';
+import { ConditionalreadonlyConditionalComponent } from './conditional/conditionalreadonly-conditional.component';
+
 
 
 
