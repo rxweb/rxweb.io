@@ -2,17 +2,9 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const DYNAMIC_FORMS_ROUTES: Routes = [
-	{
-		path:'stepbystep',
-		loadChildren: './stepbystep/stepbystep.module#StepbystepModule',
-	},
 {
-	path:'customvalidation',
-	loadChildren: './customvalidation/customvalidation.module#CustomvalidationModule',
-},
-{
-	path:'asyncvalidation',
-	loadChildren: './asyncvalidation/asyncvalidation.module#AsyncvalidationModule',
+	path:'stepbystep',
+	loadChildren: './stepbystep/stepbystep.module#StepbystepModule',
 },
 {
 	path:'dynamicresetform',

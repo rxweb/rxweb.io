@@ -63,8 +63,16 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
-      }
-    });
+        if (e.url.includes("/dynamicerrormessagestrategy")) {
+          debugger;
+          ReactiveFormConfig.set(
+            
+            {"validationMessage": {
+               "required": "This field is required"},"reactiveForm": { "errorMessageBindingStrategy": 1 } 
+            });
+            
+        }
+        else{
     ReactiveFormConfig.set(
       {"validationMessage": {
         "allOf": "Please select all options based on the config parameters",
@@ -194,10 +202,13 @@ export class AppComponent implements OnInit {
         "uniqueMessageKey": "Enterred value must be unique",
         "maxTimeMessageKey": "The input time enterred must be less than the value mentioned in config",
         "minTimeMessageKey": "The input time enterred must be greater than the value mentioned in config"
-      }, 
-      // "reactiveForm": { "errorMessageBindingStrategy": 1 } 
+      }
+      
     
     });
+  }
+  }
+});
   }
   
   gitterAside() {
