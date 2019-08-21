@@ -71,12 +71,6 @@
               "linkTitle": "checkbox"
             },
             {
-              "title": "checkbox",
-              "uri": "dynamic-forms/checkbox/validators",
-              "isActive": false,
-              "linkTitle": "checkbox"
-            },
-            {
               "title": "date",
               "uri": "controls/dynamicdate",
               "isActive": false,
