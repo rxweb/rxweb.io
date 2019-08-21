@@ -7402,7 +7402,7 @@ padding: 0.4375rem 0.9375rem;
         z-index: 7;
         overflow: hidden;
         position: absolute;
-        text-align: center;
+      
     }
     
     .main-header {
@@ -7893,5 +7893,16 @@ padding: 0.4375rem 0.9375rem;
     background-repeat: no-repeat;
     background-position: center right calc(.375em + .1875rem);
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+img {
+    border: 0;
+}
+.home-title{
+    text-align: center;
 }
 /*----------- dynamic forms required css ----------*/
