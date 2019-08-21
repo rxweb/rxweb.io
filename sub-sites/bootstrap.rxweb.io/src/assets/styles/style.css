@@ -7787,5 +7787,85 @@ padding: 0.4375rem 0.9375rem;
         line-height: 1.5;
         border-radius: .2rem;
     }
+    .gitter-chat-embed {
+        box-sizing: border-box;
+        z-index: 100005;
+        position: fixed;
+        top: 0;
+        left: 60%;
+        bottom: 0;
+        right: 0;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        background-color: #fff;
+        border-left: 1px solid #333;
+        box-shadow: -12px 0 18px 0 rgba(50, 50, 50, .3);
+        transition: transform .3s cubic-bezier(.16, .22, .22, 1.7);
+    }
+    
+    .gitter-chat-embed-action-bar {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding-bottom: .7em;
+        background: linear-gradient(180deg, #fff 0, #fff 50%, hsla(0, 0%, 100%, 0));
+    }
+    
+    .gitter-chat-embed-loading-wrapper {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: none;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .gitter-chat-embed>iframe {
+        box-sizing: border-box;
+        -ms-flex: 1;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    
+    .gitter-chat-embed-action-bar-item-pop-out {
+        box-sizing: border-box;
+        margin-right: -4px;
+    }
+    
+    .gitter-chat-embed-action-bar-item-collapse-chat {
+        box-sizing: border-box;
+    }
+    
+    button.close {
+        color: gray;
+        margin-right: 20px;
+        font-size: 50px!important;
+    }
+    
+    a.gitter-icon {
+        font-size: 23px;
+        color: gray!important;
+        padding-top: 10px;
+    }
+    
+    a.gitter-icon.i {
+        color: gray!important;
+    }
+    
 /*-------- do not add any css here ---------- */
 

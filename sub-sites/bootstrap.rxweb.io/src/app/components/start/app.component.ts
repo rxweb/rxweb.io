@@ -2,20 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { ApplicationBroadcaster } from '@rx/core';
 import { ReactiveFormConfig } from '@rxweb/reactive-form-validators';
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-
+  gitterAsideShow: boolean = false;
   title = 'bootstrap-rxweb-io';
-
+  gitAsideUrl: SafeResourceUrl;
   isHome = false;
   showFooter = false;
   rightSidebarLinks: any;
 
-  constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster) {
+  constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster,private sanitizer: DomSanitizer) {
+    this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
+   
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
     });
@@ -58,6 +61,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+      }
+    });
     ReactiveFormConfig.set(
       {"validationMessage": {
         "allOf": "Please select all options based on the config parameters",
@@ -193,7 +200,9 @@ export class AppComponent implements OnInit {
     });
   }
   
-
+  gitterAside() {
+    this.gitterAsideShow = !this.gitterAsideShow;
+  }
   homeInit(isHome) {
     this.isHome = isHome;
   }

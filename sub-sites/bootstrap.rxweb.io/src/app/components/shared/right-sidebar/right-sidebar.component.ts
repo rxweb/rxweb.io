@@ -17,14 +17,14 @@ import { Router } from '@angular/router';
 
 export class RightSideBarComponent implements OnInit {
     public feedbackForm: FormGroup
-    sticky:boolean = false;
+    sticky: boolean = false;
     validationName: string;
     mainType: string;
-    toogleOpen:boolean = true;
+    toogleOpen: boolean = true;
     showExample: boolean = true;
-    httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' })};
+    httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     constructor(
-        private http: HttpClient,private router: Router, private formBuilder: RxFormBuilder
+        private http: HttpClient, private router: Router, private formBuilder: RxFormBuilder
     ) {
     }
     @Input('sidebarLinks') sidebarLinks: any = {};
@@ -32,52 +32,37 @@ export class RightSideBarComponent implements OnInit {
     contributorList: any = [];
     gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/";
     @HostListener('window:scroll', ['$event'])
-    handleScroll(){
+    handleScroll() {
         const windowScroll = document.documentElement.scrollTop;
-            if(windowScroll >= 50){
-                this.sticky = true;
-            } else {
-                this.sticky = false;
-            }
+        if (windowScroll >= 50) {
+            this.sticky = true;
+        } else {
+            this.sticky = false;
+        }
     }
-  
+
     ngOnInit(): void {
         var splitedArray = location.pathname.split("/");
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
-        if(splitedArray.length > 0 && splitedArray[1])
-        {
-            switch(splitedArray[1])
-            {
-                case "decorators":
-                    this.gitEditUrl += "docs/reactive-form-validators/decorators/" + splitedArray[2] + ".md"    
-                    break;
-                case "form-validations":
-                    this.gitEditUrl += "docs/reactive-form-validators/validation-decorators/" + splitedArray[2] + ".md"    
-                    break;
-                case "api":
-                    this.gitEditUrl += "docs/reactive-form-validators/api/ReactiveFormConfig.md"    
-                    break;
-                case "community":
-                    this.gitEditUrl += "docs/community/" + splitedArray[2] + ".md"
-                    break;
-                case "getting-started":
-                    this.gitEditUrl += "docs/reactive-form-validators/getting-started.md"    
-                    break;
-                case "sanitization":
-                    this.gitEditUrl += "docs/sanitization/" + splitedArray[2]+".md"    
-                    break
-                case "how-to":
-                    this.gitEditUrl += "docs/how-to/" + splitedArray[2]+".md"    
-                    break
+        if (splitedArray.length > 0 && splitedArray[1]) {
+            switch (splitedArray[1]) {
+               
+                case "static-binding":
+                    this.gitEditUrl += "docs/dynamic-forms/static-binding/" + splitedArray[2] + ".md"
+                case "conditional-binding":
+                    this.gitEditUrl += "docs/dynamic-forms/conditional-binding/" + splitedArray[2] + ".md"
+                case "controls":
+                    this.gitEditUrl += "docs/dynamic-forms/controls/" + splitedArray[2] + ".md"
+                    case "dynamic-forms":
+                            this.gitEditUrl += "docs/dynamic-forms/" + splitedArray[2] + ".md"
             }
         }
-        else if(splitedArray.length > 0 && splitedArray[0]== "changelog"){
-            this.gitEditUrl += "CHANGELOG.md"    
+        else if (splitedArray.length > 0 && splitedArray[0] == "changelog") {
+            this.gitEditUrl += "CHANGELOG.md"
         }
-        if(this.mainType != "community")
-        {
-        this.sidebarLinks.splice(0,1);
+        if (this.mainType != "community") {
+            this.sidebarLinks.splice(0, 1);
         }
         this.showComponent = true;
     }
@@ -90,15 +75,14 @@ export class RightSideBarComponent implements OnInit {
         }
         return false;
     }
-   
+
     routeExample() {
         this.toogleOpen = !this.toogleOpen;
         this.showExample = !this.showExample;
         var splitedArray = location.pathname.split('/');
-        if (splitedArray[4])
-    
-        this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+        if (splitedArray[3])
+            this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
         else
-          this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
-      }
+            this.router.navigate(['/', splitedArray[1], splitedArray[2]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+    }
 }
