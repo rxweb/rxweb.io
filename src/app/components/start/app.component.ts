@@ -286,7 +286,7 @@ export class AppComponent implements OnInit {
 
   }
   iswhyClick() {
-    debugger;
+
     this.isWhy = false;
     if (typeof (Storage) !== "undefined") {
 

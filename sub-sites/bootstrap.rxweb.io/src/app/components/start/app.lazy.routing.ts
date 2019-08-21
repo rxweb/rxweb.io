@@ -27,6 +27,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/dynamic-forms/dynamic-forms.module#DynamicFormsModule',
   },
   {
+    path: 'dynamic-validation',
+    component:DynamicValidationComponent
+  },
+  {
     path: 'static-binding',
     loadChildren: 'src/app/components/static-binding/static-binding.module#StaticBindingModule',
   },

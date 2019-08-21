@@ -70,7 +70,7 @@ export class SideBarComponent implements OnInit {
               }
 
               else if (splitedArray[1].includes('static-binding') || splitedArray[1].includes('conditional-binding') || splitedArray[1].includes('controls')) {
-                debugger;
+               
                 currentArray[0].childrens.forEach(formvalidation => {
                   if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
                     formvalidation.childrens.forEach(element => {

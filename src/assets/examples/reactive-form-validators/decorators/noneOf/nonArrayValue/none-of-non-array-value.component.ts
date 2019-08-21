@@ -17,7 +17,7 @@ export class NoneOfNonArrayValueComponent implements OnInit {
     employeeInfoFormGroup: FormGroup;
     excludedDepartments: string[] = ["HR", "Network", "Sales"];
     ngOnInit() {
-        debugger;
+   
         let employeeInfo = new EmployeeInfo();
         this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);
     }

@@ -4,7 +4,7 @@ export class AsyncCustomValidation extends FormControlConfig {
 
     asyncValidator = (control: AbstractControl) => {
         let promise = new Promise<any>((resolve, reject) => {
-          debugger;
+        
             if(control.value == "India")
                 resolve(null);
             else

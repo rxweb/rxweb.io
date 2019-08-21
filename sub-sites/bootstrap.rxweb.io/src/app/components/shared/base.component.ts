@@ -60,7 +60,7 @@ export abstract class BaseComponentProvider implements OnDestroy {
         }
         params["content"] = jObject;
         if(refComponentString){
-            debugger;
+           
             let refComponent = refComponentString.split('-');
             params["title"] = element.getAttribute('title');
             if(this.typeName == "template_driven" )

@@ -249,12 +249,7 @@
               "isActive": false,
               "linkTitle": "conditionalreadonly"
             },
-            {
-              "title": "source",
-              "uri": "dynamic-forms/source/validators",
-              "isActive": false,
-              "linkTitle": "source"
-            },
+
             {
               "title": "value",
               "uri": "conditional-binding/conditionalvalue",
@@ -352,29 +347,7 @@
             }
             
           ]
-        },
-        {
-          "title": "File",
-          "isOpen": false,
-          "isActive": false,
-          "childrens": [
-            {
-              "title": "file",
-              "uri": "/dynamic-validation?validator=file",
-              "isActive": false
-            },
-            {
-              "title": "fileSize",
-              "uri": "/dynamic-validation?validator=fileSize",
-              "isActive": false
-            },
-            {
-              "title": "image",
-              "uri": "/dynamic-validation?validator=image",
-              "isActive": false
-            }
-          ]
-        },
+        },  
         {
           "title": "Numeric",
           "isOpen": false,

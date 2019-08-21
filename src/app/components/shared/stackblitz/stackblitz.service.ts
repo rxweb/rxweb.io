@@ -33,7 +33,7 @@ export class StackBlitzService {
       componentName = `${this.pascalCase(validationName)}${this.pascalCase(exampleName)}Component`;
     }
     for (var fileName in FILES) {
-      debugger;
+
       let fileContent = FILES[fileName]
       fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
       fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
@@ -74,7 +74,7 @@ export class StackBlitzService {
         }
         else if(validationName == "pattern"){
           if(exampleName == "complete"){
-            debugger;
+        
             configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
             configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
             var expressionArray = VALIDATION_MESSAGES["expression"]
