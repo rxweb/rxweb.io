@@ -15,6 +15,13 @@
       "otherUri": "dynamic-forms",
       "childrens": [
         {
+          "title": "Install the packages",
+          "uri": "dynamic-forms/stepbystep#installpackage",
+          "isActive": false,
+          "linkTitle": "stepbystep",
+          "refUri": "installpackage"
+        },
+        {
           "title": "Register The Module",
           "uri": "dynamic-forms/stepbystep#registerthemodule",
           "isActive": false,
@@ -60,6 +67,12 @@
             {
               "title": "checkbox",
               "uri": "controls/checkbox",
+              "isActive": false,
+              "linkTitle": "checkbox"
+            },
+            {
+              "title": "checkbox",
+              "uri": "dynamic-forms/checkbox/validators",
               "isActive": false,
               "linkTitle": "checkbox"
             },
@@ -244,15 +257,15 @@
             },
             {
               "title": "source",
-              "uri": "conditional-binding/source",
+              "uri": "dynamic-forms/source/validators",
               "isActive": false,
               "linkTitle": "source"
             },
             {
               "title": "value",
-              "uri": "conditional-binding/value",
+              "uri": "conditional-binding/conditionalvalue",
               "isActive": false,
-              "linkTitle": "value"
+              "linkTitle": "conditionalvalue"
             }
           ]
         }
@@ -300,19 +313,18 @@
       "title": "Reset Form",
       "isOpen": false,
       "isActive": false,
-      "uri": "dynamic-forms/resetform"
+      "uri": "dynamic-forms/dynamicresetform"
     },
     {
       "title": "Dynamic Validation",
+      "otherUri": "dynamic-validation",
       "isOpen": false,
       "isActive": false,
-      "otherUri": "dynamic-validation",
       "childrens": [
         {
           "title": "Date and time",
           "isOpen": false,
           "isActive": false,
-          "otherUri": "dynamic-validation",
           "childrens": [
             {
               "title": "date",
@@ -628,7 +640,7 @@
       "title": "Error Messaging Strategy",
       "isOpen": false,
       "isActive": false,
-      "uri": "dynamic-forms/errormessagestrategy"
+      "uri": "dynamic-forms/dynamicerrormessagestrategy"
     }
   ]
 }
