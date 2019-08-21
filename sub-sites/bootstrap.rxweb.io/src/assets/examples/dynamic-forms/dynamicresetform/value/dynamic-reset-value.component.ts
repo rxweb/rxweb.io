@@ -12,7 +12,7 @@ export class DynamicresetvalueComponent implements OnInit {
             name:"firstName",
             type:"text",
             ui:{
-              "class":["form-control-lg"]
+              "label":"FirstName"
             }
         }]
     

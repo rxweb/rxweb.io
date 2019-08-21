@@ -1,7 +1,7 @@
 <div id="wrapper" *ngIf="showComponent">
     <div class="content">
         <div class="title-bar">
-            <p> The most powerful validation framework for angular based enterprise application.</p>
+            <p> Build model-driven dynamic forms for angular enterprise application.</p>
         </div>
 
         <div class="bg-white border-radius" style="margin-top:22px;">
@@ -15,15 +15,15 @@
                                     <div class='col-lg-12'>
                                         <ul class="nav nav-tabs">
                                             <li [class.active]="mainTab=='installation'"
-                                                (click)="mainTab='installation'"><a>Installation</a></li>
+                                                (click)="mainTab='installation'"><a>1) Installation</a></li>
                                             <li [class.active]="mainTab=='validator'" (click)="mainTab='validator'">
-                                                <a>Register Modules</a></li>
+                                                <a>2) Register Modules</a></li>
                                             <li [class.active]="mainTab=='decorator'" (click)="mainTab='decorator'">
-                                                <a>Creating Form</a></li>
+                                                <a>3) Creating Form</a></li>
                                             <li [class.active]="mainTab=='template-driven'"
-                                                (click)="mainTab='template-driven'"><a>Html Implementation</a></li>
+                                                (click)="mainTab='template-driven'"><a>4) Html Implementation</a></li>
                                             <li [class.active]="mainTab=='working-example'"
-                                                (click)="mainTab='working-example'"><a>Working Example</a></li>
+                                                (click)="mainTab='working-example'"><a>5) Working Example</a></li>
                                         </ul>
                                         <div class="tab-content p-4">
                                             <div class="tab-pane active" *ngIf="mainTab=='installation'">

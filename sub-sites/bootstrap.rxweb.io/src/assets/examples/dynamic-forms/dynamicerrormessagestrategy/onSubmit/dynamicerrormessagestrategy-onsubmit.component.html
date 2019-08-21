@@ -2,8 +2,6 @@
  
     <div viewMode="basic" [rxwebDynamicForm]="dynamicFormBuildConfig" [uiBindings]="uiBindings">
     </div>    
-        <small class="form-text text-danger" *ngIf="dynamicFormBuildConfig.formGroup.controls.firstName.errors">{{dynamicFormBuildConfig.formGroup.controls.firstName.errorMessage}} 
-        </small>
      <br/>
     <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
    

@@ -5,7 +5,7 @@ import { ReactiveFormConfig } from '@rxweb/reactive-form-validators';
 import { ApplicationBroadcaster } from '@rx/core';
 import { VALIDATOR_DESCRIPTION } from './validator-description'
 import { Router, ActivatedRoute } from '@angular/router';
-
+var xyz = "abc";
 
 
 @Component({
@@ -48,8 +48,9 @@ export class DynamicValidationComponent {
     onChange(){
         this.bindForm = false;
         setTimeout(() => {
+            debugger;
             this.uiBindings = [];
-            this.serverData = this.validatorWiseServerData[this.validator];
+            xyz = this.serverData = this.validatorWiseServerData[this.validator];
             this.serverData.forEach(t => {
                 if (t.validators)
                     this.uiBindings.push(t.name);

@@ -1,12 +1,6 @@
 {
   "links": [
-    {
-      "title": "Getting Started",
-      "uri": "getting-started",
-      "otherUri": "getting-started",
-      "isOpen": false,
-      "isActive": false
-    },
+    
     {
       "title": "Step-by-Step",
       "uri": "dynamic-forms/stepbystep",
@@ -48,6 +42,13 @@
           "isActive": false,
           "linkTitle": "stepbystep",
           "refUri": "htmlimplementation"
+        },
+        {
+          "title": "Working Example",
+          "uri": "dynamic-forms/stepbystep#workingexample",
+          "isActive": false,
+          "linkTitle": "stepbystep",
+          "refUri": "workingexample"
         }
       ]
     },
@@ -58,7 +59,7 @@
       "isOpen": false,
       "childrens": [
         {
-          "title": "controls",
+          "title": "Controls",
           "uri": null,
           "isOpen": false,
           "isActive": false,
@@ -280,19 +281,6 @@
         {
           "title": "customized design",
           "uri": "dynamic-forms/customizeddesign",
-          "isActive": false,
-          "linkTitle": null
-        }
-      ]
-    },
-    {
-      "title": "Power of Dynamic Form",
-      "isOpen": false,
-      "isActive": false,
-      "childrens": [
-        {
-          "title": "bootstrap forms",
-          "uri": "dynamic-forms/bootstrapforms",
           "isActive": false,
           "linkTitle": null
         }
@@ -608,6 +596,22 @@
       "isOpen": false,
       "isActive": false,
       "uri": "dynamic-forms/dynamicerrormessagestrategy"
-    }
+    },
+        {
+          "title": "How-to",
+          "uri": null,
+          "isOpen": false,
+          "isActive": false,
+          "otherUri": "how-to",
+          "childrens": [
+            {
+              "title": "Quick Start",
+              "uri": "getting-started",
+              "isActive": false,
+              "linkTitle": "getting-started"
+            }
+          ]        
+     }
+    
   ]
 }
