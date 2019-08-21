@@ -5748,9 +5748,26 @@ pre {
     font-size: 14px;
     color: #0f96e4;
 }
+input.is-invalid{
+    background-color:#DA5235;
+    color:white;
+}
+.invalid-feedback{
+    color:#DA5235;
+
+}
 input.ng-invalid{
     background-color:#DA5235;
     color:white;
+  }
+  .bd-example {
+    position: relative;
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    margin: 1rem -15px 0;
+    border: solid #f7f7f9;
+    border-width: .2rem;
   }
   .text-blue{
       color:#007dc5 !important;

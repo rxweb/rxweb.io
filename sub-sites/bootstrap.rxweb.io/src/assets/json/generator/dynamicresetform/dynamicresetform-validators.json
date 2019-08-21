@@ -1,0 +1,27 @@
+{
+      
+    "controlsOnly": {
+        "notes": [],
+        "component": "import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\nimport {ResetFormType } from '@rxweb/reactive-form-validators'\r\n\r\n@Component({\r\n    selector: 'app-dynamicresetform-controlsOnly',\r\n    templateUrl: './dynamicresetform-controls-only.component.html'\r\n})\r\n\r\nexport class DynamicresetformControlsOnlyComponent implements OnInit {\r\n    serverData = [{\r\n            name:\"firstName\",\r\n            type:\"text\",\r\n            ui:{\r\n              \"class\":[\"form-control-lg\"]\r\n            }\r\n        }]\r\n    \r\n        uiBindings:string[] = [\"firstName\"];\r\n        dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n        constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n          ngOnInit()\r\n         {\r\n          this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData,{});\r\n        \r\n          }\r\n          resetForm(){          \r\n            this.dynamicFormBuildConfig.formGroup.resetForm({resetType:ResetFormType.ControlsOnly})\r\n            }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\">\r\n    </div>      \r\n    <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n    <button  class=\"btn btn-primary\" (click)=\"resetForm()\">Reset</button>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "definedPropsOnly": {
+        "notes": [],
+        "component": "import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\nimport {ResetFormType } from '@rxweb/reactive-form-validators'\r\n\r\n@Component({\r\n    selector: 'app-dynamicresetform-definedPropsOnly',\r\n    templateUrl: './dynamic-reset-defined-props-only.component.html'\r\n})\r\n\r\nexport class DynamicResetDefinedPropsOnlyComponent  implements OnInit {\r\n    serverData = [{\r\n            name:\"firstName\",\r\n            type:\"text\",\r\n            ui:{\r\n              \"class\":[\"form-control-lg\"]\r\n            }\r\n        }]\r\n    \r\n        uiBindings:string[] = [\"firstName\"];\r\n        dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n        constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n          ngOnInit()\r\n         {\r\n          this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData,{});\r\n        \r\n          }\r\n          resetForm(){          \r\n            this.dynamicFormBuildConfig.formGroup.resetForm({resetType:ResetFormType.DefinedPropsOnly,value:{ firstName: 'John' }})\r\n            }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\">\r\n    </div>      \r\n    <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n    <button  class=\"btn btn-primary\" (click)=\"resetForm()\">Reset</button>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "value":{
+        "notes": [],
+        "component": "import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\nimport {ResetFormType } from '@rxweb/reactive-form-validators'\r\n\r\n@Component({\r\n    selector: 'app-dynamicresetform-value',\r\n    templateUrl: './dynamic-reset-value.component.html'\r\n})\r\n\r\nexport class DynamicresetvalueComponent implements OnInit {\r\n    serverData = [{\r\n            name:\"firstName\",\r\n            type:\"text\",\r\n            ui:{\r\n              \"class\":[\"form-control-lg\"]\r\n            }\r\n        }]\r\n    \r\n        uiBindings:string[] = [\"firstName\"];\r\n        dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n        constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n          ngOnInit()\r\n         {\r\n          this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData,{});\r\n        \r\n          }\r\n          resetForm(){          \r\n            this.dynamicFormBuildConfig.formGroup.resetForm({ value: { firstName: 'John' } });\r\n            }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\">\r\n    </div>      \r\n    <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n    <button  class=\"btn btn-primary\" (click)=\"resetForm()\">Reset</button>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }    
+}

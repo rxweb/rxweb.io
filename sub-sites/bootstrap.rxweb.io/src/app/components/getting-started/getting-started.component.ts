@@ -11,7 +11,8 @@ import { Http } from '@angular/http';
   rightSidebarLinks: any = [{ "id": "getting-started", "title": "Getting Started", "subLink": null }];  
   pageTitle:any = this.rightSidebarLinks[0];
   titleData: any = { codeContent: {} };
-
+  mainTab: string = "installation"
+  
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private http: Http
     ) {
       this.applicationBroadCaster.topSubscriber.subscribe(t => {
