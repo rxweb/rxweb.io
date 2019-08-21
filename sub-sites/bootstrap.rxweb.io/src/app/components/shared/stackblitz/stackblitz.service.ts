@@ -11,7 +11,6 @@ export class StackBlitzService {
   }
 
   buildForm(category:string,validationName: string, exampleName: string, validationType: string, templateDrivenType: string, exampleContent: { [key: string]: any }, title?: string) {
-    debugger;
     if (title == null)
       title = category + ":" +validationName;
     let exampleComponentFileName = `src/app/${this.parseName(validationName)}-${this.parseName(exampleName)}.component.ts`
@@ -35,7 +34,7 @@ export class StackBlitzService {
           configObject['internationalization'] = {};
           configObject['internationalization'] = VALIDATION_MESSAGES["internationalization"]
         }
-        else if(validationName == "errormessagestrategy")
+        else if(validationName == "dynamicerrormessagestrategy")
         {
           configObject['reactiveForm'] = VALIDATION_MESSAGES["reactiveForm"]
           configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];

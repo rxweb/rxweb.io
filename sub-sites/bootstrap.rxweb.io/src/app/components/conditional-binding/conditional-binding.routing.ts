@@ -30,5 +30,9 @@ const CONDITIONAL_BINDING_ROUTES: Routes = [
 	path:'conditionalreadonly',
 	loadChildren: './conditionalreadonly/conditionalreadonly.module#ConditionalreadonlyModule',
 },
+{
+	path:'conditionalvalue',
+	loadChildren: './conditionalvalue/conditionalvalue.module#ConditionalvalueModule',
+},
 ];
 export const CONDITIONAL_BINDING_ROUTING: ModuleWithProviders = RouterModule.forChild(CONDITIONAL_BINDING_ROUTES);

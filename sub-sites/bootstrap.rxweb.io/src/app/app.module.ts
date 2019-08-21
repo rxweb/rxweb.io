@@ -25,10 +25,12 @@ import { HighlightModule } from 'ngx-highlightjs';
 import { TitleComponent } from './components/shared/title/title.component';
 import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
 import {RxReactiveFormsModule} from "@rxweb/reactive-form-validators";
+import { DynamicValidationComponent } from './components/dynamic-validation/dynamic-validation.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,SideBarComponent,TopBarComponent,FooterComponent,
+    AppComponent,SideBarComponent,TopBarComponent,FooterComponent,DynamicValidationComponent,
     HomeComponent,GettingStartedComponent,WhatsNewComponent,WhatsNextComponent, TitleComponent
   ],
   imports: [
