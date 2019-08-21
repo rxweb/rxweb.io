@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class RadioStaticComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{
         name: "gender",
          type: "radio",
@@ -15,9 +16,13 @@ export class RadioStaticComponent implements OnInit {
             label: 'Gender'                            
         }
     }]
+    
     uiBindings: string[] = ["gender"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit()
     {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});

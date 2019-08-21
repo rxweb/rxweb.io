@@ -8,6 +8,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 
 
 export class DynamicfileMultipleComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{
         name: "idCardImage",
         type: "file",
@@ -20,9 +21,13 @@ export class DynamicfileMultipleComponent implements OnInit {
             label: 'Id Card Photos',
         }
     }]
+    
     uiBindings: string[] = ["idCardImage"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
     }

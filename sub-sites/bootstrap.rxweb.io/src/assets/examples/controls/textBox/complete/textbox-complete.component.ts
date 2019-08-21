@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class TextboxCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [
         {
             name: "firstName",
@@ -16,9 +17,13 @@ export class TextboxCompleteComponent implements OnInit {
             }
         }
     ]
+    
     uiBindings: string[] = ["firstName"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+   
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
     }

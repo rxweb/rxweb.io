@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class CheckboxInlineComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [
         {
             name: "skills",
@@ -19,9 +20,13 @@ export class CheckboxInlineComponent implements OnInit {
             }
         }
     ]
+
     uiBindings: string[] = ["skills"];
+
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
     }

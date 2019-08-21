@@ -7,7 +7,9 @@ type: simple
 linktitle: dynamicdate
 ---
 
-<div class="title-bar"><p>To create a formControl of type date, you need to mention the formControl name and type in the `serverData` and pass it in the `formGroup` method of `RxDynamicFormBuilder`.</p></div>
+<div class="title-bar"><p>
+
+To create a formControl with type date in dynamic forms, you just need to mention `type: "date"` in the server response.</p></div>
 
 # Example
 

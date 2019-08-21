@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class DynamicfileCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{
         name: "profilePhoto",
         type: "file",
@@ -14,9 +15,13 @@ export class DynamicfileCompleteComponent implements OnInit {
             label: 'Profile Photo'
         }
     }]
+    
     uiBindings: string[] = ["profilePhoto"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
     }

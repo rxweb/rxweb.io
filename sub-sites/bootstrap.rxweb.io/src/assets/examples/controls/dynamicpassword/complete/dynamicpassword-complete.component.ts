@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class DynamicpasswordCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{
         name: "password",
         type: "password",
@@ -14,9 +15,13 @@ export class DynamicpasswordCompleteComponent implements OnInit {
             label: 'Password'
         }
     }]
+    
     uiBindings: string[] = ["password"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
     }

@@ -3,19 +3,20 @@ import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
-import { DropdownCascadingComponent } from './cascading/dropdown-cascading.component';
+import { DropdownSyncComponent } from './sync/dropdown-sync.component';
 import { DropdownStaticComponent } from './static/dropdown-static.component';
 import { DropdownValueComponent } from './value/dropdown-value.component';
 import { RxReactiveDynamicFormsModule } from '@rxweb/reactive-dynamic-forms'
 import { DropdownMultiselectComponent } from './multiselect/dropdown-multiselect.component';
+import { DropdownAsyncComponent } from './async/dropdown-async.component';
 
 
 @NgModule({
   declarations: [
-    DropdownStaticComponent,DropdownCascadingComponent,DropdownValueComponent,DropdownMultiselectComponent
+    DropdownStaticComponent, DropdownMultiselectComponent, DropdownValueComponent, DropdownAsyncComponent, DropdownSyncComponent
   ],
 entryComponents: [
-    DropdownStaticComponent,DropdownCascadingComponent,DropdownValueComponent,DropdownMultiselectComponent
+    DropdownStaticComponent, DropdownMultiselectComponent, DropdownValueComponent, DropdownAsyncComponent, DropdownSyncComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
@@ -24,7 +25,7 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-    DropdownStaticComponent,DropdownCascadingComponent,DropdownValueComponent,DropdownMultiselectComponent
+    DropdownStaticComponent, DropdownMultiselectComponent, DropdownValueComponent, DropdownAsyncComponent, DropdownSyncComponent
   ],
 
 })

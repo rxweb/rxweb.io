@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class DynamicurlCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{
         name: "url",
         type: "url",
@@ -14,9 +15,13 @@ export class DynamicurlCompleteComponent implements OnInit {
             label: 'Website Url'
         }
     }]
+    
     uiBindings: string[] = ["url"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
     }

@@ -8,9 +8,8 @@ linktitle: customvalidation
 
 <div class="title-bar"><p>
 
-If you want to apply your custom validation on the particular formControl of your dynamically generated form, for that you just have to set the `modelName` for the particular formControl in the `serverData` and bind this `modelName` and your custom validation name in the `model` property of `controlConfigModels`. Set this complete object to `DynamicFormConfiguration` object. 
+To apply custom validation on the particular formControl, you need to pass the `modelName` for the formControl and bind custom validation name in the `model` property of `controlConfigModels`.
 </p></div>
-
 
 # Example
 

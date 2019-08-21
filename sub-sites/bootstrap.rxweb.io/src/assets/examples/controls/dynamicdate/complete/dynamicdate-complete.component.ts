@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class DynamicdateCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{
             name: "dateOfBirth",
              type: "date",
@@ -15,9 +16,13 @@ export class DynamicdateCompleteComponent implements OnInit {
             }
         
     }]
+    
     uiBindings: string[] = ["dateOfBirth"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit()
     {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});

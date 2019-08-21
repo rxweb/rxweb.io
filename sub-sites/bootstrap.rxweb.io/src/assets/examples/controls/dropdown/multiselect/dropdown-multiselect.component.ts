@@ -8,6 +8,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 
 
 export class DropdownMultiselectComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{
         name: "hobbies",
         type: "select",
@@ -17,9 +18,13 @@ export class DropdownMultiselectComponent implements OnInit {
             label: 'Hobbies',
         }
     }]
+
     uiBindings: string[] = ["hobbies"];
+
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
     }

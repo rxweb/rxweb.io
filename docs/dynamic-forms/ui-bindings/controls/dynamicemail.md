@@ -7,7 +7,9 @@ type: simple
 linktitle: dynamicemail
 ---
 
-<div class="title-bar"><p>To create a formControl of type email, you need to mention the formControl name and type in the `serverData` and pass it in the `formGroup` method of `RxDynamicFormBuilder`.</p></div>
+<div class="title-bar"><p>
+
+To create a formControl with type email in dynamic forms, you just need to mention `type: "email"` in the server response.</p></div>
 
 # Example
 

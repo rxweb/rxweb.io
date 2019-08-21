@@ -6,8 +6,8 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
     templateUrl: './dropdown-value.component.html'
 })
 
-
 export class DropdownValueComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{        
             name: "department",
             type: "select",
@@ -21,12 +21,15 @@ export class DropdownValueComponent implements OnInit {
                             
             }
     }]
+
     uiBindings:string[] = ["department"];
+
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+
     ngOnInit()
     {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
-        console.log(this.dynamicFormBuildConfig.formGroup.controls.department)
     }
 }
