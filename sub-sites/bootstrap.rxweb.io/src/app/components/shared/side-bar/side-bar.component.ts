@@ -23,17 +23,29 @@ export class SideBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
-      debugger;
       this.links = response.links;
-      var splitedArray = location.pathname.split('#')[0].split('/')
+      var splitedArray = location.pathname.split('#')[0].split('/');
       if (splitedArray[1]) {
-        var currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);
+        var currentArray;
+        if (splitedArray[1] == "controls" || splitedArray[1] == "static-binding" || splitedArray[1] == "conditional-binding") {
+          var parentElement = this.links.filter(a => a.otherUri == 'ui-bindings');
+          if (parentElement) {
+            parentElement[0].isActive = true;
+            parentElement[0].isOpen = true;
+            currentArray = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[1])
+          }
+          console.log(parentElement)
+        }
+        else {
+          currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);
+        }
+
         if (currentArray && currentArray.length > 0) {
           currentArray[0].isActive = true;
           currentArray[0].isOpen = true;
           if (splitedArray[2]) {
             if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-              if (splitedArray[1].includes('static-binding')) {
+              if (splitedArray[1].includes('static-binding') || splitedArray[1].includes('conditional-binding') || splitedArray[1].includes('controls')) {
                 var currentObj;
                 if (currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]).length != 0) {
                   currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2])
@@ -56,15 +68,9 @@ export class SideBarComponent implements OnInit {
                   }
                 }
               }
-              else if (splitedArray[1].includes('decorators') || splitedArray[1].includes('sanitization')) {
-                var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
-                if (currentObj && currentObj.length > 0) {
-                  currentObj[0].isActive = true;
-                  currentObj[0].isOpen = true;
-                }
-              }
-              else if (splitedArray[1].includes('static-binding')) {
-                     debugger;
+
+              else if (splitedArray[1].includes('static-binding') || splitedArray[1].includes('conditional-binding') || splitedArray[1].includes('controls')) {
+                debugger;
                 currentArray[0].childrens.forEach(formvalidation => {
                   if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
                     formvalidation.childrens.forEach(element => {
@@ -77,6 +83,29 @@ export class SideBarComponent implements OnInit {
                     });
                   }
                 })
+              }
+            }
+          }
+          else if (splitedArray[1].includes("dynamic-validation")) {
+            var querystringArray = location.href.split('=');
+            var currentObj, parentElement;
+            if (querystringArray[1]) {
+
+              currentArray[0].childrens.forEach(element => {
+                if (element.childrens) {
+                  if (element.childrens.filter(a => a.title == querystringArray[1]).length != 0) {
+                    currentObj = element.childrens.filter(a => a.title == querystringArray[1])
+                    parentElement = element;
+                  }
+                }
+              });
+              if (parentElement) {
+                parentElement.isActive = true;
+                parentElement.isOpen = true;
+              }
+              if (currentObj && currentObj.length > 0) {
+                currentObj[0].isActive = true;
+                currentObj[0].isOpen = true;
               }
             }
           }
@@ -107,7 +136,7 @@ export class SideBarComponent implements OnInit {
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;
-        element.isOpen = false;
+        link.uri != null && link.otherUri != null ? null : element.isOpen = false;
         if (element.childrens && element.childrens.length > 0) {
           element.childrens.forEach(subElement => {
             subElement.isActive = false;

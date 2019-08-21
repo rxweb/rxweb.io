@@ -4,6 +4,7 @@ import { HomeComponent } from '../home/home.component';
 import { GettingStartedComponent } from '../getting-started/getting-started.component';
 import { WhatsNewComponent } from '../whats-new/whats-new.component';
 import { WhatsNextComponent } from '../whats-next/whats-next.component';
+import { DynamicValidationComponent } from '../dynamic-validation/dynamic-validation.component';
 
 const APP_LAZY_ROUTES: Routes = [
   {
@@ -13,7 +14,7 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'dynamic-forms/getting-started', component: GettingStartedComponent
+    path: 'getting-started', component: GettingStartedComponent
   },
   {
     path: 'whats-new', component: WhatsNewComponent
@@ -32,6 +33,10 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'conditional-binding',
     loadChildren: 'src/app/components/conditional-binding/conditional-binding.module#ConditionalBindingModule',
+  },
+  {
+    path: 'controls',
+    loadChildren: 'src/app/components/controls/controls.module#ControlsModule',
   }
 ]
 
