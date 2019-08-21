@@ -14,7 +14,7 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'dynamic-forms/getting-started', component: GettingStartedComponent
+    path: 'getting-started', component: GettingStartedComponent
   },
   {
     path: 'whats-new', component: WhatsNewComponent
@@ -35,10 +35,9 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/conditional-binding/conditional-binding.module#ConditionalBindingModule',
   },
   {
-    path:'dynamic-validation',
-    component:DynamicValidationComponent
+    path: 'controls',
+    loadChildren: 'src/app/components/controls/controls.module#ControlsModule',
   }
-  
 ]
 
 export const APP_LAZY_ROUTING: ModuleWithProviders = RouterModule.forRoot(APP_LAZY_ROUTES, { 

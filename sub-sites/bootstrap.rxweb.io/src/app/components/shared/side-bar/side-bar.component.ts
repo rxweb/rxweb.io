@@ -23,10 +23,8 @@ export class SideBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
-      debugger;
       this.links = response.links;
       var splitedArray = location.pathname.split('#')[0].split('/');
-
       if (splitedArray[1]) {
         var currentArray;
         if (splitedArray[1] == "controls" || splitedArray[1] == "static-binding" || splitedArray[1] == "conditional-binding") {

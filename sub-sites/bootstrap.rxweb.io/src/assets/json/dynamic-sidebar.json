@@ -2,9 +2,9 @@
   "links": [
     {
       "title": "Getting Started",
-      "uri": "dynamic-forms/getting-started",
+      "uri": "getting-started",
       "otherUri": "getting-started",
-      "isOpen": true,
+      "isOpen": false,
       "isActive": false
     },
     {
@@ -32,19 +32,22 @@
           "title": "Design The Json",
           "uri": "dynamic-forms/stepbystep#designthejson",
           "isActive": false,
-          "linkTitle": "stepbystep"
+          "linkTitle": "stepbystep",
+          "refUri": "designthejson"
         },
         {
           "title": "Create The Form",
           "uri": "dynamic-forms/stepbystep#createtheform",
           "isActive": false,
-          "linkTitle": "stepbystep"
+          "linkTitle": "stepbystep",
+          "refUri": "createtheform"
         },
         {
           "title": "Html Implementation",
           "uri": "dynamic-forms/stepbystep#htmlimplementation",
           "isActive": false,
-          "linkTitle": "stepbystep"
+          "linkTitle": "stepbystep",
+          "refUri": "htmlimplementation"
         }
       ]
     },
@@ -63,75 +66,75 @@
           "childrens": [
             {
               "title": "checkbox",
-              "uri": "dynamic-forms/checkbox",
+              "uri": "controls/checkbox",
               "isActive": false,
               "linkTitle": "checkbox"
             },
             {
               "title": "checkbox",
-              "uri": "dynamic-forms/checkbox",
+              "uri": "dynamic-forms/checkbox/validators",
               "isActive": false,
               "linkTitle": "checkbox"
             },
             {
               "title": "date",
-              "uri": "dynamic-forms/date",
+              "uri": "controls/dynamicdate",
               "isActive": false,
-              "linkTitle": "date"
+              "linkTitle": "dynamicdate"
             },
             {
               "title": "dropdown",
-              "uri": "dynamic-forms/dropdown",
+              "uri": "controls/dropdown",
               "isActive": false,
               "linkTitle": "dropdown"
             },
             {
               "title": "email",
-              "uri": "dynamic-forms/email",
+              "uri": "controls/dynamicemail",
               "isActive": false,
-              "linkTitle": "email"
+              "linkTitle": "dynamicemail"
             },
             {
               "title": "file",
-              "uri": "dynamic-forms/file",
+              "uri": "controls/dynamicfile",
               "isActive": false,
-              "linkTitle": "file"
+              "linkTitle": "dynamicfile"
             },
             {
               "title": "password",
-              "uri": "dynamic-forms/password",
+              "uri": "controls/dynamicpassword",
               "isActive": false,
-              "linkTitle": "password"
+              "linkTitle": "dynamicpassword"
             },
             {
               "title": "radio",
-              "uri": "dynamic-forms/radio",
+              "uri": "controls/radio",
               "isActive": false,
               "linkTitle": "radio"
             },
             {
               "title": "range",
-              "uri": "dynamic-forms/range",
+              "uri": "controls/dynamicrange",
               "isActive": false,
-              "linkTitle": "range"
+              "linkTitle": "dynamicrange"
             },
             {
               "title": "textarea",
-              "uri": "dynamic-forms/textarea",
+              "uri": "controls/textarea",
               "isActive": false,
               "linkTitle": "textarea"
             },
             {
               "title": "textbox",
-              "uri": "dynamic-forms/textbox",
+              "uri": "controls/textbox",
               "isActive": false,
               "linkTitle": "textbox"
             },
             {
               "title": "url",
-              "uri": "dynamic-forms/url",
+              "uri": "controls/dynamicurl",
               "isActive": false,
-              "linkTitle": "url"
+              "linkTitle": "dynamicurl"
             }
           ]
         },
@@ -208,55 +211,61 @@
           "uri": null,
           "isOpen": false,
           "isActive": false,
-          "otherUri": "static",
+          "otherUri": "conditional-binding",
           "childrens": [
             {
               "title": "class",
               "uri": "conditional-binding/conditionalclass",
               "isActive": false,
-              "linkTitle": "class"
+              "linkTitle": "conditionalclass"
             },
             {
               "title": "description",
               "uri": "conditional-binding/conditionaldescription",
               "isActive": false,
-              "linkTitle": "description"
+              "linkTitle": "conditionaldescription"
             },
             {
               "title": "disabled",
               "uri": "conditional-binding/conditionaldisabled",
               "isActive": false,
-              "linkTitle": "disabled"
+              "linkTitle": "conditionaldisabled"
             },
             {
               "title": "hide",
               "uri": "conditional-binding/conditionalhide",
               "isActive": false,
-              "linkTitle": "hide"
+              "linkTitle": "conditionalhide"
             },
             {
               "title": "label",
               "uri": "conditional-binding/conditionallabel",
               "isActive": false,
-              "linkTitle": "label"
+              "linkTitle": "conditionallabel"
             },
             {
               "title": "placeholder",
               "uri": "conditional-binding/conditionalplaceholder",
               "isActive": false,
-              "linkTitle": "placeholder"
+              "linkTitle": "conditionalplaceholder"
             },
             {
               "title": "readonly",
               "uri": "conditional-binding/conditionalreadonly",
               "isActive": false,
-              "linkTitle": "readonly"
+              "linkTitle": "conditionalreadonly"
+            },
+            {
+              "title": "source",
+              "uri": "dynamic-forms/source/validators",
+              "isActive": false,
+              "linkTitle": "source"
             },
             {
               "title": "value",
               "uri": "conditional-binding/conditionalvalue",
               "isActive": false,
-              "linkTitle": "value"
+              "linkTitle": "conditionalvalue"
             }
           ]
         }
@@ -619,13 +628,13 @@
       "title": "Async Validation",
       "isOpen": false,
       "isActive": false,
-      "uri": "dynamic-forms/asyncvalidations"
+      "uri": "dynamic-forms/asyncvalidation"
     },
     {
       "title": "Custom Validation",
       "isOpen": false,
       "isActive": false,
-      "uri": "dynamic-forms/customvalidations"
+      "uri": "dynamic-forms/customvalidation"
     },
     {
       "title": "Error Messaging Strategy",
