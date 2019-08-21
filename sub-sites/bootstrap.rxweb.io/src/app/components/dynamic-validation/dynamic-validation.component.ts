@@ -48,6 +48,8 @@ export class DynamicValidationComponent {
     onChange(){
         this.bindForm = false;
         setTimeout(() => {
+            debugger;
+            this.uiBindings = [];
             this.serverData = this.validatorWiseServerData[this.validator];
             this.serverData.forEach(t => {
                 if (t.validators)
