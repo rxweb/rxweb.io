@@ -23,13 +23,12 @@ export class SideBarComponent implements OnInit {
     private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster, private activatedRoute: ActivatedRoute
   ) {
   }
-  ngOnInit(): void {  
+  ngOnInit(): void {
     if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") { 
       if(location.pathname.includes("reactive-dynamic-forms")){
         this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
           this.links = response.links;
           var splitedArray = location.pathname.split('#')[0].split('/');
-          console.log(splitedArray)
           if (splitedArray[2]) {
             var currentArray;
             if (splitedArray[2] == "controls" || splitedArray[2] == "static-binding" || splitedArray[2] == "conditional-binding") {
@@ -48,19 +47,19 @@ export class SideBarComponent implements OnInit {
                 currentArray = parentElement[0].childrens.filter(a => a.linkTitle == splitedArray[2])
               }
             }
-            else if(splitedArray[2] == "dynamic-forms") {
-              var currentElement = this.links.filter(a => a.linkTitle == splitedArray[3]);
-              if (currentElement) {
-                currentElement[0].isActive = true;
-                currentElement[0].isOpen = true;
-              }
-              if (splitedArray[3] == "stepbystep") {
-                var querystringArray = location.href.split('#');
-                if(querystringArray[1]) {
-                  currentArray = currentElement[0].childrens.filter(a => a.refUri == querystringArray[1])
-                }
-              }
-            }
+            // else if(splitedArray[2] == "dynamic-forms") {
+            //   var currentElement = this.links.filter(a => a.linkTitle == splitedArray[3]);
+            //   if (currentElement) {
+            //     currentElement[0].isActive = true;
+            //     currentElement[0].isOpen = true;
+            //   }
+            //   // if (splitedArray[3] == "stepbystep") {
+            //   //   var querystringArray = location.href.split('#');
+            //   //   if(querystringArray[1]) {
+            //   //     currentArray = currentElement[0].childrens.filter(a => a.refUri == querystringArray[1])
+            //   //   }
+            //   // }
+            // }
             else if(splitedArray[2] == "advance-form-design") {
               var parentElement = this.links.filter(a => a.otherUri == 'advance-form-design');
               if (parentElement) {
