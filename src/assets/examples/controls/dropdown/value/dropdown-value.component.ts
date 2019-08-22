@@ -13,8 +13,8 @@ export class DropdownValueComponent implements OnInit {
             type: "select",
             value:1,
             source: [{ departmentId: 1, departmentName: "Dotnet" },{ departmentId: 2, departmentName: "php" },{ departmentId: 2, departmentName: "Android" }],
-            textPropName: 'departmentId',
-            valuePropName: 'departmentName',
+            textPropName: 'departmentName',
+            valuePropName: 'departmentId',
             ui: {
                 label: 'Department',
                 placeholder: 'Select',

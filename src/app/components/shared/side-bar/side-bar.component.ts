@@ -27,24 +27,71 @@ export class SideBarComponent implements OnInit {
     if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") { 
       if(location.pathname.includes("reactive-dynamic-forms")){
         this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
+          debugger
           this.links = response.links;
           var splitedArray = location.pathname.split('#')[0].split('/');
-          if (splitedArray[1]) {
+          console.log(splitedArray)
+          if (splitedArray[2]) {
             var currentArray;
-            if (splitedArray[1] == "controls" || splitedArray[1] == "static-binding" || splitedArray[1] == "conditional-binding") {
+            if (splitedArray[2] == "controls" || splitedArray[2] == "static-binding" || splitedArray[2] == "conditional-binding") {
               var parentElement = this.links.filter(a => a.otherUri == 'ui-bindings');
               if (parentElement) {
                 parentElement[0].isActive = true;
                 parentElement[0].isOpen = true;
-                currentArray = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[1])
+                currentArray = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[2])
               }
             }
-            else if(splitedArray[1] == "getting-started") {
+            else if(splitedArray[2] == "getting-started") {
               var parentElement = this.links.filter(a => a.otherUri == 'how-to');
               if (parentElement) {
                 parentElement[0].isActive = true;
                 parentElement[0].isOpen = true;
-                currentArray = parentElement[0].childrens.filter(a => a.linkTitle == splitedArray[1])
+                currentArray = parentElement[0].childrens.filter(a => a.linkTitle == splitedArray[2])
+              }
+            }
+            else if(splitedArray[2] == "dynamic-forms") {
+              var currentElement = this.links.filter(a => a.linkTitle == splitedArray[3]);
+              if (currentElement) {
+                currentElement[0].isActive = true;
+                currentElement[0].isOpen = true;
+              }
+              if (splitedArray[3] == "stepbystep") {
+                var querystringArray = location.href.split('#');
+                if(querystringArray[1]) {
+                  currentArray = currentElement[0].childrens.filter(a => a.refUri == querystringArray[1])
+                }
+              }
+            }
+            else if(splitedArray[2] == "advance-form-design") {
+              var parentElement = this.links.filter(a => a.otherUri == 'advance-form-design');
+              if (parentElement) {
+                parentElement[0].isActive = true;
+                parentElement[0].isOpen = true;
+                currentArray = parentElement[0].childrens.filter(a => a.linkTitle == splitedArray[3])
+              }
+            }
+            else if (splitedArray[2].includes("dynamic-validation")) {
+              debugger
+              var querystringArray = location.href.split('=');
+              var currentObj, parentElement;
+              if (querystringArray[1]) {
+                currentArray = this.links.filter(a => a.otherUri == splitedArray[2]);
+                currentArray[0].childrens.forEach(element => {
+                  if (element.childrens) {
+                    if (element.childrens.filter(a => a.title == querystringArray[1]).length != 0) {
+                      currentObj = element.childrens.filter(a => a.title == querystringArray[1])
+                      parentElement = element;
+                    }
+                  }
+                });
+                if (parentElement) {
+                  parentElement.isActive = true;
+                  parentElement.isOpen = true;
+                }
+                if (currentObj && currentObj.length > 0) {
+                  currentObj[0].isActive = true;
+                  currentObj[0].isOpen = true;
+                }
               }
             }
             else {
@@ -54,25 +101,25 @@ export class SideBarComponent implements OnInit {
             if (currentArray && currentArray.length > 0) {
               currentArray[0].isActive = true;
               currentArray[0].isOpen = true;
-              if (splitedArray[2]) {
+              if (splitedArray[3]) {
                 if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-                  if (splitedArray[1].includes('static-binding') || splitedArray[1].includes('conditional-binding') || splitedArray[1].includes('controls')) {
+                  if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
                     var currentObj;
-                    if (currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]).length != 0) {
-                      currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2])
+                    if (currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[3]).length != 0) {
+                      currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[3])
                     }
                     else {
-                      var currentChildArray = currentArray[0].childrens.filter(a => a.otherUri == splitedArray[2]);
+                      var currentChildArray = currentArray[0].childrens.filter(a => a.otherUri == splitedArray[3]);
                       currentChildArray[0].isActive = true
                       currentChildArray[0].isOpen = true
-                      currentObj = currentChildArray[0].childrens.filter(a => a.uri.split('#')[1] == window.location.hash.substring(1))
+                      currentObj = currentChildArray[0].childrens.filter(a => a.uri.split('#')[2] == window.location.hash.substring(2))
                     }
                     if (currentObj && currentObj.length > 0) {
                       currentObj[0].isActive = true;
                       currentObj[0].isOpen = true;
                     }
                     else {
-                      var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]);
+                      var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[3]);
                       if (currentObj && currentObj.length > 0) {
                         currentObj[0].isActive = true;
                         currentObj[0].isOpen = true;
@@ -80,12 +127,12 @@ export class SideBarComponent implements OnInit {
                     }
                   }
     
-                  else if (splitedArray[1].includes('static-binding') || splitedArray[1].includes('conditional-binding') || splitedArray[1].includes('controls')) {
+                  else if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
                    
                     currentArray[0].childrens.forEach(formvalidation => {
                       if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
                         formvalidation.childrens.forEach(element => {
-                          if (element.title == splitedArray[2]) {
+                          if (element.title == splitedArray[3]) {
                             formvalidation.isOpen = true;
                             formvalidation.isActive = true;
                             element.isActive = true;
@@ -97,15 +144,16 @@ export class SideBarComponent implements OnInit {
                   }
                 }
               }
-              else if (splitedArray[1].includes("dynamic-validation")) {
+              else if (splitedArray[2].includes("dynamic-validation")) {
+                debugger
                 var querystringArray = location.href.split('=');
                 var currentObj, parentElement;
-                if (querystringArray[1]) {
-    
+                if (querystringArray[2]) {
+                  
                   currentArray[0].childrens.forEach(element => {
                     if (element.childrens) {
-                      if (element.childrens.filter(a => a.title == querystringArray[1]).length != 0) {
-                        currentObj = element.childrens.filter(a => a.title == querystringArray[1])
+                      if (element.childrens.filter(a => a.title == querystringArray[2]).length != 0) {
+                        currentObj = element.childrens.filter(a => a.title == querystringArray[2])
                         parentElement = element;
                       }
                     }
@@ -123,13 +171,13 @@ export class SideBarComponent implements OnInit {
             }
             else {
               var children = this.links[1]['childrens'];
-              var currentArray = children.filter(a => a.uri == splitedArray[1]);
+              var currentArray = children.filter(a => a.uri == splitedArray[2]);
               if (currentArray && currentArray.length > 0) {
                 currentArray[0].isActive = true;
                 currentArray[0].isOpen = true;
-                if (splitedArray[2]) {
+                if (splitedArray[3]) {
                   if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
-                    var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
+                    var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[3]);
                     if (currentObj && currentObj.length > 0) {
                       currentObj[0].isActive = true;
                       currentObj[0].isOpen = true;
@@ -141,10 +189,10 @@ export class SideBarComponent implements OnInit {
           }
           this.showComponent = true;
         });
-      
       }
      else{
       this.http.get('assets/json/sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
+        debugger
         this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
         this.links = response.links;
         var splitedArray = location.pathname.split('#')[0].split('/')

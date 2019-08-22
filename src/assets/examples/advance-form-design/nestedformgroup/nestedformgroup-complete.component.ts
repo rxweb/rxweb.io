@@ -54,7 +54,5 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, AbstractControlConfig
           }]
       }
       this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, this.dynamicFormConfiguration);
-  
-      // console.log(this.dynamicFormBuildConfig.formGroup.controls.address)
     }
   }

@@ -13,8 +13,8 @@ export class CheckboxValueComponent implements OnInit {
          type: "checkbox",
          multiselect:true,
          source: [{ hobbyId: 1, hobbyName: "Singing"},{ hobbyId: 2, hobbyName: "Dancing" },{ hobbyId: 3, hobbyName: "Travelling" }],
-         textPropName: 'hobbyId',
-         valuePropName: 'hobbyName',
+         textPropName: 'hobbyName',
+         valuePropName: 'hobbyId',
          ui: {
             label: 'Hobbies'
         }
