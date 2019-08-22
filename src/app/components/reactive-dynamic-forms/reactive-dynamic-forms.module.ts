@@ -13,10 +13,13 @@ import { DynamicValidationComponent } from '../dynamic-validation/dynamic-valida
 import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
 import { RxReactiveDynamicFormsModule } from "@rxweb/reactive-dynamic-forms"
 import { DynamicGettingStartedComponent } from './getting-started/getting-started.component';
+import { CommonSharedModule } from '../shared/common/common-shared.module';
+import { FormBuilderDynamicComponent } from './dynamic-form-builder/dynamic-form-builder.component';
 
 @NgModule({
-  imports: [REACTIVE_DYNAMIC_FORMS_ROUTING, RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
-  declarations: [DynamicFormHomeComponent, DynamicValidationComponent,DynamicGettingStartedComponent],
+  imports: [REACTIVE_DYNAMIC_FORMS_ROUTING,CommonSharedModule, RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
+  declarations: [FormBuilderDynamicComponent,DynamicFormHomeComponent, DynamicValidationComponent,DynamicGettingStartedComponent],
+  providers:[{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
  exports:      [ RouterModule ]
 })
 export class ReactiveDynamicFormsModule { }

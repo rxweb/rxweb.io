@@ -2,7 +2,7 @@
     <div class="dynamic-home">
         <div [class.dynamic-home-animate]="isAnimated">
             <div class="home-title">
-                <div class="main-heading">Why waste time? Let's Build.😃</div>
+                <div class="dynamic-main-heading">Why waste time? Let's Build.😃</div>
                 <div class="inline home-bttn">
                     <button routerLink="/reactive-dynamic-forms/dynamic-forms/stepbystep" class="btn home-page-links">
                         <span class="btn-label">Let's get started</span>
@@ -14,11 +14,11 @@
             <div [class.dynamic-animate]="isDynamicAnimated">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <span class="dynamic-typeit ">
-                        <div class="dynamic-text-typing" id="code_change"
+                        <div class="dynamic-text-typing" id="code_change_dynamic"
                             style="text-align: left!important;width: 100%;max-height:150px;max-width: 820px;"></div>
                     </span>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6" *ngIf="serverData.length > 0">
                     <div class="model-ts combined">
                         <div class="code-example">
                             <div class="ng-star-inserted">

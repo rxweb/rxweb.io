@@ -1,11 +1,11 @@
-import { OnInit, Component } from '@angular/core';
+import { OnInit, Component ,OnDestroy} from '@angular/core';
 import { ApplicationBroadcaster } from '@rx/core';
 import { DynamicFormBuildConfig, RxDynamicFormBuilder } from '@rxweb/reactive-dynamic-forms';
 
 @Component({
   templateUrl: './home.component.html'
 })
-export class DynamicFormHomeComponent implements OnInit {
+export class DynamicFormHomeComponent implements OnInit,OnDestroy {
   typeItTexts = [
     {
       type: 'code', fixText: '',data:{type:'text',name:'firstName',ui:{placeholder:'Enter your first name', label:"First Name"}} ,imagePath: "assets/images/dynamic-forms/textbox.png", codes: [{ text: '[',  speed: "fast" },{ text: '{', class: "typeit-json-text", speed: "fast" }, { text: " ", class: "type-it-tabing" }, { text: '"name":', class: "typeit-start-text", speed: "slow" }, { text: '"firstName"', class: 'typeit-parameter-type', speed: "slow" }, { text: ",", class: "typeit-json-text", speed: "fast" }, { text: " ", class: "type-it-tabing" }, { text: '"type":', class: "typeit-start-text", speed: "slow" }, { text: '"text"', class: "typeit-parameter-type", speed: "slow" },{text:",",speed:"fast"}, { text: " ", class: "typeit-json-text", speed: "fast" },{ text: " ", class: "type-it-tabing" },{text:'"ui":',class:"typeit-start-text",speed:"fast"},{ text: "{", speed: "fast" },{text:'"label":',class:"typeit-start-text",speed:"fast"},{text:'"FirstName"',class:"typeit-parameter-type",speed:"fast"},{text:",",speed:"fast"},{text:'"placeholder":',class:"typeit-start-text",speed:"fast"},{text:'"Enter FirstName"',class:"typeit-parameter-type",speed:"fast"},{ text: '}', speed: "fast" },{ text: " ", class: "typeit-json-text", speed: "fast" },{ text: "}", speed: "fast" }, { text: ',', class: "typeit-json-text", speed: "fast" }]
@@ -38,12 +38,12 @@ export class DynamicFormHomeComponent implements OnInit {
   constructor(private applicationBroadcast: ApplicationBroadcaster,private formBuilder: RxDynamicFormBuilder) { }
   bindText(character: string, className: string, ) {
     if (this.isExistElement()) {
-      document.getElementById("code_change").innerHTML += `<span class='${className}'>${character}</span>`
+      document.getElementById("code_change_dynamic").innerHTML += `<span class='${className}'>${character}</span>`
     }
   }
 
   isExistElement() {
-    let codeElement = document.getElementById("code_change");
+    let codeElement = document.getElementById("code_change_dynamic");
     return codeElement != null;
   }
   loadServerData(controlServerData:any) {
@@ -66,10 +66,10 @@ this.serverData.forEach(t=>{
         this.bindText(textGroup.text.charAt(this.textIndex), textGroup.class)
         this.textIndex++;
         if (textGroup.speed == "fast") {
-          var t = setTimeout(() => { this.processCharacters(textGroup) }, 20)
+          this.timeOutId =  setTimeout(() => { this.processCharacters(textGroup) }, 20)
         }
         else {
-          var t = setTimeout(() => { this.processCharacters(textGroup) }, 50)
+          this.timeOutId =  setTimeout(() => { this.processCharacters(textGroup) }, 50)
         }
 
       } else {
@@ -85,7 +85,7 @@ this.serverData.forEach(t=>{
       if (this.typeItTexts.length > this.totalIndex) {
         if (this.typeItTexts[this.totalIndex].codes.length > this.codeIndex) {
           this.currentTextGroup = this.typeItTexts[this.totalIndex]
-          if (isFirstTime && document.getElementById("code_change").children.length > 0 && this.totalIndex == 0)
+          if (isFirstTime && document.getElementById("code_change_dynamic").children.length > 0 && this.totalIndex == 0)
             this.codeIndex++;
           this.processCharacters(this.typeItTexts[this.totalIndex].codes[this.codeIndex])
           this.codeIndex++;
@@ -120,8 +120,13 @@ this.serverData.forEach(t=>{
     }, 2000);
     window.setTimeout(() => { this.isAnimated = true }, 500)
     this.applicationBroadcast.urlBroadCast(true);
-    var t = setTimeout(() => { this.changeText(); }, 2000)
+    this.timeOutId = setTimeout(() => { this.changeText(); }, 2000)
    
+  }
+  timeOutId:any;
+  ngOnDestroy(){
+    if(this.timeOutId)
+    clearTimeout(this.timeOutId);
   }
 
 }

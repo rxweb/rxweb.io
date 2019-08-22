@@ -125,7 +125,7 @@ export class AppComponent implements OnInit {
 
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
-        if (e.url.includes("/errorMessages") || e.url.includes("/compose/decorators")) {
+        if (e.url.includes("/errorMessageStrategy") || e.url.includes("/dynamicerrormessagestrategy")) {
           ReactiveFormConfig.set({
             "validationMessage": {
               "required": "This field is required",
@@ -134,6 +134,10 @@ export class AppComponent implements OnInit {
               "password": "Input does not match the password requirements",
               "composeMessageKey": "Please enter valid inputs"
             },
+            "reactiveForm": {
+              "errorMessageBindingStrategy":
+                ErrorMessageBindingStrategy.OnSubmit
+            }
           });
         }
         else {
@@ -274,10 +278,6 @@ export class AppComponent implements OnInit {
               "uniqueMessageKey": "Enterred value must be unique",
               "maxTimeMessageKey": "The input time enterred must be less than the value mentioned in config",
               "minTimeMessageKey": "The input time enterred must be greater than the value mentioned in config"
-            },
-            "reactiveForm": {
-              "errorMessageBindingStrategy":
-                ErrorMessageBindingStrategy.OnSubmit
             }
           });
         }

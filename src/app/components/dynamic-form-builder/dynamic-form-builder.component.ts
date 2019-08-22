@@ -96,7 +96,7 @@ export class DynamicFormBuilderComponent extends DynamicFormBuilderDomain implem
                     if (parentKey.charAt(0) === ".")
                         parentKey = parentKey.substr(1, parentKey.length)
                     if (jsonObject[key].length > 0) {
-                        debugger
+                     
                         // model.annotationType = "@propArray()"
                         // model.modelName =   "FormModel"
                         // model.propertyName = key
@@ -267,7 +267,7 @@ export class DynamicFormBuilderComponent extends DynamicFormBuilderDomain implem
         this.exampleContent["decoratorModelString"] = modelString;
         formBuilderConfiguration.dynamicValidation = this.JsonObj;
         let parsedJson = JSON.parse(this.dynamicFormBuilderFormGroup.controls['json'].value);
-        debugger
+       
         this.builderGroup = this.formBuilder.group(parsedJson, formBuilderConfiguration);
     }
 }

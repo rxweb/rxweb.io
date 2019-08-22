@@ -17,6 +17,7 @@ import { BaseComponentProvider } from "src/app/components/shared/base.component"
 
 export class CodeExampleComponent extends BaseComponentProvider implements OnInit {
     @Input() Component: any;
+    @Input() data:any;
     element: HTMLElement;
     componentSelector: string;
     constructor(private elementRef: ElementRef, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef,
@@ -26,6 +27,7 @@ export class CodeExampleComponent extends BaseComponentProvider implements OnIni
         this.element = elementRef.nativeElement as HTMLElement;
     }
     ngOnInit(): void {
-        this.element.appendChild(this.create(this.Component,{}).rootNode());
+       
+        this.element.appendChild(this.create(this.Component,this.data || {}).rootNode());
     }
 }

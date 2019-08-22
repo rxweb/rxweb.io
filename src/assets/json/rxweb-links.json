@@ -500,5 +500,106 @@
         "title": "Prefix",
         "link": "/sanitization/prefix/decorators",
         "linkTree":["sanitization"]
-    }
+    },
+{
+    "title": "Checkbox",
+    "link": "dynamic-forms/controls/checkbox",
+    "description": "",
+    "linkTrees": ["static-binding"]
+},
+{
+    "title": "Color",
+    "link": "dynamic-forms/controls/color",
+    "description": "",
+    "linkTrees": ["controls"]
+},
+
+{
+    "title": "Description",
+    "link": "reactive-dynamic-forms/static-binding/description",
+    "description": "description can be used inside ui feature to display description for the particular formControl in the dynamic-form. description can be generated statically or conditionally based on your requirements.",
+    "linkTrees": ["static-binding"]
+},
+{
+    "title": "DropDown",
+    "link": "reactive-dynamic-forms/controls/dropdown",
+    "description": "",
+    "linkTrees":  ["controls"]
+},
+{
+    "title": "Date",
+    "link": "reactive-dynamic-forms/controls/dynamicdate",
+    "description": "",
+    "linkTrees":  ["controls"]
+},
+{
+    "title": "Disabled",
+    "link": "reactive-dynamic-forms/static-binding/dynamicdisabled",
+    "description": "disable can be used inside ui feature to disable the particular formControl in the dynamic-form. You can disable a formControl statically or conditionally based on your requirements.",
+    "linkTrees": ["static-binding"]
+},
+{
+    "title": "Email",
+    "link": "reactive-dynamic-forms/controls/dynamicemail",
+    "description": "",
+    "linkTrees":  ["controls"]
+},
+{
+    "title": "File",
+    "link": "reactive-dynamic-forms/controls/dynamicfile",
+    "description": "",
+    "linkTrees":  ["controls"]
+},
+{
+    "title": "Password",
+    "link": "reactive-dynamic-forms/controls/dynamicpassword",
+    "description": "",
+    "linkTrees":  ["controls"]
+},
+{
+    "title": "Range",
+    "link": "reactive-dynamic-forms/controls/dynamicrange",
+    "description": "",
+    "linkTrees":  ["controls"]
+},
+{
+    "title": "Url",
+    "link": "reactive-dynamic-forms/controls/url",
+    "description": "",
+    "linkTrees":  ["controls"]
+},
+
+{
+    "title": "Radio",
+    "link": "reactive-dynamic-forms/controls/radio",
+    "description": "",
+    "linkTrees":  ["controls"]
+},
+{
+    "title": "Readonly",
+    "link": "reactive-dynamic-forms/static-binding/readonly",
+    "description": "readonly can be used inside ui feature to convert the particular formControl in readonly state in your dynamic-form. You can set readonly statically or conditionally based on your requirements.",
+    "linkTrees": ["static-binding"]
+      
+},
+{
+    "title": "Step By Step Design",
+    "link": "reactive-dynamic-forms/dynamic-forms/stepbystep",
+    "description": "",
+    "linkTrees": ["dynamic-forms"]
+      
+},
+{
+    "title": "Textarea",
+    "link": "reactive-dynamic-forms/controls/textarea",
+    "description": "",
+    "linkTrees": ["controls"]
+},
+{
+    "title": "TextBox",
+    "link": "reactive-dynamic-forms/controls/textbox",
+    "description": "",
+    "linkTrees": ["controls"]
+
+}
 ]

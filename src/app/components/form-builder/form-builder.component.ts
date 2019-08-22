@@ -255,7 +255,7 @@ export class FormBuilderComponent implements OnInit {
         validatorModelString += "]";
         decoratorModelString += "\n\t" + propertyName + ":any;" ;
       }
-      debugger
+     
       let formBuilderConfiguration = new FormBuilderConfiguration();
       formBuilderConfiguration.dynamicValidation = JsonObj;
       this.builderGroup = this.formBuilder.group(this.parseJson,formBuilderConfiguration);

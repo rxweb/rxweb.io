@@ -1,5 +1,5 @@
 import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter,AfterContentInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { AppCodeComponent } from "src/app/components/shared/app-code/app-code.component";
 import { AlphaAllowWhiteSpaceComponent } from "src/assets/examples/reactive-form-validators/decorators/alpha/allowWhiteSpace/alpha-allow-white-space.component";
@@ -10,6 +10,7 @@ import { ComponentView } from "src/app/domain/view";
 import { ViewChild } from "@angular/core";
 import { CodeExampleComponent } from "src/app/components/shared/code-example/code-example.component";
 import { StackBlitzService } from "src/app/components/shared/stackblitz/stackblitz.service";
+
 
 @Component({
   selector: 'app-example-runner',
@@ -25,15 +26,26 @@ export class AppExampleRunnerComponent implements OnInit {
   @Input() typeName: string;
   @Input() content:any;
   @Input() showTab:boolean;
+  showStackBlitz :boolean = true;
   @Input() templateDrivenType:string;
   showElement: any = {};
   tabArray: any = {};
   activeTab: string;
   showComponent: boolean = false;
-  constructor(
-  ) {
+  dataParam:any;
+  constructor(private router: Router
+  ) { 
+ 
   }
   ngOnInit(): void {
+    this.router.events.subscribe((val) => {
+      if (val instanceof NavigationEnd) {
+        if (val.url.includes("dynamic-validation"))
+        {
+         this.showStackBlitz = false;
+        }
+      }
+    });
     this.showElement = false;
     if(this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject" )
     {
@@ -58,6 +70,8 @@ export class AppExampleRunnerComponent implements OnInit {
       }
       if (this.content.html != null)
         this.tabArray.push({ "tabName": "Html", "tabItem": "html", "content": this.content.html })
+      if(this.content && this.content.dataParam)
+      this.dataParam = this.content.dataParam;
       this.activeTab = this.tabArray[0].tabName;
     }
   }
