@@ -3,20 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 
 const CONTROLS_ROUTES: Routes = [
 {
-	path:'checkbox',
-	loadChildren: './checkbox/checkbox.module#CheckboxModule',
-},
-{
 	path:'textbox',
 	loadChildren: './textbox/textbox.module#TextboxModule',
 },
 {
-	path:'dropdown',
-	loadChildren: './dropdown/dropdown.module#DropdownModule',
+	path:'checkbox',
+	loadChildren: './checkbox/checkbox.module#CheckboxModule',
 },
 {
 	path:'dynamicdate',
 	loadChildren: './dynamicdate/dynamicdate.module#DynamicdateModule',
+},
+{
+	path:'dropdown',
+	loadChildren: './dropdown/dropdown.module#DropdownModule',
 },
 {
 	path:'dynamicemail',

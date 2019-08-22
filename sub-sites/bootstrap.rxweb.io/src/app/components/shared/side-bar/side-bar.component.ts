@@ -34,7 +34,14 @@ export class SideBarComponent implements OnInit {
             parentElement[0].isOpen = true;
             currentArray = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[1])
           }
-          console.log(parentElement)
+        }
+        else if(splitedArray[1] == "getting-started") {
+          var parentElement = this.links.filter(a => a.otherUri == 'how-to');
+          if (parentElement) {
+            parentElement[0].isActive = true;
+            parentElement[0].isOpen = true;
+            currentArray = parentElement[0].childrens.filter(a => a.linkTitle == splitedArray[1])
+          }
         }
         else {
           currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);

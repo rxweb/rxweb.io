@@ -15,12 +15,12 @@ const DYNAMIC_FORMS_ROUTES: Routes = [
 	loadChildren: './dynamicerrormessagestrategy/dynamicerrormessagestrategy.module#DynamicerrormessagestrategyModule',
 },
 {
+	path:'customvalidation',
+	loadChildren: './customvalidation/customvalidation.module#CustomvalidationModule',
+},
+{
 	path:'asyncvalidation',
 	loadChildren: './asyncvalidation/asyncvalidation.module#AsyncvalidationModule',
 },
-{
-	path:'customvalidation',
-	loadChildren: './customvalidation/customvalidation.module#CustomvalidationModule',
-}
 ];
 export const DYNAMIC_FORMS_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMIC_FORMS_ROUTES);
