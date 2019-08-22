@@ -5944,6 +5944,13 @@ img {
 }
 
 @media (min-width: 1600px) {
+     .dynamic-text-typing {
+        font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
+      font-size: 50px;
+    
+      margin-left: 100px;
+      margin-bottom: 130px;
+    }
     .typeit {
         font-size: 50px;
         margin-top: 130px;
@@ -5953,6 +5960,13 @@ img {
 }
 
 @media (min-width: 1200px) {
+    .dynamic-text-typing {
+        font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
+        font-size: 30px;
+        /* margin-top: 0px; */
+        /* margin-left: 50px;
+        margin-bottom: 130px; */
+      }
     .typeit {
         font-size: 30px;
         margin-top: 130px;
@@ -5962,6 +5976,13 @@ img {
 }
 
 @media (max-width: 992px) {
+    .dynamic-text-typing {
+        font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
+        font-size: 40px;
+        /* margin-top: 100px;
+        margin-left: 80px;
+        margin-bottom: 100px; */
+      }
     .typeit {
         font-size: 40px;
         margin-top: 100px;
@@ -5971,6 +5992,13 @@ img {
 }
 
 @media (max-width: 768px) {
+    .dynamic-text-typing {
+        font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
+        font-size: 25px;
+        /* margin-top: 80px;
+        margin-left: 30px;
+        margin-bottom: 80px; */
+      }
     .typeit {
         font-size: 25px;
         margin-top: 80px;
@@ -5980,6 +6008,13 @@ img {
 }
 
 @media (max-width: 576px) {
+    .dynamic-text-typing {
+        font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
+        font-size: 20px;
+        /* margin-top: 60px;
+        margin-left: 40px;
+        margin-bottom: 60px; */
+      }
     .typeit {
         font-size: 20px;
         margin-top: 60px;
@@ -7760,6 +7795,10 @@ span.btn-label {
 }
 
 @media (min-width: 1600px) {
+    .dynamic-text-typing {
+        font-size: 18px;
+        font-weight: 900;
+    }
     .typeit {
         font-size: 18px;
         font-weight: 900;
@@ -7767,6 +7806,10 @@ span.btn-label {
 }
 
 @media (min-width: 1200px) {
+    .dynamic-text-typing {
+        font-size: 18px;
+        font-weight: 900;
+    }
     .typeit {
         font-size: 18px;
         font-weight: 900;
@@ -7774,6 +7817,9 @@ span.btn-label {
 }
 
 @media (max-width: 992px) {
+    .dynamic-text-typing {
+        font-size: 13px;
+    }
     .typeit {
         font-size: 13px;
     }
@@ -7783,6 +7829,9 @@ span.btn-label {
 }
 
 @media (max-width: 768px) {
+    .dynamic-text-typing {
+        font-size: 13px;
+    }
     .typeit {
         font-size: 13px;
     }
@@ -7838,6 +7887,10 @@ span.btn-label {
 }
 
 @media (max-width: 576px) {
+    .dynamic-text-typing {
+        margin-right: 10px;
+        font-size: 13px;
+    }
     .typeit {
         margin-right: 10px;
         font-size: 13px;
@@ -8311,5 +8364,58 @@ a.stop:hover {
         font-size: 15px;
     }
 }
+/* -- dynamic-forms css ----- */
+.dynamic-home{    min-height: calc( 100vh - 0px );
+    padding-top: 247px;
+          padding-bottom:140px;
+        position: relative;
+    }
+    .dynamic-home{
+        padding-top: 90px;
+        padding-bottom: 0;
+        top:0;
+         min-height: calc( 100vh - 60px );
+      }
+      .dynamic-home{   
+        padding-top: 190px;
+        padding-bottom: 40px;
+    }
+    .dynamic-home-animate .main-heading, .dynamic-home-animate p.text-content, .dynamic-home-animate .rw-wrapper, .dynamic-home-animate .typeit-block, .dynamic-home-animate .home-bttn { -webkit-transform: translateY(-150px); -ms-transform: translateY(0px); transform: translateY(-150px);  opacity: 1;  }
+.dynamic-home .rw-sentence span { width: 322px; }
+.dynamic-home-animate .main-heading {   -webkit-transition: opacity 0.5s ease 0.3s, -webkit-transform 0.5s ease 0.9s;   transition: opacity 0.5s ease 0.3s, -webkit-transform 0.5s ease 0.9s;   -o-transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.9s;   transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.9s;   transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.9s, -webkit-transform 0.5s ease 0.9s; }
+.dynamic-home-animate p.text-content { -webkit-transition: all 0.6s ease 1.2s; -o-transition: all 0.6s ease 1.2s; transition: all 0.6s ease 1.2s; }
+.dynamic-home-animate .rw-wrapper { -webkit-transition: all 0.7s ease 1.2s; -o-transition: all 0.7s ease 1.2s; transition: all 0.7s ease 1.2s; }
+.dynamic-home-animate .typeit-block { -webkit-transition: all 0.6s ease 1.4s; -o-transition: all 0.6s ease 1.4s; transition: all 0.6s ease 1.4s; }
+.dynamic-home-animate .home-bttn { -webkit-transition: all 0.5s ease 1s; -o-transition: all 0.5s ease 1s; transition: all 0.5s ease 1s; }
 
+.main-heading{
+  text-align: center!important;
+}
+.main-heading , p.text-content{
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+}
+.dynamic-home-animate {
+    transition-delay: 1s;
+    opacity: 1;
+    margin-bottom: -100px;
+    /* margin-top: -100px; */
+}
+.home-title {
+    text-align: center;
+}
+.typeit-json-text:after{
+ 
+    content: "\000A";
+    white-space: pre;
+
+}
+.type-it-tabing{
+    padding-left: 15px;
+}
+.typeit-parameter-type {
+    color:#c1513d 
+  }
 /*-------- do not add any css here ---------- */

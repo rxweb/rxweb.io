@@ -1,10 +1,10 @@
 <div class="main-header">
-    <div class="home">
-        <div [class.animate]="isAnimated">
+    <div class="dynamic-home">
+        <div [class.dynamic-home-animate]="isAnimated">
             <div class="home-title">
                 <div class="main-heading">Why waste time? Let's Build.😃</div>
                 <div class="inline home-bttn">
-                    <button routerLink="/dynamic-forms/stepbystep" class="btn home-page-links">
+                    <button routerLink="/reactive-dynamic-forms/dynamic-forms/stepbystep" class="btn home-page-links">
                         <span class="btn-label">Let's get started</span>
                     </button>
                 </div>
@@ -13,9 +13,10 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="type-it" style="height: 500px;">
             <div [class.dynamic-animate]="isDynamicAnimated">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                    <span class="typeit" id="code_change"
-                        style="text-align: left!important;width: 100%;max-height:150px;max-width: 820px;"></span>
+                    <span class="dynamic-typeit ">
+                        <div class="dynamic-text-typing" id="code_change"
+                            style="text-align: left!important;width: 100%;max-height:150px;max-width: 820px;"></div>
+                    </span>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="model-ts combined">

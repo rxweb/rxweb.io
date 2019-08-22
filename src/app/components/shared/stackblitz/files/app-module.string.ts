@@ -7,8 +7,11 @@ import { ##component-name## } from './##component-path##';
 import { AppComponent } from './app.component';
 
 import {  RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
+
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,RxReactiveFormsModule,HttpClientModule ],
+  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,RxReactiveFormsModule,HttpClientModule,RxReactiveDynamicFormsModule ],
   declarations: [AppComponent, ##component-name##],
   bootstrap:    [ AppComponent]
 })

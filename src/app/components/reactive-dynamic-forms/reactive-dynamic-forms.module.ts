@@ -12,10 +12,11 @@ import { DynamicFormHomeComponent } from "./home/home.component"
 import { DynamicValidationComponent } from '../dynamic-validation/dynamic-validation.component';
 import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
 import { RxReactiveDynamicFormsModule } from "@rxweb/reactive-dynamic-forms"
+import { DynamicGettingStartedComponent } from './getting-started/getting-started.component';
 
 @NgModule({
   imports: [REACTIVE_DYNAMIC_FORMS_ROUTING, RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
-  declarations: [DynamicFormHomeComponent, DynamicValidationComponent],
+  declarations: [DynamicFormHomeComponent, DynamicValidationComponent,DynamicGettingStartedComponent],
  exports:      [ RouterModule ]
 })
 export class ReactiveDynamicFormsModule { }

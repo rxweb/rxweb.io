@@ -1,0 +1,10 @@
+{
+    "complete": {
+        "notes": [],
+        "component": "import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-value-complete',\r\n    templateUrl: './value-complete.component.html'\r\n})\r\n\r\nexport class ValueCompleteComponent implements OnInit {\r\n    serverData = [{\r\n            name:\"firstName\",\r\n            type:\"text\",            \r\n            value: \"John\"\r\n            \r\n        }]\r\n    \r\n        uiBindings:string[] = [\"firstName\"];\r\n        dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n        constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n          ngOnInit()\r\n         {\r\n          this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData,{});\r\n          }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\">\r\n    </div>      \r\n    <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }
+}

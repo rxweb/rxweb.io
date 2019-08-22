@@ -1,0 +1,11 @@
+{
+    "conditional": {
+        "notes": ["conditional-binding"],
+        "component": "\r\nimport { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n    selector: 'app-conditionallabel-conditional',\r\n    templateUrl: './conditionallabel-conditional.component.html'\r\n})\r\n\r\nexport class ConditionallabelConditionalComponent implements OnInit {\r\n    serverData = [\r\n        {\r\n            name: 'firstName',\r\n            type: 'text',\r\n            ui: {\r\n                label: 'Enter Your First Name'\r\n            }\r\n        },\r\n        {\r\n            name: 'bio',\r\n            type: 'text',\r\n            ui: {\r\n                placeholder: \"Enter bio\"\r\n            },\r\n            modelName: 'userModel'\r\n        }\r\n\r\n    ]\r\n\r\n    uiBindings: string[] = [\"firstName\",\"bio\"];\r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {\r\n            controlConfigModels: [{ modelName: \"userModel\", model: UserModel }]\r\n        });\r\n    }\r\n}\r\n",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\">\r\n    </div>      \r\n    <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n</form>",
+        "model": "import { FormControlConfig } from '@rxweb/reactive-dynamic-forms';\r\n\r\nexport class UserModel extends FormControlConfig {\r\n\r\n    private _placeholder: string;\r\n\r\n    get placeholder() {\r\n        if (this.controlsConfig.firstName.value) {\r\n            return \"Hi \" +this.controlsConfig.firstName.value  + \", Please enter your bio\"\r\n        }\r\n        else {\r\n            return \"Please enter your bio\"\r\n        }\r\n    }\r\n\r\n    set placeholder(value: string) {\r\n        this._placeholder = value;\r\n    }\r\n}\r\n\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    } 
+   
+}

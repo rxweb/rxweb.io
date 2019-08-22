@@ -1,6 +1,42 @@
 {
-    "complete":{
-        "component":"import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxFormBuilder } from \"@rxweb/reactive-form-validators\";\r\n\r\n@Component({\r\n    selector: 'app-complete-checkbox',\r\n    templateUrl: './checkbox-complete.component.html'\r\n})\r\n\r\nexport class CheckBoxCompleteComponent implements OnInit {\r\n    serverData: Array<{ [key: string]: any }> = [{\r\n            name: \"hobbies\",\r\n             type: \"checkbox\",\r\n             source: [{ hobbyId: 1, hobbyName: \"Reading\"}, { hobbyId: 2, hobbyName: \"Singing\" },{ hobbyId: 3, hobbyName: \"Chess\" }],\r\n             textPropName: 'hobbyName',\r\n             valuePropName: 'hobbyId', \r\n             ui: {\r\n                label: 'Hobbies',                      \r\n            }\r\n        \r\n    }]\r\n    viewMode: string = \"bootstrap-basic\";\r\n    uiBindings: string[] = [\"hobbies\"];\r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    dynamicFormConfiguration: DynamicFormConfiguration;\r\n    constructor(private formBuilder: RxFormBuilder) { }\r\n    ngOnInit()\r\n    {\r\n        this.dynamicFormBuildConfig = this.formBuilder.dynamicForm(this.serverData,this.dynamicFormConfiguration);\r\n    }\r\n}",
-        "html":"<div>\r\n    <form [rxDynamicForm]=\"dynamicFormBuildConfig\">\r\n        <rxweb-dynamic-form [viewMode]=\"viewMode\" [controlsConfig]=\"dynamicFormBuildConfig.controlsConfig\"\r\n            [bindings]=\"uiBindings\">\r\n    </rxweb-dynamic-form>    \r\n       </form>         \r\n</div> "
+    "complete": {
+        "notes": "ui-bindings",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-checkbox-complete',\r\n    templateUrl: './checkbox-complete.component.html'\r\n})\r\n\r\nexport class CheckboxCompleteComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [\r\n        {\r\n            name: \"confirm\",\r\n            type: \"checkbox\",\r\n            source: [{ value: 1, text: \"I accept the terms and conditions\" }]\r\n        }\r\n    ]\r\n\r\n    uiBindings: string[] = [\"confirm\"];\r\n\r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n\r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>\r\n<pre>Confirm: {{dynamicFormBuildConfig.formGroup.controls.confirm.value}}</pre>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "single": {
+        "notes": "ui-bindings",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-checkbox-single',\r\n    templateUrl: './checkbox-single.component.html'\r\n})\r\n\r\nexport class CheckboxSingleComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [\r\n        {\r\n            name: \"department\",\r\n            type: \"checkbox\",\r\n            source: [{ value: 1, text: \"Dotnet\" },{ value: 2, text: \"PHP\" }]\r\n        }\r\n    ]\r\n    \r\n    uiBindings: string[] = [\"department\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>\r\n<pre>department: {{dynamicFormBuildConfig.formGroup.controls.department.value}}</pre>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "multiselect": {
+        "notes": "ui-bindings",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-checkbox-multiselect',\r\n    templateUrl: './checkbox-multiselect.component.html'\r\n})\r\n\r\nexport class CheckboxMultiselectComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [\r\n        {\r\n            name: \"skills\",\r\n            type: \"checkbox\",\r\n            multiselect: true,\r\n            source: [{ value: 1, text: \"Angular\" },{ value: 2, text: \"MVC\" },{ value: 3, text: \"SQL Server\" }]\r\n        }\r\n    ]\r\n\r\n    uiBindings: string[] = [\"skills\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>\r\n<pre>skills: {{dynamicFormBuildConfig.formGroup.controls.skills.value}}</pre>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "value": {
+        "notes": "ui-bindings",
+        "component": "import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-checkbox-value',\r\n    templateUrl: './checkbox-value.component.html'\r\n})\r\n\r\nexport class CheckboxValueComponent implements OnInit {\r\n    \r\n    serverData: Array<{ [key: string]: any }> = [{\r\n        name: \"hobbies\",\r\n         type: \"checkbox\",\r\n         multiselect:true,\r\n         source: [{ hobbyId: 1, hobbyName: \"Singing\"},{ hobbyId: 2, hobbyName: \"Dancing\" },{ hobbyId: 3, hobbyName: \"Travelling\" }],\r\n         textPropName: 'hobbyId',\r\n         valuePropName: 'hobbyName',\r\n         ui: {\r\n            label: 'Hobbies'\r\n        }\r\n    }]\r\n    \r\n    uiBindings: string[] = [\"hobbies\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n   \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit()\r\n    {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>\r\n<pre>Hobbies: {{dynamicFormBuildConfig.formGroup.controls.hobbies.value}}</pre>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "inline": {
+        "notes": "ui-bindings",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-checkbox-inline',\r\n    templateUrl: './checkbox-inline.component.html'\r\n})\r\n\r\nexport class CheckboxInlineComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [\r\n        {\r\n            name: \"skills\",\r\n            type: \"checkbox\",\r\n            multiselect:true,\r\n            source: [{ value: 1, text: \"Angular\" }, { value: 2, text: \"React\" }, { value: 3, text: \"Vue\" }],\r\n            inline: true,\r\n            ui: {\r\n                label: 'Skills'\r\n            }\r\n        }\r\n    ]\r\n\r\n    uiBindings: string[] = [\"skills\"];\r\n\r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>\r\n<pre>Skills: {{dynamicFormBuildConfig.formGroup.controls.skills.value}}</pre>",
+        "model": null,
+        "modelName": null,
+        "json": {}
     }
 }

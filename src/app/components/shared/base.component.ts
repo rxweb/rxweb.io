@@ -60,10 +60,13 @@ export abstract class BaseComponentProvider implements OnDestroy {
         }
         params["content"] = jObject;
         if(refComponentString){
+            let dynamicsplitedArray = location.pathname.split('/');
             let refComponent = refComponentString.split('-');
             params["title"] = element.getAttribute('title');
             if(this.typeName == "template_driven" )
                 params["refComponent"] =this.exampleComponents[this.typeName+"_validation_" + this.templateDrivenType][refComponent[refComponent.length - 1]];
+            else if(dynamicsplitedArray[1] == "reactive-dynamic-forms")
+            params["refComponent"] =this.exampleComponents["validators"][refComponent[refComponent.length - 1]];
             else
                 params["refComponent"] =this.exampleComponents[this.typeName][refComponent[refComponent.length - 1]];
             params["decoratorName"]=refComponent[1];

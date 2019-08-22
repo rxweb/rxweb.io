@@ -38,7 +38,7 @@ export class PageComponent implements OnInit {
   codeContent: any = "";
   jsonContent: any = "";
   activeTab: string = "validators";
- 
+  dynamicElement:string;
   element: HTMLElement;
   typeName: string;
   validationName: string;
@@ -109,7 +109,7 @@ export class PageComponent implements OnInit {
     let titleString = "";
     let codeUri = "";
     let htmlUri = ""
-    if (splitedArray[3] != undefined) {
+    if (this.mainType != "reactive-dynamic-forms") {
       switch (splitedArray[3]) {
         case "decorators":
           codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
@@ -132,7 +132,12 @@ export class PageComponent implements OnInit {
       }
       document.title = "rxweb " + splitedArray[2] + " : " + titleString;
     }
-  
+    else{
+      let dynamicsplitedArray = location.pathname.split('/');
+      codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/'+  'validators' + '.json';
+      htmlUri = 'assets/json/generator/'  + dynamicsplitedArray[3]  + '/'+ dynamicsplitedArray[3] + '-' + 'validators' + '.json';
+      titleString = "validator";
+    }
 
       this.http.get(codeUri, this.options).subscribe(response => {
         this.codeContent = JSON.parse(response.toString());

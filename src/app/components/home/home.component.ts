@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit,OnDestroy {
+  timeOutId:any;
   userFormGroup: FormGroup;
   userForm:FormGroup;
   userInfoFormGroup:FormGroup;
@@ -67,7 +68,7 @@ isExistElement(){
       if (codeElement.children.length > this.currentTextGroup.fixText.length) {
         if(this.isExistElement())
           document.getElementById("code_change").removeChild(codeElement.children.item(codeElement.children.length - 1))
-        var t = setTimeout(() => this.removeChildNodes(), 10);
+        this.timeOutId = setTimeout(() => this.removeChildNodes(), 10);
       } else {
         this.totalIndex++;
         this.codeIndex = 0;
@@ -82,7 +83,7 @@ isExistElement(){
       if (textGroup.text.length > this.textIndex) {
         this.bindText(textGroup.text.charAt(this.textIndex), textGroup.class);
         this.textIndex++;
-        var t = setTimeout(() => { this.processCharacters(textGroup) }, 30)
+        this.timeOutId = setTimeout(() => { this.processCharacters(textGroup) }, 30)
       } else {
         this.textIndex = 0;
         this.changeCodeText()
@@ -101,7 +102,7 @@ isExistElement(){
           this.processCharacters(this.typeItTexts[this.totalIndex].codes[this.codeIndex])
           this.codeIndex++;
         } else {
-          var t = setTimeout(() => this.removeChildNodes(), 10);
+          this.timeOutId = setTimeout(() => this.removeChildNodes(), 10);
   
           //this.changeCodeText();
         }
@@ -151,6 +152,8 @@ isExistElement(){
       let rxwebbody = childElement.parentNode;
       rxwebbody.removeChild(childElement)
     }
+    if(this.timeOutId)
+    clearTimeout(this.timeOutId);
     
   }
 }

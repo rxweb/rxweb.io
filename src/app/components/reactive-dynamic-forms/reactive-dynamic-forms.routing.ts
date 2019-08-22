@@ -2,6 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DynamicValidationComponent } from '../dynamic-validation/dynamic-validation.component';
 import { DynamicFormHomeComponent } from "./home/home.component"
+import { DynamicGettingStartedComponent } from './getting-started/getting-started.component';
 
 const REACTIVE_DYNAMIC_FORMS_ROUTES: Routes = [
 {
@@ -27,6 +28,14 @@ const REACTIVE_DYNAMIC_FORMS_ROUTES: Routes = [
   {
     path: 'controls',
     loadChildren: 'src/app/components/controls/controls.module#ControlsModule',
+  },
+  {
+    path: 'getting-started',
+    component:DynamicGettingStartedComponent
+  },
+  {
+    path:'advance-form-design',
+    loadChildren:'src/app/components/advance-form-design/advance-form-design.module#Advance_form_designModule'
   }
 
 ];

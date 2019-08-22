@@ -23,8 +23,127 @@ export class SideBarComponent implements OnInit {
     private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster, private activatedRoute: ActivatedRoute
   ) {
   }
-  ngOnInit(): void {
-    if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") {
+  ngOnInit(): void {  
+    if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") { 
+      if(location.pathname.includes("reactive-dynamic-forms")){
+        this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
+          this.links = response.links;
+          var splitedArray = location.pathname.split('#')[0].split('/');
+          if (splitedArray[1]) {
+            var currentArray;
+            if (splitedArray[1] == "controls" || splitedArray[1] == "static-binding" || splitedArray[1] == "conditional-binding") {
+              var parentElement = this.links.filter(a => a.otherUri == 'ui-bindings');
+              if (parentElement) {
+                parentElement[0].isActive = true;
+                parentElement[0].isOpen = true;
+                currentArray = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[1])
+              }
+            }
+            else if(splitedArray[1] == "getting-started") {
+              var parentElement = this.links.filter(a => a.otherUri == 'how-to');
+              if (parentElement) {
+                parentElement[0].isActive = true;
+                parentElement[0].isOpen = true;
+                currentArray = parentElement[0].childrens.filter(a => a.linkTitle == splitedArray[1])
+              }
+            }
+            else {
+              currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);
+            }
+    
+            if (currentArray && currentArray.length > 0) {
+              currentArray[0].isActive = true;
+              currentArray[0].isOpen = true;
+              if (splitedArray[2]) {
+                if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
+                  if (splitedArray[1].includes('static-binding') || splitedArray[1].includes('conditional-binding') || splitedArray[1].includes('controls')) {
+                    var currentObj;
+                    if (currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]).length != 0) {
+                      currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2])
+                    }
+                    else {
+                      var currentChildArray = currentArray[0].childrens.filter(a => a.otherUri == splitedArray[2]);
+                      currentChildArray[0].isActive = true
+                      currentChildArray[0].isOpen = true
+                      currentObj = currentChildArray[0].childrens.filter(a => a.uri.split('#')[1] == window.location.hash.substring(1))
+                    }
+                    if (currentObj && currentObj.length > 0) {
+                      currentObj[0].isActive = true;
+                      currentObj[0].isOpen = true;
+                    }
+                    else {
+                      var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[2]);
+                      if (currentObj && currentObj.length > 0) {
+                        currentObj[0].isActive = true;
+                        currentObj[0].isOpen = true;
+                      }
+                    }
+                  }
+    
+                  else if (splitedArray[1].includes('static-binding') || splitedArray[1].includes('conditional-binding') || splitedArray[1].includes('controls')) {
+                   
+                    currentArray[0].childrens.forEach(formvalidation => {
+                      if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
+                        formvalidation.childrens.forEach(element => {
+                          if (element.title == splitedArray[2]) {
+                            formvalidation.isOpen = true;
+                            formvalidation.isActive = true;
+                            element.isActive = true;
+                            element.isOpen = true;
+                          }
+                        });
+                      }
+                    })
+                  }
+                }
+              }
+              else if (splitedArray[1].includes("dynamic-validation")) {
+                var querystringArray = location.href.split('=');
+                var currentObj, parentElement;
+                if (querystringArray[1]) {
+    
+                  currentArray[0].childrens.forEach(element => {
+                    if (element.childrens) {
+                      if (element.childrens.filter(a => a.title == querystringArray[1]).length != 0) {
+                        currentObj = element.childrens.filter(a => a.title == querystringArray[1])
+                        parentElement = element;
+                      }
+                    }
+                  });
+                  if (parentElement) {
+                    parentElement.isActive = true;
+                    parentElement.isOpen = true;
+                  }
+                  if (currentObj && currentObj.length > 0) {
+                    currentObj[0].isActive = true;
+                    currentObj[0].isOpen = true;
+                  }
+                }
+              }
+            }
+            else {
+              var children = this.links[1]['childrens'];
+              var currentArray = children.filter(a => a.uri == splitedArray[1]);
+              if (currentArray && currentArray.length > 0) {
+                currentArray[0].isActive = true;
+                currentArray[0].isOpen = true;
+                if (splitedArray[2]) {
+                  if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
+                    var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[2]);
+                    if (currentObj && currentObj.length > 0) {
+                      currentObj[0].isActive = true;
+                      currentObj[0].isOpen = true;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          this.showComponent = true;
+        });
+      
+      }
+     else{
       this.http.get('assets/json/sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
         this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
         this.links = response.links;
@@ -104,6 +223,7 @@ export class SideBarComponent implements OnInit {
         }
         this.showComponent = true;
       });
+    }
     }
   }
   navigateTo(link: any, secondlevel: any, thirdlevel: any): void {

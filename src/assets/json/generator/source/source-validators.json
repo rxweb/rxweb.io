@@ -1,0 +1,10 @@
+{
+    "complete": {
+        "notes": ["ui-bindings"],
+        "component": "import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-source-complete',\r\n    templateUrl: './source-complete.component.html'\r\n})\r\n\r\nexport class SourceCompleteComponent implements OnInit {\r\n    serverData = [ {\r\n      type: 'select',\r\n      name: 'Skills',\r\n      source: [{ text: \"Angular\", value: \"1\" }, { text: \"MVC\", value: \"2\" }, { text: \"React\", value: \"3\" }],\r\n      ui: {\r\n        label: 'Skills',\r\n      }\r\n    }]\r\n    \r\n        uiBindings:string[] = [\"Skills\"];\r\n        dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n        constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n          ngOnInit()\r\n         {\r\n          this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData,{});\r\n          }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\">\r\n    </div>      \r\n    <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }
+}

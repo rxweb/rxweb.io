@@ -1,0 +1,10 @@
+{
+    "complete": {
+        "notes": "ui-bindings",
+        "component": "import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-dynamicdate-complete',\r\n    templateUrl: './dynamicdate-complete.component.html'\r\n})\r\n\r\nexport class DynamicdateCompleteComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [{\r\n            name: \"dateOfBirth\",\r\n             type: \"date\",\r\n             ui: {\r\n                label: 'Date Of Birth',                      \r\n            }\r\n        \r\n    }]\r\n    \r\n    uiBindings: string[] = [\"dateOfBirth\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit()\r\n    {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }
+}

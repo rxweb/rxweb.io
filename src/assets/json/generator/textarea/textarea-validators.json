@@ -1,0 +1,26 @@
+{
+    "complete": {
+        "notes": "ui-bindings",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-textarea-complete',\r\n    templateUrl: './textarea-complete.component.html'\r\n})\r\n\r\nexport class TextareaCompleteComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [\r\n        {\r\n            name: \"address\",\r\n            type: \"textarea\",\r\n            ui: {\r\n                label: 'Address'\r\n            }\r\n        }\r\n    ]\r\n    \r\n    uiBindings: string[] = [\"address\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "size": {
+        "notes": "ui-bindings",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-textarea-size',\r\n    templateUrl: './textarea-size.component.html'\r\n})\r\n\r\nexport class TextareaSizeComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [\r\n        {\r\n            name: \"address\",\r\n            type: \"textarea\",\r\n            additionalConfig: {\r\n                prop: {\r\n                    rows: 5,\r\n                    cols: 50\r\n                }\r\n            },\r\n            ui: {\r\n                label: 'Address'\r\n            }\r\n        }\r\n    ]\r\n\r\n    uiBindings: string[] = [\"address\"];\r\n\r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "inputlength": {
+        "notes": "ui-bindings",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-textarea-inputlength',\r\n    templateUrl: './textarea-inputlength.component.html'\r\n})\r\n\r\nexport class TextareaInputlengthComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [\r\n        {\r\n            name: \"address\",\r\n            type: \"textarea\",\r\n            additionalConfig: {\r\n                prop: {\r\n                    maxLength: 10,\r\n                    minLength: 5\r\n                }\r\n            },\r\n            ui: {\r\n                label: 'Address'\r\n            }\r\n        }\r\n    ]\r\n    \r\n    uiBindings: string[] = [\"address\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }
+}
