@@ -8,6 +8,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 
 
 export class DropdownStaticComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{
         name: "gender",
         type: "select",
@@ -17,9 +18,13 @@ export class DropdownStaticComponent implements OnInit {
             placeholder: 'Select',
         }
     }]
+    
     uiBindings: string[] = ["gender"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
     }

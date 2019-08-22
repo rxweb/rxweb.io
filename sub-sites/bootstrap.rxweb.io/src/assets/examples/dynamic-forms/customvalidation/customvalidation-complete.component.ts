@@ -8,6 +8,7 @@ import { NonAsyncCustomValidation } from './custom-validation.model'
 })
 
 export class CustomvalidationCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [
         {
             name: "nationality",
@@ -18,14 +19,20 @@ export class CustomvalidationCompleteComponent implements OnInit {
             }
         }
     ]
+
     uiBindings: string[] = ["nationality"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     dynamicFormConfiguration: DynamicFormConfiguration;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormConfiguration = {
             controlConfigModels: [{ modelName: 'validationModel', model: NonAsyncCustomValidation }],
           }
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, this.dynamicFormConfiguration);
     }
+    
 }

@@ -7,17 +7,23 @@ import { RxReactiveDynamicFormsModule } from '@rxweb/reactive-dynamic-forms'
 import { CheckboxCompleteComponent } from './complete/checkbox-complete.component';
 import { CheckboxInlineComponent } from './inline/checkbox-inline.component';
 import { CheckboxValueComponent } from './value/checkbox-value.component';
+import { CheckboxSingleComponent } from './single/checkbox-single.component';
+import { CheckboxMultiselectComponent } from './multiselect/checkbox-multiselect.component';
 
 @NgModule({
   declarations: [
     CheckboxCompleteComponent,
     CheckboxInlineComponent,
-    CheckboxValueComponent
+    CheckboxValueComponent,
+    CheckboxSingleComponent,
+    CheckboxMultiselectComponent
   ],
 entryComponents: [
   CheckboxCompleteComponent,
   CheckboxInlineComponent,
-  CheckboxValueComponent
+  CheckboxValueComponent,
+  CheckboxSingleComponent,
+  CheckboxMultiselectComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
@@ -28,7 +34,9 @@ entryComponents: [
   exports: [
     CheckboxCompleteComponent,
     CheckboxInlineComponent,
-    CheckboxValueComponent
+    CheckboxValueComponent,
+    CheckboxSingleComponent,
+    CheckboxMultiselectComponent
   ]
 
 })

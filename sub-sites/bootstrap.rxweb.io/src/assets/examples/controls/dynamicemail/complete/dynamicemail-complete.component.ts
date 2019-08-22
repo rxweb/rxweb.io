@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class DynamicemailCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [{
             name: "email",
              type: "email",
@@ -15,9 +16,13 @@ export class DynamicemailCompleteComponent implements OnInit {
             }
         
     }]
+    
     uiBindings: string[] = ["email"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit()
     {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});

@@ -7,9 +7,9 @@ type:simple
 linktitle: textbox
 ---
 
-<div class="title-bar"><p>To create a formControl with type text in dynamic forms. You just need to mention the formControl name and its type in the `serverData` and pass it in the `formGroup` method of `RxDynamicFormBuilder`.</p></div>
+<div class="title-bar"><p>
 
-<div component="app-code" key="Textbox-serverdata-component"></div>
+To create a textbox in dynamic forms, you just need to mention `type: "textbox"` in the server response.</p></div>
 
 # Example
 

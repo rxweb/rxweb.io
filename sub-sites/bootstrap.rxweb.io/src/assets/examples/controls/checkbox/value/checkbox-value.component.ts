@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class CheckboxValueComponent implements OnInit {
+    
     serverData: Array<{ [key: string]: any }> = [{
         name: "hobbies",
          type: "checkbox",
@@ -18,9 +19,13 @@ export class CheckboxValueComponent implements OnInit {
             label: 'Hobbies'
         }
     }]
+    
     uiBindings: string[] = ["hobbies"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+   
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit()
     {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});

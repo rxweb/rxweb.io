@@ -7,6 +7,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class TextareaCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [
         {
             name: "address",
@@ -16,9 +17,13 @@ export class TextareaCompleteComponent implements OnInit {
             }
         }
     ]
+    
     uiBindings: string[] = ["address"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
     }

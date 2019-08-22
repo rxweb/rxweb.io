@@ -7,22 +7,22 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 })
 
 export class CheckboxCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [
         {
-            name: "skills",
+            name: "confirm",
             type: "checkbox",
-            multiselect:true,
-            source: [{ value: 1, text: "Angular" }, { value: 2, text: "React" }, { value: 3, text: "Vue" }],
-            ui: {
-                label: 'Skills'
-            }
+            source: [{ value: 1, text: "I accept the terms and conditions" }]
         }
     ]
-    uiBindings: string[] = ["skills"];
+
+    uiBindings: string[] = ["confirm"];
+
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+
     ngOnInit() {
         this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
-        console.log(this.dynamicFormBuildConfig.formGroup.controls.skills)
     }
 }

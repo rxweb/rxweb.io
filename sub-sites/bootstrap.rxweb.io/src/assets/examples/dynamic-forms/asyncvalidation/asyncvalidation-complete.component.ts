@@ -8,6 +8,7 @@ import { AsyncCustomValidation } from './async-validation.model'
 })
 
 export class AsyncvalidationCompleteComponent implements OnInit {
+
     serverData: Array<{ [key: string]: any }> = [
         {
             name: "nationality",
@@ -18,10 +19,15 @@ export class AsyncvalidationCompleteComponent implements OnInit {
             }
         }
     ]
+    
     uiBindings: string[] = ["nationality"];
+    
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    
     dynamicFormConfiguration: DynamicFormConfiguration;
+    
     constructor(private formBuilder: RxDynamicFormBuilder) { }
+    
     ngOnInit() {
         this.dynamicFormConfiguration = {
             controlConfigModels: [{ modelName: 'validationModel', model: AsyncCustomValidation }],

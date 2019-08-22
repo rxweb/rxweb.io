@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from "@rxweb/reactive-dynamic-forms";
 
 @Component({
-    selector: 'app-range-complete',
+    selector: 'app-dynamicrange-complete',
     templateUrl: './dynamicrange-complete.component.html'
 })
 

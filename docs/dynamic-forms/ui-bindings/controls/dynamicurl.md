@@ -7,7 +7,9 @@ type: simple
 linktitle: dynamicurl
 ---
 
-<div class="title-bar"><p>To create a formControl of type url, you need to mention the formControl name and type in the `serverData` and pass it in the `formGroup` method of `RxDynamicFormBuilder`.</p></div>
+<div class="title-bar"><p>
+
+To create a formcontrol with type url in dynamic forms, you just need to mention `type: "url"` in the server response.</p></div>
 
 # Example
 
