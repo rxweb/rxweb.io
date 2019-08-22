@@ -1,297 +1,617 @@
 {
-    "links":[
+  "links": [
+    
+    {
+      "title": "Step-by-Step",
+      "uri": "dynamic-forms/stepbystep",
+      "isOpen": false,
+      "isActive": false,
+      "otherUri": "dynamic-forms",
+      "childrens": [
         {
-            "title": "Getting Started",
-            "uri": "dynamic-forms/getting-started",
-            "otherUri": "getting-started",
-            "isOpen": true,
-            "isActive": false
-          },         
-              {
-                "title": "Step-by-Step",
-              "otherUri": "stepbystep",
-              "uri":"dynamic-forms/stepbystep/validators",
-              "isOpen": false,
+          "title": "Install the packages",
+          "uri": "dynamic-forms/stepbystep#installpackage",
+          "isActive": false,
+          "linkTitle": "stepbystep",
+          "refUri": "installpackage"
+        },
+        {
+          "title": "Register The Module",
+          "uri": "dynamic-forms/stepbystep#registerthemodule",
+          "isActive": false,
+          "linkTitle": "stepbystep",
+          "refUri": "registerthemodule"
+        },
+        {
+          "title": "Design The Json",
+          "uri": "dynamic-forms/stepbystep#designthejson",
+          "isActive": false,
+          "linkTitle": "stepbystep",
+          "refUri": "designthejson"
+        },
+        {
+          "title": "Create The Form",
+          "uri": "dynamic-forms/stepbystep#createtheform",
+          "isActive": false,
+          "linkTitle": "stepbystep",
+          "refUri": "createtheform"
+        },
+        {
+          "title": "Html Implementation",
+          "uri": "dynamic-forms/stepbystep#htmlimplementation",
+          "isActive": false,
+          "linkTitle": "stepbystep",
+          "refUri": "htmlimplementation"
+        },
+        {
+          "title": "Working Example",
+          "uri": "dynamic-forms/stepbystep#workingexample",
+          "isActive": false,
+          "linkTitle": "stepbystep",
+          "refUri": "workingexample"
+        }
+      ]
+    },
+    {
+      "title": "Ui Bindings",
+      "otherUri": "ui-bindings",
+      "isActive": false,
+      "isOpen": false,
+      "childrens": [
+        {
+          "title": "Controls",
+          "uri": null,
+          "isOpen": false,
+          "isActive": false,
+          "otherUri": "controls",
+          "childrens": [
+            {
+              "title": "checkbox",
+              "uri": "controls/checkbox",
               "isActive": false,
-                "childrens": [
-                  {
-                    "title": "Register The Module",
-                    "uri": "dynamic-forms/stepbystep/validators#registerthemodule",
-                    "isActive": false,
-                    "linkTitle": "stepbystep",
-                    "refUri":"registerthemodule"
-                  },
-                  {
-                    "title": "Design The Json",
-                    "uri": "dynamic-forms/stepbystep/validators#designthejson",
-                    "isActive": false,
-                    "linkTitle": "stepbystep"
-                  },
-                  {
-                    "title": "Create The Form",
-                    "uri": "dynamic-forms/stepbystep/validators#createtheform",
-                    "isActive": false,
-                    "linkTitle": "stepbystep"
-                  },
-                  {
-                    "title": "Html Implementation",
-                    "uri": "dynamic-forms/stepbystep/validators#htmlimplementation",
-                    "isActive": false,
-                    "linkTitle": "stepbystep"
-                  }
-                ]
-              },
-              {
-                "title": "Ui Features",
-                "otherUri": "ui-features",
-                "isActive": false,
-                "isOpen": false,
-                "childrens": [
-                  {
-                    "title": "label",
-                    "uri": null,
-                    "isOpen": false,
-                    "isActive": false,
-                    "otherUri": "label",
-                    "childrens": [
-                      {
-                        "title": "Static label",
-                        "uri": "dynamic-forms/label/validators#staticLabel",
-                        "isActive": false,
-                        "linkTitle": "label"
-                      },
-                      {
-                        "title": "Conditional label",
-                        "uri": "dynamic-forms/label/validators#conditionalLabel",
-                        "isActive": false,
-                        "linkTitle": "label"
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Disable",
-                    "uri": null,
-                    "isOpen": false,
-                    "isActive": false,
-                    "linkTitle": null,
-                    "otherUri": "disable",
-                    "childrens": [
-                      {
-                        "title": "Static disable",
-                        "uri": "dynamic-forms/dynamicDisable/validators#staticdisable",
-                        "isActive": false,
-                        "linkTitle": null
-                      },
-                      {
-                        "title": "Conditional disable",
-                        "uri": "dynamic-forms/dynamicDisable/validators#conditionaldisable",
-                        "isActive": false,
-                        "linkTitle": null
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Placeholder",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null,
-                    "childrens": [
-                      {
-                        "title": "Static placeholder",
-                        "uri": "dynamic-forms/placeholder/validators#staticplaceholder",
-                        "isActive": false,
-                        "linkTitle": null
-                      },
-                      {
-                        "title": "Conditional placeholder",
-                        "uri": "dynamic-forms/placeholder/validators#conditionalplaceholder",
-                        "isActive": false,
-                        "linkTitle": null
-                      }
-                    ]
-                  },
-                  {
-                    "title": "focus",
-                    "isActive": false,
-                    "linkTitle": null,
-                    "childrens": [
-                      {
-                        "title": "Static focus",
-                        "uri": "dynamic-forms/focus/validators#staticfocus",
-                        "isActive": false,
-                        "linkTitle": null
-                      },
-                      {
-                        "title": "Conditional focus",
-                        "uri": "dynamic-forms/focus/validators#conditionalplaceholder",
-                        "isActive": false,
-                        "linkTitle": null
-                      }
-                    ]
-                  },
-                  {
-                    "title": "cssClassNames",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null,
-                    "childrens": [
-                      {
-                        "title": "Static cssClassNames",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      },
-                      {
-                        "title": "Conditional cssClassNames",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      }
-                    ]
-                  },
-                  {
-                    "title": "value",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null
-                  },
-                  {
-                    "title": "hide",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null,
-                    "childrens": [
-                      {
-                        "title": "Static hide",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      },
-                      {
-                        "title": "Conditional hide",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      }
-                    ]
-                  },
-                  {
-                    "title": "description",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null,
-                    "childrens": [
-                      {
-                        "title": "Static description",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      },
-                      {
-                        "title": "Conditional description",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      }
-                    ]
-                  },
-                  {
-                    "title": "readonly",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null,
-                    "childrens": [
-                      {
-                        "title": "Static readonly",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      },
-                      {
-                        "title": "Conditional readonly",
-                        "uri": null,
-                        "isActive": false,
-                        "linkTitle": null
-                      }
-                    ]
-                  }
-                ]
-              },
+              "linkTitle": "checkbox"
+            },
+            {
+              "title": "date",
+              "uri": "controls/dynamicdate",
+              "isActive": false,
+              "linkTitle": "dynamicdate"
+            },
+            {
+              "title": "dropdown",
+              "uri": "controls/dropdown",
+              "isActive": false,
+              "linkTitle": "dropdown"
+            },
+            {
+              "title": "email",
+              "uri": "controls/dynamicemail",
+              "isActive": false,
+              "linkTitle": "dynamicemail"
+            },
+            {
+              "title": "file",
+              "uri": "controls/dynamicfile",
+              "isActive": false,
+              "linkTitle": "dynamicfile"
+            },
+            {
+              "title": "password",
+              "uri": "controls/dynamicpassword",
+              "isActive": false,
+              "linkTitle": "dynamicpassword"
+            },
+            {
+              "title": "radio",
+              "uri": "controls/radio",
+              "isActive": false,
+              "linkTitle": "radio"
+            },
+            {
+              "title": "range",
+              "uri": "controls/dynamicrange",
+              "isActive": false,
+              "linkTitle": "dynamicrange"
+            },
+            {
+              "title": "textarea",
+              "uri": "controls/textarea",
+              "isActive": false,
+              "linkTitle": "textarea"
+            },
+            {
+              "title": "textbox",
+              "uri": "controls/textbox",
+              "isActive": false,
+              "linkTitle": "textbox"
+            },
+            {
+              "title": "url",
+              "uri": "controls/dynamicurl",
+              "isActive": false,
+              "linkTitle": "dynamicurl"
+            }
+          ]
+        },
+        {
+          "title": "Static Binding",
+          "isOpen": false,
+          "isActive": false,
+          "otherUri": "static-binding",
+          "childrens": [
+            {
+              "title": "class",
+              "uri": "static-binding/class",
+              "isActive": false,
+              "linkTitle": "class"
+            },
+            {
+              "title": "description",
+              "uri": "static-binding/description",
+              "isActive": false,
+              "linkTitle": "description"
+            },
+            {
+              "title": "disabled",
+              "uri": "static-binding/disabled",
+              "isActive": false,
+              "linkTitle": "disabled"
+            },
+            {
+              "title": "focus",
+              "uri": "static-binding/focus",
+              "isActive": false,
+              "linkTitle": "focus"
+            },
+            {
+              "title": "hide",
+              "uri": "static-binding/hide",
+              "isActive": false,
+              "linkTitle": "hide"
+            },
+            {
+              "title": "label",
+              "uri": "static-binding/label",
+              "isActive": false,
+              "linkTitle": "label"
+            },
+            {
+              "title": "placeholder",
+              "uri": "static-binding/placeholder",
+              "isActive": false,
+              "linkTitle": "placeholder"
+            },
+            {
+              "title": "readonly",
+              "uri": "static-binding/readonly",
+              "isActive": false,
+              "linkTitle": "readonly"
+            },
+            {
+              "title": "source",
+              "uri": "static-binding/source",
+              "isActive": false,
+              "linkTitle": "source"
+            },
+            {
+              "title": "value",
+              "uri": "static-binding/value",
+              "isActive": false,
+              "linkTitle": "value"
+            }
+          ]
+        },
+        {
+          "title": "Conditional Binding",
+          "uri": null,
+          "isOpen": false,
+          "isActive": false,
+          "otherUri": "conditional-binding",
+          "childrens": [
+            {
+              "title": "class",
+              "uri": "conditional-binding/conditionalclass",
+              "isActive": false,
+              "linkTitle": "conditionalclass"
+            },
+            {
+              "title": "description",
+              "uri": "conditional-binding/conditionaldescription",
+              "isActive": false,
+              "linkTitle": "conditionaldescription"
+            },
+            {
+              "title": "disabled",
+              "uri": "conditional-binding/conditionaldisabled",
+              "isActive": false,
+              "linkTitle": "conditionaldisabled"
+            },
+            {
+              "title": "hide",
+              "uri": "conditional-binding/conditionalhide",
+              "isActive": false,
+              "linkTitle": "conditionalhide"
+            },
+            {
+              "title": "label",
+              "uri": "conditional-binding/conditionallabel",
+              "isActive": false,
+              "linkTitle": "conditionallabel"
+            },
+            {
+              "title": "placeholder",
+              "uri": "conditional-binding/conditionalplaceholder",
+              "isActive": false,
+              "linkTitle": "conditionalplaceholder"
+            },
+            {
+              "title": "readonly",
+              "uri": "conditional-binding/conditionalreadonly",
+              "isActive": false,
+              "linkTitle": "conditionalreadonly"
+            },
 
-              {
-                "title": "Controls",
-                "isOpen": false,
-                "isActive": false,
-                "childrens": [
-                  {
-                    "title": "Textbox",
-                    "uri": "dynamic-forms/textbox/validators",
-                    "otherUri":"textbox",
-                    "isActive": false
-                  },
-                  {
-                    "title": "DropDown",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null,
-                    "childrens": [
-                      {
-                        "title": "Static",
-                        "uri": "dynamic-forms/dropdown/validators#staticdropdown",
-                        "isActive": false,
-                        "linkTitle": null    
-                      },
-                      {
-                        "title": "Cascading",
-                        "uri": "dynamic-forms/dropdown/validators#cascadingdropdown",
-                        "isActive": false,
-                        "linkTitle": null    
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Checkbox",
-                    "uri": "dynamic-forms/checkbox/validators",
-                    "isActive": false
-                  },
-                  {
-                    "title": "Radio",
-                    "uri": "dynamic-forms/radio/validators",
-                    "isActive": false
-                  },
-                  {
-                    "title": "File",
-                    "uri": "dynamic-forms/dynamicfile/validators",
-                    "isActive": false
-                  }
-                ]
-              },
-              {
-                "title": "Dynamic Validation",
-                "isOpen": false,
-                "isActive": false,
-                "childrens": [
-                 
-                ]
-              },
-              {
-                "title": "Advance Dynamic Forms",
-                "isOpen": false,
-                "isActive": false,
-                "childrens": [
-                  {
-                    "title": "Bootstrap Horizontal",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null    
-                  },
-                  {
-                    "title": "Bootstrap Advance",
-                    "uri": null,
-                    "isActive": false,
-                    "linkTitle": null    
-                  }
-                ]
-              } 
-]
+            {
+              "title": "value",
+              "uri": "conditional-binding/conditionalvalue",
+              "isActive": false,
+              "linkTitle": "conditionalvalue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Advance Form Design",
+      "isOpen": false,
+      "isActive": false,
+      "childrens": [
+        {
+          "title": "nested formgroup",
+          "uri": "dynamic-forms/nestedformgroup",
+          "isActive": false,
+          "linkTitle": null
+        },
+        {
+          "title": "nested formarray",
+          "uri": "dynamic-forms/nestedformarray",
+          "isActive": false,
+          "linkTitle": null
+        },
+        {
+          "title": "customized design",
+          "uri": "dynamic-forms/customizeddesign",
+          "isActive": false,
+          "linkTitle": null
+        }
+      ]
+    },
+    {
+      "title": "Reset Form",
+      "isOpen": false,
+      "isActive": false,
+      "uri": "dynamic-forms/dynamicresetform"
+    },
+    {
+      "title": "Dynamic Validation",
+      "otherUri": "dynamic-validation",
+      "isOpen": false,
+      "isActive": false,
+      "childrens": [
+        {
+          "title": "Date and time",
+          "isOpen": false,
+          "isActive": false,
+          "childrens": [
+            {
+              "title": "date",
+              "uri": "/dynamic-validation?validator=date",
+              "isActive": false
+            },
+            {
+              "title": "maxDate",
+              "uri": "/dynamic-validation?validator=maxDate",
+              "isActive": false
+            },
+            {
+              "title": "minDate",
+              "uri": "/dynamic-validation?validator=minDate",
+              "isActive": false
+            },
+            {
+              "title": "minTime",
+              "uri": "/dynamic-validation?validator=minTime",
+              "isActive": false
+            },
+            {
+              "title": "maxTime",
+              "uri": "/dynamic-validation?validator=maxTime",
+              "isActive": false
+            },
+            {
+              "title": "time",
+              "uri": "/dynamic-validation?validator=time",
+              "isActive": false
+            }
+            
+          ]
+        },  
+        {
+          "title": "Numeric",
+          "isOpen": false,
+          "isActive": false,
+          "childrens": [
+            {
+              "title": "creditCard",
+              "uri": "/dynamic-validation?validator=creditCard",
+              "isActive": false
+            },
+            {
+              "title": "digit",
+              "uri": "/dynamic-validation?validator=digit",
+              "isActive": false
+            },
+            {
+              "title": "even",
+              "uri": "/dynamic-validation?validator=even",
+              "isActive": false
+            },
+            {
+              "title": "factor",
+              "uri": "/dynamic-validation?validator=factor",
+              "isActive": false
+            },
+            {
+              "title": "latitude",
+              "uri": "/dynamic-validation?validator=latitude",
+              "isActive": false
+            },
+            {
+              "title": "latLong",
+              "uri": "/dynamic-validation?validator=latLong",
+              "isActive": false
+            },
+            {
+              "title": "leapYear",
+              "uri": "/dynamic-validation?validator=leapYear",
+              "isActive": false
+            },
+            {
+              "title": "longitude",
+              "uri": "/dynamic-validation?validator=longitude",
+              "isActive": false
+            },
+            {
+              "title": "maxNumber",
+              "uri": "/dynamic-validation?validator=maxNumber",
+              "isActive": false
+            },
+            {
+              "title": "minNumber",
+              "uri": "/dynamic-validation?validator=minNumber",
+              "isActive": false
+            },
+            {
+              "title": "numeric",
+              "uri": "/dynamic-validation?validator=numeric",
+              "isActive": false
+            },
+            {
+              "title": "odd",
+              "uri": "/dynamic-validation?validator=odd",
+              "isActive": false
+            },
+            {
+              "title": "port",
+              "uri": "/dynamic-validation?validator=port",
+              "isActive": false
+            },
+            {
+              "title": "primeNumber",
+              "uri": "/dynamic-validation?validator=primeNumber",
+              "isActive": false
+            },
+            {
+              "title": "range",
+              "uri": "/dynamic-validation?validator=range",
+              "isActive": false
+            }
+          ]
+        },
+        {
+          "title": "Relational",
+          "isOpen": false,
+          "isActive": false,
+          "childrens": [
+            {
+              "title": "compare",
+              "uri": "/dynamic-validation?validator=compare",
+              "isActive": false
+            },
+            {
+              "title": "different",
+              "uri": "/dynamic-validation?validator=different",
+              "isActive": false
+            },
+            {
+              "title": "lessThan",
+              "uri": "/dynamic-validation?validator=lessThan",
+              "isActive": false
+            },
+            {
+              "title": "lessThanEqualTo",
+              "uri": "/dynamic-validation?validator=lessThanEqualTo",
+              "isActive": false
+            },
+            {
+              "title": "greaterThan",
+              "uri": "/dynamic-validation?validator=greaterThan",
+              "isActive": false
+            },
+            {
+              "title": "greaterThanEqualTo",
+              "uri": "/dynamic-validation?validator=greaterThanEqualTo",
+              "isActive": false
+            }
+          ]
+        },
+        {
+          "title": "String",
+          "isOpen": false,
+          "isActive": false,
+          "childrens": [
+            {
+              "title": "alpha",
+              "uri": "/dynamic-validation?validator=alpha",
+              "isActive": false
+            },
+            {
+              "title": "alphaNumeric",
+              "uri": "/dynamic-validation?validator=alphaNumeric",
+              "isActive": false
+            },
+            {
+              "title": "ascii",
+              "uri": "/dynamic-validation?validator=ascii",
+              "isActive": false
+            },
+            {
+              "title": "contains",
+              "uri": "/dynamic-validation?validator=contains",
+              "isActive": false
+            },
+            {
+              "title": "cusip",
+              "uri": "/dynamic-validation?validator=cusip",
+              "isActive": false
+            },
+            {
+              "title": "dataUri",
+              "uri": "/dynamic-validation?validator=dataUri",
+              "isActive": false
+            },
+            {
+              "title": "email",
+              "uri": "/dynamic-validation?validator=email",
+              "isActive": false
+            },
+            {
+              "title": "endsWith",
+              "uri": "/dynamic-validation?validator=endsWith",
+              "isActive": false
+            },
+            {
+              "title": "extension",
+              "uri": "/dynamic-validation?validator=extension",
+              "isActive": false
+            },
+            {
+              "title": "grid",
+              "uri": "/dynamic-validation?validator=grid",
+              "isActive": false
+            },
+            {
+              "title": "hexColor",
+              "uri": "/dynamic-validation?validator=hexColor",
+              "isActive": false
+            },
+            {
+              "title": "ip",
+              "uri": "/dynamic-validation?validator=ip",
+              "isActive": false
+            },
+            {
+              "title": "json",
+              "uri": "/dynamic-validation?validator=json",
+              "isActive": false
+            },
+            {
+              "title": "lowerCase",
+              "uri": "/dynamic-validation?validator=lowerCase",
+              "isActive": false
+            },
+            {
+              "title": "mac",
+              "uri": "/dynamic-validation?validator=mac",
+              "isActive": false
+            },
+            {
+              "title": "maxLength",
+              "uri": "/dynamic-validation?validator=maxLength",
+              "isActive": false
+            },
+            {
+              "title": "minLength",
+              "uri": "/dynamic-validation?validator=minLength",
+              "isActive": false
+            },
+            {
+              "title": "password",
+              "uri": "/dynamic-validation?validator=password",
+              "isActive": false
+            },
+            {
+              "title": "startsWith",
+              "uri": "/dynamic-validation?validator=startsWith",
+              "isActive": false
+            },
+            {
+              "title": "upperCase",
+              "uri": "/dynamic-validation?validator=upperCase",
+              "isActive": false
+            },
+            {
+              "title": "url",
+              "uri": "/dynamic-validation?validator=url",
+              "isActive": false
+            }
+          ]
+        },
+        {
+          "title": "notEmpty",
+          "uri": "/dynamic-validation?validator=notEmpty",
+          "isActive": false
+        },
+        {
+          "title": "required",
+          "uri": "/dynamic-validation?validator=required",
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "title": "Async Validation",
+      "isOpen": false,
+      "isActive": false,
+      "uri": "dynamic-forms/asyncvalidation"
+    },
+    {
+      "title": "Custom Validation",
+      "isOpen": false,
+      "isActive": false,
+      "uri": "dynamic-forms/customvalidation"
+    },
+    {
+      "title": "Error Messaging Strategy",
+      "isOpen": false,
+      "isActive": false,
+      "uri": "dynamic-forms/dynamicerrormessagestrategy"
+    },
+        {
+          "title": "How-to",
+          "uri": null,
+          "isOpen": false,
+          "isActive": false,
+          "otherUri": "how-to",
+          "childrens": [
+            {
+              "title": "Quick Start",
+              "uri": "getting-started",
+              "isActive": false,
+              "linkTitle": "getting-started"
+            }
+          ]        
+     }
+    
+  ]
 }

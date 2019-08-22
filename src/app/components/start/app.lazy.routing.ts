@@ -93,6 +93,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/sanitization/sanitization.module#SanitizationModule',
   },
   {
+    path: 'reactive-dynamic-forms',
+    loadChildren: 'src/app/components/reactive-dynamic-forms/reactive-dynamic-forms.module#ReactiveDynamicFormsModule',
+  },
+  {
     path: '**', 
     redirectTo:'home',
     pathMatch: 'full'

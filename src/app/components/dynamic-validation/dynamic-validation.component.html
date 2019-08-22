@@ -1,0 +1,61 @@
+<div class="content">
+    <div class="container">
+        <div class="bg-white border-radius">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hpanel">
+                        <div class="tab-content fade show">
+                            <div class="tab-pane panel-body validation-tab active">
+                                <div class='row page-section' id="about-reactiveformconfig">
+                                    <div class='col-lg-12'>
+                                        <!-- <h4>Select Validator</h4>
+                                        <div class="form-group">
+                                            <select class='form-control' #mySelect
+                                                (change)='onOptionsSelected(mySelect.value)'>
+                                                <option class='option' *ngFor='let option of dropDownData'
+                                                    [value]="option" [selected]="option == selectedValidator">{{option}}
+                                                </option>
+                                            </select>
+                                            <hr />
+                                        </div> -->
+                                        <div>
+                                          
+                                            <div class="title-bar">
+                                                     <h1>{{validator}}</h1> 
+                                                    <p>{{validatorDescription}}</p>
+                                            </div>
+                                          
+                                            <div class="model-ts combined">
+                                                <a class="float-right file-icon ng-star-inserted">
+                                                    <i aria-hidden="true" class="fa fa-external-link"></i></a>
+                                                <a class="float-right file-icon ng-star-inserted"><i aria-hidden="true"
+                                                        class="fa fa-code"></i></a>
+                                                <div class="code-example-title ng-star-inserted"> Dynamic
+                                                     {{validator}} Validation Example </div>
+                                                <div class="code-example">
+                                                    <div class="ng-star-inserted">
+                                                        <form *ngIf="bindForm"
+                                                            [formGroup]="dynamicFormBuildConfig.formGroup">
+                                                            <div viewMode="basic"
+                                                                [rxwebDynamicForm]="dynamicFormBuildConfig"
+                                                                [uiBindings]="uiBindings">
+                                                            </div>
+                                                            <button type="submit"
+                                                                class="btn btn-primary">Submit</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
