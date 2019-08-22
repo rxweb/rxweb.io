@@ -271,12 +271,6 @@
           "uri": "reactive-dynamic-forms/advance-form-design/nestedformgroup",
           "isActive": false,
           "linkTitle": null
-        },
-        {
-          "title": "nested formarray",
-          "uri": "reactive-dynamic-forms/advance-form-design/nestedformarray",
-          "isActive": false,
-          "linkTitle": null
         }
       ]
     },
