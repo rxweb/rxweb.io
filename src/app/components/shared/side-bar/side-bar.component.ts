@@ -27,7 +27,6 @@ export class SideBarComponent implements OnInit {
     if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") { 
       if(location.pathname.includes("reactive-dynamic-forms")){
         this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
-          debugger
           this.links = response.links;
           var splitedArray = location.pathname.split('#')[0].split('/');
           console.log(splitedArray)
@@ -71,7 +70,6 @@ export class SideBarComponent implements OnInit {
               }
             }
             else if (splitedArray[2].includes("dynamic-validation")) {
-              debugger
               var querystringArray = location.href.split('=');
               var currentObj, parentElement;
               if (querystringArray[1]) {
@@ -145,7 +143,6 @@ export class SideBarComponent implements OnInit {
                 }
               }
               else if (splitedArray[2].includes("dynamic-validation")) {
-                debugger
                 var querystringArray = location.href.split('=');
                 var currentObj, parentElement;
                 if (querystringArray[2]) {
@@ -192,7 +189,6 @@ export class SideBarComponent implements OnInit {
       }
      else{
       this.http.get('assets/json/sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
-        debugger
         this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
         this.links = response.links;
         var splitedArray = location.pathname.split('#')[0].split('/')
