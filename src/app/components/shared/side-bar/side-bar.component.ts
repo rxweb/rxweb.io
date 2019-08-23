@@ -37,7 +37,7 @@ export class SideBarComponent implements OnInit {
                 currentArray = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[2])
               }
             }
-            else if (splitedArray[2] == "getting-started") {
+            else if (splitedArray[2] == "dynamic-getting-started") {
               var parentElement = this.links.filter(a => a.otherUri == 'how-to');
               if (parentElement) {
                 parentElement[0].isActive = true;

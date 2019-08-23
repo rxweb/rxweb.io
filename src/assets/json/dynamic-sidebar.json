@@ -584,7 +584,7 @@
       "childrens": [
         {
           "title": "Quick Start",
-          "uri": "reactive-dynamic-forms/getting-started",
+          "uri": "reactive-dynamic-forms/dynamic-getting-started",
           "isActive": false,
           "linkTitle": "getting-started"
         }
