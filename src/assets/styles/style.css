@@ -5988,7 +5988,7 @@ img {
 }
 
 @media (max-width: 992px) {
-    .dynamic-home .form{
+    .model-ts.combined.dynamic-home-form{
         visibility: hidden;
         height: 0%;
     }
@@ -6008,7 +6008,7 @@ img {
 }
 
 @media (max-width: 768px) {
-    .dynamic-home .form{
+    .model-ts.combined.dynamic-home-form{
         visibility: hidden;
         height: 0%;
     }
@@ -6030,7 +6030,7 @@ img {
 @media (max-width: 576px) {
     .dynamic-text-typing {
         font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
-        font-size: 20px;
+        font-size: 11px;
         /* margin-top: 60px;
         margin-left: 40px;
         margin-bottom: 60px; */
@@ -6040,6 +6040,10 @@ img {
         margin-top: 60px;
         margin-left: 40px;
         margin-bottom: 60px;
+    }
+    .header-links.content.dynamic-content>ul, .header-links.content.dynamic-content>ul>li {
+     right:253px;
+     border: none;
     }
 }
 
@@ -7485,6 +7489,13 @@ header.header {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .header-links.content.dynamic-content{
+        position: relative!important;  
+        border:none;
+    }
+    .header-links.content.dynamic-content>ul, .header-links.content.dynamic-content>ul>li {
+        display: inline-block;
+    }
     .header-links.content {
         position: absolute;
         top: 0;
@@ -7500,6 +7511,7 @@ header.header {
         -webkit-transform: translateX(290px);
         -ms-transform: translateX(290px);
         transform: translateX(290px);
+      
     }
     .header-links.content.open {
         -webkit-transform: translateX(0);
@@ -7825,7 +7837,7 @@ span.btn-label {
 
 @media (min-width: 1600px) {
     .dynamic-text-typing {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 900;
     }
     .typeit {
@@ -7836,7 +7848,7 @@ span.btn-label {
 
 @media (min-width: 1200px) {
     .dynamic-text-typing {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 900;
     }
     .typeit {
@@ -8414,10 +8426,10 @@ a.stop:hover {
          min-height: calc( 100vh - 60px );
       }
       .dynamic-home{   
-        padding-top: 190px;
+        padding-top: 150px;
         padding-bottom: 40px;
     }
-    .dynamic-home-animate .dynamic-main-heading, .dynamic-home-animate p.text-content, .dynamic-home-animate .rw-wrapper, .dynamic-home-animate .typeit-block, .dynamic-home-animate .home-bttn { -webkit-transform: translateY(-150px); -ms-transform: translateY(0px); transform: translateY(-150px);  opacity: 1;  }
+    .dynamic-home-animate .dynamic-main-heading, .dynamic-home-animate p.text-content, .dynamic-home-animate .rw-wrapper, .dynamic-home-animate .typeit-block, .dynamic-home-animate .home-bttn { padding-top :0.5%;-webkit-transform: translateY(-150px); -ms-transform: translateY(0px); transform: translateY(-150px);  opacity: 1;  }
 .dynamic-home .rw-sentence span { width: 322px; }
 .dynamic-home-animate .dynamic-main-heading {   -webkit-transition: opacity 0.5s ease 0.3s, -webkit-transform 0.5s ease 0.9s;   transition: opacity 0.5s ease 0.3s, -webkit-transform 0.5s ease 0.9s;   -o-transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.9s;   transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.9s;   transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.9s, -webkit-transform 0.5s ease 0.9s; }
 .dynamic-home-animate p.text-content { -webkit-transition: all 0.6s ease 1.2s; -o-transition: all 0.6s ease 1.2s; transition: all 0.6s ease 1.2s; }
@@ -8497,11 +8509,11 @@ input.ng-invalid{
 }
 .form-control.is-invalid, .was-validated .form-control:invalid {
     border-color: #dc3545!important;
-    background-color: white;
     padding-right: calc(1.5em + .75rem);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
     background-repeat: no-repeat;
     background-position: center right calc(.375em + .1875rem);
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
+
 /*-------- do not add any css here ---------- */
