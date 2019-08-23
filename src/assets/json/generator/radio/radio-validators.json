@@ -2,15 +2,15 @@
     "static": {
         "notes": "ui-bindings",
         "component": "import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-radio-static',\r\n    templateUrl: './radio-static.component.html'\r\n})\r\n\r\nexport class RadioStaticComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [{\r\n        name: \"gender\",\r\n         type: \"radio\",\r\n         source: [{ value: 1, text: \"Male\"},{ value: 2, text: \"Female\" }],\r\n         ui: {\r\n            label: 'Gender'                            \r\n        }\r\n    }]\r\n    \r\n    uiBindings: string[] = [\"gender\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit()\r\n    {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
-        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>\r\n<pre>{{dynamicFormBuildConfig.formGroup.value | json}}</pre>",
         "model": null,
         "modelName": null,
         "json": {}
     },
     "value": {
-        "notes": "ui-bindings",
+        "notes": "",
         "component": "import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-radio-value',\r\n    templateUrl: './radio-value.component.html'\r\n})\r\n\r\nexport class RadioValueComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [{\r\n        name: \"gender\",\r\n         type: \"radio\",\r\n         source: [{ genderId: 1, genderName: \"Male\"},{ genderId: 2, genderName: \"Female\" }],\r\n         textPropName: 'genderId',\r\n         valuePropName: 'genderName',\r\n         ui: {\r\n            label: 'Gender'\r\n        }\r\n    }]\r\n    \r\n    uiBindings: string[] = [\"gender\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit()\r\n    {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
-        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>\r\n<pre>{{dynamicFormBuildConfig.formGroup.value | json}}</pre>",
         "model": null,
         "modelName": null,
         "json": {}
@@ -18,7 +18,7 @@
     "inline": {
         "notes": "ui-bindings",
         "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-radio-inline',\r\n    templateUrl: './radio-inline.component.html'\r\n})\r\n\r\nexport class RadioInlineComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [\r\n        {\r\n            name: \"skills\",\r\n            type: \"radio\",\r\n            source: [{ value: 1, text: \"Angular\" }, { value: 2, text: \"React\" }, { value: 3, text: \"Vue\" }],\r\n            inline: true,\r\n            ui: {\r\n                label: 'Skills'\r\n            }\r\n        }\r\n    ]\r\n    \r\n    uiBindings: string[] = [\"skills\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n    \r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
-        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>\r\n<pre>{{dynamicFormBuildConfig.formGroup.value | json}}</pre>",
         "model": null,
         "modelName": null,
         "json": {}

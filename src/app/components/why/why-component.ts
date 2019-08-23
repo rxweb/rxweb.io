@@ -48,7 +48,6 @@ export class WhyRxwebComponent implements OnInit {
       var i = 200;
       var target = event.currentTarget.getElementsByClassName("col-lg-4");
        Array.prototype.forEach.call(target,element => {   
-         console.log(document.body.scrollTop);     
         if(document.body.scrollTop >= i){
          element.children[0].className = "animated fadeInUp";
          element.children[0].style.display = "block";
