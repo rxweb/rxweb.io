@@ -8533,8 +8533,21 @@ input.ng-invalid{
 @media only screen and (min-width: 568px) {
     .footer {
         font-size: 10px;
-        padding: 15px;
-  
+        padding: 15px;  
     }
+}
+.form-control-lg {
+    height: calc(1.5em + 1rem + 2px);
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+.form-control-sm {
+    height: calc(1.5em + .5rem + 2px);
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
 }
 /*-------- do not add any css here ---------- */
