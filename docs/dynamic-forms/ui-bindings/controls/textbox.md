@@ -13,7 +13,7 @@ To create a textbox in dynamic forms, you just need to mention `type: "textbox"`
 
 # Example
 
-<div component="app-code" key="Textbox-complete-component"></div> 
+<div component="app-code" key="textbox-complete-component"></div> 
 Next, we need to write html code.
-<div component="app-code" key="Textbox-complete-html"></div> 
+<div component="app-code" key="textbox-complete-html"></div> 
 <div component="app-example-runner" ref-component="app-textbox-complete"></div>
