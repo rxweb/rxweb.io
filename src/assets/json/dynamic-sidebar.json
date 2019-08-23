@@ -1,12 +1,11 @@
 {
   "links": [
-    
     {
       "title": "Step-by-Step",
       "uri": "reactive-dynamic-forms/dynamic-forms/stepbystep",
       "isOpen": false,
       "isActive": false,
-      "otherUri": "reactive-dynamic-forms/dynamic-forms",
+      "otherUri": "stepbystep",
       "childrens": [
         {
           "title": "Install the packages",
@@ -250,7 +249,6 @@
               "isActive": false,
               "linkTitle": "conditionalreadonly"
             },
-
             {
               "title": "value",
               "uri": "reactive-dynamic-forms/conditional-binding/conditionalvalue",
@@ -265,6 +263,7 @@
       "title": "Advance Form Design",
       "isOpen": false,
       "isActive": false,
+      "otherUri": "advance-form-design",
       "childrens": [
         {
           "title": "nested formgroup",
@@ -278,7 +277,8 @@
       "title": "Reset Form",
       "isOpen": false,
       "isActive": false,
-      "uri": "reactive-dynamic-forms/dynamic-forms/dynamicresetform"
+      "uri": "reactive-dynamic-forms/dynamic-forms/dynamicresetform",
+      "linkTitle": "dynamicresetform"
     },
     {
       "title": "Dynamic Validation",
@@ -321,9 +321,8 @@
               "uri": "reactive-dynamic-forms/dynamic-validation?validator=time",
               "isActive": false
             }
-            
           ]
-        },  
+        },
         {
           "title": "Numeric",
           "isOpen": false,
@@ -571,35 +570,37 @@
       "title": "Async Validation",
       "isOpen": false,
       "isActive": false,
-      "uri": "reactive-dynamic-forms/dynamic-forms/asyncvalidation"
+      "uri": "reactive-dynamic-forms/dynamic-forms/asyncvalidation",
+      "linkTitle": "asyncvalidation"
     },
     {
       "title": "Custom Validation",
       "isOpen": false,
       "isActive": false,
-      "uri": "reactive-dynamic-forms/dynamic-forms/customvalidation"
+      "uri": "reactive-dynamic-forms/dynamic-forms/customvalidation",
+      "linkTitle": "customvalidation"
     },
     {
       "title": "Error Messaging Strategy",
       "isOpen": false,
       "isActive": false,
-      "uri": "reactive-dynamic-forms/dynamic-forms/dynamicerrormessagestrategy"
+      "uri": "reactive-dynamic-forms/dynamic-forms/dynamicerrormessagestrategy",
+      "linkTitle": "dynamicerrormessagestrategy"
     },
+    {
+      "title": "How-to",
+      "uri": null,
+      "isOpen": false,
+      "isActive": false,
+      "otherUri": "how-to",
+      "childrens": [
         {
-          "title": "How-to",
-          "uri": null,
-          "isOpen": false,
+          "title": "Quick Start",
+          "uri": "reactive-dynamic-forms/getting-started",
           "isActive": false,
-          "otherUri": "how-to",
-          "childrens": [
-            {
-              "title": "Quick Start",
-              "uri": "getting-started",
-              "isActive": false,
-              "linkTitle": "reactive-dynamic-forms/getting-started"
-            }
-          ]        
-     }
-    
+          "linkTitle": "getting-started"
+        }
+      ]
+    }
   ]
 }
