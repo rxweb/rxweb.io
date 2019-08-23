@@ -7848,7 +7848,7 @@ span.btn-label {
 
 @media (min-width: 1200px) {
     .dynamic-text-typing {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 900;
     }
     .typeit {
@@ -8547,7 +8547,7 @@ input.ng-invalid{
     height: calc(1.5em + .5rem + 2px);
     padding: .25rem .5rem;
     font-size: .875rem;
-    line-height: 1.5;
+     line-height: 1.5;
     border-radius: .2rem;
 }
 /*-------- do not add any css here ---------- */

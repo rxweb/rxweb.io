@@ -94,7 +94,7 @@ title:string;
         this.bindForm = false;
         
         setTimeout(() => {
-            this.title = `Dynamic ${this.validator} Validation Example`;
+            this.title = `Dynamic Form with ${this.validator} Validation Example`;
             this.content = {};
             this.uiBindings = [];
             this.serverData = this.validatorWiseServerData[this.validator];
