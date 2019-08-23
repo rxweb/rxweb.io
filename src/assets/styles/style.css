@@ -8515,5 +8515,11 @@ input.ng-invalid{
     background-position: center right calc(.375em + .1875rem);
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
-
+@media only screen and (min-width: 1200px){
+.footer {
+    font-size: 10px;
+    padding: 15px;
+   bottom :0px;
+}
+}
 /*-------- do not add any css here ---------- */
