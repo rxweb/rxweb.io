@@ -7290,6 +7290,9 @@ header.header {
     app-right-sidebar {
         display: none;
     }
+    .next{
+        display: none;
+    }
     img.why-icon {
         height: 90px;
         position: fixed;
@@ -7848,7 +7851,7 @@ span.btn-label {
 
 @media (min-width: 1200px) {
     .dynamic-text-typing {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 900;
     }
     .typeit {
@@ -7938,7 +7941,7 @@ span.btn-label {
 @media (max-width: 576px) {
     .dynamic-text-typing {
         margin-right: 10px;
-        font-size: 13px;
+        font-size: 11px;
     }
     .typeit {
         margin-right: 10px;
@@ -8515,27 +8518,30 @@ input.ng-invalid{
     background-position: center right calc(.375em + .1875rem);
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
-@media only screen and (min-width: 1200px){
+@media only screen and (max-width: 1400px){
+    .footer {
+        
+        padding: 15px;
+       bottom :-10%;
+    
+    }
+    }
+@media only screen and (max-width: 1200px){
 .footer {
-    font-size: 10px;
+    
     padding: 15px;
-   bottom :0px;
+   bottom :0%;
+
 }
 }
-@media only screen and (min-width: 991px)
+@media only screen and (max-width: 991px)
 {
 .footer {
-    font-size: 10px;
-    padding: 15px;
-    bottom :0px;
+  
+    font-size: 9px;
 }
 }
-@media only screen and (min-width: 568px) {
-    .footer {
-        font-size: 10px;
-        padding: 15px;  
-    }
-}
+
 .form-control-lg {
     height: calc(1.5em + 1rem + 2px);
     padding: .5rem 1rem;
@@ -8546,8 +8552,9 @@ input.ng-invalid{
 .form-control-sm {
     height: calc(1.5em + .5rem + 2px);
     padding: .25rem .5rem;
-    font-size: .875rem;
+      font-size: .875rem;
      line-height: 1.5;
     border-radius: .2rem;
 }
+
 /*-------- do not add any css here ---------- */
