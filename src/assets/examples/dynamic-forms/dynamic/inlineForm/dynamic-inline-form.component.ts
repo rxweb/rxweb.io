@@ -12,11 +12,12 @@ export class DynamicInlineFormComponent implements OnInit {
         type: "text",
         ui: {
             viewMode: {
-                advance: {
+                inline: {
                     label: ["sr-only"],
                     input: ["mb-2", "mr-sm-2"]
                 }
             },
+            class: ["mb-2", "mr-sm-2"],
             label: "Name",
             placeholder: "Jane Doe",
         }
@@ -26,7 +27,7 @@ export class DynamicInlineFormComponent implements OnInit {
         type: "text",
         ui: {
             viewMode: {
-                advance: {
+                inline: {
                     label: ["sr-only"],
                     div: ["mb-2", "mr-sm-2"]
                 }
@@ -41,8 +42,9 @@ export class DynamicInlineFormComponent implements OnInit {
         type: "checkbox",
         source: [{ value: 1, text: "Remember me" }],
         ui: {
+          class: ["mb-2", "mr-sm-2"],
             viewMode: {
-                advance: {
+                inline: {
                     div: ["mb-2", "mr-sm-2"]
                 }
             },
