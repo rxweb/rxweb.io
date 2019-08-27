@@ -328,11 +328,7 @@
           "isOpen": false,
           "isActive": false,
           "childrens": [
-            {
-              "title": "creditCard",
-              "uri": "reactive-dynamic-forms/dynamic-validation?validator=creditCard",
-              "isActive": false
-            },
+          
             {
               "title": "digit",
               "uri": "reactive-dynamic-forms/dynamic-validation?validator=digit",
@@ -467,11 +463,7 @@
               "uri": "reactive-dynamic-forms/dynamic-validation?validator=contains",
               "isActive": false
             },
-            {
-              "title": "cusip",
-              "uri": "reactive-dynamic-forms/dynamic-validation?validator=cusip",
-              "isActive": false
-            },
+         
             {
               "title": "dataUri",
               "uri": "reactive-dynamic-forms/dynamic-validation?validator=dataUri",
@@ -502,11 +494,7 @@
               "uri": "reactive-dynamic-forms/dynamic-validation?validator=hexColor",
               "isActive": false
             },
-            {
-              "title": "ip",
-              "uri": "reactive-dynamic-forms/dynamic-validation?validator=ip",
-              "isActive": false
-            },
+    
             {
               "title": "json",
               "uri": "reactive-dynamic-forms/dynamic-validation?validator=json",
@@ -669,7 +657,7 @@
       "childrens": [
         {
           "title": "Quick Start",
-          "uri": "reactive-dynamic-forms/getting-started",
+          "uri": "reactive-dynamic-forms/dynamic-getting-started",
           "isActive": false,
           "linkTitle": "getting-started"
         }

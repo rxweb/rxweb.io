@@ -30,7 +30,7 @@ const REACTIVE_DYNAMIC_FORMS_ROUTES: Routes = [
     loadChildren: 'src/app/components/controls/controls.module#ControlsModule',
   },
   {
-    path: 'getting-started',
+    path: 'dynamic-getting-started',
     component:DynamicGettingStartedComponent
   },
   {

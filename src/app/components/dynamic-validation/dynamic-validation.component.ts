@@ -19,7 +19,7 @@ export const HTML_CONTENT = `
 const COMPONENT_TEMPLATE = `
 import { Component, Input,OnInit } from '@angular/core';
 import { RxDynamicFormBuilder,DynamicFormBuildConfig } from "@rxweb/reactive-dynamic-forms"
-import {SERVER_JSON} './server-json';
+import {SERVER_JSON} from './server-json';
 
 
 @Component({
@@ -94,7 +94,7 @@ title:string;
         this.bindForm = false;
         
         setTimeout(() => {
-            this.title = `Dynamic ${this.validator} Validation Example`;
+            this.title = `Dynamic Form with ${this.validator} Validation Example`;
             this.content = {};
             this.uiBindings = [];
             this.serverData = this.validatorWiseServerData[this.validator];

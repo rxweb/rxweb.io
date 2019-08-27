@@ -22,14 +22,14 @@
   <rx-popup></rx-popup>
   <rx-spinner></rx-spinner>
   <app-top-bar *ngIf="!isHome"></app-top-bar>
-  <div class="home-header-links">
-  <header class="header">
+
+  <header *ngIf="isHome" class="header home-header-links">
    
     <div class="row">
       <div class="col-sm-11">
-        <div class="header-links content">
+        <div class="header-links content dynamic-content">
           <ul class="pull-right list-unstyled list-inline">
-            <li class="list-inline-item">
+            <li class="list-inline-item"> 
               <a routerLink="/home" routerLinkActive="active">Reactive
                 Forms</a>
             </li>
@@ -43,7 +43,7 @@
     </div>
   
   </header>
-</div>
+
   <main class="main">
 
     <div class="row">

@@ -18,21 +18,23 @@
                             style="text-align: left!important;width: 100%;max-height:150px;max-width: 820px;"></div>
                     </span>
                 </div>
-                <div class="col-lg-6 col-md-6" *ngIf="serverData.length > 0">
-                    <div class="model-ts combined">
-                        <div class="code-example">
-                            <div class="ng-star-inserted">
-                                <form *ngIf="isBind" [formGroup]="dynamicFormBuildConfig.formGroup">
-                                    <div viewMode="basic" [rxwebDynamicForm]="dynamicFormBuildConfig"
-                                        [uiBindings]="uiBindings">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
+               
+                    <div class="col-lg-6 col-md-6" *ngIf="serverData.length > 0">
+                        <div class="model-ts combined dynamic-home-form">
+                            <div class="code-example">
+                                <div class="ng-star-inserted">
+                                    <form *ngIf="isBind" [formGroup]="dynamicFormBuildConfig.formGroup">
+                                        <div viewMode="basic" [rxwebDynamicForm]="dynamicFormBuildConfig"
+                                            [uiBindings]="uiBindings">
+                                        </div>
+                                       
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
+                    </div>
+               
             </div>
         </div>
     </div>
