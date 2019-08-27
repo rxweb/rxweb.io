@@ -21,6 +21,10 @@ const DYNAMIC_FORMS_ROUTES: Routes = [
 {
 	path:'asyncvalidation',
 	loadChildren: './asyncvalidation/asyncvalidation.module#AsyncvalidationModule',
-}
+},
+{
+	path:'dynamic',
+	loadChildren: './dynamic/dynamic.module#DynamicModule',
+},
 ];
 export const DYNAMIC_FORMS_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMIC_FORMS_ROUTES);

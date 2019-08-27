@@ -567,6 +567,79 @@
       ]
     },
     {
+      "title": "Power of Dynamic Forms",
+      "isOpen": false,
+      "isActive": false,
+      "uri": "reactive-dynamic-forms/dynamic-forms/dynamic",
+      "linkTitle": "dynamic",
+      "otherUri": "dynamic",
+      "childrens": [
+        {
+          "title": "Basic View",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#basicview",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "basicview"
+        },
+        {
+          "title": "Custom Class For Sizing",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#customclassforsizing",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "customclassforsizing"
+        },
+        {
+          "title": "Readonly Plain Text",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#readonlyplaintext",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "readonlyplaintext"
+        },
+        {
+          "title": "Disabled Specific Checkbox",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#disabledspecificcheckbox",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "disabledspecificcheckbox"
+        },
+        {
+          "title": "Disabled Specific Radio",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#disabledspecificradio",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "disabledspecificradio"
+        },
+        {
+          "title": "Advance Layout",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#advancelayout",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "advancelayout"
+        },
+        {
+          "title": "Horizontal Form",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#horizontalform",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "horizontalform"
+        },
+        {
+          "title": "Horizontal Form Label Sizing",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#horizontalformlabelsizing",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "horizontalformlabelsizing"
+        },
+        {
+          "title": "Inline Form",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#inlineform",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "inlineform"
+        }
+      ]
+    },
+    {
       "title": "Async Validation",
       "isOpen": false,
       "isActive": false,
