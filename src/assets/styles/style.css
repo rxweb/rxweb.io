@@ -7940,7 +7940,7 @@ span.btn-label {
 @media (max-width: 576px) {
     .dynamic-text-typing {
         margin-right: 10px;
-        font-size: 11px;
+        font-size: 10px;
     }
     .typeit {
         margin-right: 10px;
@@ -8164,7 +8164,7 @@ span.btn-label {
     .footer {
         font-size: 10px;
         padding: 15px;
-        top: 800px;
+        /* top: 800px; */
     }
 }
 
