@@ -269,7 +269,6 @@ export class SideBarComponent implements OnInit {
     }
   }
   navigateTo(link: any, secondlevel: any, thirdlevel: any): void {
-    debugger;
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;

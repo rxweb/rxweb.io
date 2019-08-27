@@ -12,8 +12,8 @@ export class RadioValueComponent implements OnInit {
         name: "gender",
          type: "radio",
          source: [{ genderId: 1, genderName: "Male"},{ genderId: 2, genderName: "Female" }],
-         textPropName: 'genderId',
-         valuePropName: 'genderName',
+         textPropName: 'genderName',
+         valuePropName: 'genderId',
          ui: {
             label: 'Gender'
         }
