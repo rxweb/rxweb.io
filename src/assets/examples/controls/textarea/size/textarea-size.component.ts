@@ -19,6 +19,7 @@ export class TextareaSizeComponent implements OnInit {
                 }
             },
             ui: {
+                class: ["width-auto"],
                 label: 'Address'
             }
         }

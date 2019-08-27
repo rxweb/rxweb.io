@@ -8776,4 +8776,8 @@ input.form-control-lg.form-control.lg-control {
     margin: 0px;
 }
 
+textarea.width-auto {
+    width: auto;
+}
+
 /*-------- do not add any css here ---------- */

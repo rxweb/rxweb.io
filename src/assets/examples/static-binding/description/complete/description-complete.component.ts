@@ -2,7 +2,7 @@ import { Component,OnInit } from "@angular/core";
 import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from "@rxweb/reactive-dynamic-forms";
 
 @Component({
-    selector: 'app-description-complete-validator',
+    selector: 'app-description-complete',
     templateUrl: './description-complete.component.html'
 })
 
