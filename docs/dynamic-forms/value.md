@@ -1,20 +1,21 @@
 ---
 title: value
-description: value property can be used in the serverData to set a default value for particular formControl. value can be set statically or conditionally based on your requirements.
-author: rxcontributortwo
-category: ui-features
+description: value property can be used in the serverData to set a default value for particular control object. 
+author: rxcontributorone
+category: dynamic-forms
+subcategory: static-binding
 type: simple
-linktitle: cssClassNames
+linktitle: value
 ---
 
 
-<div class="title-bar"><p>value property can be used in the serverData to set a default value for particular formControl. value can be set statically or conditionally based on your requirements.</p></div>
+<div class="title-bar"><p>value property can be used in the ui binding to set a default value for particular control object.</p></div>
 
-# Static value
+# Example
 
-To set the default value in your formControl, you can set the `value` property statically in the `serverData` in your component. 
+To set the default value in your control object, you can set the `value` property inside the `ui` property. 
 
-<div component="app-code" key="value-static-component"></div>
+<div component="app-code" key="value-complete-component"></div>
 Next, we need to write html code.
-<div component="app-code" key="value-static-html"></div>
-<div component="app-example-runner" ref-component="app-value-static"></div>
+<div component="app-code" key="value-complete-html"></div>
+<div component="app-example-runner" ref-component="app-value-complete"></div>

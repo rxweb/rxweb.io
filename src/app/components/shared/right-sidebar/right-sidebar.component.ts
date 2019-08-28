@@ -54,6 +54,7 @@ export class RightSideBarComponent implements OnInit {
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
         if (splitedArray.length > 0 && splitedArray[1]) {
+            debugger;
             switch (splitedArray[1]) {
                 case "decorators":
                     this.gitEditUrl += "docs/reactive-form-validators/decorators/" + splitedArray[2] + ".md"
@@ -73,6 +74,10 @@ export class RightSideBarComponent implements OnInit {
                 case "how-to":
                     this.gitEditUrl += "docs/how-to/" + splitedArray[2] + ".md"
                     break
+                case "reactive-dynamic-forms":
+                    this.gitEditUrl += "docs/dynamic-forms/" +
+                     splitedArray[3] + ".md"
+
             }
         }
         else if (splitedArray.length > 0 && splitedArray[0] == "changelog") {

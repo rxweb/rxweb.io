@@ -1,16 +1,19 @@
 ---
 title: email
-author: rxcontributorone
+author: rxcontributortwo
 category: dynamic-forms
-type:simple
+subcategory: controls
+type: simple
 linktitle: dynamicemail
 ---
 
-To create a formControl of type email, you need to pass the json i.e `serverData` and the formControl name.
+<div class="title-bar"><p>
+
+To create a formControl with type email in dynamic forms, you just need to mention `type: "email"` in the server response.</p></div>
 
 # Example
 
-<div component="app-code" key="email-complete-component"></div> 
+<div component="app-code" key="dynamicemail-complete-component"></div> 
 Next, we need to write html code.
-<div component="app-code" key="email-complete-html"></div> 
-<div component="app-example-runner" ref-component="app-email-complete"></div>
+<div component="app-code" key="dynamicemail-complete-html"></div> 
+<div component="app-example-runner" ref-component="app-dynamicemail-complete"></div>

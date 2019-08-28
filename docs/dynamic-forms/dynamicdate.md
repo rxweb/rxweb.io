@@ -1,16 +1,19 @@
 ---
 title: date
-author: rxcontributorone
+author: rxcontributortwo
 category: dynamic-forms
-type:simple
+subcategory: controls
+type: simple
 linktitle: dynamicdate
 ---
 
-To create a formControl of type date, you need to pass the json i.e `serverData` and the formControl name.
+<div class="title-bar"><p>
+
+To create a formControl with type date in dynamic forms, you just need to mention `type: "date"` in the server response.</p></div>
 
 # Example
 
-<div component="app-code" key="date-complete-component"></div> 
+<div component="app-code" key="dynamicdate-complete-component"></div> 
 Next, we need to write html code.
-<div component="app-code" key="date-complete-html"></div> 
-<div component="app-example-runner" ref-component="app-date-complete"></div>
+<div component="app-code" key="dynamicdate-complete-html"></div> 
+<div component="app-example-runner" ref-component="app-dynamicdate-complete"></div>

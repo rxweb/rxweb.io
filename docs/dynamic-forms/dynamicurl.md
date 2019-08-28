@@ -1,16 +1,19 @@
 ---
 title: url
-author: rxcontributorone
+author: rxcontributortwo
 category: dynamic-forms
-type:simple
+subcategory: controls
+type: simple
 linktitle: dynamicurl
 ---
 
-To create a formControl of type url, you need to pass the json i.e `serverData` and the formControl name.
+<div class="title-bar"><p>
+
+To create a formcontrol with type url in dynamic forms, you just need to mention `type: "url"` in the server response.</p></div>
 
 # Example
 
-<div component="app-code" key="url-complete-component"></div> 
+<div component="app-code" key="dynamicurl-complete-component"></div> 
 Next, we need to write html code.
-<div component="app-code" key="url-complete-html"></div> 
-<div component="app-example-runner" ref-component="app-url-complete"></div>
+<div component="app-code" key="dynamicurl-complete-html"></div> 
+<div component="app-example-runner" ref-component="app-dynamicurl-complete"></div>

@@ -2,17 +2,18 @@
 title: TextBox
 author: rxcontributorone
 category: dynamic-forms
+subcategory: controls
 type:simple
 linktitle: textbox
 ---
 
-To create a formControl with type text in dynamic forms, you just need to pass the json i.e the `serverData` ,In that you just need to mention the formControl name and its type. 
+<div class="title-bar"><p>
 
-<div component="app-code" key="Textbox-serverdata-component"></div> 
+To create a textbox in dynamic forms, you just need to mention `type: "textbox"` in the server response.</p></div>
 
 # Example
 
-<div component="app-code" key="Textbox-complete-component"></div> 
+<div component="app-code" key="textbox-complete-component"></div> 
 Next, we need to write html code.
-<div component="app-code" key="Textbox-complete-html"></div> 
+<div component="app-code" key="textbox-complete-html"></div> 
 <div component="app-example-runner" ref-component="app-textbox-complete"></div>

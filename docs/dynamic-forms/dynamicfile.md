@@ -1,16 +1,29 @@
 ---
 title: file
-author: rxcontributorone
+author: rxcontributortwo
 category: dynamic-forms
-type:simple
+subcategory: controls
+type: simple
 linktitle: dynamicfile
 ---
 
-To create a formControl with type file in dynamic forms, you just need to pass the json i.e the `serverData` ,In that you just need to mention the formControl name and its type. 
+<div class="title-bar"><p>
+
+To create a formControl with file in dynamic forms, you just need to mention `type: "file"` in the server response.</p></div>
 
 # Example
 
-<div component="app-code" key="file-complete-component"></div> 
+<div component="app-code" key="dynamicfile-complete-component"></div> 
 Next, we need to write html code.
-<div component="app-code" key="file-complete-html"></div> 
-<div component="app-example-runner" ref-component="app-file-complete"></div>
+<div component="app-code" key="dynamicfile-complete-html"></div> 
+<div component="app-example-runner" ref-component="app-dynamicfile-complete"></div>
+
+# Uploading multiple files in File Control
+
+If you want to upload multiple files in file cotrol, then you can set `multiple: true` in the `prop` property of `additionalConfig` in the `serverData`.
+
+<div component="app-code" key="dynamicfile-multiple-component"></div> 
+Next, we need to write html code.
+<div component="app-code" key="dynamicfile-multiple-html"></div> 
+<div component="app-example-runner" ref-component="app-dynamicfile-multiple"></div>
+***

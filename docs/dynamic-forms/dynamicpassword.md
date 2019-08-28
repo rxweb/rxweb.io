@@ -1,16 +1,19 @@
 ---
 title: password
-author: rxcontributorone
+author: rxcontributortwo
 category: dynamic-forms
-type:simple
+subcategory: controls
+type: simple
 linktitle: dynamicpassword
 ---
 
-To create a formControl with type password in dynamic forms, you just need to pass the json i.e the `serverData` ,In that you just need to mention the formControl name and its type. 
+<div class="title-bar"><p>
+
+To create a formControl with password in dynamic forms, you just need to mention `type: "password"` in the server response.</p></div>
 
 # Example
 
-<div component="app-code" key="password-complete-component"></div> 
+<div component="app-code" key="dynamicpassword-complete-component"></div> 
 Next, we need to write html code.
-<div component="app-code" key="password-complete-html"></div> 
-<div component="app-example-runner" ref-component="app-password-complete"></div>
+<div component="app-code" key="dynamicpassword-complete-html"></div> 
+<div component="app-example-runner" ref-component="app-dynamicpassword-complete"></div>
