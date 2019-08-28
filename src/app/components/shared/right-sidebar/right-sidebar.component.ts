@@ -54,7 +54,6 @@ export class RightSideBarComponent implements OnInit {
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
         if (splitedArray.length > 0 && splitedArray[1]) {
-            debugger;
             switch (splitedArray[1]) {
                 case "decorators":
                     this.gitEditUrl += "docs/reactive-form-validators/decorators/" + splitedArray[2] + ".md"

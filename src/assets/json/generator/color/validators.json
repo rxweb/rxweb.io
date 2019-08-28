@@ -1,1 +1,25 @@
-{"rightSidebarLinks":[{"id":"color","title":"color","subLink":null},{"id":"example","title":"Example","subLink":[]}],"title":"color","description":"","validatorType":"validators","validationTypeTitle":"Validators","type":"simple","category":"dynamic-forms","subCategory":"","linkTitle":"color","tabArray":{},"innerHtml":null,"htmlContent":"<p class='showHideElement' >To create a control with type color, you need to pass the json i.e <span class='highlighted'>serverData</span> and the formControl name.</p>\r\n<div class='row page-section' id= 'example'>\r\n<div class='col-lg-12'>\r\n<h2>Example<a title='Link to this heading' class='link-header' href='/dynamic-forms/color#example'><i class='fa fa-link'></i></a></h2>\r\n\r\n<div component=\"app-code\" key=\"color-complete-component\"></div> \r\n<p class='showHideElement' >Next, we need to write html code.</p>\r\n<div component=\"app-code\" key=\"color-complete-html\"></div> \r\n<div component=\"app-example-runner\" ref-component=\"app-color-complete\"></div>\r\n</div></div>\r\n"}
+{
+    "rightSidebarLinks": [
+        {
+            "id": "color",
+            "title": "color",
+            "subLink": null
+        },
+        {
+            "id": "example",
+            "title": "Example",
+            "subLink": []
+        }
+    ],
+    "title": "Color",
+    "description": "",
+    "validatorType": "validators",
+    "validationTypeTitle": "Validators",
+    "type": "simple",
+    "category": "dynamic-forms",
+    "subCategory": "controls",
+    "linkTitle": "color",
+    "tabArray": {},
+    "innerHtml": null,
+    "htmlContent": "<div class=\"title-bar\"><p>\r\n<p class='showHideElement' >To create a color picker in dynamic forms, you just need to mention <span class='highlighted'>type: \"color\"</span> in the server response.</p></div></p>\r\n<div class='row page-section' id= 'example'>\r\n<div class='col-lg-12'>\r\n<h2>Example<a title='Link to this heading' class='link-header' href='/reactive-dynamic-forms/dynamic-forms/color#example'><i class='fa fa-link'></i></a></h2>\r\n\r\n<div component=\"app-code\" key=\"color-complete-component\"></div> \r\n<p class='showHideElement' >Next, we need to write html code.</p>\r\n<div component=\"app-code\" key=\"color-complete-html\"></div> \r\n<div component=\"app-example-runner\" ref-component=\"app-color-complete\"></div>\r\n</div></div>\r\n"
+}

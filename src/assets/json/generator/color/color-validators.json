@@ -1,6 +1,10 @@
 {
-    "complete":{
-        "component":"import { Component,OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxFormBuilder } from \"@rxweb/reactive-form-validators\";\r\n\r\n@Component({\r\n    selector: 'app-color-complete',\r\n    templateUrl: './color-complete.component.html'\r\n})\r\n\r\nexport class ColorCompleteComponent implements OnInit {\r\n    serverData: Array<{ [key: string]: any }> = [{\r\n            name: \"colorPicker\",\r\n             type: \"color\",\r\n             ui: {\r\n                label: 'Color Picker',                      \r\n            }\r\n        \r\n    }]\r\n    viewMode: string = \"bootstrap-basic\";\r\n    uiBindings: string[] = [\"colorPicker\"];\r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    constructor(private formBuilder: RxFormBuilder) { }\r\n    ngOnInit()\r\n    {\r\n        this.dynamicFormBuildConfig = this.formBuilder.dynamicForm(this.serverData);\r\n    }\r\n}",
-        "html":"<div>\r\n    <form [rxDynamicForm]=\"dynamicFormBuildConfig\">\r\n        <rxweb-dynamic-form [viewMode]=\"viewMode\" [controlsConfig]=\"dynamicFormBuildConfig.controlsConfig\"\r\n            [bindings]=\"uiBindings\">\r\n    </rxweb-dynamic-form>    \r\n       </form>         \r\n</div> "
+    "complete": {
+        "notes": "controls",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-color-complete',\r\n    templateUrl: './color-complete.component.html'\r\n})\r\n\r\nexport class ColorCompleteComponent implements OnInit {\r\n\r\n    serverData: Array<{ [key: string]: any }> = [\r\n        {\r\n            name: \"colorPicker\",\r\n            type: \"color\",\r\n            ui: {\r\n                label: 'Color Picker'\r\n            }\r\n        }\r\n    ]\r\n    \r\n    uiBindings: string[] = [\"colorPicker\"];\r\n    \r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n    \r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n   \r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
     }
 }
