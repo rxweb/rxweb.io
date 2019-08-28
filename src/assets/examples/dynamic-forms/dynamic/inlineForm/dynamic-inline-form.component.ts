@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from "@rxweb/reactive-dynamic-forms";
 
 @Component({
-    selector: 'app-dynamic-InlineForm',
+    selector: 'app-dynamic-inlineForm',
     templateUrl: './dynamic-inline-form.component.html'
 })
 
@@ -42,7 +42,6 @@ export class DynamicInlineFormComponent implements OnInit {
         type: "checkbox",
         source: [{ value: 1, text: "Remember me" }],
         ui: {
-          class: ["mb-2", "mr-sm-2"],
             viewMode: {
                 inline: {
                     div: ["mb-2", "mr-sm-2"]
@@ -52,11 +51,23 @@ export class DynamicInlineFormComponent implements OnInit {
     }
     ]
 
-    uiBindings: string[] = ["name", "username", "Rememberme"];
+    additionalConfig = [{
+        name: "submit",
+        type: "button",
+        ui: {
+          text: "Submit",
+          class: ["btn","btn-primary","mb-2"]
+        }
+
+    }]
+
+    uiBindings: string[] = ["name", "username", "Rememberme", "submit"];
     dynamicFormBuildConfig: DynamicFormBuildConfig;
+    dynamicFormConfiguration: DynamicFormConfiguration;
 
     constructor(private formBuilder: RxDynamicFormBuilder) { }
     ngOnInit() {
-        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});
+        this.dynamicFormConfiguration = {additionalConfig : this.additionalConfig}
+        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, this.dynamicFormConfiguration);
     }
 }

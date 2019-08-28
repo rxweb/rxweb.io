@@ -14,7 +14,7 @@ export class DynamicLabelSizingComponent implements OnInit {
             viewMode: {
                 horizontal: {
                     label: ["col-form-label-sm", "col-sm-2", "label-font-weight"],
-                    div: ["col-sm-10"]
+                    div: ["col-sm-10"],
                 }
             },
             class: ["form-control-sm"],

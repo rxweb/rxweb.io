@@ -8629,7 +8629,7 @@ input.ng-invalid {
 
 .form-control-sm {
     height: calc(1.5em + .5rem + 2px);
-    padding: .25rem .5rem;
+    /* padding: .25rem .5rem; */
     font-size: .875rem;
     line-height: 1.5;
     border-radius: .2rem;
@@ -8779,6 +8779,91 @@ input.form-control-lg.form-control.lg-control {
 
 textarea.width-auto {
     width: auto;
+}
+
+.form-inline{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-flow:row wrap;
+    flex-flow:row wrap;
+    -ms-flex-align:center;
+    align-items:center
+}
+.form-inline .form-check{
+    width:100%
+}
+@media (min-width:576px){
+    .form-inline label{
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-align:center;
+        align-items:center;
+        -ms-flex-pack:center;
+        justify-content:center;
+        margin-bottom:0;
+        margin-left: 0px;
+    }
+    .form-inline .form-group{
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex:0 0 auto;
+        flex:0 0 auto;
+        -ms-flex-flow:row wrap;
+        flex-flow:row wrap;
+        -ms-flex-align:center;
+        align-items:center;
+        margin-bottom:0
+    }
+    .form-inline .form-control{
+        display:inline-block;
+        width:auto;
+        vertical-align:middle
+    }
+    .form-inline .form-control-plaintext{
+        display:inline-block
+    }
+    .form-inline .custom-select,.form-inline .input-group{
+        width:auto
+    }
+    .form-inline .form-check{
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-align:center;
+        align-items:center;
+        -ms-flex-pack:center;
+        justify-content:center;
+        width:auto;
+        padding-left:0
+    }
+    .form-inline .form-check-input{         
+        position:relative;
+        -ms-flex-negative:0;
+        flex-shrink:0;
+        margin-top:0;
+        margin-right:.25rem;
+        margin-left: 3rem;
+    }
+    .form-inline .custom-control{         
+        -ms-flex-align:center;
+        align-items:center;
+        -ms-flex-pack:center;
+        justify-content:center
+    }
+    .form-inline .custom-control-label{
+        margin-bottom:0
+    }
+}
+
+@media (min-width: 768px) {
+    .form-inline .input-group {
+        display: -webkit-inline-box;
+        vertical-align: middle;
+    }
+}
+
+.form-check {
+    position: relative;
+    display: block;
 }
 
 /*-------- do not add any css here ---------- */
