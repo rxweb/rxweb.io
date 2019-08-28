@@ -50,15 +50,26 @@ input.ng-invalid{
   background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
 
-.form-inline>.mr-sm-2, .mx-sm-2 {
+.mr-sm-2, .mx-sm-2 {
   margin: .5rem!important;
 }
-.form-inline>.mb-2, .my-2 {
+.mb-2, .my-2 {
   margin: .5rem!important;
 }
 
-.form-inline>.form-row {
+.form-row {
   margin: 0px;
 }
+
+@media (min-width: 576px) {
+  .form-inline .form-check {
+    padding-left: 0.5rem!important;
+  }
+}
+
+.form-control-sm {
+  padding-left: 15px!important;
+}
+
 
 `
