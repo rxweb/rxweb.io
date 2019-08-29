@@ -7,6 +7,7 @@ import { DynamicInlineFormComponent } from "src/assets/examples/dynamic-forms/dy
 import { DynamicLabelSizingComponent } from "src/assets/examples/dynamic-forms/dynamic/labelSizing/dynamic-label-sizing.component";
 import { DynamicAdvanceLayoutComponent } from "src/assets/examples/dynamic-forms/dynamic/advanceLayout/dynamic-advance-layout.component";
 import { DynamicHorizontalLayoutComponent } from "src/assets/examples/dynamic-forms/dynamic/horizontalLayout/dynamic-horizontal-layout.component";
+import { DynamicPrependTextboxComponent } from "src/assets/examples/dynamic-forms/dynamic/prependTextbox/dynamic-prepend-textbox.component";
 
 export const DYNAMIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
     validators:
@@ -19,6 +20,7 @@ export const DYNAMIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
         inlineForm: DynamicInlineFormComponent,
         labelSizing: DynamicLabelSizingComponent,
         advanceLayout: DynamicAdvanceLayoutComponent,
-        horizontalLayout: DynamicHorizontalLayoutComponent
+        horizontalLayout: DynamicHorizontalLayoutComponent,
+        prependTextbox: DynamicPrependTextboxComponent
     }
 }

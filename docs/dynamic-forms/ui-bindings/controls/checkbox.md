@@ -84,3 +84,24 @@ If you want to group checkboxes by displaying them inline i.e. in the same horiz
 # [/Html]
 
 <div component="app-example-runner" ref-component="app-checkbox-inline"></div>
+
+# OnClick Selection of all Checkboxes
+
+You can select and unselect all the checkboxes at once on a button click. You can write your custom logic for selecting all checkboxes in a model which can exteded from `FormControlConfig`.
+
+<div component="app-tabs" key="selectall"></div>
+
+[!TabGroup]
+# [Component](#tab\selectallcomponent)
+<div component="app-code" key="checkbox-selectall-component"></div> 
+# [/Component]
+
+# [Model](#tab\selectallmodel)
+<div component="app-code" key="checkbox-selectall-model"></div> 
+# [/Model]
+
+# [Html](#tab\selectallhtml)
+<div component="app-code" key="checkbox-selectall-html"></div> 
+# [/Html]
+
+<div component="app-example-runner" ref-component="app-checkbox-selectall"></div>

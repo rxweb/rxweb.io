@@ -3,6 +3,7 @@ import { CheckboxInlineComponent } from 'src/assets/examples/controls/checkbox/i
 import { CheckboxValueComponent } from 'src/assets/examples/controls/checkbox/value/checkbox-value.component';
 import { CheckboxSingleComponent } from 'src/assets/examples/controls/checkbox/single/checkbox-single.component';
 import { CheckboxMultiselectComponent } from 'src/assets/examples/controls/checkbox/multiselect/checkbox-multiselect.component';
+import { CheckboxSelectallComponent } from 'src/assets/examples/controls/checkbox/selectall/checkbox-selectall.component';
 
 export const CHECKBOX_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
     validators: {
@@ -10,7 +11,8 @@ export const CHECKBOX_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
         inline: CheckboxInlineComponent,
         value: CheckboxValueComponent,
         single: CheckboxSingleComponent,
-        multiselect: CheckboxMultiselectComponent
+        multiselect: CheckboxMultiselectComponent,
+        selectall: CheckboxSelectallComponent
     }
 
 }

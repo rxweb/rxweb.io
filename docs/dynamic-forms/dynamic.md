@@ -60,3 +60,9 @@ You can also customize the label size of the horizontal dynamic form, by using `
 You can also create inline forms through reactive-dynamic-forms and customize it through viewMode and class property.
 
 <div component="app-example-runner" ref-component="app-dynamic-inlineForm" title="Inline Form" key="inlineForm"></div>
+
+# Prepend Textbox
+
+You can also prepend textboxes with input group addons by passing `prependText` property in server response. You can prepend textbox in left, right as well as both sides of the textbox.
+
+<div component="app-example-runner" ref-component="app-dynamic-prependTextbox" title="Prepend Textbox" key="prependTextbox"></div>

@@ -70,5 +70,13 @@
         "model": null,
         "modelName": null,
         "json": {}
+    },
+    "prependTextbox": {
+        "notes": "ui-bindings",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n    selector: 'app-dynamic-prependTextbox',\r\n    templateUrl: './dynamic-prepend-textbox.component.html'\r\n})\r\n\r\nexport class DynamicPrependTextboxComponent implements OnInit {\r\n    serverData = [{\r\n        name: \"prependLeft\",\r\n        type: \"text\",\r\n        ui: {\r\n            viewMode: {\r\n                horizontal: {\r\n                    label: [\"col-sm-2\"],\r\n                    div: [\"col-sm-10\"],\r\n                }\r\n            },\r\n            prependText: { left: \"@\" },\r\n            label: \"Prepend Left\",\r\n            placeholder: \"PrependLeft\"\r\n        }\r\n    },\r\n    {\r\n        name: \"prependRight\",\r\n        type: \"text\",\r\n        ui: {\r\n            viewMode: {\r\n                horizontal: {\r\n                    label: [\"col-sm-2\"],\r\n                    div: [\"col-sm-10\"],\r\n                }\r\n            },\r\n            prependText: { right: \"@\" },\r\n            label: \"Prepend Right\",\r\n            placeholder: \"PrependRight\"\r\n        }\r\n    },\r\n    {\r\n        name: \"prependBoth\",\r\n        type: \"text\",\r\n        ui: {\r\n            viewMode: {\r\n                horizontal: {\r\n                    label: [\"col-sm-2\"],\r\n                    div: [\"col-sm-10\"],\r\n                }\r\n            },\r\n            prependText: { left: \"@\", right: \".com\" },\r\n            label: \"Prepend Both\",\r\n            placeholder: \"PrependBoth\"\r\n        }\r\n    }\r\n    ]\r\n\r\n    uiBindings: string[] = [\"prependLeft\", \"prependRight\", \"prependBoth\"];\r\n    dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n    constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n\r\n    ngOnInit() {\r\n        this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {});\r\n    }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"horizontal\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\">\r\n    </div>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
     }
 }

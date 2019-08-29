@@ -1,6 +1,6 @@
 ---
 title: TextBox
-author: rxcontributorone
+author: rxcontributortwo
 category: dynamic-forms
 subcategory: controls
 type:simple

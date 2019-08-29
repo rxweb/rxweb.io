@@ -71,6 +71,12 @@
               "linkTitle": "checkbox"
             },
             {
+              "title": "color",
+              "uri": "reactive-dynamic-forms/controls/color",
+              "isActive": false,
+              "linkTitle": "color"
+            },
+            {
               "title": "date",
               "uri": "reactive-dynamic-forms/controls/dynamicdate",
               "isActive": false,

@@ -46,5 +46,9 @@ const CONTROLS_ROUTES: Routes = [
 	path:'dynamicurl',
 	loadChildren: './dynamicurl/dynamicurl.module#DynamicurlModule',
 },
+{
+	path:'color',
+	loadChildren: './color/color.module#ColorModule',
+},
 ];
 export const CONTROLS_ROUTING: ModuleWithProviders = RouterModule.forChild(CONTROLS_ROUTES);
