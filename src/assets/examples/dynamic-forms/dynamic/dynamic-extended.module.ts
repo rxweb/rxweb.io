@@ -14,6 +14,7 @@ import { DynamicInlineFormComponent } from './inlineForm/dynamic-inline-form.com
 import { DynamicLabelSizingComponent } from './labelSizing/dynamic-label-sizing.component';
 import { DynamicAdvanceLayoutComponent } from './advanceLayout/dynamic-advance-layout.component';
 import { DynamicHorizontalLayoutComponent } from './horizontalLayout/dynamic-horizontal-layout.component';
+import { DynamicPrependTextboxComponent } from './prependTextbox/dynamic-prepend-textbox.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DynamicHorizontalLayoutComponent } from './horizontalLayout/dynamic-hor
     DynamicInlineFormComponent,
     DynamicLabelSizingComponent,
     DynamicAdvanceLayoutComponent,
-    DynamicHorizontalLayoutComponent
+    DynamicHorizontalLayoutComponent,
+    DynamicPrependTextboxComponent
   ],
 entryComponents: [
   DynamicBasicComponent,
@@ -36,7 +38,8 @@ entryComponents: [
   DynamicInlineFormComponent,
   DynamicLabelSizingComponent,
   DynamicAdvanceLayoutComponent,
-  DynamicHorizontalLayoutComponent
+  DynamicHorizontalLayoutComponent,
+  DynamicPrependTextboxComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
@@ -53,7 +56,8 @@ entryComponents: [
     DynamicInlineFormComponent,
     DynamicLabelSizingComponent,
     DynamicAdvanceLayoutComponent,
-    DynamicHorizontalLayoutComponent
+    DynamicHorizontalLayoutComponent,
+    DynamicPrependTextboxComponent
   ],
 
 })

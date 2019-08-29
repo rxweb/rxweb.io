@@ -9,6 +9,7 @@ import { CheckboxInlineComponent } from './inline/checkbox-inline.component';
 import { CheckboxValueComponent } from './value/checkbox-value.component';
 import { CheckboxSingleComponent } from './single/checkbox-single.component';
 import { CheckboxMultiselectComponent } from './multiselect/checkbox-multiselect.component';
+import { CheckboxSelectallComponent } from './selectall/checkbox-selectall.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +17,16 @@ import { CheckboxMultiselectComponent } from './multiselect/checkbox-multiselect
     CheckboxInlineComponent,
     CheckboxValueComponent,
     CheckboxSingleComponent,
-    CheckboxMultiselectComponent
+    CheckboxMultiselectComponent,
+    CheckboxSelectallComponent
   ],
 entryComponents: [
   CheckboxCompleteComponent,
   CheckboxInlineComponent,
   CheckboxValueComponent,
   CheckboxSingleComponent,
-  CheckboxMultiselectComponent
+  CheckboxMultiselectComponent,
+  CheckboxSelectallComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
@@ -36,7 +39,8 @@ entryComponents: [
     CheckboxInlineComponent,
     CheckboxValueComponent,
     CheckboxSingleComponent,
-    CheckboxMultiselectComponent
+    CheckboxMultiselectComponent,
+    CheckboxSelectallComponent
   ]
 
 })

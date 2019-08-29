@@ -63,6 +63,6 @@ You can also create inline forms through reactive-dynamic-forms and customize it
 
 # Prepend Textbox
 
-You can also prepend textboxes with `input-group-addons`. You can prepend textbox in left, right as well as both sides of the textbox.
+You can also prepend textboxes with input group addons by passing `prependText` property in server response. You can prepend textbox in left, right as well as both sides of the textbox.
 
 <div component="app-example-runner" ref-component="app-dynamic-prependTextbox" title="Prepend Textbox" key="prependTextbox"></div>
