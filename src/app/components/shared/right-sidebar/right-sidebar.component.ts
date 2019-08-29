@@ -54,7 +54,6 @@ export class RightSideBarComponent implements OnInit {
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
         if (splitedArray.length > 0 && splitedArray[1]) {
-            debugger;
             switch (splitedArray[1]) {
                 case "decorators":
                     this.gitEditUrl += "docs/reactive-form-validators/decorators/" + splitedArray[2] + ".md"
@@ -106,7 +105,6 @@ export class RightSideBarComponent implements OnInit {
         this.showExample = !this.showExample;
         var splitedArray = location.pathname.split('/');
         if (splitedArray[4])
-
             this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
         else
             this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });

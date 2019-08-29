@@ -649,6 +649,19 @@
       "linkTitle": "dynamicerrormessagestrategy"
     },
     {
+      "title": "API",
+      "isOpen": false,
+      "isActive": false,
+      "childrens": [
+        {
+          "title": "DynamicFormConfiguration",
+          "uri": "reactive-dynamic-forms/dynamic-forms/DynamicFormConfiguration",
+          "isActive": false,
+          "linkTitle": "getting-started"
+        }
+      ]
+    },
+    {
       "title": "How-to",
       "uri": null,
       "isOpen": false,

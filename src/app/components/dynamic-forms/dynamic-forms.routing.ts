@@ -23,6 +23,10 @@ const DYNAMIC_FORMS_ROUTES: Routes = [
 	loadChildren: './asyncvalidation/asyncvalidation.module#AsyncvalidationModule',
 },
 {
+	path:'DynamicFormConfiguration',
+	loadChildren: './DynamicFormConfiguration/dynamic-form-configuration.module#DynamicFormConfigurationModule',
+},
+{
 	path:'dynamic',
 	loadChildren: './dynamic/dynamic.module#DynamicModule',
 },
