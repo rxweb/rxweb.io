@@ -52,6 +52,7 @@ import { WhatsNewComponent } from './whats-new/whats-new.component';
 import { WhyRxwebComponent } from './why/why-component';
 import { TitleComponent } from './shared/title/title.component';
 import { ChangeLogComponent } from './changelog/change-log.component';
+import { ContributorsComponent } from './contributors/contributors-component';
 
 
 
@@ -62,7 +63,7 @@ import { ChangeLogComponent } from './changelog/change-log.component';
 
 @NgModule({
   declarations: [
-      AppComponent, SideBarComponent, TopBarComponent, TitleComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent,WhatsNextComponent,WhatsNewComponent,WhyRxwebComponent],
+      AppComponent, SideBarComponent, TopBarComponent,ContributorsComponent, TitleComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent,WhatsNextComponent,WhatsNewComponent,WhyRxwebComponent],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, DisqusSharedModule, BasicExamplesExtendedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
     BrowserAnimationsModule,

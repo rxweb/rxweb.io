@@ -12,6 +12,8 @@ import { WhatsNextComponent } from "../whats-next/whats-next.component";
 import { WhatsNewComponent } from "../whats-new/whats-new.component";
 import { WhyRxwebComponent } from "../why/why-component";
 import { ChangeLogComponent } from "../changelog/change-log.component";
+import { ContributionComponent } from "../shared/disqus/contribution/contribution.component";
+import { ContributorsComponent } from "../contributors/contributors-component";
 
 
 
@@ -43,6 +45,9 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path:'why',component:WhyRxwebComponent
+  },
+  {
+    path:'contributors',component: ContributorsComponent
   },
   {
     path:'changelog',component:ChangeLogComponent

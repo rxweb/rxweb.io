@@ -8865,5 +8865,8 @@ textarea.width-auto {
     position: relative;
     display: block;
 }
-
+.row.links {
+    margin-left: 20%;
+    font-size: 20px;
+}
 /*-------- do not add any css here ---------- */

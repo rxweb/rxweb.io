@@ -630,6 +630,13 @@
           "isActive": false,
           "linkTitle": "dynamic",
           "refUri": "inlineform"
+        },
+        {
+          "title": "Prepend Textbox",
+          "uri": "reactive-dynamic-forms/dynamic-forms/dynamic#prependtextbox",
+          "isActive": false,
+          "linkTitle": "dynamic",
+          "refUri": "prependtextbox"
         }
       ]
     },
@@ -660,7 +667,7 @@
       "isActive": false,
       "childrens": [
         {
-          "title": "DynamicFormConfiguration",
+          "title": "DynamicFormConfiguration", 
           "uri": "reactive-dynamic-forms/dynamic-forms/DynamicFormConfiguration",
           "isActive": false,
           "linkTitle": "getting-started"
