@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
    
 })
 export class ContributorsComponent implements OnInit {
-    rightSidebarLinks:any=[{"id":"contributors","title":"Contributors","subLink":null}];
+    rightSidebarLinks:any=[{"id":"contributors","title":"Hidden Brains","subLink":null}];
     pageTitle:any = this.rightSidebarLinks[0];
     constructor(private applicationBroadcaster: ApplicationBroadcaster) {
        

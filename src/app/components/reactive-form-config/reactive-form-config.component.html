@@ -97,24 +97,24 @@
                                     </p>
                                     <div class="alert is-info">
                                     
-                                       <p> The by default errorMessageBindingStrategy is ErrorBindingStrategy.none.</p>
+                                       <p> The by default errorMessageBindingStrategy is ErrorMessageBindingStrategy.none.</p>
                                     </div>
                                     <h5>Based upon your need you can set the errorMessageBindingStrategy to these conditions : </h5>
                                     <ol>
                                         <li>
-                                            <span class="highlighted">ErrorBindingStrategy.none</span> : There is no condition to bind the error message, The error messages will be bind as soon as the FormControl is invalid.
+                                            <span class="highlighted">ErrorMessageBindingStrategy.none</span> : There is no condition to bind the error message, The error messages will be bind as soon as the FormControl is invalid.
                                         </li>
                                         <li>
-                                            <span class="highlighted">ErrorBindingStrategy.onSubmit</span> : Whenever the RxFormGroup property submitted is true then the invalid FormControl error messages will be bind.
+                                            <span class="highlighted">ErrorMessageBindingStrategy.onSubmit</span> : Whenever the RxFormGroup property submitted is true then the invalid FormControl error messages will be bind.
                                         </li>
                                         <li>
-                                            <span class="highlighted">ErrorBindingStrategy.onDirty</span>: Once the FormControl is dirty, after that invalid FormControl error messages will be bind accordingly.
+                                            <span class="highlighted">ErrorMessageBindingStrategy.onDirty</span>: Once the FormControl is dirty, after that invalid FormControl error messages will be bind accordingly.
                                         </li>
                                         <li>
-                                            <span class="highlighted">ErrorBindingStrategy.onTouched</span>: Once the FormControl is touched, after that invalid FormControl error messages will be bind accordingly.
+                                            <span class="highlighted">ErrorMessageBindingStrategy.onTouched</span>: Once the FormControl is touched, after that invalid FormControl error messages will be bind accordingly.
                                         </li>
                                         <li>
-                                            <span class="highlighted">ErrorBindingStrategy.onDirtyOrTouched</span>: Once the FormControl is Dirty or Touched, after that invalid FormControl error messages will be bind accordingly.
+                                            <span class="highlighted">ErrorMessageBindingStrategy.onDirtyOrTouched</span>: Once the FormControl is Dirty or Touched, after that invalid FormControl error messages will be bind accordingly.
                                         </li>
                                     </ol>
                                     <div class="model-ts">
