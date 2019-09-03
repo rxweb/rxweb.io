@@ -8,6 +8,8 @@ import { ApplicationBroadcaster } from '@rx/core';
 export class WhatsNewComponent implements OnInit {
     sticky: boolean = false;
     showComponent:boolean = false;
+    
+    selected:any = "";
     rightSidebarLinks:any=[
         {"id":"generic","title":"1.8.6","subLink":null},
         {"id":"dynamicConfig","title":"1.9.2","subLink":null},
@@ -22,6 +24,18 @@ export class WhatsNewComponent implements OnInit {
   ];
   pageTitle:any = {"title":"What's New","subLink":null}
     constructor(private applicationBroadcaster: ApplicationBroadcaster) {      
+     }
+
+     activeTab = 'search';
+    
+     search(activeTab){
+       this.activeTab = activeTab;
+ 
+     }
+   
+     result(activeTab){
+       this.activeTab = activeTab;
+      
      }
 
     ngOnInit() {
