@@ -13,6 +13,9 @@ export class ConditionalhideConditionalComponent implements OnInit {
         {
             name: 'addexistingaddress',
             type: 'radio',
+            ui:{
+                label:"Select address"
+            },
             value:2,
             source:[{text:"Use Existing Address",value:1},{text:"Add new address",value:2}]  
         },
