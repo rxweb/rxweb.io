@@ -44,6 +44,8 @@ export class DynamicformconfigurationAdditionalconfigComponent implements OnInit
       "type":"button",
       "props":{
         "text":"Submit",
+      },
+      "ui":{
         "class":["btn","btn-primary"]
       }
     }]
