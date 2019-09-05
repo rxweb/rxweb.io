@@ -266,6 +266,20 @@
       ]
     },
     {
+      "title": "Decorators",
+      "isOpen": false,
+      "isActive": false,
+      "otherUri": null,
+      "childrens": [
+        {
+          "title": "Override Props",
+          "uri": "reactive-dynamic-forms/dynamic-forms/overrideProps",
+          "isActive": false,
+          "linkTitle": null
+        }
+      ]
+    },
+    {
       "title": "Advance Form Design",
       "isOpen": false,
       "isActive": false,

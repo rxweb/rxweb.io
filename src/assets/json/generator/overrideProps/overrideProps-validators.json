@@ -1,0 +1,10 @@
+{
+    "complete": {
+        "notes": "decorators",
+        "component": "\r\nimport { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder, overrideProps } from \"@rxweb/reactive-dynamic-forms\";\r\n\r\n@Component({\r\n  selector: 'app-overrideProps-complete',\r\n  templateUrl: './override-props-complete.component.html'\r\n})\r\n@overrideProps({\r\n  firstName: {\r\n    label: {\r\n      get: function () { return this.overrides.label; }, set: function (v) {\r\n        this.overrides.label = v;\r\n      }\r\n    }\r\n  },\r\n  lastName: {\r\n    placeholder: {\r\n      get: function () {\r\n         if (this.controlsConfig.firstName.value)\r\n        return \"Enter your LastName\"\r\n      }, set: function () {\r\n        { this.overrides.placeholder = \"Enter LastName\"; }\r\n      }\r\n    }\r\n  }\r\n})\r\n\r\n\r\nexport class OverridePropsCompleteComponent implements OnInit {\r\n\r\n  serverData: any[] = [\r\n    {\r\n      name: 'firstName',\r\n      type: 'text',\r\n      ui: { label: 'First Name',description:\"Enter firstName to set placeholder in lastName using overrideProps\" },\r\n      overrideProps: ['firstName']\r\n    },\r\n    {\r\n      name: 'lastName',\r\n      type: 'text',\r\n      ui: { label: 'Last Name' },\r\n      overrideProps: ['lastName']\r\n    }\r\n  ]\r\n  uiBindings: string[] = [\"firstName\", \"lastName\"];\r\n  dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n\r\n  constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n  ngOnInit() {\r\n    this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData\r\n    );\r\n  }\r\n}\r\n",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }
+}
