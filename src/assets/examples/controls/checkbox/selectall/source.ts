@@ -8,11 +8,11 @@ export class SelectAllLogic extends FormControlConfig {
         values.push(t.value);
       });
       this.controlsConfig.hobbies.value = values;
-      this.controlsConfig.select.config.ui.text = "Unselect All"
+      this.controlsConfig.select.config.props.text = "Unselect All"
     }
     else {
-      this.controlsConfig.hobbies.value = undefined;
-      this.controlsConfig.select.config.ui.text = "Select All"
+      this.controlsConfig.hobbies.value = null;
+      this.controlsConfig.select.config.props.text = "Select All"
     }
   }
 }
