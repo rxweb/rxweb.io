@@ -13,7 +13,7 @@ linktitle: DynamicFormConfiguration
 
 The objects that are available in the server JSON data and those are transformed in the `FormControlConfig` object. Those objects are mapped with the controlsConfig object in terms of key and value pair.
 
-## FormControlConfig
+#### FormControlConfig
 
 The FormControlConfig is a plain model which transformed your JSON object into the FormControlConfig object.
 
