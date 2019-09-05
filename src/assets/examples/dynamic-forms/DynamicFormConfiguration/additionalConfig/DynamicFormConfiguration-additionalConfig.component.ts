@@ -28,21 +28,21 @@ export class DynamicformconfigurationAdditionalconfigComponent implements OnInit
     additionalConfig=[{
       "name":"registerHeading",
       "type":"h1",
-      "ui":{
+      "props":{
         "text":"Registration Form"
       }
     },
     {
       "name":"paragraphHeading",
       "type":"p",
-      "ui":{
+      "props":{
         "text":"Register yourself to get our services"
       }
     },
        {
       "name":"submitButton",
       "type":"button",
-      "ui":{
+      "props":{
         "text":"Submit",
         "class":["btn","btn-primary"]
       }
