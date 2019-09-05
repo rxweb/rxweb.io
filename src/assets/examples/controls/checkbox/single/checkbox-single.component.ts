@@ -12,7 +12,10 @@ export class CheckboxSingleComponent implements OnInit {
         {
             name: "department",
             type: "checkbox",
-            source: [{ value: 1, text: "Dotnet" },{ value: 2, text: "PHP" }]
+            source: [{ value: 1, text: "Dotnet" },{ value: 2, text: "PHP" }],
+            ui: {
+                label: 'Department'
+            }
         }
     ]
     
