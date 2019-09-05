@@ -60,7 +60,7 @@ export class NestedformarrayCompleteComponent implements OnInit {
     {
       type: "#addressSection",
       name: 'addressSection',
-      ui: { text: 'Address' },
+      props: { text: 'Address' },
       childrens: ["address.name"],
       skipDefaultView: true,
     },
@@ -68,7 +68,7 @@ export class NestedformarrayCompleteComponent implements OnInit {
       type: '#hobbiesSection',
       name: 'hobbiesSection',
       controlConfigName: "hobbies",
-      ui: { text: 'Hobbies' },
+      props: { text: 'Hobbies' },
       childrens: ["name", "lastName"],
       skipDefaultView: true,
     }

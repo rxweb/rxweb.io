@@ -13,7 +13,10 @@ export class CheckboxMultiselectComponent implements OnInit {
             name: "skills",
             type: "checkbox",
             multiselect: true,
-            source: [{ value: 1, text: "Angular" },{ value: 2, text: "MVC" },{ value: 3, text: "SQL Server" }]
+            source: [{ value: 1, text: "Angular" },{ value: 2, text: "MVC" },{ value: 3, text: "SQL Server" }],
+            ui: {
+                label: 'Skills'
+            }
         }
     ]
 

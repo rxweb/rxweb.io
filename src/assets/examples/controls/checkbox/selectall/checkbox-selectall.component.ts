@@ -28,8 +28,10 @@ export class CheckboxSelectallComponent implements OnInit {
         click: 'selectAllCheckbox'
       },
       skipDefaultView: true,
+      props: {
+        text: 'Select All'
+      },
       ui: {
-        text: 'Select All',
         class: ['btn-secondary', 'btn']
       }
     }

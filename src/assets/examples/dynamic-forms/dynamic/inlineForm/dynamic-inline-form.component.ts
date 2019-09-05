@@ -54,8 +54,10 @@ export class DynamicInlineFormComponent implements OnInit {
     additionalConfig = [{
         name: "submit",
         type: "button",
+        props: {
+            text: "Submit"
+        },
         ui: {
-          text: "Submit",
           class: ["btn","btn-primary","mb-2"]
         }
 

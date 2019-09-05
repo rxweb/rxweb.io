@@ -40,7 +40,7 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, AbstractControlConfig
             childrens: [
               {
                 type: 'card-header',
-                ui:
+                props:
                 {
                   text: 'Address'
                 }

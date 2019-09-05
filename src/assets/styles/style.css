@@ -8564,7 +8564,7 @@ input.ng-invalid {
 
 .form-check-inline {
     display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: inline-flex!important;
     padding-left: 0;
     margin-right: .75rem;
 }
