@@ -11,6 +11,7 @@ import { User,Address } from './propArray.model';
 })
 export class PropArrayMaxindexComponent implements OnInit {
 
+    addresses:any;
     userFormGroup: FormGroup
 
     constructor(
@@ -26,7 +27,10 @@ export class PropArrayMaxindexComponent implements OnInit {
         }
 
     addAddress(){
-      let addresses = this.userFormGroup.controls.addresses as FormArray;
-      addresses.push(this.formBuilder.formGroup(Address));
+      this.addresses = this.userFormGroup.controls.addresses as FormArray;
+      this.addresses.push(this.formBuilder.formGroup(Address));
+    }
+    removeAddress(index){
+      this.addresses.removeAt(index);
     }
 }
