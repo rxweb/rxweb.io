@@ -43,3 +43,8 @@ Next, we need to write html code.
 If the client property name and server property name is different. Then to bind the server property name of propArray to client side.
 
 <div component="app-example-runner" ref-component="app-propArray-server" title="Binding server side name with propArray" key="server"></div>
+
+# PropArray based on allowMaxIndex
+It is used when you want to validate number of index added in proprArray. You need to specify it in `allowMaxIndex` property.
+
+<div component="app-example-runner" ref-component="app-propArray-maxindex" title="PropArray based on allowMaxIndex" key="maxindex"></div>
