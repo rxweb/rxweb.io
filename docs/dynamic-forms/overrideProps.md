@@ -3,7 +3,6 @@ title: overrideProps
 description: override Props is used to override the property based upon the server returned configuration. 
 author: rxcontributorone
 category: dynamic-forms
-subcategory: decorators
 type: simple
 linktitle: overrideProps
 ---
