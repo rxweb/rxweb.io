@@ -6,18 +6,28 @@ import { ApplicationBroadcaster } from '@rx/core';
     templateUrl: './change-log.component.html'
 })
 export class ChangeLogComponent implements OnInit {
-    showComponent:boolean = false;
-  pageTitle:any = {"title":"Change Log","subLink":null}
-    constructor(private applicationBroadcaster: ApplicationBroadcaster) {      
-     }
+    showComponent: boolean = false;
+    pageTitle: any = { "title": "Change Log", "subLink": null }
+    constructor(private applicationBroadcaster: ApplicationBroadcaster) {
+    }
+    activeTab = 'search';
 
+    search(activeTab) {
+        this.activeTab = activeTab;
+
+    }
+
+    result(activeTab) {
+        this.activeTab = activeTab;
+
+    }
     ngOnInit() {
         this.applicationBroadcaster.topSubject.next(this.pageTitle);
         this.showComponent = true;
     }
- 
-     scrollTo(section) {
-         location.hash = section;
-         return false;
-     }
+
+    scrollTo(section) {
+        location.hash = section;
+        return false;
+    }
 }

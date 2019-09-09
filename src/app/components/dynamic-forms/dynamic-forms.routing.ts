@@ -34,5 +34,9 @@ const DYNAMIC_FORMS_ROUTES: Routes = [
 	path:'overrideProps',
 	loadChildren: './overrideProps/override-props.module#OverridePropsModule',
 },
+{
+	path:'dynamicComponent',
+	loadChildren: './dynamicComponent/dynamic-component.module#DynamicComponentModule',
+},
 ];
 export const DYNAMIC_FORMS_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMIC_FORMS_ROUTES);

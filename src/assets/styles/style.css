@@ -8907,4 +8907,11 @@ ul.contribution-list li a:hover{
     font-size: 14px;
     color: #0f96e4;
 }
+
+.change-log-links .nav-link.active, .nav-link.active:hover{
+    background-color: #eee;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0f96e4;
+}
 /*-------- do not add any css here ---------- */

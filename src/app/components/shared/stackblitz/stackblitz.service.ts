@@ -192,6 +192,7 @@ export class StackBlitzService {
         componentName = `${this.pascalCase(validationName)}${this.pascalCase(exampleName)}Component`;
 
         for (var fileName in FILES) {
+          debugger;
           let fileContent = FILES[fileName]
           fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
           fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
@@ -212,6 +213,32 @@ export class StackBlitzService {
             configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
             fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
           }
+          if(fileName == "src/app/app.module.ts"){
+            debugger;
+             if(validationName == "dynamicComponent"){
+               fileContent = `
+               import { NgModule } from '@angular/core';
+               import { BrowserModule } from '@angular/platform-browser';
+               import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+               import { HttpClientModule } from '@angular/common/http';
+               
+               import { DynamicComponentCompleteComponent,PersonalInfo } from './dynamic-component-complete.component';
+               import { AppComponent } from './app.component';
+               
+               import {  RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
+               
+               import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+               
+               @NgModule({
+                 imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,RxReactiveFormsModule,HttpClientModule,RxReactiveDynamicFormsModule ],
+                 declarations: [AppComponent, DynamicComponentCompleteComponent,PersonalInfo],
+                 bootstrap:    [ AppComponent],
+                  entryComponents: [PersonalInfo]
+               })
+               export class AppModule { };
+               `
+             }
+          } 
           this.addInputElement(form, `files[${fileName}]`, fileContent);
         }
         if (exampleContent["modelName"] != null && exampleContent["model"] != null) {
