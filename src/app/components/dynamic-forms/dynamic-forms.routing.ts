@@ -38,5 +38,13 @@ const DYNAMIC_FORMS_ROUTES: Routes = [
 	path:'dynamicComponent',
 	loadChildren: './dynamicComponent/dynamic-component.module#DynamicComponentModule',
 },
+{
+	path:'preValueHook',
+	loadChildren: './preValueHook/pre-value-hook.module#PreValueHookModule',
+},
+{
+	path:'postValueHook',
+	loadChildren: './postValueHook/post-value-hook.module#PostValueHookModule',
+},
 ];
 export const DYNAMIC_FORMS_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMIC_FORMS_ROUTES);

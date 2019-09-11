@@ -1,0 +1,10 @@
+{
+    "complete": {
+        "notes": "Hooks",
+        "component": "import { Component, OnInit } from \"@angular/core\";\r\nimport { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder } from \"@rxweb/reactive-dynamic-forms\";\r\nimport { QuantityModel } from \"./quantity.model\";\r\n\r\n\r\n@Component({\r\n  selector: 'app-preValueHook-complete',\r\n  templateUrl: './pre-value-hook-complete.component.html'\r\n})\r\n\r\nexport class PreValueHookCompleteComponent implements OnInit {\r\n  serverData = [\r\n    {\r\n      name: 'quantity',\r\n      type: 'text',\r\n      ui: {\r\n        label: 'Enter Quantity'\r\n      },\r\n      modelName: 'quantityModel'\r\n    }\r\n  ]\r\n\r\n  uiBindings: string[] = [\"quantity\"];\r\n  dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n  constructor(private formBuilder: RxDynamicFormBuilder) { }\r\n  \r\n  ngOnInit() {\r\n    this.dynamicFormBuildConfig = this.formBuilder.formGroup(this.serverData, {\r\n      controlConfigModels: [\r\n        {modelName: \"quantityModel\", model: QuantityModel}]\r\n    });\r\n  }\r\n}",
+        "html": "<form [formGroup]=\"dynamicFormBuildConfig.formGroup\">\r\n    <div viewMode=\"basic\" [rxwebDynamicForm]=\"dynamicFormBuildConfig\" [uiBindings]=\"uiBindings\"></div>\r\n</form>",
+        "model": "import { FormControlConfig, Hooks } from '@rxweb/reactive-dynamic-forms'\r\n\r\nexport class QuantityModel extends FormControlConfig {\r\n\r\n  hooks: Hooks = {      \r\n        preValue: (v) => {\r\n            return !isNaN(v);\r\n        }\r\n  }\r\n}",
+        "modelName": "quantity.model.ts",
+        "json": {}
+    }  
+}

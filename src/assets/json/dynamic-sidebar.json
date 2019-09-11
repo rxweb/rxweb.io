@@ -684,7 +684,26 @@
           "title": "DynamicFormConfiguration", 
           "uri": "reactive-dynamic-forms/dynamic-forms/DynamicFormConfiguration",
           "isActive": false,
-          "linkTitle": "getting-started"
+          "linkTitle": "DynamicFormConfiguration"
+        }
+      ]
+    },
+    {
+      "title": "Hooks",
+      "isOpen": false,
+      "isActive": false,
+      "childrens": [
+        {
+          "title": "preValue", 
+          "uri": "reactive-dynamic-forms/dynamic-forms/preValueHook",
+          "isActive": false,
+          "linkTitle": "preValueHook"
+        },
+        {
+          "title": "postValue", 
+          "uri": "reactive-dynamic-forms/dynamic-forms/postValueHook",
+          "isActive": false,
+          "linkTitle": "postValueHook"
         }
       ]
     },
