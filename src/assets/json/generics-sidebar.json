@@ -2,10 +2,10 @@
     "links": [
       {
         "title": "Getting Started",
-        "uri": "generics/generic-getting-started/",
+        "uri": "rxweb-generics/generic-getting-started",
         "isOpen": false,
         "isActive": false,
-        "otherUri": "getting-started"
+        "linkTitle": "generic-getting-started"
       },    
       {
         "title": "Generics",
@@ -16,13 +16,23 @@
           {
             "title": "List",
             "uri": "rxweb-generics/generics/list",
+            "otherUri": "list",
+            "isOpen": true,
             "isActive": false,
             "childrens": [
                 {
                   "title": "add",
-                  "uri": "rxweb-generics/generics/list",
+                  "uri": "rxweb-generics/generics/list#add",
                   "isActive": false,
-                  "linkTitle": null
+                  "linkTitle": "list",
+                  "refUri": "add"
+                },
+                {
+                  "title": "addRange",
+                  "uri": "rxweb-generics/generics/list#addrange",
+                  "isActive": false,
+                  "linkTitle": "list",
+                  "refUri": "addrange"
                 }
               ]
           },
