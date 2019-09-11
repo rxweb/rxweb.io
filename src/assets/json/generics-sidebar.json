@@ -1,0 +1,38 @@
+{
+    "links": [
+      {
+        "title": "Getting Started",
+        "uri": "generics/generic-getting-started/",
+        "isOpen": false,
+        "isActive": false,
+        "otherUri": "getting-started"
+      },    
+      {
+        "title": "Generics",
+        "isOpen": true,
+        "isActive": false,
+        "otherUri": "generics",
+        "childrens": [
+          {
+            "title": "List",
+            "uri": "rxweb-generics/generics/list",
+            "isActive": false,
+            "childrens": [
+                {
+                  "title": "add",
+                  "uri": "rxweb-generics/generics/list",
+                  "isActive": false,
+                  "linkTitle": null
+                }
+              ]
+          },
+          {
+            "title": "Enumerator",
+            "uri": "reactive-dynamic-forms/dynamic-forms/overrideProps",
+            "isActive": false,
+            "linkTitle": null
+          }
+        ]
+      }
+    ]
+  }

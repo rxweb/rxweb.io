@@ -15,8 +15,9 @@
       "node_modules/@types"
     ],
     "paths": {
+      "@rxweb/generics":["packages/generics/generics"],
       "@rx/*": [
-          "packages/@rx/*",
+          "packages/@rx/*"
       ]
     },
     "lib": [

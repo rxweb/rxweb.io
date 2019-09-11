@@ -1,0 +1,10 @@
+{
+    "add": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-add',\r\n  templateUrl: './list-add.component.html'\r\n})\r\nexport class ListAddComponent implements OnInit {\r\n    result:any;\r\n     items: List<UserModel> = new List<UserModel>([{ name: 'John' }]);\r\n\r\n   ngOnInit() {\r\n    this.items.add({name:\"Bharat\"});\r\n  }  \r\n}\r\n",
+        "html": "Add Result : {{items | json}}",
+        "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    }
+}

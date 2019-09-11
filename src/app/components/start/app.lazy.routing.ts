@@ -102,6 +102,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/reactive-dynamic-forms/reactive-dynamic-forms.module#ReactiveDynamicFormsModule',
   },
   {
+    path: 'rxweb-generics',
+    loadChildren: 'src/app/components/rxweb-generics/rxweb-generics.module#RxwebGenericsModule',
+  },
+  {
     path: '**', 
     redirectTo:'home',
     pathMatch: 'full'
