@@ -323,7 +323,7 @@ export class StackBlitzService {
 
 
   private addJson(form, obj, validationType, validationName, exampleName, templateDrivenType) {
-   
+     debugger;
     var jsonObject = obj['json'];
     obj["component"] = obj["component"].replace("import { environment } from 'src/environments/environment.prod';", "")
     obj["component"] = obj["component"].replace("import { environment } from 'src/environments/environment';", "")
@@ -339,6 +339,13 @@ export class StackBlitzService {
             obj["component"] = obj["component"].replace("import { environment } from 'src/environments/environment';", "")
             obj["component"] = obj["component"].replace("'assets/dynamic.json?v='+environment.appVersion", "'assets/dynamic.json'")
             obj["component"] = obj["component"].replace("'assets/dynamic.json?v=' + environment.appVersion", "'assets/dynamic.json'")
+          }
+          else if(exampleName == "edit"){
+            debugger
+            obj["component"] = obj["component"].replace(sourcePath, destinationPath)
+            obj["component"] = obj["component"].replace("import { environment } from 'src/environments/environment';", "")
+            obj["component"] = obj["component"].replace(" + environment.appVersion", "")
+            
           }
           else {
             obj["component"] = obj["component"].replace(sourcePath, destinationPath)
