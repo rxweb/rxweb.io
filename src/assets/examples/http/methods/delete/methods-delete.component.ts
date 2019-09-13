@@ -26,7 +26,7 @@ export class MethodsDeleteComponent extends AppDomain implements OnInit {
     }
 
     Delete() {
-        this.delete({ params: [1], body: { id: 2, firstName: "Usmi", lastName: 'Dave' } }).subscribe(res => {
+        this.delete({ params: [1], body: { id: 2, firstName: "Srishti", lastName: 'Khandelwal' } }).subscribe(res => {
             this.result = res as UserInfo[];
             console.log(res);
         })

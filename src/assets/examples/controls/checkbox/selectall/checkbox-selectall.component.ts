@@ -47,7 +47,6 @@ export class CheckboxSelectallComponent implements OnInit {
   constructor(private formBuilder: RxDynamicFormBuilder) { }
 
   ngOnInit() {
-    debugger
     this.dynamicFormConfiguration = {
       additionalConfig: this.additionalConfig,
       controlConfigModels: [{ modelName: 'eventModel', model: SelectAllLogic }],

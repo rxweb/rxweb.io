@@ -89,7 +89,6 @@ export class AppComponent implements OnInit {
         }
 
         if (location.pathname.includes("generics")) {
-          debugger
           this.isShowSidebar = false;
           this.http.get('assets/json/generics-sidebar.json').subscribe((response: any) => {  
             this.isShowSidebar = true
@@ -102,7 +101,6 @@ export class AppComponent implements OnInit {
           })
         }
         else if (location.pathname.includes("http")) {
-          debugger
           this.isShowSidebar = false;
           this.http.get('assets/json/http-sidebar.json').subscribe((response: any) => {  
             this.isShowSidebar = true

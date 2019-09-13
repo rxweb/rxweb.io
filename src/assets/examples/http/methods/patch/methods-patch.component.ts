@@ -27,7 +27,6 @@ export class MethodsPatchComponent extends AppDomain implements OnInit {
 
     Patch() {
         this.patch({ params: [1], body: { firstName: "Srishti", } }).subscribe(res => {
-            debugger;
             this.result = res as UserInfo[];
             console.log(res);
         })

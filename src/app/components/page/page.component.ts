@@ -133,7 +133,6 @@ export class PageComponent implements OnInit {
       document.title = "rxweb " + splitedArray[2] + " : " + titleString;
     }
     else{
-      debugger;
       let dynamicsplitedArray = location.pathname.split('/');
       codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/'+  'validators' + '.json';
       htmlUri = 'assets/json/generator/'  + dynamicsplitedArray[3]  + '/'+ dynamicsplitedArray[3] + '-' + 'validators' + '.json';
