@@ -17,6 +17,7 @@ import { SanitizerWhitelistComponent } from './whitelist/sanitizer-whitelist.com
 import { SanitizerPrefixComponent } from './prefix/sanitizer-prefix.component';
 import { SanitizerToDoubleComponent } from './toDouble/sanitizer-to-double.component';
 import { SanitizerUppercaseComponent } from './uppercase/sanitizer-uppercase.component';
+import { SanitizerLowercaseComponent } from './lowercase/sanitizer-lowercase.component';
 
 
 
@@ -24,12 +25,12 @@ import { SanitizerUppercaseComponent } from './uppercase/sanitizer-uppercase.com
   declarations: [
     SanitizerBlacklistComponent,SanitizerEscapeComponent,SanitizerLtrimComponent,SanitizerRtrimComponent,SanitizerSuffixComponent,
     SanitizerToBooleanComponent,SanitizerToFloatComponent,SanitizerToIntComponent,SanitizerTrimComponent,SanitizerToStringComponent,
-    SanitizerWhitelistComponent,SanitizerPrefixComponent,SanitizerToDoubleComponent,SanitizerUppercaseComponent
+    SanitizerWhitelistComponent,SanitizerPrefixComponent,SanitizerToDoubleComponent,SanitizerUppercaseComponent,SanitizerLowercaseComponent
   ],
 entryComponents: [
     SanitizerBlacklistComponent,SanitizerEscapeComponent,SanitizerLtrimComponent,SanitizerRtrimComponent,SanitizerSuffixComponent,
     SanitizerToBooleanComponent,SanitizerToFloatComponent,SanitizerToIntComponent,SanitizerTrimComponent,SanitizerToStringComponent,
-    SanitizerWhitelistComponent,SanitizerPrefixComponent,SanitizerToDoubleComponent,SanitizerUppercaseComponent
+    SanitizerWhitelistComponent,SanitizerPrefixComponent,SanitizerToDoubleComponent,SanitizerUppercaseComponent,SanitizerLowercaseComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -40,7 +41,7 @@ entryComponents: [
   exports: [
     SanitizerBlacklistComponent,SanitizerEscapeComponent,SanitizerLtrimComponent,SanitizerRtrimComponent,SanitizerSuffixComponent,
     SanitizerToBooleanComponent,SanitizerToFloatComponent,SanitizerToIntComponent,SanitizerTrimComponent,SanitizerToStringComponent,
-    SanitizerWhitelistComponent,SanitizerPrefixComponent,SanitizerToDoubleComponent,SanitizerUppercaseComponent
+    SanitizerWhitelistComponent,SanitizerPrefixComponent,SanitizerToDoubleComponent,SanitizerUppercaseComponent,SanitizerLowercaseComponent
   ],
 
 })

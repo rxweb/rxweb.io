@@ -31,6 +31,7 @@ export const SANITIZER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 				whitelist:SanitizerWhitelistComponent,
 				toString:SanitizerToStringComponent,
 				lowercase:SanitizerLowercaseComponent,
-				uppercase:SanitizerUppercaseComponent	
+				uppercase:SanitizerUppercaseComponent,	
+				
 			  },
 }
