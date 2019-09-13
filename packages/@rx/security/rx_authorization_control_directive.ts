@@ -1,6 +1,7 @@
 import { Directive,  ContentChildren, AfterContentInit, ElementRef, QueryList, Input, ViewContainerRef} from "@angular/core";
-import { user } from "./";
+
 import { ApplicationConfiguration, ApplicationBroadcaster } from "../core"
+import { user } from "./user";
 
 
 @Directive({ selector: '[rxAuth]' })

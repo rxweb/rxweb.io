@@ -14,6 +14,8 @@ export const PACKAGE:string = `{
     "@rxweb/reactive-form-validators":"^1.9.3",
     "core-js": "^2.5.7",
     "@rxweb/reactive-dynamic-forms": "0.0.3",
+    "@rxweb/generics":"0.0.0",
+    "@rxweb/sanitizers":"0.0.0",
     "rxjs": "^6.3.3",
     "zone.js": "^0.8.26"
   },

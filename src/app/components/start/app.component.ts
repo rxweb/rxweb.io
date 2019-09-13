@@ -10,6 +10,7 @@ import { ApplicationBroadcaster } from '@rx/core';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
 import { RightSideBarComponent } from '../shared/right-sidebar/right-sidebar.component';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -62,6 +63,7 @@ export class AppComponent implements OnInit {
   title = 'rx.web.io';
   isHome = false;
   isWhy: boolean = false;
+  isShowSidebar: boolean = false;
   showFooter = false;
   gitAsideUrl: SafeResourceUrl;
   // getRouteAnimation(outlet) {
@@ -69,7 +71,7 @@ export class AppComponent implements OnInit {
   // }
   rightSidebarLinks: any;
   //@ViewChild('rightSidenav') public rightsidenav: RightSideBarComponent;
-  constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer) {
+  constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer,private http: HttpClient) {
     this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
@@ -78,17 +80,47 @@ export class AppComponent implements OnInit {
       this.rightSidebarLinks = t.rightSidebarLinks;
     })
     router.events.subscribe((val) => {
-
       if (val instanceof NavigationEnd) {
         if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url == "/home") {
           this.isHome = true;
-
         }
-
         else {
-
           this.isHome = false;
         }
+
+        if (location.pathname.includes("generics")) {
+          debugger
+          this.isShowSidebar = false;
+          this.http.get('assets/json/generics-sidebar.json').subscribe((response: any) => {  
+            this.isShowSidebar = true
+          })
+        }
+        else if (location.pathname.includes("sanitizers")) {
+          this.isShowSidebar = false
+          this.http.get('assets/json/sanitizers-sidebar.json').subscribe((response: any) => {
+            this.isShowSidebar = true
+          })
+        }
+        else if (location.pathname.includes("http")) {
+          debugger
+          this.isShowSidebar = false;
+          this.http.get('assets/json/http-sidebar.json').subscribe((response: any) => {  
+            this.isShowSidebar = true
+          })
+        }
+        else if (location.pathname.includes("reactive-dynamic-forms")) {
+          this.isShowSidebar = false;
+          this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {  
+            this.isShowSidebar = true
+          })
+        }
+        else {
+          this.isShowSidebar = false;
+          this.http.get('assets/json/sidebar.json').subscribe((response: any) => {  
+            this.isShowSidebar = true
+          })
+        }
+        
         var t = setTimeout(() => {
           this.showFooter = true;
         }, 500);
