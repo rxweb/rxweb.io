@@ -1,0 +1,47 @@
+{
+    "get": {
+        "notes": [],
+        "function":"Get() {\r\n        this.get({}).subscribe(res => {\r\n            this.result = res as UserInfo[];\r\n            console.log(res);\r\n        })\r\n    }",
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { HttpClientConfig, RxHttp } from \"@rxweb/http\"\r\nimport { AuthFilter } from '../filters/auth-filter';\r\nimport { Logging } from '../filters/logging-filter';\r\nimport { InMemory } from '../filters/inmemory-filter';\r\nimport { AppDomain } from '../base.component';\r\n\r\n\r\n@Component({\r\n    selector: 'app-methods-get',\r\n    templateUrl: './methods-get.component.html'\r\n})\r\nexport class MethodsGetComponent extends AppDomain implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n\r\n        HttpClientConfig.register({\r\n            hostURIs: [{\r\n                name: 'local',\r\n                default: true,\r\n                uri: 'http://localhost:53285'\r\n            }],\r\n            filters: [{ model: AuthFilter }, { model: Logging }, { model: InMemory, isInMemory: true }],\r\n            onError: (r) => { console.log(r) },\r\n            isProductionEnvironment: false\r\n        })\r\n\r\n        this.get({}).subscribe(x => {\r\n            debugger;\r\n            this.result = x\r\n            console.log(x);\r\n        })\r\n    }\r\n    \r\n}\r\n",
+        "html": "<pre>\r\n    {{ result | json }}\r\n</pre>\r\n",
+        "model": "import { RxHttp, http, inMemory } from \"@rxweb/http\";\r\n\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/values\",\r\n})\r\n@inMemory()\r\nexport class AppDomain extends BaseComponent {\r\n\r\n}",
+        "modelName": "base.component.ts",
+        "json": {}
+    },
+    "patch": {
+        "notes": [],
+        "function":"Patch() {\r\n        this.patch({ params: [1], body: { firstName: \"Srishti\", } }).subscribe(res => {\r\n            debugger;\r\n            this.result = res as UserInfo[];\r\n            console.log(res);\r\n        })\r\n    }",
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { HttpClientConfig, } from \"@rxweb/http\"\r\nimport { AppDomain } from '../base.component';\r\nimport { AuthFilter } from '../filters/auth-filter';\r\nimport { Logging } from '../filters/logging-filter';\r\nimport { InMemory } from '../filters/inmemory-filter';\r\n\r\n@Component({\r\n    selector: 'app-methods-patch',\r\n    templateUrl: './methods-patch.component.html'\r\n})\r\nexport class MethodsPatchComponent extends AppDomain implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n\r\n        HttpClientConfig.register({\r\n            hostURIs: [{\r\n                name: 'local',\r\n                default: true,\r\n                uri: 'http://localhost:53285'\r\n            }],\r\n            filters: [{ model: AuthFilter }, { model: Logging }, { model: InMemory, isInMemory: true }],\r\n            onError: (r) => { console.log(r) },\r\n            isProductionEnvironment: false\r\n        })\r\n\r\n        this.patch({ params: [1], body: { firstName: 'ajay' } }).subscribe(x => {\r\n            debugger;\r\n            this.result = x\r\n            console.log(x);\r\n        })\r\n    }\r\n}\r\n",
+        "html": "<pre>\r\n    {{ result | json }}\r\n</pre>\r\n",
+        "model": "import { RxHttp, http, inMemory } from \"@rxweb/http\";\r\n\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/values\",\r\n})\r\n@inMemory()\r\nexport class AppDomain extends BaseComponent {\r\n\r\n}",
+        "modelName": "base.component.ts",
+        "json": {}
+    },
+    "post": {
+        "notes": [],
+        "function":"Post() {\r\n        this.post({ params: [], body: { firstName: \"Srishti\", lastName: 'Khandelwal' } }).subscribe(res => {\r\n            this.result = res as UserInfo[];\r\n            console.log(res);\r\n        })\r\n    }",
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { HttpClientConfig, } from \"@rxweb/http\"\r\nimport { AppDomain } from '../base.component';\r\nimport { AuthFilter } from '../filters/auth-filter';\r\nimport { Logging } from '../filters/logging-filter';\r\nimport { InMemory } from '../filters/inmemory-filter';\r\n\r\n@Component({\r\n    selector: 'app-methods-post',\r\n    templateUrl: './methods-post.component.html'\r\n})\r\nexport class MethodsPostComponent extends AppDomain implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n\r\n        HttpClientConfig.register({\r\n            hostURIs: [{\r\n                name: 'local',\r\n                default: true,\r\n                uri: 'http://localhost:53285'\r\n            }],\r\n            filters: [{ model: AuthFilter }, { model: Logging }, { model: InMemory, isInMemory: true }],\r\n            onError: (r) => { console.log(r) },\r\n            isProductionEnvironment: false\r\n        })\r\n\r\n        this.post({ params: [1], body: { firstName: 'ajay' } }).subscribe(x => {\r\n            debugger;\r\n            this.result = x\r\n            console.log(x);\r\n        })\r\n\r\n    }\r\n}\r\n",
+        "html": "<pre>\r\n    {{ result | json }}\r\n</pre>\r\n",
+        "model": "import { RxHttp, http, inMemory } from \"@rxweb/http\";\r\n\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/values\",\r\n})\r\n@inMemory()\r\nexport class AppDomain extends BaseComponent {\r\n\r\n}",
+        "modelName": "base.component.ts",
+        "json": {}
+    },
+    "put": {
+        "notes": [],
+        "function":"Put() {\r\n        this.put({ params: [1], body: { firstName: \"Srishti\", lastName: 'Khandelwal' } }).subscribe(res => {\r\n            this.result = res as UserInfo[];\r\n            console.log(res);\r\n        })\r\n    }",
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { HttpClientConfig, } from \"@rxweb/http\"\r\nimport { AppDomain } from '../base.component';\r\nimport { AuthFilter } from '../filters/auth-filter';\r\nimport { Logging } from '../filters/logging-filter';\r\nimport { InMemory } from '../filters/inmemory-filter';\r\n\r\n@Component({\r\n    selector: 'app-methods-post',\r\n    templateUrl: './methods-post.component.html'\r\n})\r\nexport class MethodsPostComponent extends AppDomain implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n\r\n        HttpClientConfig.register({\r\n            hostURIs: [{\r\n                name: 'local',\r\n                default: true,\r\n                uri: 'http://localhost:53285'\r\n            }],\r\n            filters: [{ model: AuthFilter }, { model: Logging }, { model: InMemory, isInMemory: true }],\r\n            onError: (r) => { console.log(r) },\r\n            isProductionEnvironment: false\r\n        })\r\n\r\n        this.post({ params: [1], body: { firstName: 'ajay' } }).subscribe(x => {\r\n            debugger;\r\n            this.result = x\r\n            console.log(x);\r\n        })\r\n\r\n    }\r\n}\r\n",
+        "html": "<pre>\r\n    {{ result | json }}\r\n</pre>\r\n",
+        "model": "import { RxHttp, http, inMemory } from \"@rxweb/http\";\r\n\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/values\",\r\n})\r\n@inMemory()\r\nexport class AppDomain extends BaseComponent {\r\n\r\n}",
+        "modelName": "base.component.ts",
+        "json": {}
+    },
+    "delete": {
+        "notes": [],
+        "function":"Delete() {\r\n        this.delete({ params: [1], body: { id: 2, firstName: \"Usmi\", lastName: 'Dave' } }).subscribe(res => {\r\n            this.result = res as UserInfo[];\r\n            console.log(res);\r\n        })\r\n    }",
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { HttpClientConfig, } from \"@rxweb/http\"\r\nimport { AppDomain } from '../base.component';\r\nimport { AuthFilter } from '../filters/auth-filter';\r\nimport { Logging } from '../filters/logging-filter';\r\nimport { InMemory } from '../filters/inmemory-filter';\r\n\r\n@Component({\r\n    selector: 'app-methods-post',\r\n    templateUrl: './methods-post.component.html'\r\n})\r\nexport class MethodsPostComponent extends AppDomain implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n\r\n        HttpClientConfig.register({\r\n            hostURIs: [{\r\n                name: 'local',\r\n                default: true,\r\n                uri: 'http://localhost:53285'\r\n            }],\r\n            filters: [{ model: AuthFilter }, { model: Logging }, { model: InMemory, isInMemory: true }],\r\n            onError: (r) => { console.log(r) },\r\n            isProductionEnvironment: false\r\n        })\r\n\r\n        this.post({ params: [1], body: { firstName: 'ajay' } }).subscribe(x => {\r\n            debugger;\r\n            this.result = x\r\n            console.log(x);\r\n        })\r\n\r\n    }\r\n}\r\n",
+        "html": "<pre>\r\n    {{ result | json }}\r\n</pre>\r\n",
+        "model": "import { RxHttp, http, inMemory } from \"@rxweb/http\";\r\n\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/values\",\r\n})\r\n@inMemory()\r\nexport class AppDomain extends BaseComponent {\r\n\r\n}",
+        "modelName": "base.component.ts",
+        "json": {}
+    }
+}
