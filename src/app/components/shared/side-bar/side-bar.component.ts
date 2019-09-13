@@ -320,6 +320,268 @@ export class SideBarComponent implements OnInit {
           this.showComponent = true;
         });
       }
+      else if (location.pathname.includes("http")) {
+        this.http.get('assets/json/http-sidebar.json').subscribe((response: any) => {
+          this.links = response.links;
+          var splitedArray = location.pathname.split('#')[0].split('/');
+          if (splitedArray[2]) {
+            var currentElement;
+            var currentArray;
+            if (location.pathname.includes('http-getting-started')) {
+              currentElement = this.links.filter(a => a.linkTitle == splitedArray[2]);
+              
+              if (currentElement.length != 0) {
+                currentElement[0].isActive = true;
+                currentElement[0].isOpen = true;
+              }
+            }
+            else {
+              var parentElement = this.links.filter(a => a.otherUri == splitedArray[2]);
+              // if (parentElement) {
+              //   parentElement[0].isActive = true;
+              //   parentElement[0].isOpen = true;
+              // }
+              if (splitedArray[3]) {
+                if (splitedArray[3] == "methods") {
+                  // currentElement = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[3]);
+  
+                  // if (currentElement.length != 0) {
+                  //   currentElement[0].isActive = true;
+                  //   currentElement[0].isOpen = true;
+                  // }
+                  // var querystringArray = location.href.split('#');
+                  // if (querystringArray[1]) {
+                  //   currentArray = currentElement[0].childrens.filter(a => a.refUri == querystringArray[1])
+                  // }
+                }
+              }
+              else {
+                currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);
+              }
+              if (currentArray && currentArray.length > 0) {
+                currentArray[0].isActive = true;
+                currentArray[0].isOpen = true;
+                if (splitedArray[4]) {
+                  if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
+                    if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
+                      var currentObj;
+                      if (currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[3]).length != 0) {
+                        currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[3])
+                      }
+                      else {
+                        var currentChildArray = currentArray[0].childrens.filter(a => a.otherUri == splitedArray[3]);
+                        currentChildArray[0].isActive = true
+                        currentChildArray[0].isOpen = true
+                        currentObj = currentChildArray[0].childrens.filter(a => a.uri.split('#')[2] == window.location.hash.substring(2))
+                      }
+                      if (currentObj && currentObj.length > 0) {
+                        currentObj[0].isActive = true;
+                        currentObj[0].isOpen = true;
+                      }
+                      else {
+                        var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[3]);
+                        if (currentObj && currentObj.length > 0) {
+                          currentObj[0].isActive = true;
+                          currentObj[0].isOpen = true;
+                        }
+                      }
+                    }
+
+                    else if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
+
+                      currentArray[0].childrens.forEach(formvalidation => {
+                        if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
+                          formvalidation.childrens.forEach(element => {
+                            if (element.title == splitedArray[3]) {
+                              formvalidation.isOpen = true;
+                              formvalidation.isActive = true;
+                              element.isActive = true;
+                              element.isOpen = true;
+                            }
+                          });
+                        }
+                      })
+                    }
+                  }
+                }
+                // else if (splitedArray[2].includes("dynamic-validation")) {
+                //   var querystringArray = location.href.split('=');
+                //   var currentObj, parentElement;
+                //   if (querystringArray[2]) {
+
+                //     currentArray[0].childrens.forEach(element => {
+                //       if (element.childrens) {
+                //         if (element.childrens.filter(a => a.title == querystringArray[2]).length != 0) {
+                //           currentObj = element.childrens.filter(a => a.title == querystringArray[2])
+                //           parentElement = element;
+                //         }
+                //       }
+                //     });
+                //     if (parentElement) {
+                //       parentElement.isActive = true;
+                //       parentElement.isOpen = true;
+                //     }
+                //     if (currentObj && currentObj.length > 0) {
+                //       currentObj[0].isActive = true;
+                //       currentObj[0].isOpen = true;
+                //     }
+                //   }
+                // }
+              }
+              else {
+                var children = this.links[1]['childrens'];
+                var currentArray = children.filter(a => a.uri == splitedArray[2]);
+                if (currentArray && currentArray.length > 0) {
+                  currentArray[0].isActive = true;
+                  currentArray[0].isOpen = true;
+                  if (splitedArray[3]) {
+                    if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
+                      var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[3]);
+                      if (currentObj && currentObj.length > 0) {
+                        currentObj[0].isActive = true;
+                        currentObj[0].isOpen = true;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+          this.showComponent = true;
+        });
+      }
+      else if (location.pathname.includes("sanitizers")) {
+        this.http.get('assets/json/sanitizers-sidebar.json').subscribe((response: any) => {
+          this.links = response.links;
+          var splitedArray = location.pathname.split('#')[0].split('/');
+          if (splitedArray[2]) {
+            var currentElement;
+            var currentArray;
+            if (location.pathname.includes('sanitizers-getting-started')) {
+              currentElement = this.links.filter(a => a.linkTitle == splitedArray[2]);
+              
+              if (currentElement.length != 0) {
+                currentElement[0].isActive = true;
+                currentElement[0].isOpen = true;
+              }
+            }
+            else {
+              var parentElement = this.links.filter(a => a.otherUri == splitedArray[2]);
+              if (parentElement) {
+                parentElement[0].isActive = true;
+                parentElement[0].isOpen = true;
+              }
+              if (splitedArray[3]) {
+                if (splitedArray[3] == "list") {
+                  currentElement = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[3]);
+  
+                  if (currentElement.length != 0) {
+                    currentElement[0].isActive = true;
+                    currentElement[0].isOpen = true;
+                  }
+                  var querystringArray = location.href.split('#');
+                  if (querystringArray[1]) {
+                    currentArray = currentElement[0].childrens.filter(a => a.refUri == querystringArray[1])
+                  }
+                }
+              }
+              else {
+                currentArray = this.links.filter(a => a.otherUri == splitedArray[1]);
+              }
+              if (currentArray && currentArray.length > 0) {
+                currentArray[0].isActive = true;
+                currentArray[0].isOpen = true;
+                if (splitedArray[4]) {
+                  if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
+                    if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
+                      var currentObj;
+                      if (currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[3]).length != 0) {
+                        currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[3])
+                      }
+                      else {
+                        var currentChildArray = currentArray[0].childrens.filter(a => a.otherUri == splitedArray[3]);
+                        currentChildArray[0].isActive = true
+                        currentChildArray[0].isOpen = true
+                        currentObj = currentChildArray[0].childrens.filter(a => a.uri.split('#')[2] == window.location.hash.substring(2))
+                      }
+                      if (currentObj && currentObj.length > 0) {
+                        currentObj[0].isActive = true;
+                        currentObj[0].isOpen = true;
+                      }
+                      else {
+                        var currentObj = currentArray[0].childrens.filter(a => a.linkTitle == splitedArray[3]);
+                        if (currentObj && currentObj.length > 0) {
+                          currentObj[0].isActive = true;
+                          currentObj[0].isOpen = true;
+                        }
+                      }
+                    }
+
+                    else if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
+
+                      currentArray[0].childrens.forEach(formvalidation => {
+                        if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
+                          formvalidation.childrens.forEach(element => {
+                            if (element.title == splitedArray[3]) {
+                              formvalidation.isOpen = true;
+                              formvalidation.isActive = true;
+                              element.isActive = true;
+                              element.isOpen = true;
+                            }
+                          });
+                        }
+                      })
+                    }
+                  }
+                }
+                // else if (splitedArray[2].includes("dynamic-validation")) {
+                //   var querystringArray = location.href.split('=');
+                //   var currentObj, parentElement;
+                //   if (querystringArray[2]) {
+
+                //     currentArray[0].childrens.forEach(element => {
+                //       if (element.childrens) {
+                //         if (element.childrens.filter(a => a.title == querystringArray[2]).length != 0) {
+                //           currentObj = element.childrens.filter(a => a.title == querystringArray[2])
+                //           parentElement = element;
+                //         }
+                //       }
+                //     });
+                //     if (parentElement) {
+                //       parentElement.isActive = true;
+                //       parentElement.isOpen = true;
+                //     }
+                //     if (currentObj && currentObj.length > 0) {
+                //       currentObj[0].isActive = true;
+                //       currentObj[0].isOpen = true;
+                //     }
+                //   }
+                // }
+              }
+              else {
+                var children = this.links[1]['childrens'];
+                var currentArray = children.filter(a => a.uri == splitedArray[2]);
+                if (currentArray && currentArray.length > 0) {
+                  currentArray[0].isActive = true;
+                  currentArray[0].isOpen = true;
+                  if (splitedArray[3]) {
+                    if (currentArray[0].childrens && currentArray[0].childrens.length > 0) {
+                      var currentObj = currentArray[0].childrens.filter(a => a.title == splitedArray[3]);
+                      if (currentObj && currentObj.length > 0) {
+                        currentObj[0].isActive = true;
+                        currentObj[0].isOpen = true;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+          this.showComponent = true;
+        });
+      }
       else {
         this.http.get('assets/json/sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
           this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;

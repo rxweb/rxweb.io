@@ -13,7 +13,8 @@
     "analyze": "webpack-bundle-analyzer dist/stats.json",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "json-server": "json-server --watch db.json --port 3004"
   },
   "window": {
     "show": true,
@@ -32,14 +33,15 @@
     "@angular/pwa": "^0.11.3",
     "@angular/router": "^7.1.0",
     "@angular/service-worker": "^7.1.4",
-    "@rxweb/generics": "0.0.0",
-    "@rxweb/http": "0.0.0-1",
+    "@rxweb/generics": "0.0.1-2",
+    "@rxweb/http": "0.0.0-2",
     "@rxweb/reactive-dynamic-forms": "0.0.3",
     "@rxweb/reactive-form-validators": "^1.9.3",
     "@rxweb/sanitizers": "0.0.0",
     "angular-instantsearch": "^2.1.0",
     "core-js": "^2.5.4",
     "http-server": "^0.11.1",
+    "json-server": "^0.15.1",
     "ngx-clipboard": "^11.1.9",
     "ngx-highlightjs": "^2.1.1",
     "rxjs": "^6.4.0",
