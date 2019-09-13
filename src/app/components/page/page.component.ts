@@ -109,7 +109,7 @@ export class PageComponent implements OnInit {
     let titleString = "";
     let codeUri = "";
     let htmlUri = ""
-    if (this.mainType != "reactive-dynamic-forms" && this.mainType != "rxweb-generics") {
+    if (this.mainType != "reactive-dynamic-forms" && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
       switch (splitedArray[3]) {
         case "decorators":
           codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;

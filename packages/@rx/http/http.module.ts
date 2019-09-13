@@ -1,7 +1,8 @@
 import {NgModule} from '@angular/core';
 import {HttpModule} from '@angular/http';
+import { RxHttp } from './rxhttp.service';
 
-import {RxHttp} from './';
+
 
 
 @NgModule({

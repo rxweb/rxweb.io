@@ -64,7 +64,10 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'form-validations',
     loadChildren: 'src/app/components/form-validation/form-validation.module#FormValidationModule',
   },
- 
+  {
+    path: 'rxweb-http',
+    loadChildren: 'src/app/components/rxweb-http/rxweb-http.module#RxwebHttpModule',
+  },
   {
     path: 'decorators',
     loadChildren: 'src/app/components/decorators/decorators.module#DecoratorsModule',
@@ -104,6 +107,10 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'rxweb-generics',
     loadChildren: 'src/app/components/rxweb-generics/rxweb-generics.module#RxwebGenericsModule',
+  },
+  {
+    path: 'rxweb-sanitizers',
+    loadChildren: 'src/app/components/rxweb-sanitizers/rxweb-sanitizers.module#RxwebSanitizersModule',
   },
   {
     path: '**', 

@@ -38,17 +38,18 @@ export class AppExampleRunnerComponent implements OnInit {
  
   }
   ngOnInit(): void {
- 
     this.showElement = false;
-    if(this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject" )
+    if(this.decoratorName == "methods" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject" )
     {
       this.showElement = true;
     }
     this.tabArray = []; 
     if(this.content && this.showTab){
+      if(this.content.function != null)
+      this.tabArray.push({"tabName": "Component", "tabItem": "component", "content": this.content.function})
       if (this.content.model != null)
         this.tabArray.push({ "tabName": "Model", "tabItem": "model", "content": this.content.model })
-      if (this.content.component != null)
+      if (this.decoratorName != "sanitizer" && this.decoratorName != "methods"  && this.decoratorName != "list" && this.content.component != null)
         this.tabArray.push({ "tabName": "Component", "tabItem": "component", "content": this.content.component })
       if (JSON.stringify(this.content.json) !== JSON.stringify({}))
       {

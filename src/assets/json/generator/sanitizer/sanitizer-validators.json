@@ -1,0 +1,137 @@
+{
+    "blacklist": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-blacklist',\r\n  templateUrl: './sanitizer-blacklist.component.html'\r\n})\r\n\r\nexport class SanitizerBlacklistComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"xyzabc\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "function":"export class SanitizerBlacklistComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"xyzabc\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { blacklist, sanitize } from '@rxweb/sanitizers'\r\n\r\n  @sanitize\r\n  export class User {\r\n\r\n  @blacklist('abc')\r\n  freeText: string = \"xyzabc\";\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "escape": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-escape',\r\n  templateUrl: './sanitizer-escape.component.html'\r\n})\r\n\r\nexport class SanitizerEscapeComponent implements OnInit {\r\n  result: any;\r\n  \r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"xyzabc$&\";\r\n    this.result = user.freeText;\r\n  }\r\n}\r\n",
+        "function":"export class SanitizerEscapeComponent implements OnInit {\r\n  result: any;\r\n  \r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"xyzabc$&\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { escape, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @escape()\r\n  freeText: string;\r\n\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "ltrim": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-ltrim',\r\n  templateUrl: './sanitizer-ltrim.component.html'\r\n})\r\n\r\nexport class SanitizerLtrimComponent implements OnInit {\r\n  result: any;\r\n  \r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText  = \"gmail\";\r\n    this.result = user.freeText;\r\n  }\r\n}\r\n",
+        "function":"export class SanitizerLtrimComponent implements OnInit {\r\n  result: any;\r\n  \r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText  = \"gmail\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { ltrim, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @ltrim()\r\n  freeText: string;\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "rtrim": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-rtrim',\r\n  templateUrl: './sanitizer-rtrim.component.html'\r\n})\r\n\r\nexport class SanitizerRtrimComponent implements OnInit {\r\n  result: any;\r\n  \r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"gmail\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "function":"export class SanitizerRtrimComponent implements OnInit {\r\n  result: any;\r\n  \r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"gmail\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { rtrim, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @rtrim()\r\n  freeText: string ;\r\n\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "prefix": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-prefix',\r\n  templateUrl: './sanitizer-prefix.component.html'\r\n})\r\n\r\nexport class SanitizerPrefixComponent implements OnInit {\r\n  result: any;\r\n  \r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"gmail.com\"\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "function":"export class SanitizerPrefixComponent implements OnInit {\r\n  result: any;\r\n  \r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"gmail.com\"\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { prefix, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @prefix('@')\r\n  freeText: string ;\r\n\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "suffix": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-suffix',\r\n  templateUrl: './sanitizer-suffix.component.html'\r\n})\r\nexport class SanitizerSuffixComponent implements OnInit {\r\n\r\n  result: any;\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"gmail\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "function":"export class SanitizerSuffixComponent implements OnInit {\r\n\r\n  result: any;\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"gmail\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { suffix, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @suffix('.com')\r\n  freeText: string;\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "trim": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-trim',\r\n  templateUrl: './sanitizer-trim.component.html'\r\n})\r\n\r\nexport class SanitizerTrimComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"abc\"\r\n    this.result = user.freeText;\r\n  }\r\n}\r\n",
+        "function":"export class SanitizerTrimComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"abc\"\r\n    this.result = user.freeText;\r\n  }\r\n}\r\n",
+        "html": "Output:{{result}}",
+        "model": "import { trim, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @trim()\r\n  freeText: string;\r\n\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "toBoolean": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-toBoolean',\r\n  templateUrl: './sanitizer-to-boolean.component.html'\r\n})\r\n\r\nexport class SanitizerToBooleanComponent implements OnInit {\r\n\r\n  result: any;\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.name  = \"gmail\";\r\n    this.result = user.name;\r\n  }\r\n}\r\n",
+        "function":"export class SanitizerToBooleanComponent implements OnInit {\r\n\r\n  result: any;\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.name  = \"gmail\";\r\n    this.result = user.name;\r\n  }\r\n}\r\n",
+        "html": "Output:{{result}}",
+        "model": "import { toBoolean, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @toBoolean(true)\r\n  name: string;\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "toDouble": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-toDouble',\r\n  templateUrl: './sanitizer-to-double.component.html'\r\n})\r\n\r\nexport class SanitizerToDoubleComponent implements OnInit {\r\n\r\n  result: any;\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.amount = 16.50;\r\n    this.result = user.amount;\r\n  }\r\n}\r\n",
+        "function":"export class SanitizerToDoubleComponent implements OnInit {\r\n\r\n  result: any;\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.amount = 16.50;\r\n    this.result = user.amount;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { toDouble, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @toDouble()\r\n  amount: number;\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "toFloat": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-toFloat',\r\n  templateUrl: './sanitizer-to-float.component.html'\r\n})\r\n\r\nexport class SanitizerToFloatComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.amount = 16.50;\r\n    this.result = user.amount;\r\n  }\r\n}",
+        "function":"export class SanitizerToFloatComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.amount = 16.50;\r\n    this.result = user.amount;\r\n  }\r\n}}",
+        "html": "Output:{{result}}",
+        "model": "import { toFloat, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @toFloat()\r\n  amount: number;\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "toInt": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-toInt',\r\n  templateUrl: './sanitizer-to-int.component.html'\r\n})\r\n\r\nexport class SanitizerToIntComponent implements OnInit {\r\n\r\n  result: any;\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.amount = 16.50;\r\n    this.result = user.amount;\r\n  }\r\n}",
+        "function":"export class SanitizerToIntComponent implements OnInit {\r\n\r\n  result: any;\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.amount = 16.50;\r\n    this.result = user.amount;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { toInt, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @toInt()\r\n  amount: number;\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "toString": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-toString',\r\n  templateUrl: './sanitizer-to-string.component.html'\r\n})\r\n\r\nexport class SanitizerToStringComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"abc\";\r\n    this.result = user.freeText;\r\n  }\r\n}\r\n",
+        "function":"export class SanitizerToStringComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"abc\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { toString, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @toString()\r\n  freeText: string = \"abc\";\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "whitelist": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-whitelist',\r\n  templateUrl: './sanitizer-whitelist.component.html'\r\n})\r\n\r\nexport class SanitizerWhitelistComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"abc\";\r\n    this.result = user.freeText;\r\n  }\r\n}\r\n",
+        "function":"export class SanitizerWhitelistComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"abc\";\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { whitelist, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @whitelist(\"abc\")\r\n  freeText: string;\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "lowercase": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-lowercase',\r\n  templateUrl: './sanitizer-lowercase.component.html'\r\n})\r\n\r\nexport class SanitizerLowercaseComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"ABC\"\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "function":"export class SanitizerLowercaseComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"ABC\"\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { upperCase, sanitize } from '@rxweb/sanitizers'\r\n\r\n  @sanitize\r\n  export class User {\r\n\r\n  @upperCase()\r\n  freeText: string;\r\n\r\n}\r\n",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "uppercase": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-uppercase',\r\n  templateUrl: './sanitizer-uppercase.component.html'\r\n})\r\n\r\nexport class SanitizerUppercaseComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"abc\"\r\n    this.result = user.freeText;\r\n  }\r\n}\r\n",
+        "function":"export class SanitizerUppercaseComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"abc\"\r\n    this.result = user.freeText;\r\n  }\r\n}",
+        "html": "Output:{{result}}",
+        "model": "import { upperCase, sanitize } from '@rxweb/sanitizers'\r\n\r\n@sanitize\r\nexport class User {\r\n\r\n\r\n  @upperCase()\r\n  freeText: string;\r\n\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    }
+}

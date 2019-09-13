@@ -2,8 +2,315 @@
     "add": {
         "notes": [],
         "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-add',\r\n  templateUrl: './list-add.component.html'\r\n})\r\nexport class ListAddComponent implements OnInit {\r\n    result:any;\r\n     items: List<UserModel> = new List<UserModel>([{ name: 'John' }]);\r\n\r\n   ngOnInit() {\r\n    this.items.add({name:\"Bharat\"});\r\n  }  \r\n}\r\n",
-        "html": "Add Result : {{items | json}}",
+        "function":"export class ListAddComponent implements OnInit {\r\n    result:any;\r\n     items: List<UserModel> = new List<UserModel>([{ name: 'John' }]);\r\n\r\n   ngOnInit() {\r\n    this.items.add({name:\"Bharat\"});\r\n  }  ",
+        "html": "<div>\r\n    <h2>Add Result : </h2>\r\n    <ul *ngFor=\"let item of items\">\r\n      <li>{{item.name}}</li>  \r\n    </ul>\r\n</div>\r\n",
         "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "addRange": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-addRange',\r\n  templateUrl: './list-add-range.component.html'\r\n})\r\nexport class ListAddRangeComponent implements OnInit {\r\n    result:any;\r\n     items: List<UserModel> = new List<UserModel>([{ name: 'John' }]);\r\n\r\n   ngOnInit() {\r\n    this.items.addRange([{name:\"Bharat\"},{name:\"David\"}]);\r\n  }  \r\n}\r\n",
+        "function":"export class ListAddRangeComponent implements OnInit {\r\n    result:any;\r\n     items: List<UserModel> = new List<UserModel>([{ name: 'John' }]);\r\n\r\n   ngOnInit() {\r\n    this.items.addRange([{name:\"Bharat\"},{name:\"David\"}]);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Add Range Result : </h2>\r\n    <ul *ngFor=\"let item of items\">\r\n      <li>{{item.name}}</li>  \r\n    </ul>\r\n</div>\r\n",
+        "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "all": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-all',\r\n  templateUrl: './list-all.component.html'\r\n})\r\nexport class ListAllComponent implements OnInit {\r\n    result:any;\r\n     items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.all(x=>x.name.startsWith(\"J\"));\r\n  }  \r\n}",
+        "function":"export class ListAllComponent implements OnInit {\r\n    result:any;\r\n     items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.all(x=>x.name.startsWith(\"J\"));\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>All Result : </h2>\r\n\r\n    {{result}}\r\n\r\n</div>",
+        "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "any": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-any',\r\n  templateUrl: './list-any.component.html'\r\n})\r\n\r\nexport class ListAnyComponent implements OnInit {\r\n    result:any;\r\n     items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.any(x=>x.name.startsWith(\"J\"));\r\n  }  \r\n}",
+        "function":"export class ListAnyComponent implements OnInit {\r\n    result:any;\r\n     items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.any(x=>x.name.startsWith(\"J\"));\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Any Result : </h2>\r\n\r\n    {{result}}\r\n\r\n</div>",
+        "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "average": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-average',\r\n  templateUrl: './list-average.component.html'\r\n})\r\n\r\nexport class ListAverageComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.average(x=>x.grades);\r\n  }  \r\n}",
+        "function":"export class ListAverageComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.average(x=>x.grades);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Average Result : </h2>\r\n\r\n    {{result}}\r\n\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "contains": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-contains',\r\n  templateUrl: './list-contains.component.html'\r\n})\r\n\r\nexport class ListContainsComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.contains(x=>x.name == \"John\");\r\n  }  \r\n}",
+        "function":"export class ListContainsComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.contains(x=>x.name == \"John\");\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Contains Result : </h2>\r\n\r\n    {{result}}\r\n\r\n</div>",
+        "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "count": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-count',\r\n  templateUrl: './list-count.component.html'\r\n})\r\n\r\nexport class ListCountComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.count(x=>x.grades >= 60);\r\n  }  \r\n}",
+        "function":"export class ListCountComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.count(x=>x.grades >= 60);\r\n  }  \r\n}",
+        "html": "<div>\r\n        <h2>Count Result : </h2>\r\n    \r\n        {{result}}\r\n    \r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "where": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-count',\r\n  templateUrl: './list-count.component.html'\r\n})\r\n\r\nexport class ListWhereComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n    ngOnInit() {\r\n    this.result = this.items.where(x=>x.name == \"John\");\r\n  }  \r\n}   ",
+        "function":"export class ListWhereComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n    ngOnInit() {\r\n    this.result = this.items.where(x=>x.name == \"John\");\r\n  }  \r\n}   ",
+        "html": "<div>\r\n        <h2>where Result : </h2>\r\n        <ul *ngFor=\"let item of result\">\r\n          <li>{{item.name}}</li>  \r\n        </ul>\r\n    </div>",
+        "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "distinct": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-distinct',\r\n  templateUrl: './list-distinct.component.html'\r\n})\r\n\r\nexport class ListDistinctComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.distinct();\r\n  }  \r\n}",
+        "function":"export class ListDistinctComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.distinct();\r\n  }  \r\n}",
+        "html": "<div>\r\n        <h2>distinct Result : </h2>\r\n        <ul *ngFor=\"let item of result\">\r\n          <li>{{item.grades}}</li>  \r\n        </ul>\r\n    </div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "distinctBy": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-distinctBy',\r\n  templateUrl: './list-distinct-by.component.html'\r\n})\r\n\r\nexport class ListDistinctByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.distinctBy(x=>x.grades);\r\n  }  \r\n}",
+        "function":"export class ListDistinctByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.distinctBy(x=>x.grades);\r\n  }  \r\n}",
+        "html": "<div>\r\n        <h2>distinctBy Result : </h2>\r\n        <ul *ngFor=\"let item of result\">\r\n          <li>{{item.grades}}</li>  \r\n        </ul>\r\n    </div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "elementAt": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-elementAt',\r\n  templateUrl: './list-element-at.component.html'\r\n})\r\n\r\nexport class ListElementAtComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.elementAt(1);\r\n  }  \r\n}",
+        "function":"export class ListElementAtComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.elementAt(1);\r\n  }  \r\n}",
+        "html": "<div>\r\n        <h2>Element At Result : </h2>\r\n        \r\n    {{result}}\r\n        \r\n    </div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "first": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-first',\r\n  templateUrl: './list-first.component.html'\r\n})\r\n\r\nexport class ListFirstComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.first(x=>x.grades == 68);\r\n  }  \r\n}",
+        "function":"export class ListFirstComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.first(x=>x.grades == 68);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>First Result : </h2>\r\n   \r\n     {{result}}\r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "firstOrDefault": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-firstOrDefault',\r\n  templateUrl: './list-first-or-default.component.html'\r\n})\r\n\r\nexport class ListFirstOrDefaultComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.firstOrDefault(x=>x.grades == 68);\r\n  }  \r\n}",
+        "function":"export class ListFirstOrDefaultComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.firstOrDefault(x=>x.grades == 68);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>FirstOrDefault Result : </h2>\r\n   \r\n     {{result}}\r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "groupBy": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-groupBy',\r\n  templateUrl: './list-group-by.component.html'\r\n})\r\n\r\nexport class ListGroupByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.groupBy(x=>x.grades);\r\n  }  \r\n}",
+        "function":"export class ListGroupByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.groupBy(x=>x.grades);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>GroupBy Result : </h2>\r\n    <ul *ngFor=\"let item of result\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "insert": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-insert',\r\n  templateUrl: './list-insert.component.html'\r\n})\r\n\r\nexport class ListInsertComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n     this.items.insert(1,{ grades: 68 });\r\n  }  \r\n}",
+        "function":"export class ListInsertComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n     this.items.insert(1,{ grades: 68 });\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Insert Result : </h2>\r\n    <ul *ngFor=\"let item of items\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "last": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-last',\r\n  templateUrl: './list-last.component.html'\r\n})\r\n\r\nexport class ListLastComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{name:\"John\"},{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n    this.result =  this.items.last(x=>x.name == \"John\");\r\n  }  \r\n}",
+        "function":"export class ListLastComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{name:\"John\"},{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n   this.result =  this.items.last(x=>x.name == \"John\");\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Last Result : </h2>\r\n    \r\n     {{result | json}}\r\n    \r\n</div>",
+        "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "lastOrDefault": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-lastOrDefault',\r\n  templateUrl: './list-last-or-default.component.html'\r\n})\r\n\r\nexport class ListLastOrDefaultComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{name:\"John\"},{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n   this.result =  this.items.lastOrDefault(x=>x.name == \"John\");\r\n  }  \r\n}",
+        "function":"export class ListLastOrDefaultComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{name:\"John\"},{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n   this.result =  this.items.lastOrDefault(x=>x.name == \"John\");\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Last Or Default Result : </h2>\r\n    \r\n     {{result | json}}\r\n    \r\n</div>",
+        "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "max": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-max',\r\n  templateUrl: './list-max.component.html'\r\n})\r\n\r\nexport class ListMaxComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.max();\r\n  }  \r\n}",
+        "function":"export class ListMaxComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.max();\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Max Result : </h2>\r\n    {{result | json}}\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "maxBy": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-maxBy',\r\n  templateUrl: './list-max-by.component.html'\r\n})\r\n\r\nexport class ListMaxByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.maxBy(x=>x.grades);\r\n  }  \r\n}",
+        "function":"export class ListMaxByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.maxBy(x=>x.grades);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Max By Result : </h2>\r\n   {{result | json}}\r\n</div>\r\n",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "min": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-min',\r\n  templateUrl: './list-min.component.html'\r\n})\r\n\r\nexport class ListMinComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.min();\r\n  }  \r\n}",
+        "function":"export class ListMaxByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.maxBy(x=>x.grades);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Min Result : </h2>\r\n   {{result | json}}\r\n</div>\r\n",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "minBy": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-minBy',\r\n  templateUrl: './list-min-by.component.html'\r\n})\r\n\r\nexport class ListMinByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.minBy(x=>x.grades);\r\n  }  \r\n}",
+        "function":"export class ListMinByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.minBy(x=>x.grades);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Min By Result : </h2>\r\n   {{result | json}}\r\n</div>\r\n",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "orderBy": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-orderBy',\r\n  templateUrl: './list-order-by.component.html'\r\n})\r\n\r\nexport class ListOrderByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.orderBy(x=>x.grades);\r\n  }  \r\n}",
+        "function":"export class ListOrderByComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.orderBy(x=>x.grades);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>OrderBy Result : </h2>\r\n    <ul *ngFor=\"let item of result\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "orderByDescending": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-orderByDescending',\r\n  templateUrl: './list-order-by-descending.component.html'\r\n})\r\n\r\nexport class ListOrderByDescendingComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.orderByDescending(x=>x.grades);\r\n  }  \r\n}",
+        "function":"export class ListOrderByDescendingComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.orderByDescending(x=>x.grades);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>OrderBy Descending Result : </h2>\r\n    <ul *ngFor=\"let item of result\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "remove": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-remove',\r\n  templateUrl: './list-remove.component.html'\r\n})\r\n\r\nexport class ListRemoveComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.items.remove({ grades: 68 });\r\n  }  \r\n}",
+        "function":"export class ListRemoveComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.items.remove({ grades: 68 });\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Remove Result : </h2>\r\n    <ul *ngFor=\"let item of items\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "removeAll": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-removeAll',\r\n  templateUrl: './list-remove-all.component.html'\r\n})\r\n\r\nexport class ListRemoveAllComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.items.removeAll(x=>x.grades == 68);\r\n  }  \r\n}",
+        "function":"export class ListRemoveAllComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.items.removeAll(x=>x.grades == 68);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Remove All Result : </h2>\r\n    <ul *ngFor=\"let item of items\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "single": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-single',\r\n  templateUrl: './list-single.component.html'\r\n})\r\n\r\nexport class ListSingleComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.single(x=>x.grades == 68);\r\n  }  \r\n}",
+        "function":"export class ListSingleComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.single(x=>x.grades == 68);;\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Single Result : </h2>\r\n    \r\n     {{result | json}}\r\n    \r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "singleOrDefault": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-singleOrDefault',\r\n  templateUrl: './list-single-or-default.component.html'\r\n})\r\n\r\nexport class ListSingleOrDefaultComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.singleOrDefault(x=>x.grades == 68);\r\n  }  \r\n}",
+        "function":"export class ListSingleOrDefaultComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.singleOrDefault(x=>x.grades == 68);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Single Or Default Result : </h2>\r\n    \r\n     {{result | json}}\r\n    \r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "skip": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-skip',\r\n  templateUrl: './list-skip.component.html'\r\n})\r\n\r\nexport class ListSkipComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result =  this.items.skip(1);\r\n  }  \r\n}",
+        "function":"export class ListSkipComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result =  this.items.skip(1);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Skip Result : </h2>\r\n    <ul *ngFor=\"let item of result\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "sum": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-sum',\r\n  templateUrl: './list-sum.component.html'\r\n})\r\n\r\nexport class ListSumComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.items.sum(x=>x.grades);\r\n  }  \r\n}",
+        "function":"export class ListSumComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.items.sum(x=>x.grades);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Sum Result : </h2>\r\n    <ul *ngFor=\"let item of result\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "take": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-take',\r\n  templateUrl: './list-take.component.html'\r\n})\r\n\r\nexport class ListTakeComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.take(1);\r\n  }  \r\n}",
+        "function":"export class ListTakeComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.take(1);\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Take Result : </h2>\r\n    {{result | json}}\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "toArray": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-toArray',\r\n  templateUrl: './list-to-array.component.html'\r\n})\r\n\r\nexport class ListToArrayComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.items.toArray();\r\n  }  \r\n}",
+        "function":"export class ListToArrayComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n    this.items.toArray();\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Sum Result : </h2>\r\n    <ul *ngFor=\"let item of items\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "concat": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-concat',\r\n  templateUrl: './list-concat.component.html'\r\n})\r\n\r\nexport class ListConcatComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.concat([{\"name\":\"John\"},{\"name\":\"David\"}]);\r\n  }  \r\n}",
+        "function":"export class ListConcatComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n   ngOnInit() {\r\n    this.result = this.items.concat([{\"name\":\"John\"},{\"name\":\"David\"}]);\r\n  }  \r\n}",
+        "html": "<div>\r\n        <h5>Output : </h5>\r\n        <ul *ngFor=\"let item of result\">\r\n          <li>{{item.name}}</li>  \r\n        </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    name: string;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "pop": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-pop',\r\n  templateUrl: './list-pop.component.html'\r\n})\r\n\r\nexport class ListPopComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n   this.items.pop();\r\n  }  \r\n}",
+        "function":"export class ListPopComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n   this.items.pop();\r\n  }  \r\n}",
+        "html": "<div>\r\n        <h5>Output : </h5>\r\n        <ul *ngFor=\"let item of items\">\r\n          <li>{{item.grades}}</li>  \r\n        </ul>\r\n    </div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "shift": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-shift',\r\n  templateUrl: './list-shift.component.html'\r\n})\r\n\r\nexport class ListShiftComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n   this.items.shift();\r\n  }  \r\n}",
+        "function":"export class ListShiftComponent implements OnInit {\r\n    result:any;  \r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n   this.items.shift();\r\n  }  \r\n}",
+        "html": "<div>\r\n    <h2>Sum Result : </h2>\r\n    <ul *ngFor=\"let item of items\">\r\n      <li>{{item.grades}}</li>  \r\n    </ul>\r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    },
+    "removeAt": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-remove-at',\r\n  templateUrl: './list-remove-at.component.html'\r\n})\r\n\r\nexport class ListRemoveAtComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n   this.result = this.items.removeAt(1);\r\n  }  \r\n}",
+        "function":"export class ListRemoveAtComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ grades: 68 },{grades:89},{grades:30},{grades:90}]);\r\n\r\n   ngOnInit() {\r\n   this.result = this.items.removeAt(1);\r\n  }  \r\n}",
+        "html": "<div>\r\n        <h2>Output : </h2>\r\n    \r\n        {{items | json}}   \r\n</div>",
+        "model": "export class UserModel {\r\n    grades: number;\r\n}",
         "modelName": "user.model.ts",
         "json": {}
     }

@@ -1,1 +1,6 @@
-Add Result : {{items | json}}
+<div>
+    <h5>Output : </h5>
+    <ul *ngFor="let item of items">
+      <li>{{item.name}}</li>  
+    </ul>
+</div>
