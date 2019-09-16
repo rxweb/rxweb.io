@@ -14,3 +14,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: FILTERS_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class FiltersModule { }
+
+
+

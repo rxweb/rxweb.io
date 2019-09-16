@@ -17,7 +17,7 @@ export class MethodsPostComponent extends AppDomain implements OnInit {
             hostURIs: [{
                 name: 'local',
                 default: true,
-                uri: 'http://localhost:3004'
+                uri: 'http://localhost:3005'
             }],
             filters: [],
             onError: (r) => { console.log(r) },
