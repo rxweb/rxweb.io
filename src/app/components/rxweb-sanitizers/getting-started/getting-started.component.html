@@ -1,8 +1,8 @@
 <div id="wrapper" *ngIf="showComponent">
     <div class="content">
-      <div class="title-bar">
-        <p>Efficient way to manage your input data using sanitization decorators.</p>
-      </div>
+        <div class="title-bar">
+            <p>Efficient way to manage your input data using sanitization decorators.</p>
+        </div>
 
         <div class="bg-white border-radius" style="margin-top:22px;">
             <div class="row">
@@ -11,22 +11,151 @@
                     <div class="hpanel">
                         <div class="tab-content fade show">
                             <div class="tab-pane panel-body validation-tab active">
-                                    <div class="row page-section" id="installpackage">
-                                            <div class="col-lg-12">
-                                            <h2>Install Package<a title="Link to this heading" class="link-header" href="/rxweb-sanitizers/sanitizer-getting-started#installpackage"><i class="fa fa-link"></i></a></h2>
-                                            
-                                            <p class="showHideElement showElement">you need to install <span class="highlighted">@rxweb/sanitizers</span></p>
-                                            <blockquote class="showHideElement showElement"><p>npm install @rxweb/sanitizers</p></blockquote>
-                                           
-                                            </div></div> 
-                                
-                               
+                                <div class="row page-section" id="installpackage">
+                                    <div class="col-lg-12">
+                                        <h2>Install Package<a title="Link to this heading" class="link-header"
+                                                href="/rxweb-sanitizers/sanitizer-getting-started#installpackage"><i
+                                                    class="fa fa-link"></i></a></h2>
+                                        <p class="showHideElement showElement">you need to install <span
+                                                class="highlighted">@rxweb/sanitizers</span></p>
+                                        <div class="model-ts">
+                                            <div class="code">
+                                                <a class="float-right copy-icon" ngxClipboard
+                                                    [cbContent]="codeContent.installation"
+                                                    (cbOnSuccess)="installationCopied = true"
+                                                    [class.copied]="installationCopied"><i class="fa fa-files-o"
+                                                        aria-hidden="true"></i></a>
+                                                <div highlight="pre code">
+                                                    <pre><code [textContent]="codeContent.installation"></code></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row page-section" id="installpackage">
+                                    <div class="col-lg-12">
+                                        <h2>Decorators<a title="Link to this heading" class="link-header"><i
+                                                    class="fa fa-link"></i></a></h2>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="//rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="blacklist">blacklist</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="toFloat">toFloat</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="toDouble">toDouble</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="toInt">toInt</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body  text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="lowercase">lowercase</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="uppercase">uppercase</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="suffix">suffix</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="whitelist">whitelist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body  text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="escape">escape</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="prefix">prefix</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="ltrim">ltrim</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="//rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="rtrim">rtrim</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body  text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="trim">trim</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <a class="card-body text-center"
+                                                    routerLink="/rxweb-sanitizers/sanitizers/sanitizer"
+                                                    fragment="toString">toString</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-   
-</div>

@@ -15,7 +15,7 @@ import { RXWEB_GENERICS_ROUTING } from './rxweb-generics.routing';
 
 
 @NgModule({
-  imports: [RXWEB_GENERICS_ROUTING,CommonSharedModule, RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
+  imports: [RXWEB_GENERICS_ROUTING,CommonSharedModule,  HighlightModule.forRoot({ theme: 'default' }), ClipboardModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
   declarations: [GenericsGettingStartedComponent],
   providers:[{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
  exports:      [ RouterModule ]

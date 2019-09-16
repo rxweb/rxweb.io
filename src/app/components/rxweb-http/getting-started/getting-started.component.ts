@@ -6,7 +6,7 @@ import { Http } from '@angular/http';
     templateUrl: './getting-started.component.html',
   })
   export class HttpGettingStartedComponent implements OnInit {
-    
+    codeContent:any;
   showComponent: boolean = false;
   rightSidebarLinks: any = [{ "id": "getting-started", "title": "Getting Started", "subLink": null }];  
   pageTitle:any = this.rightSidebarLinks[0];
@@ -21,7 +21,10 @@ import { Http } from '@angular/http';
     }
 
   ngOnInit(): void {
-    this.showComponent = true;
+    this.http.get('assets/json/generator/rxweb-http/http-install.json').subscribe(response => {
+      this.codeContent = response.json();
+      this.showComponent = true;
+});
     this.applicationBroadCaster.topSubject.next(this.pageTitle);
   }
       
