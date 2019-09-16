@@ -34,7 +34,7 @@
     "@angular/router": "^7.1.0",
     "@angular/service-worker": "^7.1.4",
     "@rxweb/generics": "0.0.1-2",
-    "@rxweb/http": "0.0.0-2",
+    "@rxweb/http": "0.0.0-3",
     "@rxweb/reactive-dynamic-forms": "0.0.3",
     "@rxweb/reactive-form-validators": "^1.9.3",
     "@rxweb/sanitizers": "0.0.0",
