@@ -9,46 +9,39 @@
         },
         {
             "title": "Http Methods",
-            "uri": "rxweb-http/http/methods",
             "isOpen": true,
             "isActive": false,
             "linkTitle": "http-methods",
             "childrens": [
                 {
                     "title": "Get",
-                    "uri": "rxweb-http/http/methods#get",
+                    "uri": "rxweb-http/http/get",
                     "isActive": false,
                     "linkTitle": "methods",
                     "refUri": "get"
                 },
                 {
-                    "title": "Patch",
-                    "uri": "rxweb-http/http/methods#patch",
-                    "isActive": false,
-                    "linkTitle": "methods",
-                    "refUri": "patch"
-                },
-                {
                     "title": "Post",
-                    "uri": "rxweb-http/http/methods#post",
+                    "uri": "rxweb-http/http/post",
                     "isActive": false,
                     "linkTitle": "methods",
                     "refUri": "post"
                 },
                 {
                     "title": "Put",
-                    "uri": "rxweb-http/http/methods#put",
+                    "uri": "rxweb-http/http/put",
                     "isActive": false,
                     "linkTitle": "methods",
                     "refUri": "put"
                 },
-                {
-                    "title": "Get",
-                    "uri": "rxweb-http/http/methods#get",
-                    "isActive": false,
-                    "linkTitle": "methods",
-                    "refUri": "get"
-                }
+               {
+                "title": "Delete",
+                "uri": "rxweb-http/http/delete",
+                "isActive": false,
+                "linkTitle": "methods",
+                "refUri": "delete"
+               }            
+              
             ]
         },
         {
@@ -69,7 +62,7 @@
                     "title": "inMemory",
                     "uri": "rxweb-http/http/decorators#inMemory",
                     "isActive": false,
-                    "linkTitle": "methods",
+                    "linkTitle": "decorators",
                     "refUri": "inMemory"
                 },
                 {
@@ -78,6 +71,43 @@
                     "isActive": false,
                     "linkTitle": "decorators",
                     "refUri": "xhrFilter"
+                }
+            ]
+        },
+        {
+            "title": "API",
+            "isOpen": true,
+            "isActive": false,
+            "linkTitle": "api",
+            "childrens": [
+                {
+                    "title": "httpClientConfig",
+                    "uri": "rxweb-http/http/httpClientConfig",
+                    "isActive": false,
+                    "linkTitle": "httpClientConfig"
+                }
+            ]
+        },
+        {
+            "title": "Filters",
+            "uri": "rxweb-http/http/decorators",
+            "isOpen": true,
+            "isActive": false,
+            "linkTitle": "decorators",
+            "childrens": [
+                {
+                    "title": "onRequest",
+                    "uri": "rxweb-http/http/filters#OnRequest",
+                    "isActive": false,
+                    "linkTitle": "filters",
+                    "refUri": "OnRequest"
+                },
+                {
+                    "title": "onResponse",
+                    "uri": "rxweb-http/http/filters#OnResponse",
+                    "isActive": false,
+                    "linkTitle": "filters",
+                    "refUri": "OnResponse"
                 }
             ]
         }

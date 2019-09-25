@@ -305,13 +305,6 @@
                   "isActive": false,
                   "linkTitle": "list",
                   "refUri": "take"
-                },
-                {
-                  "title": "toArray",
-                  "uri": "rxweb-generics/generics/list#toarray",
-                  "isActive": false,
-                  "linkTitle": "list",
-                  "refUri": "toarray"
                 }
               ]
           }          

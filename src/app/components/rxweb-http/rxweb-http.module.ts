@@ -14,6 +14,7 @@ import { HttpGettingStartedComponent } from './getting-started/getting-started.c
 import { RXWEB_HTTP_ROUTING } from './rxweb-http.routing';
 
 
+
 @NgModule({
   imports: [RXWEB_HTTP_ROUTING,CommonSharedModule, RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
   declarations: [HttpGettingStartedComponent],

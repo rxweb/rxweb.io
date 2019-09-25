@@ -30,6 +30,12 @@ It trims the input from right side.
 
 <div component="app-example-runner" ref-component="app-sanitizer-rtrim" title="rtrim" key="rtrim"></div>
 
+# trim
+
+It is used to trim the input.
+
+<div component="app-example-runner" ref-component="app-sanitizer-trim" title="trim" key="trim"></div>
+
 # suffix
 
 It adds suffix to the input.

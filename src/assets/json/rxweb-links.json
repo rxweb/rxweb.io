@@ -509,6 +509,48 @@
           
     },
     {
+        "title": "Checkbox",
+        "link": "/reactive-dynamic-forms/controls/checkbox",
+        "description": "",
+        "linkTrees": ["static-binding"]
+    },
+    {
+        "title": "color",
+        "link": "/reactive-dynamic-forms/controls/color",
+        "description": "",
+        "linkTrees": ["static-binding"]
+    },
+    {
+        "title": "date",
+        "link": "/reactive-dynamic-forms/controls/dynamicdate",
+        "description": "",
+        "linkTrees": ["static-binding"]
+    },
+    {
+        "title": "DropDown",
+        "link": "/reactive-dynamic-forms/controls/dropdown",
+        "description": "",
+        "linkTrees":  ["controls"]
+    },
+    {
+        "title": "Email",
+        "link": "/reactive-dynamic-forms/controls/dynamicemail",
+        "description": "",
+        "linkTrees":  ["controls"]
+    },
+    {
+        "title": "File",
+        "link": "/reactive-dynamic-forms/controls/dynamicfile",
+        "description": "",
+        "linkTrees":  ["controls"]
+    },
+    {
+        "title": "Password",
+        "link": "/reactive-dynamic-forms/controls/dynamicpassword",
+        "description": "",
+        "linkTrees":  ["controls"]
+    },
+    {
         "title": "Textarea",
         "link": "/reactive-dynamic-forms/controls/textarea",
         "description": "",
@@ -521,12 +563,7 @@
         "linkTrees": ["controls"]
     
     },
-{
-    "title": "Checkbox",
-    "link": "/reactive-dynamic-forms/controls/checkbox",
-    "description": "",
-    "linkTrees": ["static-binding"]
-},
+
 
 {
     "title": "Description",
@@ -535,41 +572,12 @@
     "linkTrees": ["static-binding"]
 },
 {
-    "title": "DropDown",
-    "link": "/reactive-dynamic-forms/controls/dropdown",
-    "description": "",
-    "linkTrees":  ["controls"]
-},
-{
-    "title": "Date",
-    "link": "/reactive-dynamic-forms/controls/dynamicdate",
-    "description": "",
-    "linkTrees":  ["controls"]
-},
-{
     "title": "Disabled",
     "link": "/reactive-dynamic-forms/static-binding/disabled",
     "description": "disable can be used inside ui feature to disable the particular formControl in the dynamic-form. You can disable a formControl statically or conditionally based on your requirements.",
     "linkTrees": ["static-binding"]
 },
-{
-    "title": "Email",
-    "link": "/reactive-dynamic-forms/controls/dynamicemail",
-    "description": "",
-    "linkTrees":  ["controls"]
-},
-{
-    "title": "File",
-    "link": "/reactive-dynamic-forms/controls/dynamicfile",
-    "description": "",
-    "linkTrees":  ["controls"]
-},
-{
-    "title": "Password",
-    "link": "/reactive-dynamic-forms/controls/dynamicpassword",
-    "description": "",
-    "linkTrees":  ["controls"]
-},
+
 {
     "title": "Range",
     "link": "/reactive-dynamic-forms/controls/dynamicrange",
@@ -578,7 +586,7 @@
 },
 {
     "title": "Url",
-    "link": "/reactive-dynamic-forms/controls/url",
+    "link": "/reactive-dynamic-forms/controls/dynamicurl",
     "description": "",
     "linkTrees":  ["controls"]
 },
@@ -596,5 +604,4 @@
     "linkTrees": ["static-binding"]
       
 }
-
 ]

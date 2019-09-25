@@ -39,7 +39,7 @@ export class AppExampleRunnerComponent implements OnInit {
   }
   ngOnInit(): void {
     this.showElement = false;
-    if(this.decoratorName == "methods" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject" )
+    if(this.decoratorName == "get"|| this.decoratorName == "post"  || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject" )
     {
       this.showElement = true;
     }
@@ -49,14 +49,14 @@ export class AppExampleRunnerComponent implements OnInit {
       this.tabArray.push({"tabName": "Component", "tabItem": "component", "content": this.content.function})
       if (this.content.model != null)
         this.tabArray.push({ "tabName": "Model", "tabItem": "model", "content": this.content.model })
-      if (this.decoratorName != "sanitizer" && this.decoratorName != "methods"  && this.decoratorName != "list" && this.content.component != null)
+      if (this.decoratorName != "sanitizer"  && this.decoratorName != "post"  && this.decoratorName != "delete"   && this.decoratorName != "patch"  && this.decoratorName != "put" && this.decoratorName != "get"  && this.decoratorName != "list" && this.content.component != null)
         this.tabArray.push({ "tabName": "Component", "tabItem": "component", "content": this.content.component })
       if (JSON.stringify(this.content.json) !== JSON.stringify({}))
       {
         var jsonObject = this.content.json;
         if (jsonObject) {
           for (var prop in jsonObject) {
-            if (jsonObject.hasOwnProperty(prop)) {
+            if (jsonObject.hasOwnProperty(prop) && this.decoratorName !="get") {
               this.tabArray.push({ "tabName": prop, "tabItem": prop, "content": jsonObject[prop] })
             }
           }

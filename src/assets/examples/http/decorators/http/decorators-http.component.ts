@@ -24,7 +24,7 @@ export class DecoratorsHttpComponent extends RxHttp implements OnInit {
             }],
             filters: [],
             onError: (r) => { console.log(r) },
-            isProductionEnvironment: false
+      
         })
     
     }
@@ -32,7 +32,6 @@ export class DecoratorsHttpComponent extends RxHttp implements OnInit {
     Get() {
         this.get({}).subscribe(res => {
             this.result = res as UserInfo[];
-            console.log(res);
         })
     }
 

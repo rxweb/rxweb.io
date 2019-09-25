@@ -1,35 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientConfig, } from "@rxweb/http"
-import { AppDomain } from '../base.component';
 import { UserInfo } from './user.model'
+import { BaseComponent } from '../../decorators/http/base.component';
 
 @Component({
     selector: 'app-methods-patch',
     templateUrl: './methods-patch.component.html'
 })
-export class MethodsPatchComponent extends AppDomain implements OnInit {
+export class MethodsPatchComponent extends BaseComponent implements OnInit {
 
     result: UserInfo[]
 
     ngOnInit() {
 
-        HttpClientConfig.register({
-            hostURIs: [{
-                name: 'local',
-                default: true,
-                uri: 'http://localhost:3005'
-            }],
-            filters: [],
-            onError: (r) => { console.log(r) },
-            isProductionEnvironment: false
-        })
     }
 
     Patch() {
-        this.patch({ params: [1], body: { firstName: "Srishti", } }).subscribe(res => {
-            this.result = res as UserInfo[];
-            console.log(res);
-        })
+        // this.patch({ params: [1], body: { firstName: "Srishti", } }).subscribe(res => {
+        //     this.result = res as UserInfo[];
+        //     console.log(res);
+        // })
     }
     
 }

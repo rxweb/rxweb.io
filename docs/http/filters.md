@@ -6,8 +6,13 @@ type: simple
 linktitle: filters
 ---
 
-<div class="title-bar"><p></p></div>
+# OnRequest
+### AuthFilter
 
-# Custom Filter Example
+<div component="app-code" key="app-filters-auth"></div>
 
-<div component="app-code" key="app-filters-inMemory"></div>
+# OnResponse
+### ResponseFilter
+
+<div component="app-code" key="app-filters-response"></div>
+

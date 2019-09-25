@@ -6,16 +6,8 @@ type: simple
 linktitle: decorators
 ---
 
-<div class="title-bar"><p>While using Http methods, there are some scenarios when you have to set the config like to append any api path after the main path or if you want to set hostKey, you can set it through decorators.</p></div>
+
 # http
-
-Almost every front-end applications generally have a need to interact with server using HTTP for performing various operations on the data. `RxHttp` of `@rxweb/http` provides a simplified and efficient way for making request to the server and getting back the response you want to return and in any of the required format like `json` , `arraybuffer` , `text` or `blob` .
-
-> You can use `RxHttp` for all typescript based applications.
-
-Consider a scenario of an employee management system where your database consist a table called employees. Table Employees consist a field like id, FirstName, LastName and Department.
-
-## How to use
 
 There are some basic steps for using http decorator of `RxHttp` which are as follows:
 
@@ -27,13 +19,20 @@ Step 2: Set `@http` decorator on the same model class by passing hostKey and pat
 
 <div component="app-code" key="decorators-http-step2"></div>
 
-Step 3: Register HttpClientConfig in your component:
+# xhrFilter
 
-<div component="app-code" key="decorators-http-step3"></div>
+If you want to set config object including any arguments or model to pass while making XHR calls (i.e. using XMLHttpRequest), you can do it with the help of `@xhrFilter` decorator of `RxHttp`.
 
-Now, you are all set to use its functionaloty.
+<div component="app-code" key="app-decorators-logging"></div>
 
-## Get data from the server
+# inMemory
+
+If you want to perform http methods like get, post etc on the data through your client side application instead of server side application, then you can use `@inMemory` decorator of `RxHttp`.
+
+<div component="app-code" key="app-decorators-base"></div>
+
+
+<!-- ## Get data from the server
 
 If you want to get existing data from the server, you can access `get()` method of `RxHttp` directly and subscribe the response which you got from the server and use it in the way you want.
 
@@ -65,4 +64,6 @@ If you want to delete an existing data to the server , you can use `delete()` me
 
 ## Complete Example
 
-<div component="app-example-runner" ref-component="app-decorators-http" title="http" key="http"></div>
+<div component="app-example-runner" ref-component="app-decorators-http" title="http" key="http"></div> -->
+
+

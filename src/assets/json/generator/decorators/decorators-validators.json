@@ -17,5 +17,11 @@
     },
     "xhrFilter": {
         "model": "import { RxHttp, xhrFilter } from \"@rxweb/http\";\r\n\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}\r\n\r\n@xhrFilter()\r\nexport class AppDomain extends BaseComponent {\r\n\r\n}"
+    },
+    "logging":{
+        "component":"import {XhrContext, HttpResponse,ResponseFilter,AbstractRequestFilter } from \"@rxweb/http\"\r\n\r\nexport class Logging extends AbstractRequestFilter implements ResponseFilter {\r\n    private _startTime: Date;\r\n    onRequest = (context: XhrContext) => {\r\n        this._startTime = new Date();\r\n        this.onRequestExecuting(context);\r\n    }\r\n\r\n\r\n    onResponse = (response: HttpResponse) => {\r\n        return response;\r\n    }\r\n}"
+    },
+    "base":{
+        "component":"import { RxHttp, http, inMemory } from \"@rxweb/http\";\r\n\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/values\",\r\n})\r\n@inMemory()\r\nexport class AppDomain extends BaseComponent {\r\n\r\n}"
     }
 }

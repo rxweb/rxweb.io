@@ -11,6 +11,7 @@ import { routerNgProbeToken } from '@angular/router/src/router_module';
 import { RightSideBarComponent } from '../shared/right-sidebar/right-sidebar.component';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { HttpClientConfig } from '@rxweb/http';
 
 
 @Component({
@@ -171,6 +172,16 @@ export class AppComponent implements OnInit {
           });
         }
         else {
+          HttpClientConfig.register({
+            hostURIs: [{
+                name: 'local',
+                default: true,
+                uri: 'http://localhost:4200'
+            }],
+            filters: [],
+            onError: (r) => { console.log(r) },
+            
+        })
           ReactiveFormConfig.set({
             "internationalization": {
               "dateFormat": "dmy",

@@ -121,7 +121,7 @@
         "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-sanitizer-lowercase',\r\n  templateUrl: './sanitizer-lowercase.component.html'\r\n})\r\n\r\nexport class SanitizerLowercaseComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"ABC\"\r\n    this.result = user.freeText;\r\n  }\r\n}",
         "function":"export class SanitizerLowercaseComponent implements OnInit {\r\n  result: any;\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    user.freeText = \"ABC\"\r\n    this.result = user.freeText;\r\n  }\r\n}",
         "html": "Output:{{result}}",
-        "model": "import { upperCase, sanitize } from '@rxweb/sanitizers'\r\n\r\n  @sanitize\r\n  export class User {\r\n\r\n  @upperCase()\r\n  freeText: string;\r\n\r\n}\r\n",
+        "model": "import { lowerCase, sanitize } from '@rxweb/sanitizers'\r\n\r\n  @sanitize\r\n  export class User {\r\n\r\n  @lowerCase()\r\n  freeText: string;\r\n\r\n}\r\n",
         "modelName": "user.model.ts",
         "json": {}
     },
