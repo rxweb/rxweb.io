@@ -551,6 +551,18 @@
         "linkTrees":  ["controls"]
     },
     {
+        "title": "Radio",
+        "link": "/reactive-dynamic-forms/controls/radio",
+        "description": "",
+        "linkTrees":  ["controls"]
+    },
+    {
+        "title": "Range",
+        "link": "/reactive-dynamic-forms/controls/dynamicrange",
+        "description": "",
+        "linkTrees":  ["controls"]
+    },
+    {
         "title": "Textarea",
         "link": "/reactive-dynamic-forms/controls/textarea",
         "description": "",
@@ -563,7 +575,17 @@
         "linkTrees": ["controls"]
     
     },
-
+    {
+        "title": "Url",
+        "link": "/reactive-dynamic-forms/controls/dynamicurl",
+        "description": "",
+        "linkTrees":  ["controls"]
+    },
+    {
+        "title": "Class",
+        "link": "/reactive-dynamic-forms/static-binding/class",
+        "linkTrees": ["static-binding"]
+    },
 
 {
     "title": "Description",
@@ -577,25 +599,25 @@
     "description": "disable can be used inside ui feature to disable the particular formControl in the dynamic-form. You can disable a formControl statically or conditionally based on your requirements.",
     "linkTrees": ["static-binding"]
 },
-
 {
-    "title": "Range",
-    "link": "/reactive-dynamic-forms/controls/dynamicrange",
-    "description": "",
-    "linkTrees":  ["controls"]
+    "title": "Focus",
+    "link": "/reactive-dynamic-forms/static-binding/focus",
+    "linkTrees": ["static-binding"]
 },
 {
-    "title": "Url",
-    "link": "/reactive-dynamic-forms/controls/dynamicurl",
-    "description": "",
-    "linkTrees":  ["controls"]
+    "title": "Hide",
+    "link": "/reactive-dynamic-forms/static-binding/hide",
+    "linkTrees": ["static-binding"]
 },
-
 {
-    "title": "Radio",
-    "link": "/reactive-dynamic-forms/controls/radio",
-    "description": "",
-    "linkTrees":  ["controls"]
+    "title": "Label",
+    "link": "/reactive-dynamic-forms/static-binding/label",
+    "linkTrees": ["static-binding"]
+},
+{
+    "title": "Placeholder",
+    "link": "/reactive-dynamic-forms/static-binding/placeholder",
+    "linkTrees": ["static-binding"]
 },
 {
     "title": "Readonly",
@@ -603,5 +625,61 @@
     "description": "readonly can be used inside ui feature to convert the particular formControl in readonly state in your dynamic-form. You can set readonly statically or conditionally based on your requirements.",
     "linkTrees": ["static-binding"]
       
+},
+{
+    "title": "Source",
+    "link": "/reactive-dynamic-forms/static-binding/source",
+    "linkTrees": ["static-binding"]
+},
+{
+    "title": "Value",
+    "link": "/reactive-dynamic-forms/static-binding/value",
+    "linkTrees": ["static-binding"]
+},
+
+
+{
+"title": "ConditionalClass",
+"link": "/reactive-dynamic-forms/conditional-binding/conditionalclass",
+"description": "description can be used inside ui feature to display description for the particular formControl in the dynamic-form. description can be generated statically or conditionally based on your requirements.",
+"linkTrees": ["conditional-binding"]
+},
+{
+    "title": "conditionalDescription",
+    "link": "/reactive-dynamic-forms/conditional-binding/conditionaldescription",
+    "linkTrees": ["static-binding"]
+},
+{
+"title": "ConditionalDisabled",
+"link": "/reactive-dynamic-forms/conditional-binding/conditionaldisabled",
+"description": "disable can be used inside ui feature to disable the particular formControl in the dynamic-form. You can disable a formControl statically or conditionally based on your requirements.",
+"linkTrees": ["conditional-binding"]
+},
+{
+"title": "conditionalHide",
+"link": "/reactive-dynamic-forms/conditional-binding/conditionalhide",
+"linkTrees": ["conditional-binding"]
+},
+{
+"title": "conditionalLabel",
+"link": "/reactive-dynamic-forms/conditional-binding/conditionallabel",
+"linkTrees": ["conditional-binding"]
+},
+{
+"title": "conditionalPlaceholder",
+"link": "/reactive-dynamic-forms/conditional-binding/conditionalplaceholder",
+"linkTrees": ["conditional-binding"]
+},
+{
+"title": "conditionalReadonly",
+"link": "/reactive-dynamic-forms/conditional-binding/conditionalreadonly",
+"description": "readonly can be used inside ui feature to convert the particular formControl in readonly state in your dynamic-form. You can set readonly statically or conditionally based on your requirements.",
+"linkTrees": ["conditional-binding"]
+  
+},
+{
+"title": "Value",
+"link": "/reactive-dynamic-forms/conditional-binding/conditionalvalue",
+"linkTrees": ["conditional-binding"]
 }
 ]

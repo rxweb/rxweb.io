@@ -8,18 +8,15 @@ import { DynamicFormBuildConfig, DynamicFormConfiguration, RxDynamicFormBuilder 
 
 export class CheckboxSingleComponent implements OnInit {
 
-    serverData: Array<{ [key: string]: any }> = [
+    serverData = [
         {
-            name: "department",
+            name: "agree",
             type: "checkbox",
-            source: [{ value: 1, text: "Dotnet" },{ value: 2, text: "PHP" }],
-            ui: {
-                label: 'Department'
-            }
+            source: [{ value: 1, text: "Already a member" }]
         }
     ]
     
-    uiBindings: string[] = ["department"];
+    uiBindings: string[] = ["agree"];
     
     dynamicFormBuildConfig: DynamicFormBuildConfig;
     
