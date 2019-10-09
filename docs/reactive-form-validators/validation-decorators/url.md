@@ -80,6 +80,7 @@ Below options are not mandatory to use in the `url` validation. If needed then u
 <table class="table table-bordered table-striped showHideElement">
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td><a  (click)='scrollTo("#conditionalExpression")'  title="conditionalExpression">conditionalExpression</a></td><td>url validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.If there is need of dynamic validation means it is not fixed in client code, it will change based on some criterias. In this scenario you can bind the expression based on the expression value is coming from the web server in `string` format. The `conditionalExpression` will work same as client function.</td></tr>
+<tr><td><a  (click)='scrollTo("#urlValidationType")'  title="urlValidationType">urlValidationType</a></td><td>To validate a url which is not containing a suffix by configuring urlValidationType which can be `FQDN`,`LocalHost`,`IntranetServer`</td></tr>
 <tr><td><a  (click)='scrollTo("#message")'  title="message">message</a></td><td>To override the global configuration message and set the custom error message on respective FormControl</td></tr>
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
@@ -101,6 +102,25 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 <div component="app-code" key="url-conditionalExpressionExampleString-model"></div> 
 
 <div component="app-example-runner" ref-component="app-url-conditionalExpression" title="url {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
+
+## urlValidationType
+Type : number 
+
+urlValidationType is used to validate url in which the hostname does not contain a suffix which is generally used while working with local servers. It can be configured as 
+`FQDN`,`LocalHost`,`IntranetServer`.
+
+1) urlValidationType:1 
+A fully qualified domain name (FQDN), sometimes also referred to as an absolute domain name that specifies its exact location in the tree hierarchy of the Domain Name System (DNS)
+
+2) urlValidationType:2
+It will validate url having `localhost` as host name.
+
+3) urlValidationType:3
+The Intranet server lies inside the firewall and serves clients on the local network.
+
+For example, if you want to validate localhost in url validator set `urlValidationType` as: 
+<div component="app-code" key="url-urlValidationTypeExample-model"></div> 
+<div component="app-example-runner" ref-component="app-url-urlValidationType" title="url {{validatorType}} with urlValidationType" key="urlValidationType"></div>
 
 ## message 
 Type :  `string` 

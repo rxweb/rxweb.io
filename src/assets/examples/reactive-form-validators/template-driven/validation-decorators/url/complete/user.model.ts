@@ -20,6 +20,18 @@ export class User {
 	maintenanceWebSiteUrl: string;
 	
 	
+	@url({urlValidationType:1 }) 
+	fqdnDomainUrl: string;
+	
+	
+	@url({urlValidationType:2 }) 
+	localhostUrl: string;
+	
+	
+	@url({urlValidationType:3 }) 
+	intraServerUrl: string;
+	
+	
 	@url({messageKey:'urlMessageKey' }) 
 	deployedWebSiteUrl: string;
 	

@@ -19,6 +19,9 @@ export class UrlCompleteValidatorComponent implements OnInit {
             qaWebsiteUrl:['', RxwebValidators.url({conditionalExpression:(x,y) => x.adminWebsiteUrl == "https://google.co.in"  })], 
             customerWebsiteUrl:['', RxwebValidators.url({conditionalExpression:'x => x.adminWebsiteUrl == "https://google.co.in"'  })], 
             maintenanceWebSiteUrl:['', RxwebValidators.url({message:'{{0}} Is not the correct url pattern.' })], 
+            fqdnDomainUrl:['', RxwebValidators.url({urlValidationType:1 })], 
+            localhostUrl:['', RxwebValidators.url({urlValidationType:2 })], 
+            intraServerUrl:['', RxwebValidators.url({urlValidationType:3 })], 
             deployedWebSiteUrl:['', RxwebValidators.url({messageKey:'urlMessageKey' })], 
         });
     }

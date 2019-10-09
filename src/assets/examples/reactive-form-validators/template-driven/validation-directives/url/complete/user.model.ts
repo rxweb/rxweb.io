@@ -13,6 +13,15 @@ export class User {
 	maintenanceWebSiteUrl: string;
 	
 	
+	fqdnDomainUrl: string;
+	
+	
+	localhostUrl: string;
+	
+	
+	intraServerUrl: string;
+	
+	
 	deployedWebSiteUrl: string;
 	
 	

@@ -11,7 +11,7 @@ export const PACKAGE:string = `{
     "@angular/platform-browser": "^7.0.1",
     "@angular/platform-browser-dynamic": "^7.0.1",
     "@angular/router": "^7.0.1",
-    "@rxweb/reactive-form-validators":"^1.9.3",
+    "@rxweb/reactive-form-validators":"^1.9.4",
     "core-js": "^2.5.7",
     "@rxweb/reactive-dynamic-forms": "0.0.3",
     "@rxweb/generics":"0.0.1-4",

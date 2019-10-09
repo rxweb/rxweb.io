@@ -22,6 +22,27 @@
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.maintenanceWebSiteUrl?.errors">{{userForm.controls?.maintenanceWebSiteUrl?.errors?.url.message}}<br/></small>	
     </div>
     <div class="form-group">
+      <label>FQDN Domain Url</label>
+	    <input type="text" name="fqdnDomainUrl" [(ngModel)]="user.fqdnDomainUrl"  class="form-control" />
+
+      <small class="form-text text-muted">Enter valid FQDN url.<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.fqdnDomainUrl?.errors">{{userForm.controls?.fqdnDomainUrl?.errors?.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Localhost Url</label>
+	    <input type="text" name="localhostUrl" [(ngModel)]="user.localhostUrl"  class="form-control" />
+
+      <small class="form-text text-muted">Enter valid localhost url.<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.localhostUrl?.errors">{{userForm.controls?.localhostUrl?.errors?.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>IntraServer Url</label>
+	    <input type="text" name="intraServerUrl" [(ngModel)]="user.intraServerUrl"  class="form-control" />
+
+      <small class="form-text text-muted">Enter valid IntraServer url.<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.intraServerUrl?.errors">{{userForm.controls?.intraServerUrl?.errors?.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
       <label>Deployed Website Url</label>
 	    <input type="text" name="deployedWebSiteUrl" [(ngModel)]="user.deployedWebSiteUrl"  class="form-control" />
 

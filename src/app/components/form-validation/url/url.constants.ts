@@ -21,6 +21,10 @@ import { UrlAddTemplateDrivenValidationDirectivesComponent } from "src/assets/ex
 import { UrlAddTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/url/add/url-add.component";
 import { UrlAddValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/url/add/url-add.component";
 import { UrlEditComponent } from "src/assets/examples/reactive-form-validators/decorators/url/edit/url-edit.component";
+import { UrlUrlValidationTypeComponent } from "src/assets/examples/reactive-form-validators/decorators/url/urlValidationType/url-url-validation-type.component";
+import { UrlUrlValidationTypeTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/url/urlValidationType/url-url-validation-type.component";
+import { UrlUrlValidationTypeTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/url/urlValidationType/url-url-validation-type.component";
+import { UrlUrlValidationTypeValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/url/urlValidationType/url-url-validation-type.component";
 
 export const URL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
@@ -31,6 +35,7 @@ export const URL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						dynamic : UrlDynamicComponent,
 						add : UrlAddComponent,
 						edit : UrlEditComponent,
+						urlValidationType:UrlUrlValidationTypeComponent
 			  },
 	template_driven_validation_directives:{
 						complete : UrlCompleteTemplateDrivenValidationDirectivesComponent,
@@ -38,6 +43,8 @@ export const URL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						message : UrlMessageTemplateDrivenValidationDirectivesComponent,
 						messageKey : UrlMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : UrlAddTemplateDrivenValidationDirectivesComponent,
+						urlValidationType:UrlUrlValidationTypeTemplateDrivenValidationDirectivesComponent
+						
 			  },
 	template_driven_validation_decorators:{
 						complete : UrlCompleteTemplateDrivenValidationDecoratorsComponent,
@@ -45,6 +52,7 @@ export const URL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						message : UrlMessageTemplateDrivenValidationDecoratorsComponent,
 						messageKey : UrlMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : UrlAddTemplateDrivenValidationDecoratorsComponent,
+						urlValidationType:UrlUrlValidationTypeTemplateDrivenValidationDecoratorsComponent
 			  },
 	validators:{
 						complete : UrlCompleteValidatorComponent,
@@ -53,5 +61,6 @@ export const URL_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						messageKey : UrlMessageKeyValidatorComponent,
 						dynamic : UrlDynamicValidatorComponent,
 						add : UrlAddValidatorComponent,
+						urlValidationType:UrlUrlValidationTypeValidatorComponent
 			  },
 }
