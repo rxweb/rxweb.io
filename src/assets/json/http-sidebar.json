@@ -34,6 +34,13 @@
                     "linkTitle": "methods",
                     "refUri": "put"
                 },
+                {
+                    "title": "Patch",
+                    "uri": "rxweb-http/http/patch",
+                    "isActive": false,
+                    "linkTitle": "methods",
+                    "refUri": "patch"
+                },
                {
                 "title": "Delete",
                 "uri": "rxweb-http/http/delete",

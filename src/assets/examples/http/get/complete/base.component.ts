@@ -3,7 +3,7 @@
 
 @http({
     hostKey: "local",
-    path: "api/Post",
+    path: "api/Get",
 })
 export class BaseComponent extends RxHttp {
 

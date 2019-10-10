@@ -7,6 +7,7 @@ import { POLYFILLS } from "./polyfills.string";
 import { STYLES } from "./styles.string";
 import { APP_COMPONENT } from "src/app/components/shared/stackblitz/files/app-component.string";
 import { APP_COMPONENT_HTML } from "src/app/components/shared/stackblitz/files/app-component-html.string";
+import {HTTP_APP_COMPONENT} from "src/app/components/shared/stackblitz/files/http-app.component";
 
 export const FILES:{[key:string]:any} =  {
 "angular.json":ANGULAR,
@@ -17,5 +18,6 @@ export const FILES:{[key:string]:any} =  {
 "src/styles.css":STYLES,
 "src/app/app.module.ts":APP_MODULE,
 "src/app/app.component.ts":APP_COMPONENT,
+"src/app/http-app.component.ts":HTTP_APP_COMPONENT,
 "src/app/app.component.html":APP_COMPONENT_HTML,
 }

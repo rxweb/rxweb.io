@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BaseComponent } from '../base.component';
+import { BaseComponent } from './base.component';
 
 @Component({
     selector: 'app-get-getByQueryParams',
@@ -11,7 +11,7 @@ export class GetGetByQueryParamsComponent extends BaseComponent implements OnIni
     result: any
 
     ngOnInit() {
-      this.GetByQueryParams('Srishti');
+    this.GetByQueryParams('Srishti');
     }
 
     GetByQueryParams(firstName:string) {

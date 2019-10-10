@@ -28,5 +28,5 @@ It is used for fetching data based upon queryParams which is passed in the param
 ## GetByResponseType
 It is used for fetching data based upon response type. It can be of `text`, `json`,`arrayBuffer` and `blob` type.
 
-<div component="app-example-runner" ref-component="app-get-getByQueryParams" title="GetByQueryParams" key="getByQueryParams"></div>
+<div component="app-example-runner" ref-component="app-get-responseType" title="GetByResponseType" key="getByQueryParams"></div>
 

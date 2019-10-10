@@ -176,7 +176,7 @@ export class AppComponent implements OnInit {
             hostURIs: [{
                 name: 'local',
                 default: true,
-                uri: 'http://localhost:4200'
+                uri: 'https://rxhttp.azurewebsites.net'
             }],
             filters: [],
             onError: (r) => { console.log(r) },

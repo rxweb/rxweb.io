@@ -11,7 +11,6 @@ export class StackBlitzService {
   }
 
   buildForm(validationName: string, exampleName: string, validationType: string, templateDrivenType: string, exampleContent: { [key: string]: any }, title?: string) {
-   
     if (!location.pathname.includes("reactive-dynamic-forms")) {
       if (title == null)
         title = validationName + " " + validationType + " with " + exampleName;
@@ -36,89 +35,107 @@ export class StackBlitzService {
       }
       for (var fileName in FILES) {
 
-        let fileContent = FILES[fileName]
-        fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
-        fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
-        if (fileName.indexOf("app.component.ts")) {
-          let configObject = { validationMessage: {} };
-          if (validationName.indexOf("Date") >= 0 || validationName.indexOf("date") == 0) {
-            if (exampleName == "complete") {
-              configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
-              configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
-            }
-            configObject['internationalization'] = {};
-            configObject['internationalization'] = VALIDATION_MESSAGES["internationalization"]
-          }
-          else if (exampleName == "dynamic") {
-            configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
-            configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
-          }
-          else if (validationName == "formbuilderconfiguration") {
-            configObject.validationMessage = {
-              "required": "This field is required",
+        if (!location.pathname.includes("rxweb-http")) {
+          if (!fileName.includes("http")) {
 
-            }
-          }
-          else if (validationName == "RxFormGroup") {
-            configObject.validationMessage = {
-              "required": "This field is required",
-              "alpha": "Only alphabets are allowed.",
-            }
-          }
-          else if (validationName == "compose") {
-            configObject.validationMessage = {
-              "required": "This field is required",
-              "alpha": "Only alphabets are allowed.",
-              "digit": "Only digits are allowed",
-              "password": "Input does not match the password requirements",
-              "composeMessageKey": "Input is invalid"
-            }
-          }
-          else if (validationName == "pattern") {
-            if (exampleName == "complete") {
+            let fileContent = FILES[fileName]
+            fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
+            fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
+            if (fileName.indexOf("app.component.ts")) {
 
-              configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
-              configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
-              var expressionArray = VALIDATION_MESSAGES["expression"]
-              console.log(expressionArray)
-              configObject.validationMessage =
-                {
-                  "onlyAlpha": "Only alphabets are allowed",
-                  "zipCode": "Zip code should match 12345 or 12345-6789",
-                  "onlyDigit": "Only digits are allowed",
-                  "pinCode": "Invalid Pincode",
-                  "patternMessageKey": "The input enterred must be according to the regex passed in config parameter"
+              let configObject = { validationMessage: {} };
+              if (validationName.indexOf("Date") >= 0 || validationName.indexOf("date") == 0) {
+                if (exampleName == "complete") {
+                  configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
+                  configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
                 }
+                configObject['internationalization'] = {};
+                configObject['internationalization'] = VALIDATION_MESSAGES["internationalization"]
+              }
+              else if (exampleName == "dynamic") {
+                configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
+                configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
+              }
+              else if (validationName == "formbuilderconfiguration") {
+                configObject.validationMessage = {
+                  "required": "This field is required",
+
+                }
+              }
+              else if (validationName == "RxFormGroup") {
+                configObject.validationMessage = {
+                  "required": "This field is required",
+                  "alpha": "Only alphabets are allowed.",
+                }
+              }
+              else if (validationName == "compose") {
+                configObject.validationMessage = {
+                  "required": "This field is required",
+                  "alpha": "Only alphabets are allowed.",
+                  "digit": "Only digits are allowed",
+                  "password": "Input does not match the password requirements",
+                  "composeMessageKey": "Input is invalid"
+                }
+              }
+              else if (validationName == "pattern") {
+                if (exampleName == "complete") {
+
+                  configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
+                  configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
+                  var expressionArray = VALIDATION_MESSAGES["expression"]
+                  console.log(expressionArray)
+                  configObject.validationMessage =
+                    {
+                      "onlyAlpha": "Only alphabets are allowed",
+                      "zipCode": "Zip code should match 12345 or 12345-6789",
+                      "onlyDigit": "Only digits are allowed",
+                      "pinCode": "Invalid Pincode",
+                      "patternMessageKey": "The input enterred must be according to the regex passed in config parameter"
+                    }
+                }
+                else {
+                  var expressionStartIndex = exampleContent["component"].indexOf(":{") + 3;
+                  var expressionEndIndex = exampleContent["component"].indexOf("':");
+                  var expression = exampleContent["component"].substring(expressionStartIndex, expressionEndIndex);
+                  configObject.validationMessage[expression] = VALIDATION_MESSAGES["expression"][expression];
+                }
+              }
+              else if (exampleName == "complete" && validationName != "errormessage") {
+                configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
+                configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
+              }
+              else if (exampleName == "messageKey") {
+                configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
+                fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
+              }
+              else if (validationName == "errormessagestrategy") {
+                configObject['reactiveForm'] = VALIDATION_MESSAGES["reactiveForm"]
+                configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
+              }
+              else if (validationName == "errormessage" || validationName == "model") {
+                if (exampleName == "complete")
+                  configObject.validationMessage["alpha"] = VALIDATION_MESSAGES["validationMessage"]["alpha"];
+                configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
+                fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
+              }
+              configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
+              fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
             }
-            else {
-              var expressionStartIndex = exampleContent["component"].indexOf(":{") + 3;
-              var expressionEndIndex = exampleContent["component"].indexOf("':");
-              var expression = exampleContent["component"].substring(expressionStartIndex, expressionEndIndex);
-              configObject.validationMessage[expression] = VALIDATION_MESSAGES["expression"][expression];
-            }
+            this.addInputElement(form, `files[${fileName}]`, fileContent);
           }
-          else if (exampleName == "complete" && validationName != "errormessage") {
-            configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
-            configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
-          }
-          else if (exampleName == "messageKey") {
-            configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
-            fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
-          }
-          else if (validationName == "errormessagestrategy") {
-            configObject['reactiveForm'] = VALIDATION_MESSAGES["reactiveForm"]
-            configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
-          }
-          else if (validationName == "errormessage" || validationName == "model") {
-            if (exampleName == "complete")
-              configObject.validationMessage["alpha"] = VALIDATION_MESSAGES["validationMessage"]["alpha"];
-            configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
-            fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
-          }
-          configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
-          fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
         }
-        this.addInputElement(form, `files[${fileName}]`, fileContent);
+        else {
+          if (fileName != "src/app/app.component.ts") {
+            let fileContent = FILES[fileName]
+          if (fileName == "src/app/http-app.component.ts") {
+                        fileName = fileName.replace("src/app/http-app.component.ts", "src/app/app.component.ts")
+                      }
+            fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
+            fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
+            this.addInputElement(form, `files[${fileName}]`, fileContent);
+          }
+
+        }
       }
       if (exampleContent["modelName"] != null && exampleContent["model"] != null) {
         let exampleModelFileName = `src/app/${exampleContent["modelName"]}`
@@ -143,32 +160,34 @@ export class StackBlitzService {
     else {
       if (location.pathname.includes("dynamic-validation")) {
         if (title == null)
-        title = validationName;
+          title = validationName;
         let exampleComponentFileName = `src/app/dynamic-validation.component.ts`
         let componentPath = `dynamic-validation.component`
-        let exampleComponentHtmlFileName =  `src/app/dynamic-validation.component.html`
+        let exampleComponentHtmlFileName = `src/app/dynamic-validation.component.html`
         let jsonPathFileName = `src/app/server-json.ts`
         let form = this.createFormElement(exampleComponentFileName);
-        this.addDefaultElement(form, validationName, "", "","", title);
+        this.addDefaultElement(form, validationName, "", "", "", title);
         let selectorName;
         let componentName;
 
         selectorName = `dynamic-validation`;
         componentName = `DynamicValidationComponent`;
         for (var fileName in FILES) {
-          let fileContent = FILES[fileName]
-          fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
-          fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
-          if (fileName.indexOf("app.component.ts")) {
-            let configObject = { validationMessage: {} };
-            configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
-            fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
+          if (!fileName.includes("http")) {
+            let fileContent = FILES[fileName]
+            fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
+            fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
+            if (fileName.indexOf("app.component.ts")) {
+              let configObject = { validationMessage: {} };
+              configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
+              fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
+            }
+            this.addInputElement(form, `files[${fileName}]`, fileContent);
           }
-          this.addInputElement(form, `files[${fileName}]`, fileContent);
         }
-      
+
         if (JSON.stringify(exampleContent["json"]) !== JSON.stringify({})) {
-          this.addInputElement(form,`files[${jsonPathFileName}]`,exampleContent["json"]["server-json"]);
+          this.addInputElement(form, `files[${jsonPathFileName}]`, exampleContent["json"]["server-json"]);
         }
 
         if (exampleContent["component"] != null)
@@ -176,7 +195,7 @@ export class StackBlitzService {
         if (exampleContent["html"] != null)
           this.addInputElement(form, `files[${exampleComponentHtmlFileName}]`, exampleContent["html"]);
         return form;
-       }
+      }
       else {
         if (title == null)
           title = validationName;
@@ -192,31 +211,31 @@ export class StackBlitzService {
         componentName = `${this.pascalCase(validationName)}${this.pascalCase(exampleName)}Component`;
 
         for (var fileName in FILES) {
-          debugger;
-          let fileContent = FILES[fileName]
-          fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
-          fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
-          if (fileName.indexOf("app.component.ts")) {
-            let configObject = { validationMessage: {} };
-            if (validationName.indexOf("Date") >= 0 || validationName.indexOf("date") == 0) {
-              configObject['internationalization'] = {};
-              configObject['internationalization'] = VALIDATION_MESSAGES["internationalization"]
-            }
-            else if (validationName == "dynamicerrormessagestrategy") {
-              configObject['reactiveForm'] = VALIDATION_MESSAGES["reactiveForm"]
-              configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
-            }
-            else if (validationName == "errormessage" || validationName == "model") {
-              configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
+          if (!fileName.includes("http")) {
+            let fileContent = FILES[fileName]
+            fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
+            fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
+            if (fileName.indexOf("app.component.ts")) {
+              let configObject = { validationMessage: {} };
+              if (validationName.indexOf("Date") >= 0 || validationName.indexOf("date") == 0) {
+                configObject['internationalization'] = {};
+                configObject['internationalization'] = VALIDATION_MESSAGES["internationalization"]
+              }
+              else if (validationName == "dynamicerrormessagestrategy") {
+                configObject['reactiveForm'] = VALIDATION_MESSAGES["reactiveForm"]
+                configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
+              }
+              else if (validationName == "errormessage" || validationName == "model") {
+                configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];
+                fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
+              }
+              configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
               fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
             }
-            configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
-            fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
-          }
-          if(fileName == "src/app/app.module.ts"){
-            debugger;
-             if(validationName == "dynamicComponent"){
-               fileContent = `
+            if (fileName == "src/app/app.module.ts") {
+
+              if (validationName == "dynamicComponent") {
+                fileContent = `
                import { NgModule } from '@angular/core';
                import { BrowserModule } from '@angular/platform-browser';
                import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -237,18 +256,19 @@ export class StackBlitzService {
                })
                export class AppModule { };
                `
-             }
-          } 
-          this.addInputElement(form, `files[${fileName}]`, fileContent);
-        }
-        if (exampleContent["modelName"] != null && exampleContent["model"] != null) {
-          let exampleModelFileName = `src/app/${exampleContent["modelName"]}`
-          this.addInputElement(form, `files[${exampleModelFileName}]`, exampleContent["model"]);
-        }
-        if (JSON.stringify(exampleContent["json"]) !== JSON.stringify({})) {
-          this.addJson(form, exampleContent, validationType, validationName, exampleName, templateDrivenType)
-        }
+              }
+            }
+            this.addInputElement(form, `files[${fileName}]`, fileContent);
+          }
 
+          if (exampleContent["modelName"] != null && exampleContent["model"] != null) {
+            let exampleModelFileName = `src/app/${exampleContent["modelName"]}`
+            this.addInputElement(form, `files[${exampleModelFileName}]`, exampleContent["model"]);
+          }
+          if (JSON.stringify(exampleContent["json"]) !== JSON.stringify({})) {
+            this.addJson(form, exampleContent, validationType, validationName, exampleName, templateDrivenType)
+          }
+        }
         // if (exampleContent["jsonName"] != null && exampleContent["json"] != null) {
         //   let exampleJsonFileName = `src/assets/${exampleContent["jsonName"]}`
         //   this.addInputElement(form, `files[${exampleJsonFileName}]`, exampleContent["json"]);
@@ -323,7 +343,6 @@ export class StackBlitzService {
 
 
   private addJson(form, obj, validationType, validationName, exampleName, templateDrivenType) {
-     debugger;
     var jsonObject = obj['json'];
     obj["component"] = obj["component"].replace("import { environment } from 'src/environments/environment.prod';", "")
     obj["component"] = obj["component"].replace("import { environment } from 'src/environments/environment';", "")
@@ -340,12 +359,11 @@ export class StackBlitzService {
             obj["component"] = obj["component"].replace("'assets/dynamic.json?v='+environment.appVersion", "'assets/dynamic.json'")
             obj["component"] = obj["component"].replace("'assets/dynamic.json?v=' + environment.appVersion", "'assets/dynamic.json'")
           }
-          else if(exampleName == "edit"){
-            debugger
+          else if (exampleName == "edit") {
             obj["component"] = obj["component"].replace(sourcePath, destinationPath)
             obj["component"] = obj["component"].replace("import { environment } from 'src/environments/environment';", "")
             obj["component"] = obj["component"].replace(" + environment.appVersion", "")
-            
+
           }
           else {
             obj["component"] = obj["component"].replace(sourcePath, destinationPath)

@@ -3,7 +3,7 @@ import { RxHttp, http } from "@rxweb/http";
 
 @http({
     hostKey: "local",
-    path: "assets/json/db.json",
+    path: "api/delete",
 })
 export class BaseComponent extends RxHttp {
 

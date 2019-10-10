@@ -3,7 +3,7 @@
 
 @http({
     hostKey: "local",
-    path: "assets/json/db.json",
+    path: "api/Put",
 })
 export class BaseComponent extends RxHttp {
 

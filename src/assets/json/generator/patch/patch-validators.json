@@ -3,8 +3,8 @@
         "notes": [],
         "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { BaseComponent } from './base.component';\r\n\r\n@Component({\r\n    selector: 'app-patch-complete',\r\n    templateUrl: './patch-complete.component.html'\r\n})\r\nexport class PatchCompleteComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any;\r\n\r\n    ngOnInit() {\r\n     this.Patch(2);   \r\n    }\r\n\r\n    Patch(id:number) {\r\n        this.patch({params: [id], body: { firstName: \"Srishti\", } }).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}",
         "function":"export class PatchCompleteComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any;\r\n\r\n    ngOnInit() {\r\n     this.Patch(2);   \r\n    }\r\n\r\n    Patch(id:number) {\r\n        this.patch({params: [id], body: { firstName: \"Srishti\", } }).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}",
-        "html": "<button class=\"btn btn-default\" (click)=\"Patch()\">Patch Data</button><br />\r\n<div>{{result | json}}</div>   ",
-        "model": "import { RxHttp, http } from \"@rxweb/http\";\r\n\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"assets/json/db.json\",\r\n})\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}",
+        "html": "<button class=\"btn btn-primary\"  (click)=\"Patch()\">Patch Data</button><br />\r\n<div>{{result | json}}</div>   ",
+        "model": "import { RxHttp, http } from \"@rxweb/http\";\r\n\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/Patch\",\r\n})\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}",
         "modelName": "base.component.ts",
             "json": {}
     }
