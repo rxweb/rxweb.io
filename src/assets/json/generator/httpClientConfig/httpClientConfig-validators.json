@@ -1,5 +1,5 @@
 {
     "complete":{
-        "app.component":" HttpClientConfig.register({\r\n            hostURIs: [{\r\n                name: 'local',\r\n                default: true,\r\n                uri: 'http://localhost:3005'\r\n            }],\r\n            filters: [],\r\n            onError: (r) => { console.log(r) },\r\n            isProductionEnvironment: false\r\n        })"
+        "app.component":" HttpClientConfig.register({\r\n            hostURIs: [{\r\n                name: 'local',\r\n                default: true,\r\n                uri: 'http://localhost:3005'\r\n            }],\r\n            filters: [],\r\n            onError: (r) => { console.log(r) },\r\n    })"
     }
 }
