@@ -48,3 +48,8 @@ If the client property name and server property name is different. Then to bind 
 It is used when you want to validate number of index added in proprArray. You need to specify it in `allowMaxIndex` property.
 
 <div component="app-example-runner" ref-component="app-propArray-maxindex" title="PropArray based on allowMaxIndex" key="maxindex"></div>
+
+# Create BlankFormArray 
+It is used to create a formArray with initialization. You need to specify `createBlank` value as true.
+
+<div component="app-example-runner" ref-component="app-propArray-createblank" title="PropArray with createBlank" key="createblank"></div>

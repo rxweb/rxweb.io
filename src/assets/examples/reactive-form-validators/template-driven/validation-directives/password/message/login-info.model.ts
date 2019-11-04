@@ -1,7 +1,7 @@
 
 export class LoginInfo {
 
-	oldPassword: string;
+	resetPassword: string;
 	
 	
 }

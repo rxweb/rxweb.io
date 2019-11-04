@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { PasswordCompleteTemplateDrivenValidationDirectivesComponent } from './complete/password-complete.component';
 import { PasswordValidationTemplateDrivenValidationDirectivesComponent } from './validation/password-validation.component';
 import { PasswordMessageTemplateDrivenValidationDirectivesComponent } from './message/password-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	PasswordAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

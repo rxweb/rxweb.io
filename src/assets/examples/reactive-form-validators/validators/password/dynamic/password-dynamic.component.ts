@@ -20,7 +20,7 @@ export class PasswordDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/password/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var loginInfo = { newPassword:'', oldPassword:'', confirmPassword:'',  }
+			var loginInfo = { newPassword:'', resetPassword:'', oldPassword:'', confirmPassword:'',  }
 			this.loginInfoFormGroup = this.formBuilder.group(loginInfo,formBuilderConfiguration);
 		})
     }

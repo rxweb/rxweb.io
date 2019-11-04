@@ -15,7 +15,10 @@ export class PasswordMessageValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.loginInfoFormGroup = this.formBuilder.group({
-            oldPassword:['', RxwebValidators.password({validation:{maxLength: 10,minLength: 5,digit: true,specialCharacter: true}  ,message:'Password is not valid' })], 
+            resetPassword:['', RxwebValidators.password({validation:{maxLength: 10,minLength: 5,digit: true,specialCharacter: true}  ,message:{
+                  minLength: 'Minimum Character length should be 5.',
+                  maxLength: 'MaxLength allowed is 5'
+                } })], 
         });
     }
 }

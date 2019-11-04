@@ -6,6 +6,9 @@ export class LoginInfo {
 	newPassword: string;
 
 	@prop()
+	resetPassword: string;
+
+	@prop()
 	oldPassword: string;
 
 	@prop()

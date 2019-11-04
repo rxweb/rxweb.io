@@ -1,0 +1,10 @@
+{
+    "complete": {
+        "notes": null,
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup,Validators,FormControl,AsyncValidatorFn } from \"@angular/forms\"\r\nimport { User } from './user.model';\r\n\r\n@Component({\r\n    selector: 'app-async-complete-template-driven-validation-directives',\r\n    templateUrl: './async-complete.component.html'\r\n})\r\nexport class AsyncCompleteTemplateDrivenValidationDirectivesComponent implements OnInit {\r\n    user: User\r\n\t\r\n    constructor(\r\n    ) { }\r\n\r\n    ngOnInit() {\r\n       this.user = new User()\r\n    }\r\n    countryNameUnique(control: FormControl) {\r\n      \r\n            const promise = new Promise((resolve, reject) => {\r\n                if (control.value != \"India\")\r\n                    resolve(null)\r\n                else\r\n                    resolve({ 'async':{message: 'Value should be Unique'} })\r\n            });\r\n            return promise;\r\n        \r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form #userForm = \"ngForm\" [rxwebForm]=\"userForm\" [model]=\"user\">\r\n      <div class=\"form-group\">\r\n        <label>CountryName</label>\r\n          <input type=\"text\" name=\"countryName\" [(ngModel)]=\"user.countryName\"  class=\"form-control\" [async]=\"countryNameUnique.bind(this)\"/>\r\n  \r\n         <small class=\"form-text text-danger\" *ngIf=\"userForm.controls?.countryName?.errors\">{{userForm.controls?.countryName?.errors?.async.message}}<br/></small>\t\r\n      </div>\r\n      <button [disabled]=\"!userForm.valid\" class=\"btn btn-primary\">Submit</button>\r\n    </form>\r\n  </div>",
+        "model": "export class User {\r\n\r\n\tcountryName: string;\r\n\t\r\n\t\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
+    }
+}

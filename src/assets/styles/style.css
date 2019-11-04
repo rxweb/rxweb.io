@@ -2384,7 +2384,7 @@ h1, .h1 {
     /* box-shadow: 0.5px 0.5px 0.5px 1.5px #eaeaea; */
     margin-top: 15px;
     margin-bottom: 10px;
-    border: 1px solid #eee;
+    border: 1px solid #eee!important;
     background: rgba(246, 246, 246, 0.2);
 }
 

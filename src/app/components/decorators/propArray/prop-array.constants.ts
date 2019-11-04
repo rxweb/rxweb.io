@@ -3,6 +3,7 @@ import { PropArrayServerComponent } from "src/assets/examples/decorators/propArr
 import { PropArrayDefaultComponent } from "src/assets/examples/decorators/propArray/defaultValue/prop-array-default-component";
 import { PropArrayEntityComponent } from "src/assets/examples/decorators/propArray/entity/prop-array-entity.component";
 import { PropArrayMaxindexComponent } from "src/assets/examples/decorators/propArray/maxIndex/prop-array-maxindex.component";
+import { PropArrayCreateBlankComponent } from "src/assets/examples/decorators/propArray/createBlank/prop-array-createblank.component";
 
 
 export const PROP_ARRAY_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
@@ -11,6 +12,7 @@ export const PROP_ARRAY_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
         server:PropArrayServerComponent,
         default:PropArrayDefaultComponent,
         entity:PropArrayEntityComponent,
-        maxindex:PropArrayMaxindexComponent
+        maxindex:PropArrayMaxindexComponent,
+        createblank:PropArrayCreateBlankComponent
     },
 }

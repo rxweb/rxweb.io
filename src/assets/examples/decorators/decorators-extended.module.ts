@@ -26,6 +26,7 @@ import { ModelElementComponent } from './model/elementClass/model-element.compon
 import { PropPrimaryComponent } from './prop/primaryKey/prop-primary.component';
 import { PropArrayEntityComponent } from './propArray/entity/prop-array-entity.component';
 import { PropArrayMaxindexComponent } from './propArray/maxIndex/prop-array-maxindex.component';
+import {  PropArrayCreateBlankComponent } from './propArray/createBlank/prop-array-createblank.component';
 
 
 
@@ -50,7 +51,8 @@ import { PropArrayMaxindexComponent } from './propArray/maxIndex/prop-array-maxi
   ModelErrorComponent,
   ModelElementComponent,
   PropArrayEntityComponent,
-  PropArrayMaxindexComponent
+  PropArrayMaxindexComponent,
+  PropArrayCreateBlankComponent
   ],
 entryComponents: [
   PropAddComponent,
@@ -72,7 +74,8 @@ entryComponents: [
   ModelErrorComponent,
   ModelElementComponent,
   PropArrayEntityComponent,
-  PropArrayMaxindexComponent
+  PropArrayMaxindexComponent,
+  PropArrayCreateBlankComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -94,7 +97,8 @@ entryComponents: [
   ModelErrorComponent,
   ModelElementComponent,
   PropArrayEntityComponent,
-  PropArrayMaxindexComponent
+  PropArrayMaxindexComponent,
+  PropArrayCreateBlankComponent
   ],
 
 })

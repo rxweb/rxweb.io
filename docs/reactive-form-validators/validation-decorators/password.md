@@ -106,6 +106,8 @@ Password Validation is used for setting the parameters for password validation, 
 <div component="app-code" key="password-validationExample-model"></div> 
 <div component="app-example-runner" ref-component="app-password-validation" title="password {{validatorType}} with validation" key="validation"></div>
 
+
+
 # Complete password Example
 
 This Complete password example which includes all the PasswordConfig properties will fulfil the requirement of scenarios 1 and 2.
