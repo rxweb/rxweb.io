@@ -223,6 +223,10 @@ const FORM_VALIDATION_ROUTES: Routes = [
 	loadChildren: './required/required.module#RequiredModule',
 },
 {
+	path:'requiredTrue',
+	loadChildren: './requiredTrue/required-true.module#RequiredTrueModule',
+},
+{
 	path:'fileSize',
 	loadChildren: './fileSize/file-size.module#FileSizeModule',
 },
