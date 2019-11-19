@@ -1,0 +1,11 @@
+<div>
+  <form #userinfoForm = "ngForm" [rxwebForm]="userinfoForm" [model]="userinfo">
+    <div class="form-group">
+      <label>Is Checked</label>&nbsp;
+	    <input type="checkbox" name="ischecked" [(ngModel)]="userinfo.ischecked"   requiredTrue/>
+
+	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.ischecked?.errors">{{userinfoForm.controls?.ischecked?.errors?.requiredTrue.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userinfoForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

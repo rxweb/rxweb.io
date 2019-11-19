@@ -3,5 +3,6 @@
     "internationalization" : "ReactiveFormConfig.set({ \r\n            \"baseConfig\": {\r\n                \"dateFormat\": \"mdy\",\r\n\t\t\"seperator\": \"/\",\r\n        \"internationalization\": {\r\n                \"dateFormat\": \"mdy\",\r\n\t\t\"seperator\": \"/\"\r\n            }\r\n        });",
     "validationMessage":"ReactiveFormConfig.set({ \r\n            \"validationMessage\": {\r\n                \"required\": \"this field is required.\",\r\n\t\t    \"alpha\": \"Only alphabets are allowed.\",        \r\n\t\t    ......       \r\n\t\t    }\r\n        });",
     "errorMessageStrategy":"ReactiveFormConfig.set({\r\n          reactiveForm: {\r\n             errorMessageBindingStrategy: ErrorMessageBindingStrategy.onSubmit\r\n          }\r\n})",
-    "allowDecimalSymbol": "ReactiveFormConfig.set({\r\n  \"allowDecimalSymbol\": \",\"\r\n})"
+    "allowDecimalSymbol": "ReactiveFormConfig.set({\r\n  \"allowDecimalSymbol\": \",\"\r\n})",
+    "locale":"  ReactiveFormConfig.set({\r\n            defaultValidationLocale: {\r\n                alpha: ValidationAlphabetLocale.spanish,\r\n                alphaNumeric: ValidationAlphabetLocale.spanish\r\n            }\r\n        });"
 }

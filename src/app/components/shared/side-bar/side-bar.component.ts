@@ -130,7 +130,7 @@ export class SideBarComponent implements OnInit {
                   else if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
 
                     currentArray[0].childrens.forEach(formvalidation => {
-                      if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
+                      if (formvalidation.title != "required" && formvalidation.title != "notEmpty" && formvalidation.title != "requiredTrue") {
                         formvalidation.childrens.forEach(element => {
                           if (element.title == splitedArray[3]) {
                             formvalidation.isOpen = true;
@@ -259,7 +259,7 @@ export class SideBarComponent implements OnInit {
                     else if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
 
                       currentArray[0].childrens.forEach(formvalidation => {
-                        if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
+                        if (formvalidation.title != "required" && formvalidation.title != "notEmpty" && formvalidation.title != "requiredTrue") {
                           formvalidation.childrens.forEach(element => {
                             if (element.title == splitedArray[3]) {
                               formvalidation.isOpen = true;
@@ -390,7 +390,7 @@ export class SideBarComponent implements OnInit {
                     else if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
 
                       currentArray[0].childrens.forEach(formvalidation => {
-                        if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
+                        if (formvalidation.title != "required" && formvalidation.title != "notEmpty" && formvalidation.title != "requiredTrue") {
                           formvalidation.childrens.forEach(element => {
                             if (element.title == splitedArray[3]) {
                               formvalidation.isOpen = true;
@@ -521,7 +521,7 @@ export class SideBarComponent implements OnInit {
                     else if (splitedArray[2].includes('static-binding') || splitedArray[2].includes('conditional-binding') || splitedArray[2].includes('controls')) {
 
                       currentArray[0].childrens.forEach(formvalidation => {
-                        if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
+                        if (formvalidation.title != "required" && formvalidation.title != "notEmpty" && formvalidation.title != "requiredTrue") {
                           formvalidation.childrens.forEach(element => {
                             if (element.title == splitedArray[3]) {
                               formvalidation.isOpen = true;
@@ -627,7 +627,7 @@ export class SideBarComponent implements OnInit {
                   else if (splitedArray[1].includes('form-validation')) {
 
                     currentArray[0].childrens.forEach(formvalidation => {
-                      if (formvalidation.title != "required" && formvalidation.title != "notEmpty") {
+                      if (formvalidation.title != "required" && formvalidation.title != "notEmpty" && formvalidation.title != "requiredTrue") {
                         formvalidation.childrens.forEach(element => {
                           if (element.title == splitedArray[2]) {
                             formvalidation.isOpen = true;

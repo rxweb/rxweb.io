@@ -54,6 +54,20 @@ Apply global validation messages throughout the application, then configure the 
         });
 ```
 
+## locale
+Type : `string`
+
+This will allow multilingual characters based upon the specified validation alphabet locale. It can be set to Spanish, danish, french, german, russian. Here is an example of spanish locale Name. 
+
+```js
+  ReactiveFormConfig.set({
+            defaultValidationLocale: {
+                alpha: ValidationAlphabetLocale.spanish,
+                alphaNumeric: ValidationAlphabetLocale.spanish
+            }
+        });
+```
+
 
 
 

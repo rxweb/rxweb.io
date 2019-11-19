@@ -16,6 +16,7 @@ import { NumericDigitsInfoComponent } from './digitsInfo/numeric-digits-info.com
 import { NumericDynamicComponent } from './dynamic/numeric-dynamic.component';
 import { NumericAddComponent } from './add/numeric-add.component';
 import { NumericEditComponent } from './edit/numeric-edit.component';
+import { NumericDecimalSeperatorComponent } from './decimalSeperator/numeric-decimal-seperator.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NumericEditComponent } from './edit/numeric-edit.component';
 	NumericDynamicComponent,
 	NumericAddComponent,
 	NumericEditComponent,
+	NumericDecimalSeperatorComponent
   ],
 entryComponents: [
 	NumericCompleteComponent,
@@ -43,6 +45,7 @@ entryComponents: [
 	NumericDynamicComponent,
 	NumericAddComponent,
 	NumericEditComponent,
+	NumericDecimalSeperatorComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -62,6 +65,7 @@ entryComponents: [
 	NumericDynamicComponent,
 	NumericAddComponent,
 	NumericEditComponent,
+	NumericDecimalSeperatorComponent
   ],
 
 })

@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>IsBlocked</label>&nbsp;
+      <input type="checkbox" formControlName="isBlocked" /> <br/>
+      <small class="form-text text-muted">Shows Custom Validation Message based on message key<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.isBlocked.errors">{{userFormGroup.controls.isBlocked.errors.requiredTrue.message}}<br/></small>		
+    </div>
+    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

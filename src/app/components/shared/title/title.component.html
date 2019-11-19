@@ -11,7 +11,7 @@
                 </li>
                 <li class="ng-star-inserted"
                     [class.active]="activeTab == 'template-driven' && templateDrivenType == 'directives'"
-                    *ngIf="mainType == 'form-validations' && (validationName !== 'minTime' && validationName !== 'maxTime' && validationName !== 'pattern' && validationName !== 'unique'  && validationName !== 'ip' && validationName !== 'compose' && validationName !== 'allOf' && validationName !== 'oneOf' && validationName !== 'noneOf' && validationName !== 'choice' && validationName !== 'rule' )">
+                    *ngIf="mainType == 'form-validations' && (validationName !== 'minTime' && validationName !== 'requiredTrue' && validationName !== 'maxTime' && validationName !== 'pattern' && validationName !== 'unique'  && validationName !== 'ip' && validationName !== 'compose' && validationName !== 'allOf' && validationName !== 'oneOf' && validationName !== 'noneOf' && validationName !== 'choice' && validationName !== 'rule' )">
                     <a (click)="route('template-driven','directives')">Template Driven</a>
                 </li>
                 <li class="ng-star-inserted" [class.active]="activeTab == 'decorators'"
@@ -20,7 +20,7 @@
                 </li>
                 <li class="ng-star-inserted"
                     [class.active]="activeTab == 'template-driven' && templateDrivenType == 'decorators'"
-                    *ngIf="mainType == 'form-validations' && (validationName !== 'async' && validationName !== 'minTime' && validationName !== 'maxTime'  && validationName !== 'unique'  && validationName !== 'ip' && validationName !== 'compose' && validationName !== 'allOf' && validationName !== 'oneOf' && validationName !== 'noneOf' && validationName !== 'choice'  && validationName !== 'rule')">
+                    *ngIf="mainType == 'form-validations' && (validationName !== 'requiredTrue' && validationName !== 'async' && validationName !== 'minTime' && validationName !== 'maxTime'  && validationName !== 'unique'  && validationName !== 'ip' && validationName !== 'compose' && validationName !== 'allOf' && validationName !== 'oneOf' && validationName !== 'noneOf' && validationName !== 'choice'  && validationName !== 'rule')">
                     <a (click)="route('template-driven','decorators')">Template Decorator</a>
                 </li>
             </ul>

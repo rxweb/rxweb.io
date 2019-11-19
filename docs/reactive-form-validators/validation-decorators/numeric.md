@@ -91,6 +91,17 @@ Below options are not mandatory to use in the `numeric` validation. If needed th
 <tr><td><a (click)='scrollTo("#messageKey")' title="messageKey">messageKey</a></td><td>messageKey property of BaseConfig can be used when the user wants to show a different custom validation message on some of their fields. User can define a custom messageKey globally by defining it in ReactiveFormConfig and set it in the message property of the validation.</td></tr>
 </table>
 
+
+<data-scope scope="['decorator']">
+
+## Replace decimal separator during initialization of FormControl
+The decimal seperator should be replaced during the initialization of the formControl
+
+<div component="app-code" key="numeric-decimalSeperatorExample-model"></div> 
+<div component="app-example-runner" ref-component="app-numeric-decimalSeperator" title="numeric {{validatorType}} with decimalSeperator" key="app-numeric-decimalSeperator"></div>
+
+</data-scope>
+
 ## acceptValue 
 Type :  `NumericValueType` 
 

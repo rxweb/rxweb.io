@@ -4,7 +4,7 @@ import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -54,7 +54,9 @@ import { TitleComponent } from './shared/title/title.component';
 import { ChangeLogComponent } from './changelog/change-log.component';
 import { ContributorsComponent } from './contributors/contributors-component';
 
-
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt)
 
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
@@ -76,7 +78,7 @@ import { ContributorsComponent } from './contributors/contributors-component';
       provide: API_HOST_URI,
       useValue: 'https://rxweb.io/'
     }
-    ,
+    ,{ provide: LOCALE_ID, useValue: 'pt' },
     {
       provide: APP_VERSION,
       useValue: environment.appVersion

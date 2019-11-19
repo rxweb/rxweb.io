@@ -368,6 +368,11 @@
           "title": "required",
           "uri": "/form-validations/required/validators",
           "isActive": false
+        },
+        {
+          "title": "requiredTrue",
+          "uri": "/form-validations/requiredTrue/validators",
+          "isActive": false
         }
       ]
     },

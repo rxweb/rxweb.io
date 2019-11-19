@@ -1,0 +1,17 @@
+<div>
+  <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
+    <div class="form-group">
+      <label>Agree to terms and conditions</label>&nbsp;
+      <input type="checkbox" name="isAgree" [(ngModel)]="user.isAgree"  requiredTrue/><br/>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.isAgree?.errors">{{userForm.controls?.isAgree?.errors?.requiredTrue.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>CheckMeOut</label>&nbsp;
+      <input type="checkbox" name="checkMeOut" [(ngModel)]="user.checkMeOut"   [requiredTrue]="{'conditionalExpression':'x => x.isAgree == true'}"/><br/>
+      <small class="form-text text-muted">Conditional validation will be applied if the isAgree checkbox is  true<br/></small>
+      <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.checkMeOut?.errors">{{userForm.controls?.checkMeOut?.errors?.requiredTrue.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

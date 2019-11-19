@@ -37,6 +37,7 @@ import { NumericAddTemplateDrivenValidationDirectivesComponent } from "src/asset
 import { NumericAddTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/numeric/add/numeric-add.component";
 import { NumericAddValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/numeric/add/numeric-add.component";
 import { NumericEditComponent } from "src/assets/examples/reactive-form-validators/decorators/numeric/edit/numeric-edit.component";
+import { NumericDecimalSeperatorComponent } from "src/assets/examples/reactive-form-validators/decorators/numeric/decimalSeperator/numeric-decimal-seperator.component";
 
 export const NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
@@ -51,6 +52,7 @@ export const NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						dynamic : NumericDynamicComponent,
 						add : NumericAddComponent,
 						edit : NumericEditComponent,
+						decimalSeperator:NumericDecimalSeperatorComponent
 			  },
 	template_driven_validation_directives:{
 						complete : NumericCompleteTemplateDrivenValidationDirectivesComponent,

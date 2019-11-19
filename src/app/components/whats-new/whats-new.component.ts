@@ -12,7 +12,10 @@ export class WhatsNewComponent implements OnInit {
     selected:any = "";
     rightSidebarLinks:any=[
         {"id":"generic","title":"1.8.6","subLink":null},
-        {"id":"urlValidation","title":"1.9.4","subLink":null},
+        {"id":"requiredTrue","title":"1.9.7","subLink":null},
+        {"id":"passwordValidationWithCustom","title":"1.9.6","subLink":null},
+        {"id":"urlValidation","title":"1.9.5","subLink":null},
+        {"id":"blankFormArray","title":"1.9.4","subLink":null},
         {"id":"dynamicConfig1","title":"1.9.3","subLink":null},
         {"id":"dynamicConfig","title":"1.9.2","subLink":null},
         {"id":"compose","title":"1.9.1","subLink":null},
