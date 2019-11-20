@@ -9,6 +9,9 @@ export class AddressInfo {
 	cityName: string;
 
 	@prop()
+	spanishcityName: string;
+
+	@prop()
 	stateName: string;
 
 	@prop()

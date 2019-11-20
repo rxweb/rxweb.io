@@ -1,4 +1,4 @@
-import {  alphaNumeric, } from   "@rxweb/reactive-form-validators"   
+import {  alphaNumeric,ValidationAlphabetLocale } from   "@rxweb/reactive-form-validators"   
 
 export class Location {
 
@@ -8,6 +8,10 @@ export class Location {
 	
 	@alphaNumeric({allowWhiteSpace:true }) 
 	flatAddress: string;
+	
+	
+	@alphaNumeric({locale:ValidationAlphabetLocale.spanish }) 
+	spanishcityName: string;
 	
 	
 	//Shows custom message

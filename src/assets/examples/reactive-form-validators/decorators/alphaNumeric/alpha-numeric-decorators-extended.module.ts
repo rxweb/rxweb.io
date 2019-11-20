@@ -5,8 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { AlphaNumericCompleteComponent } from './complete/alpha-numeric-complete.component';
 import { AlphaNumericAllowWhiteSpaceComponent } from './allowWhiteSpace/alpha-numeric-allow-white-space.component';
+import { AlphaNumericLocaleComponent } from './locale/alpha-numeric-locale.component';
 import { AlphaNumericMessageComponent } from './message/alpha-numeric-message.component';
 import { AlphaNumericConditionalExpressionComponent } from './conditionalExpression/alpha-numeric-conditional-expression.component';
 import { AlphaNumericMessageKeyComponent } from './messageKey/alpha-numeric-message-key.component';
@@ -18,6 +22,7 @@ import { AlphaNumericEditComponent } from './edit/alpha-numeric-edit.component';
   declarations: [
 	AlphaNumericCompleteComponent,
 	AlphaNumericAllowWhiteSpaceComponent,
+	AlphaNumericLocaleComponent,
 	AlphaNumericMessageComponent,
 	AlphaNumericConditionalExpressionComponent,
 	AlphaNumericMessageKeyComponent,
@@ -28,6 +33,7 @@ import { AlphaNumericEditComponent } from './edit/alpha-numeric-edit.component';
 entryComponents: [
 	AlphaNumericCompleteComponent,
 	AlphaNumericAllowWhiteSpaceComponent,
+	AlphaNumericLocaleComponent,
 	AlphaNumericMessageComponent,
 	AlphaNumericConditionalExpressionComponent,
 	AlphaNumericMessageKeyComponent,
@@ -36,14 +42,17 @@ entryComponents: [
 	AlphaNumericEditComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	AlphaNumericCompleteComponent,
 	AlphaNumericAllowWhiteSpaceComponent,
+	AlphaNumericLocaleComponent,
 	AlphaNumericMessageComponent,
 	AlphaNumericConditionalExpressionComponent,
 	AlphaNumericMessageKeyComponent,

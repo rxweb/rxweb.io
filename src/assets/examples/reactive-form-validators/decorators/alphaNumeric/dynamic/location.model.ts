@@ -9,6 +9,9 @@ export class Location {
 	flatAddress: string;
 
 	@prop()
+	spanishcityName: string;
+
+	@prop()
 	postalAddress: string;
 
 	@prop()

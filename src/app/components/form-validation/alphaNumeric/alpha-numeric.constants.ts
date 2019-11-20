@@ -25,6 +25,10 @@ import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from "src/
 import { AlphaNumericAddTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/alphaNumeric/add/alpha-numeric-add.component";
 import { AlphaNumericAddValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alphaNumeric/add/alpha-numeric-add.component";
 import { AlphaNumericEditComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/edit/alpha-numeric-edit.component";
+import { AlphaNumericLocaleComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/locale/alpha-numeric-locale.component";
+import { AlphaNumericLocaleValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alphaNumeric/locale/alpha-numeric-locale.component";
+import { AlphaNumericLocaleTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/alphaNumeric/locale/alpha-numeric-locale.component";
+import { AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/alphaNumeric/locale/alpha-numeric-locale.component";
 
 export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
@@ -36,6 +40,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						dynamic : AlphaNumericDynamicComponent,
 						add : AlphaNumericAddComponent,
 						edit : AlphaNumericEditComponent,
+						locale: AlphaNumericLocaleComponent
 			  },
 	template_driven_validation_directives:{
 						complete : AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent,
@@ -44,6 +49,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						conditionalExpression : AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						messageKey : AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
+						locale: AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent
 			  },
 	template_driven_validation_decorators:{
 						complete : AlphaNumericCompleteTemplateDrivenValidationDecoratorsComponent,
@@ -52,6 +58,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						conditionalExpression : AlphaNumericConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 						messageKey : AlphaNumericMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : AlphaNumericAddTemplateDrivenValidationDecoratorsComponent,
+						locale:AlphaNumericLocaleTemplateDrivenValidationDecoratorsComponent
 			  },
 	validators:{
 						complete : AlphaNumericCompleteValidatorComponent,
@@ -61,5 +68,6 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						messageKey : AlphaNumericMessageKeyValidatorComponent,
 						dynamic : AlphaNumericDynamicValidatorComponent,
 						add : AlphaNumericAddValidatorComponent,
+						locale:AlphaNumericLocaleValidatorComponent
 			  },
 }

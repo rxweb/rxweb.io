@@ -5,8 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { AlphaCompleteValidatorComponent } from './complete/alpha-complete.component';
 import { AlphaConditionalExpressionValidatorComponent } from './conditionalExpression/alpha-conditional-expression.component';
+import { AlphaLocaleValidatorComponent } from './locale/alpha-locale.component';
 import { AlphaAllowWhiteSpaceValidatorComponent } from './allowWhiteSpace/alpha-allow-white-space.component';
 import { AlphaMessageValidatorComponent } from './message/alpha-message.component';
 import { AlphaMessageKeyValidatorComponent } from './messageKey/alpha-message-key.component';
@@ -17,6 +21,7 @@ import { AlphaAddValidatorComponent } from './add/alpha-add.component';
   declarations: [
 	AlphaCompleteValidatorComponent,
 	AlphaConditionalExpressionValidatorComponent,
+	AlphaLocaleValidatorComponent,
 	AlphaAllowWhiteSpaceValidatorComponent,
 	AlphaMessageValidatorComponent,
 	AlphaMessageKeyValidatorComponent,
@@ -26,6 +31,7 @@ import { AlphaAddValidatorComponent } from './add/alpha-add.component';
 entryComponents: [
 	AlphaCompleteValidatorComponent,
 	AlphaConditionalExpressionValidatorComponent,
+	AlphaLocaleValidatorComponent,
 	AlphaAllowWhiteSpaceValidatorComponent,
 	AlphaMessageValidatorComponent,
 	AlphaMessageKeyValidatorComponent,
@@ -33,14 +39,17 @@ entryComponents: [
 	AlphaAddValidatorComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	AlphaCompleteValidatorComponent,
 	AlphaConditionalExpressionValidatorComponent,
+	AlphaLocaleValidatorComponent,
 	AlphaAllowWhiteSpaceValidatorComponent,
 	AlphaMessageValidatorComponent,
 	AlphaMessageKeyValidatorComponent,

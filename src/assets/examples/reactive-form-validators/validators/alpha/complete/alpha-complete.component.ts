@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from "@angular/forms"
-import { RxwebValidators } from '@rxweb/reactive-form-validators';
+import { RxwebValidators,ValidationAlphabetLocale } from '@rxweb/reactive-form-validators';
 
 @Component({
     selector: 'app-alpha-complete-validator',
@@ -18,6 +18,7 @@ export class AlphaCompleteValidatorComponent implements OnInit {
             countryName:['', RxwebValidators.alpha()], 
             countryCode:['', RxwebValidators.alpha({conditionalExpression:(x,y) => x.countryName == "India" })], 
             cityName:['', RxwebValidators.alpha({conditionalExpression:'x => x.countryName =="India"' })], 
+            spanishcityName:['', RxwebValidators.alpha({locale:ValidationAlphabetLocale.spanish })], 
             stateName:['', RxwebValidators.alpha({allowWhiteSpace:true })], 
             stateCode:['', RxwebValidators.alpha({message:'You can enter only alphabets.' })], 
             cityCode:['', RxwebValidators.alpha({messageKey:'alphaMessageKey' })], 

@@ -1,0 +1,12 @@
+<div>
+  <form #locationForm = "ngForm" [rxwebForm]="locationForm" [model]="location">
+    <div class="form-group">
+      <label>SpanishCityName</label>
+	    <input type="text" name="spanishcityName" [(ngModel)]="location.spanishcityName"  class="form-control" />
+
+      <small class="form-text text-muted">It will allow spanish characters in the formControl<br/></small>
+	   <small class="form-text text-danger" *ngIf="locationForm.controls?.spanishcityName?.errors">{{locationForm.controls?.spanishcityName?.errors?.alphaNumeric.message}}<br/></small>	
+    </div>
+    <button [disabled]="!locationForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

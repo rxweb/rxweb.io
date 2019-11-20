@@ -1,4 +1,4 @@
-import {  alpha, } from   "@rxweb/reactive-form-validators"   
+import {  alpha,ValidationAlphabetLocale } from   "@rxweb/reactive-form-validators"   
 
 export class AddressInfo {
 
@@ -14,6 +14,10 @@ export class AddressInfo {
 	//If you want to apply conditional expression of type 'string'
 	@alpha({conditionalExpression:'x => x.countryName =="India"' }) 
 	cityName: string;
+	
+	
+	@alpha({locale:ValidationAlphabetLocale.spanish }) 
+	spanishcityName: string;
 	
 	
 	@alpha({allowWhiteSpace:true }) 

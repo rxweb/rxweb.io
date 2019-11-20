@@ -20,7 +20,7 @@ export class AlphaNumericDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/alphaNumeric/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var location = { areaName:'', flatAddress:'', postalAddress:'', countryCode:'', cityCode:'', colonyName:'',  }
+			var location = { areaName:'', flatAddress:'', spanishcityName:'', postalAddress:'', countryCode:'', cityCode:'', colonyName:'',  }
 			this.locationFormGroup = this.formBuilder.group(location,formBuilderConfiguration);
 		})
     }

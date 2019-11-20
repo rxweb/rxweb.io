@@ -5,8 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { AlphaCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/alpha-complete.component';
 import { AlphaConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/alpha-conditional-expression.component';
+import { AlphaLocaleTemplateDrivenValidationDecoratorsComponent } from './locale/alpha-locale.component';
 import { AlphaAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent } from './allowWhiteSpace/alpha-allow-white-space.component';
 import { AlphaMessageTemplateDrivenValidationDecoratorsComponent } from './message/alpha-message.component';
 import { AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/alpha-message-key.component';
@@ -16,6 +20,7 @@ import { AlphaAddTemplateDrivenValidationDecoratorsComponent } from './add/alpha
   declarations: [
 	AlphaCompleteTemplateDrivenValidationDecoratorsComponent,
 	AlphaConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	AlphaLocaleTemplateDrivenValidationDecoratorsComponent,
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 	AlphaMessageTemplateDrivenValidationDecoratorsComponent,
 	AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent,
@@ -24,20 +29,24 @@ import { AlphaAddTemplateDrivenValidationDecoratorsComponent } from './add/alpha
 entryComponents: [
 	AlphaCompleteTemplateDrivenValidationDecoratorsComponent,
 	AlphaConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	AlphaLocaleTemplateDrivenValidationDecoratorsComponent,
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 	AlphaMessageTemplateDrivenValidationDecoratorsComponent,
 	AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	AlphaAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	AlphaCompleteTemplateDrivenValidationDecoratorsComponent,
 	AlphaConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
+	AlphaLocaleTemplateDrivenValidationDecoratorsComponent,
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDecoratorsComponent,
 	AlphaMessageTemplateDrivenValidationDecoratorsComponent,
 	AlphaMessageKeyTemplateDrivenValidationDecoratorsComponent,

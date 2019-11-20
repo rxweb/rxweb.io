@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from "@angular/forms"
-import { RxwebValidators } from '@rxweb/reactive-form-validators';
+import { RxwebValidators,ValidationAlphabetLocale } from '@rxweb/reactive-form-validators';
 
 @Component({
     selector: 'app-alphaNumeric-complete-validator',
@@ -17,6 +17,7 @@ export class AlphaNumericCompleteValidatorComponent implements OnInit {
         this.locationFormGroup = this.formBuilder.group({
             areaName:['', RxwebValidators.alphaNumeric()], 
             flatAddress:['', RxwebValidators.alphaNumeric({allowWhiteSpace:true })], 
+            spanishcityName:['', RxwebValidators.alphaNumeric({locale:ValidationAlphabetLocale.spanish })], 
             postalAddress:['', RxwebValidators.alphaNumeric({message:'Please enter only alphanumerics, special characters are not allowed.' })], 
             countryCode:['', RxwebValidators.alphaNumeric({conditionalExpression:(x,y) => x.areaName == "Delhi"  })], 
             cityCode:['', RxwebValidators.alphaNumeric({conditionalExpression:'x => x.areaName =="Delhi"' })], 
