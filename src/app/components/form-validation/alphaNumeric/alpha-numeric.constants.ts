@@ -28,7 +28,7 @@ import { AlphaNumericEditComponent } from "src/assets/examples/reactive-form-val
 import { AlphaNumericLocaleComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/locale/alpha-numeric-locale.component";
 import { AlphaNumericLocaleValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alphaNumeric/locale/alpha-numeric-locale.component";
 import { AlphaNumericLocaleTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/alphaNumeric/locale/alpha-numeric-locale.component";
-import { AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/alphaNumeric/locale/alpha-numeric-locale.component";
+
 
 export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
@@ -49,7 +49,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						conditionalExpression : AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						messageKey : AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
-						locale: AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent
+					
 			  },
 	template_driven_validation_decorators:{
 						complete : AlphaNumericCompleteTemplateDrivenValidationDecoratorsComponent,
