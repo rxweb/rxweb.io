@@ -1,0 +1,755 @@
+<html>
+<head>
+	<title>Database Information</title>
+	<link rel='stylesheet' href='/assets/rxwebcore/style.css' />
+	<link rel='javascript' href='/assets/rxwebcore/custom.js' />
+	<link rel='stylesheet' href='/assets/rxwebcore/hljs.css' />
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+	<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+	</head>
+<body class="fixed-navbar sidebar-scroll">
+<header class="header">
+<div class="row">
+  <div class="col-sm-2 logo space-left-sidebar">
+    <div class="header-link">
+      <a class="rxlogo" title="rxwebcore">rxwebcore</a>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class=" header-links content">
+      <ul class="list-unstyled list-inline">
+        <li class="list-inline-item">
+          <a class="active" href="/AspNetCore/step-by-step-guide/project-brief.html">Learn</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.rxweb.io/whats-new">What's New?</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.rxweb.io/whats-next">What's Next?</a>
+        </li>
+        <li class="list-inline-item">
+          <a>Help</a>
+          <div class="mega-menu">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://gitter.im/rxweb-project/rxweb?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=body_badge" target="_blank">Gitter (Help)</a>
+              </li>
+              <li>
+                <a href="https://github.com/rxweb/RxWebCore" target="_blank">Github</a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/search?q=rxweb" target="_blank">StackOverflow</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="list-inline-item">
+          <a>Community</a>
+          <div class="mega-menu">
+          <ul class="list-unstyled">
+            <li><a href="https://www.rxweb.io/community/where_to_start_contributing">Want to Contribute, but?</a></li>
+            <li><a href="https://www.rxweb.io/community/contributing">Contributing </a></li>
+            <li><a href="https://www.rxweb.io/community/maintaining">Maintaining</a></li>
+            <li><a href="https://www.rxweb.io/hidden-gems">Hidden Gems</a></li>
+            <li><a href="https://www.rxweb.io/changelog">Change Log</a></li>
+            <li><a href="https://dev.to/t/rxweb" target="_blank">Dev Community</a></li>
+            <li><a href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3Abug" target="_blank">Open Issues</a></li>
+            <li><a href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22" target="_blank">Feature Request</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class='row col-lg-12' id='top-title-bar'>
+	<h1>
+		<span>Database Information</span>
+	<a class='edit-link' target='_blank' href='https://github.com/rxweb/RxWebCore.Docs/edit/master/Docs/step-by-step-guide/database-information.md'><i class='fa fa-pencil'></i></a></h1>
+</div>
+</header>
+<aside id='menu'><div id='navigation'><ul class='nav' id='side-menu'>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#stepbystepguide'><span class='nav-label'>Step By Step Guide</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='stepbystepguide'>
+<ul class='nav level-1'>
+<li class='nav-label'><span><a href='\AspNetCore\\step-by-step-guide\overview.html'><span class='nav-label'>Overview</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\step-by-step-guide\project-creation.html#prerequisites'><span class='nav-label'>Prerequisites</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\step-by-step-guide\project-creation.html#installrxwebtool'><span class='nav-label'>Installation</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\step-by-step-guide\project-creation.html#projectcreation'><span class='nav-label'>Project Creation</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\step-by-step-guide\project-structure.html'><span class='nav-label'>Project Structure</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\step-by-step-guide\database-information.html'><span class='nav-label'>Database Information</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\step-by-step-guide\run-the-project.html'><span class='nav-label'>Run The Project</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#workingwithdatamodel'><span class='nav-label'>Working with Data Model</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='workingwithdatamodel'>
+<ul class='nav level-1'>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#databaseapproach'><span class='nav-label'>Database Approach</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='databaseapproach'>
+<ul class='nav level-2'>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\database-approach\creating-tables.html'><span class='nav-label'>Creating Tables</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\database-approach\materialized-view.html'><span class='nav-label'>Materialized View</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\database-approach\Stored-procedures.html'><span class='nav-label'>Stored Procedures</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\generating-data-models.html'><span class='nav-label'>Generating Data Models</span></a>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#boundedcontext'><span class='nav-label'>Bounded Context</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='boundedcontext'>
+<ul class='nav level-2'>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/bounded-context.html#overview'><span class='nav-label'>Overview</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/bounded-context.html#scenario'><span class='nav-label'>Scenario</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/bounded-context.html#createboundedcontext'><span class='nav-label'>Create Bounded Context</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/bounded-context.html#adddatabaseentities'><span class='nav-label'>Add Database Entities</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#dataoperations'><span class='nav-label'>Data Operations</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='dataoperations'>
+<ul class='nav level-2'>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\data-operations\overview.html'><span class='nav-label'>Overview</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\data-operations\create.html'><span class='nav-label'>Create</span></a>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#read'><span class='nav-label'>Read</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='read'>
+<ul class='nav level-3'>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#all'><span class='nav-label'>All</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#allasync'><span class='nav-label'>AllAsync</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#allinclude'><span class='nav-label'>AllInclude</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#allincludeasync'><span class='nav-label'>AllIncludeAsync</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#count'><span class='nav-label'>Count</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#findyby'><span class='nav-label'>FindBy</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#findbyasync'><span class='nav-label'>FindByAsync</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#findbyinclude'><span class='nav-label'>FindByInclude</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#findbykey'><span class='nav-label'>FindByKey</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#findbykeyasync'><span class='nav-label'>FindByKeyAsync</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#firstasync'><span class='nav-label'>FirstAsync</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#firstordefault'><span class='nav-label'>FirstOrDefault</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#firstordefaultasync'><span class='nav-label'>FirstOrDefaultAsync</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#last'><span class='nav-label'>Last</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#lastasync'><span class='nav-label'>LastAsync</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#lastordefault'><span class='nav-label'>LastOrDefault</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#lastordefaultasync'><span class='nav-label'>LastOrDefaultAsync</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#querable'><span class='nav-label'>Queryable</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#single'><span class='nav-label'>Single</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#singleasync'><span class='nav-label'>SingleAsync</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#singleordefault'><span class='nav-label'>SingleOrDefault</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/data-operations/read.html#singleordefaultasync'><span class='nav-label'>SingleOrDefaultAsync</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\data-operations\update.html'><span class='nav-label'>Update</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\data-operations\delete.html'><span class='nav-label'>Delete</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#databasetransactions'><span class='nav-label'>Database Transactions</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='databasetransactions'>
+<ul class='nav level-2'>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\database-transactions\add-objects-using-transaction.html'><span class='nav-label'>Add Objects Using Transaction</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\database-transactions\add-objects-with-stored-procedure-transaction.html'><span class='nav-label'>Adding Objects With Store Procedure Transaction</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#multitenancy'><span class='nav-label'>Multitenancy</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='multitenancy'>
+<ul class='nav level-2'>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#shareddatabase'><span class='nav-label'>Shared Database</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='shareddatabase'>
+<ul class='nav level-3'>
+<li class='nav-label'><span><a href='\AspNetCore\working-with-data-model/multitenancy/shared-database.html#tenant-based'><span class='nav-label'>Tenant Based</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Schema Based</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\working-with-data-model\multitenancy\multiple-database.html'><span class='nav-label'>Multiple Database</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label disabled'><span><a data-toggle='collapse' data-target='#entitydataauditing'><span class='nav-label'>EntityDataAuditing</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a data-toggle='collapse' data-target='#handleconcurrencyconflicts'><span class='nav-label'>Handle Concurrency Conflicts</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label disabled'><span><a data-toggle='collapse' data-target='#fundamentals'><span class='nav-label'>Fundamentals</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='fundamentals'>
+<ul class='nav level-1'>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>The Startup Class</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a data-toggle='collapse' data-target='#dependencyinjection'><span class='nav-label'>Dependency Injection</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='dependencyinjection'>
+<ul class='nav level-2'>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Register Application Configuration Information</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Register Scoped Services</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Register Singleton Services</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#datavalidation'><span class='nav-label'>Data Validation</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='datavalidation'>
+<ul class='nav level-1'>
+<li class='nav-label'><span><a href='\AspNetCore\\data-validation\max-length.html'><span class='nav-label'>MaxLength</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\data-validation\range.html'><span class='nav-label'>Range</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\data-validation\required.html'><span class='nav-label'>Required</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\data-validation\unique.html'><span class='nav-label'>Unique</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>AllOf</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Alpha</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>AlphaNumeric</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Ascii</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Choice</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Compare</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Compose</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Contains</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Date</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Different</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Different</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Digit</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Email</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>EndsWith</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Even</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Extension</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Factor</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>File</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>FileSize</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>GreaterThanEqualTo</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>GreaterThan</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>HexColor</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Image</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Ip</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Json</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>LatLong</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Lattitude</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>LeapYear</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>LessThanEqualTo</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>LessThan</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Longitude</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Lower</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>MaxDate</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>MaxLength</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>MinNumber</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>MinTime</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>NoneOf</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>NotEmpty</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Numeric</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Odd</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>OneOf</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Password</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Pattern</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Port</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>PrimeNumber</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Upper</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#datasanitization'><span class='nav-label'>Data Sanitization</span></a>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#developingtheapi'><span class='nav-label'>Developing the Api</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='developingtheapi'>
+<ul class='nav level-1'>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#api'><span class='nav-label'>Api</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='api'>
+<ul class='nav level-2'>
+<li class='nav-label'><span><a href='\AspNetCore\developing-the-api/api.html#brief'><span class='nav-label'>Brief</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\developing-the-api/api.html#types'><span class='nav-label'>Types</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\developing-the-api/api.html#bestpractices'><span class='nav-label'>Best Practices</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\developing-the-api\basic-controller.html'><span class='nav-label'>Basic Controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\developing-the-api\domain-controller.html'><span class='nav-label'>Domain Controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\developing-the-api\lookup-controller.html'><span class='nav-label'>Lookup Controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\developing-the-api\search-controller.html'><span class='nav-label'>Search Controller</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>File Controller</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#security'><span class='nav-label'>Security</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='security'>
+<ul class='nav level-1'>
+<li class='nav-label'><span><a href='\AspNetCore\\security\authentication.html'><span class='nav-label'>Authentication</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\security\authorization.html'><span class='nav-label'>Authorization</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\security\user-claims.html'><span class='nav-label'>User Claims</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\security\exception-handling.html'><span class='nav-label'>Exception Handling</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\security\ip-safelist.html'><span class='nav-label'>IpSafelist</span></a>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#owaspstandards'><span class='nav-label'>OWASP Standards</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='owaspstandards'>
+<ul class='nav level-2'>
+<li class='nav-label'><span><a href='\AspNetCore\security/owasp-standards.html#openredirectattacks'><span class='nav-label'>Open Redirect Attacks</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\security/owasp-standards.html#crosssitescriptingattack'><span class='nav-label'>Cross Site Scripting Attack</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\security/owasp-standards.html#enablecrossoriginrequests '><span class='nav-label'>Enable Cross-Origin Requests </span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\security\request-logging.html'><span class='nav-label'>Request Logging</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\security\two-factor-authentication.html'><span class='nav-label'>Two Factor Authentication</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#performance'><span class='nav-label'>Performance</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='performance'>
+<ul class='nav level-1'>
+<li class='nav-label'><span><a href='\AspNetCore\\performance\performance.html#static-cache'><span class='nav-label'>Static Cache</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\performance\performance.html#entitytag'><span class='nav-label'>Entity Tag Cache</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\performance\performance.html#responsecompression'><span class='nav-label'>Response Compression</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#localizationandglobalization'><span class='nav-label'>Localization and Globalization</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='localizationandglobalization'>
+<ul class='nav level-1'>
+<li class='nav-label'><span><a href='\AspNetCore\\localization-and-globalization\global-content.html'><span class='nav-label'>Global Content</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\\localization-and-globalization\component-content.html'><span class='nav-label'>Component Content</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label'><span><a data-toggle='collapse' data-target='#cli'><span class='nav-label'>CLI</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='cli'>
+<ul class='nav level-1'>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#installation'><span class='nav-label'>Installation</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#projectcreation'><span class='nav-label'>Project Creation</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#generatingmodels'><span class='nav-label'>Generating Models</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#generatingcontext'><span class='nav-label'>Generating Context</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#addingsinglemodel'><span class='nav-label'>Adding Single Model</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#addingmultipletablesincontext'><span class='nav-label'>Adding Multiple Tables In Context</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#basiccontroller'><span class='nav-label'>Basic Controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#domaincontroller'><span class='nav-label'>Domain Controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#lookupcontroller'><span class='nav-label'>Lookup Controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#addlookupsinlookupcontroller'><span class='nav-label'>Add lookups in lookup controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#childcontroller'><span class='nav-label'>Child Controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#searchcontroller'><span class='nav-label'>Search Controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#addauthorizationtocontroller'><span class='nav-label'>add authorization to controller</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#addinglocalization'><span class='nav-label'>adding localization</span></a>
+</span></li>
+<li class='nav-label'><span><a href='\AspNetCore\rxwebcore-commands.html#devops'><span class='nav-label'>Devops</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+<li class='nav-label disabled'><span><a data-toggle='collapse' data-target='#tutorials'><span class='nav-label'>Tutorials</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='tutorials'>
+<ul class='nav level-1'>
+<li class='nav-label disabled'><span><a data-toggle='collapse' data-target='#toursofecommerceapplication'><span class='nav-label'>Tours Of Ecommerce Application</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='toursofecommerceapplication'>
+<ul class='nav level-2'>
+<li class='nav-label disabled'><span><a data-toggle='collapse' data-target='#restfulapi'><span class='nav-label'>RESTful API</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='restfulapi'>
+<ul class='nav level-3'>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Introduction</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Database Design</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Authentication/Authorization</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a data-toggle='collapse' data-target='#createproductapi'><span class='nav-label'>Create Product API</span><span class='fa fa-angle-down'></span></a>
+<div class='collapse' id='createproductapi'>
+<ul class='nav level-4'>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Data Sanitization</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Model State Validation</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Unique validation</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Localize Validation Messages</span></a>
+</span></li>
+<li class='nav-label disabled'><span><a ><span class='nav-label'>Business Rules Implementation</span></a>
+</span></li>
+</ul>
+</div>
+</span></li>
+</ul>
+</div>
+</span></li>
+</ul>
+</div>
+</span></li>
+</ul>
+</div>
+</span></li>
+</ul></div></aside>
+
+<div class="main-content col-lg-9" style="left:375px;top: 120px;">
+	<div class="row">
+<div class='row page-section'>
+<div class='col-lg-12'>
+<h1  id='databasetables'>Database Tables<a title='Link to this heading' class='link-header' href='#databasetables'><i class='fa fa-link'></i></a></h1>
+
+<strong>Main Database</strong>
+<p class='showHideElement' >The main database contains all the default tables which are necessary for fulfuling the basic functionalties like authorization and authentication, application objects, localization and globalization etc.. </p>
+</div></div>
+<div class='row page-section'>
+<div class='col-lg-12'>
+<h1  id='applicationobjects'>Application Objects<a title='Link to this heading' class='link-header' href='#applicationobjects'><i class='fa fa-link'></i></a></h1>
+
+<p class='showHideElement' >Some objects need to be stored in the database which are often used in application and its value is limited upto some number based upon the entity their values will be stored in ApplicationObjects as below and making a seperate table for storing the values of countries is not preferable in this case.Example : Status</p>
+<strong>1. ApplicationObjectTypes</strong>
+<p class='showHideElement' >Contains type of Application Objects like status, gender etc.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>ApplicationObjectTypeId</td><td>int</td><td>PK</td></tr>
+<tr><td>ApplicationObjectTypeName</td><td>varchar(100)</td><td>Name of the application Object Type.</td></tr> 
+<tr><td>StatusId</td><td>int</td><td>FK(ApplicationObjects)</td></tr>
+</table>
+<p class='showHideElement' >Inserted data of ApplicationObjectTypes: </p>
+<table class="table table-bordered">
+<tr><th>ApplicationObjectTypeId</th><th>ApplicationObjectTypeName</th><th>StatusId</th></tr>
+<tr><td>1</td><td>Status</td><td>1</td></tr>
+</table>
+<strong>2. ApplicationObjects</strong>
+<p class='showHideElement' >Contains application objects based upon its type.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>ApplicationObjectId</td><td>int</td><td>PK</td></tr>
+<tr><td>ApplicationObjectTypeId</td><td>int</td><td>FK(ApplicationObjectTypes)</td></tr>
+<tr><td>ApplicationObjectName</td><td>varchar(100)</td><td>Name of the application object.</td></tr> 
+<tr><td>StatusId</td><td>int</td><td>FK(ApplicationObjects)</td></tr>
+</table>
+<p class='showHideElement' >Inserted data of ApplicationObjects: </p>
+<table class="table table-bordered">
+<tr><th>ApplicationObjectId</th><th>ApplicationObjectTypeId</th><th>ApplicationObjectName</th><th>StatusId</th></tr>
+<tr><td>1</td><td>1</td><td>Active</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>InActive</td><td>1</td></tr>
+<tr><td>3</td><td>1</td><td>Blocked</td><td>1</td></tr>
+</table>
+</div></div>
+<div class='row page-section'>
+<div class='col-lg-12'>
+<h2  id='applicationmodules'>Application Modules<a title='Link to this heading' class='link-header' href='#applicationmodules'><i class='fa fa-link'></i></a></h2>
+
+<p class='showHideElement' >To effectively manage functionalities of a large enterprise application, we need to break it into seperate units/modules and assign a particular task to each of them. As we have made a human resource enterprise application we take into consideration, three main modules of the application which are Resource Management, Candidate Module and User Module.</p>
+<strong>3. ModuleMasters</strong>
+<p class='showHideElement' >Contains information about application's master modules.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>ModuleMasterId</td><td>int</td><td>PK</td></tr>
+<tr><td>ModuleMasterName</td><td>varchar(100)</td><td>Name of the application module master.</td></tr> 
+<tr><td>StatusId</td><td>int</td><td>FK(ApplicationObjects)</td></tr>
+</table>
+<p class='showHideElement' >Inserted data of ModuleMasters: </p>
+<table class="table table-bordered">
+<tr><th>ModuleMasterId</th><th>ModuleMasterName</th><th>StatusId</th></tr>
+<tr><td>1</td><td>Management</td><td>1</td></tr>
+</table>
+<strong>4. ApplicationModules</strong>
+<p class='showHideElement' >Contains information about all the modules used in the application.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>ApplicationModuleId</td><td>int</td><td>PK</td></tr>
+<tr><td>ModuleMasterId</td><td>int</td><td>FK(ModuleMasters).</td></tr> 
+<tr><td>ParentApplicationModuleId</td><td>int</td><td>Id of parent application module in case of entering a child module</td></tr>
+</table>
+<p class='showHideElement' >Inserted data of ApplicationModules: </p>
+<table class="table table-bordered">
+<tr><th>ApplicationModuleId</th><th>ModuleMasterId</th><th>ParentApplicationModuleId</th></tr>
+<tr><td>1</td><td>1</td><td>NULL</td></tr>
+</table>
+</div></div>
+<div class='row page-section'>
+<div class='col-lg-12'>
+<h2  id='localizationandglobalization'>Localization and Globalization<a title='Link to this heading' class='link-header' href='#localizationandglobalization'><i class='fa fa-link'></i></a></h2>
+
+<p class='showHideElement' >For an application to efficiently work in different regions, it is necessary to maintain its timezones and locales used. A multilingual application includes returning server validation messages, change the whole UI text based upon the selected language. For more information, Please refer [localization-and-globalization]</p>
+<strong>5. ApplicationTimeZones</strong>
+<p class='showHideElement' >It has inserted values of different timezones of the world from the IANA Database. Please refer </p>
+<a class="redirect-link" href="https://www.iana.org/time-zones">IANA</a>.
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>ApplicationTimeZoneId</td><td>int</td><td>PK</td></tr>
+<tr><td>ApplicationTimeZoneName</td><td>nvarchar(100)</td><td>Name of the Application TimeZone</td></tr>
+<tr><td>Comment</td><td>nvarchar(200)</td><td>Information related to Timezone</td></tr> 
+<tr><td>StatusId</td><td>int</td><td>FK(ApplicationObjects)</td></tr>
+</table>
+<p class='showHideElement' >Inserted data of ApplicationTimeZones: </p>
+<table class="table table-bordered">
+<tr><th>ApplicationTimeZoneId</th><th>ApplicationTimeZoneName</th><th>Comment</th><th>StatusId</th></tr>
+<tr><td>1</td><td>America/Mexico_city</td><td>Central Time</td><td>1</td></tr>
+</table>
+<strong>6. ApplicationLocales </strong>
+<p class='showHideElement' >It has details of standard locales used in the world.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>ApplicationLocaleId</td><td>int</td><td>PK</td></tr>
+<tr><td>LocaleCode</td><td>varchar(50)</td><td>Code of the locale</td></tr>
+<tr><td>LocaleName</td><td>nvarchar(300)</td><td>Name of the locale</td></tr> 
+<tr><td>StatusId</td><td>int</td><td>FK(ApplicationObjects)</td></tr>
+</table>
+<p class='showHideElement' >Inserted data of ApplicationLocales: </p>
+<table class="table table-bordered">
+<tr><th>ApplicationLocaleId</th><th>LocaleCode</th><th>LocaleName</th><th>StatusId</th></tr>
+<tr><td>241</td><td>en-US</td><td>English(United States)</td><td>1</td></tr>
+</table>
+<strong>7. LanguageContentKeys</strong>
+<p class='showHideElement' >Stores language content key based upon which the multilingual data is entered. e.g:exceptionMessage</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>LanguageContentKeyId</td><td>int</td><td>PK</td></tr>
+<tr><td>KeyName</td><td>varchar(50)</td><td>Key/type of the language content</td></tr>
+<tr><td>IsComponent</td><td>bit(300)</td><td>1 if the key is a component</td></tr> 
+</table>
+<p class='showHideElement' >Inserted data of LanguageContentKeys: </p>
+<table class="table table-bordered">
+<tr><th>LanguageContentKeyId</th><th>KeyName</th><th>IsComponent</th></tr>
+<tr><td>241</td><td>exceptionMessage</td><td>0</td></tr>
+</table>
+<strong>8. LanguageContents</strong>
+<p class='showHideElement' >Stores language contents of different languages which are required in your application based upon the key.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>LanguageContentId</td><td>int</td><td>PK</td></tr>
+<tr><td>LanguageContentKeyId</td><td>int</td><td>FK(LanguageContentKeys)</td></tr>
+<tr><td>ContentType</td><td>varchar(3)</td><td>Type of the content(global)</td></tr> 
+<tr><td>En</td><td>varchar(max)</td><td>English value of the content</td></tr> 
+<tr><td>Fr</td><td>varchar(max)</td><td>French value of the content</td></tr> 
+</table>
+<p class='showHideElement' >Inserted data of LanguageContents: </p>
+<table class="table table-bordered">
+<tr><th>LanguageContentId</th><th>LanguageContentKeyId</th><th>ContentType</th><th>En</th><th>Fr</th></tr>
+<tr><td>1</td><td>1</td><td>g</td><td>Invalid Credentails</td><td>NULL</td></tr>
+</table>
+<strong>9. ComponentLanguageContents</strong>
+<p class='showHideElement' >Stores multilingual language content component wise.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>ComponentLanguageContentId</td><td>int</td><td>PK</td></tr>
+<tr><td>ComponentKeyId</td><td>int</td><td>FK(LanguageContentKeys)</td></tr>
+<tr><td>LanguageContentId</td><td>int</td><td>FK(LangaugeContents)</td></tr> 
+<tr><td>En</td><td>varchar(max)</td><td>English value of the content</td></tr> 
+<tr><td>Fr</td><td>varchar(max)</td><td>French value of the content</td></tr> 
+</table>
+<p class='showHideElement' >Inserted data of ComponentLanguageContents: </p>
+<table class="table table-bordered">
+<tr><th>ComponentLanguageContentId</th><th>ComponentKeyId</th><th>LanguageContentId</th><th>En</th><th>Fr</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>Invalid Credentails</td><td>NULL</td></tr>
+</table>
+</div></div>
+<div class='row page-section'>
+<div class='col-lg-12'>
+<h2  id='authenticationandauthorization'>Authentication and Authorization<a title='Link to this heading' class='link-header' href='#authenticationandauthorization'><i class='fa fa-link'></i></a></h2>
+
+<p class='showHideElement' >Information of JWT web token, users and its roles for performing authorization and authentication. Whenever a new request is made at the time of login the jwt web token is stored and authorization will require information which will be retrieved from the database.</p>
+<strong>10. ApplicationUsersToken </strong>
+<p class='showHideElement' >Stores information of web token which are generated when any request is made on login method.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>ApplicationUsersTokenId</td><td>int</td><td>PK</td></tr>
+<tr><td>UserId</td><td>int</td><td>FK(Users)</td></tr>
+<tr><td>SecurityKey</td><td>varchar(200)</td><td>Generated security key while the token is created</td></tr> 
+<tr><td>JwtToken</td><td>varchar(max)</td><td>Generated Jwt web token</td></tr> 
+<tr><td>AudienceType</td><td>varchar(50)</td><td>Type of the audience(web user or mobile user)</td></tr> 
+<tr><td>CreatedDateTime</td><td>datetimeoffset(50)</td><td>created date and time of the web token</td></tr> 
+</table>
+<p class='showHideElement' >Inserted data of ApplicationUsersToken: </p>
+<table class="table table-bordered">
+<tr><th>ApplicationUsersTokenId</th><th>UserId</th><th>SecurityKey</th><th>JwtToken</th><th>AudienceType</th><th>CreatedDateTime</th></tr>
+<tr><td>1</td><td>1</td><td>0x2271A2EDF169C5B75291C06D9FC66A6....</td><td>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ..</td><td>NULL</td><td>2019-06-28 06:13:52.327</td></tr>
+</table>
+<strong>11. Users</strong>
+<p class='showHideElement' >Stores information about users of the application.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>UserId</td><td>int</td><td>PK</td></tr>
+<tr><td>ApplicationLocaleId</td><td>int</td><td>FK(ApplicationLocales)</td></tr>
+<tr><td>ApplicationTimeZoneId</td><td>int</td><td>FK(ApplicationTimeZones)</td></tr> 
+<tr><td>LanguageCode</td><td>varchar(3)</td><td>Code of the language based upon user's locale</td></tr> 
+<tr><td>UserName</td><td>nvarchar(50)</td><td>Name of the user</td></tr> 
+<tr><td>Password</td><td>binary(132)</td><td>Password of the user</td></tr> 
+<tr><td>Salt</td><td>binary(140)</td><td>Salt key used to decrypt password</td></tr> 
+<tr><td>LoginBlocked</td><td>bit</td><td>1 if the login is blocked</td></tr> 
+<tr><td>StatusId</td><td>int</td><td>FK(ApplicationObjects)</td></tr> 
+</table>
+<p class='showHideElement' >Inserted data of Users: </p>
+<table class="table table-bordered">
+<tr><th>UserId</th><th>ApplicationLocaleId</th><th>ApplicationTimeZoneId</th><th>LanguageCode</th><th>UserName</th><th>Password</th><th>Salt</th><th>LoginBlocked</th><th>StatusId</th></tr>
+<tr><td>1</td><td>1</td><td>en</td><td>admin</td><td>0x01A508148A63F34..</td><td>0x454353354200...</td><td>0</td><td>1</td></tr>
+</table>
+<strong>12. Roles</strong>
+<p class='showHideElement' >Stores different roles used in the application</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>RoleId</td><td>int</td><td>PK</td></tr>
+<tr><td>RoleName</td><td>varchar(50)</td><td>Name of the role</td></tr>
+<tr><td>StatusId</td><td>int</td><td>FK(ApplicationObjects)</td></tr>
+</table>
+<p class='showHideElement' >Inserted data of Roles: </p>
+<table class="table table-bordered">
+<tr><th>RoleId</th><th>RoleName</th></tr>
+<tr><td>1</td><td>Admin</td></tr>
+</table>
+<strong>13. RolePermissions</strong>
+<p class='showHideElement' >Stores access and rights based upon the role to the application modules.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>RolePermissionId</td><td>int</td><td>PK</td></tr>
+<tr><td>RoleId</td><td>int</td><td>FK(Roles)</td></tr>
+<tr><td>ApplicationModuleId</td><td>int</td><td>FK(ApplicationModules)</td></tr>
+<tr><td>CanView</td><td>bit</td><td>Rights to view</td></tr>
+<tr><td>CanAdd</td><td>bit</td><td>Rights to add</td></tr>
+<tr><td>CanEdit</td><td>bit</td><td>Rights to edit</td></tr>
+<tr><td>CanDelete</td><td>bit</td><td>Rights to delete</td></tr>
+</table>
+<p class='showHideElement' >Inserted data of RolePermissions: </p>
+<table class="table table-bordered">
+<tr><th>RolePermissionId</th><th>RoleId</th><th>ApplicationModuleId</th><th>CanView</th><th>CanAdd</th><th>CanEdit</th><th>CanDelete</th></tr>
+<tr><td>1</td><td>1</td><td><td>1</td></td><td>True</td><td>True</td><td>True</td><td>True</td></tr>
+<tr><td>2</td><td>2</td><td><td>1</td></td><td>True</td><td>False</td><td>False</td><td>False</td></tr>
+</table>
+<strong>14. UserRoles</strong>
+<p class='showHideElement' >Stores users and their respective roles.</p>
+<table class="table table-bordered table-striped">
+<tr><th>Column</th><th>DataType</th><th>Description</th></tr>
+<tr><td>UserRoleId</td><td>int</td><td>PK</td></tr>
+<tr><td>UserId</td><td>int</td><td>FK(Users)</td></tr>
+<tr><td>RoleId</td><td>int</td><td>FK(Roles)</td></tr>
+</table>
+<p class='showHideElement' >Inserted data of UserRoles: </p>
+<table class="table table-bordered">
+<tr><th>UserRoleId</th><th>UserId</th><th>RoleId</th></tr>
+<tr><td>1</td><td>5</td><td>1</td></tr>
+</table>
+</div></div>
+</div></div>
+<script type='text/javascript' src='/assets/rxwebcore/highlight.pack.js'></script><script type='text/javascript'>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

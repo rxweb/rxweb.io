@@ -21,6 +21,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/AspNetCore-assets",
+              "src/AspNetCore",
               "src/manifest.json"
             ],
             "styles": [
@@ -96,6 +98,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/AspNetCore-assets",
+              "src/AspNetCore",
               "src/manifest.json"
             ]
           }

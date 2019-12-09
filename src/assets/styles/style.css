@@ -8919,4 +8919,55 @@ ul.contribution-list li a:hover{
     font-size: 14px;
     color: #0f96e4;
 }
+
+.disabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+ul.nav.level-4 {
+  padding-left: 20px;
+}
+
+
+i.fa.fa-pencil {
+  font-size: 17px;
+  vertical-align: 5px;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.nav.level-3 {
+  padding-left: 40px;
+}
+
+#side-menu li .level-1 li a, #side-menu li .level-2 li a {
+  text-transform: none;
+  line-height: 20px;
+  font-weight: 400 !important;
+  padding: 5px 10px 5px 20px !important;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #34495e !important;
+}
+
+.redirect-link {
+  color: #007bff!important;
+}
+
+.nav.level-2 > .nav-label > span > a > span {
+  padding-left: 20px;
+}
+
+ul.nav.level-1 {
+  padding-left: 20px !important;
+}
 /*-------- do not add any css here ---------- */
