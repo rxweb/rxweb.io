@@ -47,7 +47,7 @@ const APP_LAZY_ROUTES: Routes = [
     path:'why',component:WhyRxwebComponent
   },
   {
-    path:'hidden_brains',component: ContributorsComponent
+    path:'hidden-gems',component: ContributorsComponent
   },
   {
     path:'changelog',component:ChangeLogComponent
