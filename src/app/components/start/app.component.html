@@ -16,7 +16,7 @@
     [src]="gitAsideUrl"></iframe>
 </aside>
 
-<div style="position:relative;min-height:100vh;">
+<div style="position:relative;min-height:98vh;">
   <rx-toast></rx-toast>
   <rx-dialog></rx-dialog>
   <rx-popup></rx-popup>
@@ -24,24 +24,31 @@
   <app-top-bar *ngIf="!isHome"></app-top-bar>
 
   <header *ngIf="isHome" class="header home-header-links">
-   
+
     <div class="row">
       <div class="col-sm-11">
+
+
         <div class="header-links content dynamic-content">
+            <img height="200" class="rxweb-new-logo" width="150" src=" src\assets\images\Rx_Logo_200X46.png">
           <ul class="pull-right list-unstyled list-inline">
-            <li class="list-inline-item"> 
+            <li class="list-inline-item">
               <a routerLink="/home" routerLinkActive="active">Reactive
                 Forms</a>
             </li>
             <li class="list-inline-item">
-              <a  routerLink="/reactive-dynamic-forms/home" routerLinkActive="active">Dynamic Forms
+              <a routerLink="/reactive-dynamic-forms/home" routerLinkActive="active">Dynamic Forms
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="/AspNetCore/step-by-step-guide/overview.html" routerLinkActive="active">RxwebCore
               </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-  
+
   </header>
 
   <main class="main">
@@ -58,6 +65,7 @@
       </div>
 
       <ul *ngIf="!isHome" id="gitter-aside" class="quick-links list-unstyled">
+        {{isHome}}
         <li style="margin-top: -50px;"><a style="border-top: 1px solid #ccc;border-left: 1px solid #ccc;width: 51px;"
             target="_blank" (click)="gitterAside()"><i class="fa fa-comments"></i></a></li>
       </ul>

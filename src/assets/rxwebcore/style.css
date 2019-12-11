@@ -15,7 +15,7 @@ ul.nav.level-1 {
   padding-left: 20px !important;
 }
 
-span.fa.fa-angle-down {
+i.fa.fa-angle-down {
   display: inline-block;
   line-height: 23px;
   font-size: 15px;
@@ -92,6 +92,9 @@ span.fa.fa-angle-down {
     #side-menu li > span {
       display: inline-block;
     }
+    #side-menu li > i {
+      display: inline-block;
+    }
 
     #side-menu li .nav-second-level li.active a {
       background-color: #f7f9fa;
@@ -135,7 +138,7 @@ ul#side-menu {
   list-style: none;
 }
 
-#side-menu li a span.fa {
+#side-menu li a i.fa {
   display: inline-block;
   line-height: 23px;
   font-size: 15px;
@@ -255,6 +258,13 @@ a {
   padding-left: 20px;
 }
 
+
+.rxweb-new-logo{
+  
+            height: 34.5;
+            width: 150px; 
+            margin-top: 7px;
+}
 /* .header-links > ul > li > .mega-menu { */
 
 /* position: absolute; */

@@ -8551,6 +8551,7 @@ a.stop:hover {
 
 .home-header-links {
     border: none!important;
+    margin-top: 14PX;
 }
 
 input.is-invalid {
@@ -8969,5 +8970,9 @@ a {
 
 ul.nav.level-1 {
   padding-left: 20px !important;
+}
+.rxweb-new-logo{
+    margin-top: 6px;
+    margin-left: 65px;
 }
 /*-------- do not add any css here ---------- */
