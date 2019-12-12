@@ -6314,7 +6314,7 @@ ul.menu li {
     /* font-weight: 600; */
     /* background-color: #dfeff8; */
     /* border-left: 4px solid #0f96e4; */
-    color: #0f96e4;
+    color: #0f96e4!important;
 }
 
 #navigation, .header-link {
