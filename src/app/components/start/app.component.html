@@ -64,8 +64,7 @@
         <router-outlet></router-outlet>
       </div>
 
-      <ul *ngIf="!isHome" id="gitter-aside" class="quick-links list-unstyled">
-        {{isHome}}
+      <ul *ngIf="!isHome" id="gitter-aside" class="quick-links list-unstyled">    
         <li style="margin-top: -50px;"><a style="border-top: 1px solid #ccc;border-left: 1px solid #ccc;width: 51px;"
             target="_blank" (click)="gitterAside()"><i class="fa fa-comments"></i></a></li>
       </ul>

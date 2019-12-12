@@ -7561,7 +7561,7 @@ a.card-body.text-center:hover
 }
 
 .fas {
-    color: #E8E8E8;
+    color: #E8E8E8!important;
 }
 
 .btn:not([href]):not([type]):not(:disabled):not(.disabled) {
