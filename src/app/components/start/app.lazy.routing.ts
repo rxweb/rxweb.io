@@ -77,6 +77,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/community/community.module#CommunityModule',
   },
   {
+    path: 'rx-web-core',
+    loadChildren: 'src/app/components/htmlpages/html.page.module#HtmlPageModule',
+  },
+  {
     path: 'form-builder',
     loadChildren: 'src/app/components/form-builder/form-builder-shared.module#FormBuilderSharedModule',
   },

@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Overview",
+        "href": "overview"
+    },
+    {
+        "title": "Create",
+        "href": "create"
+    },
+    {
+        "title": "Read",
+        "path": "",
+        "childrens": [
+            {
+                "title": "All",
+                "href": "working-with-data-model/data-operations/read.html#all"
+            },
+            {
+                "title": "AllAsync",
+                "href": "working-with-data-model/data-operations/read.html#allasync"
+            },
+            {
+                "title": "AllInclude",
+                "href": "working-with-data-model/data-operations/read.html#allinclude"
+            },
+            {
+                "title": "AllIncludeAsync",
+                "href": "working-with-data-model/data-operations/read.html#allincludeasync"
+            },
+            {
+                "title": "Count",
+                "href": "working-with-data-model/data-operations/read.html#count"
+            },
+            {
+                "title": "FindBy",
+                "href": "working-with-data-model/data-operations/read.html#findyby"
+            },
+            {
+                "title": "FindByAsync",
+                "href": "working-with-data-model/data-operations/read.html#findbyasync"
+            },
+            {
+                "title": "FindByInclude",
+                "href": "working-with-data-model/data-operations/read.html#findbyinclude"
+            },
+            {
+                "title": "FindByKey",
+                "href": "working-with-data-model/data-operations/read.html#findbykey"
+            },
+            {
+                "title": "FindByKeyAsync",
+                "href": "working-with-data-model/data-operations/read.html#findbykeyasync"
+            },
+            {
+                "title": "FirstAsync",
+                "href": "working-with-data-model/data-operations/read.html#firstasync"
+            },
+            {
+                "title": "FirstOrDefault",
+                "href": "working-with-data-model/data-operations/read.html#firstordefault"
+            },
+            {
+                "title": "FirstOrDefaultAsync",
+                "href": "working-with-data-model/data-operations/read.html#firstordefaultasync"
+            },
+            {
+                "title": "Last",
+                "href": "working-with-data-model/data-operations/read.html#last"
+            },
+            {
+                "title": "LastAsync",
+                "href": "working-with-data-model/data-operations/read.html#lastasync"
+            },
+            {
+                "title": "LastOrDefault",
+                "href": "working-with-data-model/data-operations/read.html#lastordefault"
+            },
+            {
+                "title": "LastOrDefaultAsync",
+                "href": "working-with-data-model/data-operations/read.html#lastordefaultasync"
+            },
+            {
+                "title": "Queryable",
+                "href": "working-with-data-model/data-operations/read.html#querable"
+            },
+            {
+                "title": "Single",
+                "href": "working-with-data-model/data-operations/read.html#single"
+            },
+            {
+                "title": "SingleAsync",
+                "href": "working-with-data-model/data-operations/read.html#singleasync"
+            },
+            {
+                "title": "SingleOrDefault",
+                "href": "working-with-data-model/data-operations/read.html#singleordefault"
+            },
+            {
+                "title": "SingleOrDefaultAsync",
+                "href": "working-with-data-model/data-operations/read.html#singleordefaultasync"
+            }
+        ]
+    },
+    {
+        "title": "Update",
+        "href": "update"
+    },
+    {
+        "title": "Delete",
+        "href": "delete"
+    }
+]

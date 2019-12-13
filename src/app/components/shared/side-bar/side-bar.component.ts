@@ -582,6 +582,22 @@ export class SideBarComponent implements OnInit {
           this.showComponent = true;
         });
       }
+      else if(location.pathname.includes("rx-web-core"))
+      {
+        this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
+          debugger;
+          this.links = response.links;
+          var splitedArray = location.pathname.split('#')[0].split('/')
+          if (splitedArray[1]) {
+            var currentArray = this.links.filter(a => a.path == splitedArray[1]);
+            if (currentArray && currentArray.length > 0) {
+              currentArray[0].isActive = true;
+              currentArray[0].isOpen = true;
+            }
+          }
+        });
+        this.showComponent = true;
+      }
       else {
         this.http.get('assets/json/sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
           this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
@@ -663,9 +679,11 @@ export class SideBarComponent implements OnInit {
           this.showComponent = true;
         });
       }
+    
     }
   }
   navigateTo(link: any, secondlevel: any, thirdlevel: any): void {
+  
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;
@@ -692,9 +710,15 @@ export class SideBarComponent implements OnInit {
         thirdlevel.isOpen = true;
       }
       link.isActive = true;
-      this.router.navigateByUrl(link.uri);
-    }
     
+      
+     
+      this.router.navigateByUrl(link.uri);
+    
+    }
+    else
+    if(link.href != null)
+    this.router.navigateByUrl(link.href)
   }
 
   hideSideBar(): void {

@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Shared Database",
+        "path": "",
+        "childrens": [
+            {
+                "title": "Tenant Based",
+                "href": "working-with-data-model/multitenancy/shared-database.html#tenant-based"
+            },
+            {
+                "title": "Schema Based",
+                "href": "working-with-data-model/multitenancy/shared-database.html#schema-based",
+                "disabled":true
+            }
+        ]
+    },
+    {
+        "title": "Multiple Database",
+        "href": "multiple-database"
+    }
+]

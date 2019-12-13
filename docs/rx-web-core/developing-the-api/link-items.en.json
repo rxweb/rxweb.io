@@ -1,0 +1,40 @@
+[{
+    "title":"Api",
+    "path":"",
+    "childrens": [
+        {
+            "title": "Brief",
+            "href": "developing-the-api/api.html#brief"
+        },
+        {
+            "title": "Types",
+            "href": "developing-the-api/api.html#types"
+        },
+        {
+            "title": "Best Practices",
+            "href": "developing-the-api/api.html#bestpractices"
+        }
+    ]
+},
+{
+    "title":"Basic Controller",
+    "href":"basic-controller"
+},
+{
+    "title":"Domain Controller",
+    "href":"domain-controller"
+},
+{
+    "title":"Lookup Controller",
+    "href":"lookup-controller"
+},
+{
+    "title":"Search Controller",
+    "href":"search-controller"
+},
+{
+    "title":"File Controller",
+    "href":"file-controller",
+    "disabled":true
+}
+]

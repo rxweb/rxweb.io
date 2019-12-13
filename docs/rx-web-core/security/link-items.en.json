@@ -1,0 +1,46 @@
+[{
+    "title":"Authentication",
+    "href":"authentication"
+},
+{
+    "title":"Authorization",
+    "href":"authorization"
+},
+{
+    "title":"User Claims",
+    "href":"user-claims"
+},
+{
+    "title":"Exception Handling",
+    "href":"exception-handling"
+},
+{
+    "title":"IpSafelist",
+    "href":"ip-safelist"
+},
+{
+    "title":"OWASP Standards",
+    "path":"",
+    "childrens": [
+        {
+            "title": "Open Redirect Attacks",
+            "href": "security/owasp-standards.html#openredirectattacks"
+        },
+        {
+            "title": "Cross Site Scripting Attack",
+            "href": "security/owasp-standards.html#crosssitescriptingattack"
+        },
+        {
+            "title": "Enable Cross-Origin Requests ",
+            "href": "security/owasp-standards.html#enablecrossoriginrequests "
+        }
+    ]
+},
+{
+    "title":"Request Logging",
+    "href":"request-logging"
+},
+{
+    "title":"Two Factor Authentication",
+    "href":"two-factor-authentication"
+}]

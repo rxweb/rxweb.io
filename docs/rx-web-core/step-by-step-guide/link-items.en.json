@@ -1,0 +1,28 @@
+[{
+    "title":"Overview",
+    "href":"overview"
+},
+{
+    "title":"Prerequisites",
+    "href":"project-creation.html#prerequisites"
+},
+{
+    "title":"Installation",
+    "href":"project-creation.html#installrxwebtool"
+},
+{
+    "title":"Project Creation",
+    "href":"project-creation.html#projectcreation"
+},
+{
+    "title":"Project Structure",
+    "href":"project-structure"
+},
+{
+    "title":"Database Information",
+    "href":"database-information"
+},
+{
+    "title":"Run The Project",
+    "href":"run-the-project"
+}]

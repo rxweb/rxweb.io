@@ -1,0 +1,202 @@
+[
+    {
+        "path": "step-by-step-guide",
+        "title": "Step By Step Guide"
+    },
+    {
+        "path": "working-with-data-model",
+        "title": "Working with Data Model"
+    },
+    {
+        "path": "fundamentals",
+        "title": "Fundamentals",
+        "disabled": true,
+        "childrens": [
+            {
+                "title": "The Startup Class",
+                "href": "the-startup-class",
+                "disabled": true
+            },
+            {
+                "title": "Dependency Injection",
+                "path":"dependency-injection",
+                "disabled": true,
+                "childrens": [
+                    {
+                        "title": "Register Application Configuration Information",
+                        "href": "register-application-configuration-information",
+                        "disabled": true
+                    },
+                    {
+                        "title": "Register Scoped Services",
+                        "href": "register-scoped-services",
+                        "disabled": true
+                    },
+                    {
+                        "title": "Register Singleton Services",
+                        "href": "register-singleton-services",
+                        "disabled": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "path": "data-validation",
+        "title": "Data Validation"
+    },
+    {
+        "path": "data-sanitization",
+        "title": "Data Sanitization"
+    },
+    {
+        "path": "developing-the-api",
+        "title": "Developing the Api"
+    },
+    {
+        "path": "security",
+        "title": "Security"
+    },
+    {
+        "path": "performance",
+        "title": "Performance"
+    },
+    {
+        "path": "localization-and-globalization",
+        "title": "Localization and Globalization"
+    },
+    {
+        "title": "CLI",
+        "path": "",
+        "childrens": [
+            {
+                "title": "Installation",
+                "href": "rxwebcore-commands.html#installation"
+            },
+            {
+                "title": "Project Creation",
+                "href": "rxwebcore-commands.html#projectcreation"
+            },
+            {
+                "title": "Generating Models",
+                "href": "rxwebcore-commands.html#generatingmodels"
+            },
+            {
+                "title": "Generating Context",
+                "href": "rxwebcore-commands.html#generatingcontext"
+            },
+            {
+                "title": "Adding Single Model",
+                "href": "rxwebcore-commands.html#addingsinglemodel"
+            },
+            {
+                "title": "Adding Multiple Tables In Context",
+                "href": "rxwebcore-commands.html#addingmultipletablesincontext"
+            },
+            {
+                "title": "Basic Controller",
+                "href": "rxwebcore-commands.html#basiccontroller"
+            },
+            {
+                "title": "Domain Controller",
+                "href": "rxwebcore-commands.html#domaincontroller"
+            },
+            {
+                "title": "Lookup Controller",
+                "href": "rxwebcore-commands.html#lookupcontroller"
+            },
+            {
+                "title": "Add lookups in lookup controller",
+                "href": "rxwebcore-commands.html#addlookupsinlookupcontroller"
+            },
+            {
+                "title": "Child Controller",
+                "href": "rxwebcore-commands.html#childcontroller"
+            },
+            {
+                "title": "Search Controller",
+                "href": "rxwebcore-commands.html#searchcontroller"
+            },
+            {
+                "title": "add authorization to controller",
+                "href": "rxwebcore-commands.html#addauthorizationtocontroller"
+            },
+            {
+                "title": "adding localization",
+                "href": "rxwebcore-commands.html#addinglocalization"
+            },
+            {
+                "title": "Devops",
+                "href": "rxwebcore-commands.html#devops"
+            }
+        ]
+    },
+    {
+        "path": "tutorials",
+        "title": "Tutorials",
+        "disabled": true,
+        "childrens": [
+            {
+                "title": "Tours Of Ecommerce Application",
+                "path": "register-application-configuration-information",
+                "disabled": true,
+                "childrens": [
+                    {
+                        "title": "RESTful API",
+                        "path": "restful-api",
+                        "disabled": true,
+                        "childrens": [
+                            {
+                                "title": "Introduction",
+                                "href": "introduction",
+                                "disabled": true
+                            },
+                            {
+                                "title": "Database Design",
+                                "href": "database-design",
+                                "disabled": true
+                            },
+                            {
+                                "title": "Authentication/Authorization",
+                                "href": "authentication",
+                                "disabled": true
+                            },
+                            {
+                                "title": "Create Product API",
+                                "path": "authentication",
+                                "disabled": true,
+                                "childrens": [
+                                    {
+                                        "title": "Data Sanitization",
+                                        "href": "data-sanitization",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "title": "Model State Validation",
+                                        "href": "model-state-validation",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "title": "Unique validation",
+                                        "href": "unique-validation",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "title": "Localize Validation Messages",
+                                        "href": "localize-validation-messages",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "title": "Business Rules Implementation",
+                                        "href": "business-rules-implementation",
+                                        "disabled": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,235 @@
+[{
+    "title":"MaxLength",
+    "href":"max-length"
+},
+{
+    "title":"Range",
+    "href":"range"
+},
+{
+    "title":"Required",
+    "href":"required"
+},
+{
+    "title":"Unique",
+    "href":"unique"
+},
+{
+    "title":"AllOf",
+    "href":"all-of",
+    "disabled":true 
+},
+{
+    "title":"Alpha",
+    "href":"alpha",
+    "disabled":true 
+},
+{
+    "title":"AlphaNumeric",
+    "href":"alpha-numeric",
+    "disabled":true 
+},
+{
+    "title":"Ascii",
+    "href":"ascii",
+    "disabled":true 
+},
+{
+    "title":"Choice",
+    "href":"choice",
+    "disabled":true 
+},
+{
+    "title":"Compare",
+    "href":"compare",
+    "disabled":true 
+},
+{
+    "title":"Compose",
+    "href":"compose",
+    "disabled":true 
+},
+{
+    "title":"Contains",
+    "href":"contains",
+    "disabled":true 
+},
+{
+    "title":"Date",
+    "href":"date",
+    "disabled":true 
+},
+{
+    "title":"Different",
+    "href":"different",
+    "disabled":true 
+},
+{
+    "title":"Different",
+    "href":"different",
+    "disabled":true 
+},
+{
+    "title":"Digit",
+    "href":"digit",
+    "disabled":true 
+},{
+    "title":"Email",
+    "href":"email",
+    "disabled":true 
+},{
+    "title":"EndsWith",
+    "href":"ends-with",
+    "disabled":true 
+},{
+    "title":"Even",
+    "href":"even",
+    "disabled":true 
+},{
+    "title":"Extension",
+    "href":"extension",
+    "disabled":true 
+},{
+    "title":"Factor",
+    "href":"factor",
+    "disabled":true 
+},{
+    "title":"File",
+    "href":"file",
+    "disabled":true 
+},{
+    "title":"FileSize",
+    "href":"file-size",
+    "disabled":true 
+},{
+    "title":"GreaterThanEqualTo",
+    "href":"greater-than-equal-to",
+    "disabled":true 
+},
+{
+    "title":"GreaterThan",
+    "href":"greater-than",
+    "disabled":true 
+},{
+    "title":"HexColor",
+    "href":"hex-color",
+    "disabled":true 
+},{
+    "title":"Image",
+    "href":"image",
+    "disabled":true 
+},{
+    "title":"Ip",
+    "href":"ip",
+    "disabled":true 
+},{
+    "title":"Json",
+    "href":"json",
+    "disabled":true 
+},
+{
+    "title":"LatLong",
+    "href":"lat-long",
+    "disabled":true 
+},
+{
+    "title":"Lattitude",
+    "href":"lattitude",
+    "disabled":true 
+},
+{
+    "title":"LeapYear",
+    "href":"leap-year",
+    "disabled":true 
+},
+{
+    "title":"LessThanEqualTo",
+    "href":"less-than-equal-to",
+    "disabled":true 
+},
+{
+    "title":"LessThan",
+    "href":"less-than-equal-to",
+    "disabled":true 
+},
+{
+    "title":"Longitude",
+    "href":"longitude",
+    "disabled":true 
+},
+{
+    "title":"Lower",
+    "href":"lower",
+    "disabled":true 
+},
+{
+    "title":"MaxDate",
+    "href":"max-date",
+    "disabled":true 
+},
+{
+    "title":"MaxLength",
+    "href":"max-length",
+    "disabled":true 
+},
+{
+    "title":"MinNumber",
+    "href":"min-number",
+    "disabled":true 
+},
+{
+    "title":"MinTime",
+    "href":"min-time",
+    "disabled":true 
+},
+{
+    "title":"NoneOf",
+    "href":"none-of",
+    "disabled":true 
+},
+{
+    "title":"NotEmpty",
+    "href":"not-empty",
+    "disabled":true 
+},
+{
+    "title":"Numeric",
+    "href":"numeric",
+    "disabled":true 
+},
+{
+    "title":"Odd",
+    "href":"odd",
+    "disabled":true 
+},
+{
+    "title":"OneOf",
+    "href":"one-of",
+    "disabled":true 
+},
+{
+    "title":"Password",
+    "href":"password",
+    "disabled":true 
+},
+{
+    "title":"Pattern",
+    "href":"pattern",
+    "disabled":true 
+},
+{
+    "title":"Port",
+    "href":"port",
+    "disabled":true 
+},
+{
+    "title":"PrimeNumber",
+    "href":"prime-number",
+    "disabled":true 
+},
+{
+    "title":"Upper",
+    "href":"upper",
+    "disabled":true 
+}
+]

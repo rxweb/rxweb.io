@@ -1,0 +1,54 @@
+[
+    {
+        "path":"database-approach",
+        "title": "Database Approach"
+    },
+    {
+        "title": "Generating Data Models",
+        "href": "generating-data-models"
+    },
+    {
+        "title": "Bounded Context",
+        "path": "",
+        "childrens": [
+            {
+                "title": "Overview",
+                "href": "working-with-data-model/bounded-context.html#overview"
+            },
+            {
+                "title": "Scenario",
+                "href": "working-with-data-model/bounded-context.html#scenario"
+            },
+            {
+                "title": "Create Bounded Context",
+                "href": "working-with-data-model/bounded-context.html#createboundedcontext"
+            },
+            {
+                "title": "Add Database Entities",
+                "href": "working-with-data-model/bounded-context.html#adddatabaseentities"
+            }
+        ]
+    },
+    {
+        "path":"data-operations",
+        "title": "Data Operations"
+    },
+    {
+        "path":"database-transactions",
+        "title": "Database Transactions"
+    },
+    {
+        "path":"multitenancy",
+        "title": "Multitenancy"
+    },
+    {
+        "path":"entity-data-auditing",
+        "title": "EntityDataAuditing",
+        "disabled":true
+    },
+    {
+        "path":"handle-concurrency-conflicts",
+        "title": "Handle Concurrency Conflicts",
+        "disabled":true
+    }
+]
