@@ -789,8 +789,8 @@
             {
                 "childrens": [],
                 "title": "Two Factor Authentication",
-                "path": "two-factor-authentication",
-                "href": "rx-web-core/security/two-factor-authentication"
+                "path": "two-factor-authentication"
+               
             }
         ],
         "title": "Security",
