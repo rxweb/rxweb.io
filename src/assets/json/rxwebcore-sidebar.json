@@ -264,8 +264,8 @@
                             }
                         ],
                         "title": "Read",
-                        "path": "",
-                        "href": "/working-with-data-model/data-operations/"
+                        "path": ""
+                     
                     },
                     {
                         "childrens": [],
@@ -321,8 +321,8 @@
                             }
                         ],
                         "title": "Shared Database",
-                        "path": "",
-                        "href": "/working-with-data-model/multitenancy/"
+                        "path": ""
+                       
                     },
                     {
                         "childrens": [],
@@ -935,8 +935,7 @@
             }
         ],
         "title": "CLI",
-        "path": "",
-        "href": "/rx-web-core/rxwebcore-commands/cli"
+        "path": ""
     },
     {
         "childrens": [
