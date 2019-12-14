@@ -109,8 +109,10 @@
                     }
                 ],
                 "title": "Bounded Context",
-                "path": "",
-                "href": "/working-with-data-model/"
+                "path": ""
+              
+
+
             },
             {
                 "childrens": [
@@ -279,8 +281,8 @@
                     }
                 ],
                 "title": "Data Operations",
-                "path": "data-operations",
-                "href": "/working-with-data-model/"
+                "path": "data-operations"
+               
             },
             {
                 "childrens": [
@@ -298,8 +300,8 @@
                     }
                 ],
                 "title": "Database Transactions",
-                "path": "database-transactions",
-                "href": "/working-with-data-model/"
+                "path": "database-transactions"
+             
             },
             {
                 "childrens": [
@@ -330,8 +332,8 @@
                     }
                 ],
                 "title": "Multitenancy",
-                "path": "multitenancy",
-                "href": "/working-with-data-model/"
+                "path": "multitenancy"
+                
             },
             {
                 "childrens": [],
@@ -656,8 +658,8 @@
     {
         "childrens": [],
         "title": "Data Sanitization",
-        "path": "data-sanitization",
-        "href": "rx-web-core/"
+        "path": "data-sanitization"
+        
     },
     {
         "childrens": [
@@ -683,8 +685,8 @@
                     }
                 ],
                 "title": "Api",
-                "path": "",
-                "href": "/developing-the-api/"
+                "path": ""
+                
             },
             {
                 "childrens": [],
