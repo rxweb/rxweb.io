@@ -615,12 +615,12 @@ export class SideBarComponent implements OnInit {
               if (currentArray[0].childrens) {   
                       debugger;
                   var InnerNestedCurrentArray = currentArray[0].childrens.filter(a => a.path.includes((splitedArray[3])))
-                  if(InnerNestedCurrentArray){
+                  if(InnerNestedCurrentArray[0]){
                   InnerNestedCurrentArray[0].isActive = true;
                   InnerNestedCurrentArray[0].isOpen = true;
                     if(InnerNestedCurrentArray[0].childrens){
                       var innerMostCurrentLink = InnerNestedCurrentArray[0].childrens.filter(a=>a.path == splitedArray[4])
-                      if(innerMostCurrentLink){
+                      if(innerMostCurrentLink[0]){
                         innerMostCurrentLink[0].isActive = true;
                       }
                     }
