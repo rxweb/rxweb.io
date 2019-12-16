@@ -19,7 +19,7 @@ The controller must be inherited from the class `BaseChildController` in which  
 
 To Create a child controller, open the `Package Manager Console` and run the following command:
 
-> rxwebcore --controller --basic --main <Child_Controller_Name> --uow <Module_Name> --parent <Parent_Controller_Name>
+> rxwebcore --controller --basic --main &ltChild_Controller_Name&gt --uow &ltModule_Name&gt --parent &ltParent_Controller_Name&gt
 
 Let's consider a scenario where you want a `CandidateAvailabilitiesController` as a child controller and `CandidateController` as the parent Controller in the `ResourceModule`, you have to write:
 
@@ -29,7 +29,7 @@ In the above command, `child` is the type of controller, `CandidateAvailabilitie
 
 > If you want to create a domain child controller, run the below command :  
 
-> rxwebcore --controller --domain --main <Child_Controller_Name> --uow <Module_Name> --parent <Parent_Controller_Name>
+> rxwebcore --controller --domain --main &ltChild_Controller_Name&gt --uow &ltModule_Name&gt --parent &ltParent_Controller_Name&gt
 
 # Methods
 

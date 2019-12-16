@@ -1,5 +1,5 @@
 ---
-title: Database Information
+title: Generated Database Tables
 author: rxcontributorone
 category: step-by-step-guide
 type:simple

@@ -19,7 +19,7 @@ Users Entity requires a custom logic to be added into it. For example it is havi
 
 To create a domain controller, open the `Package Manager Console` and run the following command.
 
-> rxwebcore --controller --domain --main <Controller_Name> --uow <Module_Name>
+> rxwebcore --controller --domain --main &ltController_Name&gt --uow &ltModule_Name&gt
 
 Lets consider a scenario where you want to create a `UsersController` with high complexity true in the `UsersModule`, you have to write:
 

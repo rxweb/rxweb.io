@@ -18,7 +18,7 @@ The controller will have a predefined route which include the controller name. F
 
 To create a search controller, open the `Package Manager Console` and run the following command.
 
-> rxwebcore --controller --search --main <Controller_Name> --uow <Module_Name> --spname <Name_of_stored_procedure>
+> rxwebcore --controller --search --main &ltController_Name&gt --uow &ltModule_Name&gt --spname &ltName_of_stored_procedure&gt
 
 Lets consider a scenario where you want to create a `UsersSearchController` in the `OrdersModule`, you have to write:
 

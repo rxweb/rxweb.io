@@ -9,6 +9,8 @@ linktitle:delete
 
 Used for delete operation to be done on entity.
 
+# Example
+
 ```js
     public async Task DeleteAsync(int id)
     {

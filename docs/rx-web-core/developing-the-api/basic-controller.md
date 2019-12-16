@@ -19,7 +19,7 @@ The Candidate entity requires the basic data operations(Based upon the ResourceC
 
 To Create a basic controller, open the `Package Manager Console` and run the following command:
 
-> rxwebcore --controller --basic --main <Controller_Name> --uow <Module_Name>
+> rxwebcore --controller --basic --main &ltController_Name&gt --uow &ltModule_Name&gt
 
 Let's consider a scenario where you want a `CandidatesController` in the `ResourceModule`, you have to write:
 

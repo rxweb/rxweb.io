@@ -1,5 +1,5 @@
 ---
-title: Step By Step Guide
+title: Project Setup
 author: rxcontributorone
 category: step-by-step-guide  
 type:simple

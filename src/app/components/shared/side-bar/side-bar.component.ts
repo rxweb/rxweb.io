@@ -198,7 +198,7 @@ export class SideBarComponent implements OnInit {
             var currentArray;
             if (location.pathname.includes('generic-getting-started')) {
               currentElement = this.links.filter(a => a.linkTitle == splitedArray[2]);
-              
+
               if (currentElement.length != 0) {
                 currentElement[0].isActive = true;
                 currentElement[0].isOpen = true;
@@ -213,7 +213,7 @@ export class SideBarComponent implements OnInit {
               if (splitedArray[3]) {
                 if (splitedArray[3] == "list") {
                   currentElement = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[3]);
-  
+
                   if (currentElement.length != 0) {
                     currentElement[0].isActive = true;
                     currentElement[0].isOpen = true;
@@ -329,7 +329,7 @@ export class SideBarComponent implements OnInit {
             var currentArray;
             if (location.pathname.includes('http-getting-started')) {
               currentElement = this.links.filter(a => a.linkTitle == splitedArray[2]);
-              
+
               if (currentElement.length != 0) {
                 currentElement[0].isActive = true;
                 currentElement[0].isOpen = true;
@@ -344,7 +344,7 @@ export class SideBarComponent implements OnInit {
               if (splitedArray[3]) {
                 if (splitedArray[3] == "methods") {
                   // currentElement = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[3]);
-  
+
                   // if (currentElement.length != 0) {
                   //   currentElement[0].isActive = true;
                   //   currentElement[0].isOpen = true;
@@ -460,7 +460,7 @@ export class SideBarComponent implements OnInit {
             var currentArray;
             if (location.pathname.includes('sanitizers-getting-started')) {
               currentElement = this.links.filter(a => a.linkTitle == splitedArray[2]);
-              
+
               if (currentElement.length != 0) {
                 currentElement[0].isActive = true;
                 currentElement[0].isOpen = true;
@@ -475,7 +475,7 @@ export class SideBarComponent implements OnInit {
               if (splitedArray[3]) {
                 if (splitedArray[3] == "list") {
                   currentElement = parentElement[0].childrens.filter(a => a.otherUri == splitedArray[3]);
-  
+
                   if (currentElement.length != 0) {
                     currentElement[0].isActive = true;
                     currentElement[0].isOpen = true;
@@ -582,17 +582,51 @@ export class SideBarComponent implements OnInit {
           this.showComponent = true;
         });
       }
-      else if(location.pathname.includes("rx-web-core"))
-      {
+      else if (location.pathname.includes("rx-web-core")) {
         this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
-          debugger;
+          debugger; 
           this.links = response.links;
+          var hasLinkArray = location.href.split('#')[1];
           var splitedArray = location.pathname.split('#')[0].split('/')
           if (splitedArray[1]) {
-            var currentArray = this.links.filter(a => a.path == splitedArray[1]);
+            var currentArray = this.links.filter(a => a.path.includes(splitedArray[2]));
             if (currentArray && currentArray.length > 0) {
               currentArray[0].isActive = true;
               currentArray[0].isOpen = true;
+              if (!hasLinkArray) {
+
+                var currentLink = currentArray[0].childrens.filter(a => a.path.includes(splitedArray[3]))
+              }
+              else
+                if (currentArray[0].childrens[0].childrens.length > 0) {
+                  var openElement = currentArray[0].childrens.filter(a => a.path.includes(splitedArray[2]))[0];
+                  if (openElement) {
+                    openElement.isOpen = true;
+                    openElement.isActive = true;
+                    var currentLink = currentArray[0].childrens[0].childrens.filter(a => a.href.includes(hasLinkArray))
+                  }
+                }
+                else {
+                  var currentLink = currentArray[0].childrens.filter(a => a.href.includes(hasLinkArray))
+                }
+                if(currentLink){
+              currentLink[0].isActive = true;
+                }
+              if (currentArray[0].childrens) {   
+                      debugger;
+                  var InnerNestedCurrentArray = currentArray[0].childrens.filter(a => a.path.includes((splitedArray[3])))
+                  if(InnerNestedCurrentArray){
+                  InnerNestedCurrentArray[0].isActive = true;
+                  InnerNestedCurrentArray[0].isOpen = true;
+                    if(InnerNestedCurrentArray[0].childrens){
+                      var innerMostCurrentLink = InnerNestedCurrentArray[0].childrens.filter(a=>a.path == splitedArray[4])
+                      if(innerMostCurrentLink){
+                        innerMostCurrentLink[0].isActive = true;
+                      }
+                    }
+                  }
+                  
+              }
             }
           }
         });
@@ -679,11 +713,11 @@ export class SideBarComponent implements OnInit {
           this.showComponent = true;
         });
       }
-    
+
     }
   }
   navigateTo(link: any, secondlevel: any, thirdlevel: any): void {
-  
+
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;
@@ -710,15 +744,15 @@ export class SideBarComponent implements OnInit {
         thirdlevel.isOpen = true;
       }
       link.isActive = true;
-    
-      
-     
+
+
+
       this.router.navigateByUrl(link.uri);
-    
+
     }
     else
-    if(link.href != null)
-    this.router.navigateByUrl(link.href)
+      if (link.href != null)
+        this.router.navigateByUrl(link.href)
   }
 
   hideSideBar(): void {

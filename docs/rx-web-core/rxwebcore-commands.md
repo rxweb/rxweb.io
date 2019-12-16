@@ -12,19 +12,19 @@ rxwebcore commands are used for several operation in a .NET Core such as creatin
 ## Installation :
 To use rxwebcore commands using package manager console, you must install `rxwebcore` globally using this command:
 
-> dotnet install tool -g rxwebcore
+&gt dotnet install tool -g rxwebcore
 
 ## Commands : 
 
 ### Project Creation
 To create a new project using rxwebcore CLI. Run this command 
 
-> rxwebcore --add-project <Project_Name>
+&gt rxwebcore --add-project &ltProject_Name&gt
 
 For more information on creating a project. Please refer <a class="redirect-link" href="\AspNetCore\step-by-step-guide\project-creation.html">Project Creation</a>
 
 ### Generating Models
-This command will generate POCO model classes having database objects as properties. In this command --models denote generation of models, --<ConnectionStringName> is the name of the connection which is configured in `appsettings.json` as mentioned below. 
+This command will generate POCO model classes having database objects as properties. In this command --models denote generation of models, --&ltConnectionStringName&gt is the name of the connection which is configured in `appsettings.json` as mentioned below. 
 
 ```js
 "Database": {
@@ -35,12 +35,12 @@ This command will generate POCO model classes having database objects as propert
 }
 ```
 
-> rxwebcore --models --<ConnectionString_Name> 
+&gt rxwebcore --models --&ltConnectionString_Name&gt 
 
 ### Generating Context
 This command generates a bounded context where --context denotes making of a context, --main is the key of the connectionstring which is configured in the `appsetting.json` in connectionstring of the database configuration and mention the Context name based upon the module.
 
-> rxwebcore --context --main <Context_Name>
+&gt rxwebcore --context --main &ltContext_Name&gt
 
 Eg : rxwebcore --context --main Client
 
@@ -48,7 +48,7 @@ Eg : rxwebcore --context --main Client
 
 This command adds a single DbSet of the model name which is specified as model name(Including tables and views)  which is same as the name of Table.
 
-> rxwebcore --context --main <Context_Name> --add-models <Model_Name> 
+&gt rxwebcore --context --main &ltContext_Name&gt --add-models &ltModel_Name&gt 
 
 Eg : rxwebcore --context --main Client  --add-models Candidates
 
@@ -56,7 +56,7 @@ Eg : rxwebcore --context --main Client  --add-models Candidates
 
 This command adds a Multiple DbSets of the model name which is specified as model name which is same as the name of Table.
 
-> rxwebcore --context --main <Context_Name> --add-models <Model_Name1>, <Model_Name2>
+&gt rxwebcore --context --main &ltContext_Name&gt --add-models &ltModel_Name1&gt, &ltModel_Name2&gt
 
 Eg : rxwebcore --context --main Client --add-models Candidates, Clients, Employees
 
@@ -66,70 +66,70 @@ These are the types of controller which are generated based upon the entity type
 ### Basic Controller
 This command creates a basic controller which is used while performing simple data CRUD operations
 
-> rxwebcore --controller --basic --main <Controller_Name> --uow <Module_Name> 
+&gt rxwebcore --controller --basic --main &ltController_Name&gt --uow &ltModule_Name&gt 
 
 Eg : rxwebcore --controller --basic --main Candidates --uow Master
  
 ### Domain Controller
 This command creates a domain controller which is used while performing complex data operations which requires some business logic 
 
-> rxwebcore --controller --domain --main <Controller_Name> --uow <Module_Name>
+&gt rxwebcore --controller --domain --main &ltController_Name&gt --uow &ltModule_Name&gt
 
 Eg : rxwebcore --controller --domain --main UserRoles --uow Master 
 
 ### Lookup Controller
 This command creates a controller for binding data in dropdown 
 
-> rxwebcore --controller --lookup --main <Controller_Name> --uow <Module_Name>
+&gt rxwebcore --controller --lookup --main &ltController_Name&gt --uow &ltModule_Name&gt
   
 Eg : rxwebcore --controller --lookup --main MasterLookUps --uow MasterLookUp 
 
 ### Add lookups in lookup controller 
 Adding lookups in the controller:
 
-> rxwebcore --controller --lookup --main <Country_Name> --uow <Module_Name> --add-lookups <Lookup>
+&gt rxwebcore --controller --lookup --main &ltCountry_Name&gt --uow &ltModule_Name&gt --add-lookups &ltLookup&gt
 
 As per this controller : 
 
-> rxwebcore --controller --lookup --main CountryLookups --uow CountryLookup --add-lookups vCountryLookups
+&gt rxwebcore --controller --lookup --main CountryLookups --uow CountryLookup --add-lookups vCountryLookups
 
 ### Child Controller
 
 1) Basic Controller :
 This command creates a basic child controller 
 
-> rxwebcore --controller --basic --main <Controller_Name> --uow <Module_Name> --parent Users
+&gt rxwebcore --controller --basic --main &ltController_Name&gt --uow &ltModule_Name&gt --parent Users
 
 Eg : rxwebcore --controller --basic --main UserRoles --uow Master --parent Users
 
 2) Domain Controller :
 This command creates a domain child controller 
 
-> rxwebcore --controller --domain --main <Controller_Name> --uow <Module_Name> --parent Users
+&gt rxwebcore --controller --domain --main &ltController_Name&gt --uow &ltModule_Name&gt --parent Users
 
 Eg : rxwebcore --controller --domain --main UserRoles --uow Master --parent Users
 
 ### Search Controller 
 This command creates a search controller with the following stored procedure. 
 
-> rxwebcore --controller --search --main <Controller_Name> --spname <Name_of_storedprocedure>
+&gt rxwebcore --controller --search --main &ltController_Name&gt --spname &ltName_of_storedprocedure&gt
 
 Eg : rxwebcore --controller --search --main Persons --spname spPersons
 
 ### Add authorization to controller
-This will add `[access]` annotation above the controller with the rights in respect to the application module. For more information about <a class="redirect-link" href="\AspNetCore\security\authorization.html">Authorization</a>
+This will add `[access]` annotation above the controller with the rights in respect to the application module. For more information about &lta class="redirect-link" href="\AspNetCore\security\authorization.html"&gtAuthorization&lt/a&gt
 
-> rxwebcore --controller --<Controller_Type> --main <Controller_Name> --uow <Module_Name> --access <ApplicationModuleId>
+&gt rxwebcore --controller --&ltController_Type&gt --main &ltController_Name&gt --uow &ltModule_Name&gt --access &ltApplicationModuleId&gt
 
 Eg :  rxwebcore --controller --basic --main Candidates --uow Master --access 1
 
 ### Adding localization
-This will add json files of the data of languages that are there in the database tables. For more information refer <a class="redirect-link" href="/localization-and-globalization/global-content.html">Globalization and Localization</a>
+This will add json files of the data of languages that are there in the database tables. For more information refer &lta class="redirect-link" href="/localization-and-globalization/global-content.html"&gtGlobalization and Localization&lt/a&gt
 
-> rxwebcore --localization --main 
+&gt rxwebcore --localization --main 
 
 ### Devops
 
-> rxwebcore --dev-ops
+&gt rxwebcore --dev-ops
 
 Information coming soon

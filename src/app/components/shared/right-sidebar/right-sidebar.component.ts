@@ -54,7 +54,7 @@ export class RightSideBarComponent implements OnInit {
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
         if (splitedArray.length > 0 && splitedArray[1]) {
-            debugger;
+
             switch (splitedArray[1]) {
                 case "decorators":
                     this.gitEditUrl += "docs/reactive-form-validators/decorators/" + splitedArray[2] + ".md"
@@ -80,9 +80,9 @@ export class RightSideBarComponent implements OnInit {
                 case "rx-web-core":
                 if(splitedArray[4])
             
-                this.gitEditUrl = "docs/rxwebcore/" + splitedArray[2] +"/" + splitedArray[3] + "/" + splitedArray[4] + ".md"               
+                this.gitEditUrl += "docs/rx-web-core/" + splitedArray[2] +"/" + splitedArray[3] + "/" + splitedArray[4] + ".md"               
                 else
-                this.gitEditUrl = "docs/rxwebcore/" + splitedArray[2] +"/" + splitedArray[3] + ".md" 
+                this.gitEditUrl += "docs/rx-web-core/" + splitedArray[2] +"/" + splitedArray[3] + ".md" 
             }
         }
         else if (splitedArray.length > 0 && splitedArray[0] == "changelog") {

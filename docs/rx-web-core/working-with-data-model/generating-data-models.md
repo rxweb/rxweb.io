@@ -17,8 +17,6 @@ Database entities which can be generated as POCO models are:
 <ul>
     <li>Tables</li>
     <li>Views</li>
-    <li>Record View</li>
-    <li>Lookup View</li>
 </ul>
 
  you can create POCO models for all the required tables and views. For creating their POCO models in the application, open the `Package Manager Console` and run the following command:
@@ -27,6 +25,7 @@ Database entities which can be generated as POCO models are:
 rxwebcore --models --main
 ```
 
+In the above command, --models denotes model generation and --main is the database connection name configured in the `appsettings.json`.
 This will generate POCO models for all the tables and views in the `DbEntities` folder inside the `Models` section of the project.
 
 ## Example

@@ -15,7 +15,7 @@ The controller must be inherited from the class `BaseLookupController`. The cont
 
 To create a lookup controller, open the `Package Manager Console` and run the following command.
 
-> rxwebcore --controller --lookup --main <Controller_Name> --uow <Module_Name>
+> rxwebcore --controller --lookup --main &ltController_Name&gt --uow &ltModule_Name&gt
 
 Lets consider a scenario where you want to create a `CountryLookupsController` in the `UsersModule`, you have to write:
 
@@ -26,7 +26,7 @@ Lets consider a scenario where you want to create a `CountryLookupsController` i
 # Add lookups 
 Adding lookups in the controller:
 
-> rxwebcore --controller --lookup --main <Country_Name> --uow <Module_Name> --add-lookups <Lookup>
+> rxwebcore --controller --lookup --main &ltCountry_Name&gt --uow &ltModule_Name&gt --add-lookups &ltLookup&gt
 
 As per this controller : 
 
