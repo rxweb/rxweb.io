@@ -42,18 +42,18 @@ In the above command by writing --domain indicates its complexity high, Users is
 </table>
 
 # Example
-```js
+````js
     [ApiController]
     [Route("api/[controller]")]
-	public class UsersController : BaseDomainController<Product>
+	public class UsersController : BaseDomainController<User>
     {
-        public UsersController(IProductDomain domain):base(domain) {}
+        public UsersController(IUserDomain domain):base(domain) {}
     }
-```
+````
 
 The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the Domain folder of the project where the business logic code will use methods of `Uow`.
 
-```js
+````js
     public class UsersDomain : IUsersDomain
     {
         public UsersDomain(IUserUow uow) {
@@ -65,29 +65,29 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
             throw new NotImplementedException();
         }
 
-        public Task<Product> GetBy(Dictionary<string, object> parameters)
+        public Task<User> GetBy(Dictionary<string, object> parameters)
         {
             throw new NotImplementedException();
         }
         
 
-        public HashSet<string> AddValidation(Product entity)
+        public HashSet<string> AddValidation(User entity)
         {
             return ValidationMessages;
         }
 
-        public async Task AddAsync(Product entity)
+        public async Task AddAsync(User entity)
         {
             await Uow.RegisterNewAsync(entity);
             await Uow.CommitAsync();
         }
 
-        public HashSet<string> UpdateValidation(Product entity)
+        public HashSet<string> UpdateValidation(User entity)
         {
             return ValidationMessages;
         }
 
-        public async Task UpdateAsync(Product entity)
+        public async Task UpdateAsync(User entity)
         {
             await Uow.RegisterDirtyAsync(entity);
             await Uow.CommitAsync();
@@ -107,4 +107,4 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
 
         private HashSet<string> ValidationMessages { get; set; } = new HashSet<string>();
     }
-```
+````

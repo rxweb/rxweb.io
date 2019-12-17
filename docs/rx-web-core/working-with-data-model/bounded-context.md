@@ -19,9 +19,9 @@ In our HRManagementSystem we have three main modules. They are Resource Manageme
 
 In the package manager console, run this command to create a BoundedContext
 
-```js
+````js
 rxwebcore --context --main <Context_Name>
-```
+````
 
 Parameters of creating a context 
 
@@ -38,9 +38,9 @@ Now lets create Resource Management, Candidate Module and User Modules. we will 
 
 **Step 1 : Create Bounded Context**
 
-```js
+````js
 rxwebcore --context --main User
-```
+````
 
 This will create `UserContext.cs` in the main folder of DbContext folder in the `HRManagementSystem.BoundedContext` project of the application. 
 
@@ -50,19 +50,19 @@ This will create `UserContext.cs` in the main folder of DbContext folder in the 
 
 To add models into the context, run this command in the package manager console
 
-```js
+````js
 rxwebcore --context --main <Context_Name> --add-models <Model_Name>
-```
+````
 
 We will add models(DbSets) into the Resource Management Context.
 
-```js
+````js
 rxwebcore --context --main User --add-models Countries
-```
+````
 > This will add tables and views of the particular entity in the context.
 
 **UserContext.cs:** 
-```js
+````js
  public class UserContext : BaseBoundedDbContext, IResourceManagementContext
     {
         public UserContext(MainSqlDbContext sqlDbContext,  IOptions<DatabaseConfig> databaseConfig, IHttpContextAccessor contextAccessor,TenantDbConnectionInfo tenantDbConnection): base(sqlDbContext, databaseConfig.Value, contextAccessor,tenantDbConnection){ }
@@ -77,6 +77,6 @@ rxwebcore --context --main User --add-models Countries
     public interface IUserContext : IDbContext
     {
     }
-``` 
+```` 
 
 With the creation of BoundedContext, its UnitOfWork will be generated which will be further used in the API to interact with the data. To get further information about UnitOfWork Please refer this link.

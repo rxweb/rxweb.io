@@ -37,7 +37,7 @@ Lets consider a scenario where you want to create a `UsersSearchController` in t
 In this example  `MainSqlDbContext` is the context of `UsersModule` which contains the `spSearchUsers`
 which is executing while fetching the search result which are retrieved by passing searchParams as dictionary object in the post method.
 
-```js
+````js
     [ApiController]
 	[Route("api/[controller]")]
     public class UsersSearchController : ControllerBase
@@ -57,4 +57,4 @@ which is executing while fetching the search result which are retrieved by passi
             return Ok(result.SingleOrDefault()?.Result);
         }
     }
- ```   
+ ````   

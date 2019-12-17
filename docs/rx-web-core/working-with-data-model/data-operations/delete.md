@@ -11,11 +11,11 @@ Used for delete operation to be done on entity.
 
 # Example
 
-```js
+````js
     public async Task DeleteAsync(int id)
     {
       var candidate = Uow.Repository<Candidate>().FindByKey(id);
       await Uow.RegisterDeletedAsync(candidate);
       await Uow.CommitAsync();
     }
-```    
+````    

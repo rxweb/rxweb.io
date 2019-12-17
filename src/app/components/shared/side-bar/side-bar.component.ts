@@ -21,7 +21,7 @@ export class SideBarComponent implements OnInit {
     private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster, private activatedRoute: ActivatedRoute
   ) {
     activatedRoute.params.subscribe(t => {
-      console.log(t);
+  
     })
   }
   ngOnInit(): void {
@@ -584,7 +584,7 @@ export class SideBarComponent implements OnInit {
       }
       else if (location.pathname.includes("rx-web-core")) {
         this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
-          debugger; 
+           
           this.links = response.links;
           var hasLinkArray = location.href.split('#')[1];
           var splitedArray = location.pathname.split('#')[0].split('/')
@@ -613,7 +613,7 @@ export class SideBarComponent implements OnInit {
               currentLink[0].isActive = true;
                 }
               if (currentArray[0].childrens) {   
-                      debugger;
+                      
                   var InnerNestedCurrentArray = currentArray[0].childrens.filter(a => a.path.includes((splitedArray[3])))
                   if(InnerNestedCurrentArray[0]){
                   InnerNestedCurrentArray[0].isActive = true;

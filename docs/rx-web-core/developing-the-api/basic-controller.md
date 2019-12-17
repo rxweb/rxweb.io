@@ -47,7 +47,7 @@ There are mainly 6 methods used for the Basic Controller which needs to be there
 
 Here is an example of a basic controller.
 
-```js
+````js
 
     [ApiController]
     [Route("api/[controller]")]
@@ -56,7 +56,7 @@ Here is an example of a basic controller.
         public CandidatesController(ICandidateUow uow):base(uow) {}
     }
 
-```
+````
 
 # Acessing The Api
 

@@ -18,9 +18,9 @@ The prerequisites which are required before creating new project using `rxwebcor
 # Install rxwebcore tool
 The first step towards creating an application is to install the <a class="redirect-link" href="https://www.nuget.org/packages/RxWebCore/">`rxwebcore`</a> tool globally using below command in command prompt.
 
-```js
+````js
  dotnet tool install --global rxwebcore
-```
+````
 
 This will install `rxwebcore` tool globally which will be used for cli commands. 
 
@@ -31,15 +31,15 @@ Let's consider a scenario where you want to create a `HumanResourceApplication` 
 
 > Before firing the below command there must be Database server having two blank databases. the `Main` database and `Log` database. The `Main` is used for your application specific data operations and `Log` database is used for Logging related information like `Request Log` , `Exception Log` and `Entity Log`. You don't have to create the logging tables the `rxwebcore` cli will create the respective tables based upon the provided `Log` database connection string. Some of the tables will be created in `Main` database as well through `rxwebcore`. How many tables will be created and use of those tables we will discuss on `Database Information` page.
 
-```js
+````js
 rxwebcore --add-project &lt Project_Name &gt
-```
+````
 
 Let's create a Human Resource Application project with the name `HumanResourceApplication`, Fire Below command in your command prompt under respective folder where you want to create this project:
 
-```js
+````js
 rxwebcore --add-project HumanResourceApplication
-```
+````
 
 By running this command. It will ask few things :
 

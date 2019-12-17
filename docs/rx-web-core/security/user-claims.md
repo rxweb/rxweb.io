@@ -17,16 +17,16 @@ The Jwt web token is generated with the help of the claims which are issued. It 
 ### Name Identifier
 It is used to set claim which retrives the name of the entity based upon the required URL. 
 
-```js
+````js
     new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString())
-```
+````
 
 ### Locality
 It is used to set claim which retrives the locale in which the entity resides based upon the required URL. 
 
-```js
+````js
    new Claim(ClaimTypes.Locality,user.LanguageCode)
-```
+````
 
 ## CustomClaimTypes
 Custom claim types are used for claims based upon custom attributes such as Timezone and tenantId. These are defined as Constants in the Const folder of Models Project.
@@ -34,16 +34,16 @@ Custom claim types are used for claims based upon custom attributes such as Time
 ### TimeZone
 It is used to set claim based upon the timezone which is configured in the database with respect to the user.
 
-```js
+````js
 	new Claim(CustomClaimTypes.TimeZone,user.ApplicationTimeZoneName)
-```
+````
 
 ### TenantId
 It is used to get claims based upon the tenantId which is configured in the appsettings. You need to pass the value of the tenantId which is used as the tenantColumn name. For example, if the tenantCloumn is clientId and it should be configured as 1. You need to pass the claim as 
 
-```js
+````js
   new Claim(CustomClaimTypes.TenantId,(1).ToString()) 
-```
+````
 
 # Getting the value of claim
 The value of the UserClaim is retrived using the `GetClaimValue` method of RxWeb.Core.Security 
@@ -51,48 +51,48 @@ The value of the UserClaim is retrived using the `GetClaimValue` method of RxWeb
 ## Email
 It is used to get the claimValue of email attribute
 
-```js
+````js
   GetClaimValue(ClaimTypes.Email)
-```
+````
 
 ## Anonymous
 It is used to check whether Anonymous claimType is set true or false
 
-```js
+````js
   GetClaimValue(ClaimTypes.Anonymous)
-```
+````
 
 ## Locale
 It is used to get the claimed Locale value
 
-```js
+````js
   GetClaimValue(ClaimTypes.Locality)
-```
+````
 
 ## CountryId
 It is used to get the valuue of claimed Country of the user
 
-```js
+````js
   GetClaimValue(ClaimTypes.Country);  
-```
+````
 
 ## Uri
 It is used to get the claimed Uri value
 
-```js
+````js
   GetClaimValue(ClaimTypes.Uri)
-```
+````
 
 ## UserId
 It is used to get the claimed UserId value
 
-```js
+````js
   GetClaimValue(ClaimTypes.NameIdentifier)
-```
+````
 
 ## UserName
 It is used to get the claimed name of the user 
 
-```js
+````js
  return GetClaimValue(name);
-```
+````

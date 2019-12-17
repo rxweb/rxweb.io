@@ -40,6 +40,7 @@
     "@rxweb/sanitizers": "0.0.1-1",
     "angular-instantsearch": "^2.1.0",
     "core-js": "^2.5.4",
+    "highlight.js": "^9.17.1",
     "http-server": "^0.11.1",
     "json-server": "^0.15.1",
     "ngx-clipboard": "^11.1.9",

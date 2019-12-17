@@ -20,9 +20,9 @@ Create a database named `HumanResourceApplicationAdminDb` and create a table nam
 # Step 2 : 
 Run cli command   
 
-```js
+````js
 rxwebcore --add-feature --multi-tenant database
-```
+````
 
 # Step 3 : 
 Add the connectionString of admin in `appsettings.json` and remove main ConnectionString from it.

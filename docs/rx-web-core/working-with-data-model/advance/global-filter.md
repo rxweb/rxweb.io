@@ -12,20 +12,20 @@ While working with entities which needs a filter to be applied globally for exam
 **Step 1:**
 Create a extended model in main folder of Models project named `ActiveFilter.cs` and create a function `IsActive` into it. 
 
-```js
+````js
         public Expression<Func<vUser, bool>> IsActive()
         {
             return x => x.StatusId == 1;
         }
 
-```
+````
 
 Status is defined in ApplicationObjects. for more information please refer <a class="redirect-link" href="/AspNetCore/step-by-step-guide/database-information.html#applicationobjects">ApplicationObjects</a>
 
 **Step 2:**
 Add `GlobalQueryFilter` annotation above the model class`Country.cs`
 
-```js
+````js
     [Table("Clients",Schema="dbo")]
     [GlobalQueryFilter(nameof(Country.IsActive))]
     public partial class Country
@@ -53,4 +53,4 @@ Add `GlobalQueryFilter` annotation above the model class`Country.cs`
 
         public virtual ApplicationObject Client { get; set; }
 	}
-```
+````

@@ -5,6 +5,7 @@ import { PageViewerComponent } from "src/app/components/shared/page-viewer/page-
 import { ActivatedRoute } from "@angular/router";
 import { environment } from 'src/environments/environment';
 import { ApplicationBroadcaster } from '@rx/core';
+import hljs from 'highlight.js';
 
 @Component({
   templateUrl: './html.page.component.html',
@@ -42,8 +43,9 @@ export class HtmlPageComponent implements OnInit {
       this.isNotFirstTime = true;
     })
   }
+
   ngOnInit(): void {
-    this.http.get('assets/json/rxwebcore-sidebar.json?v=' + environment.appVersion).subscribe((response: any) => {
+    this.http.get('assets/json/rxwebcore-links.json?v=' + environment.appVersion).subscribe((response: any) => {
       this.links = response;
     });
     this.bind();
@@ -65,59 +67,28 @@ export class HtmlPageComponent implements OnInit {
   }
 
   bind() {
-
     let codeUri = this.getUri();
     this.http.get(codeUri, this.options).subscribe(response => {
       this.codeContent = JSON.parse(response.toString());
       var element = document.getElementById("mainContent")
       element.innerHTML = this.codeContent.htmlContent;
+     document.querySelectorAll('code').forEach((block) => {
+          hljs.highlightBlock(block);
+          console.log(block);
+      });
       document.title = "rxweb " + this.codeContent.title
       this.applicationBroadcaster.topSubject.next(this.codeContent);
     });
-
   }
 
-  nextLink() {
-    debugger;
-    
-   var currentIndex = this.links.links.array.forEach(element => {
-     element.childrens.filter(a=>a.path == location.pathname.split('/')[1]);
-   });
-
-    if (location.hash) {
-      var currentLocation = location.pathname + location.hash;
-      var currentObjIndex = this.links.links[currentIndex].childrens.findIndex(a => a.href == currentLocation);
-    }
-    else {
-      var currentObjIndex = this.links.links[currentIndex].childrens.findIndex(a => a.href == location.pathname);
-    }
-    currentObjIndex++;
-
-    var nextObject = this.links.links[currentIndex].childrens[currentObjIndex];
-    if (nextObject) {
-      if (nextObject.href)
-        var tree = this.router.parseUrl(nextObject.href);
-      if (tree.fragment) {
-        var routerLinkNavigate = nextObject.href.split('#');
-        this.router.navigate([routerLinkNavigate[0]], { fragment: tree.fragment });
-      }
-      else
-        this.router.navigate([nextObject.href]);
-    }
-    
-  }
-
-
-
-
-
-
-  previousLink() {
-    var currentObjIndex = this.links.findIndex(a => a.href == location.pathname);
-    if (currentObjIndex != undefined) {
-      currentObjIndex--;
-      var nextObj = this.links[currentObjIndex];
-      this.router.navigate([nextObj.link]);
+  nextLink()
+  {
+    var currentObjIndex = this.links.findIndex(a => a.href ==  location.pathname);
+    if(currentObjIndex != undefined)
+    {
+     currentObjIndex++;
+     var nextObj = this.links[currentObjIndex];
+     this.router.navigate([nextObj.href]);    
     }
   }
 

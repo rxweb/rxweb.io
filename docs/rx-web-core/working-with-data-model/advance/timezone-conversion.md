@@ -29,8 +29,8 @@ Add the annotation of `[TimeZoneValueConversion]`
 
 Now, we generate a web json based upon the claim of user's timezone. The Token is generated from the `GetTokenAsync` method of `ApplicationTokenProvider.cs` in the Infrastructure project.
 
-```js
+````js
 new Claim(CustomClaimTypes.TimeZone,user.ApplicationTimeZoneName)
-```
+````
 
 This will retrieve the time as per the user's configured timezone.

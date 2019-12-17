@@ -27,9 +27,9 @@ Preventing this leads to preventing the application from client side scripts whi
 # Enable Cross-Origin Requests   
 This principle works on not allowing to access the web APIs from any origin. It prevents the malicious site from reading confidential data from another site. The allowed hosts are to be configured in the `appsettings.json`
 
-```js
+````js
  "AllowedHosts": [ "http://localhost:4200" ]
-```
+````
 
 # Injection:
 1) SQL Injection:

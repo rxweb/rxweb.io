@@ -19,11 +19,11 @@ Here is an example of Uow class which is generated when you have created the Bou
 
 **UserUow.cs**
 
-```js
+````js
 public class UserUow : BaseUow, IUserUow
 {
     public UserUow(IUserContext context, IRepositoryProvider repositoryProvider) : base(context, repositoryProvider) { }
 }
 
 public interface IUserUow : ICoreUnitOfWork { }
-```
+````

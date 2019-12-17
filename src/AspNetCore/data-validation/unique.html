@@ -574,10 +574,10 @@
 <p class='showHideElement'>In the ExtendedModel class</p>
 <p class='showHideElement'>Candidate.cs :</p>
 <div highlight='pre code'><pre><code>
-    public partial class Person {
-        public bool PersonConditionalExpression(object parentEntity = null) {
-            var t = this;
-            return false;
+    public partial class Candidate {
+        public bool UniqueEmailId(object Email = null) {
+            if(!Candidates.any(x=>x.EmailId == Email))
+            return false
         }
     }
 </code></pre></div>
@@ -596,8 +596,8 @@
 <p class='showHideElement'>When you want to set validation property of validation at runtime(on the fly) validation, <span class='highlighted'>DynamicConfigExpressionName</span> is set in which the custom function of dynamicExpressionName is passed.</p>
 <p class='showHideElement'>In the ExtendedModel class</p>
 <div highlight='pre code'><pre><code>
-    public partial class Person {
-        public Dictionary<string, object> PersonNameDynamicExpression(object parentEntity = null) {
+    public partial class CandidateEmail {
+        public Dictionary<string, object> CandidateEmailDynamicExpression(object parentEntity = null) {
             return new Dictionary<string, object>()
             {
                 { "CustomMessageKey","CustomUniqueKey" }
@@ -607,8 +607,8 @@
 </code></pre></div>
 <p class='showHideElement'>In the DbEntities class</p>
 <div highlight='pre code'><pre><code>
-    [Unique(dynamicConfigExpressionName: nameof(PersonNameDynamicExpression))]
-    public string PersonName { get; set; }
+    [Unique(dynamicConfigExpressionName: nameof(CandidateEmailDynamicExpression))]
+    public string EmailId { get; set; }
 </code></pre></div>
 </div></div>
 <div class='row page-section'>
@@ -630,7 +630,7 @@
 <p class='showHideElement'>In the DbEntity class : </p>
 <div highlight='pre code'><pre><code>
     [Unique(messageKey:"UniqueMessageKey")]
-     public string PersonName { get; set; }
+     public string EmailId { get; set; }
 </code></pre></div>
 </div></div>
 </div></div>

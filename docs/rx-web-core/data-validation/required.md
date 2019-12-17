@@ -13,10 +13,10 @@ Let's consider a scenario where there is a model class `Candidate.cs` which has 
 
 # Basic Required Validation
 
-```js
+````js
 [Required]
 public string CandidateName { get; set; }
-```
+````
 
 Using required annotation before the property, this is not allow null value to be entered in CandidateName. There are several additional properties of the annotations which can be used to validate the property which are listed below:
 
@@ -49,10 +49,10 @@ Type : boolean
 
 allowWhiteSpace property is set to true when you want to allow space in the CandidateName value. It should be set true before the annotation. By default it is set false.  
 
-```js
+````js
 [Required(allowWhiteSpace:true)]
 public string CandidateName { get; set; }
-```
+````
 
 ## ConditionalExpressionName
 Type : string
@@ -63,7 +63,7 @@ The validation function is made in ExtendedModels folder of Main, In which a par
 In the ExtendedModel class
 Candidate.cs :
 
-```js
+````js
     public partial class User {
 
         public bool CandidateNameConditionalExpression(object parentEntity = null) {
@@ -71,14 +71,14 @@ Candidate.cs :
             return false;
         }
     }
-```
+````
 
 And in the DbEntities class
 
-```js
+````js
   [Required(conditionalExpressionName:nameof(User.EmailConditionalExpression))]
   public string CandidateName { get; set; }
-```
+````
 
 ## DynamicConfigExpressionName
 Type : string
@@ -87,7 +87,7 @@ When you want to set validation property of validation at runtime(on the fly) va
 
 In the ExtendedModel class
 
-```js
+````js
     public partial class User {
 
         public Dictionary<string, object> CandidateNameDynamicExpression(object parentEntity = null) {
@@ -98,14 +98,14 @@ In the ExtendedModel class
         }
     }
 
-```
+````
 
 In the DbEntities class
 
-```js
+````js
     [Required(dynamicConfigExpressionName: nameof(CandidateNameDynamicExpression))]
     public string CandidateName { get; set; }
-```
+````
 
 ## MessageKey
 Type : string
@@ -128,7 +128,7 @@ When you want to show a custom validation message based upon the entity. Message
 
 In the DbEntity class : 
 
-```js
+````js
     [Required(messageKey:"RequiredMessageKey")]
      public string CandidateName { get; set; }
-```
+````

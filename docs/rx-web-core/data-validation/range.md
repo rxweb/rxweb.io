@@ -13,10 +13,10 @@ Let's consider a scenario where there is a model class `Candidate.cs` which has 
 
 # Basic Maxlength Validation
 
-```js
+````js
     [Range(2,10)]
     public string ContactNumber { get; set; }
-```
+````
 <table class="table table bordered">
 <tr><th>Property</th><th>Description</th><th>Syntax</th></tr>
 <tr>
@@ -46,10 +46,10 @@ Type : int
 
 The minimum length based upon which the value is limited.
 
-```js
+````js
     [MaxLength(10)]
     public string ContactNumber { get; set; }
-```
+````
 
 ## ConditionalExpression 
 Type : string
@@ -61,7 +61,7 @@ The custom validation function is made in ExtendedModels folder of Main, In whic
 In the ExtendedModel class
 Candidate.cs :
 
-```js
+````js
     public partial class Candidate {
 
         public string Email { get; set; }
@@ -73,14 +73,14 @@ Candidate.cs :
             else return true;
         }
     }
-```
+````
 
 And in the DbEntities class
 
-```js
+````js
   [MaxLength((10),conditionalExpressionName:nameof(Candidate.ContactConditionalExpression))]
   public string ContactNumber { get; set; }
-```
+````
 
 # dynamicConfigExpressionName
 
@@ -89,7 +89,7 @@ If you want to set any validation property at runtime, then `dynamicConfigExpres
 For example, if you want to set messageKey of any model property at run time:
 Here is the dynamic expression function.
 
-```js
+````js
     public partial class Candidate {
 
         public Dictionary<string, object> AdressDynamicExpression(object parentEntity = null) {
@@ -100,14 +100,14 @@ Here is the dynamic expression function.
         }
     }
 
-```
+````
 
 In the DbEntities table :
 
-```js
+````js
     [MaxLength( `dynamicConfigExpressionName`: nameof(`AddressDynamicExpression`))]
     public string Address { get; set; }
-```
+````
 
 ## MessageKey
 Type : string
@@ -130,7 +130,7 @@ When you want to show a custom validation message based upon the entity. Message
 
 In the DbEntity class : 
 
-```js
+````js
     [MaxLength((10),messageKey:"MaxLengthMessageKey")]
      public string Address { get; set; }
-```
+````

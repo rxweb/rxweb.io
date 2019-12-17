@@ -47,29 +47,29 @@ CandidateAvailabilities Table:
 # Step 1 : 
 Add the Candidate's details using `RegisterNewAsync` method of Uow. Perform `CommitAsync` on it.
 
-```js
+````js
 CandidateUow.RegisterNewAsync(candidate);
 CandidateUow.CommitAsync();
-```
+````
 
 # Step 2 :
 Begin Transaction using `BeginTransaction` method of DbContextManger.
 
-```js
+````js
 DbContextManager.BeginTransaction();
-```
+````
 
 # Step 3: 
 Insert Candidate's Availabilites using `SqlQueryAsync` by passing necessary parameters.
 
-```js
+````js
 var result = await DbContextManager.SqlQueryAsync<StoreProcResult>("EXEC [dbo].spInsertcandidateAvailabilities @AvailableDate,  @FromTime, @ToTime, @CandidateId", spParameters);
-```
+````
 
 # Step 4:
 Executing try and catch to commit or rollback transaction.
 
-```js
+````js
 try
 {
     DbContextManager.Commit();
@@ -79,4 +79,4 @@ catch(Exception e)
     DbContextManager.RollbackTransaction();
 }
 
-```
+````

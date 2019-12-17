@@ -14,7 +14,7 @@ Suppose we have a list of employees which have records exceeds 1000 records and 
 
 Example :
 
-```js
+````js
 
 CREATE PROCEDURE [dbo].[spSearchEmployees]
 
@@ -26,14 +26,14 @@ BEGIN
  (Select EmployeeId ,EmployeeName from Employees  where EmployeeName like @Query+'%' FOR JSON PATH) as Result
 
 END
-```
+````
 
 # 2. Creating search lookup for performing search in a dropdown
 For performing search in the dropdown, we will make `spEmployeeLookups` which will search employee's information based upon the parameter passed. in this case `EmployeeName` is passed.   
 
 Example :
 
-```js
+````js
 
 CREATE PROCEDURE [dbo].[spEmployeeLookups]
 
@@ -45,14 +45,14 @@ BEGIN
 
 END
 
-```
+````
 
 # 3. Managing complex operations
 When there are scenarios where the operation to be performed using more than one entity and it is not been covered using the UnitOfWork method. A stored procedure is executed using `DbContextManager` the transaction is being opened and the changes are commited. For more information about it refer `DbContextManager`.
 
 Example :
 
-```js
+````js
 CREATE TYPE dbo.CandidateAvailabilitiesArray 
 AS TABLE
 (
@@ -68,5 +68,5 @@ AS
 BEGIN
     INSERT INTO CandidateAvailabilities SELECT * FROM @CandidateAvailabilityArray 
 END
-```
+````
 

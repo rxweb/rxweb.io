@@ -262,7 +262,8 @@
                                 }
                             ],
                             "title": "Read",
-                            "path": ""
+                            "path": "read",
+                            "href": "/rx-web-core/working-with-data-model/data-operations/read"
                         },
                         {
                             "childrens": [],
@@ -316,7 +317,8 @@
                                 }
                             ],
                             "title": "Shared Database",
-                            "path": ""
+                            "path": "shared-database",
+                            "href":"/rx-web-core/working-with-data-model/multitenancy/shared-database"
                         },
                         {
                             "childrens": [],

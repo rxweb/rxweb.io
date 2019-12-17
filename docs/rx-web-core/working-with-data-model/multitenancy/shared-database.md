@@ -40,9 +40,9 @@ Coming to the project, the `ClientId` is to be configured in the `appsettings.js
 
 After that you need to run the CLI command to add models which will add the `[TenantFilterQuery]` annotation above the ClientId property. Further we need to generate a JWT web joken based upon the TenantId in the `GetTokenAsync` method of `ApplicationTokenProvider.cs` which is located in the security folder of `HumanResourceApplication.Infrastructure`.
 
-```js
+````js
 new Claim(CustomClaimTypes.TenantId,1.ToString())
-```
+````
 
 Once the token is generated based upon the provided TenantId and the candidates operations will be done based upon the candidate.
 

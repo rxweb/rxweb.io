@@ -43,7 +43,7 @@ As per this controller :
 
 # Example
 
-```js
+````js
     [ApiController]
     [Route("api/[controller]")]
 	
@@ -56,4 +56,4 @@ As per this controller :
     }
 }
 
-```
+````

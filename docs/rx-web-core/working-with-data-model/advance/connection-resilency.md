@@ -11,11 +11,11 @@ ConnectionResilency refers to retrying the database commands whenever connection
 
 `ConnectionResiliency` needs to be configured in the appsettings.json file 
 
-```js
+````js
   "ConnectionResiliency": {
       "MaxRetryCount": 2,
       "MaxRetryDelay": 20
     }
-```    
+````    
 
 It is implemented by using `AddConnectionResiliency` method which is used in the `BaseBoundedContext` along with the configuration which is mentioned as above. The method uses `EnableRetryOnFailure` method of Microsoft.EntityFrameworkCore.SqlServer which enables to connect database server after failures with the help of the configuration set in `ConnectionResiliency`.  

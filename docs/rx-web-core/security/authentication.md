@@ -14,7 +14,7 @@ So How this will work, here we discuss in detail:
 First of all we have use the TokenProvider class which is the part of `Rxweb.Core.Security`. Basically this class provides a token as well as validating the token.
 As we are working on .NET Core api we have to resolve the service in the constructor of the `AuthenticationController` as per the below code:
 
-```js
+````js
         public class AuthenticationController : ControllerBase
         {
                 private IJwtTokenProvider TokenProvider { get; set; }
@@ -24,11 +24,11 @@ As we are working on .NET Core api we have to resolve the service in the constru
                 TokenProvider = tokenProvider;        
                 }
         }
-```
+````
 
 Generally we are generating a token while loging the application, The same we are following here. The token is generated from the `GetTokenAsync` method of `ApplicationTokenProvider.cs` which is located in the security folder of `HumanResourceApplication.Infrastructure`.`
 
-```js
+````js
        public async Task<KeyValuePair<string, string>> GetTokenAsync(vUser user)
         {
             var token = TokenProvider.WriteToken(new[]{
@@ -40,7 +40,7 @@ Generally we are generating a token while loging the application, The same we ar
             await UserAccessConfig.SaveTokenAsync(user.UserId, "web", token, LoginUow);
             return token;
         }
-```
+````
 As per the above code the `WriteToken` method will be used by resolving the service in the constructor, which will create a json web token having security key and jsonWebToken which will be used in authorization bearer while making HTTP requests. 
 
 # Parameters

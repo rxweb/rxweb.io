@@ -51,7 +51,7 @@ There are mainly 6 methods used for the Child Controller which needs to be there
 
 Here is an example of child controller:
 
-```js
+````js
     
     [ApiController]
     [Route("api/Customer/{CustomerId}/[controller]")]	
@@ -60,7 +60,7 @@ Here is an example of child controller:
         public CustomerContactController(IMasterUow uow):base(uow) {}
     }
 
-```
+````
 
 # Accessing the Child Controller API
 

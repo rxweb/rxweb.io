@@ -17,13 +17,13 @@ For performing a basic unique validation on the candidate entity.
 **Step 1 :**
 Create an extended model folder in the main folder and into that create a partial class of Candidate 
 
-```js
+````js
     [Unique(connection: typeof(IMainDatabaseFacade), uniqueQueryMethod:nameof(Candidate.UniqueEmailId))]
-```
+````
 
 The Unique validation function will be made in the main folder of the ExtendedModels folder. 
 
-```js
+````js
     public partial class Candidate {
 
         public bool UniqueEmailId(object Email = null) {
@@ -31,7 +31,7 @@ The Unique validation function will be made in the main folder of the ExtendedMo
             return false
         }
     }
-```
+````
 
 **Step 2:**
 Add annotation validation above the model class
@@ -75,7 +75,7 @@ The custom validation function is made in ExtendedModels folder of Main, In whic
 In the ExtendedModel class
 Candidate.cs :
 
-```js
+````js
     public partial class Candidate {
 
         public bool UniqueEmailId(object Email = null) {
@@ -84,15 +84,15 @@ Candidate.cs :
             return false
         }
     }
-```
+````
 
 And in the DbEntities class
 Person.cs
 
-```js
+````js
   [Unique(conditionalExpressionName:nameof(Person.PersonConditionalExpression))]
   public string PersonName { get; set; }
-```
+````
 
 ## DynamicConfigExpressionName
 Type : string
@@ -101,7 +101,7 @@ When you want to set validation property of validation at runtime(on the fly) va
 
 In the ExtendedModel class
 
-```js
+````js
     public partial class CandidateEmail {
 
         public Dictionary<string, object> CandidateEmailDynamicExpression(object parentEntity = null) {
@@ -112,14 +112,14 @@ In the ExtendedModel class
         }
     }
 
-```
+````
 
 In the DbEntities class
 
-```js
+````js
     [Unique(dynamicConfigExpressionName: nameof(CandidateEmailDynamicExpression))]
     public string EmailId { get; set; }
-```
+````
 
 ## MessageKey
 Type : string
@@ -142,7 +142,7 @@ When you want to show a custom validation message based upon the entity. Message
 
 In the DbEntity class : 
 
-```js
+````js
     [Unique(messageKey:"UniqueMessageKey")]
      public string EmailId { get; set; }
-```
+````

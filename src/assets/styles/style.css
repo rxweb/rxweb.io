@@ -4009,6 +4009,7 @@ body {
 }
 
 .footer {
+    /* top:900px; */
     /* padding: 15px 318px 15px 260px; */
     padding: 15px 0;
     background: #fff;
@@ -5583,9 +5584,9 @@ body.light-skin.fixed-footer .footer {
 }
 
 pre {
+    margin-top: -20px;
+    margin-bottom: 0px;
     display: block;
-    padding: 0px;
-    margin: 0 0 0px;
     font-size: 13px;
     line-height: 1.42857143;
     color: #333;
@@ -8426,6 +8427,7 @@ a.stop:hover {
 
 @media only screen and (max-width: 1200px) {
     .footer {
+        
         padding: 15px;
         bottom: 0%;
     }
@@ -8436,7 +8438,7 @@ a.stop:hover {
         
         padding: 15px;
        bottom :-10%;
-    
+       top: 1000px;
     }
     }
 

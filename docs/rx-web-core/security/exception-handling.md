@@ -10,7 +10,7 @@ Exception handling and logging keeps a trace of all the exceptions that occur wh
 
 # Handle Exception
 
-```js
+````js
         private static void HandleException(this IApplicationBuilder applicationBuilder)
         {
             applicationBuilder.UseExceptionHandler(errorApp =>
@@ -25,4 +25,5 @@ Exception handling and logging keeps a trace of all the exceptions that occur wh
                 });
             });
         }
-```
+````
+

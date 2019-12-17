@@ -16,31 +16,31 @@ In our HumanResourceApplication we have to work on departments functionality, As
 # 1. Displaying List of records
 Suppose we want to display a list of departments, we will make a `vDepartments` view for the same. Here Departments id the table name and we add a abbreviation `v` which is here meant for a view. We do this to maintain a consistency of the naming convention used all over the application. 
 
-```
+````
 CREATE VIEW [dbo].[vDepartments]
 AS
 SELECT        DepartmentId, DepartmentName, Status
 FROM            dbo.Departments
-```
+````
 
 # 2. Displaying Data while Editing
 Now we want to display specific record of the departments while edit call, we will make `vDepartmentRecords`. We make seperate view for displaying list of records and editing because there might be some additional column or column value differing from list and edit. For example for displaying list you dont have HeadOfDepartment column but in edit mode you want that column to be displayed. 
 
-```
+````
 CREATE VIEW [dbo].[vDepartmentRecords]
 AS
 SELECT        DepartmentId, DepartmentName, HeadOfDepartment
 FROM            dbo.Departments
 GO
-```
+````
 
 # 3. Binding data in a dropdown 
 In some of the areas where we have to bind the department names in the dropdown, in that case we have to define the lookup view of deparments the name should be `vDepartmentLookups` in this case because we only need fields which are required in the lookup.
 
-```
+````
 CREATE VIEW [dbo].[vDepartmentLookups]
 AS
 SELECT       DepartmentId, DepartmentName
 FROM            dbo.Departments
 GO
-```
+````

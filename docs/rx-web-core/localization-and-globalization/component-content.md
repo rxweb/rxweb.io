@@ -34,22 +34,22 @@ On the user interface, when multiple components are involved, each of them requi
 
 The second step is to run the command : 
 
-```js
+````js
 rxwebcore --localization --main 
-```
+````
 
 This will create `.json` file with en and fr json in wwwroot folder of the languagecontents.
 
 **AddCountryComponent-en.json** 
 
-```js
+````js
 {"AddCountryComponent_t":"Allows Registration"}
-```
+````
 
 **AddCountryComponent-fr.json** 
 
-```js
+````js
 {"AddCountryComponent_t":"Permet l'enregistrement"}
-```
+````
 
 > The users language will be stored in the Users table as a LanguageCode

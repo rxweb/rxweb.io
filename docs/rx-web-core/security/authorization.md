@@ -49,7 +49,7 @@ ModuleMasters Table:
 ## Access
 It is done using `Access` in which id of the application module is passed. Through which it will execute authorization based upon which the user rights are determined.
 
-```js
+````js
     [ApiController]
     [Route("api/[controller]")]
 	[Access(1)]
@@ -57,7 +57,7 @@ It is done using `Access` in which id of the application module is passed. Throu
     {
         public UsersController(IUserUow uow):base(uow) {}
     }
-```        
+````        
 
 To add authorization in the controller using access, the following command is used:
 
@@ -71,7 +71,7 @@ When you want to by-pass the controller without any authorization when you want 
 
 As per the below scenario it will allow any user to access this `Post` method and allow new user to register.  
 
-```js
+````js
     [ApiController]
     [Route("api/[controller]")]
 	[AllowAnonymous]
@@ -79,4 +79,4 @@ As per the below scenario it will allow any user to access this `Post` method an
     {
         public UserController(IUserUow uow):base(uow) {}
     }
-```
+````
