@@ -252,3 +252,5 @@ It retrieves the single element in the list which fulfiles the given condition i
         return await UserUow.Repository<User>().SingleOrDefaultAsync(a => a.FirstName == "terrance");
     }
 ````
+
+# See Also

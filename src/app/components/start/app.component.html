@@ -16,7 +16,7 @@
     [src]="gitAsideUrl"></iframe>
 </aside>
 
-<div style="position:relative;min-height:100vh;">
+<div style="position:relative;min-height:98vh;">
   <rx-toast></rx-toast>
   <rx-dialog></rx-dialog>
   <rx-popup></rx-popup>
@@ -75,7 +75,7 @@
 
   </main>
 
-  <div *ngIf="showFooter" [class.home-footer]="isHome">
+  <div *ngIf="showFooter" [class.home-footer]="isHome" [class.aspnet-footer]="isAspNetCore">
 
     <app-footer></app-footer>
   </div>

@@ -119,3 +119,5 @@ In the DbEntity class :
      public string Address { get; set; }
 ````
 
+# See Also
+Range Validation

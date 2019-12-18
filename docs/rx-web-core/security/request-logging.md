@@ -22,36 +22,37 @@ Whenever any request is made to the server, the information regarding the reques
 
 # RequestTraces
 
-| ColumnName | Description | Type | 
-| ----------- | ----------- | ----------- |
-| TraceId | Id of Trace(PK) | int |
-| TraceIdentifier | TraceIdentifier | varchar(100) |
-| TraceType | Type of the trace | varchar(10) |
-| TraceTitle | Title of the trace | varchar(200) |
-| Uri | Url | varchar(1024) |
-| Verb | HttpVerb | varchar(10) |
-| ClientIp | Ip of the client | varchar(50) |
-| RequestHeader | Header Request | varchar(max) |
-| ResponseHeader | Header Response | varchar(max) |
-| StatusCode | Code of the status | int |
-| InTime | In time | datetimeoffset(7) |
-| OutTime | Out time | datetimeoffset(7) |
+<table class="table table-bordered table-striped">
+<tr><th>ColumnName</th><th>Description</th><th>Type</th></tr>
+<tr><td>TraceId</td><td>Id of Trace(PK)</td><td>int</td></tr>
+<tr><td>TraceIdentifier</td><td>TraceIdentifier</td><td>varchar(100)</td></tr> 
+<tr><td>TraceType</td><td>Type of the trace</td><td>varchar(10)</td></tr>
+<tr><td>TraceTitle</td><td>Title of the trace</td><td>varchar(200)</td></tr>
+<tr><td>Uri</td><td>Url</td><td>varchar(1024)</td></tr>
+<tr><td>Verb</td><td>HttpVerb</td><td>varchar(10)</td></tr>
+<tr><td>ClientIp</td><td>Ip of the client</td><td>varchar(50)</td></tr>
+<tr><td>RequestHeader</td><td>Header Request</td><td>varchar(max)</td></tr>
+<tr><td>ResponseHeader</td><td>Header Response</td><td>varchar(max)</td></tr>
+<tr><td>StatusCode</td><td>Code of the status</td><td>int</td></tr>
+<tr><td>InTime</td><td>In Time</td><td>datetimeoffset(7)</td></tr>
+<tr><td>OutTime</td><td>Out Time</td><td>datetimeoffset(7)</td></tr>
+</table>
 
 # ExceptionLogs 
 For logging details about the exception occured whenever new request is made.
 
-| ColumnName | Description | Type | 
-| ----------- | ----------- | ----------- |
-| ExceptionLogId | Id of Exception Log(PK) | int |
-| TraceIdentifier | TraceIdentifier | varchar(100) |
-| Message | Error Message | varchar(500) |
-| ExceptionType | Type of exception | varchar(max) |
-| StackTrace | Stack Trac   e of the expection | varchar(max) |
-| InnerExceptionMessage | Inner expection message | varchar(200) |
-| InnerExceptionStackTrace | Inner expection stack trace | varchar(max) |
-| RequestBody | Parameters passed in the body | varchar(max) |
-| CreatedDate | Name of creation | datetimeoffset(7) |
-
+<table class="table table-bordered table-striped">
+<tr><th>ColumnName</th><th>Description</th><th>Type</th></tr>
+<tr><td>ExceptionLogId</td><td>Id of Exception Log(PK)</td><td>int</td></tr>
+<tr><td>TraceIdentifier</td><td>TraceIdentifier</td><td>varchar(100)</td></tr> 
+<tr><td>Message</td><td>Error Message</td><td>varchar(500)</td></tr>
+<tr><td>ExceptionType</td><td>Type of exception</td><td>varchar(max)</td></tr>
+<tr><td>StackTrace</td><td>Stack Trace of the exception</td><td>varchar(max)</td></tr>
+<tr><td>InnerExceptionMessage</td><td>Inner expection message</td><td>varchar(200)</td></tr>
+<tr><td>InnerExceptionStackTrace</td><td>Inner expection stack trace</td><td>varchar(max)</td></tr>
+<tr><td>RequestBody</td><td>Parameters passed in the body</td><td>varchar(max)</td></tr>
+<tr><td>CreatedDate</td><td>Name of creation</td><td>datetimeoffset(7)</td></tr>
+</table>
 
 DataEntityAuditing is done to keep a log of every database change that has been made to the particular entity. 
 
@@ -63,12 +64,13 @@ Auditing a server request keeps a track and log of details while any HTTP reques
 
 The following data is stored in AuditRequest 
 
-| ColumnName | Description | Type | 
-| ----------- | ----------- | ----------- |
-| AuditRequestId | Id of Audit Request(PK) | int |
-| TraceIdentifier | Url of the request | varchar(50) |
-| KeyId | Id of entity | int |
-| CompositeKeyId | Composite key of the entity | int |
+<table class="table table-bordered table-striped">
+<tr><th>ColumnName</th><th>Description</th><th>Type</th></tr>
+<tr><td>AuditRequestId</td><td>Id of Audit Requests(PK)</td><td>int</td></tr>
+<tr><td>TraceIdentifier</td><td>Url of the request</td><td>varchar(50)</td></tr> 
+<tr><td>KeyId</td><td>Id of entity</td><td>int</td></tr>
+<tr><td>CompositeKeyId</td><td>Composite key of the entity</td><td>int</td></tr>
+</table>
 
 # AuditRecord
 
@@ -76,14 +78,15 @@ AuditRecord keeps a trace of data of the table on which the operation is done, I
 
 The following data is stored in AuditRecord
 
-| ColumnName | Description | Type | 
-| ----------- | ----------- | ----------- |
-| AuditRecordId | Id of Audit Record(PK) | int |
-| AuditRequestId | Id of Audit Request(FK AuditRequest) | int |
-| KeyId | Id of entity | int |
-| CompositeKeyId | Composite key of the entity | int |
-| EventType | Type of event | varchar(1) |
-| TableName | Name of the table on which the operation is done | varchar(100) |
+<table class="table table-bordered table-striped">
+<tr><th>ColumnName</th><th>Description</th><th>Type</th></tr>
+<tr><td>AuditRecordId</td><td>Id of Audit Record(PK)</td><td>int</td></tr>
+<tr><td>AuditRequestId</td><td>Id of Audit RequestId(FK AuditRecord)</td><td>int</td></tr> 
+<tr><td>KeyId</td><td>Id of entity</td><td>int</td></tr>
+<tr><td>CompositeKeyId</td><td>Composite key of the entity</td><td>int</td></tr>
+<tr><td>EventType</td><td>Type of event</td><td>varchar(1)</td></tr>
+<tr><td>TableName</td><td>Name of the table on which the operation is done</td><td>varchar(100)</td></tr>
+</table>
 
 # AuditRecordDetails
 
@@ -91,21 +94,13 @@ Whenever entity is modified AuditRecordDetails keeps a track and log of informat
 
 The following data is stored in AuditRecordDetails
 
-| ColumnName | Description | Type | 
-| ----------- | ----------- | ----------- |
-| AuditRecordDetailId | Id of Audit Record Detail(PK) | int |
-| AuditRecordId | Id of Audit RecordId(FK AuditRecord) | int |
-| ColumnName | Name of column where data is modified | varchar(50) |
-| OldValue | Old Entity object value | nvarchar(MAX) |
-| NewValue | New Entity object value | nvarchar(MAX) |
-
 <table class="table table-bordered table-striped">
-<tr><th>Column</th><th>Description</th><th>Type</th></tr>
+<tr><th>ColumnName</th><th>Description</th><th>Type</th></tr>
 <tr><td>AuditRecordDetailId</td><td>Id of Audit Record Detail(PK)</td><td>int</td></tr>
 <tr><td>AuditRecordId</td><td>Id of Audit RecordId(FK AuditRecord)</td><td>Name of the application Object Type.</td></tr> 
 <tr><td>ColumnName</td><td>Name of column where data is modified</td><td>nvarchar(50)</td></tr>
-<tr><td>OldValue</td><td>Name of column where data is modified</td><td>nvarchar(50)</td></tr>
-<tr><td>NewValue</td><td>Name of column where data is modified</td><td>nvarchar(50)</td></tr>
+<tr><td>OldValue</td><td>Old Entity object value</td><td>nvarchar(MAX)</td></tr>
+<tr><td>NewValue</td><td>New Entity object value</td><td>nvarchar(MAX)</td></tr>
 </table>
 
 

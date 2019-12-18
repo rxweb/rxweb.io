@@ -57,3 +57,5 @@ This will create `.json` file with en and fr json in localization folder of wwwr
 ````
 
 > The users language will be stored in the Users table as a LanguageCode
+
+# See Also

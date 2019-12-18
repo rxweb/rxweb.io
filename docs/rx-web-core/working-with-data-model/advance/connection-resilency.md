@@ -19,3 +19,6 @@ ConnectionResilency refers to retrying the database commands whenever connection
 ````    
 
 It is implemented by using `AddConnectionResiliency` method which is used in the `BaseBoundedContext` along with the configuration which is mentioned as above. The method uses `EnableRetryOnFailure` method of Microsoft.EntityFrameworkCore.SqlServer which enables to connect database server after failures with the help of the configuration set in `ConnectionResiliency`.  
+
+
+# See Also

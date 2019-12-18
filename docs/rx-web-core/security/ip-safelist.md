@@ -19,6 +19,6 @@ To have to configure allowed Ips in "AllowedIps" key of `appsettings.json`
 
 In `security.cs` file of the Bootstrap folder of the Api project, The SetIpSafeList method is called which is used to validate the list of IpAddressed which are set in the AllowedIps. 
 
-
+# See Also
 
   

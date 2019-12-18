@@ -34,3 +34,6 @@ Whenever there is a parent controller involved in the data interaction of the re
 # Best Practices
 Rxwebcore follows REST practices while working with Web Api. Please refer <a class="redirect-link" href="https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design">Best Practices</a>
 
+# See Also
+
+Basic Controller

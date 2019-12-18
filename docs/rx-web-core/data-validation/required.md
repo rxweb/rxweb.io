@@ -132,3 +132,6 @@ In the DbEntity class :
     [Required(messageKey:"RequiredMessageKey")]
      public string CandidateName { get; set; }
 ````
+
+# See Also
+Unique Validation

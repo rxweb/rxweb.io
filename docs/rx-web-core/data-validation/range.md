@@ -134,3 +134,6 @@ In the DbEntity class :
     [MaxLength((10),messageKey:"MaxLengthMessageKey")]
      public string Address { get; set; }
 ````
+
+# See Also
+Required Validation

@@ -5,7 +5,7 @@
         "href": "/rx-web-core/step-by-step-guide/overview"
     },
     {
-        "title": "Prerequisites",
+        "title": "Project Creation",
         "path": "project-creation",
         "href": "/rx-web-core/step-by-step-guide/project-creation"
     },
@@ -46,12 +46,12 @@
         "href": "/rx-web-core/working-with-data-model/generating-data-models"
     },
     {
-        "title": "Overview",
+        "title": "Bounded Context",
         "path": "working-with-data-model/bounded-context#overview",
         "href": "/rx-web-core/working-with-data-model/bounded-context"
     },
     {
-        "title": "Overview",
+        "title": "Data Operations",
         "path": "overview",
         "href": "/rx-web-core/working-with-data-model/data-operations/overview"
     },

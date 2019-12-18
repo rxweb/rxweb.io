@@ -57,3 +57,6 @@ As per this controller :
 }
 
 ````
+
+# See Also
+Search Controller

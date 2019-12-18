@@ -66,6 +66,7 @@ export class AppComponent implements OnInit {
   isWhy: boolean = false;
   isShowSidebar: boolean = false;
   showFooter = false;
+  isAspNetCore = false;
   gitAsideUrl: SafeResourceUrl;
   // getRouteAnimation(outlet) {
   //   return outlet.activatedRouteData.animation
@@ -84,6 +85,9 @@ export class AppComponent implements OnInit {
       if (val instanceof NavigationEnd) {
         if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home") ) {
           this.isHome = true;
+        }
+        else if(val.url.includes("rx-web-core")){
+          this.isAspNetCore = true;
         }
         else {
           this.isHome = false;

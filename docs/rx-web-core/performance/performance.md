@@ -45,3 +45,4 @@ Example :
 # Response Compression
 Reducing size of files can reduce the payload and increase the application performance. Natively compressed assets such as images(PNG) and files having much smaller size(less than 150-1000 bytes) should not be compressed.     
 
+# See Also

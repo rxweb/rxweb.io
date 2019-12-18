@@ -47,6 +47,15 @@ Later on if the application needs to be made serverless as well as following mic
 
 Based upon the above described scenario and aspects, Let's start making a new project using `rxwebcore`
 
+# Next Steps
+The upcoming documentation provides you information related to :
+* Prerequisites
+* Installation
+* Project Creation
+
+
+
+
 
 
 

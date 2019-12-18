@@ -301,3 +301,8 @@ Inserted data of UserRoles:
 <tr><th>UserRoleId</th><th>UserId</th><th>RoleId</th></tr>
 <tr><td>1</td><td>5</td><td>1</td></tr>
 </table>
+
+# Next Steps
+The upcoming documentation provides you information related to :
+* Bounded Context
+* Data Validation

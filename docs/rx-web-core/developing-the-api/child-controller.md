@@ -65,3 +65,6 @@ Here is an example of child controller:
 # Accessing the Child Controller API
 
 ![Child Controller](Images/child-controller.gif)
+
+# See Also
+Child Controller

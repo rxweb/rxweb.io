@@ -34,3 +34,5 @@ new Claim(CustomClaimTypes.TimeZone,user.ApplicationTimeZoneName)
 ````
 
 This will retrieve the time as per the user's configured timezone.
+
+# See Also

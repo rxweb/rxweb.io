@@ -21,6 +21,7 @@ export class HtmlPageComponent implements OnInit {
   rightSidebarLinks: any;
   rootFolder: string;
   fileName: string;
+  upcomingLink: string;
   nestedFolder: string;
   childFolder: string;
   isNotFirstTime: boolean;
@@ -29,10 +30,11 @@ export class HtmlPageComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private applicationBroadcaster: ApplicationBroadcaster
-  ) {
+  ) { 
     this.applicationBroadcaster.topSubject.subscribe(t => {
       this.rightSidebarLinks = t.rightSidebarLinks;
     })
+   
     this.activatedRoute.params.subscribe(t => {
       this.rootFolder = t["rootFolder"];
       this.fileName = t["fileName"];
@@ -42,12 +44,19 @@ export class HtmlPageComponent implements OnInit {
         this.bind()
       this.isNotFirstTime = true;
     })
-  }
-
-  ngOnInit(): void {
     this.http.get('assets/json/rxwebcore-links.json?v=' + environment.appVersion).subscribe((response: any) => {
       this.links = response;
-    });
+      var currentObjIndex = this.links.findIndex(a => a.path ==  this.fileName);
+      if(currentObjIndex != undefined)
+      {
+       currentObjIndex++;
+       var nextObj = this.links[currentObjIndex];
+       this.upcomingLink = nextObj.title;   
+      }
+    })
+  }
+
+  ngOnInit(): void {   
     this.bind();
     this.showComponent = true;
   }
@@ -73,8 +82,7 @@ export class HtmlPageComponent implements OnInit {
       var element = document.getElementById("mainContent")
       element.innerHTML = this.codeContent.htmlContent;
      document.querySelectorAll('code').forEach((block) => {
-          hljs.highlightBlock(block);
-          console.log(block);
+          hljs.highlightBlock(block);         
       });
       document.title = "rxweb " + this.codeContent.title
       this.applicationBroadcaster.topSubject.next(this.codeContent);

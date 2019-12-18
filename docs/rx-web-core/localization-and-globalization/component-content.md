@@ -53,3 +53,6 @@ This will create `.json` file with en and fr json in wwwroot folder of the langu
 ````
 
 > The users language will be stored in the Users table as a LanguageCode
+
+# See Also
+Global Content

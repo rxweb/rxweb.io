@@ -60,3 +60,5 @@ The `audience` is the type of the user through which the token is generated. It 
 
 Set the expiration time of the token. In the above example we have set for 2 days. 
 
+# See Also
+Authorization

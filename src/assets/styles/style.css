@@ -4007,22 +4007,35 @@ body {
     padding-left: 20px; */
     padding-left: 60px;
 }
-
-.footer {
-    /* top:900px; */
-    /* padding: 15px 318px 15px 260px; */
+.aspnet-footer{
+    bottom: -75px;
     padding: 15px 0;
     background: #fff;
     /* border-top: 1px solid #eaeaea; */
     transition: margin .4s ease 0s;
     font-size: 13px;
-    bottom: 0;
     left: 0;
     right: 0;
     z-index: 999;
     position: absolute;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
 }
+
+    .footer {
+        /* padding: 15px 318px 15px 260px; */
+        padding: 15px 0;
+        background: #fff;
+        /* border-top: 1px solid #eaeaea; */
+        transition: margin .4s ease 0s;
+        font-size: 13px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        position: absolute;
+        box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+    }
+
 
 #contribution {
     border-top: 1px solid #f0f1f3;
@@ -5584,7 +5597,7 @@ body.light-skin.fixed-footer .footer {
 }
 
 pre {
-    margin-top: -20px;
+   
     margin-bottom: 0px;
     display: block;
     font-size: 13px;
