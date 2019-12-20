@@ -73,7 +73,7 @@ export class AppComponent implements OnInit {
   // }
   rightSidebarLinks: any;
   //@ViewChild('rightSidenav') public rightsidenav: RightSideBarComponent;
-  constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer,private http: HttpClient) {
+  constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
@@ -83,11 +83,12 @@ export class AppComponent implements OnInit {
     })
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
-        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home") ) {
+        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home")) {
           this.isHome = true;
         }
-        else if(val.url.includes("rx-web-core")){
+        else if (val.url.includes("rx-web-core")) {
           this.isAspNetCore = true;
+          this.isHome = false;
         }
         else {
           this.isHome = false;
@@ -95,7 +96,7 @@ export class AppComponent implements OnInit {
 
         if (location.pathname.includes("generics")) {
           this.isShowSidebar = false;
-          this.http.get('assets/json/generics-sidebar.json').subscribe((response: any) => {  
+          this.http.get('assets/json/generics-sidebar.json').subscribe((response: any) => {
             this.isShowSidebar = true
           })
         }
@@ -107,23 +108,30 @@ export class AppComponent implements OnInit {
         }
         else if (location.pathname.includes("http")) {
           this.isShowSidebar = false;
-          this.http.get('assets/json/http-sidebar.json').subscribe((response: any) => {  
+          this.http.get('assets/json/http-sidebar.json').subscribe((response: any) => {
             this.isShowSidebar = true
           })
         }
         else if (location.pathname.includes("reactive-dynamic-forms")) {
           this.isShowSidebar = false;
-          this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {  
+          this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
+            this.isShowSidebar = true
+          })
+        }
+        else if (location.pathname.includes("rx-web-core")) {
+          this.isShowSidebar = false;
+          this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
+            debugger
             this.isShowSidebar = true
           })
         }
         else {
           this.isShowSidebar = false;
-          this.http.get('assets/json/sidebar.json').subscribe((response: any) => {  
+          this.http.get('assets/json/sidebar.json').subscribe((response: any) => {
             this.isShowSidebar = true
           })
         }
-        
+
         var t = setTimeout(() => {
           this.showFooter = true;
         }, 500);
@@ -178,14 +186,14 @@ export class AppComponent implements OnInit {
         else {
           HttpClientConfig.register({
             hostURIs: [{
-                name: 'local',
-                default: true,
-                uri: 'https://rxhttpapi.azurewebsites.net'
+              name: 'local',
+              default: true,
+              uri: 'https://rxhttpapi.azurewebsites.net'
             }],
             filters: [],
             onError: (r) => { console.log(r) },
-            
-        })
+
+          })
           ReactiveFormConfig.set({
             "internationalization": {
               "dateFormat": "dmy",
@@ -244,7 +252,7 @@ export class AppComponent implements OnInit {
               "primeNumber": "Please enter a valid prime number",
               "range": "Input exceeds the range",
               "required": "This field is required",
-              "requiredTrue":"Value should be true",
+              "requiredTrue": "Value should be true",
               "startsWith": "Please enter a valid input",
               "time": "Input must be a proper time",
               "minTime": "Minimum time does not match",
@@ -315,7 +323,7 @@ export class AppComponent implements OnInit {
               "primeNumberMessageKey": "The input enterred must be a valid prime number",
               "rangeMessageKey": "The input enterred must be in a proper range",
               "requiredMessageKey": "You can not leave this field empty",
-              "requiredTrueMessageKey":"The Input value should be true",
+              "requiredTrueMessageKey": "The Input value should be true",
               "startsWithMessageKey": "The input enterred must startsWith the substring mentioned in config parameter",
               "timeMessageKey": "The input enterred must be a valid time format",
               "upperCaseMessageKey": "The input enterred must be in upper case only",

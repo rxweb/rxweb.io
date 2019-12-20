@@ -30,11 +30,11 @@ export class HtmlPageComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private applicationBroadcaster: ApplicationBroadcaster
-  ) { 
+  ) {
     this.applicationBroadcaster.topSubject.subscribe(t => {
       this.rightSidebarLinks = t.rightSidebarLinks;
     })
-   
+
     this.activatedRoute.params.subscribe(t => {
       this.rootFolder = t["rootFolder"];
       this.fileName = t["fileName"];
@@ -46,17 +46,16 @@ export class HtmlPageComponent implements OnInit {
     })
     this.http.get('assets/json/rxwebcore-links.json?v=' + environment.appVersion).subscribe((response: any) => {
       this.links = response;
-      var currentObjIndex = this.links.findIndex(a => a.path ==  this.fileName);
-      if(currentObjIndex != undefined)
-      {
-       currentObjIndex++;
-       var nextObj = this.links[currentObjIndex];
-       this.upcomingLink = nextObj.title;   
+      var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
+      if (currentObjIndex != undefined) {
+        currentObjIndex++;
+        var nextObj = this.links[currentObjIndex];
+        this.upcomingLink = nextObj.title;
       }
     })
   }
 
-  ngOnInit(): void {   
+  ngOnInit(): void {
     this.bind();
     this.showComponent = true;
   }
@@ -81,22 +80,20 @@ export class HtmlPageComponent implements OnInit {
       this.codeContent = JSON.parse(response.toString());
       var element = document.getElementById("mainContent")
       element.innerHTML = this.codeContent.htmlContent;
-     document.querySelectorAll('code').forEach((block) => {
-          hljs.highlightBlock(block);         
+      document.querySelectorAll('code').forEach((block) => {
+        hljs.highlightBlock(block);
       });
       document.title = "rxweb " + this.codeContent.title
       this.applicationBroadcaster.topSubject.next(this.codeContent);
     });
   }
 
-  nextLink()
-  {
-    var currentObjIndex = this.links.findIndex(a => a.href ==  location.pathname);
-    if(currentObjIndex != undefined)
-    {
-     currentObjIndex++;
-     var nextObj = this.links[currentObjIndex];
-     this.router.navigate([nextObj.href]);    
+  nextLink() {
+    var currentObjIndex = this.links.findIndex(a => a.href == location.pathname);
+    if (currentObjIndex != undefined) {
+      currentObjIndex++;
+      var nextObj = this.links[currentObjIndex];
+      this.router.navigate([nextObj.href]);
     }
   }
 

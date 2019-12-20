@@ -21,7 +21,7 @@ export class SideBarComponent implements OnInit {
     private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster, private activatedRoute: ActivatedRoute
   ) {
     activatedRoute.params.subscribe(t => {
-  
+
     })
   }
   ngOnInit(): void {
@@ -583,8 +583,8 @@ export class SideBarComponent implements OnInit {
         });
       }
       else if (location.pathname.includes("rx-web-core")) {
+        debugger
         this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
-           
           this.links = response.links;
           var hasLinkArray = location.href.split('#')[1];
           var splitedArray = location.pathname.split('#')[0].split('/')
@@ -609,23 +609,23 @@ export class SideBarComponent implements OnInit {
                 else {
                   var currentLink = currentArray[0].childrens.filter(a => a.href.includes(hasLinkArray))
                 }
-                if(currentLink){
-              currentLink[0].isActive = true;
-                }
-              if (currentArray[0].childrens) {   
-                      
-                  var InnerNestedCurrentArray = currentArray[0].childrens.filter(a => a.path.includes((splitedArray[3])))
-                  if(InnerNestedCurrentArray[0]){
+              if (currentLink) {
+                currentLink[0].isActive = true;
+              }
+              if (currentArray[0].childrens) {
+
+                var InnerNestedCurrentArray = currentArray[0].childrens.filter(a => a.path.includes((splitedArray[3])))
+                if (InnerNestedCurrentArray[0]) {
                   InnerNestedCurrentArray[0].isActive = true;
                   InnerNestedCurrentArray[0].isOpen = true;
-                    if(InnerNestedCurrentArray[0].childrens){
-                      var innerMostCurrentLink = InnerNestedCurrentArray[0].childrens.filter(a=>a.path == splitedArray[4])
-                      if(innerMostCurrentLink[0]){
-                        innerMostCurrentLink[0].isActive = true;
-                      }
+                  if (InnerNestedCurrentArray[0].childrens) {
+                    var innerMostCurrentLink = InnerNestedCurrentArray[0].childrens.filter(a => a.path == splitedArray[4])
+                    if (innerMostCurrentLink[0]) {
+                      innerMostCurrentLink[0].isActive = true;
                     }
                   }
-                  
+                }
+
               }
             }
           }

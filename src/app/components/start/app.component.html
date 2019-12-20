@@ -30,7 +30,7 @@
 
 
         <div class="header-links content dynamic-content">
-            <img height="200" class="rxweb-new-logo" width="150" src="assets/images/Rx_Logo_200X46.png">
+          <img height="200" class="rxweb-new-logo" width="150" src="assets/images/Rx_Logo_200X46.png">
           <ul class="pull-right list-unstyled list-inline">
             <li class="list-inline-item">
               <a routerLink="/home" routerLinkActive="active">Reactive
@@ -58,13 +58,12 @@
         <app-side-bar *ngIf="isShowSidebar"></app-side-bar>
       </div>
 
-
       <!-- <div [@routerAnimation]="getRouteAnimation(route)"> -->
       <div class="main-content" [class.col-sm-9]="!isHome" [class.col-sm-12]="isHome">
         <router-outlet></router-outlet>
       </div>
 
-      <ul *ngIf="!isHome" id="gitter-aside" class="quick-links list-unstyled">    
+      <ul *ngIf="!isHome" id="gitter-aside" class="quick-links list-unstyled">
         <li style="margin-top: -50px;"><a style="border-top: 1px solid #ccc;border-left: 1px solid #ccc;width: 51px;"
             target="_blank" (click)="gitterAside()"><i class="fa fa-comments"></i></a></li>
       </ul>

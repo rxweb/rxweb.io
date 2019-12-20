@@ -1,15 +1,10 @@
+<div id="wrapper" *ngIf="showComponent">
 
+    <div class="next">
+        <a class="fas fa-chevron-left" (click)="previousLink()"></a>
+        <a class="fas fa-chevron-right" style="margin-left: 1420px;" (click)="nextLink()"></a>
+    </div>
 
-
-<div  id="wrapper" *ngIf="showComponent">
-           
-                <div class="next">
-                        <a class="fas fa-chevron-left" (click)="previousLink()"></a>
-                        <a class="fas fa-chevron-right" style="margin-left: 1420px;" (click)="nextLink()"></a> 
-                      
-                </div>    
-             
-        
     <div class="content">
         <!-- <app-title [title]="codeContent.title" [description]="codeContent.description" [mainType]="mainType" [activeTab]="activeTab" [validationName]="validationName" [validatorType]="codeContent.validatorType"
             [validationTypeTitle]="codeContent.validationTypeTitle" [templateDrivenType]="templateDrivenType"></app-title> -->
@@ -20,9 +15,13 @@
                         <div class="tab-content fade" [class.show]="showViewer">
                             <div class="tab-pane panel-body validation-tab active">
                                 <div class="tabs-left" *ngIf="showViewer" [@enterAnimation]>
-                                        <button class="btn  example-btn" [class.btn-primary]="!showExample" [class.btn-outline-secondary]="showExample" *ngIf="mainType != 'how-to'" (click)="routeExample()">Examples Only</button>
+                                    <button class="btn  example-btn" [class.btn-primary]="!showExample"
+                                        [class.btn-outline-secondary]="showExample" *ngIf="mainType != 'how-to'"
+                                        (click)="routeExample()">Examples Only</button>
                                     <page-viewer [content]="codeContent.htmlContent" [tabArray]="codeContent.tabArray"
-                                        [data]="jsonContent" [typeName]="typeName" [templateDrivenType]="templateDrivenType" [showExample]="showExample"></page-viewer>
+                                        [data]="jsonContent" [typeName]="typeName"
+                                        [templateDrivenType]="templateDrivenType" [showExample]="showExample">
+                                    </page-viewer>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +30,7 @@
             </div>
         </div>
         <div>
-         
+
         </div>
     </div>
     <app-right-sidebar [sidebarLinks]="rightSidebarLinks"></app-right-sidebar>
