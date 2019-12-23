@@ -60,7 +60,7 @@ Here is an example of a basic controller.
 
 # Acessing The Api
 
-For accessing the created Api, you must pass key and value of JWT token which is generated when the post request is called. For more information about creation of JWt web token Please refer <a class="redirect-link" href="\AspNetCore\step-by-step-guide\run-the-project.html">Login Api</a>.  
+For accessing the created Api, you must pass key and value of JWT token which is generated when the post request is called. For more information about creation of JWt web token Please refer <a class="redirect-link" href="/rx-web-core/step-by-step-guide/run-the-project">Login Api</a>.  
 
 > The key is passed as `x-request` and value is passed as `Authorization`.
 

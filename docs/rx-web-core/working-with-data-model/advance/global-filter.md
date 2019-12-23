@@ -20,7 +20,7 @@ Create a extended model in main folder of Models project named `ActiveFilter.cs`
 
 ````
 
-Status is defined in ApplicationObjects. for more information please refer <a class="redirect-link" href="/AspNetCore/step-by-step-guide/database-information.html#applicationobjects">ApplicationObjects</a>
+Status is defined in ApplicationObjects. for more information please refer <a class="redirect-link" href="/rx-web-core/step-by-step-guide/database-information">ApplicationObjects</a>
 
 **Step 2:**
 Add `GlobalQueryFilter` annotation above the model class`Country.cs`
@@ -52,7 +52,7 @@ Add `GlobalQueryFilter` annotation above the model class`Country.cs`
 		#endregion ApplicationObject Annotations
 
         public virtual ApplicationObject Client { get; set; }
-	}
+}
 ````
 
 

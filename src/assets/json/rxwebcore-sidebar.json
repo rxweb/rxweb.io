@@ -331,6 +331,36 @@
                     "path": "multitenancy"
                 },
                 {
+                    "childrens": [                      
+                        {
+                            "childrens": [],
+                            "title": "Connection Resilency",
+                            "path": "connection-resilency",
+                            "href": "/rx-web-core/working-with-data-model/advance/connection-resilency"
+                        },
+                        {
+                            "childrens": [],
+                            "title": "Global Filter",
+                            "path": "global-filter",
+                            "href": "/rx-web-core/working-with-data-model/advance/global-filter"
+                        },
+                        {
+                            "childrens": [],
+                            "title": "Timezone Conversion",
+                            "path": "timezone-conversion",
+                            "href": "/rx-web-core/working-with-data-model/advance/timezone-conversion"
+                        },
+                        {
+                            "childrens": [],
+                            "title": "Value Conversion",
+                            "path": "value-conversion",
+                            "href": "/rx-web-core/working-with-data-model/advance/value-conversion"
+                        }
+                    ],
+                    "title": "Advance",
+                    "path": "advance"
+                },
+                {
                     "childrens": [],
                     "title": "EntityDataAuditing",
                     "path": "entity-data-auditing"
