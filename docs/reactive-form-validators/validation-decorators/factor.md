@@ -8,7 +8,7 @@ type: tabs
 linktitle: factor
 ---
 
-<div class="title-bar"><p>factor validation {{validatorType}} will allow user to enter valid factor of a number which is called dividend.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>factor validation {{validatorType}} will allow user to enter valid factor of a number which is called dividend.</p></div>
 
 # When to use
 Suppose you want to create a user form in which you want user to enter factor of a particular value which contains fields like firstNumber, secondNumber, ThirdNumber, fourthNumber, fifthNumber and sixthNumber. Here depending upon the requirement these scenarios may arise.

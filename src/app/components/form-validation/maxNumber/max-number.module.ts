@@ -5,6 +5,7 @@ import { MaxNumberTemplateDrivenValidationDirectivesExtendedModule } from "src/a
 import { MaxNumberTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/maxNumber/max-number-validation-decorators-extended.module";
 
 import { MaxNumberValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/maxNumber/max-number-validators-extended.module";
+
 import { MAX_NUMBER_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/maxNumber/max-number.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { MAX_NUMBER_ROUTING } from "src/app/components/form-validation/maxNumber/max-number.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: MAX_NUMBER_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class MaxNumberModule { }
+
+
 

@@ -8,7 +8,7 @@ type: tabs
 linktitle: alpha
 ---
 
-<div class="title-bar"><p>alpha validation {{validatorType}} will allow only alphabets to be entered. It will not allow any digit or special character.</p></div>
+ <div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>alpha validation {{validatorType}} will allow only alphabets to be entered. It will not allow any digit or special character.</p></div>
 
 # When to use
 

@@ -1,6 +1,6 @@
 import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CONDITIONAL_BINDING_ROUTING } from "./conditional-binding.routing";
+import { CONDITIONAL_BINDING_ROUTING } from "src/app/components/conditional-binding/conditional-binding.routing";
 import { PageModule } from "src/app/components/page/page.module";
 
 

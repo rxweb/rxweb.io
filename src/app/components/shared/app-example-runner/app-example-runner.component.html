@@ -1,6 +1,6 @@
 <div>
     <div class="model-ts combined">
-        <a class="float-right file-icon" *ngIf="tabArray.length > 0" (click)="openStackblitz()"><i aria-hidden="true" class="fa fa-external-link"></i></a>
+        <a class="float-right file-icon" *ngIf="isRunCode"  (click)="openStackblitz()"><i aria-hidden="true" class="fa fa-external-link"></i></a>
         <a class="float-right file-icon" *ngIf="tabArray.length > 0" (click)="showElement = !showElement"><i aria-hidden="true" class="fa fa-code"></i></a>
         <div class="code-example-title" *ngIf='title'>
             {{title}}
@@ -16,9 +16,15 @@
             </div>
             <hr/>
         </div>
-        <div class="code-example">
+        <div >
+            <div *ngIf="!isRunCode" (click)="runCodeExample(exampleName)" class="code_play_box"><img class="play ng-star-inserted" height="100" id="play" src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Windows_Media_Player_alt.png">Watch a free video course on Vue Mastery
+                </div>
+    </div>
+        <iframe *ngIf="isRunCode" [src]="exampleUrl" style="width:100%;border:none;"></iframe>
+
+        <!-- <div class="code-example">
             <a class="float-right file-icon" *ngIf="tabArray.length == 0" (click)="openStackblitz()"><i aria-hidden="true" class="fa fa-external-link"></i></a>
             <code-example [Component]="refComponent" [data]="dataParam"></code-example>
-        </div>
+        </div> -->
     </div>
 </div>

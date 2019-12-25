@@ -7,7 +7,7 @@ type: simple
 linktitle: dynamic
 ---
 
-<div class="title-bar"><p>rxweb dynamic forms is giving wide variety of features including horizontal and inline form, customized sizing for formControls, customized controls like plaintext mode for checkbox, radio and other formcontrols.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>rxweb dynamic forms is giving wide variety of features including horizontal and inline form, customized sizing for formControls, customized controls like plaintext mode for checkbox, radio and other formcontrols.</p></div>
 
 # Basic View
 

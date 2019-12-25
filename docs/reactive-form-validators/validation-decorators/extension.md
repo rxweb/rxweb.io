@@ -8,7 +8,7 @@ type: tabs
 linktitle: extension
 ---
 
-<div class="title-bar"><p>extension validation {{validatorType}} allows user to validate the input which is in the proper extension format.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>extension validation {{validatorType}} allows user to validate the input which is in the proper extension format.</p></div>
 
 # When to use
 Suppose you want to create a UserInfo form, which contains fields like fileType, profilePicture ,imageFile ,documentFile ,contactFile and you want the user to upload file which have a proper extension format. Here depending upon the requirement, these scenarios may arise..

@@ -7,7 +7,7 @@ type: simple
 linktitle: textarea
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 
 To create a textarea in dynamic forms, you just need to mention `type: "textarea"` in the server response.</p></div>
 

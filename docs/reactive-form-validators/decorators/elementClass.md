@@ -5,7 +5,7 @@ category: decorators
 type: decorators
 linktitle: elementClass
 ---
-<div class="title-bar"><p>You can set the element class conditionaly through your TS code.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>You can set the element class conditionaly through your TS code.</p></div>
 
 
 # Basic elementClass decorator  

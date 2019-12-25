@@ -8,7 +8,7 @@ type: tabs
 linktitle: async
 ---
 
-<div class="title-bar"><p>async validation {{validatorType}} will allow the field to validate the unique value from server for that particular field. This async validation can be customized according to the need.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>async validation {{validatorType}} will allow the field to validate the unique value from server for that particular field. This async validation can be customized according to the need.</p></div>
 
 # When to use
 Suppose you want to create a user form, which contains field like userName and email and you want the user to enter unique Username. This unique value of username will be validated from server. You can make a custom validator function. Here depending upon the requirement these scenarios may arise. 

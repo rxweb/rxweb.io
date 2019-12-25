@@ -5,6 +5,7 @@ import { AsciiTemplateDrivenValidationDirectivesExtendedModule } from "src/asset
 import { AsciiTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/ascii/ascii-validation-decorators-extended.module";
 
 import { AsciiValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/ascii/ascii-validators-extended.module";
+
 import { ASCII_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/ascii/ascii.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { ASCII_ROUTING } from "src/app/components/form-validation/ascii/ascii.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: ASCII_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class AsciiModule { }
+
+
 

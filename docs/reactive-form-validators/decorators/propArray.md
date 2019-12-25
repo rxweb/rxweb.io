@@ -7,7 +7,7 @@ type: decorators
 linktitle: propArray
 ---
 
-<div class="title-bar"><p>propArray is used to define an array of the instances of a class.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>propArray is used to define an array of the instances of a class.</p></div>
 
 # When to use
 Suppose you want to create a User form, which contains fields like CourseName in `User` class,

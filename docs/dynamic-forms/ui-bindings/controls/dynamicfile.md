@@ -7,7 +7,7 @@ type: simple
 linktitle: dynamicfile
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 
 To create a formControl with file in dynamic forms, you just need to mention `type: "file"` in the server response.</p></div>
 

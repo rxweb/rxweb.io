@@ -8,7 +8,7 @@ type:tabs
 linktitle: image
 ---
 
-<div class="title-bar"><p>image validation  {{validatorType}}  allows user to validate image like height,width etc.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>image validation  {{validatorType}}  allows user to validate image like height,width etc.</p></div>
 
 # When to use
 Suppose you want to create a User form, which contains fields like ProfilePhoto, Signature, DrivingLicense,IdentityCard,DrvingLicense,VoterId,AadharCard, and you want the user to enter only the hex color format. Here depending upon the requirement these scenarios may arise.

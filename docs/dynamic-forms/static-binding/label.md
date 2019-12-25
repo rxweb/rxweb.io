@@ -8,7 +8,7 @@ type: simple
 linktitle: label
 ---
 
-<div class="title-bar"><p>label can be used inside ui binding of to generate a label in the dynamic-form.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>label can be used inside ui binding of to generate a label in the dynamic-form.</p></div>
 
 # Example
 

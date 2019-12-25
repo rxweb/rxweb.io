@@ -8,7 +8,7 @@ type:tabs
 linktitle: latitude
 ---
 
-<div class="title-bar"><p>latitude validation  {{validatorType}}  allows user to enter value which is valid latitude.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>latitude validation  {{validatorType}}  allows user to enter value which is valid latitude.</p></div>
 
 # When to use
 Suppose you want to create a country form, which contains fields like continent, firstCountryLatitude, secondCountryLatitude and thirdCountryLatitude and you want the user to enter input which is a proper latitude format. Here depending upon the requirement, these scenarios may arise..

@@ -1,7 +1,5 @@
 import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-
 import { DYNAMICDATE_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/controls/dynamicdate/dynamicdate.constants";
 import { DynamicdateValidatorsExtendedModule } from "src/assets/examples/controls/dynamicdate/dynamicdate-validators-extended.module";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";

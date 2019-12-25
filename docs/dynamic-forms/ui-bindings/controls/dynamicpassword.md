@@ -7,7 +7,7 @@ type: simple
 linktitle: dynamicpassword
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 
 To create a formControl with password in dynamic forms, you just need to mention `type: "password"` in the server response.</p></div>
 

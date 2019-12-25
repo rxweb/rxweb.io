@@ -7,7 +7,7 @@ type: simple
 linktitle: color
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 
 To create a color picker in dynamic forms, you just need to mention `type: "color"` in the server response.</p></div>
 

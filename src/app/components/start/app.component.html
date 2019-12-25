@@ -21,7 +21,7 @@
   <rx-dialog></rx-dialog>
   <rx-popup></rx-popup>
   <rx-spinner></rx-spinner>
-  <app-top-bar *ngIf="!isHome"></app-top-bar>
+  <app-top-bar [sidebarLinks]="rightSidebarLinks" *ngIf="!isHome"></app-top-bar>
 
   <header *ngIf="isHome" class="header home-header-links">
 
@@ -62,11 +62,15 @@
       <div class="main-content" [class.col-sm-9]="!isHome" [class.col-sm-12]="isHome">
         <router-outlet></router-outlet>
       </div>
-
-      <ul *ngIf="!isHome" id="gitter-aside" class="quick-links list-unstyled">
+      <!-- <ul class="navbar-nav fixed_chat_menu">
+        <li class="nav-item active">
+           <a class="nav-link d-flex align-items-center justify-content-center pr-2 py-1" href="#"><i class="fa fa-comment-o mr-2" aria-hidden="true"></i>Chat</a>
+       </li>
+      </ul> -->
+      <!-- <ul *ngIf="!isHome" id="gitter-aside" class="quick-links list-unstyled">
         <li style="margin-top: -50px;"><a style="border-top: 1px solid #ccc;border-left: 1px solid #ccc;width: 51px;"
             target="_blank" (click)="gitterAside()"><i class="fa fa-comments"></i></a></li>
-      </ul>
+      </ul> -->
 
       <!-- </div> -->
     </div>

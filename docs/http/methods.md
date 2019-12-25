@@ -6,7 +6,7 @@ type: simple
 linktitle: methods
 ---
 
-<div class="title-bar"><p>Angular application frequently use different Http methods like get, put, post, delete, and patch to perform operations on data. </p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>Angular application frequently use different Http methods like get, put, post, delete, and patch to perform operations on data. </p></div>
 
 # Get
 

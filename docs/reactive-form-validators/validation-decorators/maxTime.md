@@ -8,7 +8,7 @@ type: tabs
 linktitle: maxTime
 ---
 
-<div class="title-bar"><p>maxTime validation  {{validatorType}}  will allow user to enter the input time format which must be less than or equal to the minimum time mentioned in the config parameters.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>maxTime validation  {{validatorType}}  will allow user to enter the input time format which must be less than or equal to the minimum time mentioned in the config parameters.</p></div>
 
 # When to use
 Suppose you want to create a AttendanceDetail form, which contains field of EntryPlace, EntryTime, TotalTimeOut,Net In Time, Total In Time and Exit Time you want the user to enter valid time format which must not exceed the maximum time. Here depending upon the requirement these scenarios may arise..

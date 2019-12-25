@@ -8,7 +8,7 @@ type:tabs
 linktitle: password
 ---
 
-<div class="title-bar"><p>password validation  {{validatorType}}  will allow user to enter only the input according to correct password validation format.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>password validation  {{validatorType}}  will allow user to enter only the input according to correct password validation format.</p></div>
 
 # When to use
 Suppose you want to create a login form, which contains fields like newPassword and oldPassword and you want the user to enter valid Password pattern. Here depending upon the requirement these scenarios may arise.	

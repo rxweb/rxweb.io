@@ -6,7 +6,7 @@ type: simple
 linktitle: httpClientConfig
 ---
 
-<div class="title-bar"><p>httpClientConfig is the global configuration for the RxHttp requests. It is used to configure the hostUri and other details throughout the application for interaction of all the requests.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>httpClientConfig is the global configuration for the RxHttp requests. It is used to configure the hostUri and other details throughout the application for interaction of all the requests.</p></div>
 
 
 # httpClientConfig

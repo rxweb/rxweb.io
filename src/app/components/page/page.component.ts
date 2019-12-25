@@ -151,7 +151,15 @@ export class PageComponent implements OnInit {
       });
   }
 
-  
+  route(typeName: string, templateDrivenType?: string) {
+    if (templateDrivenType)
+    {
+      this.router.navigate(['/', this.mainType, this.validationName, typeName, templateDrivenType])
+      this.templateDrivenType = templateDrivenType;  
+    }
+    else
+      this.router.navigate(['/', this.mainType, this.validationName, typeName])
+  }
   scrollTo(section) {
     window.location.hash = section;
   }

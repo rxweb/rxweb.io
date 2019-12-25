@@ -8,7 +8,7 @@ type:tabs
 linktitle: hexColor
 ---
 
-<div class="title-bar"><p>hexColor validation  {{validatorType}}  will allow user to enter only the input in proper Hex Color format.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>hexColor validation  {{validatorType}}  will allow user to enter only the input in proper Hex Color format.</p></div>
 
 # When to use
 Suppose you want to create a User form, which contains fields like ColorPicker, HeaderHexColorCode, BodyHexColorCode, StrictHexColorCode and you want the user to enter only the hex color format. Here depending upon the requirement these scenarios may arise.

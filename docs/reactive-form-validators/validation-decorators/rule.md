@@ -7,7 +7,7 @@ type:tabs
 linktitle: rule
 ---
 
-<div class="title-bar"><p>rule validation {{validatorType}} will allow the user to set custom rules on a particular field.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>rule validation {{validatorType}} will allow the user to set custom rules on a particular field.</p></div>
 
 # When to use
 Suppose you want to create an Address Info form, which contains fields like Zipcode, countryName, stateName, cityName and colonyName and you want the user to enter value based upon your custom rules. Here depending upon the requirement, these scenarios may arise..

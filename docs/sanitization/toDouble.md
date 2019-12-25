@@ -7,7 +7,7 @@ type:decorators
 linktitle: toDouble
 ---
 
-<div class="title-bar"><p>Convert the input to a float, or NAN if the input is not a float.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>Convert the input to a float, or NAN if the input is not a float.</p></div>
 
 # Example  
 Let's create a user model and define a property of 'amount' in the model.

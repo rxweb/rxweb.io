@@ -7,7 +7,7 @@ type: simple
 linktitle: DynamicFormConfiguration
 ---
 
-<div class="title-bar"><p>It is used for passing the additional configuration while building the dynamic form.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>It is used for passing the additional configuration while building the dynamic form.</p></div>
 
 # controlsConfig
 

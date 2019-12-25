@@ -6,7 +6,7 @@ category: sanitization
 type:decorators
 linktitle: escape
 ---
-<div class="title-bar"><p>escapes the string when the user enters the input.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>escapes the string when the user enters the input.</p></div>
 
 # Example  
 Let's create a user model and define a property of freeText in the model.

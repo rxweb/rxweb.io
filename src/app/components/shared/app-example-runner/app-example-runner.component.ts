@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter,AfterContentInit } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter, AfterContentInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { AppCodeComponent } from "src/app/components/shared/app-code/app-code.component";
@@ -10,12 +10,13 @@ import { ComponentView } from "src/app/domain/view";
 import { ViewChild } from "@angular/core";
 import { CodeExampleComponent } from "src/app/components/shared/code-example/code-example.component";
 import { StackBlitzService } from "src/app/components/shared/stackblitz/stackblitz.service";
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 
 @Component({
   selector: 'app-example-runner',
   templateUrl: './app-example-runner.component.html',
-  entryComponents: [AppCodeComponent,CodeExampleComponent]
+  entryComponents: [AppCodeComponent, CodeExampleComponent]
 })
 
 export class AppExampleRunnerComponent implements OnInit {
@@ -24,39 +25,39 @@ export class AppExampleRunnerComponent implements OnInit {
   @Input() decoratorName: string;
   @Input() exampleName: string;
   @Input() typeName: string;
-  @Input() content:any;
-  @Input() showTab:boolean;
-  showStackBlitz :boolean = true;
-  @Input() templateDrivenType:string;
+  @Input() content: any;
+  @Input() showTab: boolean;
+  showStackBlitz: boolean = true;
+  exampleUrl: SafeResourceUrl;
+  @Input() templateDrivenType: string;
   showElement: any = {};
+  isRunCode : boolean = false; 
   tabArray: any = {};
   activeTab: string;
   showComponent: boolean = false;
-  dataParam:any;
-  constructor(private router: Router
-  ) { 
- 
+  dataParam: any;
+  constructor(private router: Router, private sanitizer: DomSanitizer
+  ) {
+    //this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl('http://localhost:9999');
   }
   ngOnInit(): void {
     this.showElement = false;
-    if(this.decoratorName == "get"|| this.decoratorName == "post"  || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject" )
-    {
+    if (this.decoratorName == "get" || this.decoratorName == "post" || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject") {
       this.showElement = true;
     }
-    this.tabArray = []; 
-    if(this.content && this.showTab){
-      if(this.content.function != null)
-      this.tabArray.push({"tabName": "Component", "tabItem": "component", "content": this.content.function})
+    this.tabArray = [];
+    if (this.content && this.showTab) {
+      if (this.content.function != null)
+        this.tabArray.push({ "tabName": "Component", "tabItem": "component", "content": this.content.function })
       if (this.content.model != null)
         this.tabArray.push({ "tabName": "Model", "tabItem": "model", "content": this.content.model })
-      if (this.decoratorName != "sanitizer"  && this.decoratorName != "post"  && this.decoratorName != "delete"   && this.decoratorName != "patch"  && this.decoratorName != "put" && this.decoratorName != "get"  && this.decoratorName != "list" && this.content.component != null)
+      if (this.decoratorName != "sanitizer" && this.decoratorName != "post" && this.decoratorName != "delete" && this.decoratorName != "patch" && this.decoratorName != "put" && this.decoratorName != "get" && this.decoratorName != "list" && this.content.component != null)
         this.tabArray.push({ "tabName": "Component", "tabItem": "component", "content": this.content.component })
-      if (JSON.stringify(this.content.json) !== JSON.stringify({}))
-      {
+      if (JSON.stringify(this.content.json) !== JSON.stringify({})) {
         var jsonObject = this.content.json;
         if (jsonObject) {
           for (var prop in jsonObject) {
-            if (jsonObject.hasOwnProperty(prop) && this.decoratorName !="get") {
+            if (jsonObject.hasOwnProperty(prop) && this.decoratorName != "get") {
               this.tabArray.push({ "tabName": prop, "tabItem": prop, "content": jsonObject[prop] })
             }
           }
@@ -64,17 +65,25 @@ export class AppExampleRunnerComponent implements OnInit {
       }
       if (this.content.html != null)
         this.tabArray.push({ "tabName": "Html", "tabItem": "html", "content": this.content.html })
-      if(this.content && this.content.dataParam)
-      this.dataParam = this.content.dataParam;
+      if (this.content && this.content.dataParam)
+        this.dataParam = this.content.dataParam;
       this.activeTab = this.tabArray[0].tabName;
     }
   }
-  openStackblitz(){
-     var stackBlitz = new StackBlitzService();
-     let form = stackBlitz.buildForm(this.decoratorName,this.exampleName,this.typeName,this.templateDrivenType,this.content,this.title)
-     document.body.appendChild(form);
-     form.submit();
-     document.body.removeChild(form);
+
+  runCodeExample(exampleName){ 
+    let codeUrl =  "http://localhost:9999" + this.router.url +  "?exampleName=" + exampleName;
+    this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
+    setTimeout(()=>{this.isRunCode = true;},500)
+    console.log(this.exampleUrl);
+  }
+
+  openStackblitz() {
+    var stackBlitz = new StackBlitzService();
+    let form = stackBlitz.buildForm(this.decoratorName, this.exampleName, this.typeName, this.templateDrivenType, this.content, this.title)
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
   }
 }
 

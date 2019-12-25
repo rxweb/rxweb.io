@@ -5,6 +5,7 @@ import { HexColorTemplateDrivenValidationDirectivesExtendedModule } from "src/as
 import { HexColorTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/hexColor/hex-color-validation-decorators-extended.module";
 
 import { HexColorValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/hexColor/hex-color-validators-extended.module";
+
 import { HEX_COLOR_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/hexColor/hex-color.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { HEX_COLOR_ROUTING } from "src/app/components/form-validation/hexColor/hex-color.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: HEX_COLOR_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class HexColorModule { }
+
+
 

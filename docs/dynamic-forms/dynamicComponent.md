@@ -8,7 +8,7 @@ linktitle: dynamicComponent
 ---
 
 
-<div class="title-bar"><p>@dynamicComponent decorator is used to bind a custom component into your dynamic form.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>@dynamicComponent decorator is used to bind a custom component into your dynamic form.</p></div>
 
 You must set the dynamicComponent into entryComponents in module.
 

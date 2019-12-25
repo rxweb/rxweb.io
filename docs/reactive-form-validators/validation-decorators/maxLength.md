@@ -8,7 +8,7 @@ type:tabs
 linktitle: maxLength
 ---
 
-<div class="title-bar"><p>maxLength validation  {{validatorType}}  will allow user to enter the input upto the maximum length value parameter.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>maxLength validation  {{validatorType}}  will allow user to enter the input upto the maximum length value parameter.</p></div>
 
 # When to use
 Suppose you want to create a User form, which contains fields like FirstName, LastName, Username and you want the user to enter any string which should not exceed maximum length. Here depending upon the requirement these scenarios may arise.

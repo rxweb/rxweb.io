@@ -7,7 +7,7 @@ type: simple
 linktitle: nestedformarray
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 To create a nested FormArray in your dynamic form, you need to pass formArrayName, `type: "array"` and `controlConfigs` in server response.</p></div>
 
 # Example

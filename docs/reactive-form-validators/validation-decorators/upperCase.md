@@ -8,7 +8,7 @@ type:tabs
 linktitle: upperCase
 ---
 
-<div class="title-bar"><p>upperCase validation decorator will allow user to enter the alphabets only in the upperCase format.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>upperCase validation decorator will allow user to enter the alphabets only in the upperCase format.</p></div>
 
 # When to use
 Suppose you want to create a Location form, which contains fields like CountryName, StateName, CityName and you want the user to must enter string only in the Upper case. Here depending upon the requirement these scenarios may arise.

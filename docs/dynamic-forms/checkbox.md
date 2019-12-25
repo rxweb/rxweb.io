@@ -7,7 +7,7 @@ type: simple
 linktitle: checkbox
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 
 To create a checkbox in dynamic forms, you just need to mention `type: "checkbox"` and `source` which include the options to be selected.</p></div>
 

@@ -5,7 +5,7 @@ category: decorators
 type: decorators
 linktitle: model
 ---
-<div class="title-bar"><p>This is helpfull where your same validation as well as showing error messages conditionally.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>This is helpfull where your same validation as well as showing error messages conditionally.</p></div>
 
 # Example 
 let's create a user model and define a property of password in the model.

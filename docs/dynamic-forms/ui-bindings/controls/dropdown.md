@@ -7,7 +7,7 @@ type:simple
 linktitle: dropdown
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 
 To create a dropdown in dynamic forms, you just need to mention `type: "select"` and `source` which include the options to be selected.</p></div>
 

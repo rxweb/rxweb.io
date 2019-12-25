@@ -8,7 +8,7 @@ type:tabs
 linktitle: minLength
 ---
 
-<div class="title-bar"><p>minLength validation  {{validatorType}}  will allow user to enter the input length matching the minimum length value parameter.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>minLength validation  {{validatorType}}  will allow user to enter the input length matching the minimum length value parameter.</p></div>
 
 # When to use
 Suppose you want to create a Contact form, which contains fields like countryName, MobileNo, LandlineNo and you want the user to enter valid  Number which should be of the minimum specified length. Here depending upon the requirement these scenarios may arise.

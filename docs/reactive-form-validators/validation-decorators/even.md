@@ -8,7 +8,7 @@ type: tabs
 linktitle: even
 ---
 
-<div class="title-bar"><p>even validation {{validatorType}} will check whether the value entered by user is an even number or not.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>even validation {{validatorType}} will check whether the value entered by user is an even number or not.</p></div>
 
 # When to use
 Suppose you want to create a user form, which contains fields like Number, Type, EvenNumber, Multiples of Even Number and you want the user to enter only even numbers. Here depending upon the requirement these scenarios may arise.

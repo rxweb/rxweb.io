@@ -8,7 +8,7 @@ type:tabs
 linktitle: url
 ---
 
-<div class="title-bar"><p>url validation  {{validatorType}}  will check that value entered in the property is in the correct url format or not.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>url validation  {{validatorType}}  will check that value entered in the property is in the correct url format or not.</p></div>
 
 # When to use
 Suppose you want to create a website-info form, which contains fields like AdminWebsiteUrl, CustomerWebsiteUrl, MaintenanceWebsiteUrl and you want the user to enter valid url. Here depending upon the requirement these scenarios may arise.

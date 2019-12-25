@@ -8,7 +8,7 @@ type: simple
 linktitle: readonly
 ---
 
-<div class="title-bar"><p>readonly can be used inside ui binding to convert the particular control object in readonly state in your dynamic-form.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>readonly can be used inside ui binding to convert the particular control object in readonly state in your dynamic-form.</p></div>
 
 # Example
 

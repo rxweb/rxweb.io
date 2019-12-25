@@ -8,7 +8,7 @@ linktitle: cssclassnames
 ---
 
 
-<div class="title-bar"><p>cssClassNames can be used inside ui feature to apply extra css classes other than the css classes which are already applied in the ui-component. cssClassNames can be applied statically or conditionally based on your requirements.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>cssClassNames can be used inside ui feature to apply extra css classes other than the css classes which are already applied in the ui-component. cssClassNames can be applied statically or conditionally based on your requirements.</p></div>
 
 # Static cssClassNames
 

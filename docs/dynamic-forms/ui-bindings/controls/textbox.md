@@ -7,7 +7,7 @@ type:simple
 linktitle: textbox
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 
 To create a textbox in dynamic forms, you just need to mention `type: "textbox"` in the server response.</p></div>
 

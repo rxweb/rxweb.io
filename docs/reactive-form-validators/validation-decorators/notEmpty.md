@@ -7,7 +7,7 @@ type:tabs
 linktitle: notEmpty
 ---
 
-<div class="title-bar"><p>notEmpty validation  {{validatorType}}  will check whether the value entered by the user is not empty, It will not allow white space.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>notEmpty validation  {{validatorType}}  will check whether the value entered by the user is not empty, It will not allow white space.</p></div>
 
 # When to use
 Suppose you want to create a UserInfo form, which contains fields like FirstName, LastName, Username and you want the user to must enter anything in that field. That field can not be empty. Here depending upon the requirement these scenarios may arise.

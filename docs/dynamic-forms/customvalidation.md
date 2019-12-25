@@ -6,7 +6,7 @@ type: simple
 linktitle: customvalidation
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 
 To apply custom validation on the particular formControl, you need to pass the `modelName` for the formControl and bind custom validation name in the `model` property of `controlConfigModels`.
 </p></div>

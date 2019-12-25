@@ -8,7 +8,7 @@ type: tabs
 linktitle: compare
 ---
 
-<div class="title-bar"><p>compare validation  {{validatorType}}  will compare two inputs whether they are same or not.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>compare validation  {{validatorType}}  will compare two inputs whether they are same or not.</p></div>
 
 # When to use
 Suppose you want to create a user form in which you want to compare two different field inputs which are entered by the user. The form contains fields like Email, Confirm Email, Password and Confirm Password. Here depending upon the requirement these scenarios may arise.

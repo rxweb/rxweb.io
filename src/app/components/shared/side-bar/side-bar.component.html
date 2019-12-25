@@ -1,69 +1,164 @@
-<aside id="menu" [class.title-sticky]="sticky" *ngIf="showComponent">
-	<!-- <div class="header-link hide-menu d-flex align-items-center" >
-		<a routerLink="/home" title="rxweb" class="rxlogo">rxweb</a>
-	
-		<div class="collapse-btn menu-open"  (click)="hideSideBar()"> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
-	</div> -->
-	<div id="navigation">
-		<div class="search-page  position-relative">
+<!-- <main>
+	<div class="container">
+		<div class="sidebar-wrapper">
+			<nav class="sidebar fixed">
+				<div class="sidebar_toggle">
+					<a class="sidebar_toggle_heading d-flex align-items-center" data-toggle="collapse" href="#sidebarmenu1" role="button" aria-expanded="false" aria-controls="sidebarmenu1">
+								Form Validations <i class="ml-auto fa fa-chevron-right"></i></a>
 
-			<ais-instantsearch [config]="{
-	  apiKey: '4f3d9e65c9459b43e692a149f365c74e',
-	  appId: 'U3S057LEMB',
-	  indexName: 'rxweb links'
-	}">
-				<div class="search-box position-relative">
-					<ais-search-box id="search" placeholder="Search..." type="text" (keyup)="showsearchcontent($event,searchvalue)"
-					 #search [(ngModel)]="searchvalue" name="searchvalue" class="search-field search-field-focus ais-SearchBox-input"
-					 ngDefaultControl focus></ais-search-box>
+					<div class="collapse" id="sidebarmenu1">
+						<p class="sidebar_toggle_subheading ml-2 mb-2 pt-2">Array</p>
+						<ul class="pl-3 mb-2">
+							<li><a href="">allOf</a></li>
+							<li><a href="">choice</a></li>
+							<li><a href="">noneOf</a></li>
+							<li><a href="">oneOf</a></li>
+							<li><a href="">unique</a></li>
+						</ul>
+
+						<p class="sidebar_toggle_subheading ml-2 mb-2 pt-2">Custom</p>
+						<ul class="pl-3 mb-2">
+							<li><a href="">async</a></li>
+							<li><a href="">compose</a></li>
+							<li><a href="">pattern</a></li>
+						</ul>
+
+						<p class="sidebar_toggle_subheading ml-2 mb-2 pt-2">Date and Time</p>
+						<ul class="pl-3 mb-2">
+							<li><a href="">date</a></li>
+							<li><a href="">maxDate</a></li>
+							<li><a href="">minDate</a></li>
+							<li><a href="">minTime</a></li>
+							<li><a href="">maxTime</a></li>
+							<li><a href="">time</a></li>
+						</ul>
+					</div>
+
 				</div>
-				<div id="searchlist-content1" class="search-content">
-					<ais-hits>
-						<ng-template let-hits="hits" let-results="results">
-							{{bindLinks(hits)}}
-						</ng-template>
-					</ais-hits>
-				</div>
-			</ais-instantsearch>
-		</div>
 
-		<ul class="nav" id="side-menu">
-		
-			<li *ngFor="let link of links">
-			
-				<span *ngIf="!link.isHide">
+				<div class="sidebar_toggle">
+						<a class="sidebar_toggle_heading d-flex align-items-center" data-toggle="collapse" href="#sidebarmenu2" role="button" aria-expanded="false" aria-controls="sidebarmenu2">
+									API <i class="ml-auto fa fa-chevron-right"></i></a>
 
-					<a  (click)="navigateTo(link,null);link.isOpen = !link.isOpen" [class.active]="link.isActive"><span class="nav-label">{{link.title}}</span><span
-						 class="fa" [class.arrow]="!link.isOpen" [class.fa-angle-down]="link.isOpen" *ngIf="link.childrens?.length > 0"></span></a>
-					<ul [class.hide]="!link.isOpen" [class.show]="link.isOpen" class="nav nav-second-level collapse" aria-expanded="false"
-					 *ngIf="link.childrens?.length > 0">
-						<li *ngFor="let secondLevel of link.childrens;let i = index">
-							<span *ngIf="!secondLevel.isHide">
-
-								<a (click)="secondLevel.isOpen = !secondLevel.isOpen;navigateTo(secondLevel,link,null)"
-								 [class.active]="secondLevel.isActive"><span class="nav-label">{{secondLevel.title}}</span><span class="fa"
-									 [class.arrow]="!secondLevel.isOpen" [class.fa-angle-down]="secondLevel.isOpen" *ngIf="secondLevel.childrens?.length > 0"></span>
-								</a>
-								<ul [class.hide]="!secondLevel.isOpen" [class.show]="secondLevel.isOpen" class="nav nav-third-level collapse in third-nav"
-								 aria-expanded="false" *ngIf="secondLevel.childrens?.length > 0">
-									<li *ngFor="let thirdLevel of secondLevel.childrens;let i = index">
-										<span *ngIf="!thirdLevel.isHide">
-
-											<a (click)="navigateTo(thirdLevel,secondLevel,link)" [class.active]="thirdLevel.isActive">
-												<span class="nav-label">{{thirdLevel.title}}</span>
-											</a>
-										</span>
-									</li>
-
+						<div class="collapse" id="sidebarmenu2">    
+								<a href="" class="d-block sidebar_toggle_subheading ml-2 mb-2 pt-2">FormBuilderConfiguratior</a>
+								<a href="" class="d-block sidebar_toggle_subheading ml-2 mb-2 pt-2">ReactiveFormConfig</a>
+								<a href="" class="d-block sidebar_toggle_subheading ml-2 mb-2 pt-2">RxFormBuilder</a>
+								<ul class="pl-3 mb-2">
+									<li><a href="">group</a></li>
+									<li><a href="">formGroup</a></li>
 								</ul>
+								<p class="sidebar_toggle_subheading ml-2 mb-2 pt-2">RxFormGroup</p>
+								<ul class="pl-3 mb-2">
+									<li><a href="">modelInstance</a></li>
+									<li><a href="">errorMessageSummary</a></li>
+									<li><a href="">isDirty</a></li>
+									<li><a href="">patchModelValue</a></li>
+									<li><a href="">resetForm</a></li>
+									<li><a href="">toformData</a></li>
+								</ul>    
+						</div>
+					</div>
 
-							</span>
-						</li>
-
-					</ul>
-
-				</span>
-			</li>
-		</ul>
+					<div class="sidebar_toggle">
+							<a class="sidebar_toggle_heading d-flex align-items-center" data-toggle="collapse" href="#sidebarmenu3" role="button" aria-expanded="false" aria-controls="sidebarmenu3">
+									Decorators <i class="ml-auto fa fa-chevron-right"></i></a>
+	
+							<div class="collapse" id="sidebarmenu3">    
+									<a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">disable</a>
+									<a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">elementClass</a>
+									<a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">error</a>
+									<a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">model</a>
+									<a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">prop</a>
+									<a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">propArray</a>
+									<a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">propObject</a>
+							</div>
+						</div>
+			</nav>
+		</div>
 	</div>
-</aside>
+</main>
+		 -->
+
+
+		 <aside id="menu" [class.title-sticky]="sticky" *ngIf="showComponent">
+			<!-- <div class="header-link hide-menu d-flex align-items-center" >
+				<a routerLink="/home" title="rxweb" class="rxlogo">rxweb</a>
+			
+				<div class="collapse-btn menu-open"  (click)="hideSideBar()"> <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+			</div> -->
+			<div id="navigation">
+				<!-- <div class="sidebar_version_dropdown">
+					<div class="form-group">
+						<select class="form-control" id="exampleFormControlSelect1">
+						  <option>Select Version</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					  </div>
+				</div> -->
+
+				<div class="search-page  position-relative">
+		
+					<ais-instantsearch [config]="{
+			  apiKey: '4f3d9e65c9459b43e692a149f365c74e',
+			  appId: 'U3S057LEMB',
+			  indexName: 'rxweb links'
+			}">
+						<div class="search-box position-relative">
+							<ais-search-box id="search" placeholder="Search..." type="text" (keyup)="showsearchcontent($event,searchvalue)"
+							 #search [(ngModel)]="searchvalue" name="searchvalue" class="search-field search-field-focus ais-SearchBox-input"
+							 ngDefaultControl focus></ais-search-box>
+						</div>
+						<div id="searchlist-content1" class="search-content">
+							<ais-hits>
+								<ng-template let-hits="hits" let-results="results">
+									{{bindLinks(hits)}}
+								</ng-template>
+							</ais-hits>
+						</div>
+					</ais-instantsearch>
+				</div>
+		
+				<ul class="nav flex-column" id="side-menu">
+				
+					<li *ngFor="let link of links">
+					
+						<span *ngIf="!link.isHide">
+		
+							<a  (click)="navigateTo(link,null);link.isOpen = !link.isOpen" [class.active]="link.isActive"><span class="nav-label">{{link.title}}</span><span
+								 class="fa" [class.arrow]="!link.isOpen" [class.fa-angle-down]="link.isOpen" *ngIf="link.childrens?.length > 0"></span></a>
+							<ul [class.hide]="!link.isOpen" [class.show]="link.isOpen" class="nav flex-column nav-second-level collapse" aria-expanded="false"
+							 *ngIf="link.childrens?.length > 0">
+								<li *ngFor="let secondLevel of link.childrens;let i = index">
+									<span *ngIf="!secondLevel.isHide">
+		
+										<a (click)="secondLevel.isOpen = !secondLevel.isOpen;navigateTo(secondLevel,link,null)"
+										 [class.active]="secondLevel.isActive"><span class="nav-label">{{secondLevel.title}}</span><span class="fa"
+											 [class.arrow]="!secondLevel.isOpen" [class.fa-angle-down]="secondLevel.isOpen" *ngIf="secondLevel.childrens?.length > 0"></span>
+										</a>
+										<ul [class.hide]="!secondLevel.isOpen" [class.show]="secondLevel.isOpen" class="nav flex-column nav-third-level collapse in third-nav"
+										 aria-expanded="false" *ngIf="secondLevel.childrens?.length > 0">
+											<li *ngFor="let thirdLevel of secondLevel.childrens;let i = index">
+												<span *ngIf="!thirdLevel.isHide">
+		
+													<a (click)="navigateTo(thirdLevel,secondLevel,link)" [class.active]="thirdLevel.isActive">
+														<span class="nav-label">{{thirdLevel.title}}</span>
+													</a>
+												</span>
+											</li>
+		
+										</ul>
+		
+									</span>
+								</li>
+		
+							</ul>
+		
+						</span>
+					</li>
+				</ul>
+			</div>
+		</aside>

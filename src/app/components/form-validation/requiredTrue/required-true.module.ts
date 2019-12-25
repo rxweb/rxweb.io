@@ -2,7 +2,6 @@ import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { RequiredTrueDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/decorators/requiredTrue/required-true-decorators-extended.module";
 
-
 import { RequiredTrueValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/requiredTrue/required-true-validators-extended.module";
 
 import { REQUIRED_TRUE_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/requiredTrue/required-true.constants";
@@ -13,7 +12,7 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [REQUIRED_TRUE_ROUTING ,RequiredTrueDecoratorsExtendedModule ,RequiredTrueValidatorsExtendedModule ,PageModule],
+  imports: [REQUIRED_TRUE_ROUTING ,RequiredTrueDecoratorsExtendedModule ,RequiredTrueValidatorsExtendedModule,PageModule],
   exports: [RouterModule],
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: REQUIRED_TRUE_COMPONENT_EXAMPLE_CONSTANT }]
   })

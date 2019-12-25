@@ -5,6 +5,7 @@ import { MaxLengthTemplateDrivenValidationDirectivesExtendedModule } from "src/a
 import { MaxLengthTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/maxLength/max-length-validation-decorators-extended.module";
 
 import { MaxLengthValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/maxLength/max-length-validators-extended.module";
+
 import { MAX_LENGTH_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/maxLength/max-length.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { MAX_LENGTH_ROUTING } from "src/app/components/form-validation/maxLength/max-length.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: MAX_LENGTH_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class MaxLengthModule { }
+
+
 

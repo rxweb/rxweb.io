@@ -8,7 +8,7 @@ type:tabs
 linktitle: unique
 ---
 
-<div class="title-bar"><p>unique validation {{validatorType}} is used to validate unique input based on formArray.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>unique validation {{validatorType}} is used to validate unique input based on formArray.</p></div>
 
 # When to use
 Suppose you want to create a Employee form, which contains fields like fullName, skillName, projectDomain, companyName and hobbies and you want the user to enter unique values which are not previously mentioned in the array. Here depending upon the requirement these scenarios may arise.

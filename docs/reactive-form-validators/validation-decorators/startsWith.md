@@ -8,7 +8,7 @@ type:tabs
 linktitle: startsWith
 ---
 
-<div class="title-bar"><p>startsWith validation  {{validatorType}}  allows user to enter the input which starts with particular value.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>startsWith validation  {{validatorType}}  allows user to enter the input which starts with particular value.</p></div>
 
 # When to use
 Suppose you want to create a user form, which contains fields like userId, name, profession and taskId and you want the user to enter input which starts with a particular value. Here depending upon the requirement, these scenarios may arise..

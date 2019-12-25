@@ -6,7 +6,7 @@ category: sanitization
 type:decorators
 linktitle: toBoolean
 ---
-<div class="title-bar"><p>Convert the input to a boolean.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>Convert the input to a boolean.</p></div>
 
 # When to use
 Suppose you want to the convert the value to the boolean

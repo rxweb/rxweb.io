@@ -8,7 +8,7 @@ type: simple
 linktitle: placeholder
 ---
 
-<div class="title-bar"><p>placeholder can be used inside ui binding to display placeholder for the particular control object in the dynamic-form.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>placeholder can be used inside ui binding to display placeholder for the particular control object in the dynamic-form.</p></div>
 
 # Example
 

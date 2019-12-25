@@ -524,7 +524,11 @@
     border-width: 11px;
     margin-top: -11px
 }
-
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
 /*divya.shah css starts*/
 
 body .code-example-title {
@@ -4005,7 +4009,7 @@ body {
     /* padding: 35px 0 40px 40px; */
     /* min-width: 320px;
     padding-left: 20px; */
-    padding-left: 60px;
+    padding-left:0px;
 }
 .aspnet-footer{
     bottom: -75px;
@@ -4096,7 +4100,8 @@ body {
 .sidebar-scroll #menu {
     position: fixed;
     border-right: 1px solid #eeeeee;
-    top: 120px;
+    /* top: 120px; */
+    top: 100px;
     width: 285px;
     background-color: #fff;
     min-height: auto;
@@ -4509,7 +4514,7 @@ body.modal-open {
 }
 
 #side-menu li .nav-third-level li a {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 #side-menu.nav>li>a:hover, #side-menu.nav>li>a:focus, #side-menu li .nav-second-level li a:hover {
@@ -5644,7 +5649,8 @@ pre {
 
 .highlighted {
     color: #007dc5;
-    background-color: #f1faff;
+    /* background-color: #f1faff; */
+    background-color: #f7fcff;
     border-radius: 4px;
     padding: 0 5px;
     margin: 5px 0;
@@ -6655,7 +6661,7 @@ body.hide-sidebar #menu .header-link {
     width: 100%;
     font-weight: 300;
     border: 1px solid #eee;
-    border-radius: 100px;
+    border-radius:5px;
     padding: 5px 34px 5px 10px;
     font-size: 14px;
 }
@@ -6668,12 +6674,13 @@ body.hide-sidebar #menu .header-link {
     height: 30px;
     border-radius: 100px;
     text-align: center;
-    line-height: 30px;
+    line-height: 0px;
     position: absolute;
     cursor: pointer;
     border: 0;
     background: transparent;
     padding-right: 0;
+    padding-bottom: 4px;
 }
 
 .search-box .search-field .ais-SearchBox-input::-webkit-input-placeholder {
@@ -7574,9 +7581,9 @@ a.card-body.text-center:hover
     }
 }
 
-.fas {
+/* .fas {
     color: #E8E8E8!important;
-}
+} */
 
 .btn:not([href]):not([type]):not(:disabled):not(.disabled) {
     cursor: default;
@@ -8314,9 +8321,7 @@ img.why-image {
 
 img.play {
     height: 100px;
-    top: calc(100% - 350px);
-    margin-left: calc(100% - 400px);
-    position: absolute;
+  
 }
 
 img.play:hover {
@@ -8364,12 +8369,6 @@ a.stop:hover {
 }
 
 @media only screen and (max-height: 892px) {
-    img.play {
-        height: 100px;
-        top: calc(100% - 350px);
-        margin-left: calc(100% - 400px);
-        position: absolute;
-    }
     .why-image {
         height: calc(100% - 90px);
     }
@@ -8446,14 +8445,7 @@ a.stop:hover {
     }
 }
 
-@media only screen and (max-width: 1400px){
-    .footer {
-        
-        padding: 15px;
-       bottom :-10%;
-       top: 1000px;
-    }
-    }
+
 
 .dynamic-home {
     min-height: calc( 100vh - 0px);
@@ -8948,10 +8940,10 @@ ul.nav.level-4 {
 }
 
 
-i.fa.fa-pencil {
+/* i.fa.fa-pencil {
   font-size: 17px;
   vertical-align: 5px;
-}
+} */
 
 .list-unstyled {
   padding-left: 0;
@@ -8991,3 +8983,8 @@ ul.nav.level-1 {
     margin-left: 65px;
 }
 /*-------- do not add any css here ---------- */
+
+/*-------- new rxweb io design ---------- */
+
+
+

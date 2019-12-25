@@ -8,7 +8,7 @@ type:tabs
 linktitle: maxNumber
 ---
 
-<div class="title-bar"><p>maxNumber validation  {{validatorType}}  will allow user to enter the input upto the maximum number value parameter.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>maxNumber validation  {{validatorType}}  will allow user to enter the input upto the maximum number value parameter.</p></div>
 
 # When to use
 Suppose you want to create a Subject-detail form, which contains fields like subjectCode, maximumMarks, PassingMarks and you want the user to enter valid  Number which does not exceed the Maximum number. Here depending upon the requirement these scenarios may arise.

@@ -7,7 +7,7 @@ type:simple
 linktitle: conditionalhide
 ---
 
-<div class="title-bar"><p>To hide a control conditionally, You need to pass `modelName` and pass it into `controlConfigModels` along with `formGroup` method.
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>To hide a control conditionally, You need to pass `modelName` and pass it into `controlConfigModels` along with `formGroup` method.
 </p></div>
 
 # Example

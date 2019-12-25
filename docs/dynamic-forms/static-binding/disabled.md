@@ -8,7 +8,7 @@ type: simple
 linktitle: disabled
 ---
 
-<div class="title-bar"><p>disabled can be used inside ui binding of to disable the particular control object in the dynamic-form.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>disabled can be used inside ui binding of to disable the particular control object in the dynamic-form.</p></div>
 
 # Example   
 

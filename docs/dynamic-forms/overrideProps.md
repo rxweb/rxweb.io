@@ -7,7 +7,7 @@ type: simple
 linktitle: overrideProps
 ---
 
-<div class="title-bar"><p>override Props is used to override the property based upon the server returned configuration.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>override Props is used to override the property based upon the server returned configuration.</p></div>
 
 To override prop using json serverData you must pass the property name in `overrideProps`.
 

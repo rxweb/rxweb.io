@@ -7,7 +7,7 @@ type: tabs
 linktitle: creditCard
 ---
 
-<div class="title-bar"><p>creditCard validation {{validatorType}} will check property value is creditcardtype or not. It will not allow to enter any value other than credit card format.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>creditCard validation {{validatorType}} will check property value is creditcardtype or not. It will not allow to enter any value other than credit card format.</p></div>
 
 # When to use
 Supppose you want to create a user form in which you want CreditCard details and you have fields like CardType, VisaCard, AmericanExpress,MaestroCard, JCBcard, DiscoverCard, MasterCard  Here depending upon the requirement these scenarios may arise.

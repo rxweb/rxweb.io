@@ -8,7 +8,7 @@ type:tabs
 linktitle: greaterThanEqualTo
 ---
 
-<div class="title-bar"><p>greater than equal to validation  {{validatorType}}  will check that input property is greater than or equal to the related field input.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>greater than equal to validation  {{validatorType}}  will check that input property is greater than or equal to the related field input.</p></div>
 
 # When to use
 Suppose you want to create a user form and you have fields like Age, VoterAge, OtherAge and you want user to enter Age such that VoterAge,OtherAge should be greater than or equal to Age Here depending upon the requirement these scenarios may arise.

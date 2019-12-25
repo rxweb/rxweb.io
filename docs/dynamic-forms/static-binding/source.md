@@ -9,7 +9,7 @@ type: simple
 linktitle: source
 ---
 
-<div class="title-bar"><p>source can be used inside ui binding to bind the sourcedata in the particular control object in your dynamic-form, It can be used in radio, dropdown and checkbox.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>source can be used inside ui binding to bind the sourcedata in the particular control object in your dynamic-form, It can be used in radio, dropdown and checkbox.</p></div>
 
 # Example
 

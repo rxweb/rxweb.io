@@ -1,96 +1,63 @@
-<header class="header">
-	<div class="row">
-		<div class="col-sm-2 logo space-left-sidebar">
-			<div class="header-link">
-					<img routerLink="/home" height="200" width="150" src="assets/images/Rx_Logo_200X46.png">
-				<svg class="top-toggle-btn" (click)="openMenu()" width="25" height="25" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
-					
-			</div>
-		</div>
-		<div class="col-sm-9">
-			<div class=" header-links content">
-					
-			<ul class="list-unstyled list-inline">
-					<li class="list-inline-item"><a routerLink="/getting-started" routerLinkActive="active">Learn</a>
-						<div class="mega-menu">
-							<ul class="list-unstyled">
-									<li><a routerLink="/rxweb-generics/generic-getting-started">Generics</a></li>									
-								<li><a routerLink="/rxweb-http/http-getting-started">Http</a></li>
-								<li><a routerLink="/getting-started">Reactive Form validators</a></li>
-									<li><a routerLink="/reactive-dynamic-forms/dynamic-forms/stepbystep">Reactive Dynamic Forms</a></li>												
-								<li><a routerLink="/rxweb-sanitizers/sanitizers-getting-started">Sanitizers</a></li>
-								<li><a routerLink="/rx-web-core/step-by-step-guide/overview">RxWebCore</a></li>
-							</ul>
+<header>
+	<div class="container">
+		<nav class="navbar navbar-expand-md p-0 align-items-start">
+			<a class="navbar-brand mr-0 header_logo d-flex align-items-center" href="#"><img
+					src="src/assets/images/logo.png" width="120" height="28" alt="logo" /> </a>
+			<button class="navbar-toggler py-3" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation"><i class="fa fa-bars ml-2" aria-hidden="true"></i>
+			</button>
+			<div class="learning_title"><a href="#"><span>Architecture</span></a></div>
+			<div class="collapse header_left_menu navbar-collapse order-3 order-md-2" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><span>ASP.Net</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><span>Angular</span></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span>React</span>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
 						</div>
 					</li>
-				<!-- <li routerLinkActive="active" class="list-inline-item"><a>Learn</a>
-					<div class="mega-menu">
-						<ul class="list-unstyled">
-							<li><a routerLink="reactive-forms/getting-started">Reactive Forms</a></li>
-							<li><a routerLink="dynamic-forms/getting-started">Dynamic Forms</a></li>	
-						</ul>
-					</div>
-				</li> -->
-			
-				<li class="list-inline-item"><a routerLink="/whats-new" routerLinkActive="active">What's New?</a></li>
-				<li class="list-inline-item"><a routerLink="/whats-next" routerLinkActive="active">What's Next?</a></li>
-				<li routerLinkActive="active" class="list-inline-item"><a>Help</a>
-					<div class="mega-menu">
-						<ul class="list-unstyled">
-						
-							<li><a target="_blank" href="https://gitter.im/rxweb-project/rxweb?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=body_badge">Gitter
-									(Help)</a></li>			
-							<li><a target="_blank" href="https://github.com/rxweb/rxweb.io">Github</a></li>
-							<li><a target="_blank" href="https://stackoverflow.com/search?q=rxweb">StackOverflow</a></li>
-						</ul>
-					</div>
-				</li>
-		
-				<li routerLinkActive="active" class="list-inline-item"><a>Community</a>
-					<div class="mega-menu">
-						<ul class="list-unstyled">
-							<li><a routerLink="/community/where_to_start_contributing">Want to Contribute, but?</a></li>
-							<li><a routerLink="/community/contributing">Contributing </a></li>
-							<li><a routerLink="/community/maintaining">Maintaining</a></li>
-							<li><a routerLink="/hidden-gems">Hidden Gems</a></li>
-					
-							<li><a routerLink="/changelog">Change Log</a></li>
-							<li><a target="_blank" href="https://dev.to/t/rxweb">Dev Community</a></li>
-								<li><a target="_blank" href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3Abug">Open Issues</a></li>
-							<li><a target="_blank" href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22">Feature Request</a></li>
-						</ul>
-					</div>
-				</li>
-			
-				<!-- <li routerLinkActive="active" class="list-inline-item"><a>Packages</a>
-					
-				</li> -->
+				</ul>
 
-				<li class=" top-search-page  position-relative">
+
+			</div>
+			<ul class="navbar-nav ml-auto header_right_menu flex-row order-2 order-md-3">
+
+				<li class="nav-item header_serch_bar position-relative d-flex align-items-center mr-3">
 					<ais-instantsearch [config]="{
-						  apiKey: '4f3d9e65c9459b43e692a149f365c74e',
-						  appId: 'U3S057LEMB',
-						  indexName: 'rxwebio1'
-						}">
+							apiKey: '4f3d9e65c9459b43e692a149f365c74e',
+							appId: 'U3S057LEMB',
+							indexName: 'rxwebio1'
+						  }">
 						<div class="search-box position-relative">
 
 							<ais-search-box id="search1" placeholder='' type="text"
-								(keyup)="showsearchcontent1($event,searchvalue1)" #search1
-								[(ngModel)]="searchvalue1" name="searchvalue1" (blur)="hideSearch1()"
+								(keyup)="showsearchcontent1($event,searchvalue1)" #search1 [(ngModel)]="searchvalue1"
+								name="searchvalue1" (blur)="hideSearch1()"
 								class="search-field search-field-focus ais-SearchBox-input" ngDefaultControl focus>
 							</ais-search-box>
 
 							<!-- <div class="search-btn">
-										<svg height="24" viewBox="0 0 50 50" width="24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
-									</div>  -->
+										  <svg height="24" viewBox="0 0 50 50" width="24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
+									  </div>  -->
 							<!-- <ais-search-box class="search-field"></ais-search-box>
-							  <	div class="search-btn">
-									<svg height="24" viewBox="0 0 50 50" width="24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
-								</div>  -->
+								<	div class="search-btn">
+									  <svg height="24" viewBox="0 0 50 50" width="24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
+								  </div>  -->
 						</div>
 						<div id="searchlist-content" class="search-content">
 							<!-- <h2>Search results for : {{searchvalue}} </h2>
-							  <ais-stats></ais-stats>  -->
+								<ais-stats></ais-stats>  -->
 							<ais-hits>
 
 								<ng-template let-hits="hits" let-results="results">
@@ -103,7 +70,7 @@
 											<div class="search-title">
 												<a [routerLink]="hit.link"> {{hit.title}}</a>
 											</div>
-							 				<a [routerLink]="hit.link" class="search-decr"> {{hit.description}}</a>
+											<a [routerLink]="hit.link" class="search-decr"> {{hit.description}}</a>
 											<ul class="list-unstyled see-more-links" *ngIf="hits.length == 0">
 												<li class="bold">Go to : </li>
 												<li class="" *ngFor="let item of hit.refLinks">
@@ -117,20 +84,223 @@
 						</div>
 					</ais-instantsearch>
 				</li>
+				<li class="nav-item">
+					<a target="_blank"
+						href="https://gitter.im/rxweb-project/rxweb?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=body_badge"
+						class="nav-link"> <i class="fab fa-gitter"></i></a>
+				</li>
+				<li class="nav-item">
+					<a target="_blank" href="https://github.com/rxweb/rxweb.io" class="nav-link pr-0"><i
+							class="fab fa-github"></i></a>
+				</li>
 			</ul>
-			</div>
-		</div>
+		</nav>
 	</div>
 </header>
-<div class="top-title-bar" id="title-bar">
-	<div class="row">
-		<div class="col-sm-2 space-left-sidebar"></div>
-		<div class="col-sm-12 col-md-9">
-			
-			<app-title [title]="titleData.title" [description]="titleData.description" [mainType]="titleData.mainType"
-				[activeTab]="titleData.activeTab" [validationName]="titleData.validationName"
-				[validatorType]="titleData.validatorType" [validationTypeTitle]="titleData.validationTypeTitle"
-				[templateDrivenType]="titleData.templateDrivenType"></app-title>
-		</div>
+
+<div class="header_breadcrumb">
+	<svg (click)="hideSideBar()" class="left-toggle-btn" focusable="false" height="25" viewBox="0 0 24 24" width="25"
+		xmlns="http://www.w3.org/2000/svg">
+		<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+	</svg>
+	<div class="container d-flex align-items-center flex-column flex-lg-row">
+		<nav aria-label="breadcrumb" class="d-sm-none d-md-inline-block">
+			<ol class="breadcrumb bg-white top_breadcrumb px-0 py-2 mb-0">
+				<li class="breadcrumb-item"><a href="#">Docs</a></li>
+				<li class="breadcrumb-item"><a href="#">ASP.NET</a></li>
+				<li class="breadcrumb-item"><a href="#">ASP.NET Core</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Getting Started </li>
+			</ol>
+		</nav>
+
+		<ul class="navbar-nav ml-lg-auto flex-row breadcrumb_right_action">
+			<li class="mr-4"><a target="_blank" href="{{gitEditUrl}}" class="nav-link py-1"><i class="fa fa-pencil mr-2"
+						aria-hidden="true"></i>Edit</a></li>
+			<li class="mr-4 d-none d-md-inline-block"><a class="nav-link py-1" target="_blank" (click)="routeExample()"
+					*ngIf="mainType != 'community' && mainType != 'rx-web-core' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'">
+					<i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen" class="fa mr-2"
+						data-toggle="tooltip" title="Examples Only" aria-hidden="true"></i>Examples Only</a></li>
+
+			<!-- <li ><a class="nav-link py-1"><i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen"  aria-hidden="true"></i>Example Only</a></li> -->
+			<li class="nav-item dropdown mr-4 d-none d-md-inline-block">
+				<a class="nav-link dropdown-toggle py-1 share_title" href="#" id="navbarDropdown" role="button"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+						class="fa fa-share-square-o mr-2" aria-hidden="true"></i>Share</a>
+				<div class="dropdown-menu py-0 share_dropdown" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#"><i class="fab fa-twitter mr-2"></i>Twitter</a>
+					<a class="dropdown-item" href="#"><i class="fab fa-facebook-f mr-2"></i>Facebook</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-linkedin mr-2" aria-hidden="true"></i>LinkedIn</a>
+					<a class="dropdown-item" href="#"><i class="fas fa-envelope mr-2"></i>Email</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown d-none d-md-inline-block">
+				<a class="nav-link dropdown-toggle chapter_heading py-1 pr-0" href="#" id="navbarDropdown1"
+					role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-list-ul mr-2"></i>Table of Content
+				</a>
+				<!-- <div *ngIf="mainType != 'changelog'">
+						<ul class="list-unstyled" id="rightsidebar-items">
+							<li class="nav-item" *ngFor="let item of sidebarLinks;let i = index" [class.d-flex]="i == 0" [class.border-none]="i == 0"  [class.sidebar-list]="item.subLink?.length > 0">
+								<a class="nav-link sidebar-link" [class.child-item-list]="item.subLink?.length > 0" href="#{{item.id}}" [class.active]="i == 0" (click)="scrollTo(item.id)">{{item.title}}</a>
+									<a *ngIf="i == 0" target="_blank" rel="noopener" href="{{gitEditUrl}}" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+								<ul class="list-unstyled" [class.child-list]="item.subLink?.length > 0">
+									<li *ngFor="let obj of item.subLink" class="nav-item px-1"><a class="nav-link" href="#{{obj.id}}" (click)="scrollTo(obj.id)">{{obj.title}}</a></li>
+									
+								</ul>
+							</li>
+						</ul>
+					</div> -->
+				<div *ngIf="mainType != 'changelog'" class="dropdown-menu chapter_list"
+					aria-labelledby="navbarDropdown1">
+					<!-- <div class="dropdown-item chapter_list_title d-flex" href="#">
+                            
+                            <div class=""><img src="images/logo.png" width="100" height="23" class="mr-3"/></div><div><a href="">Table of content Title Lorem Ipsum doller</a>
+                            <p class="chapter_author mb-0">by Russ Ferguson</p>
+                            <p class="chapter_author mb-0"><em>Published by <a href="">Apress</a>,2019</em></p></div></div> -->
+					<ul class="pl-0" id="rightsidebar-items">
+						<li class="nav-item" *ngFor="let item of cloneSidebarLinks;let i = index" [class.d-flex]="i == 0"
+							[class.border-none]="i == 0" [class.sidebar-list]="item.subLink?.length > 0">
+							<a *ngIf="i > 0" class="nav-link sidebar-link" [class.child-item-list]="item.subLink?.length > 0"
+								href="#{{item.id}}" [class.active]="i == 0"
+								(click)="scrollTo(item.id)">{{item.title}}</a>
+						
+							<ul class="list-unstyled" [class.child-list]="item.subLink?.length > 0">
+								<li *ngFor="let obj of item.subLink" class="nav-item px-1"><a class="nav-link"
+										href="#{{obj.id}}" (click)="scrollTo(obj.id)">{{obj.title}}</a></li>
+
+							</ul>
+						</li>
+						<!-- <li class="nav-item"><a class="nav-link" href="#">allOf (Validator)</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">When touse</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#basicallofvalidation">Basic allOf
+                                    Validation</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="#">conditionalExpression</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">matchValues</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">message</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">messageKey</a></li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="#">Complete allOf Example</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Dynamic allOf Example</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#githubissues">allOf Github Issues</a></li> -->
+					</ul>
+				</div>
+			</li>
+
+		</ul>
 	</div>
 </div>
+
+<!-- <main>
+        <div class="container">
+            <div class="sidebar-wrapper">
+                <nav class="sidebar fixed">
+                    <div class="sidebar_toggle">
+                        <a class="sidebar_toggle_heading d-flex align-items-center" data-toggle="collapse" href="#sidebarmenu1" role="button" aria-expanded="false" aria-controls="sidebarmenu1">
+                                    Form Validations <i class="ml-auto fa fa-chevron-right"></i></a>
+
+                        <div class="collapse" id="sidebarmenu1">
+                            <p class="sidebar_toggle_subheading ml-2 mb-2 pt-2">Array</p>
+                            <ul class="pl-3 mb-2">
+                                <li><a href="">allOf</a></li>
+                                <li><a href="">choice</a></li>
+                                <li><a href="">noneOf</a></li>
+                                <li><a href="">oneOf</a></li>
+                                <li><a href="">unique</a></li>
+                            </ul>
+
+                            <p class="sidebar_toggle_subheading ml-2 mb-2 pt-2">Custom</p>
+                            <ul class="pl-3 mb-2">
+                                <li><a href="">async</a></li>
+                                <li><a href="">compose</a></li>
+                                <li><a href="">pattern</a></li>
+                            </ul>
+
+                            <p class="sidebar_toggle_subheading ml-2 mb-2 pt-2">Date and Time</p>
+                            <ul class="pl-3 mb-2">
+                                <li><a href="">date</a></li>
+                                <li><a href="">maxDate</a></li>
+                                <li><a href="">minDate</a></li>
+                                <li><a href="">minTime</a></li>
+                                <li><a href="">maxTime</a></li>
+                                <li><a href="">time</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="sidebar_toggle">
+                            <a class="sidebar_toggle_heading d-flex align-items-center" data-toggle="collapse" href="#sidebarmenu2" role="button" aria-expanded="false" aria-controls="sidebarmenu2">
+                                        API <i class="ml-auto fa fa-chevron-right"></i></a>
+    
+                            <div class="collapse" id="sidebarmenu2">    
+                                    <a href="" class="d-block sidebar_toggle_subheading ml-2 mb-2 pt-2">FormBuilderConfiguratior</a>
+                                    <a href="" class="d-block sidebar_toggle_subheading ml-2 mb-2 pt-2">ReactiveFormConfig</a>
+                                    <a href="" class="d-block sidebar_toggle_subheading ml-2 mb-2 pt-2">RxFormBuilder</a>
+                                    <ul class="pl-3 mb-2">
+                                        <li><a href="">group</a></li>
+                                        <li><a href="">formGroup</a></li>
+                                    </ul>
+                                    <p class="sidebar_toggle_subheading ml-2 mb-2 pt-2">RxFormGroup</p>
+                                    <ul class="pl-3 mb-2">
+                                        <li><a href="">modelInstance</a></li>
+                                        <li><a href="">errorMessageSummary</a></li>
+                                        <li><a href="">isDirty</a></li>
+                                        <li><a href="">patchModelValue</a></li>
+                                        <li><a href="">resetForm</a></li>
+                                        <li><a href="">toformData</a></li>
+                                    </ul>    
+                            </div>
+                        </div>
+
+                        <div class="sidebar_toggle">
+                                <a class="sidebar_toggle_heading d-flex align-items-center" data-toggle="collapse" href="#sidebarmenu3" role="button" aria-expanded="false" aria-controls="sidebarmenu3">
+                                        Decorators <i class="ml-auto fa fa-chevron-right"></i></a>
+        
+                                <div class="collapse" id="sidebarmenu3">    
+                                        <a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">disable</a>
+                                        <a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">elementClass</a>
+                                        <a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">error</a>
+                                        <a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">model</a>
+                                        <a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">prop</a>
+                                        <a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">propArray</a>
+                                        <a href="" class="sidebar_toggle_subheading d-block ml-2 mb-2 pt-2">propObject</a>
+                                </div>
+                            </div>
+                </nav>
+            </div>
+        </div>
+    </main> -->
+
+<!-- <ul class="navbar-nav right_widget">
+                     <li class="nav-item active">
+                        <a class="nav-link d-flex align-items-center justify-content-center" href="#"><i class="fas fa-search"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center justify-content-center" href="#"><i class="fas fa-list-ul"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center justify-content-center" href="#"><i class="fas fa-font"></i></a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-share"></i>
+                        </a>
+                        <div class="dropdown-menu py-0" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="dropdown-item" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="dropdown-item" href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </li>
+                </ul> -->
+
+<!-- <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+<!-- </body>
+
+</html> -->

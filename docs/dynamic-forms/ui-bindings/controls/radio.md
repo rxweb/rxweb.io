@@ -7,7 +7,7 @@ type: simple
 linktitle: radio
 ---
 
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 
 To create a radio button in dynamic forms, you just need to mention `type: "radio"` and `source` which include the options to be selected.</p></div>
 

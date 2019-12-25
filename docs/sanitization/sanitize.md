@@ -7,7 +7,7 @@ type:decorators
 linktitle: custom
 ---
  
-<div class="title-bar"><p>You can sanitize the value based upon your business logic.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>You can sanitize the value based upon your business logic.</p></div>
 
 # Example  
 let's create a user model and define a property of freeText in the model.

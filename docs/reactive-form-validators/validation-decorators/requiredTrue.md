@@ -7,7 +7,7 @@ type:tabs
 linktitle: requiredTrue
 ---
 
-<div class="title-bar"><p>requiredTrue validation  {{validatorType}}  will check that the checkbox formControl value should be true.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>requiredTrue validation  {{validatorType}}  will check that the checkbox formControl value should be true.</p></div>
 
 # When to use
 Suppose you want to create a UserInfo form, which contains fields like Agree to terms and conditions, Is Checked, check Me out, IsActive and IsBlocked and you want the user to check all the values true. Here depending upon the requirement these scenarios may arise.

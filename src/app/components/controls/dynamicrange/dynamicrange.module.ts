@@ -1,7 +1,5 @@
 import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-
 import { DYNAMICRANGE_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/controls/dynamicrange/dynamicrange.constants";
 import { DynamicrangeValidatorsExtendedModule } from "src/assets/examples/controls/dynamicrange/dynamicrange-validators-extended.module";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";

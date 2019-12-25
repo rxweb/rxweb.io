@@ -7,7 +7,7 @@ type: simple
 linktitle: dynamicdisable
 ---
 
-<div class="title-bar"><p>disable can be used inside ui feature of to disable the particular formControl in the dynamic-form. disable can be generated statically or conditionally based on your requirements.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>disable can be used inside ui feature of to disable the particular formControl in the dynamic-form. disable can be generated statically or conditionally based on your requirements.</p></div>
 
 # Static Disable
 

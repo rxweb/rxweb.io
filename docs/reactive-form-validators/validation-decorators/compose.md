@@ -8,7 +8,7 @@ type: tabs
 linktitle: compose
 ---
 
-<div class="title-bar"><p>compose validation {{validatorType}} is used to apply multiple validations on a particular formControl.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>compose validation {{validatorType}} is used to apply multiple validations on a particular formControl.</p></div>
 
 # When to use
   <data-scope scope="['decorator','validator']">

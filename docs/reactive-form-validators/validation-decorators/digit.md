@@ -8,7 +8,7 @@ type: tabs
 linktitle: digit
 ---
 
-<div class="title-bar"><p>digit validation {{validatorType}} will allow only digits to be entered, It will not allow any alphabets or special character.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>digit validation {{validatorType}} will allow only digits to be entered, It will not allow any alphabets or special character.</p></div>
 
 # When to use
 Suppose you want to create a User form, which contains fields like Age, PhoneNumber, FaxNumber, MobileNumber and you want the user to enter only numbers. Here depending upon the requirement these scenarios may arise.

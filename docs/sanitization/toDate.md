@@ -7,7 +7,7 @@ type:decorators
 linktitle: toDate
 ---
 
-<div class="title-bar"><p>Convert the input to a date, or null if the input is not a date.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>Convert the input to a date, or null if the input is not a date.</p></div>
 
 # Example  
 Let's create a user model and define a property of 'dob' in the model.

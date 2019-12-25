@@ -7,7 +7,7 @@ type:decorators
 linktitle: toString
 ---
 
-<div class="title-bar"><p>Convert the input to a string.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>Convert the input to a string.</p></div>
 
 # Example  
 Let's create a user model and define a property of 'freeText' in the model.

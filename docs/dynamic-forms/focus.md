@@ -8,7 +8,7 @@ type: simple
 linktitle: focus
 ---
 
-<div class="title-bar"><p>focus can be used inside ui binding to set focus on particular control object in the dynamic-form.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>focus can be used inside ui binding to set focus on particular control object in the dynamic-form.</p></div>
 
 # Example
 

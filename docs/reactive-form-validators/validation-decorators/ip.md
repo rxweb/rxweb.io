@@ -8,7 +8,7 @@ type:tabs
 linktitle: ip
 ---
 
-<div class="title-bar"><p>ip validation {{validatorType}} is used to validate the ip address of the device.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>ip validation {{validatorType}} is used to validate the ip address of the device.</p></div>
 
 # When to use
 Suppose you want to create a User form, which contains fields like ipType,ipV4, ipV6, anyIPType, ipV4Cidr, ipV6Cidr, ipV6Conditional, ipV4Message and you want the user to enter only ip address. Here depending upon the requirement these scenarios may arise.

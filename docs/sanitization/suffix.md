@@ -7,7 +7,7 @@ type:decorators
 linktitle: suffix
 ---
  
-<div class="title-bar"><p>Allows you to add suffix to the input.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>Allows you to add suffix to the input.</p></div>
 
 # Example  
 Let's create a user model and define a property of freeText in the model.

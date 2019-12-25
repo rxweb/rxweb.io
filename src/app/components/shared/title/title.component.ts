@@ -35,15 +35,7 @@ export class TitleComponent implements OnInit {
     this.showComponent = true;
   }
 
-  route(typeName: string, templateDrivenType?: string) {
-    if (templateDrivenType)
-    {
-      this.router.navigate(['/', this.mainType, this.validationName, typeName, templateDrivenType])
-      this.templateDrivenType = templateDrivenType;  
-    }
-    else
-      this.router.navigate(['/', this.mainType, this.validationName, typeName])
-  }
+
 
   @HostListener('window:scroll', ['$event'])
   handleScroll(){

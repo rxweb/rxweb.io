@@ -7,7 +7,7 @@ type:simple
 linktitle: conditionalvalue
 ---
 
-<div class="title-bar"><p>To make a control value on the particular control conditionally, You need to pass `modelName` and pass it into `controlConfigModels` along with `formGroup` method.
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>To make a control value on the particular control conditionally, You need to pass `modelName` and pass it into `controlConfigModels` along with `formGroup` method.
 </p></div>
 
 # Example

@@ -7,7 +7,7 @@ type:decorators
 linktitle: whitelist
 ---
 
-<div class="title-bar"><p>Remove characters that do not appear in the whitelist.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>Remove characters that do not appear in the whitelist.</p></div>
 
 # Example  
 let's create a user model and define a property of freeText in the model.

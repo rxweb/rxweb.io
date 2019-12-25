@@ -8,7 +8,7 @@ type: simple
 linktitle: hide
 ---
 
-<div class="title-bar"><p>hide can be used inside ui feature to hide the particular control object in the dynamic-form.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>hide can be used inside ui feature to hide the particular control object in the dynamic-form.</p></div>
 
 # Example
 

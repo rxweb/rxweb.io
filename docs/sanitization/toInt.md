@@ -7,7 +7,7 @@ type:decorators
 linktitle: toInt
 ---
 
-<div class="title-bar"><p>Convert the input to an integer, or NAN if the input is not an integer.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>Convert the input to an integer, or NAN if the input is not an integer.</p></div>
 
 # When to use
 Suppose you want to the convert the value to the int

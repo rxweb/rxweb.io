@@ -8,7 +8,7 @@ type:tabs
 linktitle: mac
 ---
 
-<div class="title-bar"><p>mac validation  {{validatorType}}  will check whether the value entered is a valid mac address.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>mac validation  {{validatorType}}  will check whether the value entered is a valid mac address.</p></div>
 
 # When to use
 Suppose you want to create a form in which you want user to enter mac address  which contains fields like device, macAddress, systemMacAddress. Here depending upon the requirement these scenarios may arise.

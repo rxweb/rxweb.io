@@ -8,7 +8,7 @@ type:tabs
 linktitle: lowerCase
 ---
 
-<div class="title-bar"><p>lowerCase validation  {{validatorType}}  will allow user to enter only the lowercase alphabets.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>lowerCase validation  {{validatorType}}  will allow user to enter only the lowercase alphabets.</p></div>
 
 # When to use
 Suppose you want to create a User form, which contains fields like Username, FirstName, LastName and you want the user to enter any string only in lowercase. Here depending upon the requirement these scenarios may arise.

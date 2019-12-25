@@ -8,7 +8,7 @@ type:tabs
 linktitle: minDate
 ---
 
-<div class="title-bar"><p>minimum Date validation  {{validatorType}}  will allow user to enter date greater the minimum date value parameter.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>minimum Date validation  {{validatorType}}  will allow user to enter date greater the minimum date value parameter.</p></div>
 
 # When to use
 Suppose you want to create a User form, which contains fields like Username, BirthDate, RegistrationDate and you want the user to enter date which must be greater rhan a minimum date. Here depending upon the requirement these scenarios may arise...

@@ -5,6 +5,7 @@ import { LatitudeTemplateDrivenValidationDirectivesExtendedModule } from "src/as
 import { LatitudeTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/latitude/latitude-validation-decorators-extended.module";
 
 import { LatitudeValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/latitude/latitude-validators-extended.module";
+
 import { LATITUDE_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/latitude/latitude.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { LATITUDE_ROUTING } from "src/app/components/form-validation/latitude/latitude.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: LATITUDE_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class LatitudeModule { }
+
+
 

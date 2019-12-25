@@ -7,7 +7,7 @@ type:simple
 linktitle: class
 ---
 
-<div class="title-bar"><p>To apply css class on the particular control, you must pass it in `class` property.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>To apply css class on the particular control, you must pass it in `class` property.</p></div>
 
 # Example
 

@@ -7,7 +7,7 @@ type: decorators
 linktitle: prop
 ---
 
-<div class="title-bar"><p>It is used to define a property of a field in the model class.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>It is used to define a property of a field in the model class.</p></div>
 
 # When to use
 Suppose you want to create a user form, which contains fields like emailAddress and you want to use the prop decorator on that field.

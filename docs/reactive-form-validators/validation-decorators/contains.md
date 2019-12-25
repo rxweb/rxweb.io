@@ -8,7 +8,7 @@ type: tabs
 linktitle: contains
 ---
 
-<div class="title-bar"><p>contains validation {{validatorType}} will check whether a particular value is in the input. It will not allow user to enter input that does not contains the predefined value.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>contains validation {{validatorType}} will check whether a particular value is in the input. It will not allow user to enter input that does not contains the predefined value.</p></div>
 
 # When to use
 Suppose you want to create a User form, which contains fields like Email Address, BusinessEmailAddress RecoveryEmailAddress, OtherEmailAddress and you want the user to enter the input which contains the predefined value. Here depending upon the requirement these scenarios may arise.

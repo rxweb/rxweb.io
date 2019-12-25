@@ -1,9 +1,12 @@
+
 <div class="title page-section content" id="{{title | lowercase }}">
+  
     <h1>
         <svg class="left-toggle-btn" (click)="hideSideBar()" width="25" height="25" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
         <span>{{title}}</span><a class="link-header" title="Link to this heading" href="{{linkHref}}#{{title}}"></a>
         <div class="hpanel">
-            <ul class="nav nav-tabs page-tabs ng-star-inserted"
+           
+            <!-- <ul class="nav nav-tabs page-tabs ng-star-inserted"
                 *ngIf="mainType !== 'community' && mainType !== 'changelog'">
                 <li class="ng-star-inserted" [class.active]="activeTab == 'validators'"
                     *ngIf="(mainType == 'form-validations' || mainType == 'how-to')  && validationName !== 'rule' && validationName !== 'async' && validationName !== 'stronglyType' && validationName !== 'classAbstraction'  && validationName !== 'genericModel'">
@@ -23,7 +26,7 @@
                     *ngIf="mainType == 'form-validations' && (validationName !== 'requiredTrue' && validationName !== 'async' && validationName !== 'minTime' && validationName !== 'maxTime'  && validationName !== 'unique'  && validationName !== 'ip' && validationName !== 'compose' && validationName !== 'allOf' && validationName !== 'oneOf' && validationName !== 'noneOf' && validationName !== 'choice'  && validationName !== 'rule')">
                     <a (click)="route('template-driven','decorators')">Template Decorator</a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </h1>
 </div>

@@ -7,6 +7,10 @@ const CONTROLS_ROUTES: Routes = [
 	loadChildren: './textbox/textbox.module#TextboxModule',
 },
 {
+	path:'color',
+	loadChildren: './color/color.module#ColorModule',
+},
+{
 	path:'checkbox',
 	loadChildren: './checkbox/checkbox.module#CheckboxModule',
 },

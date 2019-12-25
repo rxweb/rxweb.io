@@ -1,4 +1,4 @@
-<ul class="quick-links list-unstyled">
+<!-- <ul class="quick-links list-unstyled">
     <li class="">
         <a class="more-links"> <i class="fa fa-bars" aria-hidden="true"></i> </a>
         <ul class="list-unstyled" id="rightsidebar-items">
@@ -8,9 +8,9 @@
                     (click)="scrollTo(item.id)">{{item.title}}</a>
                 <ul class="list-unstyled" [class.child-list]="item.subLink?.length > 0">
                     <li *ngFor="let obj of item.subLink" class="nav-item px-1"><a class="nav-link" href="#{{obj.id}}"
-                            (click)="scrollTo(obj.id)">{{obj.title}}</a></li>
+                            (click)="scrollTo(obj.id)">{{obj.title}}</a></li> -->
                     <!-- [class.d-flex]="i == 0" -->
-                </ul>
+                <!-- </ul>
             </li>
         </ul>
     </li>
@@ -25,10 +25,10 @@
     <li><a target="_blank" href="https://github.com/rxweb/rxweb/"><i class="fa fa-github" aria-hidden="true"></i></a>
     </li>
     <li><a target="_blank" href="https://dev.to/t/rxweb"><i class="fab fa-dev" aria-hidden="true"></i></a>
-    </li>
+    </li> -->
 
     <!-- <span rxTooltip="left" message="Examples" tipTrigger="hover" class="fa fa-toggle-on" aria-hidden="true"></span></a></li> -->
-</ul>
+<!-- </ul> -->
 <!-- 
 <ul class="quick-links list-unstyled">
         <li class="">
@@ -52,6 +52,31 @@
         <li><a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i></a></li>
         <li><a href="#">b</a></li>
     </ul> -->
+
+
+    <!-- <ul class="navbar-nav right_widget right_widget_second">
+        <li class="nav-item active">
+           <a class="nav-link d-flex align-items-center justify-content-center" href="#"><i class="fa fa-comments"></i></a>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link d-flex align-items-center justify-content-center" href="#"><i aria-hidden="true" class="fa fa-toggle-on" data-toggle="tooltip" title="Examples Only"></i></a>
+       </li>
+
+       
+       <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-center pr-2" href="#" id="navbarDropdown" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <i class="fas fa-share"></i>
+           </a>
+           <div class="dropdown-menu py-0" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item" href="#"><i class="fab fa-twitter"></i></a>
+               <a class="dropdown-item" href="#"><i class="fa fa-facebook"></i></a>
+               <a class="dropdown-item" href="#"><i class="fab fa-google-plus-g"></i></a>
+               <a class="dropdown-item" href="#"><i class="fas fa-envelope"></i></a>
+           </div>
+       </li>
+   </ul> -->
+
 <script>
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();

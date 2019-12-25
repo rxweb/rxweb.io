@@ -8,7 +8,7 @@ type: simple
 linktitle: description
 ---
 
-<div class="title-bar"><p>description can be used inside ui binding to display description for the particular formControl in the dynamic-form.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>description can be used inside ui binding to display description for the particular formControl in the dynamic-form.</p></div>
 
 To set the `description` for a particular control object in your dynamic form, you can set the description property statically inside the `ui` property.
 

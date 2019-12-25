@@ -9,7 +9,7 @@ linktitle: value
 ---
 
 
-<div class="title-bar"><p>value property can be used in the ui binding to set a default value for particular control object.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>value property can be used in the ui binding to set a default value for particular control object.</p></div>
 
 # Example
 

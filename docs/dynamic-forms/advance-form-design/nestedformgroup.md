@@ -6,7 +6,7 @@ subcategory: advance-form-design
 type: simple
 linktitle: nestedformgroup
 ---
-<div class="title-bar"><p>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>
 To create a nested FormGroup in your dynamic form, you need to pass nested formControl details in the server response. In `additionalConfig` property , you need to mention the parent formGroup name and nested formControl names in the `childrens` array.</p></div>
 
 # Example

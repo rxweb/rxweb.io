@@ -6,7 +6,7 @@ type: decorators
 linktitle: disable
 ---
 
-<div class="title-bar"><p>It is used for disabled control conditionally</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>It is used for disabled control conditionally</p></div>
 
 # When to use
 We checked conditionalExpression with validators .but now there is scenario, based on condition we need to enable or disabled control. As a standard angular approach, we are putting `[disabled]` and its condition. Once the condition is a success, then it will disabled the control.

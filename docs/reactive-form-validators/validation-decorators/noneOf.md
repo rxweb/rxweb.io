@@ -8,7 +8,7 @@ type:tabs
 linktitle: noneOf
 ---
 
-<div class="title-bar"><p>noneOf validation  {{validatorType}}  will check whether the none of the values is selected from the given inputs.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>noneOf validation  {{validatorType}}  will check whether the none of the values is selected from the given inputs.</p></div>
 
 # When to use
 Let's assume that you are creating a employee form in which you want employee to enter none of the value of a particular value which contains fields like department, hobbies and skills.Here the field is taken in the form of array and according to that the choice is applied on the property by applying matchvalues. Here depending upon the requirement these scenarios may arise.

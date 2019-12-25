@@ -1,7 +1,5 @@
 import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-
 import { DYNAMICPASSWORD_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/controls/dynamicpassword/dynamicpassword.constants";
 import { DynamicpasswordValidatorsExtendedModule } from "src/assets/examples/controls/dynamicpassword/dynamicpassword-validators-extended.module";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
