@@ -2,7 +2,7 @@ import { Component, OnChanges, SimpleChanges,  Input, Inject, ViewChild, Element
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ApplicationBroadcaster } from "@rx/core";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-top-bar',
@@ -15,6 +15,8 @@ export class TopBarComponent  implements OnInit  {
   validationName: string;
   mainType: string;
   toogleOpen: boolean = true;
+  isFirstLevelBreadCrumb:boolean=true;
+  isSecondLevelBreadCrumb:boolean = true;
   showExample: boolean = true;
   @Input('sidebarLinks') sidebarLinks: any = {};
   cloneSidebarLinks:any = [];
@@ -23,7 +25,8 @@ export class TopBarComponent  implements OnInit  {
   searchvalue1: string
   @ViewChild('search1') searchInput: ElementRef;
   titleData:any = {codeContent:{}};
-  constructor(private applicationBroadCaster:ApplicationBroadcaster,private router: Router){
+  constructor(private applicationBroadCaster:ApplicationBroadcaster,private router: Router,private route: ActivatedRoute){
+
     this.applicationBroadCaster.topSubscriber.subscribe(t=>{
       this.titleData = t;
     })
@@ -74,11 +77,11 @@ export class TopBarComponent  implements OnInit  {
     if (this.mainType != "community") {
     //    this.sidebarLinks.splice(0, 1);
     }
-    console.log
-    (this.sidebarLinks);
-if(Array.isArray(this.sidebarLinks)){
-  this.sidebarLinks.forEach(t=>{
 
+
+if(this.sidebarLinks){
+  this.sidebarLinks.forEach(t=>{
+       debugger;
     this.cloneSidebarLinks.push({...t,...{subLink:[]}})
     if(t.subLink && t.subLink.length > 0){
       t.subLink.forEach(x=>{

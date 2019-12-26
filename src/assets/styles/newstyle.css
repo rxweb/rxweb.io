@@ -93,9 +93,7 @@ text-decoration: underline;
     color: #262626;
     
 }
-.header_left_menu .navbar-nav .nav-link:focus,.learning_title a:focus,.header_logo:focus{
-    border-color: #000;
-}
+
 .header_left_menu .navbar-nav .nav-link[aria-expanded="true"]{
     background: #f2f2f2;
     border-color: transparent;

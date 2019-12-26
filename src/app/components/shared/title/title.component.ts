@@ -26,6 +26,7 @@ export class TitleComponent implements OnInit {
   ) {
   }
   ngOnInit(): void {
+    
     if(this.mainType)
       this.linkHref += "/" + this.mainType;
     else if(this.title)

@@ -7,24 +7,52 @@
 				data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 				aria-label="Toggle navigation"><i class="fa fa-bars ml-2" aria-hidden="true"></i>
 			</button>
-			<div class="learning_title"><a href="#"><span>Architecture</span></a></div>
+			<div class="learning_title"><a>Architecture</a>  </div> 
+			
 			<div class="collapse header_left_menu navbar-collapse order-3 order-md-2" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#"><span>ASP.Net</span></a>
+					<li class="nav-item">
+						<a class="nav-link" routerLink="/rx-web-core/step-by-step-guide/overview" routerLinkActive="active">AspNetCore</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"><span>Angular</span></a>
+						<a class="nav-link" routerLink="/getting-started" routerLinkActive="active">Angular</a>
 					</li>
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown" routerLinkActive="active">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<span>React</span>
+							Help
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
+							<a class="dropdown-item"target="_blank"
+							href="https://gitter.im/rxweb-project/rxweb?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=body_badge">Gitter</a>
+							<a class="dropdown-item"  target="_blank" href="https://github.com/rxweb/rxweb.io">Github</a>					
+						</div>
+					</li>
+					<li class="nav-item dropdown" routerLinkActive="active">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Community
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" routerLink="/community/where_to_start_contributing">Want to Contribute, but?</a>
+							<a class="dropdown-item" routerLink="/community/contributing">Contributing </a>
+							<a class="dropdown-item" routerLink="/community/maintaining">Maintaining</a>
+							<a class="dropdown-item" routerLink="/hidden-gems">Hidden Gems</a>
+					
+							<a class="dropdown-item" routerLink="/changelog">Change Log</a>
+							<a class="dropdown-item" target="_blank" href="https://dev.to/t/rxweb">Dev Community</a>
+						   <a class="dropdown-item" target="_blank" href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3Abug">Open Issues</a>
+							<a class="dropdown-item" target="_blank" href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22">Feature Request</a>
+							<li class="nav-item dropdown" routerLinkActive="active">
+								<a class="nav-link dropdown-toggle" href="#" id="releaseNote" role="button"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Release Notes
+								</a>
+								<div class="dropdown-menu" aria-labelledby="releaseNote">
+									<a class="dropdown-item" routerLink="/whats-new">Whats New</a>
+									<a class="dropdown-item" routerLink="/whats-next">Whats Next</a>
+									</div>
+							</li>
 						</div>
 					</li>
 				</ul>
@@ -106,23 +134,23 @@
 	<div class="container d-flex align-items-center flex-column flex-lg-row">
 		<nav aria-label="breadcrumb" class="d-sm-none d-md-inline-block">
 			<ol class="breadcrumb bg-white top_breadcrumb px-0 py-2 mb-0">
-				<li class="breadcrumb-item"><a href="#">Docs</a></li>
-				<li class="breadcrumb-item"><a href="#">ASP.NET</a></li>
-				<li class="breadcrumb-item"><a href="#">ASP.NET Core</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Getting Started </li>
+				<li class="breadcrumb-item" (click)="isFirstLevelBreadCrumb=!isFirstLevelBreadCrumb" ><a routerLink="/home">Docs</a></li>
+				<li  *ngIf="isFirstLevelBreadCrumb" (click)="isSecondLevelBreadCrumb=!isSecondLevelBreadCrumb" class="breadcrumb-item"><a routerLink="/getting-started">Angular</a></li>
+			
+				<li  class="breadcrumb-item active" aria-current="page">	<app-title [title]="titleData.title"></app-title></li>
 			</ol>
 		</nav>
 
 		<ul class="navbar-nav ml-lg-auto flex-row breadcrumb_right_action">
 			<li class="mr-4"><a target="_blank" href="{{gitEditUrl}}" class="nav-link py-1"><i class="fa fa-pencil mr-2"
 						aria-hidden="true"></i>Edit</a></li>
-			<li class="mr-4 d-none d-md-inline-block"><a class="nav-link py-1" target="_blank" (click)="routeExample()"
-					*ngIf="mainType != 'community' && mainType != 'rx-web-core' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'">
+			<li *ngIf="mainType != 'community' && mainType != 'rx-web-core' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'" class="mr-4 d-none d-md-inline-block"><a class="nav-link py-1" target="_blank" (click)="routeExample()"
+					>
 					<i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen" class="fa mr-2"
 						data-toggle="tooltip" title="Examples Only" aria-hidden="true"></i>Examples Only</a></li>
 
 			<!-- <li ><a class="nav-link py-1"><i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen"  aria-hidden="true"></i>Example Only</a></li> -->
-			<li class="nav-item dropdown mr-4 d-none d-md-inline-block">
+			<!-- <li class="nav-item dropdown mr-4 d-none d-md-inline-block">
 				<a class="nav-link dropdown-toggle py-1 share_title" href="#" id="navbarDropdown" role="button"
 					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
 						class="fa fa-share-square-o mr-2" aria-hidden="true"></i>Share</a>
@@ -132,7 +160,7 @@
 					<a class="dropdown-item" href="#"><i class="fa fa-linkedin mr-2" aria-hidden="true"></i>LinkedIn</a>
 					<a class="dropdown-item" href="#"><i class="fas fa-envelope mr-2"></i>Email</a>
 				</div>
-			</li>
+			</li> -->
 			<li class="nav-item dropdown d-none d-md-inline-block">
 				<a class="nav-link dropdown-toggle chapter_heading py-1 pr-0" href="#" id="navbarDropdown1"
 					role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -158,14 +186,15 @@
                             <p class="chapter_author mb-0">by Russ Ferguson</p>
                             <p class="chapter_author mb-0"><em>Published by <a href="">Apress</a>,2019</em></p></div></div> -->
 					<ul class="pl-0" id="rightsidebar-items">
+						
 						<li class="nav-item" *ngFor="let item of cloneSidebarLinks;let i = index" [class.d-flex]="i == 0"
 							[class.border-none]="i == 0" [class.sidebar-list]="item.subLink?.length > 0">
-							<a *ngIf="i > 0" class="nav-link sidebar-link" [class.child-item-list]="item.subLink?.length > 0"
+							<a *ngIf="i > 0" class="nav-link sidebar-link" 
 								href="#{{item.id}}" [class.active]="i == 0"
 								(click)="scrollTo(item.id)">{{item.title}}</a>
-						
-							<ul class="list-unstyled" [class.child-list]="item.subLink?.length > 0">
-								<li *ngFor="let obj of item.subLink" class="nav-item px-1"><a class="nav-link"
+						     
+							<ul class="pl-0">
+								<li [class.sidebar-list]="item.subLink?.length > 0" *ngFor="let obj of item.subLink" class="nav-item"><a class="nav-link"
 										href="#{{obj.id}}" (click)="scrollTo(obj.id)">{{obj.title}}</a></li>
 
 							</ul>

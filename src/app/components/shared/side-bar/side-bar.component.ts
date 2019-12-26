@@ -18,11 +18,9 @@ export class SideBarComponent implements OnInit {
   @ViewChild('search') searchInput: ElementRef;
 
   constructor(
-    private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster, private activatedRoute: ActivatedRoute
+    private http: HttpClient, private router: Router, private applicationBroadcaster: ApplicationBroadcaster
   ) {
-    activatedRoute.params.subscribe(t => {
 
-    })
   }
   ngOnInit(): void {
 
@@ -717,7 +715,7 @@ export class SideBarComponent implements OnInit {
     }
   }
   navigateTo(link: any, secondlevel: any, thirdlevel: any): void {
-
+debugger
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;

@@ -28,6 +28,8 @@ export class AppExampleRunnerComponent implements OnInit {
   @Input() content: any;
   @Input() showTab: boolean;
   showStackBlitz: boolean = true;
+  exampleHeights:any =[{exampleName:'add',height:150},{exampleName:'conditionalExpression',height:370},{exampleName:'allowWhiteSpace',height:160},{exampleName:'message',height:160},{exampleName:'messageKey',height:160},{exampleName:'locale',height:160},{exampleName:'complete',height:750},{exampleName:'dynamic',height:650}]
+  exampleHeight : number;
   exampleUrl: SafeResourceUrl;
   @Input() templateDrivenType: string;
   showElement: any = {};
@@ -72,6 +74,8 @@ export class AppExampleRunnerComponent implements OnInit {
   }
 
   runCodeExample(exampleName){ 
+
+    this.exampleHeight =  this.exampleHeights.filter(x=>x.exampleName == exampleName)[0].height;
     let codeUrl =  "http://localhost:9999" + this.router.url +  "?exampleName=" + exampleName;
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
     setTimeout(()=>{this.isRunCode = true;},500)
