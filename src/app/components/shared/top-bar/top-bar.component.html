@@ -187,7 +187,7 @@
                             <p class="chapter_author mb-0"><em>Published by <a href="">Apress</a>,2019</em></p></div></div> -->
 					<ul class="pl-0" id="rightsidebar-items">
 						
-						<li class="nav-item" *ngFor="let item of cloneSidebarLinks;let i = index" [class.d-flex]="i == 0"
+						<li class="nav-item" *ngFor="let item of sidebarLinks;let i = index" [class.d-flex]="i == 0"
 							[class.border-none]="i == 0" [class.sidebar-list]="item.subLink?.length > 0">
 							<a *ngIf="i > 0" class="nav-link sidebar-link" 
 								href="#{{item.id}}" [class.active]="i == 0"

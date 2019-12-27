@@ -16,14 +16,47 @@
     [src]="gitAsideUrl"></iframe>
 </aside>
 
-<div style="position:relative;min-height:98vh;">
+<div style="position:relative;min-height:90vh;">
   <rx-toast></rx-toast>
   <rx-dialog></rx-dialog>
   <rx-popup></rx-popup>
   <rx-spinner></rx-spinner>
   <app-top-bar [sidebarLinks]="rightSidebarLinks" *ngIf="!isHome"></app-top-bar>
 
-  <header *ngIf="isHome" class="header home-header-links">
+  <header *ngIf="isHome" class="home_page_header border-0">
+    <nav class="navbar   py-0 pt-4">
+            <a class="navbar-brand pl-md-5 pt-0" href="#"><img src="assets/images/logo.png" width="120" height="28"/></a>
+            <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse d-inline-block" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto border-left d-inline-block">
+                <!-- <li class="nav-item active">
+                  <a class="nav-link" href="#"><span>AspNetCore</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><span>Front End</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><span>Back End</span></a>
+                </li> -->
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>AspNetCore</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Angular</a>
+                        </div>
+                    </li>
+              </ul>
+            </div>
+            <div class="main-heading ml-auto pr-md-5" >Clean Code. Built with Purpose</div>
+          </nav>
+</header>
+
+  <!-- <header  class="header home-header-links">
 
     <div class="row">
       <div class="col-sm-11">
@@ -49,9 +82,9 @@
       </div>
     </div>
 
-  </header>
+  </header> -->
 
-  <main class="main">
+  <main [class.main]="!isHome">
 
     <div class="row">
       <div class="col-sm-2 space-left-sidebar" *ngIf="!isHome">
