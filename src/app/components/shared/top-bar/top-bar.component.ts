@@ -14,6 +14,7 @@ export class TopBarComponent  implements OnInit  {
   isReactive:boolean
   validationName: string;
   mainType: string;
+  secondLevelBreadCrumb:string = "Angular";
   toogleOpen: boolean = true;
   isFirstLevelBreadCrumb:boolean=true;
   isSecondLevelBreadCrumb:boolean = true;
@@ -41,33 +42,45 @@ export class TopBarComponent  implements OnInit  {
     if (splitedArray.length > 0 && splitedArray[1]) {
 
         switch (splitedArray[1]) {
+          
             case "decorators":
                 this.gitEditUrl += "docs/reactive-form-validators/decorators/" + splitedArray[2] + ".md"
+                this.secondLevelBreadCrumb = "Angular";
                 break;
             case "form-validations":
                 this.gitEditUrl += "docs/reactive-form-validators/validation-decorators/" + splitedArray[2] + ".md"
+                this.secondLevelBreadCrumb = "Angular";
                 break;
-            case "api":
+            case "api":              
                 this.gitEditUrl += "docs/reactive-form-validators/api/" + splitedArray[2] + ".md"
+                this.secondLevelBreadCrumb = "Angular";
                 break;
             case "community":
                 this.gitEditUrl += "docs/community/" + splitedArray[2] + ".md"
+                this.secondLevelBreadCrumb = "Angular";
                 break;
             case "sanitization":
                 this.gitEditUrl += "docs/sanitization/" + splitedArray[2] + ".md"
+                this.secondLevelBreadCrumb = "Angular";
                 break
             case "how-to":
                 this.gitEditUrl += "docs/how-to/" + splitedArray[2] + ".md"
+                this.secondLevelBreadCrumb = "Angular";
                 break
             case "reactive-dynamic-forms":
                 this.gitEditUrl += "docs/dynamic-forms/" +
                  splitedArray[3] + ".md"
+                 this.secondLevelBreadCrumb = "Angular";
             case "rx-web-core":
             if(splitedArray[4])
-        
+              {
             this.gitEditUrl += "docs/rx-web-core/" + splitedArray[2] +"/" + splitedArray[3] + "/" + splitedArray[4] + ".md"               
-            else
+            this.secondLevelBreadCrumb = "AspNetCore";
+              }
+            else{
             this.gitEditUrl += "docs/rx-web-core/" + splitedArray[2] +"/" + splitedArray[3] + ".md" 
+            this.secondLevelBreadCrumb = "AspNetCore";
+            }
         }
     }
     else if (splitedArray.length > 0 && splitedArray[0] == "changelog") {
@@ -91,6 +104,7 @@ if(this.sidebarLinks){
   
 }
 }
+
 scrollTo(section) {
   var node = document.querySelector('#' + section);
   node.scrollIntoView(true);

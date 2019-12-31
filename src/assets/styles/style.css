@@ -8042,14 +8042,14 @@ span.btn-label {
 }
 
 .rw-words-1 span {
-    font-weight: bolder;
+    
     position: absolute;
     opacity: 0;
     overflow: hidden;
     color: #6b969d;
-    -webkit-animation: rotateWord 18s linear infinite 0s;
-    -ms-animation: rotateWord 18s linear infinite 0s;
-    animation: rotateWord 18s linear infinite 0s;
+    -webkit-animation: fadeIn 18s  infinite 0s;
+    -ms-animation: fadeIn 18s  infinite 0s;
+    animation: fadeIn 18s  infinite 0s;
 }
 
 .rw-words-1 span:nth-child(2) {
@@ -8073,19 +8073,44 @@ span.btn-label {
     color: #7a6b9d;
 }
 
-.rw-words-1 span:nth-child(5) {
+ .rw-words-1 span:nth-child(5) {
     -webkit-animation-delay: 12s;
     -ms-animation-delay: 12s;
     animation-delay: 12s;
     color: #8d6b9d;
-}
+} 
 
 .rw-words-1 span:nth-child(6) {
     -webkit-animation-delay: 15s;
     -ms-animation-delay: 15s;
     animation-delay: 15s;
     color: #9b6b9d;
-}
+} 
+
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
 
 @-webkit-keyframes rotateWord {
     0% {
@@ -8548,8 +8573,13 @@ a.stop:hover {
     white-space: pre;
 }
 
+.typeit-json-ending-text:after{
+    content: "\000A";
+    white-space: pre;
+}
+
 .typeit-C-text:after {
-   
+  
     white-space: pre;
 }
 
@@ -8997,3 +9027,31 @@ ul.nav.level-1 {
 
 
 
+.card-link+.card-link{
+    margin-left: 0px;
+}
+
+.tooltip-inner{
+    max-width: 200px;
+    padding: .25rem .5rem;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    border-radius: .25rem;
+    background: #fff;
+    box-shadow: 0 0 5px #c4d1da;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #6385a2;
+    font-weight: normal;
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
+    right: 0;
+    border-width: .4rem .4rem .4rem 0;
+    border-right-color: #e6dede;
+    text-shadow: 0px 0px 5px #989898;
+}
+.hm-pl-lg-5, .hm-pl-lg-5{
+    padding-left: 7rem!important;
+}

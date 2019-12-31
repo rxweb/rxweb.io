@@ -5431,6 +5431,11 @@ header .header_left_menu .navbar-nav .nav-link span:before,.learning_title a>spa
   box-shadow: 0 0 5px #c5c1c1;
   border-radius: 5px;
 }
+
+/* .highlighted-code-after{
+  background: #f9f9db;
+} */
+
 .tool_tips{
   background: #fff;
   box-shadow: 0 0 5px #c4d1da;
@@ -5459,7 +5464,7 @@ header .header_left_menu .navbar-nav .nav-link span:before,.learning_title a>spa
   background: #fff;
 }
 .home_page_header .main-heading{    
-  color: #f3f3f3;
+  color: #e0e0e0;
   font-weight: bold;
   font-size: 21px;
 }
@@ -5479,7 +5484,7 @@ header .header_left_menu .navbar-nav .nav-link span:before,.learning_title a>spa
 }
 
 .word {
-  top: 135px;
+  top: 230px;
   position: absolute;
   width: auto;
   opacity: 0;
@@ -5489,14 +5494,14 @@ header .header_left_menu .navbar-nav .nav-link span:before,.learning_title a>spa
 .word2{
   position: absolute;
   width: auto;
-  top: 264px;
+  top: 353px;
     opacity: 0;
     margin-left: 200px;
 }
 #code_second_change{
   font-family: Consolas ;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .letter {
@@ -5522,7 +5527,7 @@ header .header_left_menu .navbar-nav .nav-link span:before,.learning_title a>spa
 }
 
 .wisteria {
-  color: #8e44ad;
+  color: #8e44ad!important;
 }
 
 .belize {
