@@ -42,7 +42,7 @@ import { ApplicationBroadcaster } from '@rx/core';
 import { APP_VERSION } from '@rx/http';
 import { ApplicationRequestHeaders } from '../domain/application-request-headers';
 import { ApplicationResponse } from '../domain/application-response';
-import { BasicExamplesExtendedModule } from 'src/assets/examples/reactive-form-validators/basic-examples/basic-examples-extended.module';
+
 export const API_HOST_URI: string = 'API_URL';
 
 
@@ -68,7 +68,7 @@ registerLocaleData(localePt)
 @NgModule({
   declarations: [
       AppComponent, SideBarComponent,TopBarComponent,TitleComponent, ContributorsComponent,ChangeLogComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent,WhatsNextComponent,WhatsNewComponent,WhyRxwebComponent],
-  imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, DisqusSharedModule, BasicExamplesExtendedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
+  imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
     BrowserAnimationsModule,
     RxSecurityModule, CommonModule,

@@ -6,7 +6,7 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [DYNAMIC_FORMS_ROUTING ,PageModule],
+  imports: [DYNAMIC_FORMS_ROUTING,PageModule],
   exports: [RouterModule],
   })
 export class DynamicFormsModule { }

@@ -23,7 +23,7 @@
   <rx-spinner></rx-spinner>
   <app-top-bar [sidebarLinks]="rightSidebarLinks" *ngIf="!isHome"></app-top-bar>
 
-  <header *ngIf="isHome" class="home_page_header border-0">
+  <header *ngIf="isHome" [class.ihomepage-header]="!isHome" class="home_page_header border-0">
     <nav class="navbar   py-0 pt-4">
             <a class="navbar-brand pl-md-5 pt-0" href="#"><img src="assets/images/logo.png" width="120" height="28"/></a>
             <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

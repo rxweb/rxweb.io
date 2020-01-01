@@ -12,9 +12,8 @@ import { element } from '@angular/core/src/render3';
 
 @Component({
   templateUrl: './home.component.html',
-
-
 })
+
 export class HomeComponent implements OnInit, OnDestroy {
   timeOutId: any;
   userFormGroup: FormGroup;
@@ -38,7 +37,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   currentTextGroup: { [key: string]: any }
   typeItCodeTexts = [{
     type: 'code', fixText: '', codes: [
-      { text: '[', class: 'highlighted-code' }, { text: 'RecordLog', class: "visual-studio-object highlighted-code" }, { text: ']', class: 'highlighted-code', id: 1, title: 'Auditing' },
+      { text: '[', class: 'highlighted-code' }, { text: 'RecordLog', class: "visual-studio-object highlighted-code" }, { text: ']', class: 'highlighted-code', id: 1, title: 'Auditing' }, { text: " ", class: "type-it-space" },{text:"//Data Entity Auditing",class:"type-it-comment"},
       { text: " ", class: "typeit-json-text" },
       { text: 'public', speed: "fast", class: 'visual-studio-keyword' },
       { text: " ", class: "type-it-space" },
@@ -50,7 +49,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       { text: " ", class: "typeit-json-text" }, { text: '{', class: '', speed: "fast" },
 
       { text: ' ', class: "", speed: "fast" }, { text: " ", class: "typeit-json-text" },
-      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'Key', class: "visual-studio-object highlighted-code" }, { text: ']', class: "highlighted-code", id: 2, title: 'Primary Key' },
+      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'Key', class: "visual-studio-object highlighted-code" }, { text: ']', class: "highlighted-code", id: 2, title: 'Primary Key' },{ text: " ", class: "type-it-space" },
       { text: " ", class: "typeit-json-text" },
       //first property
       { text: ' ', class: "type-it-tabing" }, { text: 'public', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
@@ -64,7 +63,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       { text: " ", class: "typeit-json-text" },
       // second property
       { text: " ", class: "typeit-json-text" },
-      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'TenantQueryFilter', class: "visual-studio-object highlighted-code" }, { text: ']', class: "highlighted-code", id: 3, title: "Single Database Multitenant" },
+      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'TenantQueryFilter', class: "visual-studio-object highlighted-code" }, { text: ']', class: "highlighted-code", id: 3, title: "Single Database Multitenant" },{ text: " ", class: "type-it-space" },{text:"//Single Database Multitenant",class:"type-it-comment"},
       { text: ' ', class: "", speed: "fast" }, { text: " ", class: "typeit-json-text" },
       { text: ' ', class: "type-it-tabing" }, { text: 'public', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
       { text: 'int', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
@@ -76,7 +75,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       { text: " ", class: "typeit-json-text" },
       // third property
       { text: ' ', class: "", speed: "fast" }, { text: " ", class: "typeit-json-text" },
-      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'Unique', class: "visual-studio-object highlighted-code" }, { text: '(', class: 'highlighted-code' }, { text: 'typeOf', class: 'visual-studio-keyword highlighted-code' }, { text: '(', class: 'highlighted-code' }, { text: 'IMainDatabasedFacade', class: 'visual-studio-object highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ']', class: "highlighted-code", id: 4, title: 'Unique Validation' },
+      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'Unique', class: "visual-studio-object highlighted-code" }, { text: '(', class: 'highlighted-code' }, { text: 'typeOf', class: 'visual-studio-keyword highlighted-code' }, { text: '(', class: 'highlighted-code' }, { text: 'IMainDatabasedFacade', class: 'visual-studio-object highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ']', class: "highlighted-code", id: 4, title: 'Unique Validation' },{ text: " ", class: "type-it-space" },{text:"//Unique Validation",class:"type-it-comment"},
       { text: " ", class: "typeit-json-text", speed: "fast" }, { text: " ", class: "type-it-tabing" },
       { text: 'public', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
       { text: 'string', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
@@ -107,7 +106,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       // fourth property
 
       { text: ' ', class: "", speed: "fast" }, { text: " ", class: "typeit-json-text" },
-      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'ValueConversion', class: "visual-studio-object highlighted-code" }, { text: '(', class: 'highlighted-code' }, { text: 'typeOf', class: 'visual-studio-keyword highlighted-code' }, { text: '(', class: 'highlighted-code' }, { text: 'EncryDecryValueConversion', class: 'visual-studio-object highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ']', class: 'highlighted-code', id: 6, title: "Column Value Encryption" },
+      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'ValueConversion', class: "visual-studio-object highlighted-code" }, { text: '(', class: 'highlighted-code' }, { text: 'typeOf', class: 'visual-studio-keyword highlighted-code' }, { text: '(', class: 'highlighted-code' }, { text: 'EncryDecryValueConversion', class: 'visual-studio-object highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ']', class: 'highlighted-code', id: 6, title: "Centralized Value Encryption" },{ text: " ", class: "type-it-space" },{text:"//Centralized Value Encryption",class:"type-it-comment"},
       { text: " ", class: "typeit-json-text", speed: "fast" }, { text: " ", class: "type-it-tabing" },
       { text: 'public', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
       { text: 'string', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
@@ -120,7 +119,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
       // fifth property
       { text: ' ', class: "", speed: "fast" }, { text: " ", class: "typeit-json-text" },
-      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'OnAction', class: "visual-studio-object highlighted-code" }, { text: '(', class: 'highlighted-code' }, { text: '"POST"', class: 'typeit-parameter-type highlighted-code' }, { text: ',', class: 'highlighted-code' }, { text: 'ActionValueType', class: 'visual-studio-object highlighted-code' }, { text: ".NameClaimIdentifier", class: 'highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ']', class: 'highlighted-code', id: 7, title: 'Data Sanization' },
+      { text: ' ', class: "type-it-tabing" }, { text: '[', class: 'highlighted-code' }, { text: 'OnAction', class: "visual-studio-object highlighted-code" }, { text: '(', class: 'highlighted-code' }, { text: '"POST"', class: 'typeit-parameter-type highlighted-code' }, { text: ',', class: 'highlighted-code' }, { text: 'ActionValueType', class: 'visual-studio-object highlighted-code' }, { text: ".NameClaimIdentifier", class: 'highlighted-code' }, { text: ')', class: 'highlighted-code' }, { text: ']', class: 'highlighted-code', id: 7, title: 'Data Sanization' },{ text: " ", class: "type-it-space" },{text:"//Auto Data Sanitization",class:"type-it-comment"},
       { text: " ", class: "typeit-json-text", speed: "fast" }, { text: " ", class: "type-it-tabing" },
       { text: 'public', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
       { text: 'int', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
@@ -136,7 +135,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
       //seventh property
       { text: ' ', class: "", speed: "fast" }, { text: " ", class: "typeit-json-text" },
-      { text: ' ', class: "type-it-tabing" }, { text: '[', class: '' }, { text: 'TimeZoneValueConversion', class: "visual-studio-object" }, { text: ']', id: 8, title: "TimeZone Conversion" },
+      { text: ' ', class: "type-it-tabing" }, { text: '[', class: '' }, { text: 'TimeZoneValueConversion', class: "visual-studio-object" }, { text: ']', id: 8, title: "TimeZone Conversion" },{ text: " ", class: "type-it-space" },{text:"//TimeZone Conversion",class:"type-it-comment"},
       { text: " ", class: "typeit-json-text", speed: "fast" }, { text: " ", class: "type-it-tabing" },
       { text: 'public', class: "visual-studio-keyword", speed: "fast" }, { text: " ", class: "type-it-space" },
       { text: 'DateTimeOffset', class: "visual-studio-object", speed: "fast" }, { text: " ", class: "type-it-space" },
@@ -242,9 +241,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         }
         else {
-          this.loadAnimatedText();
+          //this.timeOutId = setTimeout(() => {  this.loadAnimatedText(); },300);
 
-          this.loadSecondAnimatedText();
+          this.timeOutId = setTimeout(() => { document.getElementById("word-second-animate").style.opacity = "1" }, 200);
+
+         // this.timeOutId = setTimeout(() => { this.loadSecondAnimatedText(); },600);
 
           this.totalIndex++;
           if (this.totalIndex == 1) {
@@ -473,7 +474,9 @@ export class HomeComponent implements OnInit, OnDestroy {
           //  this.loadSecondAnimatedText();
           this.totalSecondIndex++;
           if (this.totalSecondIndex == 1) {
-            // this.ShowToolTips();
+             //this.ShowToolTips();
+             this.loadAnimatedText();
+            this.loadSecondAnimatedText();
           }
           this.secondCodeIndex = 0;
           if (this.totalSecondIndex <= 1) {
@@ -512,7 +515,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.secondTextIndex++;
 
 
-        this.timeOutId = setTimeout(() => { this.processSecondCharacters(textGroup) }, 20)
+        this.timeOutId = setTimeout(() => { this.processSecondCharacters(textGroup) }, 1)
 
 
       } else {

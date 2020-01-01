@@ -1,4 +1,4 @@
-import { PlaceholderCompleteComponent } from 'src/assets/examples/static-binding/placeholder/complete/placeholder-complete.component';
+
 
 
 
@@ -7,7 +7,7 @@ import { PlaceholderCompleteComponent } from 'src/assets/examples/static-binding
 
 export const PLACEHOLDER_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
     validators: {
-        complete: PlaceholderCompleteComponent
+       
     }
 
 }

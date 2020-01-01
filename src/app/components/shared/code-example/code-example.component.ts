@@ -5,7 +5,6 @@ import { ElementRef } from "@angular/core";
 import { ViewContainerRef } from "@angular/core";
 import { ComponentFactoryResolver } from "@angular/core";
 import { ComponentView } from "src/app/domain/view";
-import { AlphaAllowWhiteSpaceComponent } from "src/assets/examples/reactive-form-validators/decorators/alpha/allowWhiteSpace/alpha-allow-white-space.component";
 import { Inject } from "@angular/core";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { BaseComponentProvider } from "src/app/components/shared/base.component";

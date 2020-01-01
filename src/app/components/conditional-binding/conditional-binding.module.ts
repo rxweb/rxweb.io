@@ -6,7 +6,7 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [CONDITIONAL_BINDING_ROUTING ,PageModule],
+  imports: [CONDITIONAL_BINDING_ROUTING,PageModule],
   exports: [RouterModule],
   })
 export class ConditionalBindingModule { }

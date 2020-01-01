@@ -2,7 +2,6 @@ import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter, After
 import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { AppCodeComponent } from "src/app/components/shared/app-code/app-code.component";
-import { AlphaAllowWhiteSpaceComponent } from "src/assets/examples/reactive-form-validators/decorators/alpha/allowWhiteSpace/alpha-allow-white-space.component";
 import { ElementRef } from "@angular/core";
 import { ComponentFactoryResolver } from "@angular/core";
 import { ViewContainerRef } from "@angular/core";
