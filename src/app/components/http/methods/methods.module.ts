@@ -8,7 +8,7 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [METHODS_ROUTING ,MethodsModule,PageModule],
+  imports: [METHODS_ROUTING ,PageModule],
   exports: [RouterModule],
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: METHODS_COMPONENT_EXAMPLE_CONSTANT }]
   })
