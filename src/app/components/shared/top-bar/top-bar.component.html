@@ -55,7 +55,7 @@
 					<li class="nav-item dropdown" routerLinkActive="active">
 						<a class="nav-link dropdown-toggle" href="#" id="releaseNote" role="button"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Release 
+							Release
 						</a>
 						<div class="dropdown-menu" aria-labelledby="releaseNote">
 							<a class="dropdown-item" routerLink="/whats-new">Whats New</a>
@@ -87,7 +87,7 @@
 									  </div>  -->
 							<!-- <ais-search-box class="search-field"></ais-search-box>
 								<	div class="search-btn">
-									  <svg height="24" viewBox="0 0 50 50" width="24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
+									  <svg height="24" viewBox="0 0 50 50" width=24" class="search"><path fill="#555555" d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg>
 								  </div>  -->
 						</div>
 						<div id="searchlist-content" class="search-content">
@@ -141,21 +141,20 @@
 	<div class="container d-flex align-items-center flex-column flex-lg-row">
 		<nav aria-label="breadcrumb" class="d-sm-none d-md-inline-block">
 			<ol class="breadcrumb bg-white top_breadcrumb px-0 py-2 mb-0">
-				<li class="breadcrumb-item" (click)="isFirstLevelBreadCrumb=!isFirstLevelBreadCrumb"><a
-						routerLink="/home">Docs</a></li>
-				<li *ngIf="isFirstLevelBreadCrumb" (click)="isSecondLevelBreadCrumb=!isSecondLevelBreadCrumb"
-					class="breadcrumb-item"><a routerLink="/getting-started">{{secondLevelBreadCrumb}}</a></li>
+				<li class="breadcrumb-item"><a routerLink="/home">Docs</a></li>
+				<li class="breadcrumb-item"><a routerLink="/getting-started">{{secondLevelBreadCrumb}}</a></li>
 
 				<li class="breadcrumb-item active" aria-current="page">
-					<app-title [title]="titleData.title"></app-title>
+					{{titleData.title}}
 				</li>
 			</ol>
 		</nav>
 
 		<ul class="navbar-nav ml-lg-auto flex-row breadcrumb_right_action">
-			<li class="mr-4"><a target="_blank" href="{{gitEditUrl}}" class="nav-link py-1"><i class="fa fa-pencil mr-2"
+			<li *ngIf="mainType != 'getting-started'&& mainType != 'hidden-gems' && mainType !='whats-new' && mainType !='whats-next' && mainType !='changelog'"
+				class="mr-4"><a target="_blank" href="{{gitEditUrl}}" class="nav-link py-1"><i class="fa fa-pencil mr-2"
 						aria-hidden="true"></i>Edit</a></li>
-			<li *ngIf="mainType != 'community' && mainType != 'rx-web-core' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'"
+			<li *ngIf="mainType != 'community'  && mainType !='changelog' && mainType != 'hidden-gems'  && mainType != 'rx-web-core' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'"
 				class="mr-4 d-none d-md-inline-block"><a class="nav-link py-1" target="_blank" (click)="routeExample()">
 					<i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen" class="fa mr-2"
 						data-toggle="tooltip" title="Examples Only" aria-hidden="true"></i>Examples Only</a></li>
@@ -197,9 +196,9 @@
 					aria-labelledby="navbarDropdown1">
 
 					<ul class="pl-0" id="rightsidebar-items">
-
-						<li class="nav-item" *ngFor="let item of sidebarLinks;let i = index" [class.d-flex]="i == 0"
-							[class.border-none]="i == 0" [class.sidebar-list]="item.subLink?.length > 0">
+						<li class="nav-item" *ngFor="let item of cloneSidebarLinks;let i = index"
+							[class.d-flex]="i == 0" [class.border-none]="i == 0"
+							[class.sidebar-list]="item.subLink?.length > 0">
 							<a *ngIf="i > 0" class="nav-link sidebar-link" href="#{{item.id}}" [class.active]="i == 0"
 								(click)="scrollTo(item.id)">{{item.title}}</a>
 

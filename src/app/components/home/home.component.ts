@@ -151,7 +151,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   typeItTexts = [
     {
-      type: 'code', fixText: '', codes: [{ text: 'One', class: '' }, { text: "One", class: '' }, { text: " ", class: "type-it-space" }, { text: 'architecture', class: '' }, { text: " ", class: "typeit-C-text" }, { text: 'for' }, { text: " ", class: "typeit-json-text" }, { text: 'with' }]
+      type: 'code', fixText: '', codes: [{ text: 'One', class: '' }, { text: "One", class: '' }, { text: " ", class: "type-it-space" }, { text: 'architecture', class: '' }, { text: " ", class: "typeit-C-text" }, { text: 'for' },{ text: " ", class: "type-it-space" },{text:'restful',class:"typeitremove code1"}, { text: " ", class: "typeit-json-text" }, { text: 'with' },{ text: " ", class: "type-it-space" },{text:'cleaner.',class:"typeitremove code2"},]
     },
 
 
@@ -209,8 +209,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       if (textGroup.text.length > this.textIndex) {
         this.bindText(textGroup.text.charAt(this.textIndex), textGroup.class)
         this.textIndex++;
-        if (textGroup.text == "for")
-          this.timeOutId = setTimeout(() => { document.getElementById("word-animate").style.opacity = "1" }, 200);
+        //if (textGroup.text == "for")
+         // this.timeOutId = setTimeout(() => { document.getElementById("word-animate").style.opacity = "1" }, 200);
 
 
         this.timeOutId = setTimeout(() => { this.processCharacters(textGroup) }, 50)
@@ -241,11 +241,21 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         }
         else {
-          //this.timeOutId = setTimeout(() => {  this.loadAnimatedText(); },300);
+          debugger;
+      
+         document.getElementById("word-animate").style.opacity = "1";
+          document.getElementById("word-second-animate").style.opacity = "1"
+          var i =0;
+          var removewords = document.getElementsByClassName('typeitremove');
+          for (i = 0; i < removewords.length; i++) {
+            removewords[i].classList.add("d-none");
+          }
+     document.getElementById("doc-button-link").style.display = "block";
+           this.loadAnimatedText();
 
-          this.timeOutId = setTimeout(() => { document.getElementById("word-second-animate").style.opacity = "1" }, 200);
+          //this.timeOutId = setTimeout(() => { document.getElementById("word-second-animate").style.opacity = "1" }, 200);
 
-         // this.timeOutId = setTimeout(() => { this.loadSecondAnimatedText(); },600);
+          this.loadSecondAnimatedText(); 
 
           this.totalIndex++;
           if (this.totalIndex == 1) {
@@ -475,8 +485,8 @@ export class HomeComponent implements OnInit, OnDestroy {
           this.totalSecondIndex++;
           if (this.totalSecondIndex == 1) {
              //this.ShowToolTips();
-             this.loadAnimatedText();
-            this.loadSecondAnimatedText();
+             //this.loadAnimatedText();
+           // this.loadSecondAnimatedText();
           }
           this.secondCodeIndex = 0;
           if (this.totalSecondIndex <= 1) {

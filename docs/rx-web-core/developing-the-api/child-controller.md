@@ -6,6 +6,7 @@ subcategory: developing-the-api
 type:simple
 linktitle:childcontroller
 ---
+# Child Controller
 
 While working with entities which are depending on a larger entity. It becomes important to manage the data using a shared key. It is managed using parent and child controller.
 
@@ -66,5 +67,3 @@ Here is an example of child controller:
 
 ![Child Controller](Images/child-controller.gif)
 
-# See Also
-Child Controller

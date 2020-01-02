@@ -6,6 +6,7 @@ subcategory: localization-and-globalization
 type:simple
 linktitle:componentcontents
 --- 
+# Component Contents
 
 On the user interface, when multiple components are involved, each of them requires component specific multilingual data based upon which text of placeholder, label etc are displayed. Considering a scenario where the Country entity has three components : List, Add and Edit and they required different component contents. Here is an example of how CountryAdd component data will be formed.
 
@@ -54,5 +55,5 @@ This will create `.json` file with en and fr json in wwwroot folder of the langu
 
 > The users language will be stored in the Users table as a LanguageCode
 
-# See Also
+
 Global Content

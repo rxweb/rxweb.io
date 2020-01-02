@@ -68,11 +68,8 @@ export class AppComponent implements OnInit {
   showFooter = false;
   isAspNetCore = false;
   gitAsideUrl: SafeResourceUrl;
-  // getRouteAnimation(outlet) {
-  //   return outlet.activatedRouteData.animation
-  // }
+  lastRouteName:string = ""
   rightSidebarLinks: any;
-  //@ViewChild('rightSidenav') public rightsidenav: RightSideBarComponent;
   constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
@@ -83,6 +80,7 @@ export class AppComponent implements OnInit {
     })
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
+        console.log("calling routes")
         if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home")) {
           this.isHome = true;
         }
@@ -94,11 +92,15 @@ export class AppComponent implements OnInit {
           this.isHome = false;
         }
 
-        if (location.pathname.includes("generics")) {
-          this.isShowSidebar = false;
-          this.http.get('assets/json/generics-sidebar.json').subscribe((response: any) => {
-            this.isShowSidebar = true
-          })
+        if (location.pathname.includes("generics") ) {
+          if(this.lastRouteName != "generics"){
+            this.isShowSidebar = false;
+            this.http.get('assets/json/generics-sidebar.json').subscribe((response: any) => {
+              this.isShowSidebar = true
+            })
+            this.lastRouteName = "generics"
+          }
+          
         }
         else if (location.pathname.includes("sanitizers")) {
           this.isShowSidebar = false
@@ -119,17 +121,22 @@ export class AppComponent implements OnInit {
           })
         }
         else if (location.pathname.includes("rx-web-core")) {
+         if(this.lastRouteName != "rx-web-core"){
+           this.lastRouteName = "rx-web-core";
           this.isShowSidebar = false;
           this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
-            debugger
             this.isShowSidebar = true
           })
         }
+        }
         else {
+          if(this.lastRouteName != "form-validations"){
+            this.lastRouteName = "form-validations";
           this.isShowSidebar = false;
           this.http.get('assets/json/sidebar.json').subscribe((response: any) => {
             this.isShowSidebar = true
           })
+        }
         }
 
         var t = setTimeout(() => {

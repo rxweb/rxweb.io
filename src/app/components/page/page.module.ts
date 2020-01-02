@@ -11,18 +11,20 @@ import { AppCodeComponent } from '../shared/app-code/app-code.component';
 import { AppExampleRunnerComponent } from '../shared/app-example-runner/app-example-runner.component';
 import { AppTabsComponent } from '../shared/app-tabs/app-tabs.component';
 import { CommonSharedModule } from '../shared/common/common-shared.module';
+import { TopBarSharedModule } from '../shared/top-bar/top-bar-shared.module';
+import { TopBarComponent } from '../shared/top-bar/top-bar.component';
 
 
 @NgModule({
   imports: [
-    RouterModule,CommonModule, FormsModule, ReactiveFormsModule, RightSideBarSharedModule, ClipboardModule, HighlightModule, CommonSharedModule
+    RouterModule,CommonModule, FormsModule, ReactiveFormsModule,TopBarSharedModule, RightSideBarSharedModule, ClipboardModule, HighlightModule, CommonSharedModule
   ],
   declarations: [PageComponent],
   exports: [RouterModule],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  entryComponents: [PageViewerComponent, AppCodeComponent, AppExampleRunnerComponent, AppTabsComponent]
+  entryComponents: [PageViewerComponent, AppCodeComponent, TopBarComponent, AppExampleRunnerComponent, AppTabsComponent]
 })
 export class PageModule { }
 

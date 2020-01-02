@@ -12,11 +12,12 @@ import { AppCodeComponent } from "src/app/components/shared/app-code/app-code.co
 import { AppExampleRunnerComponent } from "src/app/components/shared/app-example-runner/app-example-runner.component";
 import { HtmlPageComponent } from './html.page.component';
 import { HTML_PAGE_ROUTING } from './html.page.routing';
+import { TopBarSharedModule } from '../shared/top-bar/top-bar-shared.module';
 
 
 @NgModule({
   imports: [
-    HTML_PAGE_ROUTING,RouterModule,CommonModule, FormsModule, ReactiveFormsModule, ClipboardModule, RightSideBarSharedModule, ClipboardModule, HighlightModule, CommonSharedModule,
+    HTML_PAGE_ROUTING,RouterModule,CommonModule, FormsModule, ReactiveFormsModule, ClipboardModule,TopBarSharedModule, RightSideBarSharedModule, ClipboardModule, HighlightModule, CommonSharedModule,
   ],
   declarations: [HtmlPageComponent],
   exports: [RouterModule],

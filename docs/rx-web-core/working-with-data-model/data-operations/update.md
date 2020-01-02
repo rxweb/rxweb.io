@@ -6,6 +6,7 @@ subcategory: data-operations
 type:simple
 linktitle:update
 ---
+# Update
 
 Used during put request for updating object/objects of entity.
 
@@ -32,4 +33,3 @@ Updating Multiple Objects using `RegisterDirtyAsync`
 ````
 
 
-# See Also

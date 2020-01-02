@@ -6,6 +6,7 @@ subcategory: developing-the-api
 type:simple
 linktitle:basiccontroller
 ---
+# Basic Controller
 
 When you want basic data operations without any complexity and need to modify any of the custom business logic, basic controller is made. It includes methods which are used for simple CRUD operations.
 
@@ -66,5 +67,4 @@ For accessing the created Api, you must pass key and value of JWT token which is
 
 ![PostMan Requests](Images/postman_request.gif)
 
-# See Also
-Domain Controller
+

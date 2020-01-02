@@ -78,7 +78,7 @@ export class AppExampleRunnerComponent implements OnInit {
     let codeUrl =  "http://localhost:9999" + this.router.url +  "?exampleName=" + exampleName;
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
     setTimeout(()=>{this.isRunCode = true;},500)
-    console.log(this.exampleUrl);
+    
   }
 
   openStackblitz() {

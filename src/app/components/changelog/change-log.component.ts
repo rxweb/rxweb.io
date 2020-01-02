@@ -6,8 +6,10 @@ import { ApplicationBroadcaster } from '@rx/core';
     templateUrl: './change-log.component.html'
 })
 export class ChangeLogComponent implements OnInit {
+    rightSidebarLinks:any=[{"id":"contributors","title":"Change Log","subLink":null},{"id":"contributors","title":"Change Log Information","subLink":null},{"id":"contributors","title":"Change Log Information","subLink":null}];
+    pageTitle:any = this.rightSidebarLinks[0];
     showComponent: boolean = false;
-    pageTitle: any = { "title": "Change Log", "subLink": null }
+
     constructor(private applicationBroadcaster: ApplicationBroadcaster) {
     }
     activeTab = 'search';
@@ -23,6 +25,7 @@ export class ChangeLogComponent implements OnInit {
     }
     ngOnInit() {
         this.applicationBroadcaster.topSubject.next(this.pageTitle);
+        
         this.showComponent = true;
     }
 

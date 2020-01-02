@@ -6,6 +6,7 @@ subcategory: multitenancy
 type:simple
 linktitle:multipledatabase
 ---
+# Multiple Database
 
 Multitenancy with multiple databases means keeping seperate database each tenant wise, A seperate database is made for each organization for storing its data. It is useful for organizations having large number of employees.   
 
@@ -30,4 +31,3 @@ Add the connectionString of admin in `appsettings.json` and remove main Connecti
 The data operations will be further done according to the connection established based upon the AdminDb configuration. 
 
 
-# See Also

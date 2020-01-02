@@ -5,6 +5,7 @@ category: step-by-step-guide
 type:simple
 linktitle:projectcreation
 ---
+# Project Creation
 
 # Prerequisites
 
@@ -77,4 +78,4 @@ This will create a project of name `HumanResourceApplication` with the following
     </li>
 </ul>
 
-# See Also
+

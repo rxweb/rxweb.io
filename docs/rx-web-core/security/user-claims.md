@@ -5,6 +5,7 @@ category: security
 type:simple
 linktitle:userclaims
 ---
+# User Claims
 
 Claims are known as key components used while implementing web based authentication. Claim represents user's piece of identity information, User delivers claim to application for examination. It is subjected by an issuer. In our case, the issuer is the application. It can also be a service, a role provider, an identity provider. An isuuer delivers claims by issuing security token.  
 

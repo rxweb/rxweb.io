@@ -37,7 +37,7 @@ export class PageComponent implements OnInit {
   options: any = { responseType: 'text' };
   codeContent: any = "";
   jsonContent: any = "";
-  activeTab: string = "validators";
+  activeTab: string = "";
   dynamicElement:string;
   element: HTMLElement;
   typeName: string;
@@ -152,6 +152,7 @@ export class PageComponent implements OnInit {
   }
 
   route(typeName: string, templateDrivenType?: string) {
+   
     if (templateDrivenType)
     {
       this.router.navigate(['/', this.mainType, this.validationName, typeName, templateDrivenType])

@@ -1,9 +1,9 @@
 
 <div id="wrapper">
   
-  
+   
     <div class="content">
-        <ul class="nav nav-tabs ml-auto w-100 mt-2 page_content_tabs">
+        <ul  class="nav  ml-auto w-100 mt-2" [class.nav-tabs]="mainType == 'form-validations' || mainType == 'how-to'" [class.page_content_tabs]="mainType == 'form-validations' || mainType == 'how-to'">
             <li class="ng-star-inserted" [class.active]="activeTab == 'validators'"
             *ngIf="(mainType == 'form-validations' || mainType == 'how-to')  && validationName !== 'rule' && validationName !== 'async' && validationName !== 'stronglyType' && validationName !== 'classAbstraction'  && validationName !== 'genericModel'">
             <a (click)="route('validators')">Validator</a>
@@ -52,5 +52,5 @@
 
         </div>
     </div>
-   
+    <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
 </div>

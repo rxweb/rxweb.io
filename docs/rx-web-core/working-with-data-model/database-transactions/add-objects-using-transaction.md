@@ -6,6 +6,7 @@ category: database-transactions
 type:simple
 linktitle:objectstransaction
 ---
+# Add Objects Using Begin Transaction
 
 Used for adding objects using BeginTransaction, Here the `DbContextManager` is resolved using Dependency injection in the controller.  
 
@@ -31,4 +32,3 @@ and using `RegisterNewAsync` method will change the state of the Object and the 
 ````
 
 
-# See Also

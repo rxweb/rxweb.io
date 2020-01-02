@@ -6,6 +6,7 @@ subcategory: developing-the-api
 type:simple
 linktitle:domaincontroller
 ---
+# Domain Controller
 
 Some entities may involve complex logic while implementation of the methods in the API, When there is a lot of custom business logic required while executing the data objects a `DomainController` is made. When a domain controller is made it indicates that the complexity of the controller is high and it generates a seperate domain class where the logic is written and  it is refered in the controller class.
 
@@ -110,5 +111,4 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
     
 ````
 
-# See Also
-Lookup Controller
+

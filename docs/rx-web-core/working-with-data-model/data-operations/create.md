@@ -6,6 +6,7 @@ subcategory: data-operations
 type:simple
 linktitle:create
 ---
+# Create
 
 Used during post request for creating new object/objects of entity.
 
@@ -31,4 +32,3 @@ Adding Multiple Objects using `RegisterNewAsync`
     }
 ````
 
-# See Also

@@ -6,6 +6,7 @@ subcategory: advance
 type:simple
 linktitle:globalfilter
 ---
+# Global Filter
 
 While working with entities which needs a filter to be applied globally for example Country needs to filtered where Status is active and this should be applied throughout the application. For this GlobalQueryFilter expression is used based upon which the global filter will be applied using extended model
 
@@ -56,4 +57,3 @@ Add `GlobalQueryFilter` annotation above the model class`Country.cs`
 ````
 
 
-# See Also

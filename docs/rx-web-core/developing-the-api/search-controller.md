@@ -6,6 +6,7 @@ subcategory: developing-the-api
 type:simple
 linktitle:searchcontroller
 ---
+# Search Controller
 
 Displaying list of the data tuples in the user interface requires a `search` operation when there is large number of records retrieved.
 This involves faster search result fetching from the server which is a part of defining the application efficiency, This can be achieved by making a search controller, prior to it there must be a stored procedure which returns `json` and passes to the client side without involving of the web server.
@@ -59,5 +60,5 @@ which is executing while fetching the search result which are retrieved by passi
     }
 ````   
 
-# See Also
+
 Security

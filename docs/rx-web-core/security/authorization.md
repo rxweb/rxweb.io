@@ -5,6 +5,7 @@ category: security
 type:simple
 linktitle:authorization
 ---
+# Authorization
 
 `Authorization` is a method of adjudging which user is able to do what. It uses `authentication` for identifying the user, It is done using role based authorization mechanism through which the access modules of the user is determined based upon role where rules are maintained in the database.
 
@@ -81,5 +82,4 @@ As per the below scenario it will allow any user to access this `Post` method an
     }
 ````
 
-# See Also
-Exception Handling
+

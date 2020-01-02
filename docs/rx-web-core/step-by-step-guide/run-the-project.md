@@ -5,6 +5,7 @@ category: step-by-step-guide
 type:simple
 linktitle:buildtheproject  
 ---
+# Run The Project 
 
 # Local
 
@@ -32,4 +33,3 @@ For creating API and accessing it, <a class="redirect-link" href="/rx-web-core/d
 
 Coming Soon
 
-# See Also

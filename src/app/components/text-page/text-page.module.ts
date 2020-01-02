@@ -11,11 +11,12 @@ import { PageViewerComponent } from "src/app/components/shared/page-viewer/page-
 import { AppCodeComponent } from "src/app/components/shared/app-code/app-code.component";
 import { AppExampleRunnerComponent } from "src/app/components/shared/app-example-runner/app-example-runner.component";
 import { TextPageComponent } from './text-page.component';
+import { TopBarSharedModule } from '../shared/top-bar/top-bar-shared.module';
 
 
 @NgModule({
   imports: [
-    RouterModule,CommonModule, FormsModule, ReactiveFormsModule, ClipboardModule, RightSideBarSharedModule, ClipboardModule, HighlightModule, CommonSharedModule,
+    RouterModule,CommonModule, FormsModule, ReactiveFormsModule,TopBarSharedModule, ClipboardModule, RightSideBarSharedModule, ClipboardModule, HighlightModule, CommonSharedModule,
   ],
   declarations: [TextPageComponent],
   exports: [RouterModule],

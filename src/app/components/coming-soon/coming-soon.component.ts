@@ -4,12 +4,12 @@ import { Router } from '@angular/router';
 
 
 @Component({
-    selector: 'app-contributors',
-    templateUrl: './contributors-component.html',
+    selector: 'app-coming-soon',
+    templateUrl: './coming-soon.component.html',
    
 })
-export class ContributorsComponent implements OnInit {
-    rightSidebarLinks:any=[{"id":"contributors","title":"Hidden Gems","subLink":null},{"title":"Hidden Gems","subLink":null}];
+export class ComingSoonComponent implements OnInit {
+    rightSidebarLinks:any=[{"id":"contributors","title":"Coming Soon","subLink":null},{"id":"contributors","title":"Coming Soon","subLink":null}];
     pageTitle:any = this.rightSidebarLinks[0];
     constructor(private applicationBroadcaster: ApplicationBroadcaster) {
        

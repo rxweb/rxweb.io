@@ -6,6 +6,7 @@ subcategory: advance
 type:simple
 linktitle:valueconversion
 ---
+# Value Conversion
 
 For fields which required to be encrypted while storing the data in the database and to be decrypted while showing the data on the Ui. For example, the EmailId field of the Candidate table has to stored in an encrypted manner in the database and has to be decrypted while rendering it in the user interface. For such cases, we need to make a ExtendedModels folder in which we will make a class for the encryption and decryption logic
 
@@ -35,4 +36,3 @@ public string EmailId { get; set; }
 ````
 
 
-# See Also

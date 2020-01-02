@@ -14,6 +14,7 @@ import { WhyRxwebComponent } from "../why/why-component";
 import { ChangeLogComponent } from "../changelog/change-log.component";
 import { ContributionComponent } from "../shared/disqus/contribution/contribution.component";
 import { ContributorsComponent } from "../contributors/contributors-component";
+import { ComingSoonComponent } from "../coming-soon/coming-soon.component";
 
 
 
@@ -115,6 +116,10 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'rxweb-sanitizers',
     loadChildren: 'src/app/components/rxweb-sanitizers/rxweb-sanitizers.module#RxwebSanitizersModule',
+  },
+  {
+    path: 'coming-soon',
+    component:ComingSoonComponent,
   },
   {
     path: '**', 

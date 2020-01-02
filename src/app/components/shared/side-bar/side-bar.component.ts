@@ -28,6 +28,7 @@ export class SideBarComponent implements OnInit {
       if (location.pathname.includes("reactive-dynamic-forms")) {
         this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
           this.links = response.links;
+     
           var splitedArray = location.pathname.split('#')[0].split('/');
           if (splitedArray[2]) {
             var currentArray;
@@ -715,7 +716,6 @@ export class SideBarComponent implements OnInit {
     }
   }
   navigateTo(link: any, secondlevel: any, thirdlevel: any): void {
-debugger
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;
@@ -749,8 +749,36 @@ debugger
 
     }
     else
-      if (link.href != null)
+
+      if (link.href != null){
+      this.links.forEach(element => {
+        element.isActive = false;
+        element.isOpen = false;
+        if (element.childrens && element.childrens.length > 0) {
+          element.childrens.forEach(subElement => {
+            subElement.isActive = false;
+            subElement.isOpen = false;
+            if (subElement.childrens && subElement.childrens.length > 0) {
+              subElement.childrens.forEach(thirdElement => {
+                thirdElement.isActive = false;
+                thirdElement.isOpen = false;
+              });
+            }
+          })
+        }
+      });
+      if (secondlevel != null) {
+        secondlevel.isActive = true;
+        secondlevel.isOpen = !secondlevel.isOpen;
+      }
+      if (thirdlevel != null) {
+        thirdlevel.isActive = true;
+        thirdlevel.isOpen = true;
+      }
+      link.isActive = true;
+     
         this.router.navigateByUrl(link.href)
+    }
   }
 
   hideSideBar(): void {

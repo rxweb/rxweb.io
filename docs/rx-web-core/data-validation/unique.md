@@ -6,6 +6,7 @@ subcategory: data-validation
 type:simple
 linktitle:unique
 ---
+# Unique
 
 `Unique` validation annotation lets you enter unique value in an array based model property. 
 
@@ -147,5 +148,5 @@ In the DbEntity class :
      public string EmailId { get; set; }
 ````
 
-# See Also
+
 Developing The Api

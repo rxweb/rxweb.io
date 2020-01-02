@@ -6,6 +6,7 @@ category: database-transactions
 type:simple
 linktitle:storedproceduretransaction
 ---
+# Adding Objects With Store Procedure Transaction
 
 The database operations are done with the help of Uow methods, but when complex data operations are involved it is managed using `DbContextManager`. It seperates the query execution of stored procedure and the begin transaction, commit process.
 
@@ -82,4 +83,3 @@ catch(Exception e)
 ````
 
 
-# See Also

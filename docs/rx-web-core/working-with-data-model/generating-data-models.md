@@ -5,6 +5,8 @@ category: working-with-data-model
 type:simple
 linktitle:datamodels
 ---
+# Generating Data Models
+
 
 # Generate POCO Model
 
@@ -67,4 +69,4 @@ public partial class Client
 ````
 
 
-# See Also
+

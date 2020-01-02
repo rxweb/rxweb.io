@@ -6,6 +6,7 @@ subcategory: data-validation
 type:simple
 linktitle:maxlength 
 ---
+# MaxLength 
 
 `MaxLength` annotation is used when you want to limit maximum length of a model property. 
 
@@ -119,5 +120,5 @@ In the DbEntity class :
      public string Address { get; set; }
 ````
 
-# See Also
+
 Range Validation

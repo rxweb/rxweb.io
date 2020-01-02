@@ -135,7 +135,7 @@
 								<li *ngFor="let secondLevel of link.childrens;let i = index">
 									<span *ngIf="!secondLevel.isHide">
 		
-										<a (click)="secondLevel.isOpen = !secondLevel.isOpen;navigateTo(secondLevel,link,null)"
+										<a [class.disabled]="secondLevel.childrens?.length == 0 && secondLevel.href == null && secondLevel.uri == null"  (click)="secondLevel.isOpen = !secondLevel.isOpen;navigateTo(secondLevel,link,null)"
 										 [class.active]="secondLevel.isActive"><span class="nav-label">{{secondLevel.title}}</span><span class="fa"
 											 [class.arrow]="!secondLevel.isOpen" [class.fa-angle-down]="secondLevel.isOpen" *ngIf="secondLevel.childrens?.length > 0"></span>
 										</a>
@@ -144,7 +144,7 @@
 											<li *ngFor="let thirdLevel of secondLevel.childrens;let i = index">
 												<span *ngIf="!thirdLevel.isHide">
 		
-													<a (click)="navigateTo(thirdLevel,secondLevel,link)" [class.active]="thirdLevel.isActive">
+													<a [class.disabled]="thirdLevel.href == null  && thirdLevel.uri == null" (click)="navigateTo(thirdLevel,secondLevel,link)" [class.active]="thirdLevel.isActive">
 														<span class="nav-label">{{thirdLevel.title}}</span>
 													</a>
 												</span>

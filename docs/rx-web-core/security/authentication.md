@@ -5,6 +5,8 @@ category: security
 type:simple
 linktitle:authentication
 ---
+# Authentication
+
 Developing any enterprise application, authentication is the primary criteria, like we are developing RESTfull API which requires some sort of authentication mechanism. We will implement it using Token based authentication through JSON Web Token. For more information about JWT Token, Please refer this <a class="redirect-link" href="https://tools.ietf.org/html/rfc7519">docs</a>.
 Now a days this is very popular and more reliable. 
 
@@ -60,5 +62,4 @@ The `audience` is the type of the user through which the token is generated. It 
 
 Set the expiration time of the token. In the above example we have set for 2 days. 
 
-# See Also
-Authorization
+

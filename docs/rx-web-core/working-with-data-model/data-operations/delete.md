@@ -6,6 +6,7 @@ subcategory: data-operations
 type:simple
 linktitle:delete 
 ---
+# Delete
 
 Used for delete operation to be done on entity.
 
@@ -20,4 +21,3 @@ Used for delete operation to be done on entity.
     }
 ````    
 
-# See Also

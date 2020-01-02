@@ -5,6 +5,7 @@ category: step-by-step-guide
 type:simple
 linktitle:projectstructure 
 ---
+# Project Structure
 
 As RxWeb follows the practices of `Clean Architecture`, Based upon this the project structure is divided into several layers of Models, domain services, Application core and API which adds the practices of seperation of concerns for simplification and maintanable code. 
 
@@ -95,4 +96,3 @@ The Api project is the .Net core based web application which is the start of the
 
 * Bootstrap contains implementations of `ConfigurationOptions`, `Performance`, `Security`, `Validations` etc 
 
-# See Also

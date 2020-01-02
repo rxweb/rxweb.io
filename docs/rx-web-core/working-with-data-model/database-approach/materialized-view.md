@@ -6,6 +6,7 @@ subcategory: database-approach
 type:simple
 linktitle:materializedview
 ---
+# Materialized View
 
 To perform effective quering becomes much necessary when we want to recieve our desired resultset which depends upon many factors that is the size of the data, integrity of the data. For example you want to show the candidate data and the data is coming from the multiple tables instead of writing complex SQL query or LINQ query from C#, create a Materialized View, this saves the execution time as compared to other approaches. It requires less maintenance. Besides this the data in the views get high availability and resilency benefits.
 
@@ -46,4 +47,3 @@ GO
 ````
 
 
-# See Also

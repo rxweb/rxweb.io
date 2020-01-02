@@ -3,10 +3,12 @@ import { HttpClient, HttpRequest, HttpErrorResponse } from '@angular/common/http
 import { Http } from "@angular/http";
 import { environment } from 'src/environments/environment';
 import { ApplicationBroadcaster } from '@rx/core';
+import { TopBarComponent } from '../shared/top-bar/top-bar.component';
 
 
 @Component({
   templateUrl: './getting-started.component.html',
+  entryComponents:[TopBarComponent]
 })
 export class GettingStartedComponent implements OnInit {
   showComponent: boolean = false;
@@ -36,7 +38,6 @@ export class GettingStartedComponent implements OnInit {
       this.showComponent = true;
     });
     this.applicationBroadCaster.topSubject.next(this.pageTitle);
-  
   }
 
   @HostListener('window:scroll', ['$event'])

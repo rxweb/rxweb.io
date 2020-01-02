@@ -6,6 +6,7 @@ subcategory: performance
 type:simple
 linktitle:performance
 ---
+# Performance
 
 # Static Cache
 Static cache is added using annotation of `[Cachable]` above the controller. In this tag, the amount of time also needs to be mentioned(in milliseconds). 
@@ -45,4 +46,3 @@ Example :
 # Response Compression
 Reducing size of files can reduce the payload and increase the application performance. Natively compressed assets such as images(PNG) and files having much smaller size(less than 150-1000 bytes) should not be compressed.     
 
-# See Also

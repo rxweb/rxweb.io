@@ -6,6 +6,7 @@ subcategory: data-validation
 type:simple
 linktitle:required  
 ---
+# Required
 
 `Required` annotation will be used when you don't want the model property to be null. There are many properties of the validation which can be used based upon the scenario 
 
@@ -133,5 +134,5 @@ In the DbEntity class :
      public string CandidateName { get; set; }
 ````
 
-# See Also
+
 Unique Validation

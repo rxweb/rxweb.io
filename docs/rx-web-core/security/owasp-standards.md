@@ -5,6 +5,7 @@ category: security
 type:simple
 linktitle:owaspstandards
 ---
+# OWASP Standards
 
 Security measures right from the initial stage of developement are much necessary in web development for maintaining a level of confidentiality and preventing the resources and corporate data from attacks like XSS(Cross-site scripting) and SQl injection, providing better access control using authentication and authorization in the application for identifying the user and give access accordingly.
 
@@ -58,7 +59,7 @@ Http redirection, debug and trace are off in production.
 # Using components with known vulnerablities
 Keeping the .NET framwork updated with latest patches, NuGet updates
 
-# See Also
-OWASP Standards
+
+
 
 

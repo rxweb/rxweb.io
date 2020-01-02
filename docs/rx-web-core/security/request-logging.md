@@ -5,6 +5,7 @@ category: security
 type:simple
 linktitle:requestlogging
 ---
+# Request Logging
 
 Whenever any request is made to the server, the information regarding the request made is logged which can be used for finding details such as:
 

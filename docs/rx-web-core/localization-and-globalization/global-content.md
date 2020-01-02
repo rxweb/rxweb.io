@@ -6,6 +6,7 @@ subcategory: localization-and-globalization
 type:simple
 linktitle:globalcontent
 --- 
+# Global Content
 
 For applications having big range of audiences, there is a possibility of having users acessing it from different regions. In such cases it is important that your application renders the whole Ui in the user specific language, other than this the validation messages should also be shown in the user sepcific language and dropdown should also bind respectively.
 
@@ -58,4 +59,3 @@ This will create `.json` file with en and fr json in localization folder of wwwr
 
 > The users language will be stored in the Users table as a LanguageCode
 
-# See Also

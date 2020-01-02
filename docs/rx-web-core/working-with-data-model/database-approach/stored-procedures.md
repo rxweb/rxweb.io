@@ -6,6 +6,7 @@ subcategory: database-approach
 type:simple
 linktitle:storedprocedures
 ---
+# Stored Procedure
 
 Stored procedures are prefered to used when large number of data is involved. It leads to high performance, reusability of code and easy maintanability. It takes input parameters for execution and based upon that it provides the output which should be as per the required resulset. It stores the programming statements for a specific task to be performed and needs to be compiled only once. 
 
@@ -70,4 +71,3 @@ BEGIN
 END
 ````
 
-# See Also

@@ -11,6 +11,7 @@ export class WhatsNewComponent implements OnInit {
     
     selected:any = "";
     rightSidebarLinks:any=[
+      {"id":"generic","title":"Whats New","subLink":null},
         {"id":"generic","title":"1.8.6","subLink":null},
         {"id":"requiredTrue","title":"1.9.7","subLink":null},
         {"id":"passwordValidationWithCustom","title":"1.9.6","subLink":null},

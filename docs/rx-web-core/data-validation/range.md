@@ -6,6 +6,7 @@ subcategory: data-validation
 type:simple
 linktitle:range
 ---
+# Range
 
 `Range` annotation is used when you want a property value in a specific range. 
 
@@ -135,5 +136,5 @@ In the DbEntity class :
      public string Address { get; set; }
 ````
 
-# See Also
+
 Required Validation

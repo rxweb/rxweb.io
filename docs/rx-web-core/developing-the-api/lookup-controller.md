@@ -6,6 +6,7 @@ subcategory: developing-the-api
 type:simple
 linktitle:lookupcontroller
 ---
+# Lookup Controller
 
 Large modules have entities which need to be bind as a dropdown, In such cases a lookup controller is made for the module which accesses Uow to manipulate data based upon the entity and display the data of module entities in a dropdown.  
 
@@ -58,5 +59,5 @@ As per this controller :
 
 ````
 
-# See Also
+
 Search Controller

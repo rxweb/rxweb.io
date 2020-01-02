@@ -6,6 +6,7 @@ subcategory: data-operations
 type:simple
 linktitle:read
 ---
+# Read
 
 The repository methods works on single responsibilty principle that states that objects should have only one responsibilty. In our case the Repository methods are mainly used for performing read operations which allows us to seperate the load of read and write operations which results into high speed and performance.
 
@@ -253,4 +254,3 @@ It retrieves the single element in the list which fulfiles the given condition i
     }
 ````
 
-# See Also
