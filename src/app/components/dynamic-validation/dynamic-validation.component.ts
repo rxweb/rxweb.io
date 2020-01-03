@@ -80,7 +80,8 @@ export class DynamicValidationComponent {
     }
 
     ngOnInit() {
-                this.http.get('assets/examples/dynamic-validations/dynamic-validation.json').subscribe((res: any) => {
+        debugger;
+                this.http.get('assets/json/dynamic-validation.json').subscribe((res: any) => {
                     this.validatorWiseServerData = JSON.parse(res);
                     this.dropDownData = Object.keys(this.validatorWiseServerData);
                     this.onChange()

@@ -30,7 +30,6 @@ export class PageViewerComponent extends BaseComponentProvider implements OnInit
         this.element = elementRef.nativeElement as HTMLElement;
     }
     ngOnInit(): void {
-        debugger;
         this.element.innerHTML = this.content;
         let elements = this.element.querySelectorAll("[component]");
         let allElements = this.element.querySelectorAll("[class*='showHideElement']");

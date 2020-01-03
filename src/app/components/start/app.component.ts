@@ -94,31 +94,45 @@ export class AppComponent implements OnInit {
 
         if (location.pathname.includes("generics") ) {
           if(this.lastRouteName != "generics"){
+            this.lastRouteName = "generics";
+          if(this.lastRouteName != "generics"){
             this.isShowSidebar = false;
             this.http.get('assets/json/generics-sidebar.json').subscribe((response: any) => {
               this.isShowSidebar = true
             })
             this.lastRouteName = "generics"
           }
-          
+        }
         }
         else if (location.pathname.includes("sanitizers")) {
+          if(this.lastRouteName != "sanitizers"){
+            this.lastRouteName = "sanitizers";
           this.isShowSidebar = false
           this.http.get('assets/json/sanitizers-sidebar.json').subscribe((response: any) => {
             this.isShowSidebar = true
           })
+          this.lastRouteName = "sanitizers";
+        }
         }
         else if (location.pathname.includes("http")) {
+          if(this.lastRouteName != "http"){
+            this.lastRouteName = "http";
           this.isShowSidebar = false;
           this.http.get('assets/json/http-sidebar.json').subscribe((response: any) => {
             this.isShowSidebar = true
           })
+          this.lastRouteName = "http";
+        }
         }
         else if (location.pathname.includes("reactive-dynamic-forms")) {
+          if(this.lastRouteName != "reactive-dynamic-forms"){
+            this.lastRouteName = "reactive-dynamic-forms";
           this.isShowSidebar = false;
           this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
             this.isShowSidebar = true
           })
+          this.lastRouteName = "reactive-dynamic-forms";
+        }
         }
         else if (location.pathname.includes("rx-web-core")) {
          if(this.lastRouteName != "rx-web-core"){
@@ -127,6 +141,7 @@ export class AppComponent implements OnInit {
           this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
             this.isShowSidebar = true
           })
+          this.lastRouteName = "rx-web-core";
         }
         }
         else {
@@ -136,6 +151,7 @@ export class AppComponent implements OnInit {
           this.http.get('assets/json/sidebar.json').subscribe((response: any) => {
             this.isShowSidebar = true
           })
+          this.lastRouteName = "form-validations";
         }
         }
 

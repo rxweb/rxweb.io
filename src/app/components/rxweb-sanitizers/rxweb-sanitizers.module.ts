@@ -12,10 +12,11 @@ import { RxReactiveDynamicFormsModule } from "@rxweb/reactive-dynamic-forms"
 import { CommonSharedModule } from '../shared/common/common-shared.module';
 import { SanitizersGettingStartedComponent } from './getting-started/getting-started.component';
 import { RXWEB_SANITIZERS_ROUTING } from './rxweb-sanitizers.routing';
+import { TopBarSharedModule } from '../shared/top-bar/top-bar-shared.module';
 
 
 @NgModule({
-  imports: [RXWEB_SANITIZERS_ROUTING,CommonSharedModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
+  imports: [RXWEB_SANITIZERS_ROUTING,CommonSharedModule,TopBarSharedModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
   declarations: [SanitizersGettingStartedComponent],
   providers:[{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
  exports:      [ RouterModule ]

@@ -42,6 +42,11 @@ export class AppExampleRunnerComponent implements OnInit {
     //this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl('http://localhost:9999');
   }
   ngOnInit(): void {
+    if(document.location.pathname.includes("dynamic-validation")){
+      this.exampleHeight = 750;
+      this.exampleUrl =  "http://localhost:9999" + this.router.url +  "?exampleName=";
+    this.isRunCode = true;
+    }
     this.showElement = false;
     if (this.decoratorName == "get" || this.decoratorName == "post" || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject") {
       this.showElement = true;
@@ -73,7 +78,7 @@ export class AppExampleRunnerComponent implements OnInit {
   }
 
   runCodeExample(exampleName){ 
-
+       
     this.exampleHeight =  this.exampleHeights.filter(x=>x.exampleName == exampleName)[0].height;
     let codeUrl =  "http://localhost:9999" + this.router.url +  "?exampleName=" + exampleName;
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);

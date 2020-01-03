@@ -15,6 +15,7 @@ import { ChangeLogComponent } from "../changelog/change-log.component";
 import { ContributionComponent } from "../shared/disqus/contribution/contribution.component";
 import { ContributorsComponent } from "../contributors/contributors-component";
 import { ComingSoonComponent } from "../coming-soon/coming-soon.component";
+import { LinkItemsComponent } from "../side-bar-link-items/link-items/link-item.component";
 
 
 
@@ -120,6 +121,10 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'coming-soon',
     component:ComingSoonComponent,
+  },
+  {
+    path: 'link-items',
+    component:LinkItemsComponent,
   },
   {
     path: '**', 

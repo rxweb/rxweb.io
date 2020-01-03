@@ -95,7 +95,6 @@ export class TopBarComponent implements OnInit {
          this.titleData.title = this.sidebarLinks[0].title;
       }
       this.sidebarLinks.forEach(t => {
-        debugger;
         this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
          console.log("sidebarlinks");
         if (t.subLink && t.subLink.length > 0) {
@@ -114,7 +113,6 @@ export class TopBarComponent implements OnInit {
           this.sidebarLinks = t.rightSidebarLinks;
           if(this.isFirstTimeRightSideBarBind){
           this.sidebarLinks.forEach(t => {
-            debugger;
             this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
             console.log("sidebarlinks");
             if (t.subLink && t.subLink.length > 0) {

@@ -241,7 +241,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         }
         else {
-          debugger;
+
       
          document.getElementById("word-animate").style.opacity = "1";
           document.getElementById("word-second-animate").style.opacity = "1"

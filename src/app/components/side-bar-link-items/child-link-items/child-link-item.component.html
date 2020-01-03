@@ -1,0 +1,12 @@
+
+
+<ul class="nav flex-column" id="side-menu">
+
+    <li *ngFor="let link of links">
+
+        <a (click)="navigateTo(link,null);link.isOpen = !link.isOpen" [class.active]="link.isActive"><span
+                class="nav-label">{{link.title}}</span><span class="fa" [class.arrow]="!link.isOpen"
+                [class.fa-angle-down]="link.isOpen" *ngIf="link.childrens && link.childrens?.length > 0"></span></a>
+                <app-child-links *ngIf="link.childrens && link.childrens.length > 0" [level]="level + 1" [links]="link.childrens"></app-child-links>
+    </li>
+</ul>

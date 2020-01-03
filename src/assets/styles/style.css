@@ -3931,6 +3931,7 @@ body.blank {
 }
 
 html {
+    scroll-behavior: smooth!important;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -4462,10 +4463,10 @@ body.modal-open {
 
 #side-menu {
     /* background: #ffffff; */
-    min-height: 100%;
+    /* min-height: 100%; */
     /*padding-top: 20px;*/
-    padding-bottom: 140px;
-    padding-top: 20px;
+    /* padding-bottom: 140px;
+    padding-top: 20px; */
 }
 
 #side-menu li a {

@@ -15,9 +15,10 @@ import { RxReactiveDynamicFormsModule } from "@rxweb/reactive-dynamic-forms"
 import { DynamicGettingStartedComponent } from './getting-started/getting-started.component';
 import { CommonSharedModule } from '../shared/common/common-shared.module';
 import { FormBuilderDynamicComponent } from './dynamic-form-builder/dynamic-form-builder.component';
+import { TopBarSharedModule } from '../shared/top-bar/top-bar-shared.module';
 
 @NgModule({
-  imports: [REACTIVE_DYNAMIC_FORMS_ROUTING,CommonSharedModule, RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
+  imports: [REACTIVE_DYNAMIC_FORMS_ROUTING,CommonSharedModule,TopBarSharedModule, RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
   declarations: [FormBuilderDynamicComponent,DynamicFormHomeComponent, DynamicValidationComponent,DynamicGettingStartedComponent],
   providers:[{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
  exports:      [ RouterModule ]
