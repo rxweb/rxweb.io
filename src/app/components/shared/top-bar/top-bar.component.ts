@@ -21,6 +21,7 @@ export class TopBarComponent implements OnInit {
   isSecondLevelBreadCrumb: boolean = true;
   showExample: boolean = true;
   @Input('sidebarLinks') sidebarLinks: any = {};
+  @Input('gitUrl') gitUrl :string;
   cloneSidebarLinks: any = [];
   gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/";
   isDynamic: boolean
@@ -32,71 +33,30 @@ export class TopBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.router.url.includes('whats-new') || this.router.url.includes('whats-next') || this.router.url.includes('why') || this.router.url.includes('getting-started') || this.router.url.includes('reactive-form-config'))
-      this.isGitEditUrlShow = false;
+    this.applicationBroadCaster.topSubscriber.subscribe(t => {
+      this.titleData = t;
+      this.gitEditUrl = t.gitDocPath;     
+    })
+
     var splitedArray = location.pathname.split("/");
     this.mainType = splitedArray[1];
     this.validationName = splitedArray[2];
     if (splitedArray.length > 0 && splitedArray[1]) {
-
-      switch (splitedArray[1]) {
-
-        case "decorators":
-          this.gitEditUrl += "docs/reactive-form-validators/decorators/" + splitedArray[2] + ".md"
-          this.secondLevelBreadCrumb = "Angular";
-          break;
-        case "form-validations":
-          this.gitEditUrl += "docs/reactive-form-validators/validation-decorators/" + splitedArray[2] + ".md"
-          this.secondLevelBreadCrumb = "Angular";
-          break;
-        case "api":
-          this.gitEditUrl += "docs/reactive-form-validators/api/" + splitedArray[2] + ".md"
-          this.secondLevelBreadCrumb = "Angular";
-          break;
-        case "community":
-          this.gitEditUrl += "docs/community/" + splitedArray[2] + ".md"
-          this.secondLevelBreadCrumb = "Angular";
-          break;
-        case "sanitization":
-          this.gitEditUrl += "docs/sanitization/" + splitedArray[2] + ".md"
-          this.secondLevelBreadCrumb = "Angular";
-          break
-        case "how-to":
-          this.gitEditUrl += "docs/how-to/" + splitedArray[2] + ".md"
-          this.secondLevelBreadCrumb = "Angular";
-          break
-        case "reactive-dynamic-forms":
-          this.gitEditUrl += "docs/dynamic-forms/" +
-            splitedArray[3] + ".md"
-          this.secondLevelBreadCrumb = "Angular";
-        case "rx-web-core":
-          if (splitedArray[4]) {
-            this.gitEditUrl += "docs/rx-web-core/" + splitedArray[2] + "/" + splitedArray[3] + "/" + splitedArray[4] + ".md"
-            this.secondLevelBreadCrumb = "AspNetCore";
-          }
-          else {
-            this.gitEditUrl += "docs/rx-web-core/" + splitedArray[2] + "/" + splitedArray[3] + ".md"
-            this.secondLevelBreadCrumb = "AspNetCore";
-          }
-      }
+    if(splitedArray.includes("rx-web-core"))
+      this.secondLevelBreadCrumb = "AspNetCore";
+      else
+      this.secondLevelBreadCrumb = "Angular";
     }
-    else if (splitedArray.length > 0 && splitedArray[0] == "changelog") {
-      this.gitEditUrl += "CHANGELOG.md"
-    }
-    if (this.mainType != "community") {
-      //    this.sidebarLinks.splice(0, 1);
-    }
-    this.applicationBroadCaster.topSubscriber.subscribe(t => {
-      this.titleData = t;
-      console.log(this.titleData);
-    })
+  
+   
     if (this.sidebarLinks) {
       if(!this.titleData.title){
+        if(this.sidebarLinks[0].title)
          this.titleData.title = this.sidebarLinks[0].title;
       }
       this.sidebarLinks.forEach(t => {
         this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
-         console.log("sidebarlinks");
+
         if (t.subLink && t.subLink.length > 0) {
           t.subLink.forEach(x => {
             this.cloneSidebarLinks.push(x);
@@ -111,10 +71,11 @@ export class TopBarComponent implements OnInit {
      
         if (t.rightSidebarLinks) {
           this.sidebarLinks = t.rightSidebarLinks;
+          
           if(this.isFirstTimeRightSideBarBind){
           this.sidebarLinks.forEach(t => {
             this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
-            console.log("sidebarlinks");
+       
             if (t.subLink && t.subLink.length > 0) {
               t.subLink.forEach(x => {
                 this.cloneSidebarLinks.push(x);
@@ -133,7 +94,7 @@ export class TopBarComponent implements OnInit {
     var node = document.querySelector('#' + section);
     node.scrollIntoView(true);
     var scrolledY = window.scrollY;
-    if (scrolledY) {
+         if (scrolledY) {
       window.scroll(0, scrolledY - 62);
     }
     return false;

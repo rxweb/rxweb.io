@@ -6,48 +6,48 @@
                     "childrens": [],
                     "title": "Project Setup",
                     "path": "overview",
-                    "href": "/rx-web-core/step-by-step-guide/overview"
+                    "uri": "/rx-web-core/step-by-step-guide/overview"
                 },
                 {
                     "childrens": [],
                     "title": "Prerequisites",
                     "path": "project-creation#prerequisites",
-                    "href": "/rx-web-core/step-by-step-guide/project-creation#prerequisites"
+                    "uri": "/rx-web-core/step-by-step-guide/project-creation#prerequisites"
                 },
                 {
                     "childrens": [],
                     "title": "Installation",
                     "path": "project-creation#installrxwebtool",
-                    "href": "/rx-web-core/step-by-step-guide/project-creation#installrxwebtool"
+                    "uri": "/rx-web-core/step-by-step-guide/project-creation#installrxwebtool"
                 },
                 {
                     "childrens": [],
                     "title": "Project Creation",
                     "path": "project-creation#projectcreation",
-                    "href": "/rx-web-core/step-by-step-guide/project-creation#projectcreation"
+                    "uri": "/rx-web-core/step-by-step-guide/project-creation#projectcreation"
                 },
                 {
                     "childrens": [],
                     "title": "Project Structure",
                     "path": "project-structure",
-                    "href": "/rx-web-core/step-by-step-guide/project-structure"
+                    "uri": "/rx-web-core/step-by-step-guide/project-structure"
                 },
                 {
                     "childrens": [],
                     "title": "Generated Database Tables",
                     "path": "database-information",
-                    "href": "/rx-web-core/step-by-step-guide/database-information"
+                    "uri": "/rx-web-core/step-by-step-guide/database-information"
                 },
                 {
                     "childrens": [],
                     "title": "Run The Project",
                     "path": "run-the-project",
-                    "href": "/rx-web-core/step-by-step-guide/run-the-project"
+                    "uri": "/rx-web-core/step-by-step-guide/run-the-project"
                 }
             ],
             "title": "Step By Step Guide",
             "path": "step-by-step-guide",
-            "href": null
+            "uri": null
         },
         {
             "childrens": [
@@ -57,30 +57,30 @@
                             "childrens": [],
                             "title": "Creating Tables",
                             "path": "creating-tables",
-                            "href": "/rx-web-core/working-with-data-model/database-approach/creating-tables"
+                            "uri": "/rx-web-core/working-with-data-model/database-approach/creating-tables"
                         },
                         {
                             "childrens": [],
                             "title": "Materialized View",
                             "path": "materialized-view",
-                            "href": "/rx-web-core/working-with-data-model/database-approach/materialized-view"
+                            "uri": "/rx-web-core/working-with-data-model/database-approach/materialized-view"
                         },
                         {
                             "childrens": [],
                             "title": "Stored Procedures",
                             "path": "stored-procedures",
-                            "href": "/rx-web-core/working-with-data-model/database-approach/stored-procedures"
+                            "uri": "/rx-web-core/working-with-data-model/database-approach/stored-procedures"
                         }
                     ],
                     "title": "Database Approach",
                     "path": "database-approach",
-                    "href": null
+                    "uri": null
                 },
                 {
                     "childrens": [],
                     "title": "Generating Data Models",
                     "path": "generating-data-models",
-                    "href": "/rx-web-core/working-with-data-model/generating-data-models"
+                    "uri": "/rx-web-core/working-with-data-model/generating-data-models"
                 },
                 {
                     "childrens": [
@@ -88,25 +88,25 @@
                             "childrens": [],
                             "title": "Overview",
                             "path": "working-with-data-model/bounded-context#overview",
-                            "href": "/rx-web-core/working-with-data-model/bounded-context#overview"
+                            "uri": "/rx-web-core/working-with-data-model/bounded-context#overview"
                         },
                         {
                             "childrens": [],
                             "title": "Scenario",
                             "path": "working-with-data-model/bounded-context#scenario",
-                            "href": "/rx-web-core/working-with-data-model/bounded-context#scenario"
+                            "uri": "/rx-web-core/working-with-data-model/bounded-context#scenario"
                         },
                         {
                             "childrens": [],
                             "title": "Create Bounded Context",
                             "path": "working-with-data-model/bounded-context#createboundedcontext",
-                            "href": "/rx-web-core/working-with-data-model/bounded-context#createboundedcontext"
+                            "uri": "/rx-web-core/working-with-data-model/bounded-context#createboundedcontext"
                         },
                         {
                             "childrens": [],
                             "title": "Add Database Entities",
                             "path": "working-with-data-model/bounded-context#adddatabaseentities",
-                            "href": "/rx-web-core/working-with-data-model/bounded-context#adddatabaseentities"
+                            "uri": "/rx-web-core/working-with-data-model/bounded-context#adddatabaseentities"
                         }
                     ],
                     "title": "Bounded Context",
@@ -118,13 +118,13 @@
                             "childrens": [],
                             "title": "Overview",
                             "path": "overview",
-                            "href": "/rx-web-core/working-with-data-model/data-operations/overview"
+                            "uri": "/rx-web-core/working-with-data-model/data-operations/overview"
                         },
                         {
                             "childrens": [],
                             "title": "Create",
                             "path": "create",
-                            "href": "/rx-web-core/working-with-data-model/data-operations/create"
+                            "uri": "/rx-web-core/working-with-data-model/data-operations/create"
                         },
                         {
                             "childrens": [
@@ -132,150 +132,150 @@
                                     "childrens": [],
                                     "title": "All",
                                     "path": "working-with-data-model/data-operations/read#all",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#all"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#all"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "AllAsync",
                                     "path": "working-with-data-model/data-operations/read#allasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#allasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#allasync"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "AllInclude",
                                     "path": "working-with-data-model/data-operations/read#allinclude",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#allinclude"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#allinclude"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "AllIncludeAsync",
                                     "path": "working-with-data-model/data-operations/read#allincludeasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#allincludeasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#allincludeasync"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Count",
                                     "path": "working-with-data-model/data-operations/read#count",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#count"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#count"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "FindBy",
                                     "path": "working-with-data-model/data-operations/read#findyby",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#findyby"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#findyby"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "FindByAsync",
                                     "path": "working-with-data-model/data-operations/read#findbyasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#findbyasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#findbyasync"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "FindByInclude",
                                     "path": "working-with-data-model/data-operations/read#findbyinclude",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#findbyinclude"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#findbyinclude"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "FindByKey",
                                     "path": "working-with-data-model/data-operations/read#findbykey",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#findbykey"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#findbykey"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "FindByKeyAsync",
                                     "path": "working-with-data-model/data-operations/read#findbykeyasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#findbykeyasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#findbykeyasync"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "FirstAsync",
                                     "path": "working-with-data-model/data-operations/read#firstasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#firstasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#firstasync"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "FirstOrDefault",
                                     "path": "working-with-data-model/data-operations/read#firstordefault",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#firstordefault"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#firstordefault"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "FirstOrDefaultAsync",
                                     "path": "working-with-data-model/data-operations/read#firstordefaultasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#firstordefaultasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#firstordefaultasync"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Last",
                                     "path": "working-with-data-model/data-operations/read#last",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#last"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#last"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "LastAsync",
                                     "path": "working-with-data-model/data-operations/read#lastasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#lastasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#lastasync"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "LastOrDefault",
                                     "path": "working-with-data-model/data-operations/read#lastordefault",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#lastordefault"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#lastordefault"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "LastOrDefaultAsync",
                                     "path": "working-with-data-model/data-operations/read#lastordefaultasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#lastordefaultasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#lastordefaultasync"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Queryable",
                                     "path": "working-with-data-model/data-operations/read#querable",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#querable"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#querable"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Single",
                                     "path": "working-with-data-model/data-operations/read#single",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#single"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#single"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "SingleAsync",
                                     "path": "working-with-data-model/data-operations/read#singleasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#singleasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#singleasync"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "SingleOrDefault",
                                     "path": "working-with-data-model/data-operations/read#singleordefault",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#singleordefault"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#singleordefault"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "SingleOrDefaultAsync",
                                     "path": "working-with-data-model/data-operations/read#singleordefaultasync",
-                                    "href": "/rx-web-core/working-with-data-model/data-operations/read#singleordefaultasync"
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/read#singleordefaultasync"
                                 }
                             ],
                             "title": "Read",
                             "path": "read",
-                            "href": "/rx-web-core/working-with-data-model/data-operations/read"
+                            "uri": "/rx-web-core/working-with-data-model/data-operations/read"
                         },
                         {
                             "childrens": [],
                             "title": "Update",
                             "path": "update",
-                            "href": "/rx-web-core/working-with-data-model/data-operations/update"
+                            "uri": "/rx-web-core/working-with-data-model/data-operations/update"
                         },
                         {
                             "childrens": [],
                             "title": "Delete",
                             "path": "delete",
-                            "href": "/rx-web-core/working-with-data-model/data-operations/delete"
+                            "uri": "/rx-web-core/working-with-data-model/data-operations/delete"
                         }
                     ],
                     "title": "Data Operations",
@@ -287,13 +287,13 @@
                             "childrens": [],
                             "title": "Add Objects Using Transaction",
                             "path": "add-objects-using-transaction",
-                            "href": "/rx-web-core/working-with-data-model/database-transactions/add-objects-using-transaction"
+                            "uri": "/rx-web-core/working-with-data-model/database-transactions/add-objects-using-transaction"
                         },
                         {
                             "childrens": [],
                             "title": "Adding Objects With Store Procedure Transaction",
                             "path": "add-objects-with-stored-procedure-transaction",
-                            "href": "/rx-web-core/working-with-data-model/database-transactions/add-objects-with-stored-procedure-transaction"
+                            "uri": "/rx-web-core/working-with-data-model/database-transactions/add-objects-with-stored-procedure-transaction"
                         }
                     ],
                     "title": "Database Transactions",
@@ -307,24 +307,24 @@
                                     "childrens": [],
                                     "title": "Tenant Based",
                                     "path": "working-with-data-model/multitenancy/shared-database#tenant-based",
-                                    "href": "/rx-web-core/working-with-data-model/multitenancy/shared-database#tenant-based"
+                                    "uri": "/rx-web-core/working-with-data-model/multitenancy/shared-database#tenant-based"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Schema Based",
                                     "path": "working-with-data-model/multitenancy/shared-database#schema-based",
-                                    "href": "/rx-web-core/working-with-data-model/multitenancy/shared-database#schema-based"
+                                    "uri": "/rx-web-core/working-with-data-model/multitenancy/shared-database#schema-based"
                                 }
                             ],
                             "title": "Shared Database",
                             "path": "shared-database",
-                            "href":"/rx-web-core/working-with-data-model/multitenancy/shared-database"
+                            "uri":"/rx-web-core/working-with-data-model/multitenancy/shared-database"
                         },
                         {
                             "childrens": [],
                             "title": "Multiple Database",
                             "path": "multiple-database",
-                            "href": "/rx-web-core/working-with-data-model/multitenancy/multiple-database"
+                            "uri": "/rx-web-core/working-with-data-model/multitenancy/multiple-database"
                         }
                     ],
                     "title": "Multitenancy",
@@ -336,25 +336,25 @@
                             "childrens": [],
                             "title": "Connection Resilency",
                             "path": "connection-resilency",
-                            "href": "/rx-web-core/working-with-data-model/advance/connection-resilency"
+                            "uri": "/rx-web-core/working-with-data-model/advance/connection-resilency"
                         },
                         {
                             "childrens": [],
                             "title": "Global Filter",
                             "path": "global-filter",
-                            "href": "/rx-web-core/working-with-data-model/advance/global-filter"
+                            "uri": "/rx-web-core/working-with-data-model/advance/global-filter"
                         },
                         {
                             "childrens": [],
                             "title": "Timezone Conversion",
                             "path": "timezone-conversion",
-                            "href": "/rx-web-core/working-with-data-model/advance/timezone-conversion"
+                            "uri": "/rx-web-core/working-with-data-model/advance/timezone-conversion"
                         },
                         {
                             "childrens": [],
                             "title": "Value Conversion",
                             "path": "value-conversion",
-                            "href": "/rx-web-core/working-with-data-model/advance/value-conversion"
+                            "uri": "/rx-web-core/working-with-data-model/advance/value-conversion"
                         }
                     ],
                     "title": "Advance",
@@ -375,7 +375,7 @@
             ],
             "title": "Working with Data Model",
             "path": "working-with-data-model",
-            "href": null
+            "uri": null
         },
         {
             "childrens": [
@@ -404,13 +404,13 @@
                     ],
                     "title": "Dependency Injection",
                     "path": "dependency-injection",
-                    "href": null
+                    "uri": null
                 }
             ],
             "title": "Fundamentals",
             "path": "fundamentals",
             "disabled": true,
-            "href": null
+            "uri": null
         },
         {
             "childrens": [
@@ -418,25 +418,25 @@
                     "childrens": [],
                     "title": "MaxLength",
                     "path": "max-length",
-                    "href": "/rx-web-core/data-validation/max-length"
+                    "uri": "/rx-web-core/data-validation/max-length"
                 },
                 {
                     "childrens": [],
                     "title": "Range",
                     "path": "range",
-                    "href": "/rx-web-core/data-validation/range"
+                    "uri": "/rx-web-core/data-validation/range"
                 },
                 {
                     "childrens": [],
                     "title": "Required",
                     "path": "required",
-                    "href": "/rx-web-core/data-validation/required"
+                    "uri": "/rx-web-core/data-validation/required"
                 },
                 {
                     "childrens": [],
                     "title": "Unique",
                     "path": "unique",
-                    "href": "/rx-web-core/data-validation/unique"
+                    "uri": "/rx-web-core/data-validation/unique"
                 },
                 {
                     "childrens": [],
@@ -671,7 +671,7 @@
             ],
             "title": "Data Validation",
             "path": "data-validation",
-            "href": null
+            "uri": null
         },
         {
             "childrens": [],
@@ -686,19 +686,19 @@
                             "childrens": [],
                             "title": "Brief",
                             "path": "developing-the-api/api#brief",
-                            "href": "/rx-web-core/developing-the-api/api#brief"
+                            "uri": "/rx-web-core/developing-the-api/api#brief"
                         },
                         {
                             "childrens": [],
                             "title": "Types",
                             "path": "developing-the-api/api#types",
-                            "href": "/rx-web-core/developing-the-api/api#types"
+                            "uri": "/rx-web-core/developing-the-api/api#types"
                         },
                         {
                             "childrens": [],
                             "title": "Best Practices",
                             "path": "developing-the-api/api#bestpractices",
-                            "href": "/rx-web-core/developing-the-api/api#bestpractices"
+                            "uri": "/rx-web-core/developing-the-api/api#bestpractices"
                         }
                     ],
                     "title": "Api",
@@ -708,42 +708,42 @@
                     "childrens": [],
                     "title": "Basic Controller",
                     "path": "basic-controller",
-                    "href": "/rx-web-core/developing-the-api/basic-controller"
+                    "uri": "/rx-web-core/developing-the-api/basic-controller"
                 },
                 {
                     "childrens": [],
                     "title": "Domain Controller",
                     "path": "domain-controller",
-                    "href": "/rx-web-core/developing-the-api/domain-controller"
+                    "uri": "/rx-web-core/developing-the-api/domain-controller"
                 },
                 {
                     "childrens": [],
                     "title": "Lookup Controller",
                     "path": "lookup-controller",
-                    "href": "/rx-web-core/developing-the-api/lookup-controller"
+                    "uri": "/rx-web-core/developing-the-api/lookup-controller"
                 },
                 {
                     "childrens": [],
                     "title": "Child Controller",
                     "path": "domain-controller",
-                    "href": "/rx-web-core/developing-the-api/child-controller"
+                    "uri": "/rx-web-core/developing-the-api/child-controller"
                 },
                 {
                     "childrens": [],
                     "title": "Search Controller",
                     "path": "search-controller",
-                    "href": "/rx-web-core/developing-the-api/search-controller"
+                    "uri": "/rx-web-core/developing-the-api/search-controller"
                 },
                 {
                     "childrens": [],
                     "title": "File Controller",
                     "path": "file-controller",
-                    "href": "/rx-web-core/developing-the-api/file-controller"
+                    "uri": "/rx-web-core/developing-the-api/file-controller"
                 }
             ],
             "title": "Developing the Api",
             "path": "developing-the-api",
-            "href": null
+            "uri": null
         },
         {
             "childrens": [
@@ -751,31 +751,31 @@
                     "childrens": [],
                     "title": "Authentication",
                     "path": "authentication",
-                    "href": "/rx-web-core/security/authentication"
+                    "uri": "/rx-web-core/security/authentication"
                 },
                 {
                     "childrens": [],
                     "title": "Authorization",
                     "path": "authorization",
-                    "href": "/rx-web-core/security/authorization"
+                    "uri": "/rx-web-core/security/authorization"
                 },
                 {
                     "childrens": [],
                     "title": "User Claims",
                     "path": "user-claims",
-                    "href": "/rx-web-core/security/user-claims"
+                    "uri": "/rx-web-core/security/user-claims"
                 },
                 {
                     "childrens": [],
                     "title": "Exception Handling",
                     "path": "exception-handling",
-                    "href": "/rx-web-core/security/exception-handling"
+                    "uri": "/rx-web-core/security/exception-handling"
                 },
                 {
                     "childrens": [],
                     "title": "IpSafelist",
                     "path": "ip-safelist",
-                    "href": "/rx-web-core/security/ip-safelist"
+                    "uri": "/rx-web-core/security/ip-safelist"
                 },
                 {
                     "childrens": [
@@ -783,19 +783,19 @@
                             "childrens": [],
                             "title": "Open Redirect Attacks",
                             "path": "security/owasp-standards#openredirectattacks",
-                            "href": "/rx-web-core/security/owasp-standards#openredirectattacks"
+                            "uri": "/rx-web-core/security/owasp-standards#openredirectattacks"
                         },
                         {
                             "childrens": [],
                             "title": "Cross Site Scripting Attack",
                             "path": "security/owasp-standards#crosssitescriptingattack",
-                            "href": "/rx-web-core/security/owasp-standards#crosssitescriptingattack"
+                            "uri": "/rx-web-core/security/owasp-standards#crosssitescriptingattack"
                         },
                         {
                             "childrens": [],
                             "title": "Enable Cross-Origin Requests ",
                             "path": "security/owasp-standards#enablecrossoriginrequests ",
-                            "href": "/rx-web-core/security/owasp-standards#enablecrossoriginrequests "
+                            "uri": "/rx-web-core/security/owasp-standards#enablecrossoriginrequests "
                         }
                     ],
                     "title": "OWASP Standards",
@@ -805,7 +805,7 @@
                     "childrens": [],
                     "title": "Request Logging",
                     "path": "request-logging",
-                    "href": "/rx-web-core/security/request-logging"
+                    "uri": "/rx-web-core/security/request-logging"
                 },
                 {
                     "childrens": [],
@@ -815,7 +815,7 @@
             ],
             "title": "Security",
             "path": "security",
-            "href": null
+            "uri": null
         },
         {
             "childrens": [
@@ -823,24 +823,24 @@
                     "childrens": [],
                     "title": "Static Cache",
                     "path": "performance#static-cache",
-                    "href": "/rx-web-core/performance/performance#static-cache"
+                    "uri": "/rx-web-core/performance/performance#static-cache"
                 },
                 {
                     "childrens": [],
                     "title": "Entity Tag Cache",
                     "path": "performance#entitytag",
-                    "href": "/rx-web-core/performance/performance#entitytag"
+                    "uri": "/rx-web-core/performance/performance#entitytag"
                 },
                 {
                     "childrens": [],
                     "title": "Response Compression",
                     "path": "performance#responsecompression",
-                    "href": "/rx-web-core/performance/performance#responsecompression"
+                    "uri": "/rx-web-core/performance/performance#responsecompression"
                 }
             ],
             "title": "Performance",
             "path": "performance",
-            "href": null
+            "uri": null
         },
         {
             "childrens": [
@@ -848,18 +848,18 @@
                     "childrens": [],
                     "title": "Global Content",
                     "path": "global-content",
-                    "href": "/rx-web-core/localization-and-globalization/global-content"
+                    "uri": "/rx-web-core/localization-and-globalization/global-content"
                 },
                 {
                     "childrens": [],
                     "title": "Component Content",
                     "path": "component-content",
-                    "href": "/rx-web-core/localization-and-globalization/component-content"
+                    "uri": "/rx-web-core/localization-and-globalization/component-content"
                 }
             ],
             "title": "Localization and Globalization",
             "path": "localization-and-globalization",
-            "href": null
+            "uri": null
         },
         {
             "childrens": [
@@ -867,91 +867,91 @@
                     "childrens": [],
                     "title": "Installation",
                     "path": "rxwebcore-commands/cli#installation",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#installation"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#installation"
                 },
                 {
                     "childrens": [],
                     "title": "Project Creation",
                     "path": "rxwebcore-commands/cli#projectcreation",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#projectcreation"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#projectcreation"
                 },
                 {
                     "childrens": [],
                     "title": "Generating Models",
                     "path": "rxwebcore-commands/cli#generatingmodels",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#generatingmodels"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#generatingmodels"
                 },
                 {
                     "childrens": [],
                     "title": "Generating Context",
                     "path": "rxwebcore-commands/cli#generatingcontext",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#generatingcontext"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#generatingcontext"
                 },
                 {
                     "childrens": [],
                     "title": "Adding Single Model",
                     "path": "rxwebcore-commands/cli#addingsinglemodel",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#addingsinglemodel"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#addingsinglemodel"
                 },
                 {
                     "childrens": [],
                     "title": "Adding Multiple Tables In Context",
                     "path": "rxwebcore-commands/cli#addingmultipletablesincontext",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#addingmultipletablesincontext"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#addingmultipletablesincontext"
                 },
                 {
                     "childrens": [],
                     "title": "Basic Controller",
                     "path": "rxwebcore-commands/cli#basiccontroller",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#basiccontroller"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#basiccontroller"
                 },
                 {
                     "childrens": [],
                     "title": "Domain Controller",
                     "path": "rxwebcore-commands/cli#domaincontroller",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#domaincontroller"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#domaincontroller"
                 },
                 {
                     "childrens": [],
                     "title": "Lookup Controller",
                     "path": "rxwebcore-commands/cli#lookupcontroller",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#lookupcontroller"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#lookupcontroller"
                 },
                 {
                     "childrens": [],
                     "title": "Add lookups in lookup controller",
                     "path": "rxwebcore-commands/cli#addlookupsinlookupcontroller",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#addlookupsinlookupcontroller"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#addlookupsinlookupcontroller"
                 },
                 {
                     "childrens": [],
                     "title": "Child Controller",
                     "path": "rxwebcore-commands/cli#childcontroller",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#childcontroller"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#childcontroller"
                 },
                 {
                     "childrens": [],
                     "title": "Search Controller",
                     "path": "rxwebcore-commands/cli#searchcontroller",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#searchcontroller"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#searchcontroller"
                 },
                 {
                     "childrens": [],
                     "title": "add authorization to controller",
                     "path": "rxwebcore-commands/cli#addauthorizationtocontroller",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#addauthorizationtocontroller"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#addauthorizationtocontroller"
                 },
                 {
                     "childrens": [],
                     "title": "adding localization",
                     "path": "rxwebcore-commands/cli#addinglocalization",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#addinglocalization"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#addinglocalization"
                 },
                 {
                     "childrens": [],
                     "title": "Devops",
                     "path": "rxwebcore-commands/cli#devops",
-                    "href": "/rx-web-core/rxwebcore-commands/cli#devops"
+                    "uri": "/rx-web-core/rxwebcore-commands/cli#devops"
                 }
             ],
             "title": "CLI",
@@ -967,19 +967,19 @@
                                     "childrens": [],
                                     "title": "Introduction",
                                     "path": "introduction",
-                                    "href": "/rx-web-core/introduction"
+                                    "uri": "/rx-web-core/introduction"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Database Design",
                                     "path": "database-design",
-                                    "href": "/rx-web-core/database-design"
+                                    "uri": "/rx-web-core/database-design"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Authentication/Authorization",
                                     "path": "authentication",
-                                    "href": "/rx-web-core/authentication"
+                                    "uri": "/rx-web-core/authentication"
                                 },
                                 {
                                     "childrens": [
@@ -987,51 +987,51 @@
                                             "childrens": [],
                                             "title": "Data Sanitization",
                                             "path": "data-sanitization",
-                                            "href": "/rx-web-core/data-sanitization"
+                                            "uri": "/rx-web-core/data-sanitization"
                                         },
                                         {
                                             "childrens": [],
                                             "title": "Model State Validation",
                                             "path": "model-state-validation",
-                                            "href": "/rx-web-core/model-state-validation"
+                                            "uri": "/rx-web-core/model-state-validation"
                                         },
                                         {
                                             "childrens": [],
                                             "title": "Unique validation",
                                             "path": "unique-validation",
-                                            "href": "/rx-web-core/unique-validation"
+                                            "uri": "/rx-web-core/unique-validation"
                                         },
                                         {
                                             "childrens": [],
                                             "title": "Localize Validation Messages",
                                             "path": "localize-validation-messages",
-                                            "href": "/rx-web-core/localize-validation-messages"
+                                            "uri": "/rx-web-core/localize-validation-messages"
                                         },
                                         {
                                             "childrens": [],
                                             "title": "Business Rules Implementation",
                                             "path": "business-rules-implementation",
-                                            "href": "/rx-web-core/business-rules-implementation"
+                                            "uri": "/rx-web-core/business-rules-implementation"
                                         }
                                     ],
                                     "title": "Create Product API",
                                     "path": "authentication",
-                                    "href": null
+                                    "uri": null
                                 }
                             ],
                             "title": "RESTful API",
                             "path": "restful-api",
-                            "href": null
+                            "uri": null
                         }
                     ],
                     "title": "Tours Of Ecommerce Application",
                     "path": "register-application-configuration-information",
-                    "href": null
+                    "uri": null
                 }
             ],
             "title": "Tutorials",
             "path": "tutorials",
-            "href": null
+            "uri": null
         }
     ]
 }

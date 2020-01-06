@@ -41,6 +41,7 @@ export class PageComponent implements OnInit {
   dynamicElement:string;
   element: HTMLElement;
   typeName: string;
+  gitUrl:string;
   validationName: string;
   showViewer: boolean = false;
   templateDrivenType: string = "directives";
@@ -54,9 +55,9 @@ export class PageComponent implements OnInit {
     private applicationBroadcaster:ApplicationBroadcaster,
     private sanitizer: DomSanitizer
   ) {
-
-    this.applicationBroadcaster.topSubject.subscribe(t=>{
+ this.applicationBroadcaster.topSubject.subscribe(t=>{
       this.rightSidebarLinks = t.rightSidebarLinks;
+      this.gitUrl =  t.gitDocPath;
     })
 
     this.element = elementRef.nativeElement as HTMLElement;
@@ -80,6 +81,7 @@ export class PageComponent implements OnInit {
       this.links = response;
     });
   }
+
   nextLink()
   {
     var currentObjIndex = this.links.findIndex(a => a.link ==  location.pathname);

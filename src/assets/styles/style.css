@@ -4048,7 +4048,7 @@ body {
     background-color: #ffffff;
     margin-top: 10px;
     padding-top: 10px;
-}
+}   
 
 .footer a, #contribution a {
     font-weight: 650;
@@ -4517,6 +4517,11 @@ body.modal-open {
 
 #side-menu li .nav-third-level li a {
     font-size: 13px;
+}
+
+.third-level{
+    padding-left: 20px;
+    font-weight: 400; 
 }
 
 #side-menu.nav>li>a:hover, #side-menu.nav>li>a:focus, #side-menu li .nav-second-level li a:hover {
@@ -6924,6 +6929,11 @@ ul.nav.nav-third-level {
 
 #side-menu ul.nav.nav-second-level {
     padding-left: 20px;
+}
+
+.second-level{
+    padding-left: 20px; 
+    font-weight: 400; 
 }
 
 #side-menu .nav-second-level a span.fa {
