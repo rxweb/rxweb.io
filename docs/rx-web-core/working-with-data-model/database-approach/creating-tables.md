@@ -7,20 +7,33 @@ type:simple
 linktitle:creatingtables
 ---
 # Creating Tables
+Database tables have data of entities in the database which are having multiple records. It is very important to provide a proper name of the tables, Names of the columns  
+and choose its data type. Lets see what are the principles and conventions which should be kept in mind while creating tables.
 
-The core part of any software application is the `database designing`. It is a process of organizing data in a proper structural way. Before working on the business logic part in the application, we must decide what data is to be stored and which elements will be interrelated to each other. With all these information, you can start creating the database and its entities with respect to that application.
+1) The table name should be in pascal case and defined in a plural manner because a tables contains multiple recordset, Hence it is collection of entity data. For eg : [dbo].Countries, [dbo].States, [dbo].Candidates, [dbo].CandidateAvailabilities etc.    
 
-Tables have data of entities in database and as every entity have multiples records, the table name should be created with name in plural for eg: <b>[dbo].Departments</b> and their column should be in pascal case  
-For example 
+2) The column name should also be in pascal case, with its appropriate prefix and suffix. For eg : CountryId, CountryName etc.     
 
-````
-CREATE TABLE dbo.Departments  
-(  
-    DepartmentId int NOT NULL  
-    DepartmentName [varchar](50) NOT NULL,
-    HeadOfDepartment [varchar](50) NOT NULL,
-    Status int NOT NULL
-);  
-````
+3) The data type must be selected as per the column value to be stored. For eg : CountryId int. 
 
+Examples :
 
+## [dbo].Countries
+
+CREATE TABLE [dbo].[Countries](
+	[CountryId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](100) NOT NULL,
+	[StatusId] [int] NOT NULL,
+	[LanguageId] [int] NOT NULL
+)
+
+## [dbo].States
+
+CREATE TABLE [dbo].[States](
+	[StateId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](100) NOT NULL,
+	[StatusId] [int] NOT NULL,
+	[CountryId] [int] NOT NULL
+)
+
+## [dbo].Candidates

@@ -7,9 +7,6 @@ linktitle:datamodels
 ---
 # Generating Data Models
 
-
-# Generate POCO Model
-
 `POCO` means `Plain Old CLR Object`. POCO Entity is a class that doesn't depend on any framework-specific base class. These models act as a data carriers and has validation and any other business logic you want to implement. 
 
 > POCO model must be publically accessible.

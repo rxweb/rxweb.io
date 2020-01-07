@@ -65,7 +65,7 @@ rxwebcore --context --main User --add-models Countries
 
 **UserContext.cs:** 
 ````js
- public class UserContext : BaseBoundedDbContext, IResourceManagementContext
+ public class UserContext : BaseBoundedDbContext, IUserContext
     {
         public UserContext(MainSqlDbContext sqlDbContext,  IOptions<DatabaseConfig> databaseConfig, IHttpContextAccessor contextAccessor,TenantDbConnectionInfo tenantDbConnection): base(sqlDbContext, databaseConfig.Value, contextAccessor,tenantDbConnection){ }
 
