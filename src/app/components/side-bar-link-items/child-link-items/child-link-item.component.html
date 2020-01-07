@@ -1,12 +1,12 @@
 
 
 <ul class="nav flex-column collapse" id="side-menu" [ngClass]="{ 'second-level':level===1,'third-level':level===2}" [class.hide]="!isOpen" [class.show]="isOpen">
-  
+
     <li *ngFor="let link of links">
 
-        <a [class.disabled]="link.childrens?.length == 0 && link.uri == null" style="font-weight: 400;"  (click)="navigateTo(link)" [class.active]="link.isActive"><span
+        <a [class.disabled]="link.childrens?.length == 0 && link.uri == null" style="font-weight: 400;"  (click)="navigateTo(link);link.isOpen = !link.isOpen" [class.active]="link.isActive"><span
                 class="nav-label">{{link.title}}</span><span class="fa" [class.arrow]="!link.isOpen"
                 [class.fa-angle-down]="link.isOpen" *ngIf="link.childrens && link.childrens?.length > 0"></span></a>
-                <app-child-links *ngIf="link.childrens && link.childrens.length > 0" (messageToEmit)="getIsOpen($event)"  [isOpen]="link.isOpen" [level]="level + 1" [links]="link.childrens"></app-child-links>
+                <app-child-links *ngIf="link.childrens && link.childrens.length > 0" [isOpen]="link.isOpen" [level]="level + 1" [links]="link.childrens"></app-child-links>
     </li>
 </ul>

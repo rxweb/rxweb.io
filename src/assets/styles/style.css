@@ -8975,9 +8975,10 @@ ul.contribution-list li a:hover{
 
 .change-log-links .nav-link.active, .nav-link.active:hover{
     background-color: #eee;
-    font-weight: 600;
-    font-size: 14px;
-    color: #0f96e4;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #5d2e90ba !important;
+    transition: ease-in-out;
 }
 
 .disabled {
