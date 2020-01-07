@@ -320,6 +320,7 @@ color: #5d2e90!important;
 .main {
     position: relative;
     padding-top:100px;
+    min-height: calc(100vh - 68px);
 }
 .sidebar_version_dropdown .form-control{
     border-radius:5px;
@@ -5557,15 +5558,78 @@ header .header_left_menu .navbar-nav .nav-link span:before,.learning_title a>spa
 .home_page_header .navbar-collapse{
   flex-basis: auto;
 }
+.main{}
 
+@media only screen and (max-width:1735px){
+  
+  .home_page_content .container{
+    padding: 0 40px;
+  }
+  .home_page_content h2#code_change_text{
+    font-size: 6rem!important;
+  }
+  .word{
+    top: 225px;
+    margin-left: 138px;
+  }
+  .word2{
+    top: 342px;
+    margin-left: 190px;
+  }
+  .home_page_content .pr-lg-5, .home_page_content .px-lg-5, .home_page_header .main-heading.pr-md-5, .home_page_header .main-heading.px-md-5{
+    padding-right: 2rem!important;
+  }
+  .home_page_content .pl-lg-5, .home_page_content .px-lg-5, .home_page_header .navbar-brand.pl-md-5, .home_page_header .navbar-brand.px-md-5 {
+    padding-left: 2rem!important;
+  }
+}
+@media only screen and (max-width:1599px){
+  #code_second_change{
+    font-size: 17px;
+  }
+  .home_page_content h2#code_change_text{
+    font-size: 5.6rem!important;
+  }
+  .word{
+    top: 218px;
+    margin-left: 126px;
+  }
+  .word2 {
+    top: 324px;
+    margin-left: 180px;
+  }
+}
+@media only screen and (max-width:1499px){
+  #code_second_change{
+    font-size: 16px;
+  }
+  .home_page_content .pr-lg-5, .home_page_content .px-lg-5, .home_page_header .main-heading.pr-md-5, .home_page_header .main-heading.px-md-5{
+    padding-right: 1rem!important;
+  }
+  .home_page_content .pl-lg-5, .home_page_content .px-lg-5, .home_page_header .navbar-brand.pl-md-5, .home_page_header .navbar-brand.px-md-5 {
+    padding-left: 1rem!important;
+  }
+  .home_page_content h2#code_change_text {
+    font-size: 5rem!important;
+  }
+  .word {
+    top: 208px;
+    margin-left: 114px;
+  }
+  .word2 {
+    top: 300px;
+    margin-left: 160px;
+  }
+
+}
 @media only screen and (max-width:1366px){
   #code_second_change{
-    font-size: 15px;
+    font-size: 14px;
   }
-  .pl-lg-5, .px-lg-5 {
+  .home_page_content .pl-lg-5, .home_page_content .px-lg-5 {
     padding-left: 15px!important;
   }
-  .pr-lg-5, .px-lg-5{
+  .home_page_content .pr-lg-5, .home_page_content .px-lg-5{
     padding-right: 15px !important;
   }
   .home_page_content h2#code_change_text{
@@ -5582,5 +5646,5 @@ header .header_left_menu .navbar-nav .nav-link span:before,.learning_title a>spa
 }
 
 @media only screen and (max-width:1199px){
-  
+
 }
