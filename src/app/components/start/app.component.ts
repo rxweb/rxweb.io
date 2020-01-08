@@ -81,7 +81,7 @@ export class AppComponent implements OnInit {
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         console.log("calling routes")
-        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home")) {
+        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home") || val.url.includes("/angular-home")) {
           this.isHome = true;
         }
         else if (val.url.includes("rx-web-core")) {

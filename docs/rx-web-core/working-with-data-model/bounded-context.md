@@ -36,15 +36,15 @@ Parameters of creating a context
 
 # Create Bounded Context
 
-Now lets create Resource Management, Candidate Module and User Modules. we will start with Resource Management Module and add Database models into it.
+Now lets create Resource Management, Candidate Module and User Modules. we will start with  Module and add Database models into it.
 
 **Step 1 : Create Bounded Context**
 
 ````js
-rxwebcore --context --main User
+rxwebcore --context --main Candidate
 ````
 
-This will create `UserContext.cs` in the main folder of DbContext folder in the `HRManagementSystem.BoundedContext` project of the application. 
+This will create `CandidateContext.cs` in the main folder of DbContext folder in the `HRManagementSystem.BoundedContext` project of the application. 
 
 # Add Database Entities
 
@@ -56,31 +56,55 @@ To add models into the context, run this command in the package manager console
 rxwebcore --context --main <Context_Name> --add-models <Model_Name>
 ````
 
-We will add models(DbSets) into the Resource Management Context.
+We will add models(DbSets) into the Candidate Context.
 
 ````js
-rxwebcore --context --main User --add-models Countries
+rxwebcore --context --main Candidate --add-models Candidates
 ````
+
 > This will add tables and views of the particular entity in the context.
 
-**UserContext.cs:** 
+**CandidateContext.cs:** 
 ````js
- public class UserContext : BaseBoundedDbContext, IUserContext
+ public class CandidateContext : BaseBoundedDbContext, ICandidateContext
     {
-        public UserContext(MainSqlDbContext sqlDbContext,  IOptions<DatabaseConfig> databaseConfig, IHttpContextAccessor contextAccessor,TenantDbConnectionInfo tenantDbConnection): base(sqlDbContext, databaseConfig.Value, contextAccessor,tenantDbConnection){ }
+        public CandidateContext(MainSqlDbContext sqlDbContext,  IOptions<DatabaseConfig> databaseConfig, IHttpContextAccessor contextAccessor,TenantDbConnectionInfo tenantDbConnection): base(sqlDbContext, databaseConfig.Value, contextAccessor,tenantDbConnection){ }
 
         #region DbSets
-        public DbSet<vCountryRecord> vCountryRecords { get; set; }
-        public DbSet<vCountry> vCountry { get; set; }
-        public DbSet<Country> Country { get; set; }
+        public DbSet<vCandidateRecords> vCandidateRecords { get; set; }
+        public DbSet<vCandidates> vCandidates { get; set; }
+        public DbSet<Candidate> Candidates { get; set; }
         #endregion DbSets
     }
 
-    public interface IUserContext : IDbContext
+    public interface ICandidateContext : IDbContext
     {
     }
 ```` 
 
 With the creation of BoundedContext, its UnitOfWork will be generated which will be further used in the API to interact with the data. To get further information about UnitOfWork Please refer this link.
 
+# Create Lookup context
+lookup context contains DbSets of lookups used to bind dropdowns of the context in the application. 
 
+```js
+rxwebcore --context main CandidateLookup --add-models Countries
+```
+
+**CandidateLookupContext.cs:** 
+````js
+ public class CandidateLookupContext : BaseBoundedDbContext, ICandidateLookupContext
+    {
+        public CandidateLookupContext(MainSqlDbContext sqlDbContext,  IOptions<DatabaseConfig> databaseConfig, IHttpContextAccessor contextAccessor,TenantDbConnectionInfo tenantDbConnection): base(sqlDbContext, databaseConfig.Value, contextAccessor,tenantDbConnection){ }
+
+        #region DbSets
+        public DbSet<vCountryRecords> vCountryRecords { get; set; }
+        public DbSet<vCountries> vCountries { get; set; }
+        public DbSet<Country> Candidates { get; set; }
+        #endregion DbSets
+    }
+
+    public interface ICandidateLookupContext : IDbContext
+    {
+    }
+```` 

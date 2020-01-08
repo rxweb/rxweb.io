@@ -134,5 +134,3 @@ In the DbEntity class :
      public string CandidateName { get; set; }
 ````
 
-
-Unique Validation
