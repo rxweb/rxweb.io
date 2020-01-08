@@ -4028,7 +4028,7 @@ body {
 
     .footer {
         /* padding: 15px 318px 15px 260px; */
-        padding: 15px 0;
+        padding: 15px;
         background: #fff;
         /* border-top: 1px solid #eaeaea; */
         transition: margin .4s ease 0s;
@@ -4036,7 +4036,7 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 999;
+        /* z-index: 999; */
         /* position: absolute; */
         position: relative;
         box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
@@ -4488,12 +4488,12 @@ body.modal-open {
 }
 
 #side-menu li .nav-second-level li a, #side-menu li a {
-    padding: 6px 25px 6px 20px;
+    padding: 5px 25px 5px 20px;
     color: #222222;
     text-transform: none;
     font-weight: 600;
     font-size: 13px;
-    line-height: 22px;
+    line-height: 20px;
     letter-spacing: 0.4px;
     display: inline-block;
 }
@@ -4541,6 +4541,7 @@ body.modal-open {
     font-size: 15px;
     position: absolute;
     left: 0;
+    top: 5px;
 }
 
 .arrow {
@@ -7962,9 +7963,6 @@ span.btn-label {
     .main-header {
         min-height: auto;
     }
-    .home-footer {
-        text-align: center;
-    }
     .home-footer .content .pull-right {
         width: 100%;
         margin-top: 10px;
@@ -8227,7 +8225,7 @@ span.btn-label {
 
 @media only screen and (max-width: 991px) {
     .footer {
-        font-size: 10px;
+        font-size: 11px;
         padding: 15px;
         /* top: 800px; */
     }

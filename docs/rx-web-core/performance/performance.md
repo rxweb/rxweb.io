@@ -6,6 +6,7 @@ subcategory: performance
 type:simple
 linktitle:performance
 ---
+
 # Performance
 
 # Static Cache

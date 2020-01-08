@@ -12,37 +12,37 @@ To perform effective quering becomes much necessary when we want to recieve our 
 
 > It is preferable to create a view if the number of records are limited upto 500 to 3k. If it exceeds it is preferable to create a [stored procedure] for it. The records criteria may change based upon the `JOINS` are used in the view.
 
-In our HumanResourceApplication we have to work on departments functionality, As we have defined the departments table and now we are going to define the views for getting the records. Here there are three cases where making materialized view can be helpful which are stated below:
+In our HumanResourceApplication we have to work on candidates functionality, As we have defined the candidates table and now we are going to define the views for getting the records. Here there are three cases where making materialized view can be helpful which are stated below:
 
 # 1. Displaying List of records
-Suppose we want to display a list of departments, we will make a `vDepartments` view for the same. Here Departments id the table name and we add a abbreviation `v` which is here meant for a view. We do this to maintain a consistency of the naming convention used all over the application. 
+Suppose we want to display a list of candidates, we will make a `vCandidates` view for the same. Here Candidates id the table name and we add a abbreviation `v` which is here meant for a view. We do this to maintain a consistency of the naming convention used all over the application. 
 
 ````
-CREATE VIEW [dbo].[vDepartments]
+CREATE VIEW [dbo].[vCandidates]
 AS
-SELECT        DepartmentId, DepartmentName, Status
-FROM            dbo.Departments
+SELECT        CandidateId, FirstName, EmailId, CountryId, Designation, Experience
+FROM            dbo.Candidates
 ````
 
 # 2. Displaying Data while Editing
-Now we want to display specific record of the departments while edit call, we will make `vDepartmentRecords`. We make seperate view for displaying list of records and editing because there might be some additional column or column value differing from list and edit. For example for displaying list you dont have HeadOfDepartment column but in edit mode you want that column to be displayed. 
+Now we want to display specific fields of the states while edit call, we will make `vStateRecords`. We make seperate view for displaying list of records and editing because there might be some additional column or column value differing from list and edit. For example for displaying list you dont have StatusId column but in edit mode you want that column to be displayed. 
 
 ````
-CREATE VIEW [dbo].[vDepartmentRecords]
+CREATE VIEW [dbo].[vStateRecords]
 AS
-SELECT        DepartmentId, DepartmentName, HeadOfDepartment
-FROM            dbo.Departments
+SELECT        StateId, StateName, StatusId
+FROM            dbo.States
 GO
 ````
 
 # 3. Binding data in a dropdown 
-In some of the areas where we have to bind the department names in the dropdown, in that case we have to define the lookup view of deparments the name should be `vDepartmentLookups` in this case because we only need fields which are required in the lookup.
+In some of the areas where we have to bind the name of the countries in the dropdown, in that case we have to define the lookup view of Countries the name should be `vCountryLookups` in this case because we only need fields which are required in the lookup.
 
 ````
-CREATE VIEW [dbo].[vDepartmentLookups]
+CREATE VIEW [dbo].[vCountryLookups]
 AS
-SELECT       DepartmentId, DepartmentName
-FROM            dbo.Departments
+SELECT       CountryId, CountryName
+FROM            dbo.Countries
 GO
 ````
 

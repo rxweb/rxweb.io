@@ -16,6 +16,7 @@ import { ContributionComponent } from "../shared/disqus/contribution/contributio
 import { ContributorsComponent } from "../contributors/contributors-component";
 import { ComingSoonComponent } from "../coming-soon/coming-soon.component";
 import { LinkItemsComponent } from "../side-bar-link-items/link-items/link-item.component";
+import { AngularHomeComponent } from "../angular-home-page/angular-home.component";
 
 
 
@@ -28,6 +29,9 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path: 'home', component: HomeComponent
+  },
+  {
+    path: 'angular-home', component: AngularHomeComponent
   },
   {
     path: 'getting-started', component: GettingStartedComponent

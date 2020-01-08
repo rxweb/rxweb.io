@@ -1,13 +1,17 @@
 <footer class="footer" *ngIf="showComponent"  >
 	<div class="row">
-			<div class="col-sm-2 space-left-sidebar"></div>
-			<div class="col-sm-12 col-md-9">
-				<div class="content">
+			
+			<div [class.col-md-8]="!isHome" [class.offset-lg-3]="!isHome" [class.offset-md-4]="!isHome" [class.col-lg-9]="!isHome" [class.col-md-11]="isHome" [class.offset-md-1]="isHome">
+				<div class="row align-items-center content">
+					<div class="col-sm-8">
 	Maintained by the <a href="https://github.com/orgs/rxweb/people" target="_blank" rel="noopener">rxweb core team</a> with the help of 
 	<a href="https://github.com/rxweb/rxweb/graphs/contributors" target="_blank" rel="noopener">contributors</a>.<br />
 	Current version <span style="font-weight: bold">#version</span>, Code licensed <a href="https://github.com/rxweb/rxweb/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>,
 	docs license <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 4.0.</a>
-	<span class="pull-right">Sponsored by : <span><a href="https://radixweb.com" target="_blank" rel="noopener">RADIXWEB</a></span></span>
+</div>
+<div class="col-sm-4">
+	<span class="">Sponsored by : <span><a href="https://radixweb.com" target="_blank" rel="noopener">RADIXWEB</a></span></span>
+</div>
 </div>
 </div>
 </div>

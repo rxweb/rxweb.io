@@ -25,6 +25,7 @@
 
   <header *ngIf="isHome" [class.ihomepage-header]="!isHome" class="home_page_header border-0">
     <nav class="navbar   py-0 pt-4">
+      <div class="lft-section">
             <a class="navbar-brand pl-md-5 pt-0" href="#"><img src="assets/images/logo.png" width="120" height="28"/></a>
             <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -42,17 +43,18 @@
                   <a class="nav-link" href="#"><span>Back End</span></a>
                 </li> -->
                 <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" routerLink="/home" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span>AspNetCore</span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Angular</a>
+                            <a class="dropdown-item" routerLink="/angular-home">Angular</a>
                         </div>
                     </li>
               </ul>
             </div>
-            <div class="main-heading ml-auto pr-md-5" >Clean Code. Built with Purpose</div>
+          </div>
+            <div class="main-heading ml-auto pr-md-5 rgt-section" >Clean Code. Built with Purpose</div>
           </nav>
 </header>
 
@@ -94,6 +96,8 @@
       <!-- <div [@routerAnimation]="getRouteAnimation(route)"> -->
       <div class="main-content" [class.col-sm-9]="!isHome" [class.col-sm-12]="isHome">
         <router-outlet></router-outlet>
+        
+      
       </div>
       <!-- <ul class="navbar-nav fixed_chat_menu">
         <li class="nav-item active">
@@ -110,9 +114,7 @@
     <!-- <app-right-sidebar *ngIf="rightSidebarLinks" [sidebarLinks]="rightSidebarLinks"></app-right-sidebar> -->
 
   </main>
-
-  <div *ngIf="showFooter" [class.home-footer]="isHome">
-
+  <div *ngIf="showFooter" [class.home-footer]="isHome" class="common-footer">
     <app-footer></app-footer>
-  </div>  
+  </div> 
 </div>
