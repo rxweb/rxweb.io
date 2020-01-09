@@ -24,7 +24,7 @@ For Eg : https://localhost:**Your_generated_port_number**/api/Authentication
 
 3) Click on Send Button
 
-This will hit the `PostLogin` method of Authentication controller which will generate a `JWT web token` which will be further used to make requests to the APIs which are created with HTTpStatus Code 200.  
+This will hit the `PostLogin` method of Authentication controller which will generate a `JWT web token` which will be further used to make requests to the APIs which are created with HTTPStatus Code 200.  
 
 ![Login Result](Images/login-result.PNG)
 

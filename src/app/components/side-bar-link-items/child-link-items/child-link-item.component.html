@@ -1,6 +1,6 @@
 
 
-<ul class="nav flex-column collapse" id="side-menu" [ngClass]="{ 'second-level':level===1,'third-level':level===2}" [class.hide]="!isOpen" [class.show]="isOpen">
+<ul class="nav flex-column collapse" [ngClass]="{ 'second-level':level===1,'third-level':level===2,'fourth-level':level===3}" [class.hide]="!isOpen" [class.show]="isOpen">
 
     <li *ngFor="let link of links">
 

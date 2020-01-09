@@ -4105,7 +4105,7 @@ body {
     border-right: 1px solid #eeeeee;
     /* top: 120px; */
     top: 100px;
-    width: 285px;
+    width: 338px;
     background-color: #fff;
     min-height: auto;
     height: auto;
@@ -4524,6 +4524,12 @@ body.modal-open {
     padding-left: 20px;
     font-weight: 400; 
 }
+
+.fourth-level{
+    padding-left: 20px;
+    font-weight: 400; 
+}
+
 
 #side-menu.nav>li>a:hover, #side-menu.nav>li>a:focus, #side-menu li .nav-second-level li a:hover {
     background: #dfeff8;
@@ -5631,6 +5637,15 @@ pre {
     white-space: pre;
     color: #77838f !important;
 }
+.command{
+    color:#37474f!important;
+    padding-top: 0px!important;
+    background-color: #eaf2f7 !important;
+}
+
+.command-ts{
+    border-radius: 10px;
+}
 
 .padding-zero-tab {
     padding: 0px !important;
@@ -5889,6 +5904,7 @@ select.ng-invalid {
 }
 
 blockquote {
+    background-color: #f7f7f7;
     padding: 4px 13px;
     border-left: 4px solid #007dc5;
     /*border:1px solid #eee;*/
@@ -6523,7 +6539,7 @@ body.hide-sidebar #menu .header-link {
 
 .plain-text a {
     color: #007dc5;
-    font-weight: bold;
+
 }
 
 .plain-text ul li {

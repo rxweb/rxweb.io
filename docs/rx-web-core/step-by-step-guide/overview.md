@@ -8,9 +8,7 @@ linktitle:overview
 
 # Overview
 
-Effective software development in an era of increasing number of web frameworks may bring up a challenge of how to get started and what parameters to be kept in mind. There comes many aspect to be taken care of such as following best design practices, high end security, robust validation, high level auditing, culture specific management, maintaining performance, reducing redundant code etc...
 
-Here is an end to end solution of creating an enterprise application which provides a solution to fulfil your software requirements based upon your domain using clean architecture. 
 
 ## Scenario
 Let's consider a scenario of making a human resource enterprise application which can be used by small/large organizations for performing day to day tasks or activities done by Human Resource Team such as Managing resource data, managing payroll, recruitment process, performance evaluation etc.. as well as useful for the employees of the organization to maintain their profile, apply leaves, view attendance and update their professional skills.
