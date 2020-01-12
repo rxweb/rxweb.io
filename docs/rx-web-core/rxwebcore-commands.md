@@ -22,7 +22,7 @@ To use rxwebcore commands using package manager console, you must install `rxweb
 To create a new project using rxwebcore CLI. Run this command 
 
 ````js
- rxwebcore --add-project &ltProject_Name&gt
+ rxwebcore --new &ltProject_Name&gt
 ````
 
 For more information on creating a project. Please refer <a class="redirect-link" href="/rx-web-core/step-by-step-guide/overview">Project Creation</a>
