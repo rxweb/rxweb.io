@@ -16,8 +16,8 @@
                 {
                     "childrens": [],
                     "title": "Project Creation",
-                    "path": "project-creation#projectcreation",
-                    "uri": "/rx-web-core/step-by-step-guide/project-creation#projectcreation"
+                    "path": "project-creation",
+                    "uri": "/rx-web-core/step-by-step-guide/project-creation"
                 },
                 {
                     "childrens": [],
@@ -161,19 +161,20 @@
                     "childrens": [],
                     "title": "The Startup Class",
                     "path": "the-startup-class",
-                    "uri": null
+                    "uri": "/rx-web-core/fundamentals/the-startup-class"
+
                 },
                 {
                     "childrens": [],
                     "title": "Configuration Options",
                     "path": "configuration-options",
-                    "uri": null
+                    "uri": "/rx-web-core/fundamentals/configuration-options"
                 },
                 {
                     "childrens": [],
                     "title": "Dependency Injection",
                     "path": "dependency-injection",
-                    "uri": null
+                    "uri": "/rx-web-core/fundamentals/dependency-injection"
                 },
                 {
                     "childrens": [],
@@ -184,7 +185,7 @@
                 {
                     "childrens": [],
                     "title": "Performance",
-                    "path": "performance",
+                    "path": "/rx-web-core/fundamentals/performance",
                     "uri": null
                 },
                 {

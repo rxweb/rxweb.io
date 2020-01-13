@@ -89,7 +89,7 @@ export class HtmlPageComponent  implements OnInit {
       this.codeContent = JSON.parse(response.toString());
       var element = document.getElementById("mainContent")
       element.innerHTML = this.codeContent.htmlContent;
-      element.innerHTML += "<h2>See Also</h2>";
+      //element.innerHTML += "<h2>See next Interesting things</h2>";
       let docElement= document.getElementById("doc")
      // docElement.appendChild(this.create(ContributionComponent, {}).rootNode());
       
