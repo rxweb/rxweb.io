@@ -38,37 +38,37 @@
                             "childrens": [],
                             "title": "Overview",
                             "path": "overview",
-                            "uri": "/rx-web-core/tours-of-contoso-application/overview"
+                            "uri": null
                         },
                         {
                             "childrens": [],
                             "title": "Creating Tables",
                             "path": "creating-tables",
-                            "uri": "/rx-web-core/tours-of-contoso-application/creating-tables"
+                            "uri": "/rx-web-core/tours-of-contoso-app/Beginner/creating-tables"
                         },
                         {
                             "childrens": [],
                             "title": "Creating Views",
                             "path": "creating-views",
-                            "uri": "/rx-web-core/tours-of-contoso-application/creating-views"
+                            "uri": "/rx-web-core/tours-of-contoso-app/Beginner/creating-views"
                         },
                         {
                             "childrens": [],
                             "title": "Create the project",
                             "path": "create-the-project",
-                            "uri": "/rx-web-core/tours-of-contoso-application/create-the-project"
+                            "uri": null
                         },
                         {
                             "childrens": [],
                             "title": "Authentication",
                             "path": "authentication",
-                            "uri": "/rx-web-core/tours-of-contoso-application/authentication"
+                            "uri": null
                         },
                         {
                             "childrens": [],
                             "title": "Authorization",
                             "path": "authorization",
-                            "uri": "/rx-web-core/tours-of-contoso-application/authorization"
+                            "uri": null
                         },
                         {
                             "childrens": [
@@ -76,48 +76,48 @@
                                     "childrens": [],
                                     "title": "Models",
                                     "path": "models",
-                                    "uri": "/rx-web-core/tours-of-contoso-application/models"
+                                    "uri": null
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Creating DbContext And Uow",
                                     "path": "creating-dbcontext",
-                                    "uri": "/rx-web-core/tours-of-contoso-application/dbcontext"
+                                    "uri": null
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Creating Course Api",
                                     "path": "creating-course-api",
-                                    "uri": "/rx-web-core/tours-of-contoso-application/creating-course-api"
+                                    "uri": null
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Creating Student Api",
                                     "path": "creating-student-api",
-                                    "uri": "/rx-web-core/tours-of-contoso-application/creating-student-api"
+                                    "uri": null
                                 }
                             ],
                             "title": "Scaffolding",
                             "path": "scaffolding",
-                            "uri": "/rx-web-core/tours-of-contoso-application/scaffolding"
+                            "uri": null
                         },
                         {
                             "childrens": [],
                             "title": "Data validation of entities",
                             "path": "data-validation",
-                            "uri": "/rx-web-core/tours-of-contoso-application/data-validation"
+                            "uri": null
                         },
                         {
                             "childrens": [],
                             "title": "Test The Api",
                             "path": "test-the-api",
-                            "uri": "/rx-web-core/tours-of-contoso-application/test-the-api"
+                            "uri": null
                         },
                         {
                             "childrens": [],
                             "title": "Deploy The Api",
                             "path": "deploy-the-api",
-                            "uri": "/rx-web-core/tours-of-contoso-application/deploy-the-api"
+                            "uri": null
                         }
                     ],
                     "title": "Beginner",
@@ -152,7 +152,7 @@
                 }
             ],
             "title": "Tours of Contoso App",
-            "path": "tours-of-contoso-application",
+            "path": "tours-of-contoso-app",
             "uri": null
         },
         {
