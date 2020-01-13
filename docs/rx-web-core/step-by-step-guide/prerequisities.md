@@ -17,14 +17,12 @@ I believe this is interesting :), Let's understand the prerequisites for the rxw
 As the cli is build on .net core and this is helpful for .net core projects so before using the rxwebcore cli you have to fulfil the software requirements in your machine
 1) Visual Studio 2019 with version 16.3.4 or above should be installed.
 
-Download visual studio 2019 from <a class="redirect-link" href="https://visualstudio.microsoft.com/downloads/">Downloads</a>
+<a class="redirect-link" href="https://visualstudio.microsoft.com/downloads/">Download</a> visual studio 2019.
 
 2) .Net Core SDK
 .Net core SDK includes components which are useful for building and running applications, Here are the versions which need to be installed 
-* .Net core 2.2 <a class="redirect-link" href="https://dotnet.microsoft.com/download/dotnet-core/2.2">Download Link</a>,
-* .Net core 3.1 <a class="redirect-link" href="https://dotnet.microsoft.com/download/dotnet-core/3.1">Download Link</a>.
-
-Download the .Net Core SDK for creating apps from <a class="redirect-link" href="https://docs.microsoft.com/en-us/dotnet/core/install/sdk?pivots=os-windows">Install the .Net core SDK</a>
+* <a class="redirect-link" href="https://dotnet.microsoft.com/download/dotnet-core/2.2">.Net core 2.2</a>,
+* <a class="redirect-link" href="https://dotnet.microsoft.com/download/dotnet-core/3.1">.Net core 3.1 </a>.
 
 # Installation
 Let's install the <a class="redirect-link" href="https://www.nuget.org/packages/RxWebCore/">rxwebcore</a> global tool using dotnet cli. For more information about the global dotnet tools visit <a class="redirect-link" href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">.Net core global tools overview</a>.
