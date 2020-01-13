@@ -185,14 +185,14 @@
                 {
                     "childrens": [],
                     "title": "Performance",
-                    "path": "/rx-web-core/fundamentals/performance",
-                    "uri": null
+                    "path": "performance",
+                    "uri": "/rx-web-core/fundamentals/performance"
                 },
                 {
                     "childrens": [],
                     "title": "DbContext",
                     "path": "dbcontext",
-                    "uri": null
+                    "uri":  "/rx-web-core/fundamentals/dbcontext"
                 }
             ],
             "title": "Fundamentals",
