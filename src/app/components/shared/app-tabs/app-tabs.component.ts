@@ -15,6 +15,7 @@ export class AppTabsComponent implements OnInit {
   constructor(
   ) {
   }
+  
   ngOnInit(): void {
     if(this.tabArray != undefined && this.tabArray.length > 0){
       this.activeTab = this.tabArray[0].tabName;

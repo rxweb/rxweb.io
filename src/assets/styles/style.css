@@ -5629,7 +5629,9 @@ pre {
     border: none;
     /* border-radius: 4px; */
 }
-
+.hljs-comment{
+    color: #37474f!important;
+}
 .hljs {
     background-color: transparent !important;
     font-size: 15px !important;

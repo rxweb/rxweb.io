@@ -21,8 +21,10 @@ As the cli is build on .net core and this is helpful for .net core projects so b
 
 2) .Net Core SDK
 .Net core SDK includes components which are useful for building and running applications, Here are the versions which need to be installed 
-* <a class="redirect-link" href="https://dotnet.microsoft.com/download/dotnet-core/2.2">.Net core 2.2</a>,
-* <a class="redirect-link" href="https://dotnet.microsoft.com/download/dotnet-core/3.1">.Net core 3.1 </a>.
+<ul class="bullet-list">
+<li><a class="redirect-link" href="https://dotnet.microsoft.com/download/dotnet-core/2.2">.Net core 2.2,</a></li>
+<li><a class="redirect-link" href="https://dotnet.microsoft.com/download/dotnet-core/3.1">.Net core 3.1 </a></li>
+</ul>
 
 # Installation
 Let's install the <a class="redirect-link" href="https://www.nuget.org/packages/RxWebCore/">rxwebcore</a> global tool using dotnet cli. For more information about the global dotnet tools visit <a class="redirect-link" href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">.Net core global tools overview</a>.

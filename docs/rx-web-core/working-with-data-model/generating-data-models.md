@@ -6,7 +6,7 @@ type:simple
 linktitle:datamodels
 ---
 # Generating Data Models
-
+Data models are POCO models which have database entity objects as properties which are further used while working with data. As in the earlier section we have discussed about the database provider and how the database objects are created, In this section we will generated models class of the tables and views which are present in the database.    
 
 # Generate POCO Model
 
@@ -16,25 +16,23 @@ linktitle:datamodels
 
 Database entities which can be generated as POCO models are:
 
-<ul>
+<ul class="bullet-list">
     <li>Tables</li>
     <li>Views</li>
 </ul>
 
  you can create POCO models for all the required tables and views. For creating their POCO models in the application, open the `Package Manager Console` and run the following command:
 
-````js
+`````
 rxwebcore --models --main
-````
+`````
 
 In the above command, --models denotes model generation and --main is the database connection name configured in the `appsettings.json`.
 This will generate POCO models for all the tables and views in the `DbEntities` folder inside the `Models` section of the project.
 
-## Examples : 
+The below model classes are data model classes of the tables that we have generated in the <a class="redirect-link"  href="/rx-web-core/working-with-data-model/database-approach/creating-tables">Tables</a> sections.
 
-Here is an example of the generated models:
-
-### Country.cs
+## Country.cs
 ```js
 [Table("Countries",Schema="dbo")]
 public partial class Country
@@ -80,7 +78,7 @@ public partial class Country
 }
 ```
 
-### State.cs
+## State.cs
 
 ```js
 [Table("States",Schema="dbo")]

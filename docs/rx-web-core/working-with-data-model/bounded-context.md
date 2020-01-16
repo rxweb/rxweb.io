@@ -7,7 +7,6 @@ linktitle:boundedcontext
 ---
 # Bounded Context
 
-
 # Overview 
 
 There are some scenarios when you have to deal with too many tables, then it becomes difficult to manage those tables. For such problems `Bounded context design pattern` or `Domain-Driven Design` can be a solution.
@@ -21,9 +20,9 @@ In our HRManagementSystem we have three main modules. They are Resource Manageme
 
 In the package manager console, run this command to create a BoundedContext
 
-````js
+`````
 rxwebcore --context --main <Context_Name>
-````
+`````
 
 Parameters of creating a context 
 
@@ -40,9 +39,9 @@ Now lets create Resource Management, Candidate Module and User Modules. we will 
 
 **Step 1 : Create Bounded Context**
 
-````js
+`````
 rxwebcore --context --main Candidate
-````
+`````
 
 This will create `CandidateContext.cs` in the main folder of DbContext folder in the `HRManagementSystem.BoundedContext` project of the application. 
 
@@ -52,15 +51,15 @@ This will create `CandidateContext.cs` in the main folder of DbContext folder in
 
 To add models into the context, run this command in the package manager console
 
-````js
+`````
 rxwebcore --context --main <Context_Name> --add-models <Model_Name>
-````
+`````
 
 We will add models(DbSets) into the Candidate Context.
 
-````js
+`````
 rxwebcore --context --main Candidate --add-models Candidates
-````
+`````
 
 > This will add tables and views of the particular entity in the context.
 
@@ -87,9 +86,9 @@ With the creation of BoundedContext, its UnitOfWork will be generated which will
 # Create Lookup context
 lookup context contains DbSets of lookups used to bind dropdowns of the context in the application. 
 
-```js
+`````
 rxwebcore --context main CandidateLookup --add-models Countries
-```
+`````
 
 **CandidateLookupContext.cs:** 
 ````js

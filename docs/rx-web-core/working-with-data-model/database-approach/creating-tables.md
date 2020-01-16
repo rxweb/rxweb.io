@@ -16,9 +16,7 @@ and choose its data type. Lets see what are the principles and conventions which
 
 3) The data type must be selected as per the column value to be stored. For eg : CountryId int. 
 
-Examples :
-
-## [dbo].Countries
+## Countries
 This table contains information related to the countries which are used in the application.
 
 ````js
@@ -30,7 +28,7 @@ CREATE TABLE [dbo].[Countries](
 )
 ````
 
-## [dbo].States
+## States
 This table contains information related to the states based upon the country which is passed as a FK reference.
 
 ````js
@@ -42,7 +40,7 @@ CREATE TABLE [dbo].[States](
 )
 ````
 
-## [dbo].Candidates
+## Candidates
 This table stores information of the candidates which are registered in the application.
 
 ````js
@@ -56,7 +54,7 @@ CREATE TABLE [dbo].[Candidates](
 )
 ````
 
-## [dbo].CandidateAvailabilities
+## CandidateAvailabilities
 This table stores information about availability of the registered candidates. 
 
 ````js

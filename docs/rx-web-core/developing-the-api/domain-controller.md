@@ -61,12 +61,12 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
             this.Uow = uow;
         }
 
-        public Task<object> GetAsync(Dictionary<string, object> parameters)
+        public Task<object> GetAsync(Dictionary&ltstring, object&gt parameters)
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> GetBy(Dictionary<string, object> parameters)
+        public Task<User> GetBy(Dictionary&ltstring, object&gt parameters)
         {
             throw new NotImplementedException();
         }
@@ -94,12 +94,12 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
             await Uow.CommitAsync();
         }
 
-        public HashSet<string> DeleteValidation(Dictionary<string, object> parameters)
+        public HashSet<string> DeleteValidation(Dictionary&ltstring, object&gt parameters)
         {
             return ValidationMessages;
         }
 
-        public Task DeleteAsync(Dictionary<string, object> parameters)
+        public Task DeleteAsync(Dictionary&ltstring, object&gt parameters)
         {
             throw new NotImplementedException();
         }
@@ -107,8 +107,7 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
         public IMasterUow Uow { get; set; }
 
         private HashSet<string> ValidationMessages { get; set; } = new HashSet<string>();
-    }
-    
+    }    
 ````
 
 

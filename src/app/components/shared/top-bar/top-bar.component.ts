@@ -14,14 +14,14 @@ export class TopBarComponent implements OnInit {
   isReactive: boolean
   validationName: string;
   mainType: string;
-  isFirstTimeRightSideBarBind:boolean = true;
+  isFirstTimeRightSideBarBind: boolean = true;
   secondLevelBreadCrumb: string = "Angular";
   toogleOpen: boolean = true;
   isFirstLevelBreadCrumb: boolean = true;
   isSecondLevelBreadCrumb: boolean = true;
   showExample: boolean = true;
   @Input('sidebarLinks') sidebarLinks: any = {};
-  @Input('gitUrl') gitUrl :string;
+  @Input('gitUrl') gitUrl: string;
   cloneSidebarLinks: any = [];
   gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/";
   isDynamic: boolean
@@ -29,72 +29,49 @@ export class TopBarComponent implements OnInit {
   @ViewChild('search1') searchInput: ElementRef;
   titleData: any = { codeContent: {} };
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private router: Router, private route: ActivatedRoute) {
- 
+    this.applicationBroadCaster.topSubscriber.subscribe(t => {
+      this.sidebarLinks = t.rightSidebarLinks;
+      this.titleData = t;
+      this.gitEditUrl = t.gitDocPath;
+      if (this.sidebarLinks) {
+        if (!this.titleData.title) {
+          if (this.sidebarLinks[0].title)
+            this.titleData.title = this.sidebarLinks[0].title;
+        }
+        this.cloneSidebarLinks = [];
+        this.sidebarLinks.forEach(t => {
+          this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
+
+          if (t.subLink && t.subLink.length > 0) {
+            t.subLink.forEach(x => {
+              this.cloneSidebarLinks.push(x);
+
+            })
+          }
+        })
+      }
+
+    })
   }
 
   ngOnInit(): void {
-    this.applicationBroadCaster.topSubscriber.subscribe(t => {
-      this.titleData = t;
-      this.gitEditUrl = t.gitDocPath;     
-    })
-
     var splitedArray = location.pathname.split("/");
     this.mainType = splitedArray[1];
     this.validationName = splitedArray[2];
     if (splitedArray.length > 0 && splitedArray[1]) {
-    if(splitedArray.includes("rx-web-core"))
-      this.secondLevelBreadCrumb = "AspNetCore";
+      if (splitedArray.includes("rx-web-core"))
+        this.secondLevelBreadCrumb = "AspNetCore";
       else
-      this.secondLevelBreadCrumb = "Angular";
-    }
-  
-   
-    if (this.sidebarLinks) {
-      if(!this.titleData.title){
-        if(this.sidebarLinks[0].title)
-         this.titleData.title = this.sidebarLinks[0].title;
-      }
-      this.sidebarLinks.forEach(t => {
-        this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
-
-        if (t.subLink && t.subLink.length > 0) {
-          t.subLink.forEach(x => {
-            this.cloneSidebarLinks.push(x);
-          
-          })
-        }
-      })
-    }
-
-    else {
-      this.applicationBroadCaster.topSubscriber.subscribe(t => {
-     
-        if (t.rightSidebarLinks) {
-          this.sidebarLinks = t.rightSidebarLinks;
-          
-          if(this.isFirstTimeRightSideBarBind){
-          this.sidebarLinks.forEach(t => {
-            this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
-       
-            if (t.subLink && t.subLink.length > 0) {
-              t.subLink.forEach(x => {
-                this.cloneSidebarLinks.push(x);
-              })
-            }
-          
-          })
-        }
-          this.isFirstTimeRightSideBarBind = false;
-        }
-      })
+        this.secondLevelBreadCrumb = "Angular";
     }
   }
 
   scrollTo(section) {
+
     var node = document.querySelector('#' + section);
     node.scrollIntoView(true);
     var scrolledY = window.scrollY;
-         if (scrolledY) {
+    if (scrolledY) {
       window.scroll(0, scrolledY - 62);
     }
     return false;

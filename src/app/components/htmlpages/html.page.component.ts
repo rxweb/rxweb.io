@@ -9,6 +9,7 @@ import hljs from 'highlight.js';
 import { ContributionComponent } from '../shared/disqus/contribution/contribution.component';
 import { ComponentView } from '@rx/core/view/view';
 import { GitHubIssueComponent } from '../shared/disqus/github-issue/github-issue.component';
+import { AppTabsComponent } from '../shared/app-tabs/app-tabs.component';
 
 @Component({
   templateUrl: './html.page.component.html',
@@ -101,6 +102,7 @@ export class HtmlPageComponent  implements OnInit {
       this.showViewer = true;
     });
   }
+  
   create(component:any,params:{[key:string]:any}):any{
     let componentView = new ComponentView(component, this.viewContainerRef, this.componentFactoryResolver);
     componentView.create(params);
@@ -117,6 +119,7 @@ export class HtmlPageComponent  implements OnInit {
   }
 
   scrollTo(section) {
+    debugger;
     window.location.hash = section;
   }
 }

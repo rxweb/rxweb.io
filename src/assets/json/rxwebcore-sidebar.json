@@ -180,7 +180,7 @@
                     "childrens": [],
                     "title": "Security",
                     "path": "security",
-                    "uri": null
+                    "uri": "/rx-web-core/fundamentals/security"
                 },
                 {
                     "childrens": [],
@@ -248,7 +248,25 @@
                     "childrens": [],
                     "title": "Database Provider",
                     "path": "database-provider",
-                    "uri": null
+                    "uri": "/rx-web-core/working-with-data-model/database-provider"
+                },
+                {
+                    "childrens": [],
+                    "title": "Creating Tables",
+                    "path": "creating-tables",
+                    "uri": "/rx-web-core/working-with-data-model/database-approach/creating-tables"
+                },
+                {
+                    "childrens": [],
+                    "title": "Materialized View",
+                    "path": "materialized-views",
+                    "uri": "/rx-web-core/working-with-data-model/database-approach/materialized-view"
+                },
+                {
+                    "childrens": [],
+                    "title": "Stored Procedures",
+                    "path": "stored-procedures",
+                    "uri": "/rx-web-core/working-with-data-model/database-approach/stored-procedures"
                 },
                 {
                     "childrens": [],
@@ -284,71 +302,65 @@
                     "childrens": [
                         {
                             "childrens": [],
-                            "title": "Async Queries",
-                            "path": "async-queries",
+                            "title": "Reading Data",
+                            "path": "reading-data",
                             "uri": "/rx-web-core/working-with-data-model/data-operations/read"
                         },
                         {
+                            "childrens": [
+                                {
+                                    "childrens": [],
+                                    "title": "Basic Save",
+                                    "path": "basic-save",
+                                    "uri": "/rx-web-core/working-with-data-model/data-operations/create"
+                                },
+                                {
+                                    "childrens": [],
+                                    "title": "Relational Save",
+                                    "path": "relational-save",
+                                    "uri": null
+                                },
+                                {
+                                    "childrens": [],
+                                    "title": "Bulk Save",
+                                    "path": "bulk-save",
+                                    "uri": null
+                                }
+                            ],
+                            "title": "Saving Data",
+                            "path": "basic-save",
+                            "uri": "/rx-web-core/working-with-data-model/data-operations/create"
+                        },
+                        {
                             "childrens": [],
-                            "title": "Complex Queries",
-                            "path": "complex-queries",
-                            "uri": "/rx-web-core/working-with-data-model/data-operations/write"
+                            "title": "Updating Data",
+                            "path": "updating-data",
+                            "uri": "/rx-web-core/working-with-data-model/data-operations/update"
+                        },
+                        {
+                            "childrens": [],
+                            "title": "Deleting Data",
+                            "path": "deleting-data",
+                            "uri": "/rx-web-core/working-with-data-model/data-operations/delete"
+                        },
+                        {
+                            "childrens": [],
+                            "title": "Managing Transactions",
+                            "path": "managing-transactions",
+                            "uri": "/rx-web-core/working-with-data-model/database-transactions/add-objects-using-transaction"
+                        },
+                        {
+                            "childrens": [],
+                            "title": "Concurrency Conflicts",
+                            "path": "concurrency-transactions",
+                            "uri": "/rx-web-core/working-with-data-model/database-transactions/add-objects-using-transaction"
                         },
                         {
                             "childrens": [],
                             "title": "Global Filters",
                             "path": "global-filters",
                             "uri": "/rx-web-core/working-with-data-model/advance/global-filter"
-                        }
-                    ],
-                    "title": "Querying Data",
-                    "path": "querying-data",
-                    "uri": null
-                },
-                {
-                    "childrens": [
-                        {
-                            "childrens": [],
-                            "title": "Basic Save",
-                            "path": "basic-save",
-                            "uri": "/rx-web-core/working-with-data-model/data-operations/write"
-                        },
-                        {
-                            "childrens": [],
-                            "title": "Relational Save",
-                            "path": "relational-save",
-                            "uri": null
-                        },
-                        {
-                            "childrens": [],
-                            "title": "Bulk Save",
-                            "path": "bulk-save",
-                            "uri": null
-                        },
-                        {
-                            "childrens": [],
-                            "title": "Updating Data",
-                            "path": "updating-data",
-                            "uri": null
-                        },
-                        {
-                            "childrens": [],
-                            "title": "Deleting Data",
-                            "path": "deleting-data",
-                            "uri": null
-                        },
-                        {
-                            "childrens": [],
-                            "title": "Transactions",
-                            "path": "transactions",
-                            "uri": "/rx-web-core/working-with-data-model/database-transactions/add-objects-using-transaction"
-                        },
-                        {
-                            "childrens": [],
-                            "title": "Concurrency Conflicts",
-                            "path": "concurrency-conflicts",
-                            "uri": null
-                        },
+                        },                       
                         {
                             "childrens": [],
                             "title": "Auditing Data",
@@ -356,10 +368,11 @@
                             "uri": null
                         }
                     ],
-                    "title": "Saving Data",
-                    "path": "saving-data",
+                    "title": "Accessing Data",
+                    "path": "accessing-data",
                     "uri": null
                 },
+            
                 {
                     "childrens": [
                         {
