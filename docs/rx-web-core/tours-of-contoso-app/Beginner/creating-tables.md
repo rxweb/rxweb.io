@@ -22,40 +22,18 @@ Designing database tables by adopting a proper naming convention can easily help
 
 # Creating tables
 
-As we are creating a Contoso University application, `Students` and `Courses` table are a core part of this application. `CREATE TABLE` keyboard is used at the beginning of the statement which shows that you are interested in designing a new table. The name of the table should be unique based on the data you are planning to store on a table.
+We all know that, the database designing is the core part of any application, so before creating any project, we need to make all the necessary database object required for that project.
 
-## Students Table
-
-Let us create a basic Students table contains fields like StudentId, StudentName, Age, Gender and EmailId with proper data types and size. 
-
-```
-CREATE TABLE dbo.Students  
-(  
-    StudentId int NOT NULL,
-    StudentName [varchar](50) NOT NULL,
-    Age int NOT NULL,
-    Gender [varchar](10) NOT NULL,
-    EmailId [varchar](30) NOT NULL
-); 
-```
-
-Here is a sample "Students" table:
-
-<table class="table table-bordered">
-<tr><th>StudentId</th><th>StudentName</th><th>Age</th><th>Gender</th><th>EmailId</th></tr>
-<tr><td>1</td><td>John Doe</td><td>20</td><td>Male</td><td>john.doe@contoso.com</td></tr>
-<tr><td>2</td><td>Alice Joan</td><td>19</td><td>Female</td><td>alice.joan@contoso.com</td></tr>
-<tr><td>3</td><td>Alison Miller</td><td>21</td><td>Male</td><td>alison.miller@contoso.com</td></tr>
-</table>
+As previously mentioned, we are creating a `Contoso University application`, `Students` and `Courses` table are a major part of this application. `CREATE TABLE` keyboard is used at the beginning of the statement which shows that you are interested in designing a new table. The name of the table should be unique based on the data you are planning to store on a table.
 
 ## Courses Table
 
-Let us create a basic Courses table contains only 2 fields like CourseId(int) and CourseName(varchar). 
+Let us create a Courses table which contains only 2 columns like CourseId(int) and CourseName(varchar). Here CourseId is defined as primary key with auto increment of 1.
 
 ```
-CREATE TABLE dbo.Students  
+CREATE TABLE dbo.Courses  
 (  
-    CourseId int NOT NULL,
+    CourseId int NOT NULL IDENTITY(1,1) PRIMARY KEY,
     CourseName [varchar](50) NOT NULL
 );
 ```
@@ -66,8 +44,34 @@ Here is a sample "Courses" table:
 <tr><th>CourseId</th><th>CourseName</th></tr>
 <tr><td>1</td><td>B. Tech.</td></tr>
 <tr><td>2</td><td>M. Tech.</td></tr>
-<tr><td>3</td><td>BCA</td></tr>
-<tr><td>4</td><td>MCA</td></tr>
+<tr><td>3</td><td>MBBS</td></tr>
+<tr><td>4</td><td>CA</td></tr>
 <tr><td>5</td><td>MBA</td></tr>
+</table>
+
+## Students Table
+
+Let us create a basic Students table contains fields like StudentId, StudentName, Age, Gender and EmailId with proper data types and size. Here `StudentId` is set as primary key with auto increment of 1 and `CourseId` is referenced as a foreign key for the `Courses` table which is defined above.
+
+```
+CREATE TABLE dbo.Students  
+(  
+    StudentId int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    StudentName [varchar](50) NOT NULL,
+    RollNumber int NOT NULL,
+    Age int NOT NULL,
+    Gender [varchar](10) NOT NULL,
+    EmailId [varchar](30) NOT NULL,
+    CourseId int FOREIGN KEY REFERENCES Courses(CourseId)
+); 
+```
+
+Here is a sample "Students" table:
+
+<table class="table table-bordered">
+<tr><th>StudentId</th><th>StudentName</th><th>RollNumber</th><th>Age</th><th>Gender</th><th>EmailId</th><th>CourseId</th></tr>
+<tr><td>1</td><td>John Doe</td><td>1002</td><td>20</td><td>Male</td><td>john.doe@contoso.com</td><td>1</td></tr>
+<tr><td>2</td><td>Alison Miller</td><td>1001</td><td>21</td><td>Male</td><td>alison.miller@contoso.com</td><td>5</td></tr>
+<tr><td>3</td><td>Scarlett Joan</td><td>1003</td><td>19</td><td>Female</td><td>scarlett.joan@contoso.com</td><td>3</td></tr>
 </table>
 
