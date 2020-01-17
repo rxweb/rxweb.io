@@ -62,6 +62,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { LinkItemsComponent } from './side-bar-link-items/link-items/link-item.component';
 import { ChildLinkItemComponent } from './side-bar-link-items/child-link-items/child-link-item.component';
 import { AngularHomeComponent } from './angular-home-page/angular-home.component';
+import { AspNetCoreGettingStartedComponent } from './aspnetcore-getting-started/aspnetcore-getting-started.component';
 registerLocaleData(localePt)
 
 //import { TextPageComponent } from './text-page/text-page.component';
@@ -71,8 +72,8 @@ registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
-      AppComponent, SideBarComponent,AngularHomeComponent,ChildLinkItemComponent, LinkItemsComponent, ComingSoonComponent, ContributorsComponent,ChangeLogComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent,WhatsNextComponent,WhatsNewComponent,WhyRxwebComponent],
-  imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule,TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
+    AppComponent, SideBarComponent, AngularHomeComponent, ChildLinkItemComponent, LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, AspNetCoreGettingStartedComponent],
+  imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
     BrowserAnimationsModule,
     RxSecurityModule, CommonModule,
@@ -84,14 +85,14 @@ registerLocaleData(localePt)
       provide: API_HOST_URI,
       useValue: 'https://rxweb.io/'
     }
-    ,{ provide: LOCALE_ID, useValue: 'pt' },
+    , { provide: LOCALE_ID, useValue: 'pt' },
     {
       provide: APP_VERSION,
       useValue: environment.appVersion
     },
     { provide: 'RequestHeaders', useClass: ApplicationRequestHeaders },
     { provide: 'ResponseResult', useClass: ApplicationResponse },
-    ApplicationBroadcaster, PromptUpdateService, LogUpdateService, CheckForUpdateService, 
+    ApplicationBroadcaster, PromptUpdateService, LogUpdateService, CheckForUpdateService,
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent],

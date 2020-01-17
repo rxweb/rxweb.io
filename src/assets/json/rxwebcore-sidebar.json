@@ -3,7 +3,7 @@
         {
             "title": "Quick Start",
             "path": "quick-start",
-            "uri": null
+            "uri": "quick-start"
         },
         {
             "childrens": [
@@ -162,7 +162,6 @@
                     "title": "The Startup Class",
                     "path": "the-startup-class",
                     "uri": "/rx-web-core/fundamentals/the-startup-class"
-
                 },
                 {
                     "childrens": [],
@@ -192,7 +191,7 @@
                     "childrens": [],
                     "title": "DbContext",
                     "path": "dbcontext",
-                    "uri":  "/rx-web-core/fundamentals/dbcontext"
+                    "uri": "/rx-web-core/fundamentals/dbcontext"
                 }
             ],
             "title": "Fundamentals",
@@ -360,7 +359,7 @@
                             "title": "Global Filters",
                             "path": "global-filters",
                             "uri": "/rx-web-core/working-with-data-model/advance/global-filter"
-                        },                       
+                        },
                         {
                             "childrens": [],
                             "title": "Auditing Data",
@@ -372,7 +371,6 @@
                     "path": "accessing-data",
                     "uri": null
                 },
-            
                 {
                     "childrens": [
                         {
