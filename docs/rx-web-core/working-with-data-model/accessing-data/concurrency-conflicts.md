@@ -13,7 +13,7 @@ In an application having large number of users and domains there arises a possib
 
 In such cases, it becomes very important to maintain data consistency through concurrency control. Let's see how it is achieved using the Uow methods of RxWebCore.
 
-## Concurrency Controls
+## Concurrency Control
 Types of concurrency ....
 Concurrency control in data models is managed using `IConcurrencyException` interface. 
 
