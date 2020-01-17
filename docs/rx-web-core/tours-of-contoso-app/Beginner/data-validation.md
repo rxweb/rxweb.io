@@ -12,24 +12,10 @@ While working with data, it becomes very important to maintain data consistency 
 
 We will apply unique validation on the CourseName field where CourseName needs to be unique. 
 
-## Step 1
-Let's start by making a unique validation function will be made in the main folder of the ExtendedModels folder of the models project. 
-
-````js
-    public partial class Course {
-
-        public bool UniqueCourseName(object CourseName = null) {
-            if(!Candidates.any(x=>x.CourseName == CourseName))
-            return false
-        }
-    }
-````
-
-## Step 2
 Add unique validation annotation on the `CourseName` field 
 
 ````js
-  [Unique(connection:typeof(IMainDatabaseFacade),conditionalExpressionName: nameof(Course.UniqueCourseName))]
+  [Unique(connection:typeof(IMainDatabaseFacade))]
   public string CourseName { get; set; }
 ````
 
