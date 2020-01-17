@@ -14,5 +14,5 @@ As we all know, `Authentication` is basically determining who is attempting to l
 
 # Authentication method used in Contoso App
 
-As far as authentication method is concerned, token based authentication through JSON Web Token is more preferable when it comes to scalable identity. JWT based authentication is one of the modern and more secure way of authentication. 
+As far as authentication method is concerned, token based authentication through JSON Web Token is more preferable when it comes to scalable identity. JWT based authentication is one of the modern and more secure way of authentication. One of the benefits of JWTs is they can be used without a backing store. All the information required to authenticate the user is contained within the token itself. 
 
