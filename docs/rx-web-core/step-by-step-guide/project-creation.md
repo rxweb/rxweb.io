@@ -90,7 +90,6 @@ For an application to efficiently work in different regions, it is necessary to 
 <tr><td>ComponentLanguageContents</td><td>If the multilingual data is component specific, It is stored in component language contents.</td></tr>
 </table>
 
-
 **Access Management**
 
 Information of JWT web token, users and its roles for performing authorization and authentication. Whenever a new request is made at the time of login the jwt web token is stored and authorization will require information which will be retrieved from the database.

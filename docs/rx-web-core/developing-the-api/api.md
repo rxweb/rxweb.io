@@ -11,7 +11,7 @@ linktitle:api
 
 # Introduction
 
-The role of a server api is to handle web requests which are attempted to interact with `Uow` methods for performing various data manipulation operations which allows the user to access the entity through which data is managed. It is used to handle server request used for various operations going on in the application such as authentication, insertion of data, searching data, updating data and deleting data.   
+The role of a server api is to handle web requests which are attempted to interact with `Uow` methods for performing various data manipulation operations which allows the user to access the entity through which data is managed. It is used to handle server request used for various operations going on in the application such as authentication,insertion of data, searching data, updating data and deleting data.   
 
 Creating controller class depends on many factors such as operation to be performed, role of the module, complexity type. 
 Before discussing more on creation of controller class there arise many aspects through which the structure of Api is decided which will be featured below. Implementation of web API through rxwebcore includes execution with `RESTful` practices, provides efficiency to remove large number of redundant code, entity based APIs and improve performance.  

@@ -56,13 +56,13 @@
                             "childrens": [],
                             "title": "Create the project",
                             "path": "create-the-project",
-                            "uri": null
+                            "uri": "/rx-web-core/tours-of-contoso-app/Beginner/create-the-project"
                         },
                         {
                             "childrens": [],
                             "title": "Authentication",
                             "path": "authentication",
-                            "uri": null
+                            "uri": "/rx-web-core/tours-of-contoso-app/Beginner/authentication"
                         },
                         {
                             "childrens": [],
@@ -76,25 +76,25 @@
                                     "childrens": [],
                                     "title": "Models",
                                     "path": "models",
-                                    "uri": null
+                                    "uri": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/models"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Creating DbContext And Uow",
                                     "path": "creating-dbcontext",
-                                    "uri": null
+                                    "uri": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/context-and-uow"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Creating Course Api",
                                     "path": "creating-course-api",
-                                    "uri": null
+                                    "uri": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/course-api"
                                 },
                                 {
                                     "childrens": [],
                                     "title": "Creating Student Api",
                                     "path": "creating-student-api",
-                                    "uri": null
+                                    "uri": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/course-api#studentapi"
                                 }
                             ],
                             "title": "Scaffolding",
@@ -105,7 +105,7 @@
                             "childrens": [],
                             "title": "Data validation of entities",
                             "path": "data-validation",
-                            "uri": null
+                            "uri": "/rx-web-core/tours-of-contoso-app/Beginner/data-validation"
                         },
                         {
                             "childrens": [],
