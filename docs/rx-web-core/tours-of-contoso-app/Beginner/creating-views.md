@@ -8,9 +8,9 @@ linktitle: overview
 
 # Views
 
-`Views` are needed when we want to recieve our desired resultset in other form like storing data in int form but displaying in the varchar form, displaying data in a dropdown etc. `Materialized view` is a database object (kind of virtual table) based on the result-set of any SQL query. Materialized views can be preferred, when you need data integrity that don't need to be up to date to the very second.
+`Materialized view` is a database object (kind of virtual table) based on the result-set of any SQL query. `Views` are needed when we want to recieve our desired resultset in other form. For example: In the previous section, i had created a table named `Students` and in that table there was a column named `CourseId` which stores the integer value. While displaying in the UI, i want to represnt in the `CourseName` form. If i write this in query form by adding WHERE and JOIN, then it would be a little-bit complex query. In such cases, we can make views to make it more simpler.
 
-> When you have limited number of records (500 - 3K), then view is a better option. 
+> When you have limited number of records (0 - 1K), then view is a better option.
 
 # Pros while using views
 
@@ -22,7 +22,7 @@ linktitle: overview
 
 # Real time scenario
 
-If we consider our `Contoso Application`, displaying students and course records is very frequent in the application. In the previous step, we have created the Students and Course table and now we want to retrieve those records. For that, we will create the views.
+If we consider our `Contoso Application`, displaying students and course records is very frequent in the application. In the <a class="redirect" href="">previous step</a>, we have created the Students and Course table and now we want to retrieve those records. For that, we will create the views.
 
 Generally we deal with these below mentioned real-time scenarios in case of retrieving the stored information where making materialized view can be helpful.
 
@@ -30,14 +30,15 @@ Generally we deal with these below mentioned real-time scenarios in case of retr
 
 There are cases when we want to display a list of students and their enrolled course name on the UI. For retriving that information we can use a materialized view. In such cases, view should be named as `vCourses` or `vStudents`.
 
-> Here, abbreviation <strong>`v`</strong> stand for the word view. This maintain a consistency in the naming convention all over the application and to properly differenciate between a table and a view.
+> Just for the sake for our understanding, we use the abbreviation <strong>`v`</strong> that stand for the word view. This maintain a consistency in the naming convention all over the application and to properly differenciate between a table and a view.
 
 ````
 CREATE VIEW [dbo].[vStudents]
 AS
-SELECT    Students.RollNumber, Students.StudentName, Students.EmailId, Courses.CourseName
+SELECT    Students.StudentId, Students.RollNumber, Students.StudentName, Students.EmailId, Courses.CourseName
 FROM      Students, Courses
 WHERE     Students.CourseId = Courses.CourseId
+GO
 ````
 
 Based on the above created view, below result set will be fetched.
@@ -58,7 +59,7 @@ Let us consider a situation, i have to edit a student's details. In such cases, 
 ````
 CREATE VIEW [dbo].[vStudentRecords]
 AS
-SELECT    Students.StudentName, Students.RollNumber, Students.Age, Students.Gender, Students.EmailId, Courses.CourseName
+SELECT    Students.StudentId, Students.StudentName, Students.RollNumber, Students.Age, Students.Gender, Students.EmailId, Courses.CourseName
 FROM      Students, Courses
 WHERE     Students.CourseId = Courses.CourseId
 GO
@@ -97,3 +98,5 @@ Based on the above created view, below result set will be fetched.
 <tr><td>4</td><td>CA</td></tr>
 <tr><td>5</td><td>MBA</td></tr>
 </table>
+
+For all the above views, you can download the script file from <a class="redirect-link" href="#">here</a>.

@@ -17,6 +17,7 @@ import { ContributorsComponent } from "../contributors/contributors-component";
 import { ComingSoonComponent } from "../coming-soon/coming-soon.component";
 import { LinkItemsComponent } from "../side-bar-link-items/link-items/link-item.component";
 import { AngularHomeComponent } from "../angular-home-page/angular-home.component";
+import { AspNetCoreGettingStartedComponent } from "../aspnetcore-getting-started/aspnetcore-getting-started.component";
 
 
 
@@ -36,30 +37,34 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'getting-started', component: GettingStartedComponent
   },
+  {
+    path: 'quick-start',
+    component: AspNetCoreGettingStartedComponent,
+  },
   // {
   //   path: 'changelog', component: TextPageComponent
   //   //loadChildren: 'src/app/components/text-page/text-page.module#TextPageModule',
   // },
   {
-    path:'api/reactive-form-config',component:ReactiveFormConfigComponent
+    path: 'api/reactive-form-config', component: ReactiveFormConfigComponent
   },
   {
-    path:'whats-next',component:WhatsNextComponent
+    path: 'whats-next', component: WhatsNextComponent
   },
   {
-    path:'whats-new',component:WhatsNewComponent
+    path: 'whats-new', component: WhatsNewComponent
   },
   {
-    path:'why',component:WhyRxwebComponent
+    path: 'why', component: WhyRxwebComponent
   },
   {
-    path:'hidden-gems',component: ContributorsComponent
+    path: 'hidden-gems', component: ContributorsComponent
   },
   {
-    path:'changelog',component:ChangeLogComponent
+    path: 'changelog', component: ChangeLogComponent
   },
   {
-    path:'how-to',
+    path: 'how-to',
     loadChildren: 'src/app/components/howto/howto.module#HowtoModule',
   },
   {
@@ -107,7 +112,7 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/api/FormBuilderConfiguration/form-builder-configuration.module#FormBuilderConfigurationModule',
   },
   {
-    path:'sanitization',
+    path: 'sanitization',
     loadChildren: 'src/app/components/sanitization/sanitization.module#SanitizationModule',
   },
   {
@@ -124,20 +129,20 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path: 'coming-soon',
-    component:ComingSoonComponent,
+    component: ComingSoonComponent,
   },
   {
     path: 'link-items',
-    component:LinkItemsComponent,
+    component: LinkItemsComponent,
   },
   {
-    path: '**', 
-    redirectTo:'home',
+    path: '**',
+    redirectTo: 'home',
     pathMatch: 'full'
   }
- 
+
 ];
 
-export const APP_LAZY_ROUTING: ModuleWithProviders = RouterModule.forRoot(APP_LAZY_ROUTES, { 
-      preloadingStrategy: NoPreloading,
-    });
+export const APP_LAZY_ROUTING: ModuleWithProviders = RouterModule.forRoot(APP_LAZY_ROUTES, {
+  preloadingStrategy: NoPreloading,
+});

@@ -22,16 +22,16 @@ Designing database tables by adopting a proper naming convention can easily help
 
 # Creating tables
 
-We all know that, the database designing is the core part of any application, so before creating any project, we need to make all the necessary database object required for that project.
+As previously mentioned, we are creating a `Contoso University application`, `Courses` and `Students` table are a major part of this application. `CREATE TABLE` keyword is used at the beginning of the statement which shows that you are interested in designing a new table. The name of the table should be unique based on the data you are planning to store on a table.
 
-As previously mentioned, we are creating a `Contoso University application`, `Students` and `Courses` table are a major part of this application. `CREATE TABLE` keyboard is used at the beginning of the statement which shows that you are interested in designing a new table. The name of the table should be unique based on the data you are planning to store on a table.
+You can download the script file from <a class="redirect-link" href="#">here</a>.
 
 ## Courses Table
 
 Let us create a Courses table which contains only 2 columns like CourseId(int) and CourseName(varchar). Here CourseId is defined as primary key with auto increment of 1.
 
 ```
-CREATE TABLE dbo.Courses  
+CREATE TABLE dbo.Courses
 (  
     CourseId int NOT NULL IDENTITY(1,1) PRIMARY KEY,
     CourseName [varchar](50) NOT NULL
@@ -42,8 +42,8 @@ Here is a sample "Courses" table:
 
 <table class="table table-bordered">
 <tr><th>CourseId</th><th>CourseName</th></tr>
-<tr><td>1</td><td>B. Tech.</td></tr>
-<tr><td>2</td><td>M. Tech.</td></tr>
+<tr><td>1</td><td>Machine Learning</td></tr>
+<tr><td>2</td><td>Software Engineering</td></tr>
 <tr><td>3</td><td>MBBS</td></tr>
 <tr><td>4</td><td>CA</td></tr>
 <tr><td>5</td><td>MBA</td></tr>
@@ -51,7 +51,7 @@ Here is a sample "Courses" table:
 
 ## Students Table
 
-Let us create a basic Students table contains fields like StudentId, StudentName, Age, Gender and EmailId with proper data types and size. Here `StudentId` is set as primary key with auto increment of 1 and `CourseId` is referenced as a foreign key for the `Courses` table which is defined above.
+Let us create a basic Students table contains fields like StudentId, StudentName, Age, Gender, EmailId and CourseId with proper data types and size. Here `StudentId` is set as primary key with auto increment of 1 and `CourseId` is referenced as a foreign key for the `Courses` table which is defined above.
 
 ```
 CREATE TABLE dbo.Students  
