@@ -31,16 +31,10 @@ As we are working on .NET Core api we have to resolve the service in the constru
 Generally we are generating a token while loging the application, The same we are following here. The token is generated from the `GetTokenAsync` method of `ApplicationTokenProvider.cs` which is located in the security folder of `HumanResourceApplication.Infrastructure`.`
 
 ````js
-       public async Task<KeyValuePair<string, string>> GetTokenAsync(vUser user)
+        public async Task&gtIActionResult&lt Get()
         {
-            var token = TokenProvider.WriteToken(new[]{
-                new Claim(
-                    ClaimTypes.NameIdentifier, user.UserId.ToString()),
-					new Claim(ClaimTypes.Locality,user.LanguageCode),
-					new Claim(CustomClaimTypes.TimeZone,user.ApplicationTimeZoneName)
-                    }, "Web", "User", DateTime.Now.AddDays(2));
-            await UserAccessConfig.SaveTokenAsync(user.UserId, "web", token, LoginUow);
-            return token;
+            var token = await ApplicationTokenProvider.GetTokenAsync(new vUser { UserId = 0, ApplicationTimeZoneName = string.Empty, LanguageCode = string.Empty });
+            return Ok(token);
         }
 ````
 As per the above code the `WriteToken` method will be used by resolving the service in the constructor, which will create a json web token having security key and jsonWebToken which will be used in authorization bearer while making HTTP requests. 

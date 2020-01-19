@@ -38,7 +38,7 @@
                             "childrens": [],
                             "title": "Overview",
                             "path": "overview",
-                            "uri": null
+                            "uri": "/rx-web-core/tours-of-contoso-app/Beginner/overview"
                         },
                         {
                             "childrens": [],
@@ -64,12 +64,7 @@
                             "path": "authentication",
                             "uri": "/rx-web-core/tours-of-contoso-app/Beginner/authentication"
                         },
-                        {
-                            "childrens": [],
-                            "title": "Authorization",
-                            "path": "authorization",
-                            "uri": null
-                        },
+                        
                         {
                             "childrens": [
                                 {
@@ -86,20 +81,21 @@
                                 },
                                 {
                                     "childrens": [],
-                                    "title": "Creating Course Api",
-                                    "path": "creating-course-api",
-                                    "uri": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/course-api"
-                                },
-                                {
-                                    "childrens": [],
-                                    "title": "Creating Student Api",
-                                    "path": "creating-student-api",
-                                    "uri": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/course-api#studentapi"
+                                    "title": "Creating Api",
+                                    "path": "creating-api",
+                                    "uri": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/creating-api"
                                 }
+                               
                             ],
                             "title": "Scaffolding",
                             "path": "scaffolding",
                             "uri": null
+                        },
+                        {
+                            "childrens": [],
+                            "title": "Authorization",
+                            "path": "authorization",
+                            "uri": "/rx-web-core/tours-of-contoso-app/Beginner/authorization"
                         },
                         {
                             "childrens": [],
@@ -111,7 +107,7 @@
                             "childrens": [],
                             "title": "Test The Api",
                             "path": "test-the-api",
-                            "uri": null
+                            "uri": "/rx-web-core/tours-of-contoso-app/Beginner/test-the-api"
                         },
                         {
                             "childrens": [],

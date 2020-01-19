@@ -25,6 +25,7 @@ After the below command is excecuted successfully, it will generate model classe
 Here are the database schema and their respective generated model classes.
 
 ## Course
+Difference between database schema and database models.
 
 **Courses Table**
 
@@ -39,37 +40,37 @@ CREATE TABLE dbo.Courses
 **Generated Course Model**
 
 ````js
-    [Table("Courses",Schema="dbo")]
-    public partial class Course
+[Table("Courses",Schema="dbo")]
+public partial class Course
+{
+    #region CourseId Annotations
+
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    [System.ComponentModel.DataAnnotations.Key]
+	#endregion CourseId Annotations
+
+    public int CourseId { get; set; }
+
+	#region CourseName Annotations
+
+    [Required]
+    [MaxLength(50)]
+	#endregion CourseName Annotations
+
+    public string CourseName { get; set; }
+
+	#region Students Annotations
+
+    [InverseProperty("Course")]
+	#endregion Students Annotations
+
+    public virtual ICollection&ltStudent&gt Students { get; set; }
+
+
+    public Course()
     {
-		#region CourseId Annotations
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [System.ComponentModel.DataAnnotations.Key]
-		#endregion CourseId Annotations
-
-        public int CourseId { get; set; }
-
-		#region CourseName Annotations
-
-        [Required]
-        [MaxLength(50)]
-		#endregion CourseName Annotations
-
-        public string CourseName { get; set; }
-
-		#region Students Annotations
-
-        [InverseProperty("Course")]
-		#endregion Students Annotations
-
-        public virtual ICollection<Student> Students { get; set; }
-
-
-        public Course()
-        {
-			Students = new HashSet<Student>();
-        }
-	}
+		Students = new HashSet&ltStudent&gt();
+    }
+}
 ````
 

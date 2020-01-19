@@ -14,8 +14,5 @@ We will apply unique validation on the CourseName field where CourseName needs t
 
 Add unique validation annotation on the `CourseName` field 
 
-````js
-  [Unique(connection:typeof(IMainDatabaseFacade))]
-  public string CourseName { get; set; }
-````
-
+![Data Validation](Images/data-validation.PNG)
+<p class="image-description">Data Validation.</p>

@@ -8,11 +8,11 @@ linktitle: overview
 
 # Authentication
 
-After creating the Contoso University Application through rxwebcore and understanding the project structure in the earlier section, let's move forward, there comes a major aspect to be implemented named security... we will start with the first and very important standard during login any application i.e authentication.
+For accessing the Api in the application, the first security aspect to be fulfilled is authentication, It is done using JWT Token which is very faster and reliable way. 
+The login api is created in the Authentication Controller while creation of the project. The token is fetched using the `Get` method which will be further passed as the authorization header in the `post` method and further its token will be passed to authorize and access the created api. This is done to prevent brute force attacks.
+For more information about this information, refer the <a class="redirect-link" href="/rx-web-core/security/authentication">Authentication</a> section.
 
-As we all know, `Authentication` is basically determining who is attempting to log in to a secure domain. When you are developing any software application, effective user authentication is the key concern for any developer. Since we are focusing on the <a class="redirect-link" href="https://restfulapi.net/">RESTful API</a>, well thought out and powerful authentication strategy is required to be implemented.
+> The maximum request per Ip to request the get method of the token is 100.
 
-# Authentication method used in Contoso App
-
-As far as authentication method is concerned, token based authentication through JSON Web Token is more preferable when it comes to scalable identity. JWT based authentication is one of the modern and more secure way of authentication. 
-
+![Login Api](Images/login-api.gif)
+<p class="image-description">Accessing The Login Api.</p>
