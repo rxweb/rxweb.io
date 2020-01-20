@@ -196,7 +196,7 @@
 					aria-labelledby="navbarDropdown1">
 
 					<ul class="pl-0" id="rightsidebar-items">
-						{{cloneSidebarLinks | json}}
+					
 						<li class="nav-item" *ngFor="let item of cloneSidebarLinks;let i = index"
 							[class.d-flex]="i == 0" [class.border-none]="i == 0"
 							[class.sidebar-list]="item.subLink?.length > 0">

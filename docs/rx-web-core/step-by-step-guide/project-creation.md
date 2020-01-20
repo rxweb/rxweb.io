@@ -11,20 +11,30 @@ In this section we discuss about the creation of project through rxwebcore cli a
 
 Let's consider a case of `HumanResourceApplication`, this application we will extend in our other sub-modules like multitenancy, multilingual management, data-validation, data-sanitization and many more extensive features with the optimum code in there respective sections of <a class="redirect-link" href="/">EntityFrameworkCore,</a> <a class="redirect-link" href="/"> Security,</a> <a class="redirect-link" href="/">Performance,</a> <a class="redirect-link" href="/">Data validation,</a> <a class="redirect-link" href="/">Data Sanitization.</a> <a class="redirect-link" href="/">Web Api apps.</a>   
 
-> Before firing the below command there must be Database server having two blank databases. the Main database and Log database. The `Main` is used for the application specific data operations and `Log` database is used for Logging related information like Request Log, Exception Log and Entity Log. As the CLI will generate few necessary tables in both database which will be helpful for the project which we will discuss in the end of the section.
-
-Lets understand the rxwebcore CLI command options for creating a project. 
+Lets understand the dotnet CLI command options for creating a project. 
 
 `````js
-rxwebcore --new &ltProject_Name&gt
+dotnet new rxwebapi --name <Project_Name>
 `````
 The above stated command represents that you can create a new project by specifying the project name through the `--new` option, As discussed above Let's create a Human Resource Application project with the name `HumanResourceApplication`, Fire Below command in your command prompt under respective folder where you want to create this project:
 
 `````js
-rxwebcore --new HumanResourceApplication
+dotnet new rxwebapi --name HumanResourceApplication
 `````
 
-By running this command. It will ask connection string of main and log database. The connection string should be in the format of :
+<video width="1100" controls>
+<source src="assets/rxwebcore/Images/create-project-hrms.mp4" type="video/mp4">
+</video>
+
+# Database Setup
+
+> There must be Database server having two blank databases. the Main database and Log database. The `Main` is used for the application specific data operations and `Log` database is used for Logging related information like Request Log, Exception Log and Entity Log. As the CLI will generate few necessary tables in both database which will be helpful for the project which we will discuss in the end of the section. before proceeding, In package manager console run this command:
+
+`````
+rxwebcore --init
+`````
+
+In the `appsettings.json` file set the main and log database connection string:
 <b>Windows based authentication connection string :</b>
 <p style="font-style:italic;">Example :  data source=PC0001\\MSSQL2016;initial catalog=HumanResourceApplicationDb;persist security info=True; MultipleActiveResultSets=True;App=EntityFramework"</p>
 
@@ -34,13 +44,19 @@ By running this command. It will ask connection string of main and log database.
 > One question may arise, <strong>Why I have to provide the both database connection string before creating a Project ?</strong>       
 As the web server and database server is different and both are    powerful in the respective area, hence we don't want to mingle up two things under one hood like database migration activities through the web project.
 
+After providing the connection strings, run the below command which will generate the necessary defaults in the database.
+
+````js
+rxwebcore --database-setup
+````
+
 # Examine the Project Structure
 
 As RxWeb follows the practices of `Clean Architecture`, Based upon this the project structure is divided into several layers of Models, Domain services,Bounded context, Application core and API which adds the practices of seperation of concerns for simplification and maintanable code. 
 
 The project solution contains six projects. They are : 
 
-![Dependency Chart](Images/dependency-chart1.png)
+![Project Dependency](Images/dependency-chart1.png)
 <p class="image-description">Dependency Chart Of The Project.</p> 
 
 ## Created Projects

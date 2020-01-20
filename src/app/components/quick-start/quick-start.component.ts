@@ -17,7 +17,7 @@ export class QuickStartComponent implements OnInit {
 
   showComponent: boolean = false;
 
-  rightSidebarLinks: any = [{ "id": "quick-start", "title": "Quick Start", "subLink": null },{ "id": "quick-start", "title": "Quick Start", "subLink": null }];
+  rightSidebarLinks: any = [{ "id": "quick-start", "title": "Quick Start", "subLink": null },{ "title": "Quick Start", "subLink": null }];
   pageTitle: any = this.rightSidebarLinks[0];
   // titleData: any = { codeContent: {} };
   sticky: boolean = false;
