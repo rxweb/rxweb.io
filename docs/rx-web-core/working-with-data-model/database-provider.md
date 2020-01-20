@@ -46,5 +46,11 @@ As we are aware of the databases which we create in our project and the tables w
 ![Database Examples](Images/database-examples.PNG)
 
 ## Connection Strings
-Setting the connection strings in the application configurations using the connection as it is mentioned in the project creation section. visit the 
+Setting the connection strings in the application configurations using the connection as it is mentioned in the project creation section. 
+
+<b>Windows based authentication connection string :</b>
+<p style="font-style:italic;">Example :  data source=PC0001\\MSSQL2016;initial catalog=HumanResourceApplicationDb;persist security info=True; MultipleActiveResultSets=True;App=EntityFramework"</p>
+
+<b>SQL user based authentication connection string :</b>
+<p style="font-style:italic;">Example : data source=PC0001\\MSSQL2016;initial catalog=HumanResourceApplicationDb;persist security info=True;User Id=sa;Password=Admin;MultipleActiveResultSets=True;App=EntityFramework"</p>
 

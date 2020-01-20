@@ -46,7 +46,7 @@ In the above command by writing --domain indicates its complexity high, Users is
 ````js
     [ApiController]
     [Route("api/[controller]")]
-	public class UsersController : BaseDomainController<User>
+	public class UsersController : BaseDomainController&ltUser&gt
     {
         public UsersController(IUserDomain domain):base(domain) {}
     }
@@ -61,18 +61,18 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
             this.Uow = uow;
         }
 
-        public Task<object> GetAsync(Dictionary&ltstring, object&gt parameters)
+        public Task&ltobject&gt GetAsync(Dictionary&ltstring, object&gt parameters)
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> GetBy(Dictionary&ltstring, object&gt parameters)
+        public Task&ltUser&gt GetBy(Dictionary&ltstring, object&gt parameters)
         {
             throw new NotImplementedException();
         }
         
 
-        public HashSet<string> AddValidation(User entity)
+        public HashSet&ltstring&gt AddValidation(User entity)
         {
             return ValidationMessages;
         }
@@ -83,7 +83,7 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
             await Uow.CommitAsync();
         }
 
-        public HashSet<string> UpdateValidation(User entity)
+        public HashSet&ltstring&gt UpdateValidation(User entity)
         {
             return ValidationMessages;
         }
@@ -94,7 +94,7 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
             await Uow.CommitAsync();
         }
 
-        public HashSet<string> DeleteValidation(Dictionary&ltstring, object&gt parameters)
+        public HashSet&ltstring&gt DeleteValidation(Dictionary&ltstring, object&gt parameters)
         {
             return ValidationMessages;
         }
@@ -106,7 +106,7 @@ The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the
 
         public IMasterUow Uow { get; set; }
 
-        private HashSet<string> ValidationMessages { get; set; } = new HashSet<string>();
+        private HashSet&ltstring&gt ValidationMessages { get; set; } = new HashSet&ltstring&gt();
     }    
 ````
 

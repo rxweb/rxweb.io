@@ -67,7 +67,6 @@ The main database contains all the default tables which are necessary for fulful
 **Global Configurations(Timezone and Locale)**
 The information which is globally used in several components or units of such as modules of the application modules, application locales, application timezones, Object types and objects. 
 
-
 <table class="table table-bordered table-striped">
 <tr><th>Table Name</th><th>Description</th></tr>
 <tr><td>ApplicationObjectTypes</td><td>This table is used to store the key of the application object which is used in the application to store values of entities having less number of reccords,This is beneficial as you dont need to create a seperate table for them and complexity of the database also decreases, For example: gender, status.</td></tr>

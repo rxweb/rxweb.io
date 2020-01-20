@@ -31,26 +31,26 @@ Add `GlobalQueryFilter` annotation above the model class`Country.cs`
     [GlobalQueryFilter(nameof(Country.IsActive))]
     public partial class Country
     {
-		#region CountryId Annotations
+	#region CountryId Annotations
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [System.ComponentModel.DataAnnotations.Key]
-		#endregion CountryId Annotations
+	#endregion CountryId Annotations
 
         public int CountryId { get; set; }
 
-		#region CountryName Annotations
+	#region CountryName Annotations
 
         [MaxLength(10)]
-		#endregion CountryName Annotations
+	#endregion CountryName Annotations
 
         public string ClientName { get; set; }
 
-	    #region ApplicationObject Annotations
+	#region ApplicationObject Annotations
 
         [ForeignKey(nameof(StatusId))]
         [InverseProperty(nameof(HumanResourceApplication.Models.Main.ApplicationObject))]
-		#endregion ApplicationObject Annotations
+	#endregion ApplicationObject Annotations
 
         public virtual ApplicationObject Client { get; set; }
 }

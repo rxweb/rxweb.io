@@ -22,18 +22,18 @@ Used for Memory caching
 Reducing size of files can reduce the payload and increase the application performance. Natively compressed assets such as images(PNG) and files having much smaller size(less than 150-1000 bytes) should not be compressed.     
 
 ````js
-public static void AddPerformance(this IServiceCollection serviceCollection)
+        public static void AddPerformance(this IServiceCollection serviceCollection)
         {
 
             serviceCollection.AddMemoryCache();
             serviceCollection.AddResponseCompression(options =>
             {
-                options.Providers.Add<GzipCompressionProvider>();
+                options.Providers.Add&ltGzipCompressionProvider&gt();
                 options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[] { "image/svg+xml" });
             });
 
 
-            serviceCollection.Configure<GzipCompressionProviderOptions>(options =>
+            serviceCollection.Configure&ltGzipCompressionProviderOptions&gt(options =>
             {
                 options.Level = CompressionLevel.Fastest;
             });

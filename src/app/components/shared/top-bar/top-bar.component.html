@@ -12,7 +12,7 @@
 			<div class="collapse header_left_menu navbar-collapse order-3 order-md-2" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" routerLink="/rx-web-core/step-by-step-guide/overview"
+						<a class="nav-link" routerLink="/rx-web-core/quick-start"
 							routerLinkActive="active">AspNetCore</a>
 					</li>
 					<li class="nav-item">
@@ -196,6 +196,7 @@
 					aria-labelledby="navbarDropdown1">
 
 					<ul class="pl-0" id="rightsidebar-items">
+						{{cloneSidebarLinks | json}}
 						<li class="nav-item" *ngFor="let item of cloneSidebarLinks;let i = index"
 							[class.d-flex]="i == 0" [class.border-none]="i == 0"
 							[class.sidebar-list]="item.subLink?.length > 0">

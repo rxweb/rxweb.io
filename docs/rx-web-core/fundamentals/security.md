@@ -29,7 +29,7 @@ You have to configure allowed Ips in "AllowedIps" key of `appsettings.json`
     "AllowedIps": [
     ]
   
-````  
+````    
 
 In `security.cs` file of the Bootstrap folder of the Api project, The SetIpSafeList method is called which is used to validate the list of IpAddressed which are set in the AllowedIps. 
 
@@ -44,7 +44,7 @@ Handling exception helps you to keep trace of all the errors and exceptions whil
             {
                 errorApp.Run(async context =>
                 {
-                    var errorFeature = context.Features.Get<IExceptionHandlerFeature>();
+                    var errorFeature = context.Features.Get&ltIExceptionHandlerFeature&gt();
                     var exception = errorFeature.Error;
 					var traceId = await exception.LogAsync(context);
                     context.Response.ContentType = "application/json;";

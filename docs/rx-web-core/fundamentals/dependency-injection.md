@@ -23,7 +23,7 @@ The services that are registered into the `ConfigureServices` method of the star
 Using `AddSingleton` method creates a same instance of the services for all the requests, this instance is created when it is called for the first time and is used for lifetime. In our application it is mainly used for getting tenant database information and for retrieval of access permission of the user. It is added using an instance of  `IServiceCollection` instance which we have discussed in the previous section.
 
 ````js
-public static class Singleton
+    public static class Singleton
     {
         public static void AddSingletonService(this IServiceCollection serviceCollection) {
             serviceCollection.AddSingleton(typeof(TenantDbConnectionInfo));
@@ -40,25 +40,23 @@ using `AddScoped` method creates a service instance based upon the client reques
 > The ContextService and DomainService  which are added in Singleton class are automatically added into it whenever bounded context is created using CLI command.
 
 ````js
-  public static class ScopedExtension
+    public static class ScopedExtension
     {
 
         public static void AddScopedService(this IServiceCollection serviceCollection)
         {
-            serviceCollection.AddScoped<IRepositoryProvider, RepositoryProvider>();
-            serviceCollection.AddScoped<ITokenAuthorizer, TokenAuthorizer>();
-            serviceCollection.AddScoped<ILocalizationInfo, LocalizationInfo>();
-            serviceCollection.AddScoped<IModelValidation, ModelValidation>();
-			serviceCollection.AddScoped<IAuditLog, AuditLog>();
-			serviceCollection.AddScoped<IApplicationTokenProvider, ApplicationTokenProvider>();
+            serviceCollection.AddScoped&ltIRepositoryProvider, RepositoryProvider&gt();
+            serviceCollection.AddScoped&ltITokenAuthorizer, TokenAuthorizer&gt();
+            serviceCollection.AddScoped&ltILocalizationInfo, LocalizationInfo&gt();
+            serviceCollection.AddScoped&ltIModelValidation, ModelValidation&gt();
+	    serviceCollection.AddScoped&ltIAuditLog, AuditLog&gt();
+	    serviceCollection.AddScoped&ltIApplicationTokenProvider, ApplicationTokenProvider&gt();
 
             #region ContextService
 
-                        serviceCollection.AddScoped<ILoginContext, LoginContext>();
-            serviceCollection.AddScoped<ILoginUow, LoginUow>();
+            serviceCollection.AddScoped&ltILoginContext, LoginContext&gt();
+            serviceCollection.AddScoped&ltILoginUow, LoginUow&gt();
             #endregion ContextService
-
-
 
             #region DomainService
             
