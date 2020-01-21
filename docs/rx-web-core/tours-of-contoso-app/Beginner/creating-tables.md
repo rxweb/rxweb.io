@@ -28,9 +28,18 @@ Before starting anything, you need to create the database (if its not created). 
 
 As previously mentioned, we are creating a `Contoso University application`, `Courses` and `Students` table are a major part of this application. `CREATE TABLE` keyword is used at the beginning of the statement which shows that you are interested in designing a new table. The name of the table should be unique based on the data you are planning to store on a table.
 
-You can download the script file from <a class="redirect-link" href="#">here</a>.
+## Some Additional Resources
 
-## Courses Table
+<ul class="bullet-list">
+<li>
+<span style="text-decoration:underline;">Download The Main Database Script <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/SQL%20Scripts/main.sql">Download the script</a></span>.
+</li>
+<li>
+<span style="text-decoration:underline;">Download The Log Database Script <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/SQL%20Scripts/log.sql">Download the script</a></span>.
+</li>
+</ul>
+
+## Courses Table  
 
 Let us create a Courses table in the above created database which contains only 2 columns like CourseId(int) and CourseName(varchar). Here CourseId is defined as primary key with auto increment of 1.
 
@@ -52,6 +61,12 @@ Here is a sample "Courses" table:
 <tr><td>4</td><td>CA</td></tr>
 <tr><td>5</td><td>MBA</td></tr>
 </table>
+
+<ul class="bullet-list">
+<li>
+<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/SQL%20Scripts/main.sql#L1678-L1687">View The Course Table Script</a></span>.
+</li>
+</ul>
 
 ## Students Table
 
@@ -79,3 +94,8 @@ Here is a sample "Students" table:
 <tr><td>3</td><td>Scarlett Joan</td><td>1003</td><td>19</td><td>Female</td><td>scarlett.joan@contoso.com</td><td>3</td></tr>
 </table>
 
+<ul class="bullet-list">
+<li>
+<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/SQL%20Scripts/main.sql#L1687-L1699">View The Student Table Script</a></span>.
+</li>
+</ul>

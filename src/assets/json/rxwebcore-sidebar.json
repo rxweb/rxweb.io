@@ -3,7 +3,7 @@
         {
             "title": "Quick Start",
             "path": "quick-start",
-            "uri": "/rx-web-core/quick-start"
+            "uri": "/rx-web-core/quick-start?mainTab=template"
         },
         {
             "childrens": [

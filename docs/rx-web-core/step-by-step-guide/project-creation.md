@@ -14,8 +14,9 @@ Let's consider a case of `HumanResourceApplication`, this application we will ex
 Lets understand the dotnet CLI command options for creating a project. 
 
 `````js
-dotnet new rxwebapi --name <Project_Name>
+dotnet new rxwebapi --name &ltProject_Name&gt
 `````
+
 The above stated command represents that you can create a new project by specifying the project name through the `--new` option, As discussed above Let's create a Human Resource Application project with the name `HumanResourceApplication`, Fire Below command in your command prompt under respective folder where you want to create this project:
 
 `````js
@@ -23,7 +24,7 @@ dotnet new rxwebapi --name HumanResourceApplication
 `````
 
 <video width="1100" controls>
-<source src="assets/rxwebcore/Images/create-project-hrms.mp4" type="video/mp4">
+<source src="assets/rxwebcore/Images/create-project-hrms1.mp4" type="video/mp4">
 </video>
 
 # Database Setup
@@ -46,9 +47,13 @@ As the web server and database server is different and both are    powerful in t
 
 After providing the connection strings, run the below command which will generate the necessary defaults in the database.
 
-````js
+`````js
 rxwebcore --database-setup
-````
+`````
+
+<video width="1100" controls>
+<source src="assets/rxwebcore/Images/database-setup.mp4" type="video/mp4">
+</video>
 
 # Examine the Project Structure
 

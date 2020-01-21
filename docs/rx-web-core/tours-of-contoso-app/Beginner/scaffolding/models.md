@@ -74,3 +74,9 @@ public partial class Course
 }
 ````
 
+<ul class="bullet-list">
+<li>
+<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/ContosoApplication.Models/DbEntities/Main/Course.cs">View The Course Model</a></span>.
+</li>
+</ul>
+

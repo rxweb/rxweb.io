@@ -50,6 +50,7 @@ Based on the above created view, below result set will be fetched.
 <tr><td>1003</td><td>Scarlett Joan</td><td>scarlett.joan@contoso.com</td><td>MBBS</td></tr>
 </table>
 
+
 **Displaying any specific record while editing**
 
 While editting a record, we may need to display complete or some of the information for a specific record only. Here separate views are made for displaying list and editing a particular record because their might be a situation where there is a difference in displaying those columns. 
@@ -99,4 +100,9 @@ Based on the above created view, below result set will be fetched.
 <tr><td>5</td><td>MBA</td></tr>
 </table>
 
-For all the above views, you can download the script file from <a class="redirect-link" href="#">here</a>.
+<ul class="bullet-list">
+<li>
+<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/SQL%20Scripts/main.sql#L1704-L1728">View The Student Table Script</a></span>.
+</li>
+</ul>
+

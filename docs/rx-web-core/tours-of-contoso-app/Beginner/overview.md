@@ -35,11 +35,3 @@ In this contoso application tour, you will learn:
   <li class="overview-nav-item"><a>Deploying the API</a></li>
 </ul>
 
-Since the very begining of project creation, RxWebCore provides some needful security measures which are crucial in terms of maintaining and controlling access to any web application. Security is a major aspect of any application that combins physical, technological, and policy related decision. To assure you the security related queries, rxwebcore follows top OWASP security standards including:
-
-<ul>
-  <li class="overview-nav-item">Preventing open redirection attacks</li>
-  <li class="overview-nav-item">Preventing cross-site scripting attack</li>
-  <li class="overview-nav-item">Enabling cross-origin requests</li>
-</ul>
-

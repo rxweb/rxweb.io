@@ -47,6 +47,11 @@ The generated Master DbContext with its added model classes is as below:
     {
     }
 ````
+<ul class="bullet-list">
+<li>
+<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/ContosoApplication.BoundedContext/DbContext/Main/MasterContext.cs">View The Generated Bounded Context</a></span>.
+</li>
+</ul>
 
 # Unit of Work
 Along with the generation of the bounded context, it generates a Uow(unit of work) class of its respective module, the main purpose the unit of work class holds is to manage the state of the database objects using its provided methods and execute necessary changes to the database in one go after the data operation is successfully done, besides this it also performs data entity auditing.
@@ -63,3 +68,10 @@ The Uow class of the master module is as below:
 ````
 
 The above Uow class is created in the main folder of the ContosoApplication.UnitOfWork project. Once the database connection is resolved using the bounded context, the uow is responsible for handling data activities which are done using the Apis which we will create further.
+
+<ul class="bullet-list">
+<li>
+<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/ContosoApplication.UnitOfWork/Main/MasterUow.cs">View The Generated Unit Of Work</a></span>.
+</li>
+</ul>
+

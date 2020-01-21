@@ -29,6 +29,12 @@ The CoursesController which is generated is as follows:
     }
 ````
 
+<ul class="bullet-list">
+<li>
+<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/ContosoApplication.Api/Controllers/Api/MasterModule/CoursesController.cs">View The Course Api</a></span>.
+</li>
+</ul>
+
 # Student Api
 Let's create another controller for basic operations for the Student entity using the below command:
 
@@ -50,5 +56,11 @@ The StudentsController which is generated is as follows:
 
     }
 ````    
+
+<ul class="bullet-list">
+<li>
+<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/ContosoApplication.Api/Controllers/Api/MasterModule/StudentsController.cs">View The Course Api</a></span>.
+</li>
+</ul>
 
 This controllers manages the basic CRUD operations done on the course entity without involving any complexity into it. For more information about methods and accesing basic api, visit <a class="redirect-link" href="/rx-web-core/developing-the-api/basic-controller">Basic Api</a>

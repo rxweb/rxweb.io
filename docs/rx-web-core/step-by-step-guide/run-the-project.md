@@ -9,27 +9,19 @@ linktitle:buildtheproject
 
 # Local
 
-## Login The Application : 
+## Test The Authentication Api : 
 After the project solution is successfully generated as per the mentioned project structure. After the project is successfully build, let's access the authentication api.
 
-1) Open postman >  new request >  select request type as post > pass the url having route `api/Authentication`
+The first step is to hit the authentication api get method, it should be authorized through inserting the value in the authorize button and then after the post method is called. After the new token is generated it is authorized using the authorize button. 
 
-For Eg : https://localhost:**Your_generated_port_number**/api/Authentication 
+> This is done to prevent brute force attacks.
 
-2) In body pass data in the form of `raw` of type JSON(application/json) > pass UserName and Password as json object as shown below: 
+<video width="1100" controls>
+<source src="assets/rxwebcore/Images/run-project-hrms.mp4" type="video/mp4">
+</video>
 
-> These are the login credentails of the default user inserted in the `Users` table while creation of the database.
+Once the user is successfully logged in, the api of the applications can be accessed. For accessing the api, refer <a class="redirect-link" href="/rxwebcore/basiccontroller#acessingtheapi">Accessing The Api
+</a>
 
-![Login Request](Images/login-request.PNG)
-
-3) Click on Send Button
-
-This will hit the `PostLogin` method of Authentication controller which will generate a `JWT web token` which will be further used to make requests to the APIs which are created with HTTPStatus Code 200.  
-
-![Login Result](Images/login-result.PNG)
-
-For creating API and accessing it, <a class="redirect-link" href="/rx-web-core/developing-the-api/basic-controller">Accessing The Api</a>.  
-# Docker
-
-Coming Soon
-
+# Docker 
+Coming soon....

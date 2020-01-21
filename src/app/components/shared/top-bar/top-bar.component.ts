@@ -31,7 +31,7 @@ export class TopBarComponent implements OnInit {
   titleData: any = { codeContent: {} };
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private router: Router, private route: ActivatedRoute) {
     this.applicationBroadCaster.topSubscriber.subscribe(t => {
-      debugger;
+
       if (t.rightSidebarLinks) {
         this.sidebarLinks = t.rightSidebarLinks;
       }
@@ -57,11 +57,10 @@ export class TopBarComponent implements OnInit {
               })
             }
           })
-         
+
         }
 
       }
-      console.log(this.cloneSidebarLinks);
     })
   }
 

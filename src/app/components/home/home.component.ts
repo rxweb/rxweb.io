@@ -250,7 +250,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           for (i = 0; i < removewords.length; i++) {
             removewords[i].classList.add("d-none");
           }
-          document.getElementById("doc-button-link").style.display = "block";
+          document.getElementById("doc-button-link").style.opacity = "1";
           this.loadAnimatedText();
 
           //this.timeOutId = setTimeout(() => { document.getElementById("word-second-animate").style.opacity = "1" }, 200);
