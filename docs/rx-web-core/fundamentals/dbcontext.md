@@ -16,12 +16,12 @@ This instance is used to add the database context of the sql context for each da
     {
         public static void AddDbContextService(this IServiceCollection serviceCollection)
         {
-		#region SqlDbContext
-		serviceCollection.AddDbContext<MainSqlDbContext>();
-        serviceCollection.AddScoped<IMainDatabaseFacade, MainSqlDbContext>();
-        serviceCollection.AddDbContext<LogSqlDbContext>();
-        serviceCollection.AddScoped<ILogDatabaseFacade, LogSqlDbContext>();
-        #endregion SqlDbContext         
+	    #region SqlDbContext
+	    serviceCollection.AddDbContext&ltMainSqlDbContext&gt();
+            serviceCollection.AddScoped&ltIMainDatabaseFacade, MainSqlDbContext&gt();
+            serviceCollection.AddDbContext&ltLogSqlDbContext&gt();
+            serviceCollection.AddScoped&ltILogDatabaseFacade, LogSqlDbContext&gt();
+            #endregion SqlDbContext         
         }
     }
 ````

@@ -29,7 +29,8 @@ export class WhatsNewComponent implements OnInit {
         {"id":"disable","title":"1.8.0","subLink":null}
   ];
   pageTitle:any = {"title":"What's New","subLink":null}
-    constructor(private applicationBroadcaster: ApplicationBroadcaster) {      
+    constructor(private applicationBroadcaster: ApplicationBroadcaster) {  
+          
      }
 
      activeTab = 'search';
@@ -45,7 +46,7 @@ export class WhatsNewComponent implements OnInit {
      }
 
     ngOnInit() {
-        this.applicationBroadcaster.topSubject.next(this.pageTitle);
+        this.applicationBroadcaster.topSubject.next(this.rightSidebarLinks);
         this.showComponent = true;
     }
     @HostListener('window:scroll', ['$event'])

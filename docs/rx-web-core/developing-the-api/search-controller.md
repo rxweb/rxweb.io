@@ -39,24 +39,24 @@ In this example  `MainSqlDbContext` is the context of `UsersModule` which contai
 which is executing while fetching the search result which are retrieved by passing searchParams as dictionary object in the post method.
 
 ````js
-    [ApiController]
-	[Route("api/[controller]")]
-    public class UsersSearchController : ControllerBase
+[ApiController]
+[Route("api/[controller]")]
+public class UsersSearchController : ControllerBase
     {
         private IDbContextManager<MainSqlDbContext> DbContextManager { get; set; }
         public UsersSearchController(IDbContextManager<MainSqlDbContext> dbContextManager) {
             DbContextManager = dbContextManager;
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody]Dictionary<string,string> searchParams)
-        {
-            var spParameters = new object[2];
-            spParameters[0] = new SqlParameter() { ParameterName = "Query", Value = searchParams["query"] };
-            spParameters[1] = new SqlParameter() { ParameterName = "UserId", Value = UserClaim.UserId };
-            var result = await DbContextManager.SqlQueryAsync<StoreProcResult>("EXEC [dbo].spSearchUsers @Query, @UserId", spParameters);
-            return Ok(result.SingleOrDefault()?.Result);
-        }
     }
+
+    [HttpPost]
+    public async Task<IActionResult> Post([FromBody]Dictionary<string,string> searchParams)
+    {
+        var spParameters = new object[2];
+        spParameters[0] = new SqlParameter() { ParameterName = "Query", Value = searchParams["query"] };
+        spParameters[1] = new SqlParameter() { ParameterName = "UserId", Value = UserClaim.UserId };
+        var result = await DbContextManager.SqlQueryAsync<StoreProcResult>("EXEC [dbo].spSearchUsers @Query, @UserId", spParameters);
+        return Ok(result.SingleOrDefault()?.Result);
+    }
+}
 ````   
 

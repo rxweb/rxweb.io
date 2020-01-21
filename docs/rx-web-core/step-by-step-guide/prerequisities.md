@@ -27,10 +27,10 @@ As the cli is build on .net core and this is helpful for .net core projects so b
 </ul>
 
 # Installation
-Let's install the <a class="redirect-link" href="https://www.nuget.org/packages/RxWebCore/">rxwebcore</a> global tool using dotnet cli. For more information about the global dotnet tools visit <a class="redirect-link" href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">.Net core global tools overview</a>.
+Let's install the <a class="redirect-link" href="https://www.nuget.org/packages/clean.architecture.aspnetcore/1.0.0">dotnet</a> global tool using dotnet cli. For more information about the global dotnet tools visit <a class="redirect-link" href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">.Net core global tools overview</a>.
 
 `````
-dotnet tool install --global rxwebcore
+dotnet new --install clean.architecture.aspnetcore::1.0.0
 `````
 
 

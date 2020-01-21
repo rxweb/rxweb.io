@@ -45,10 +45,10 @@ As per this controller :
 # Example
 
 ````js
-    [ApiController]
-    [Route("api/[controller]")]
-	
-	public class ResourceLookUpsController : BaseLookupController
+[ApiController]
+[Route("api/[controller]")]
+public class ResourceLookUpsController : BaseLookupController
+{
     {
         public ResourceLookUpsController(IResourceLookUpUow uow):base(uow) {}
 

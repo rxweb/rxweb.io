@@ -1,0 +1,59 @@
+<div id="wrapper" *ngIf="showComponent">
+  <div id="tabs" #tabs>
+    <div class="content">
+      <h1>Quick Start</h1>
+      <div class="title-bar">
+        
+        <p>You can create the project through <span style="text-decoration: underline;">Project Template or Dotnet cli</span>. Let's jump in to see <span style="text-decoration: underline;">36 Second video of project creation.</span> </p>
+
+      </div>
+      <div class="bg-white border-radius whats-new-links">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="hpanel">
+              <div class="tab-content fade show">
+                <div class="tab-pane panel-body validation-tab active">
+                  <div class="row page-section" id="examples">
+                    <div class='col-lg-12'>
+                      <ul class="nav nav-tabs">
+                        <li [class.active]="mainTab=='template'" (click)="mainTab='template'"><a>Template</a></li>
+                        <li [class.active]="mainTab=='cli'" (click)="mainTab='cli'"><a>CLI</a></li>
+
+                      </ul>
+                      <div class="tab-content p-4">
+
+                        <div class="tab-pane active" *ngIf="mainTab=='template'">
+
+                          <video width="1100" controls>
+                            <source src="assets/rxwebcore/Images/quick-start-template.mp4" type="video/mp4">
+
+                          </video>
+
+                          <p style="font-size: 19px;">Download the Clean Architecture template from <b> <a class="redirect-link" href="https://marketplace.visualstudio.com/items?itemName=AjayOjha.rxwebcleanarchitecture">visual studio Marketplace</a></b></p>
+                        </div>
+                        <div class="tab-pane active" *ngIf="mainTab=='cli'">
+
+                          <video width="1100" controls>
+                            <source src="assets/rxwebcore/Images/quick-start-cli.mp4"    type="video/mp4">
+
+                          </video>
+                         <p style="font-size: 19px;">Install the dotnet CLI of <b><a class="redirect-link" href="https://www.nuget.org/packages/clean.architecture.aspnetcore/1.0.0">clean architecture</a> of Asp.net core</b></p>
+                        </div>
+                      </div>
+
+                      <p style="font-size: 19px;">You can use rxwebcore cli for code generation, goto next to know more about <a class="redirect-link" href="/rx-web-core/step-by-step-guide/prerequisities">this</a> 😃.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
+    </div>
+ 
+  </div>
+ 
+</div>

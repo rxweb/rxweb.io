@@ -14,10 +14,10 @@ The startup class of ASP.Net core apps is the start of the application which is 
 ConfigureServices is the method which is used while the runtime and this method is used to add services. You can register a service in configure services using Dependency Injection or application services. It performs the role of adding services of 
 <ul class="bullet-list">
 <li><a class="redirect-link" href="/rx-web-core/fundamentals/configuration-options">Configuration Options</a></li>
-<li><a class="redirect-link" href="">Dependency Injection</a></li>
-<li><a class="redirect-link" href="">Security</a></li>
-<li><a class="redirect-link" href="">Performance</a></li>
-<li><a class="redirect-link" href="">DbContext</a></li>
+<li><a class="redirect-link" href="/rx-web-core/fundamentals/dependency-injection">Dependency Injection</a></li>
+<li><a class="redirect-link" href="/rx-web-core/fundamentals/security">Security</a></li>
+<li><a class="redirect-link" href="/rx-web-core/fundamentals/performance">Performance</a></li>
+<li><a class="redirect-link" href="/rx-web-core/fundamentals/dbcontext">DbContext</a></li>
 </ul>
 
 ````js

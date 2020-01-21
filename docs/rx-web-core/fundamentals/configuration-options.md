@@ -19,8 +19,8 @@ They are configured using the `IServiceCollection` instance which retrieves the 
     public static class ConfigurationOptions
     {
         public static void AddConfigurationOptions(this IServiceCollection serviceCollection, IConfiguration configuration) {
-            serviceCollection.Configure<DatabaseConfig>(configuration.GetSection("Database"));
-			serviceCollection.Configure<SecurityConfig>(configuration.GetSection("Security"));
+            serviceCollection.Configure&ltDatabaseConfig&gt(configuration.GetSection("Database"));
+			serviceCollection.Configure&ltSecurityConfig&gt(configuration.GetSection("Security"));
         }
     }
 ````

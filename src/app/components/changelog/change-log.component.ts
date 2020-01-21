@@ -25,7 +25,7 @@ export class ChangeLogComponent implements OnInit {
     }
     ngOnInit() {
         this.applicationBroadcaster.topSubject.next(this.pageTitle);
-        
+            
         this.showComponent = true;
     }
 

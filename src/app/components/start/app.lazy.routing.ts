@@ -17,7 +17,7 @@ import { ContributorsComponent } from "../contributors/contributors-component";
 import { ComingSoonComponent } from "../coming-soon/coming-soon.component";
 import { LinkItemsComponent } from "../side-bar-link-items/link-items/link-item.component";
 import { AngularHomeComponent } from "../angular-home-page/angular-home.component";
-import { AspNetCoreGettingStartedComponent } from "../aspnetcore-getting-started/aspnetcore-getting-started.component";
+import { QuickStartComponent } from "../quick-start/quick-start.component";
 
 
 
@@ -38,8 +38,8 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'getting-started', component: GettingStartedComponent
   },
   {
-    path: 'quick-start',
-    component: AspNetCoreGettingStartedComponent,
+    path: 'rx-web-core/quick-start',
+    component: QuickStartComponent,
   },
   // {
   //   path: 'changelog', component: TextPageComponent

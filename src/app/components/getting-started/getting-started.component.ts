@@ -22,13 +22,14 @@ export class GettingStartedComponent implements OnInit {
   reactiveFormBasedValidation: string = "Example";
   templateFormBasedValidation: string = "Example";
   modelBasedFormValidation: string = "Example";
-  titleData: any = { codeContent: {} };
+  //titleData: any = { codeContent: {} };
   sticky: boolean = false;
   templateDrivenType: string = "directives";
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private http: Http
   ) {
-    this.applicationBroadCaster.topSubscriber.subscribe(t => {
-      this.titleData = t;
+    this.applicationBroadCaster.topSubject.subscribe(t=>{
+      this.rightSidebarLinks = t.rightSidebarLinks;
+     
     })
   }
 

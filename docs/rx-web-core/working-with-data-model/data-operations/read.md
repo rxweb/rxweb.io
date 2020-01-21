@@ -18,20 +18,19 @@ Here are the examples of repository methods which `rxwebcore` using UserModule w
 It is used when you want to retreive all the records of the entity.
 
 ````js
-	public IEnumerable<User> Get() 
-	{
-		return UserUow.Repository<User>().All();
-    }
+public IEnumerable&ltUser&gt Get() 
+{
+  return UserUow.Repository&ltUser&gt().All();
+}
 ````
-
 
 # AllAsync
 It is used when you want to retreive all the records of the entity asynchronously.
 
 ````js
-    public async Task<IEnumerable<User>> AllAsync()
+    public async Task&ltIEnumerable&ltUser&gt&gt AllAsync()
     {
-        return await UserUow.Repository<User>().AllAsync();
+        return await UserUow.Repository&ltUser&gt().AllAsync();
     }
 ````
 
@@ -39,9 +38,9 @@ It is used when you want to retreive all the records of the entity asynchronousl
 It is used when you want include data of the reference entity in the result set. 
 
 ````js
-    public IEnumerable<User> AllInclude()
+    public IEnumerable&ltUser&gt AllInclude()
     {
-        return UserUow.Repository<User>().AllInclude(t => t.CompanyMaster);
+        return UserUow.Repository&ltUser&gt().AllInclude(t =&gt t.CompanyMaster);
     }
 ````
 
@@ -49,9 +48,9 @@ It is used when you want include data of the reference entity in the result set.
 It is used when you want include data of the reference entity in the result set asynchronously. 
 
 ````js
-    public async Task<IEnumerable<User>> AllIncludeAsync()
+    public async Task&ltIEnumerable&ltUser&gt&gt AllIncludeAsync()
     {
-        return await UserUow.Repository<User>().AllInclude(t => t.CompanyMaster);
+        return await UserUow.Repository&ltUser&gt().AllInclude(t =&gt t.CompanyMaster);
     }
 ````
 
@@ -61,7 +60,7 @@ It is used to get count of data in the list of entity based upon condition.
 ````js
     public int Count()
     {
-        var count = UserUow.Repository<User>().Count(a => a.LastName == "Christian");
+        var count = UserUow.Repository&ltUser&gt().Count(a =&gt a.LastName == "Christian");
         return count;
     }
 ````
@@ -70,18 +69,18 @@ It is used to get count of data in the list of entity based upon condition.
 It is used to find the element based upon condition.
 
 ````js
-    public IEnumerable<User> FindBy()
+    public IEnumerable&ltUser&gt FindBy()
     {
-        return UserUow.Repository<User>().FindBy(t => t.LastName == "Christian"); ;
+        return UserUow.Repository&ltUser&gt().FindBy(t =&gt t.LastName == "Christian"); ;
     }
 ````    
 # FindByAsync
 It is used to find the element based upon condition asynchronously.
 
 ````js
-    public async Task<IEnumerable<User>> FindByAsync()
+    public async Task&ltIEnumerable&ltUser&gt&gt FindByAsync()
     {
-        return await UserUow.Repository<User>().FindByAsync(t => t.LastName == "Doe");
+        return await UserUow.Repository&ltUser&gt().FindByAsync(t =&gt t.LastName == "Doe");
     }
 ````
 
@@ -89,9 +88,9 @@ It is used to find the element based upon condition asynchronously.
 It is used to find the element based upon condition and include data of reference entity into the resultset.
 
 ````js
-    public IEnumerable<User> FindByInclude()
+    public IEnumerable&ltUser&gt FindByInclude()
     {
-        return UserUow.Repository<User>().FindByInclude(t => t.LastName == "Doe", t => t.CompanyMaster);
+        return UserUow.Repository&ltUser&gt().FindByInclude(t =&gt t.LastName == "Doe", t =&gt t.CompanyMaster);
     }
 ````
 
@@ -99,9 +98,9 @@ It is used to find the element based upon condition and include data of referenc
 It is used to find the element based upon condition and include data of reference entity into the resultset asynchronously.
 
 ````js
-    public async Task<IEnumerable<User>> FindByIncludeAsync()
+    public async Task&ltIEnumerable&ltUser&gt&gt FindByIncludeAsync()
     {
-        return await UserUow.Repository<User>().FindByIncludeAsync(t => t.LastName == "Doe", t => t.CompanyMaster);
+        return await UserUow.Repository&ltUser&gt().FindByIncludeAsync(t =&gt t.LastName == "Doe", t =&gt t.CompanyMaster);
     }
 ````
 
@@ -111,7 +110,7 @@ It is used to find element based upon the key.
 ````js
     public User FindByKey()
     {
-        return UserUow.Repository<User>().FindByKey(2);
+        return UserUow.Repository&ltUser&gt().FindByKey(2);
     }
 ````
 
@@ -119,9 +118,9 @@ It is used to find element based upon the key.
 It is used to find element based upon the key asynchronously.
 
 ````js
-    public async Task<User> FindByKeyAsync()
+    public async Task&ltUser&gt FindByKeyAsync()
     {
-        return await UserUow.Repository<User>().FindByKeyAsync(2);
+        return await UserUow.Repository&ltUser&gt().FindByKeyAsync(2);
     }
 ````
 
@@ -131,7 +130,7 @@ It retrieves the first element in the list based on the given condition.
 ````js
     public User First()
     {
-        return UserUow.Repository<User>().First(a => a.LastName == "Doe");
+        return UserUow.Repository&ltUser&gt().First(a =&gt a.LastName == "Doe");
     }
 ````
 
@@ -139,9 +138,9 @@ It retrieves the first element in the list based on the given condition.
 It retrieves the first element in the list which fulfiles the given condition asynchronously.
 
 ````js
-    public async Task<User> FirstAsync()
+    public async Task&ltUser&gt FirstAsync()
     {
-        return await UserUow.Repository<User>().FirstAsync(a => a.LastName == "Doe");
+        return await UserUow.Repository&ltUser&gt().FirstAsync(a =&gt a.LastName == "Doe");
     }
 ````
 
@@ -151,16 +150,16 @@ It retrieves the first element in the list which fulfiles the given condition if
 ````js
     public User FirstOrDefault()
     {
-        return UserUow.Repository<User>().FirstOrDefault(a => a.LastName == "Doe");
+        return UserUow.Repository&ltUser&gt().FirstOrDefault(a =&gt a.LastName == "Doe");
     }
 ````
 # FirstOrDefaultAsync
 It retrieves the first element in the list which fulfiles the given condition if not then returns the default value as resultset asynchronously.
 
 ````js
-    public async Task<User> FirstOrDefaultAsync()
+    public async Task&ltUser&gt FirstOrDefaultAsync()
     {
-        return await UserUow.Repository<User>().FirstOrDefaultAsync(a => a.LastName == "Doe");
+        return await UserUow.Repository&ltUser&gt().FirstOrDefaultAsync(a =&gt a.LastName == "Doe");
     }
 ````
 
@@ -170,7 +169,7 @@ It retrieves the last element in the list which fulfiles the given condition.
 ````js
     public User Last()
     {
-        return UserUow.Repository<User>().Last(a => a.LastName == "Christian");
+        return UserUow.Repository&ltUser&gt().Last(a =&gt a.LastName == "Christian");
     }
 ````
 
@@ -178,9 +177,9 @@ It retrieves the last element in the list which fulfiles the given condition.
 It retrieves the last element in the list which fulfiles the given condition asynchronously.
 
 ````js
-    public async Task<User> LastAsync()
+    public async Task&ltUser&gt LastAsync()
     {
-        return await UserUow.Repository<User>().LastAsync(a => a.LastName == "Christian");
+        return await UserUow.Repository&ltUser&gt().LastAsync(a =&gt a.LastName == "Christian");
     }
 ````
 
@@ -190,7 +189,7 @@ It retrieves the last element in the list which fulfiles the given condition if 
 ````js
     public User LastOrDefault()
     {
-        return UserUow.Repository<User>().LastOrDefault(a => a.LastName == "Doe");
+        return UserUow.Repository&ltUser&gt().LastOrDefault(a =&gt a.LastName == "Doe");
     }
 ````
 
@@ -198,9 +197,9 @@ It retrieves the last element in the list which fulfiles the given condition if 
 It retrieves the last element in the list which fulfiles the given condition if not then returns the default value as resultset asynchronously.
 
 ````js
-    public async Task<User> LastOrDefaultAsync()
+    public async Task&ltUser&gt LastOrDefaultAsync()
     {
-        return await UserUow.Repository<User>().LastOrDefaultAsync(a => a.LastName == "Doe");
+        return await UserUow.Repository&ltUser&gt().LastOrDefaultAsync(a =&gt a.LastName == "Doe");
     }
 ````
 
@@ -208,9 +207,9 @@ It retrieves the last element in the list which fulfiles the given condition if 
 It is used to design a raw query to retrieve the required resultset.
 
 ````js
-    public IQueryable<User> Queryable()
+    public IQueryable&ltUser&gt Queryable()
     {
-        return UserUow.Repository<User>().Queryable().Where(a => a.LastName == "Doe");
+        return UserUow.Repository&ltUser&gt().Queryable().Where(a =&gt a.LastName == "Doe");
     }
 ````
 
@@ -220,7 +219,7 @@ It retrieves the single element in the list which fulfiles the given condition.
 ````js
     public User Single()
     {
-        return UserUow.Repository<User>().Single(a => a.FirstName == "John");
+        return UserUow.Repository&ltUser&gt().Single(a =&gt a.FirstName == "John");
     }
 ````
 
@@ -228,9 +227,9 @@ It retrieves the single element in the list which fulfiles the given condition.
 It retrieves the single element in the list which fulfiles the given condition asynchronously.
 
 ````js
-    public async Task<User> SingleAsync()
+    public async Task&ltUser&gt SingleAsync()
     {
-        return await UserUow.Repository<User>().SingleAsync(a => a.FirstName == "John");
+        return await UserUow.Repository&ltUser&gt().SingleAsync(a =&gt a.FirstName == "John");
     }
 ````
 
@@ -240,7 +239,7 @@ It retrieves the single element in the list which fulfiles the given condition i
 ````js
     public User SingleOrDefault()
     {
-        return UserUow.Repository<User>().SingleOrDefault(a => a.FirstName == "terrance");
+        return UserUow.Repository&ltUser&gt().SingleOrDefault(a =&gt a.FirstName == "terrance");
     }
 ````
 
@@ -248,9 +247,9 @@ It retrieves the single element in the list which fulfiles the given condition i
 It retrieves the single element in the list which fulfiles the given condition if not then returns the default value as resultset asynchronously.
 
 ````js
-    public async Task<User> SingleOrDefaultAsync()
+    public async Task&ltUser&gt SingleOrDefaultAsync()
     {
-        return await UserUow.Repository<User>().SingleOrDefaultAsync(a => a.FirstName == "terrance");
+        return await UserUow.Repository&ltUser&gt().SingleOrDefaultAsync(a =&gt a.FirstName == "terrance");
     }
 ````
 

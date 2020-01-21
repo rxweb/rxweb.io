@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ApplicationBroadcaster } from "@rx/core";
 import { Router, ActivatedRoute } from "@angular/router";
+import { isArray } from 'util';
 
 @Component({
   selector: 'app-top-bar',
@@ -30,7 +31,13 @@ export class TopBarComponent implements OnInit {
   titleData: any = { codeContent: {} };
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private router: Router, private route: ActivatedRoute) {
     this.applicationBroadCaster.topSubscriber.subscribe(t => {
-      this.sidebarLinks = t.rightSidebarLinks;
+      debugger;
+      if (t.rightSidebarLinks) {
+        this.sidebarLinks = t.rightSidebarLinks;
+      }
+      else {
+        this.sidebarLinks = t;
+      }
       this.titleData = t;
       this.gitEditUrl = t.gitDocPath;
       if (this.sidebarLinks) {
@@ -39,18 +46,22 @@ export class TopBarComponent implements OnInit {
             this.titleData.title = this.sidebarLinks[0].title;
         }
         this.cloneSidebarLinks = [];
-        this.sidebarLinks.forEach(t => {
-          this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
+        if (isArray(this.sidebarLinks)) {
+          this.sidebarLinks.forEach(t => {
+            this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
 
-          if (t.subLink && t.subLink.length > 0) {
-            t.subLink.forEach(x => {
-              this.cloneSidebarLinks.push(x);
+            if (t.subLink && t.subLink.length > 0) {
+              t.subLink.forEach(x => {
+                this.cloneSidebarLinks.push(x);
 
-            })
-          }
-        })
+              })
+            }
+          })
+         
+        }
+
       }
-
+      console.log(this.cloneSidebarLinks);
     })
   }
 
