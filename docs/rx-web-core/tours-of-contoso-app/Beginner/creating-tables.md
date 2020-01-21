@@ -20,6 +20,10 @@ Designing database tables by adopting a proper naming convention can easily help
   <li>Each table must contain a `single-column primary key`, which should be an auto-increment column. It should be prefixed with the singular form of the table name. For example: StudentId, CourseId.</li>
 </ul>
 
+# Creating Database
+
+Before starting anything, you need to create the database (if its not created). Here i am creating a database named as `RxwebCoreDemoProjectDb`.
+
 # Creating tables
 
 As previously mentioned, we are creating a `Contoso University application`, `Courses` and `Students` table are a major part of this application. `CREATE TABLE` keyword is used at the beginning of the statement which shows that you are interested in designing a new table. The name of the table should be unique based on the data you are planning to store on a table.
@@ -28,7 +32,7 @@ You can download the script file from <a class="redirect-link" href="#">here</a>
 
 ## Courses Table
 
-Let us create a Courses table which contains only 2 columns like CourseId(int) and CourseName(varchar). Here CourseId is defined as primary key with auto increment of 1.
+Let us create a Courses table in the above created database which contains only 2 columns like CourseId(int) and CourseName(varchar). Here CourseId is defined as primary key with auto increment of 1.
 
 ```
 CREATE TABLE dbo.Courses
