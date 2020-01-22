@@ -16,7 +16,7 @@ The first step is to hit the authentication api get method, it should be authori
 
 > This is done to prevent brute force attacks.
 
-<video width="1100" controls>
+<video  controls>
 <source src="assets/rxwebcore/Images/run-project-hrms.mp4" type="video/mp4">
 </video>
 

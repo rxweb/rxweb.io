@@ -1,23 +1,23 @@
 [
     {
-        "title": "Project Setup",
-        "path": "overview",
-        "href": "/rx-web-core/step-by-step-guide/overview"
+        "title": "Prerequisites",
+        "path": "prerequisities",
+        "href": "/rx-web-core/step-by-step-guide/prerequisities"
+    },
+    {
+        "title": "Install Template",
+        "path": "install-template",
+        "href": "/rx-web-core/step-by-step-guide/install-the-template"
+    },
+    {
+        "title": "Install RxWebCore CLI",
+        "path": "install-rxwebcore-cli",
+        "href": "/rx-web-core/step-by-step-guide/install-the-rxwebcore-cli"
     },
     {
         "title": "Project Creation",
         "path": "project-creation",
         "href": "/rx-web-core/step-by-step-guide/project-creation"
-    },
-    {
-        "title": "Project Structure",
-        "path": "project-structure",
-        "href": "/rx-web-core/step-by-step-guide/project-structure"
-    },
-    {
-        "title": "Generated Database Tables",
-        "path": "database-information",
-        "href": "/rx-web-core/step-by-step-guide/database-information"
     },
     {
         

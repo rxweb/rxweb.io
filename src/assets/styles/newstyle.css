@@ -7634,3 +7634,8 @@ li.overview-nav-item:before {
 li.overview-nav-item {
   list-style: none;
 }
+
+video {
+  width: 100%;
+  height: auto;
+}

@@ -47,10 +47,11 @@
 
         </h2>
         <div class="doc_links"><button id="doc-button-link" class="btn wisteria text-center"
-            routerLink="/rx-web-core/quick-start" style="
+            routerLink="/rx-web-core/quick-start" [queryParams]="{ mainTab:'template'}" style="
           background-color: #9663ab!important;
           color: white!important;
           opacity: 0;
+          cursor: pointer;
       ">Get Started</button>
         </div>
         <!-- <div class="code_btns py-4"> <a href="" class="btn active px-5">Get Started</a></div> -->

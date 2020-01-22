@@ -7611,6 +7611,9 @@ a.card-body.text-center:hover
         position: fixed;
         margin-top: 351px;
     }
+    video{
+        width: 1100px!important;
+    }
 }
 
 /* .fas {

@@ -9,9 +9,21 @@
             "childrens": [
                 {
                     "childrens": [],
-                    "title": "Prerequisites and Installation",
-                    "path": "project-creation#prerequisites",
+                    "title": "Prerequisites",
+                    "path": "prerequisities",
                     "uri": "/rx-web-core/step-by-step-guide/prerequisities"
+                },
+                {
+                    "childrens": [],
+                    "title": "Install Template",
+                    "path": "install-template",
+                    "uri": "/rx-web-core/step-by-step-guide/install-the-template"
+                },
+                {
+                    "childrens": [],
+                    "title": "Install RxWebCore CLI",
+                    "path": "install-rxwebcore-cli",
+                    "uri": "/rx-web-core/step-by-step-guide/install-the-rxwebcore-cli"
                 },
                 {
                     "childrens": [],

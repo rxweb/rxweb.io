@@ -7,9 +7,9 @@ linktitle: project-creation
 ---
 
 # Project Creation
-In this section we discuss about the creation of project through rxwebcore cli and understand the created project structure and database tables. 
+In the earlier section of <a class="redirect-link" target="_blank" href="/rx-web-core/quick-start?mainTab=cli"">Quick Start</a>, we have discussed about the project creation using dotnet cli of clean architecture using aspnetcore. After completion of the prerequisities we create will create a new project through rxwebcore cli and understand the created project structure and database tables.   
 
-Let's consider a case of `HumanResourceApplication`, this application we will extend in our other sub-modules like multitenancy, multilingual management, data-validation, data-sanitization and many more extensive features with the optimum code in there respective sections of <a class="redirect-link" href="/">EntityFrameworkCore,</a> <a class="redirect-link" href="/"> Security,</a> <a class="redirect-link" href="/">Performance,</a> <a class="redirect-link" href="/">Data validation,</a> <a class="redirect-link" href="/">Data Sanitization.</a> <a class="redirect-link" href="/">Web Api apps.</a>   
+Let's consider a case of `HumanResourceApplication`, this application we will extend in our other sub-modules like multitenancy, multilingual management, data-validation, data-sanitization and many more extensive features with the optimum code in there respective sections of <a class="redirect-link" href="/">EntityFrameworkCore,</a> <a class="redirect-link" target="_blank" href="/rx-web-core/security/security-headers"> Security,</a> <a class="redirect-link" target="_blank" href="/rx-web-core/performance/performance#static-cache">Performance,</a> <a class="redirect-link"  target="_blank" href="/rx-web-core/data-validation/max-length">Data validation,</a>  <a class="redirect-link" href="/rx-web-core/developing-the-api/basic-controller">Web Api apps.</a>   
 
 Lets understand the dotnet CLI command options for creating a project. 
 
@@ -23,7 +23,7 @@ The above stated command represents that you can create a new project by specify
 dotnet new rxwebapi --name HumanResourceApplication
 `````
 
-<video width="1100" controls>
+<video  controls>
 <source src="assets/rxwebcore/Images/create-project-hrms1.mp4" type="video/mp4">
 </video>
 
@@ -51,7 +51,7 @@ After providing the connection strings, run the below command which will generat
 rxwebcore --database-setup
 `````
 
-<video width="1100" controls>
+<video  controls>
 <source src="assets/rxwebcore/Images/database-setup.mp4" type="video/mp4">
 </video>
 
@@ -147,5 +147,5 @@ The Log database is used for auditing and logging necessary information such as 
 <tr><td>Audit RecordDetails</td><td>Stores information about the modified entity like old cloumn name, new column name.</td></tr> 
 </table>
 
-
-
+## Next Step
+Explore the Next Documentation on Run The Project.
