@@ -871,6 +871,42 @@ div#rightsidebar ul:first-child>li.border-none a {
     transition: all 0.5s ease 1.6s;
 }
 
+.home_page_content {
+    padding-bottom: 20px;
+}
+
+
+.home_page_title  {
+    font-size: 58px;
+    line-height: 58px;
+}
+
+.home_page_desc  {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 38px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home_packages li {
+    padding: 0 15px;
+}
+
+.home_packages li .btn {
+    background-color: transparent;
+    padding: 15px;
+    min-width: 160px;
+    height: auto;
+    min-height: 100px;
+    border: 1px solid #ddd;
+    white-space: normal;
+    cursor: pointer !important;
+}
+
+.home_packages .btn img { max-width: 60px; max-height: 80px; width: auto; height: auto; display: block; margin-right: auto; margin-left: auto; margin-bottom:10px; }
+
 /*11-4-2019*/
 
 @media only screen and (min-width:768px) {
