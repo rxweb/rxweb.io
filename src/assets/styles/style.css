@@ -872,7 +872,8 @@ div#rightsidebar ul:first-child>li.border-none a {
 }
 
 .home_page_content {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 
@@ -888,6 +889,7 @@ div#rightsidebar ul:first-child>li.border-none a {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .home_packages li {
@@ -896,18 +898,101 @@ div#rightsidebar ul:first-child>li.border-none a {
 
 .home_packages li .btn {
     background-color: transparent;
-    padding: 15px;
+    padding: 20px 15PX;
     min-width: 160px;
     height: auto;
     min-height: 100px;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
     white-space: normal;
     cursor: pointer !important;
+    -webkit-transition: 0.3s ease all;-o-transition: 0.3s ease all;transition: 0.3s ease all;
+    max-width: 160px;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
-
+.home_packages li .btn:hover {
+    -webkit-box-shadow: 0px 5px 8px 0px #efe9e9;box-shadow: 0px 5px 8px 0px #efe9e9; 
+}
+.home_packages span{
+    min-height: 48px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
 .home_packages .btn img { max-width: 60px; max-height: 80px; width: auto; height: auto; display: block; margin-right: auto; margin-left: auto; margin-bottom:10px; }
 
 /*11-4-2019*/
+
+@media only screen and (max-width: 1260px) {
+    .home_page_title {font-size: 52px; line-height: 52px;}
+    .home_packages li{margin: 10px 0;}
+    .home_packages {max-width: 945px; margin: 0 auto;}
+}
+@media only screen and (max-width: 1200px) {
+    .home_page_title {
+        font-size: 46px;
+        line-height: 46px;
+    }
+    .home_page_desc {
+        font-size: 22px;
+        line-height: 36px;
+    } 
+}
+@media only screen and (max-width: 991px) {
+    .home_packages .btn img{
+        max-height: 52px;
+    }
+    .home_page_title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .home_page_content {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .home_page_title {
+        font-size: 34px;
+        line-height: 34px;
+    }
+    .home_packages .btn img {
+        max-height: 48px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .home_page_title {
+        font-size: 27px;
+        line-height: 27px;
+    }
+    .home_page_desc {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .home_packages .btn img {
+        max-height: 42px;
+        margin-bottom: 7px;
+    }
+}   
+
+
+
 
 @media only screen and (min-width:768px) {
     .vertical-timeline-content h2 {
