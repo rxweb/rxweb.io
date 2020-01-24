@@ -9,12 +9,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
+  selector: 'app-quick-start',
   templateUrl: './quick-start.component.html',
   entryComponents:[TopBarComponent]
 })
 export class QuickStartComponent implements OnInit {
 
-  mainTab: string = "";
+  mainTab: string = "template";
 
   showComponent: boolean = false;
 
@@ -23,27 +24,12 @@ export class QuickStartComponent implements OnInit {
   // titleData: any = { codeContent: {} };
   sticky: boolean = false;
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private http: Http,private activatedRoute:ActivatedRoute,private router:Router) {
-    debugger;
-    this.activatedRoute.queryParams.subscribe(t=>{
-
-      if(t["mainTab"]=="template"){
-         this.mainTab = "template"
-      }
-      else{
-        this.mainTab =   "cli"
-        
-      }
-    })
+  
     this.applicationBroadCaster.topSubject.subscribe(t=>{
       this.rightSidebarLinks = t.rightSidebarLinks;      
     })
   }
 
-  tabNavigate(tabName){
-    debugger;
-   this.mainTab = tabName;
-   this.router.navigate(['/rx-web-core/quick-start'], { queryParams: { mainTab: tabName } });
-  }
 
   
   ngOnInit(): void {  

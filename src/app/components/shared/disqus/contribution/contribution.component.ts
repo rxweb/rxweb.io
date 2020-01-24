@@ -3,6 +3,8 @@ import { HttpClient } from "@angular/common/http";
 import { Location } from '@angular/common';
 import * as moment from 'src/assets/scripts/moment.js'
 import * as showdown from 'src/assets/scripts/showdown.js'
+import { Http } from '@angular/http';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-contribution',
@@ -10,8 +12,20 @@ import * as showdown from 'src/assets/scripts/showdown.js'
 })
 
 export class ContributionComponent implements OnInit{
-    constructor(
+    links: any;
+    fileName: string;
+    upcomingLink: string;
+    constructor(private http:HttpClient,private router:Router
     ) {
+        this.http.get('assets/json/rxwebcore-links.json').subscribe((response: any) => {
+            this.links = response;
+            var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
+            if (currentObjIndex != undefined) {
+              currentObjIndex++;
+              var nextObj = this.links[currentObjIndex];
+              this.upcomingLink = nextObj.title;
+            }
+          })
     }
     gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/docs/reactive-form-validators";
     pageName:string;
@@ -40,4 +54,13 @@ export class ContributionComponent implements OnInit{
             }
         }
     }
+
+    nextLink() {
+        var currentObjIndex = this.links.findIndex(a => a.href == location.pathname);
+        if (currentObjIndex != undefined) {
+          currentObjIndex++;
+          var nextObj = this.links[currentObjIndex];
+          this.router.navigate([nextObj.href]);
+        }
+      }
 }

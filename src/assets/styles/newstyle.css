@@ -7001,11 +7001,14 @@ header .header_left_menu .navbar-nav .nav-link span:before, .learning_title a>sp
 
 .home_page_header a.nav-link {
   font-weight: 800!important;
-  color: #556184!important;
+  color: #8c96b3!important;
   font-size: 16px;
   /* border-bottom: 4px solid transparent;     */
-  padding: 16px 20px!important;
+  padding: 8px 15px!important;
   position: relative;
+}
+.home_page_header a.nav-link.header_link_active{
+  color: #556184!important;
 }
 
 .visual-studio-keyword {
@@ -7531,6 +7534,10 @@ header .header_left_menu .navbar-nav .nav-link span:before, .learning_title a>sp
   .footer {
     padding: 15px 5px !important;
   }
+  .home_page_header .navbar {
+    flex-flow: column;
+  }
+  .rgt-section{margin-right: auto;}
 }
 
 @media only screen and (max-width:575px) {
@@ -7546,9 +7553,11 @@ header .header_left_menu .navbar-nav .nav-link span:before, .learning_title a>sp
   .home_page_header a.nav-link {
     font-size: 14px;
     line-height: 20px;
-    padding: 9px 15px!important;
+    padding: 9px 4px!important;
     height: auto;
   }
+  .home_page_header .navbar-brand.pl-md-5{padding: 0 !important; margin-right: 5px;}
+  .nav-item{padding-bottom: 0 !important;}
   .home_page_header .pt-4, .home_page_header .py-4 {
     padding-top: 1rem!important;
   }
@@ -7571,12 +7580,8 @@ header .header_left_menu .navbar-nav .nav-link span:before, .learning_title a>sp
   footer.footer .col-sm-4 {
     padding-top: 10px;
   }
-  .home_page_header .navbar {
-    flex-flow: column;
-  }
   .rgt-section {
     padding-top: 10px;
-    margin-right: auto;
   }
   .home_page_content h2#code_change_text.home_page_title1 {
     min-height: 145px !important;

@@ -24,7 +24,7 @@
   <!-- <app-top-bar [sidebarLinks]="rightSidebarLinks" *ngIf="!isHome"></app-top-bar> -->
 
   <header *ngIf="isHome" [class.ihomepage-header]="!isHome" class="home_page_header border-0">
-    <nav class="navbar   py-0 pt-4">
+    <nav class="navbar py-0 pt-4">
       <div class="lft-section">
             <a class="navbar-brand pl-md-5 pt-0" href="#"><img src="assets/images/logo.png" width="120" height="28"/></a>
             <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
             </button>
           
             <div class="collapse navbar-collapse d-inline-block" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto border-left d-inline-block">
+              <ul class="mr-auto border-left d-flex pl-1 m-0">
                 <!-- <li class="nav-item active">
                   <a class="nav-link" href="#"><span>AspNetCore</span></a>
                 </li>
@@ -43,13 +43,21 @@
                   <a class="nav-link" href="#"><span>Back End</span></a>
                 </li> -->
                 <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" routerLink="/home" id="navbarDropdown" role="button"
+                        <a class="nav-link header_link_active" routerLink="/home" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span>AspNetCore</span>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+
+                       <!--- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" routerLink="/angular-home">Angular</a>
-                        </div>
+                        </div> -->
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link" routerLink="/angular-home" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Angular</span>
+                        </a>
                     </li>
               </ul>
             </div>

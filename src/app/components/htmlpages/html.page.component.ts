@@ -10,12 +10,13 @@ import { ContributionComponent } from '../shared/disqus/contribution/contributio
 import { ComponentView } from '@rx/core/view/view';
 import { GitHubIssueComponent } from '../shared/disqus/github-issue/github-issue.component';
 import { AppTabsComponent } from '../shared/app-tabs/app-tabs.component';
+import { QuickStartComponent } from '../quick-start/quick-start.component';
 
 @Component({
   templateUrl: './html.page.component.html',
   entryComponents: [PageViewerComponent],
 })
-export class HtmlPageComponent  implements OnInit {
+export class HtmlPageComponent implements OnInit {
   links: any;
   showComponent: boolean = false;
   options: any = { responseType: 'text' };
@@ -30,13 +31,13 @@ export class HtmlPageComponent  implements OnInit {
   nestedFolder: string;
   childFolder: string;
   isNotFirstTime: boolean;
-  componentViews:ComponentView<any>[] = new Array<ComponentView<any>>();
+  componentViews: ComponentView<any>[] = new Array<ComponentView<any>>();
   constructor(
     private http: HttpClient,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private applicationBroadcaster: ApplicationBroadcaster,
-    private viewContainerRef:ViewContainerRef,private componentFactoryResolver:ComponentFactoryResolver,
+    private viewContainerRef: ViewContainerRef, private componentFactoryResolver: ComponentFactoryResolver,
   ) {
     this.viewContainerRef = viewContainerRef;
     this.componentFactoryResolver = componentFactoryResolver;
@@ -53,15 +54,7 @@ export class HtmlPageComponent  implements OnInit {
         this.bind()
       this.isNotFirstTime = true;
     })
-    this.http.get('assets/json/rxwebcore-links.json?v=' + environment.appVersion).subscribe((response: any) => {
-      this.links = response;
-      var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
-      if (currentObjIndex != undefined) {
-        currentObjIndex++;
-        var nextObj = this.links[currentObjIndex];
-        this.upcomingLink = nextObj.title;
-      }
-    })
+
   }
 
   ngOnInit(): void {
@@ -90,10 +83,17 @@ export class HtmlPageComponent  implements OnInit {
       this.codeContent = JSON.parse(response.toString());
       var element = document.getElementById("mainContent")
       element.innerHTML = this.codeContent.htmlContent;
+     
+      let elements = element.querySelectorAll("[component]");
+      Array.prototype.slice.call(elements).forEach((element: HTMLDivElement) => {
+        let componentName = element.getAttribute("component");
+        if (componentName == "app-quick-start")
+          element.appendChild(this.create(QuickStartComponent).rootNode());
+      })
+    
       //element.innerHTML += "<h2>See next Interesting things</h2>";
-      let docElement= document.getElementById("doc")
-     // docElement.appendChild(this.create(ContributionComponent, {}).rootNode());
-      
+      let docElement = document.getElementById("doc");
+      element.appendChild(this.create(ContributionComponent, {}).rootNode());
       document.querySelectorAll('code').forEach((block) => {
         hljs.highlightBlock(block);
       });
@@ -102,21 +102,14 @@ export class HtmlPageComponent  implements OnInit {
       this.showViewer = true;
     });
   }
-  
-  create(component:any,params:{[key:string]:any}):any{
+
+  create(component: any, params?: { [key: string]: any }): any {
     let componentView = new ComponentView(component, this.viewContainerRef, this.componentFactoryResolver);
     componentView.create(params);
     this.componentViews.push(componentView);
     return componentView;
-}
-  nextLink() {
-    var currentObjIndex = this.links.findIndex(a => a.href == location.pathname);
-    if (currentObjIndex != undefined) {
-      currentObjIndex++;
-      var nextObj = this.links[currentObjIndex];
-      this.router.navigate([nextObj.href]);
-    }
   }
+
 
   scrollTo(section) {
     debugger;

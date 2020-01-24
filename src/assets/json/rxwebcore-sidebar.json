@@ -3,45 +3,10 @@
         {
             "title": "Quick Start",
             "path": "quick-start",
-            "uri": "/rx-web-core/quick-start?mainTab=template"
+            "uri": "/rx-web-core/quick-start/quick-start"
         },
-        {
-            "childrens": [
-                {
-                    "childrens": [],
-                    "title": "Prerequisites",
-                    "path": "prerequisities",
-                    "uri": "/rx-web-core/step-by-step-guide/prerequisities"
-                },
-                {
-                    "childrens": [],
-                    "title": "Install Template",
-                    "path": "install-template",
-                    "uri": "/rx-web-core/step-by-step-guide/install-the-template"
-                },
-                {
-                    "childrens": [],
-                    "title": "Install RxWebCore CLI",
-                    "path": "install-rxwebcore-cli",
-                    "uri": "/rx-web-core/step-by-step-guide/install-the-rxwebcore-cli"
-                },
-                {
-                    "childrens": [],
-                    "title": "Project Creation",
-                    "path": "project-creation",
-                    "uri": "/rx-web-core/step-by-step-guide/project-creation"
-                },
-                {
-                    "childrens": [],
-                    "title": "Run The Project",
-                    "path": "run-the-project",
-                    "uri": "/rx-web-core/step-by-step-guide/run-the-project"
-                }
-            ],
-            "title": "Step By Step Guide",
-            "path": "step-by-step-guide",
-            "uri": null
-        },
+        
+
         {
             "childrens": [
                 {

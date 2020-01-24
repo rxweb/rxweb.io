@@ -1,30 +1,5 @@
 [
-    {
-        "title": "Prerequisites",
-        "path": "prerequisities",
-        "href": "/rx-web-core/step-by-step-guide/prerequisities"
-    },
-    {
-        "title": "Install Template",
-        "path": "install-template",
-        "href": "/rx-web-core/step-by-step-guide/install-the-template"
-    },
-    {
-        "title": "Install RxWebCore CLI",
-        "path": "install-rxwebcore-cli",
-        "href": "/rx-web-core/step-by-step-guide/install-the-rxwebcore-cli"
-    },
-    {
-        "title": "Project Creation",
-        "path": "project-creation",
-        "href": "/rx-web-core/step-by-step-guide/project-creation"
-    },
-    {
-        
-        "title": "Run The Project",
-        "path": "run-the-project",
-        "href": "/rx-web-core/step-by-step-guide/run-the-project"
-    },
+   
     {
         "title": "Creating Tables",
         "path": "creating-tables",

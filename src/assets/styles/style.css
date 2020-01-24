@@ -870,26 +870,26 @@ div#rightsidebar ul:first-child>li.border-none a {
     -o-transition: all 0.5s ease 1.6s;
     transition: all 0.5s ease 1.6s;
 }
-
-.home_page_content {
+/**24-01-2020**/
+.home_page_content.home_intro{
     padding-bottom: 40px;
     padding-top: 40px;
 }
 
 
-.home_page_title  {
+.home_intro .home_page_title  {
     font-size: 58px;
     line-height: 58px;
 }
 
-.home_page_desc  {
+.home_intro .home_page_desc  {
     margin-top: 20px;
     font-size: 24px;
     line-height: 38px;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .home_packages li {
@@ -914,10 +914,11 @@ div#rightsidebar ul:first-child>li.border-none a {
     display: flex;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(93, 46, 144, 0.6196078431372549);box-shadow: 0px 0px 4px 0px rgba(93, 46, 144, 0.6196078431372549); 
 }
 .home_packages li .btn:hover {
-    -webkit-box-shadow: 0px 5px 8px 0px #efe9e9;box-shadow: 0px 5px 8px 0px #efe9e9; 
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(93, 46, 144, 0.6196078431372549);box-shadow: 0px 5px 8px 0px rgba(93, 46, 144, 0.6196078431372549); 
 }
 .home_packages span{
     min-height: 48px;
@@ -936,54 +937,77 @@ div#rightsidebar ul:first-child>li.border-none a {
             justify-content: center;
 }
 .home_packages .btn img { max-width: 60px; max-height: 80px; width: auto; height: auto; display: block; margin-right: auto; margin-left: auto; margin-bottom:10px; }
+.home_packages li .btn:hover span {
+    color: #5d2e90;
+}
+.help_support_section h2{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+.help_support_section a.tutorial_btn{
+    padding: 7px 13px;
+    background-color: #007bff;
+    color: #fff !important;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-decoration: none;
+} 
+.help_support_section a{
+    color: #007bff !important;
+    text-decoration: underline;
+}
+/***/
 
 /*11-4-2019*/
 
+/**/
 @media only screen and (max-width: 1260px) {
-    .home_page_title {font-size: 52px; line-height: 52px;}
+    .home_intro .home_page_title {font-size: 52px; line-height: 52px;}
     .home_packages li{margin: 10px 0;}
     .home_packages {max-width: 945px; margin: 0 auto;}
 }
 @media only screen and (max-width: 1200px) {
-    .home_page_title {
+    .home_intro .home_page_title {
         font-size: 46px;
         line-height: 46px;
     }
-    .home_page_desc {
+    .home_intro .home_page_desc {
         font-size: 22px;
-        line-height: 36px;
+        line-height: 32px;
     } 
 }
 @media only screen and (max-width: 991px) {
     .home_packages .btn img{
         max-height: 52px;
     }
-    .home_page_title {
+    .home_intro .home_page_title {
         font-size: 40px;
         line-height: 40px;
     }
-    .home_page_content {
+    .home_intro.home_page_content {
         padding-bottom: 20px;
         padding-top: 20px;
     }
+    .home_packages span{font-size: 15px; line-height: 21px;}
 }
 @media only screen and (max-width: 767px) {
-    .home_page_title {
+    .home_intro .home_page_title {
         font-size: 34px;
-        line-height: 34px;
+        line-height: 40px;
     }
     .home_packages .btn img {
         max-height: 48px;
     }
 }
 @media only screen and (max-width: 575px) {
-    .home_page_title {
+    .home_intro .home_page_title {
         font-size: 27px;
-        line-height: 27px;
+        line-height: 32px;
     }
-    .home_page_desc {
+    .home_intro .home_page_desc {
         font-size: 20px;
-        line-height: 28px;
+        line-height: 26px;
     }
     .home_packages .btn img {
         max-height: 42px;
@@ -991,8 +1015,7 @@ div#rightsidebar ul:first-child>li.border-none a {
     }
 }   
 
-
-
+/***/
 
 @media only screen and (min-width:768px) {
     .vertical-timeline-content h2 {
@@ -9161,6 +9184,7 @@ a {
 }
 
 .redirect-link {
+    font-weight: 400!important;
   color: #007bff!important;
 }
 
@@ -9208,4 +9232,12 @@ ul.nav.level-1 {
 }
 .hm-pl-lg-5, .hm-pl-lg-5{
     padding-left: 7rem!important;
+}
+
+.step-title{
+    font-size: 18px!important;
+    font-weight: 600!important;
+}
+p.quick-start-element {
+    font-weight: 600;
 }
