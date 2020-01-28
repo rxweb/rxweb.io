@@ -56,6 +56,7 @@ export class ContributionComponent implements OnInit{
     }
 
     nextLink() {
+        debugger;
         var currentObjIndex = this.links.findIndex(a => a.href == location.pathname);
         if (currentObjIndex != undefined) {
           currentObjIndex++;

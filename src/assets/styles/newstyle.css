@@ -1,9 +1,9 @@
 /* :root{
     font-size: 16px;
-}
-body{
-    font-size: 1rem;
-} */
+}*/
+ body{
+   color: #000!important;
+}  
 
 ul, ol {
   list-style: none;
@@ -7643,4 +7643,10 @@ li.overview-nav-item {
 video {
   width: 100%;
   height: auto;
+}
+.quick-start-tab{
+margin-bottom: 0px;
+}
+.git-download-button{
+   
 }

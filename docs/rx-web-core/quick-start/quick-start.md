@@ -15,22 +15,21 @@ Have a look below listed Applications:
   <li><a class="redirect-link" target="_blank" href="https://dotnet.microsoft.com/download/dotnet-core/3.1/">.Net Core SDK 3.1</a></li>
 </ul>
 
-# You will learn :
+You will learn :
 
 <ul class="bullet-list">
-  <li>Project Template Installation & Project Creation</li> 
-  <li>Rxwebcore cli installation and Database Setup</li>
-  <li>Examine the Project Structure and Database Tables</li>
-  <li>Run The Project</li>
+  <li class="overview-nav-item">Project Template Installation & Project Creation</li> 
+  <li class="overview-nav-item">Rxwebcore cli installation and Database Setup</li>
+  <li class="overview-nav-item">Examine the Project Structure and Database Tables</li>
+  <li class="overview-nav-item">Run The Project</li>
 </ul>
 
-
-<p class="step-title mt-5">Step 1 : Project Template Installation & Project Creation</p>
+## Step 1 : Project Template Installation & Project Creation</h3>
 Before creating a project you have to install the project template. There are two ways to install the template, you can opt as per your comfort.
  
 <div component="app-quick-start" key="quick-start"></div> 
 
-<p class="step-title">Step 2 : RxWebCore CLI Installation and Database Setup</p>
+## Step 2 : RxWebCore CLI Installation and Database Setup
 
 The CLI provides lots of features through scaffolding like generating different types of controllers, bounded context, setup the unit of work layer, domain class layer, enums according to the database values, generating models, initial database table setup which is optional etc.
 I believe this is interesting :).
@@ -39,15 +38,15 @@ I believe this is interesting :).
 <source src="assets/images/rxwebcore-cli-installation.mp4" type="video/mp4">
 </video>
  
-<p class="step-title mt-5">Step 3 : Examine the Project Structure and Database Tables</p>
+## Step 3 : Examine the Project Structure and Database Tables
  
-Examine the Project Structure
+### Examine the Project Structure
 
 As RxWeb follows the practices of `Clean Architecture`, Based upon this the project structure is divided into several layers of Models, Domain services,Bounded context, Application core and API which adds the practices of seperation of concerns for simplification and maintanable code. 
 The project solution contains six projects. They are : 
 ![Project Dependency](Images/dependency-chart1.png)
 
-<p class="quick-start-element">Created Projects</p>
+### Created Projects
 <table class="table table-bordered table-striped">
 <tr><th>Project</th><th>Description</th></tr>
 <tr><td>Models</td><td>The primary purpose of this project is to define POCO models,Enums,Interfaces which can be used application wide or you can define the extended models.</td></tr>
@@ -58,13 +57,13 @@ The project solution contains six projects. They are :
 <tr><td>Api</td><td>The Api project is the .Net core based web application which is the start of the project. It contains application settings, Controllers, necessery injected services like security, performance etc. The Api controllers are made in this project.</td></tr>
 </table>
 
-<p class="quick-start-element">Database Tables</p>
-<p class="quick-start-element">1) Main Database</p>
+## Database Tables
+### 1) Main Database
 
 The main database contains all the default tables which are necessary for fulfuling the basic functionalties like authorization and authentication, application objects, localization and globalization etc.. 
 ![Database Diagram](Images/database-diagram.png)
 
-<p class="quick-start-element">Global Configurations(Timezone and Locale)</p>
+### Global Configurations(Timezone and Locale)
 The information which is globally used in several components or units of such as modules of the application modules, application locales, application timezones, Object types and objects. 
 <table class="table table-bordered table-striped">
 <tr><th>Table Name</th><th>Description</th></tr>
@@ -76,7 +75,7 @@ The information which is globally used in several components or units of such as
 <tr><td>ApplicationLocales</td><td>It has details of standard locales used in the world.</a>.</td></tr>
 </table>
 
-<p class="quick-start-element">Multilingual Management</p>
+### Multilingual Management
 For an application to efficiently work in different regions, it is necessary to maintain its timezones and locales used. A multilingual application includes returning server validation messages,change the whole UI text based upon the selected language. For more information, Please refer <a class="redirect-link">localization-and-globalization</a>
 <table class="table table-bordered table-striped">
 <tr><th>Table Name</th><th>Description</th></tr>
@@ -85,7 +84,7 @@ For an application to efficiently work in different regions, it is necessary to 
 <tr><td>ComponentLanguageContents</td><td>If the multilingual data is component specific, It is stored in component language contents.</td></tr>
 </table>
 
-<p class="quick-start-element">Access Management</p>
+### Access Management
 Information of JWT web token, users and its roles for performing authorization and authentication. Whenever a new request is made at the time of login the jwt web token is stored and authorization will require information which will be retrieved from the database.
 <table class="table table-bordered table-striped">
 <tr><th>Table Name</th><th>Description</th></tr>
@@ -95,18 +94,18 @@ Information of JWT web token, users and its roles for performing authorization a
 <tr><td>UserRoles</td><td>Stores users and their respective roles.</td></tr>
 </table>
 
-<p class="quick-start-element">2) Log Database</p>
+### 2) Log Database
 The Log database is used for auditing and logging necessary information such as request logs, data entity auditing and exception logs etc..
 ![Database log](Images/database-log.png)
 
-<p class="quick-start-element">Exception and Request Logs</p>
+### Exception and Request Logs
 <table class="table table-bordered table-striped">
 <tr><th>Table Name</th><th>Description</th></tr>
 <tr><td>Exception Logs</td><td>Stores all types of exceptions that occur in the application.</td></tr>
 <tr><td>Request Traces</td><td>Stores information about all the requests made to the APIs.</td></tr> 
 </table>
 
-<p class="quick-start-element">Data Entity Auditing</p>
+### Data Entity Auditing
 <table class="table table-bordered table-striped">
 <tr><th>Table Name</th><th>Description</th></tr>
 <tr><td>Audit Requests</td><td>Stores information about the requests based upon which the entity is modified.</td></tr>
@@ -114,8 +113,8 @@ The Log database is used for auditing and logging necessary information such as 
 <tr><td>Audit RecordDetails</td><td>Stores information about the modified entity like old cloumn name, new column name.</td></tr> 
 </table>
 
-<p class="step-title mt-5">Step 4 : Run The Project</p>
-<p class="quick-start-element">Test The Authentication Api :</p> 
+## Step 4 : Run The Project
+### Test The Authentication Api : 
 After the project solution is successfully generated as per the mentioned project structure. After the project is successfully build, let's access the authentication api.
 The first step is to hit the authentication api get method, it should be authorized through inserting the value in the authorize button and then after the post method is called. After the new token is generated it is authorized using the authorize button. 
 > This is done to prevent brute force attacks.

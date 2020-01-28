@@ -4086,7 +4086,7 @@ body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #ffffff;
     font-size: 14px;
-    color: #666666;
+    color: #000;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -9240,4 +9240,25 @@ ul.nav.level-1 {
 }
 p.quick-start-element {
     font-weight: 600;
+}
+
+.title-level-1{
+font-weight: 400!important;
+color: #242424;
+font-size: 1.8rem !important;
+margin-bottom: 20px;
+}
+
+ .title-level-2 {
+font-weight: 400!important;
+color: #242424;
+font-size: 1.4rem !important;
+margin-bottom: 20px;
+}
+.title-level-3 {
+    margin-top: 15px;
+font-weight: 400!important;
+color: #242424;
+font-size: 1.1rem !important;
+margin-bottom: 20px;
 }

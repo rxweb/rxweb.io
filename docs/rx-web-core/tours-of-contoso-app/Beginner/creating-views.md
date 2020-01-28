@@ -12,7 +12,42 @@ linktitle: overview
 
 > When you have limited number of records (0 - 1K), then view is a better option.
 
-# Pros while using views
+<a role="button" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/SQL%20Scripts/main.sql#L1704-L1728" style="
+    background: #f5f6f7;
+    color: #4e5665 !important;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-color: rgba(0,0,0,.14);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.12);
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 8px 15px;
+    text-align: center;
+    transition: all 100ms ease-out;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    margin-top: 10px;
+"><span style="vertical-align: middle">Download the Code</span><img class="_3-99 img" src="https://scontent.famd5-1.fna.fbcdn.net/v/t39.2365-6/21630666_872184906282544_8997395837269049344_n.png?_nc_cat=106&amp;_nc_ohc=ixvAzbNREvgAX9AAb7C&amp;_nc_ht=scontent.famd5-1.fna&amp;oh=738ee91e1ae8331712186222788828a0&amp;oe=5ED55A8A" height="25" alt="" style="vertical-align:middle;margin-left: 4px;max-width: 654px;"></a>
+
+You will learn :
+
+<ul class="bullet-list">
+  <li class="overview-nav-item">Pros while using views</li> 
+  <li class="overview-nav-item">Displaying list of records</li>
+  <li class="overview-nav-item">Displaying any specific record while editing</li>
+  <li class="overview-nav-item">Binding data in a dropdown</li>
+</ul>
+
+## Pros while using views
 
 <ul>
   <li><strong>Security</strong> - Each user can be given permission to access the database only through a small set of views that contain the specific data the user is authorized to see, thus restricting the user's access to stored data.</li>
@@ -20,13 +55,13 @@ linktitle: overview
   <li><strong>Data Integrity</strong> - If data is accessed and entered through a view, the DBMS can automatically check the data to ensure that it meets the specified integrity constraints.</li>
 </ul>
 
-# Real time scenario
+## Real time scenario
 
 If we consider our `Contoso Application`, displaying students and course records is very frequent in the application. In the <a class="redirect" href="">previous step</a>, we have created the Students and Course table and now we want to retrieve those records. For that, we will create the views.
 
 Generally we deal with these below mentioned real-time scenarios in case of retrieving the stored information where making materialized view can be helpful.
 
-**Displaying list of records**
+### Displaying list of records
 
 There are cases when we want to display a list of students and their enrolled course name on the UI. For retriving that information we can use a materialized view. In such cases, view should be named as `vCourses` or `vStudents`.
 
@@ -51,7 +86,7 @@ Based on the above created view, below result set will be fetched.
 </table>
 
 
-**Displaying any specific record while editing**
+### Displaying any specific record while editing
 
 While editting a record, we may need to display complete or some of the information for a specific record only. Here separate views are made for displaying list and editing a particular record because their might be a situation where there is a difference in displaying those columns. 
 
@@ -75,7 +110,7 @@ Based on the above created view, below result set will be fetched.
 <tr><td>Scarlett Joan</td><td>1003</td><td>19</td><td>Female</td><td>scarlett.joan@contoso.com</td><td>MBBS</td></tr>
 </table>
 
-**Binding data in a dropdown**
+### Binding data in a dropdown
 
 There are some columns which needs to be displayed in a dropdown while adding a new record or editing an existing record through UI. For that also we can use views to display any column records based on any condition.
 

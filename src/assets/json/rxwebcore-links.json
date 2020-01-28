@@ -1,5 +1,45 @@
 [
+    {
+        "title": "Overview",
+        "path": "overview",
+        "href": "/rx-web-core/tours-of-contoso-app/Beginner/overview"
+    },
+    {
+        "title": "Creating Tables",
+        "path": "creating-tables",
+        "href": "/rx-web-core/tours-of-contoso-app/Beginner/creating-tables"
+    },
+    {
+        "title": "Creating Views",
+        "path": "creating-views",
+        "href": "/rx-web-core/tours-of-contoso-app/Beginner/creating-views"
+    },
+    {
+        "title": "Authentication",
+        "path": "authentication",
+        "href": "/rx-web-core/tours-of-contoso-app/Beginner/authentication"
+    },
    
+    {
+        "title": "Models",
+        "path": "models",
+        "href": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/models"
+    },
+    {
+        "title": "Context And Uow",
+        "path": "context-and-uow",
+        "href": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/context-and-uow"
+    },
+    {
+        "title": "Creating Api",
+        "path": "creating-api",
+        "href": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/creating-api"
+    },
+    {
+        "title": "Authorization",
+        "path": "authorization",
+        "href": "/rx-web-core/tours-of-contoso-app/Beginner/authorization"
+    },
     {
         "title": "Creating Tables",
         "path": "creating-tables",

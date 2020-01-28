@@ -29,12 +29,7 @@
                             "path": "creating-views",
                             "uri": "/rx-web-core/tours-of-contoso-app/Beginner/creating-views"
                         },
-                        {
-                            "childrens": [],
-                            "title": "Create the project",
-                            "path": "create-the-project",
-                            "uri": "/rx-web-core/tours-of-contoso-app/Beginner/create-the-project"
-                        },
+                      
                         {
                             "childrens": [],
                             "title": "Authentication",
