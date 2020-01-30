@@ -10,7 +10,7 @@ linktitle:update
 
 Used during put request for updating object/objects of entity.
 
-# Updating Single Object
+## Updating Single Object
 `RegisterDirtyAsync` method is used for updating objects. Here is an example of updation of a single entity. 
 
 ````js
@@ -21,7 +21,7 @@ Used during put request for updating object/objects of entity.
     }
 ````    
 
-# Updating Multiple Objects
+## Updating Multiple Objects
 Updating Multiple Objects using `RegisterDirtyAsync` 
 
 ````js

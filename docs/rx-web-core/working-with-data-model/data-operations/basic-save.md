@@ -11,7 +11,7 @@ linktitle:basic-save
 
 Used during post request for creating new object/objects of entity.
 
-# Adding Single Object
+## Adding Single Object
 `RegisterNewAsync` is used for adding entity. Here is an example of adding a single object of candidate using this method, It will change state of the object and after `commit` method is executed it will add the object to database. 
 
 ````js
@@ -22,7 +22,7 @@ Used during post request for creating new object/objects of entity.
     }
 ````
 
-# Adding Multiple Objectss
+## Adding Multiple Objectss
 Adding Multiple Objects using `RegisterNewAsync`
 
 ````js
