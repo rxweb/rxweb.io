@@ -74,7 +74,7 @@ The following pipelines are configured using the configure method are :
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers().RequireAuthorization(); ;
+                endpoints.MapControllers().RequireAuthorization();
             });
         }
 

@@ -27,12 +27,12 @@ export class AppExampleRunnerComponent implements OnInit {
   @Input() content: any;
   @Input() showTab: boolean;
   showStackBlitz: boolean = true;
-  exampleHeights:any =[{exampleName:'add',height:150},{exampleName:'conditionalExpression',height:370},{exampleName:'allowWhiteSpace',height:160},{exampleName:'message',height:160},{exampleName:'messageKey',height:160},{exampleName:'locale',height:160},{exampleName:'complete',height:750},{exampleName:'dynamic',height:650}]
-  exampleHeight : number;
+  exampleHeights: any = [{ exampleName: 'add', height: 150 }, { exampleName: 'conditionalExpression', height: 370 }, { exampleName: 'allowWhiteSpace', height: 160 }, { exampleName: 'message', height: 160 }, { exampleName: 'messageKey', height: 160 }, { exampleName: 'locale', height: 160 }, { exampleName: 'complete', height: 750 }, { exampleName: 'dynamic', height: 650 }]
+  exampleHeight: number;
   exampleUrl: SafeResourceUrl;
   @Input() templateDrivenType: string;
   showElement: any = {};
-  isRunCode : boolean = false; 
+  isRunCode: boolean = false;
   tabArray: any = {};
   activeTab: string;
   showComponent: boolean = false;
@@ -42,10 +42,10 @@ export class AppExampleRunnerComponent implements OnInit {
     //this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl('http://localhost:9999');
   }
   ngOnInit(): void {
-    if(document.location.pathname.includes("dynamic-validation")){
+    if (document.location.pathname.includes("dynamic-validation")) {
       this.exampleHeight = 750;
-      this.exampleUrl =  "https://rxwebangular.z20.web.core.windows.net/" + this.router.url +  "?exampleName=";
-    this.isRunCode = true;
+      this.exampleUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=";
+      this.isRunCode = true;
     }
     this.showElement = false;
     if (this.decoratorName == "get" || this.decoratorName == "post" || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject") {
@@ -62,8 +62,8 @@ export class AppExampleRunnerComponent implements OnInit {
       if (JSON.stringify(this.content.json) !== JSON.stringify({})) {
         var jsonObject = this.content.json;
         if (jsonObject) {
-      
-      
+
+
           for (var prop in jsonObject) {
             if (jsonObject.hasOwnProperty(prop) && this.decoratorName != "get") {
               this.tabArray.push({ "tabName": prop, "tabItem": prop, "content": jsonObject[prop] })
@@ -79,17 +79,21 @@ export class AppExampleRunnerComponent implements OnInit {
     }
   }
 
-  runCodeExample(exampleName){ 
+  runCodeExample(exampleName) {
     debugger;
-       let example = this.exampleHeights.filter(x=>x.exampleName == exampleName);
-       if(example.length > 0)
-         this.exampleHeight = example[0].height;
-       else
-         this.exampleHeight = 160;
-    let codeUrl =  "https://rxwebangular.z20.web.core.windows.net/" + this.router.url +  "?exampleName=" + exampleName;
+    let example = this.exampleHeights.filter(x => x.exampleName == exampleName);
+    if (example.length > 0)
+      this.exampleHeight = example[0].height;
+    else
+      this.exampleHeight = 160;
+    let codeUrl = "";
+    if (this.router.url.includes("#"))
+      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("#")[0] + "?exampleName=" + exampleName;
+    else
+      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=" + exampleName;
+
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
-    setTimeout(()=>{this.isRunCode = true;},500)
-    
+    setTimeout(() => { this.isRunCode = true; }, 500)
   }
 
   openStackblitz() {

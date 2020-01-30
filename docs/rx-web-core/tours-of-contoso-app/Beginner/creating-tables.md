@@ -58,6 +58,6 @@ CREATE TABLE dbo.Students
    Age int NOT NULL,
    Gender [varchar](10) NOT NULL,
    EmailId [varchar](30) NOT NULL,
-   CourseId int FOREIGN KEY REFERENCES Courses(CourseId) );  
+   CourseId int FOREIGN KEY REFERENCES Courses(CourseId) 
 );
 ````  

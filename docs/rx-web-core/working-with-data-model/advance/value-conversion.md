@@ -14,11 +14,11 @@ For fields which required to be encrypted while storing the data in the database
 Create a folder named ExtendedModel and into it make a folder named main. In that create a .cs file. here we make EncryptDecrypt.cs.  
 
 ````js
-  public class EncryptDecryptConverter : ValueConverter&ltstring, string&gt
+	  public class EncryptDecryptConverter : ValueConverter<string, string>
   {
-    public static Expression&ltFunc&ltstring, string&gt&gt ConvertToProviderExpressions => (v) => //Encryption logic;
+    public static Expression&lt;Func&lt;string, string&gt;&gt; ConvertToProviderExpressions => (v) => //Encryption logic;
 
-    public static Expression&ltFunc&ltstring, string&gt&gt ConvertFromProviderExpressions => (v) => // Decryption logic;
+    public static Expression&lt;Func&lt;string, string&gt;&gt; ConvertFromProviderExpressions => (v) => // Decryption logic;
 
     public EncryptDecryptConverter()
       : base(ConvertToProviderExpressions, ConvertFromProviderExpressions) { }

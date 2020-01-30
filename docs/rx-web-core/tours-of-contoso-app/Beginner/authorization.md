@@ -69,9 +69,9 @@ To authorize the controller, `[access]` is used above the controller class along
 
 To add authorization in the controller using access, the following command is used:
 
-> -- rxwebcore --controller --basic --main Students --uow --Student --access 1
+> rxwebcore --controller --basic --main Students --uow Master --access 1
 
-In this command `Students` is the controller name, `Student` is the module and 1 is the application module Id retrieved from the database. 
+In this command `Students` is the controller name, `Master` is the module and 1 is the application module Id retrieved from the database. 
 
 ````js
     [ApiController]
