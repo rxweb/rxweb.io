@@ -21,7 +21,7 @@ Used for adding objects using BeginTransaction, Here the `DbContextManager` is r
 The `BeginTransaction` method of DbContextManager will begin the transaction on the Uow that is resolved from the constructor(ResourceUow)
 and using `RegisterNewAsync` method will change the state of the Object and the `CommitAsync` method will save the changes in the database.
 
-# Example  
+## Example  
 ````js
     public async Task AddTransaction(Candidate candidate)
     {

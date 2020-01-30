@@ -59,6 +59,7 @@ AS TABLE
   ToTime time(7),
   CandidateId int
 );
+Go
 
 CREATE PROC spInsertcandidateAvailabilities
 @CandidateAvailabilityArray AS dbo.CandidateAvailabilitiesArray READONLY

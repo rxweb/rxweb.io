@@ -10,7 +10,7 @@ linktitle:shareddatabase
 
 Multitenancy means multiple organization or client can use a single software. `Multi Tenant` application means a software application which serves multiple clients from the same server. Here `tenent` word represent the client. Tenant can be a single client or an organization. Each tenant’s data is isolated and is not accessible to each other. Multi-tenancy is used while developing software that runs for different organizations.
 
-# Tenant Based
+## Tenant Based
 Another approach for multi-tenancy is `Shared Database` between all the tenants, that means we keep all the tenant's data in a single database. In that case operational cost reduces as it is in the same database and do not depend on the number of clients. Maintainability becomes quite easier as in this approach isolating data is the main case study we need to think about. 
 
 In this situation, each tenant's data is in the same tables. To isolate tenant's data we can add a discriminator column (for example: you can take `ClientId`) to respective table.
@@ -47,7 +47,7 @@ new Claim(CustomClaimTypes.TenantId,1.ToString())
 
 Once the token is generated based upon the provided TenantId and the candidates operations will be done based upon the candidate.
 
-# Schema Based
+## Schema Based
 Coming Soon..
 
 

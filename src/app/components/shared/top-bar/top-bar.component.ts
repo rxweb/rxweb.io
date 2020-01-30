@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, Input, Inject, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, Input, Inject, ViewChild, ElementRef, OnInit, AfterContentInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ApplicationBroadcaster } from "@rx/core";
@@ -31,7 +31,7 @@ export class TopBarComponent implements OnInit {
   titleData: any = { codeContent: {} };
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private router: Router, private route: ActivatedRoute) {
     this.applicationBroadCaster.topSubscriber.subscribe(t => {
-
+      debugger
       if (t.rightSidebarLinks) {
         this.sidebarLinks = t.rightSidebarLinks;
       }
@@ -64,6 +64,7 @@ export class TopBarComponent implements OnInit {
     })
   }
 
+
   ngOnInit(): void {
     var splitedArray = location.pathname.split("/");
     this.mainType = splitedArray[1];
@@ -75,6 +76,10 @@ export class TopBarComponent implements OnInit {
         this.secondLevelBreadCrumb = "Angular";
     }
   }
+
+ bindTableOfContents(){
+   
+ }
 
   scrollTo(section) {
 

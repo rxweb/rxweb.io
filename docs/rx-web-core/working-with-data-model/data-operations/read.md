@@ -10,11 +10,11 @@ linktitle:read
 
 The repository methods works on single responsibilty principle that states that objects should have only one responsibilty. In our case the Repository methods are mainly used for performing read operations which allows us to seperate the load of read and write operations which results into high speed and performance.
 
-It contains methods which are used to fetch the records depending upon many scenarios such as All,Include, FindByInclude, FindByKey, Single,SingleOrDefault etc which are much similar to LINQ methods of c#.
+It contains methods which are used to fetch the records depending upon many scenarios such as All,Include, FindByInclude, FindByKey, Single,SingleOrDefault etc which are much similar to LINQ methods of c##.
 
 Here are the examples of repository methods which `rxwebcore` using UserModule where we want to see the possible ways of performing read operations on `User`'s DbSet.
 
-# All
+## All
 It is used when you want to retreive all the records of the entity.
 
 ````js
@@ -24,7 +24,7 @@ public IEnumerable&ltUser&gt Get()
 }
 ````
 
-# AllAsync
+## AllAsync
 It is used when you want to retreive all the records of the entity asynchronously.
 
 ````js
@@ -34,7 +34,7 @@ It is used when you want to retreive all the records of the entity asynchronousl
     }
 ````
 
-# AllInclude
+## AllInclude
 It is used when you want include data of the reference entity in the result set. 
 
 ````js
@@ -44,7 +44,7 @@ It is used when you want include data of the reference entity in the result set.
     }
 ````
 
-# AllIncludeAsync
+## AllIncludeAsync
 It is used when you want include data of the reference entity in the result set asynchronously. 
 
 ````js
@@ -54,7 +54,7 @@ It is used when you want include data of the reference entity in the result set 
     }
 ````
 
-# Count
+## Count
 It is used to get count of data in the list of entity based upon condition.
 
 ````js
@@ -65,7 +65,7 @@ It is used to get count of data in the list of entity based upon condition.
     }
 ````
 
-# FindBy
+## FindBy
 It is used to find the element based upon condition.
 
 ````js
@@ -74,7 +74,7 @@ It is used to find the element based upon condition.
         return UserUow.Repository&ltUser&gt().FindBy(t =&gt t.LastName == "Christian"); ;
     }
 ````    
-# FindByAsync
+## FindByAsync
 It is used to find the element based upon condition asynchronously.
 
 ````js
@@ -84,7 +84,7 @@ It is used to find the element based upon condition asynchronously.
     }
 ````
 
-# FindByInclude
+## FindByInclude
 It is used to find the element based upon condition and include data of reference entity into the resultset.
 
 ````js
@@ -94,7 +94,7 @@ It is used to find the element based upon condition and include data of referenc
     }
 ````
 
-# FindByIncludeAsync
+## FindByIncludeAsync
 It is used to find the element based upon condition and include data of reference entity into the resultset asynchronously.
 
 ````js
@@ -104,7 +104,7 @@ It is used to find the element based upon condition and include data of referenc
     }
 ````
 
-# FindByKey
+## FindByKey
 It is used to find element based upon the key.
 
 ````js
@@ -114,7 +114,7 @@ It is used to find element based upon the key.
     }
 ````
 
-# FindByKeyAsync
+## FindByKeyAsync
 It is used to find element based upon the key asynchronously.
 
 ````js
@@ -124,7 +124,7 @@ It is used to find element based upon the key asynchronously.
     }
 ````
 
-# First
+## First
 It retrieves the first element in the list based on the given condition.
 
 ````js
@@ -134,7 +134,7 @@ It retrieves the first element in the list based on the given condition.
     }
 ````
 
-# FirstAsync
+## FirstAsync
 It retrieves the first element in the list which fulfiles the given condition asynchronously.
 
 ````js
@@ -144,7 +144,7 @@ It retrieves the first element in the list which fulfiles the given condition as
     }
 ````
 
-# FirstOrDefault
+## FirstOrDefault
 It retrieves the first element in the list which fulfiles the given condition if not then returns the default value as resultset .
 
 ````js
@@ -153,7 +153,7 @@ It retrieves the first element in the list which fulfiles the given condition if
         return UserUow.Repository&ltUser&gt().FirstOrDefault(a =&gt a.LastName == "Doe");
     }
 ````
-# FirstOrDefaultAsync
+## FirstOrDefaultAsync
 It retrieves the first element in the list which fulfiles the given condition if not then returns the default value as resultset asynchronously.
 
 ````js
@@ -163,7 +163,7 @@ It retrieves the first element in the list which fulfiles the given condition if
     }
 ````
 
-# Last
+## Last
 It retrieves the last element in the list which fulfiles the given condition.
 
 ````js
@@ -173,7 +173,7 @@ It retrieves the last element in the list which fulfiles the given condition.
     }
 ````
 
-# LastAsync
+## LastAsync
 It retrieves the last element in the list which fulfiles the given condition asynchronously.
 
 ````js
@@ -183,7 +183,7 @@ It retrieves the last element in the list which fulfiles the given condition asy
     }
 ````
 
-# LastOrDefault
+## LastOrDefault
 It retrieves the last element in the list which fulfiles the given condition if not then returns the default value as resultset.
 
 ````js
@@ -193,7 +193,7 @@ It retrieves the last element in the list which fulfiles the given condition if 
     }
 ````
 
-# LastOrDefaultAsync
+## LastOrDefaultAsync
 It retrieves the last element in the list which fulfiles the given condition if not then returns the default value as resultset asynchronously.
 
 ````js
@@ -203,7 +203,7 @@ It retrieves the last element in the list which fulfiles the given condition if 
     }
 ````
 
-# Queryable
+## Queryable
 It is used to design a raw query to retrieve the required resultset.
 
 ````js
@@ -213,7 +213,7 @@ It is used to design a raw query to retrieve the required resultset.
     }
 ````
 
-# Single
+## Single
 It retrieves the single element in the list which fulfiles the given condition.
 
 ````js
@@ -223,7 +223,7 @@ It retrieves the single element in the list which fulfiles the given condition.
     }
 ````
 
-# SingleAsync
+## SingleAsync
 It retrieves the single element in the list which fulfiles the given condition asynchronously.
 
 ````js
@@ -233,7 +233,7 @@ It retrieves the single element in the list which fulfiles the given condition a
     }
 ````
 
-# SingleOrDefault
+## SingleOrDefault
 It retrieves the single element in the list which fulfiles the given condition if not then returns the default value as resultset.
 
 ````js
@@ -243,7 +243,7 @@ It retrieves the single element in the list which fulfiles the given condition i
     }
 ````
 
-# SingleOrDefaultAsync
+## SingleOrDefaultAsync
 It retrieves the single element in the list which fulfiles the given condition if not then returns the default value as resultset asynchronously.
 
 ````js

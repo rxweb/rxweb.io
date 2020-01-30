@@ -7,13 +7,13 @@ linktitle:boundedcontext
 ---
 # Bounded Context
 
-# Overview 
+## Overview 
 
 There are some scenarios when you have to deal with too many tables, then it becomes difficult to manage those tables. For such problems `Bounded context design pattern` or `Domain-Driven Design` can be a solution.
 
 `Bounded context design pattern` can help you in maintaining a well structured application. This represents a logical and tangible boundery which will structurize the bigger application in terms of modules and domain. It is the core part of this strategic design pattern of `Domain-Driven approach`. The core concept of this design pattern is mainly focused on the models and structuring them based on the their fundamental context. 
 
-# Scenario
+## Scenario
 This will be helpful in those cases where we are building a large enterprise application. All features are segregated into the modules. So we take the advantage of bounded context and create the context modules wise based upon the Application needs. This gives us a comfort to add/remove the entity into the specific context without hindering to other modules(in terms of context).
 
 In our HRManagementSystem we have three main modules. They are Resource Management, Candidate Module and User Module. Let's see how to make module wise `BoundedContext` using rxwebcore CLI commands.
@@ -33,7 +33,7 @@ Parameters of creating a context
 <tr><td>Context_Name</td><td>Name of the context</td></tr>
 </table>
 
-# Create Bounded Context
+## Create Bounded Context
 
 Now lets create Resource Management, Candidate Module and User Modules. we will start with  Module and add Database models into it.
 
@@ -45,7 +45,7 @@ rxwebcore --context --main Candidate
 
 This will create `CandidateContext.cs` in the main folder of DbContext folder in the `HRManagementSystem.BoundedContext` project of the application. 
 
-# Add Database Entities
+## Add Database Entities
 
 **Step 2 : Add models into it**
 
@@ -83,7 +83,7 @@ rxwebcore --context --main Candidate --add-models Candidates
 
 With the creation of BoundedContext, its UnitOfWork will be generated which will be further used in the API to interact with the data. To get further information about UnitOfWork Please refer this link.
 
-# Create Lookup context
+## Create Lookup context
 lookup context contains DbSets of lookups used to bind dropdowns of the context in the application. 
 
 `````

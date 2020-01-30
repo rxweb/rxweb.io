@@ -852,7 +852,8 @@
         },
         {
             "title": "CLI",
-            "path": "/rxwebcore-commands"
+            "path": "rxwebcore-commands",
+            "uri":"/rx-web-core/cli/rxwebcore-commands"
         }
     ]
 }
