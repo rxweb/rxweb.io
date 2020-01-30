@@ -27,7 +27,7 @@ export class ChildLinkItemComponent implements OnInit {
 
   navigateTo(link: any): void {
     this.links.forEach(element => {
-      if (element.path != link.path) {
+      if (element.title != link.title) {
         element.isActive = false;
         element.isOpen = false;
       }
