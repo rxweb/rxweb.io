@@ -13,14 +13,14 @@ For applications having big range of audiences, there is a possibility of having
 For showing validation messages in different languages, the first step is to add the validation messages in different languages. 
 The columns of the languages can be added as per the requirement.
 
-# LanguageContentKeys Table
+## LanguageContentKeys Table
 
 <table class="table table-bordered">
 <tr><th>LanguageContentKeyId</th><th>KeyName</th><th>IsComponent</th></tr>
 <tr><td>1</td><td>RequiredMessage</td><td>0</td></tr>
 </table>
 
-# LangaugeContents Table 
+## LangaugeContents Table 
 
 <table class="table table-bordered">
 <tr><th>LanguageContentId</th><th>LanguageContentKeyId</th><th>ContentType</th><th>En</th><th>Fr</th></tr>

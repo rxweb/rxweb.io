@@ -36,14 +36,44 @@
         "href": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/creating-api"
     },
     {
-        "title": "Authorization",
-        "path": "authorization",
-        "href": "/rx-web-core/tours-of-contoso-app/Beginner/authorization"
+        "title": "The Startup Class",
+        "path": "the-startup-class",
+        "href": "/rx-web-core/fundamentals/the-startup-class"
+    },
+    {
+        "title": "Configuration Options",
+        "path": "configuration-options",
+        "href": "/rx-web-core/fundamentals/configuration-options"
+    },
+    {
+        "title": "Dependency Injection",
+        "path": "dependency-injection",
+        "href": "/rx-web-core/fundamentals/dependency-injection"
+    },
+    {
+        "title": "Security",
+        "path": "security",
+        "href": "/rx-web-core/fundamentals/security"
+    },
+    {
+        "title": "Performance",
+        "path": "performance",
+        "href": "/rx-web-core/fundamentals/performance"
+    },
+    {
+        "title": "DbContext",
+        "path": "dbcontext",
+        "href": "/rx-web-core/fundamentals/dbcontext"
     },
     {
         "title": "Creating Tables",
         "path": "creating-tables",
         "href": "/rx-web-core/working-with-data-model/database-approach/creating-tables"
+    },
+    {
+        "title": "Database Provider",
+        "path": "database-provider",
+        "href": "/rx-web-core/working-with-data-model/database-provider"
     },
     {
         "title": "Materialized View",

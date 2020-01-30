@@ -25,7 +25,7 @@ Used during post request for creating new object/objects of entity.
 Adding Multiple Objects using `RegisterNewAsync`
 
 ````js
-   public async Task AddAsyncList([FromBody]IList<Candidate> candidates)
+   public async Task AddAsyncList([FromBody]IList&ltCandidate&gt candidates)
     {
         await Uow.RegisterNewAsync(candidates);
         await Uow.CommitAsync();

@@ -9,7 +9,7 @@ linktitle:authorization
 
 `Authorization` is a method of adjudging which user is able to do what. It uses `authentication` for identifying the user, It is done using role based authorization mechanism through which the access modules of the user is determined based upon role where rules are maintained in the database.
 
-# Role Based Authorization.
+## Role Based Authorization.
 Role based authorization is a mechanism through which we determine that which user can have which acess for what module. For example, the admin user has the right to add elements, read elements, edit elements and delete elements and a non admin user has some specific rights based upon the user permissions which is managed in `RolePermissions` table where Role is defined from `Roles`.
 
 Roles Table:
@@ -66,7 +66,7 @@ It is done using `Access` in which id of the application module is passed. Throu
     [ApiController]
     [Route("api/[controller]")]
 	[Access(1)]
-	public class UsersController : BaseController<User,vUsers,vUserRecords>
+	public class UsersController : BaseController&gtUser,vUsers,vUserRecords&lt
     {
         public UsersController(IUserUow uow):base(uow) {}
     }

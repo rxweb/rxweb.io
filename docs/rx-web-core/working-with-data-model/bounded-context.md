@@ -21,7 +21,7 @@ In our HRManagementSystem we have three main modules. They are Resource Manageme
 In the package manager console, run this command to create a BoundedContext
 
 `````
-rxwebcore --context --main <Context_Name>
+rxwebcore --context --main &ltContext_Name&gt
 `````
 
 Parameters of creating a context 
@@ -52,7 +52,7 @@ This will create `CandidateContext.cs` in the main folder of DbContext folder in
 To add models into the context, run this command in the package manager console
 
 `````
-rxwebcore --context --main <Context_Name> --add-models <Model_Name>
+rxwebcore --context --main &ltContext_Name&gt --add-models <Model_Name>
 `````
 
 We will add models(DbSets) into the Candidate Context.
@@ -67,12 +67,12 @@ rxwebcore --context --main Candidate --add-models Candidates
 ````js
  public class CandidateContext : BaseBoundedDbContext, ICandidateContext
     {
-        public CandidateContext(MainSqlDbContext sqlDbContext,  IOptions<DatabaseConfig> databaseConfig, IHttpContextAccessor contextAccessor,TenantDbConnectionInfo tenantDbConnection): base(sqlDbContext, databaseConfig.Value, contextAccessor,tenantDbConnection){ }
+        public CandidateContext(MainSqlDbContext sqlDbContext,  IOptions&ltDatabaseConfig&gt databaseConfig, IHttpContextAccessor contextAccessor,TenantDbConnectionInfo tenantDbConnection): base(sqlDbContext, databaseConfig.Value, contextAccessor,tenantDbConnection){ }
 
         #region DbSets
-        public DbSet<vCandidateRecords> vCandidateRecords { get; set; }
-        public DbSet<vCandidates> vCandidates { get; set; }
-        public DbSet<Candidate> Candidates { get; set; }
+        public DbSet&ltvCandidateRecords&gt vCandidateRecords { get; set; }
+        public DbSet&ltvCandidates&gt vCandidates { get; set; }
+        public DbSet&ltCandidate&gt Candidates { get; set; }
         #endregion DbSets
     }
 
@@ -97,9 +97,9 @@ rxwebcore --context main CandidateLookup --add-models Countries
         public CandidateLookupContext(MainSqlDbContext sqlDbContext,  IOptions<DatabaseConfig> databaseConfig, IHttpContextAccessor contextAccessor,TenantDbConnectionInfo tenantDbConnection): base(sqlDbContext, databaseConfig.Value, contextAccessor,tenantDbConnection){ }
 
         #region DbSets
-        public DbSet<vCountryRecords> vCountryRecords { get; set; }
-        public DbSet<vCountries> vCountries { get; set; }
-        public DbSet<Country> Candidates { get; set; }
+        public DbSet&ltvCountryRecords&gt vCountryRecords { get; set; }
+        public DbSet&ltvCountries&gt vCountries { get; set; }
+        public DbSet&ltCountry&gt Candidates { get; set; }
         #endregion DbSets
     }
 

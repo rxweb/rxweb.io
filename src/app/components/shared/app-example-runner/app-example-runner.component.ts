@@ -44,7 +44,7 @@ export class AppExampleRunnerComponent implements OnInit {
   ngOnInit(): void {
     if(document.location.pathname.includes("dynamic-validation")){
       this.exampleHeight = 750;
-      this.exampleUrl =  "http://localhost:9999" + this.router.url +  "?exampleName=";
+      this.exampleUrl =  "https://rxwebangular.z20.web.core.windows.net/" + this.router.url +  "?exampleName=";
     this.isRunCode = true;
     }
     this.showElement = false;
@@ -62,6 +62,8 @@ export class AppExampleRunnerComponent implements OnInit {
       if (JSON.stringify(this.content.json) !== JSON.stringify({})) {
         var jsonObject = this.content.json;
         if (jsonObject) {
+      
+      
           for (var prop in jsonObject) {
             if (jsonObject.hasOwnProperty(prop) && this.decoratorName != "get") {
               this.tabArray.push({ "tabName": prop, "tabItem": prop, "content": jsonObject[prop] })
@@ -78,9 +80,13 @@ export class AppExampleRunnerComponent implements OnInit {
   }
 
   runCodeExample(exampleName){ 
-       
-    this.exampleHeight =  this.exampleHeights.filter(x=>x.exampleName == exampleName)[0].height;
-    let codeUrl =  "http://localhost:9999" + this.router.url +  "?exampleName=" + exampleName;
+    debugger;
+       let example = this.exampleHeights.filter(x=>x.exampleName == exampleName);
+       if(example.length > 0)
+         this.exampleHeight = example[0].height;
+       else
+         this.exampleHeight = 160;
+    let codeUrl =  "https://rxwebangular.z20.web.core.windows.net/" + this.router.url +  "?exampleName=" + exampleName;
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
     setTimeout(()=>{this.isRunCode = true;},500)
     

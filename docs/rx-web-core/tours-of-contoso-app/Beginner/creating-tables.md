@@ -6,34 +6,10 @@ type: simple
 linktitle: overview
 ---
 
-# Creating Table and Views
+# Creating Tables
 Tables are one of the most-used database objects where collection of related data is held in a table format within a SQL server database and designing a proper table is essential for any application (which is `Contoso University` in our case), as the appropriate table structure plays a vital role. 
 
-<a role="button" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/SQL%20Scripts/main.sql#L1678-L1700" style="
-    background: #f5f6f7;
-    color: #4e5665 !important;
-    font-size: 12px;
-    padding: 5px 10px;
-    border-color: rgba(0,0,0,.14);
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.12);
-    color: #fff;
-    cursor: pointer;
-    font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 18px;
-    padding: 8px 15px;
-    text-align: center;
-    transition: all 100ms ease-out;
-    display: inline-block;
-    text-decoration: none;
-    white-space: nowrap;
-    margin-bottom: 30px;
-    margin-top: 10px;
-"><span style="vertical-align: middle">Download the Code</span><img class="_3-99 img" src="https://scontent.famd5-1.fna.fbcdn.net/v/t39.2365-6/21630666_872184906282544_8997395837269049344_n.png?_nc_cat=106&amp;_nc_ohc=ixvAzbNREvgAX9AAb7C&amp;_nc_ht=scontent.famd5-1.fna&amp;oh=738ee91e1ae8331712186222788828a0&amp;oe=5ED55A8A" height="25" alt="" style="vertical-align:middle;margin-left: 4px;max-width: 654px;"></a>
+<a role="button" target="_blank" class="git-link-button" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/SQL%20Scripts/main.sql#L1678-L1700" class="git-link-button"><span style="vertical-align: middle">Download the Code</span><img class="_3-99 img" src="https://scontent.famd5-1.fna.fbcdn.net/v/t39.2365-6/21630666_872184906282544_8997395837269049344_n.png?_nc_cat=106&amp;_nc_ohc=ixvAzbNREvgAX9AAb7C&amp;_nc_ht=scontent.famd5-1.fna&amp;oh=738ee91e1ae8331712186222788828a0&amp;oe=5ED55A8A" height="25" alt="" style="vertical-align:middle;margin-left: 4px;max-width: 654px;"></a>
 
 You will learn :
 

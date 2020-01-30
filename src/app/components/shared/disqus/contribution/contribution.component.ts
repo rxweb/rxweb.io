@@ -5,6 +5,7 @@ import * as moment from 'src/assets/scripts/moment.js'
 import * as showdown from 'src/assets/scripts/showdown.js'
 import { Http } from '@angular/http';
 import { Router } from '@angular/router';
+import { ApplicationBroadcaster } from '@rx/core';
 
 @Component({
     selector: 'app-contribution',
@@ -12,11 +13,17 @@ import { Router } from '@angular/router';
 })
 
 export class ContributionComponent implements OnInit{
+    gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/docs/reactive-form-validators";
     links: any;
+    pageName:string;
     fileName: string;
     upcomingLink: string;
-    constructor(private http:HttpClient,private router:Router
+    constructor(private http:HttpClient,private router:Router,private applicationBroadCaster: ApplicationBroadcaster,
     ) {
+        this.applicationBroadCaster.topSubscriber.subscribe(t => {
+            this.gitEditUrl = t.gitDocPath;
+            this.pageName = t.title;
+        });
         this.http.get('assets/json/rxwebcore-links.json').subscribe((response: any) => {
             this.links = response;
             var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
@@ -27,41 +34,19 @@ export class ContributionComponent implements OnInit{
             }
           })
     }
-    gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/docs/reactive-form-validators";
-    pageName:string;
+  
+    
     ngOnInit(){
-        var splitedArray = location.pathname.split("/");
-        if(splitedArray.length > 0 && splitedArray[1])
-        {
-            switch(splitedArray[1])
-            {
-                case "decorators":
-                    this.gitEditUrl += "/decorators/" + splitedArray[2] + ".md"    
-                    this.pageName = splitedArray[2]
-                    break;
-                case "form-validations":
-                    this.gitEditUrl += "/validation-decorators/" + splitedArray[2] + ".md"    
-                    this.pageName = splitedArray[2]
-                    break;
-                case "api":
-                    this.gitEditUrl += "/api/ReactiveFormConfig.md"    
-                    this.pageName = "ReactiveFormConfig"
-                    break;
-                case "getting-started":
-                    this.gitEditUrl += "/getting-started.md"    
-                    this.pageName = "Getting Started"
-                    break;
-            }
-        }
+       
     }
 
     nextLink() {
-        debugger;
         var currentObjIndex = this.links.findIndex(a => a.href == location.pathname);
         if (currentObjIndex != undefined) {
           currentObjIndex++;
           var nextObj = this.links[currentObjIndex];
           this.router.navigate([nextObj.href]);
         }
+        document.body.scrollTop = 0;
       }
 }

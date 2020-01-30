@@ -25,7 +25,7 @@ Used during put request for updating object/objects of entity.
 Updating Multiple Objects using `RegisterDirtyAsync` 
 
 ````js
-   public async Task UpdateAsyncList([FromBody]IList<Candidate> candidates)
+   public async Task UpdateAsyncList([FromBody]IList&ltCandidate&gt candidates)
     {     
      await Uow.RegisterNewAsync(candidate);
      await Uow.CommitAsync();

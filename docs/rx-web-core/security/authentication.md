@@ -39,7 +39,7 @@ Generally we are generating a token while loging the application, The same we ar
 ````
 As per the above code the `WriteToken` method will be used by resolving the service in the constructor, which will create a json web token having security key and jsonWebToken which will be used in authorization bearer while making HTTP requests. 
 
-# Parameters
+## Parameters
 1)claims :
 
 The token will be generated based upon the proived <a class="redirect-link" href="https://docs.microsoft.com/en-us/dotnet/api/system.security.claims.claimtypes?view=netframework-4.8">ClaimTypes</a>, As a standard practice we store user related information in the respective claim types

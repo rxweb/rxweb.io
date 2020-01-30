@@ -8,7 +8,7 @@ linktitle:datamodels
 # Generating Data Models
 Data models are POCO models which have database entity objects as properties which are further used while working with data. As in the earlier section we have discussed about the database provider and how the database objects are created, In this section we will generated models class of the tables and views which are present in the database.    
 
-# Generate POCO Model
+## Generate POCO Model
 
 `POCO` means `Plain Old CLR Object`. POCO Entity is a class that doesn't depend on any framework-specific base class. These models act as a data carriers and has validation and any other business logic you want to implement. 
 
@@ -71,11 +71,11 @@ public partial class Country
     [InverseProperty("Client")]
     #endregion Countries Annotations
 
-    public virtual ICollection<Candidate> Countries { get; set; }
+    public virtual ICollection&ltCandidate&gt Countries { get; set; }
 
     public Client()
     {
-        Candidates = new HashSet<Candidate>();
+        Candidates = new HashSet&ltCandidate&gt();
     }
 }
 ```

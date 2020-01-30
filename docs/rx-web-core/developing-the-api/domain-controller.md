@@ -16,7 +16,7 @@ Users Entity requires a custom logic to be added into it. For example it is havi
 
 > Name of that basic controller must have a suffix "Controller". For example: `UsersController`.
 
-# Generate a Domain Controller
+## Generate a Domain Controller
 
 To create a domain controller, open the `Package Manager Console` and run the following command.
 
@@ -28,7 +28,7 @@ Lets consider a scenario where you want to create a `UsersController` with high 
 
 In the above command by writing --domain indicates its complexity high, Users is the controller name and User is the Module name. It will create a controller `UsersController` in `UsersModule` in Api folder of the project and `UsersDomain.cs` in the Domain folder of the project.
 
-# Methods   
+## Methods   
 
 <table class="table table-bordered">
 <tr><th>Method</th><th>Description</th><th>Return Type</th><th>Request Params</th><th>Request Body</th><th>Response</th></tr>
@@ -42,7 +42,7 @@ In the above command by writing --domain indicates its complexity high, Users is
 <tr><td>DeleteAsync</td><td>deletes a particular entity</td><td>void</td><td>entity object</td><td> - </td><td>NoContent()</td></tr>
 </table>
 
-# Example
+## Example
 ````js
     [ApiController]
     [Route("api/[controller]")]

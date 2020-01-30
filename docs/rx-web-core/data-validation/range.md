@@ -93,8 +93,8 @@ Here is the dynamic expression function.
 ````js
     public partial class Candidate {
 
-        public Dictionary<string, object> AdressDynamicExpression(object parentEntity = null) {
-            return new Dictionary<string, object>()
+        public Dictionary&ltstring, object&gt AdressDynamicExpression(object parentEntity = null) {
+            return new Dictionary&ltstring, object&gt()
             {
                 { "CustomMessageKey","CustomMaxLengthKey" }
             };

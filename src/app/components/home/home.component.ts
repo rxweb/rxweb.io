@@ -299,8 +299,10 @@ export class HomeComponent implements OnInit, OnDestroy {
         
          if(nw){
           for (var i = 0; i < nw.length; i++) {
-            nw[i].className = 'letter behind';
-            nw[0].parentElement.style.opacity = 1;
+            nw[i].className = 'letter behind';         
+            if(nw[0].parentElement){
+              nw[0].parentElement.style.opacity = 1;
+            }
             animateLetterIn(nw, i);
           }
 

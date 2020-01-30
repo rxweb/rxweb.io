@@ -16,7 +16,7 @@ The controller must be inherited from the class `BaseChildController` in which  
 
 > Name of that child controller must have a suffix "Controller". For example: `CandidateAvailabilitiesController`.
 
-# Generate a Child Controller
+## Generate a Child Controller
 
 To Create a child controller, open the `Package Manager Console` and run the following command:
 
@@ -30,9 +30,9 @@ In the above command, `child` is the type of controller, `CandidateAvailabilitie
 
 > If you want to create a domain child controller, run the below command :  
 
-> rxwebcore --controller --domain --main &ltChild_Controller_Name&gt --uow &ltModule_Name&gt --parent &ltParent_Controller_Name&gt
+> rxwebcore --controller --domain --main &ltChild_Controller_Name&lt --uow &ltModule_Name&gt --parent &ltParent_Controller_Name&gt
 
-# Methods
+## Methods
 
 `BaseChildController` is inherited by `ControllerBase` and contain various methods used for Data interaction such as Get, Put, Post, Patch and Delete. These methods are always public methods of the Controller as the child controller class methods must be publically accessible to the specific action of the of the Controller. 
 
@@ -48,7 +48,7 @@ There are mainly 6 methods used for the Child Controller which needs to be there
 <tr><td>Delete</td><td>IActionResult</td><td>Id of that entity which you want to delete</td><td> - </td><td>NoContent()</td></tr>
 </table>
 
-# Complete Example of Child Controller
+## Complete Example of Child Controller
 
 Here is an example of child controller:
 
@@ -56,7 +56,7 @@ Here is an example of child controller:
     
     [ApiController]
     [Route("api/Customer/{CustomerId}/[controller]")]	
-	public class CustomerContactController : BaseChildController<CustomerContact,vCustomerContact,vCustomerContactRecord>
+	public class CustomerContactController : BaseChildController&ltCustomerContact,vCustomerContact,vCustomerContactRecord&gt
     {
         public CustomerContactController(IMasterUow uow):base(uow) {}
     }

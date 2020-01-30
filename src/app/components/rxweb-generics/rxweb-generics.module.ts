@@ -12,10 +12,11 @@ import { RxReactiveDynamicFormsModule } from "@rxweb/reactive-dynamic-forms"
 import { CommonSharedModule } from '../shared/common/common-shared.module';
 import { GenericsGettingStartedComponent } from './getting-started/getting-started.component';
 import { RXWEB_GENERICS_ROUTING } from './rxweb-generics.routing';
+import { TopBarSharedModule } from '../shared/top-bar/top-bar-shared.module';
 
 
 @NgModule({
-  imports: [RXWEB_GENERICS_ROUTING,CommonSharedModule,  HighlightModule.forRoot({ theme: 'default' }), ClipboardModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
+  imports: [RXWEB_GENERICS_ROUTING,CommonSharedModule,TopBarSharedModule,  HighlightModule.forRoot({ theme: 'default' }), ClipboardModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
   declarations: [GenericsGettingStartedComponent],
   providers:[{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
  exports:      [ RouterModule ]

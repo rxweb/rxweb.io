@@ -11,31 +11,7 @@ As we follow bounded context design pattern and  domain driven approach, we will
 
 This will give the benefit of each domain working seperately without any dependency of each other which can lead to moving towards microservices or serverless whenever required.
 
-<a role="button" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/ContosoApplication.BoundedContext/DbContext/Main/MasterContext.cs" style="
-    background: #f5f6f7;
-    color: #4e5665 !important;
-    font-size: 12px;
-    padding: 5px 10px;
-    border-color: rgba(0,0,0,.14);
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,.12);
-    color: #fff;
-    cursor: pointer;
-    font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 18px;
-    padding: 8px 15px;
-    text-align: center;
-    transition: all 100ms ease-out;
-    display: inline-block;
-    text-decoration: none;
-    white-space: nowrap;
-    margin-bottom: 30px;
-    margin-top: 10px;
-"><span style="vertical-align: middle">Download the Code</span><img class="_3-99 img" src="https://scontent.famd5-1.fna.fbcdn.net/v/t39.2365-6/21630666_872184906282544_8997395837269049344_n.png?_nc_cat=106&amp;_nc_ohc=ixvAzbNREvgAX9AAb7C&amp;_nc_ht=scontent.famd5-1.fna&amp;oh=738ee91e1ae8331712186222788828a0&amp;oe=5ED55A8A" height="25" alt="" style="vertical-align:middle;margin-left: 4px;max-width: 654px;"></a>
+<a role="button" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/ContosoApplication.BoundedContext/DbContext/Main/MasterContext.cs" class="git-link-button"><span style="vertical-align: middle">Download the Code</span><img class="_3-99 img" src="https://scontent.famd5-1.fna.fbcdn.net/v/t39.2365-6/21630666_872184906282544_8997395837269049344_n.png?_nc_cat=106&amp;_nc_ohc=ixvAzbNREvgAX9AAb7C&amp;_nc_ht=scontent.famd5-1.fna&amp;oh=738ee91e1ae8331712186222788828a0&amp;oe=5ED55A8A" height="25" alt="" style="vertical-align:middle;margin-left: 4px;max-width: 654px;"></a>
 
 You will learn:
 <ul class="bullet-list">
@@ -67,13 +43,13 @@ The generated Master DbContext with its added model classes is as below:
 ````js
     public class MasterContext : BaseBoundedContext, IMasterContext
     {
-        public MasterContext(MainSqlDbContext sqlDbContext, IOptions<DatabaseConfig> databaseConfig, IHttpContextAccessor contextAccessor, ITenantDbConnectionInfo tenantDbConnection) : base(sqlDbContext, databaseConfig.Value, contextAccessor, tenantDbConnection) { }
+        public MasterContext(MainSqlDbContext sqlDbContext, IOptions&ltDatabaseConfig&gt databaseConfig, IHttpContextAccessor contextAccessor, ITenantDbConnectionInfo tenantDbConnection) : base(sqlDbContext, databaseConfig.Value, contextAccessor, tenantDbConnection) { }
 
         #region DbSets
-        public DbSet<vStudentRecord> vStudentRecords { get; set; }
-        public DbSet<vStudent> vStudents { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Course> Courses { get; set; }
+        public DbSet&ltvStudentRecord&gt vStudentRecords { get; set; }
+        public DbSet&ltvStudent&gt vStudents { get; set; }
+        public DbSet&ltStudent&gt Students { get; set; }
+        public DbSet&ltCourse&gt Courses { get; set; }
         #endregion DbSets
     }
 
@@ -81,11 +57,7 @@ The generated Master DbContext with its added model classes is as below:
     {
     }
 ````
-<ul class="bullet-list">
-<li>
-<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/ContosoApplication.BoundedContext/DbContext/Main/MasterContext.cs">View The Generated Bounded Context</a></span>.
-</li>
-</ul>
+
 
 ## Unit of Work
 Along with the generation of the bounded context, it generates a Uow(unit of work) class of its respective module, the main purpose the unit of work class holds is to manage the state of the database objects using its provided methods and execute necessary changes to the database in one go after the data operation is successfully done, besides this it also performs data entity auditing.
@@ -103,9 +75,5 @@ The Uow class of the master module is as below:
 
 The above Uow class is created in the main folder of the ContosoApplication.UnitOfWork project. Once the database connection is resolved using the bounded context, the uow is responsible for handling data activities which are done using the Apis which we will create further.
 
-<ul class="bullet-list">
-<li>
-<span style="text-decoration:underline;"> <a class="redirect-link" target="_blank" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/Tours%20of%20Contoso%20Application/Beginner/ContosoApplication/ContosoApplication.UnitOfWork/Main/MasterUow.cs">View The Generated Unit Of Work</a></span>.
-</li>
-</ul>
+
 

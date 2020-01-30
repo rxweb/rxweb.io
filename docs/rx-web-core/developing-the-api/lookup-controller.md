@@ -12,7 +12,7 @@ Large modules have entities which need to be bind as a dropdown, In such cases a
 
 The controller must be inherited from the class `BaseLookupController`. The controller will have a predefined route which include the controller name. For example: `[Route("api/CountryLookupsController")]` 
 
-# Generate a Lookup Controller
+## Generate a Lookup Controller
 
 To create a lookup controller, open the `Package Manager Console` and run the following command.
 
@@ -24,7 +24,7 @@ Lets consider a scenario where you want to create a `CountryLookupsController` i
 
 `CountryLookups` is the controller name and `User` is the module name. It will create a controller `CountryLookupsController` in lookup folder of api in the project
 
-# Add lookups 
+## Add lookups 
 Adding lookups in the controller:
 
 > rxwebcore --controller --lookup --main &ltCountry_Name&gt --uow &ltModule_Name&gt --add-lookups &ltLookup&gt
@@ -33,7 +33,7 @@ As per this controller :
 
 > rxwebcore --controller --lookup --main CountryLookups --uow CountryLookup --add-lookups vCountryLookups
 
-# Methods
+## Methods
 
 <table class="table table-bordered">
 <tr><th>Method</th><th>Return Type</th><th>Request Params</th><th>Request Body</th><th>Response</th></tr>
@@ -42,20 +42,24 @@ As per this controller :
 <tr><td>Where</td><td>list</td><td>predicate</td><td> - </td><td>list</td></tr>
 </table>
 
-# Example
+## Example
 
 ````js
 [ApiController]
-[Route("api/[controller]")]
-public class ResourceLookUpsController : BaseLookupController
-{
-    {
-        public ResourceLookUpsController(IResourceLookUpUow uow):base(uow) {}
+  [Route("api/[controller]")]
+  public class CountryLookupsController : BaseLookupController
+  {
+    public CountryLookupsController(IUserUow uow) : base(uow) { }
 
-        #region Lookups
-        #endregion Lookups
+    #region Lookups
+    [HttpGet("CountryLookups")]
+    public IQueryable<vCountryLookup> GetCountryLookups()
+    {
+      return Uow.Repository<vCountryLookup>().Queryable();
     }
-}
+    #endregion Lookups
+
+  }
 
 ````
 

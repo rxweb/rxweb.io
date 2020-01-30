@@ -11,7 +11,7 @@ linktitle:objectstransaction
 Used for adding objects using BeginTransaction, Here the `DbContextManager` is resolved using Dependency injection in the controller.  
 
 ````js
-    public CandidatesDomain(IResourceUow uow, IDbContextManager<ResourceContext> dbContextManager)
+    public CandidatesDomain(IResourceUow uow, IDbContextManager&ltResourceContext&gt dbContextManager)
     {
       this.Uow = uow;
       DbContextManager = dbContextManager;

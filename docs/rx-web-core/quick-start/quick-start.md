@@ -121,5 +121,3 @@ The first step is to hit the authentication api get method, it should be authori
 <video  controls>
 <source src="assets/images/build-project.mp4" type="video/mp4">
 </video>
-Once the user is successfully logged in, the api of the applications can be accessed. For accessing the api, refer <a class="redirect-link" href="/rxwebcore/basiccontroller#acessingtheapi">Accessing The Api
-</a>

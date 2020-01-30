@@ -16,19 +16,19 @@ The Candidate entity requires the basic data operations(Based upon the ResourceC
 
 > Name of that basic controller must have a suffix "Controller". For example: `CandidatesController`.
 
-# Generate a Basic Controller
+## Generate a Basic Controller
 
 To Create a basic controller, open the `Package Manager Console` and run the following command:
 
 > rxwebcore --controller --basic --main &ltController_Name&gt --uow &ltModule_Name&gt
 
-Let's consider a scenario where you want a `CandidatesController` in the `ResourceModule`, you have to write:
+Let's consider a scenario where you want a `CandidatesController` in the `CandidateModule`, you have to write:
 
-> rxwebcore --controller --basic --main Candidates --uow Resource
+> rxwebcore --controller --basic --main Candidates --uow Candidate
 
 In the above command, `basic` is the type of controller, `Candidates` is the name of the controller and `Candidate` is the name of the module. This command will create a separate folder named as "ResourceModule" and add a basic controller named as "CandidatesController" under the Api section of the project. 
 
-# Methods
+## Methods
 
 `BaseController` contain various methods used for Data interaction such as Get, Put, Post, Patch and Delete which will use the methods of Uow to interact with data. These methods are always public methods of the Controller as the controller class methods must be publically accessible to the specific action of the of the Controller. 
 
@@ -44,7 +44,7 @@ There are mainly 6 methods used for the Basic Controller which needs to be there
 <tr><td>Delete</td><td>IActionResult</td><td>Id of that entity which you want to delete</td><td> - </td><td>NoContent()</td></tr>
 </table>
 
-# Complete Example of Basic Controller 
+## Complete Example of Basic Controller 
 
 Here is an example of a basic controller.
 
@@ -52,14 +52,14 @@ Here is an example of a basic controller.
 
     [ApiController]
     [Route("api/[controller]")]
-	public class CandidatesController : BaseController<Candidate,vCandidate,vCandidateRecord>
+	public class CandidatesController : BaseController&ltCandidate,vCandidate,vCandidateRecord&gt
     {
         public CandidatesController(ICandidateUow uow):base(uow) {}
     }
 
 ````
 
-# Acessing The Api
+## Acessing The Api
 
 For accessing the created Api, you must pass the JWT token which is generated when the authentication controller is called. For more information about creation of JWt web token Please refer <a class="redirect-link" href="/rx-web-core/step-by-step-guide/run-the-project">Login Api</a>.  
 

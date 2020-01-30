@@ -14,28 +14,28 @@ To perform effective quering becomes much necessary when we want to recieve our 
 
 In our HumanResourceApplication we have to work on candidates functionality, As we have defined the candidates table and now we are going to define the views for getting the records. Here there are three cases where making materialized view can be helpful which are stated below:
 
-# 1. Displaying List of records
+## 1. Displaying List of records
 Suppose we want to display a list of candidates, we will make a `vCandidates` view for the same. Here Candidates id the table name and we add a abbreviation `v` which is here meant for a view. We do this to maintain a consistency of the naming convention used all over the application. 
 
 ````
 CREATE VIEW [dbo].[vCandidates]
 AS
-SELECT        CandidateId, FirstName, EmailId, CountryId, Designation, Experience
+SELECT        CandidateId, FirstName, EmailId, Designation, Experience
 FROM            dbo.Candidates
 ````
 
-# 2. Displaying Data while Editing
+## 2. Displaying Data while Editing
 Now we want to display specific fields of the states while edit call, we will make `vStateRecords`. We make seperate view for displaying list of records and editing because there might be some additional column or column value differing from list and edit. For example for displaying list you dont have StatusId column but in edit mode you want that column to be displayed. 
 
 ````
-CREATE VIEW [dbo].[vStateRecords]
+CREATE VIEW [dbo].[vCandidateRecords]
 AS
-SELECT        StateId, StateName, StatusId
-FROM            dbo.States
+SELECT        CandidateId, FirstName, EmailId, CountryId, Designation, Experience
+FROM            dbo.Candidates
 GO
 ````
 
-# 3. Binding data in a dropdown 
+## 3. Binding data in a dropdown 
 In some of the areas where we have to bind the name of the countries in the dropdown, in that case we have to define the lookup view of Countries the name should be `vCountryLookups` in this case because we only need fields which are required in the lookup.
 
 ````

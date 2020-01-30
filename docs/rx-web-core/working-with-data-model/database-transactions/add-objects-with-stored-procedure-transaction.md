@@ -64,7 +64,7 @@ DbContextManager.BeginTransaction();
 Insert Candidate's Availabilites using `SqlQueryAsync` by passing necessary parameters.
 
 ````js
-var result = await DbContextManager.SqlQueryAsync<StoreProcResult>("EXEC [dbo].spInsertcandidateAvailabilities @AvailableDate,  @FromTime, @ToTime, @CandidateId", spParameters);
+var result = await DbContextManager.SqlQueryAsync&ltStoreProcResult&gt("EXEC [dbo].spInsertcandidateAvailabilities @AvailableDate,  @FromTime, @ToTime, @CandidateId", spParameters);
 ````
 
 # Step 4:

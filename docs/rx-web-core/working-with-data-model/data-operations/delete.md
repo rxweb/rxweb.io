@@ -15,7 +15,7 @@ Used for delete operation to be done on entity.
 ````js
     public async Task DeleteAsync(int id)
     {
-      var candidate = Uow.Repository<Candidate>().FindByKey(id);
+      var candidate = Uow.Repository&ltCandidate&gt().FindByKey(id);
       await Uow.RegisterDeletedAsync(candidate);
       await Uow.CommitAsync();
     }

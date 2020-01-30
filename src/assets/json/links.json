@@ -72,6 +72,318 @@
                         "childrens": [],
                         "isActive": false
                     },
+                  
+                        {
+                          "title": "Getting Started",
+                          "uri": "rxweb-generics/generic-getting-started",
+                          "isOpen": false,
+                          "isActive": false,
+                          "linkTitle": "generic-getting-started"
+                        },    
+                        {
+                          "title": "Generics",
+                          "isOpen": false,
+                          "isActive": false,
+                          "otherUri": "generics",
+                          "childrens": [
+                            {
+                              "title": "List",
+                              "uri": "rxweb-generics/generics/list",
+                              "otherUri": "list",
+                              "linkTitle": "list",
+                              "isOpen": true,
+                              "isActive": false,
+                              "childrens": [
+                                  {
+                                    "title": "add",
+                                    "uri": "rxweb-generics/generics/list#add",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "add"
+                                  },
+                                  {
+                                    "title": "addRange",
+                                    "uri": "rxweb-generics/generics/list#addrange",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "addrange"
+                                  },
+                                  {
+                                    "title": "all",
+                                    "uri": "rxweb-generics/generics/list#all",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "all"
+                                  },
+                                  {
+                                    "title": "any",
+                                    "uri": "rxweb-generics/generics/list#any",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "any"
+                                  },
+                                  {
+                                    "title": "average",
+                                    "uri": "rxweb-generics/generics/list#average",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "average"
+                                  },
+                                  {
+                                    "title": "contains",
+                                    "uri": "rxweb-generics/generics/list#contains",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "contains"
+                                  },
+                                  {
+                                    "title": "shift",
+                                    "uri": "rxweb-generics/generics/list#shift",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "shift"
+                                  },
+                                  {
+                                    "title": "count",
+                                    "uri": "rxweb-generics/generics/list#count",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "count"
+                                  },
+                                  {
+                                    "title": "concat",
+                                    "uri": "rxweb-generics/generics/list#concat",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "concat"
+                                  },
+                                  {
+                                    "title": "where",
+                                    "uri": "rxweb-generics/generics/list#where",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "where"
+                                  },
+                                  {
+                                    "title": "distinct",
+                                    "uri": "rxweb-generics/generics/list#distinct",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "distinct"
+                                  },
+                                  {
+                                    "title": "distinctBy",
+                                    "uri": "rxweb-generics/generics/list#distinctby",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "distinctby"
+                                  },
+                                  {
+                                    "title": "elementAt",
+                                    "uri": "rxweb-generics/generics/list#elementat",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "elementat",
+                                    "isHide": true
+                                  },
+                                  {
+                                    "title": "except",
+                                    "uri": "rxweb-generics/generics/list#except",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "except",
+                                    "isHide": true
+                                  },
+                                  {
+                                    "title": "first",
+                                    "uri": "rxweb-generics/generics/list#first",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "first"
+                                  },
+                                  {
+                                    "title": "firstOrDefault",
+                                    "uri": "rxweb-generics/generics/list#firstordefault",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "firstordefault"
+                                  },
+                                  {
+                                    "title": "forEach",
+                                    "uri": "rxweb-generics/generics/list#foreach",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "foreach",
+                                    "isHide": true
+                                  },
+                                  {
+                                    "title": "aggregate",
+                                    "uri": "rxweb-generics/generics/list#aggregate",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "aggregate"
+                                  },
+                                  {
+                                    "title": "groupBy",
+                                    "uri": "rxweb-generics/generics/list#groupby",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "groupby"
+                                  },
+                                  {
+                                    "title": "insert",
+                                    "uri": "rxweb-generics/generics/list#insert",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "insert"
+                                  },
+                                  {
+                                    "title": "last",
+                                    "uri": "rxweb-generics/generics/list#last",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "last"
+                                  },
+                                  {
+                                    "title": "lastOrDefault",
+                                    "uri": "rxweb-generics/generics/list#lastordefault",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "lastordefault"
+                                  },
+                                  {
+                                    "title": "max",
+                                    "uri": "rxweb-generics/generics/list#max",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "max"
+                                  },
+                                  {
+                                    "title": "max",
+                                    "uri": "rxweb-generics/generics/list#parameterizedmax",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "parameterizedmax"
+                                  },
+                                  {
+                                    "title": "maxBy",
+                                    "uri": "rxweb-generics/generics/list#maxby",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "maxby"
+                                  },
+                                  {
+                                    "title": "min",
+                                    "uri": "rxweb-generics/generics/list#min",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "min"
+                                  },
+                                  {
+                                    "title": "min",
+                                    "uri": "rxweb-generics/generics/list#parameterizedmin",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "parameterizedmin"
+                                  },
+                                  {
+                                    "title": "minBy",
+                                    "uri": "rxweb-generics/generics/list#minby",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "minby"
+                                  },
+                                  {
+                                    "title": "orderBy",
+                                    "uri": "rxweb-generics/generics/list#orderby",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "orderby"
+                                  },
+                                  {
+                                    "title": "orderByDescending",
+                                    "uri": "rxweb-generics/generics/list#orderbydescending",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "orderbydescending"
+                                  },
+                                  {
+                                    "title": "pop",
+                                    "uri": "rxweb-generics/generics/list#pop",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "pop"
+                                  },
+                                  {
+                                    "title": "remove",
+                                    "uri": "rxweb-generics/generics/list#remove",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "remove"
+                                  },
+                                  {
+                                    "title": "removeAll",
+                                    "uri": "rxweb-generics/generics/list#removeall",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "removeall"
+                                  },
+                                  {
+                                    "title": "removeAt",
+                                    "uri": "rxweb-generics/generics/list#removeat",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "removeat",
+                                    "isHide": true
+                                  },
+                                  {
+                                    "title": "select",
+                                    "uri": "rxweb-generics/generics/list#select",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "select",
+                                    "isHide": true
+                                  },
+                                  {
+                                    "title": "single",
+                                    "uri": "rxweb-generics/generics/list#single",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "single"
+                                  },
+                                  {
+                                    "title": "singleOrDefault",
+                                    "uri": "rxweb-generics/generics/list#singleordefault",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "singleordefault"
+                                  },
+                                  {
+                                    "title": "skip",
+                                    "uri": "rxweb-generics/generics/list#skip",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "skip"
+                                  },
+                                  {
+                                    "title": "sum",
+                                    "uri": "rxweb-generics/generics/list#sum",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "sum"
+                                  },
+                                  {
+                                    "title": "take",
+                                    "uri": "rxweb-generics/generics/list#take",
+                                    "isActive": false,
+                                    "linkTitle": "list",
+                                    "refUri": "take"
+                                  }
+                                ]
+                            }          
+                          ]
+                        },
+                      
                     {
                         "title": "Reactive Forms",
                         "childrens": [

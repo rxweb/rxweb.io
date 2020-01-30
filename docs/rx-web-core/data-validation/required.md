@@ -91,8 +91,8 @@ In the ExtendedModel class
 ````js
     public partial class User {
 
-        public Dictionary<string, object> CandidateNameDynamicExpression(object parentEntity = null) {
-            return new Dictionary<string, object>()
+        public Dictionary&ltstring, object&gt CandidateNameDynamicExpression(object parentEntity = null) {
+            return new Dictionary&ltstring, object&gt()
             {
                 { "CustomMessageKey","CustomRequiredKey" }
             };
