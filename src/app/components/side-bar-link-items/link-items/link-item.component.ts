@@ -16,7 +16,8 @@ export class LinkItemsComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
   navigateTo(link: any): void {
     if (link != null && link.uri != null) {
