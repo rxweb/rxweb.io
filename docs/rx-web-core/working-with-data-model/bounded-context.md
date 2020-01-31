@@ -81,7 +81,7 @@ rxwebcore --context --main Candidate --add-models Candidates
     }
 ```` 
 
-With the creation of BoundedContext, its UnitOfWork will be generated which will be further used in the API to interact with the data. To get further information about UnitOfWork Please refer this link.
+With the creation of BoundedContext, its UnitOfWork will be generated which will be further used in the API to interact with the data. To get further information about UnitOfWork Please refer this <a href="/rx-web-core/working-with-data-model/data-operations/overview" class="redirect-link" target="_blank">link.</a>
 
 ## Create Lookup context
 lookup context contains DbSets of lookups used to bind dropdowns of the context in the application. 

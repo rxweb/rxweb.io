@@ -64,7 +64,7 @@
     },
     "where": {
         "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-count',\r\n  templateUrl: './list-count.component.html'\r\n})\r\n\r\nexport class ListWhereComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n    ngOnInit() {\r\n    this.result = this.items.where(x=>x.name == \"John\");\r\n  }  \r\n}   ",
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { List } from '@rxweb/generics';\r\n\r\nimport { UserModel } from './user.model';\r\n\r\n@Component({\r\n  selector: 'app-list-where',\r\n  templateUrl: './list-where.component.html'\r\n})\r\n\r\nexport class ListWhereComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n    ngOnInit() {\r\n    this.result = this.items.where(x=>x.name == \"John\");\r\n  }  \r\n}   ",
         "function":"export class ListWhereComponent implements OnInit {\r\n    result:any;\r\n    items: List<UserModel> = new List<UserModel>([{ name: 'John' },{name:\"David\"}]);\r\n\r\n    ngOnInit() {\r\n    this.result = this.items.where(x=>x.name == \"John\");\r\n  }  \r\n}   ",
         "html": "<div>\r\n        <h2>where Result : </h2>\r\n        <ul *ngFor=\"let item of result\">\r\n          <li>{{item.name}}</li>  \r\n        </ul>\r\n    </div>",
         "model": "export class UserModel {\r\n    name: string;\r\n}",

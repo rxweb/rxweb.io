@@ -23,7 +23,7 @@ import { QuickStartComponent } from "../quick-start/quick-start.component";
 
 const APP_LAZY_ROUTES: Routes = [
   {
-    path: '', redirectTo: 'home', pathMatch: 'full'
+    path: '', redirectTo: 'angular-home', pathMatch: 'full'
   },
   {
     path: 'dashboard', component: DashboardComponent

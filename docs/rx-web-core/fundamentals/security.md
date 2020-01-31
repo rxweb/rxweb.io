@@ -23,7 +23,7 @@ This principle works on not allowing to access the web APIs from any origin. It 
 IpSafelist means to create a list of trusted Ip addresses. It is used for validating access to limited and trusted IPs.
 You have to configure allowed Ips in "AllowedIps" key of `appsettings.json` 
 
-# Configuration
+## Configuration
 
 ````js
     "AllowedIps": [
@@ -33,7 +33,7 @@ You have to configure allowed Ips in "AllowedIps" key of `appsettings.json`
 
 In `security.cs` file of the Bootstrap folder of the Api project, The SetIpSafeList method is called which is used to validate the list of IpAddressed which are set in the AllowedIps. 
 
-# Handling Exception
+## Handling Exception
 
 Handling exception helps you to keep trace of all the errors and exceptions while any exception occurs through the error object. you can set any instance of the exception handler feature and exception.
 
@@ -54,7 +54,7 @@ Handling exception helps you to keep trace of all the errors and exceptions whil
         }
 ````
 
-# Security Headers
+## Security Headers
 It sets the security headers to each context which are response headers which include xss-protection, cross domain policies, security policy etc.  
 
 ````js

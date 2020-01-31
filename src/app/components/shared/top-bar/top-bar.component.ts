@@ -30,38 +30,8 @@ export class TopBarComponent implements OnInit {
   @ViewChild('search1') searchInput: ElementRef;
   titleData: any = { codeContent: {} };
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private router: Router, private route: ActivatedRoute) {
-    this.applicationBroadCaster.topSubscriber.subscribe(t => {
-      debugger
-      if (t.rightSidebarLinks) {
-        this.sidebarLinks = t.rightSidebarLinks;
-      }
-      else {
-        this.sidebarLinks = t;
-      }
-      this.titleData = t;
-      this.gitEditUrl = t.gitDocPath;
-      if (this.sidebarLinks) {
-        if (!this.titleData.title) {
-          if (this.sidebarLinks[0].title)
-            this.titleData.title = this.sidebarLinks[0].title;
-        }
-        this.cloneSidebarLinks = [];
-        if (isArray(this.sidebarLinks)) {
-          this.sidebarLinks.forEach(t => {
-            this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
-
-            if (t.subLink && t.subLink.length > 0) {
-              t.subLink.forEach(x => {
-                this.cloneSidebarLinks.push(x);
-
-              })
-            }
-          })
-
-        }
-
-      }
-    })
+  
+    this.cloneSideBarLinkItems();
   }
 
 
@@ -75,12 +45,46 @@ export class TopBarComponent implements OnInit {
       else
         this.secondLevelBreadCrumb = "Angular";
     }
+    this.cloneSideBarLinkItems();
   }
 
- bindTableOfContents(){
-   
- }
 
+  cloneSideBarLinkItems() {
+
+    this.applicationBroadCaster.topSubscriber.subscribe(t => {
+
+      if (t.rightSidebarLinks) {
+        this.sidebarLinks = t.rightSidebarLinks;
+      }
+      else {
+        this.sidebarLinks = t;
+      }
+      this.titleData = t;
+      this.gitEditUrl = t.gitDocPath;
+      if (this.sidebarLinks) {
+        if (!this.titleData.title) {
+          if (this.sidebarLinks[0])
+            this.titleData.title = this.sidebarLinks[0].title;
+        }
+        this.cloneSidebarLinks = [];
+        if (isArray(this.sidebarLinks)) {
+          this.sidebarLinks.forEach(t => {
+            this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
+  
+            if (t.subLink && t.subLink.length > 0) {
+              t.subLink.forEach(x => {
+                this.cloneSidebarLinks.push(x);
+  
+              })
+            }
+          })
+  
+        }
+      console.log(this.cloneSidebarLinks);
+      }
+    })
+   
+  }
   scrollTo(section) {
 
     var node = document.querySelector('#' + section);

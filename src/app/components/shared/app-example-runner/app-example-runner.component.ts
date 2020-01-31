@@ -43,12 +43,15 @@ export class AppExampleRunnerComponent implements OnInit {
   }
   ngOnInit(): void {
     if (document.location.pathname.includes("dynamic-validation")) {
+      this.showElement = true;
       this.exampleHeight = 750;
       this.exampleUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=";
       this.isRunCode = true;
     }
     this.showElement = false;
-    if (this.decoratorName == "get" || this.decoratorName == "post" || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject") {
+    console.log(this.decoratorName);
+    if (document.location.pathname.includes("dynamic-validation") || this.decoratorName == "get"  || this.decoratorName == "post" || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject") {
+      
       this.showElement = true;
     }
     this.tabArray = [];

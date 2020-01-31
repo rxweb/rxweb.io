@@ -49,6 +49,7 @@ export class SideBarComponent implements OnInit {
 
 
   setActiveLink(currentUrl: string) {
+    debugger;
     for (let link of this.links) {
       if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
         link.isActive = this.isActiveChildren(currentUrl, link.childrens);
