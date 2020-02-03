@@ -83,7 +83,7 @@ export class StackBlitzService {
                   configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
                   configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
                   var expressionArray = VALIDATION_MESSAGES["expression"]
-                  console.log(expressionArray)
+              
                   configObject.validationMessage =
                     {
                       "onlyAlpha": "Only alphabets are allowed",

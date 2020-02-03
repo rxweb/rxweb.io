@@ -80,7 +80,7 @@ export class TopBarComponent implements OnInit {
           })
   
         }
-      console.log(this.cloneSidebarLinks);
+    
       }
     })
    

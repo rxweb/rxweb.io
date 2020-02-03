@@ -23,7 +23,7 @@ To create a search controller, open the `Package Manager Console` and run the fo
 
 Lets consider a scenario where you want to create a `UsersSearchController` in the `OrdersModule`, you have to write:
 
-> rxwebcore --controller --search --main Users --uow User --spname", "spSearchUsers"
+> rxwebcore --controller --search --main Users --uow User --spname, "spSearchUsers"
 
 `UsersSearch` is the controller name and `User` is the module name. It will create a controller `UsersSearchController` in search folder of api in the project
 

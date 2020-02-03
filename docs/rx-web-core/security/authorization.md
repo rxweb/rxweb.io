@@ -66,7 +66,7 @@ It is done using `Access` in which id of the application module is passed. Throu
     [ApiController]
     [Route("api/[controller]")]
 	[Access(1)]
-	public class UsersController : BaseController&gtUser,vUsers,vUserRecords&lt
+	public class UsersController : BaseController&ltUser,vUsers,vUserRecords&gt
     {
         public UsersController(IUserUow uow):base(uow) {}
     }
@@ -87,7 +87,7 @@ As per the below scenario it will allow any user to access this `Post` method an
 ````js
    [HttpGet]
    [AllowAnonymous]
-   public async Task&gtIActionResult&lt Get()
+   public async Task&ltIActionResult&gt Get()
    {
         var token = await ApplicationTokenProvider.GetTokenAsync(new vUser { UserId = 0, ApplicationTimeZoneName = string.Empty, LanguageCode = string.Empty });
         return Ok(token);
@@ -101,7 +101,7 @@ When you want to by-pass the api without knowing whether who the user but author
 ````js
         [HttpPost]
         [AllowAnonymousUser]
-        public async Task&gtIActionResult&lt Post(AuthenticationModel authentication)
+        public async Task&ltIActionResult&gt Post(AuthenticationModel authentication)
         {
             var user = await LoginUow.Repository&gtvUser&lt().SingleOrDefaultAsync(t => t.UserName == authentication.UserName && !t.LoginBlocked);
             if (user != null && PasswordHash.VerifySignature(authentication.Password, user.Password, user.Salt))

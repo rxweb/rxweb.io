@@ -49,7 +49,7 @@ export class AppExampleRunnerComponent implements OnInit {
       this.isRunCode = true;
     }
     this.showElement = false;
-    console.log(this.decoratorName);
+  
     if (document.location.pathname.includes("dynamic-validation") || this.decoratorName == "get"  || this.decoratorName == "post" || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject") {
       
       this.showElement = true;

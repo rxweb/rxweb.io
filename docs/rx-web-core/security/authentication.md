@@ -31,7 +31,7 @@ As we are working on .NET Core api we have to resolve the service in the constru
 Generally we are generating a token while loging the application, The same we are following here. The token is generated from the `GetTokenAsync` method of `ApplicationTokenProvider.cs` which is located in the security folder of `HumanResourceApplication.Infrastructure`.`
 
 ````js
-        public async Task&gtIActionResult&lt Get()
+        public async Task&ltIActionResult&gt Get()
         {
             var token = await ApplicationTokenProvider.GetTokenAsync(new vUser { UserId = 0, ApplicationTimeZoneName = string.Empty, LanguageCode = string.Empty });
             return Ok(token);

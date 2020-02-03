@@ -972,6 +972,7 @@ div#rightsidebar ul:first-child>li.border-none a {
         font-size: 46px;
         line-height: 46px;
     }
+   
     .home_intro .home_page_desc {
         font-size: 22px;
         line-height: 32px;
@@ -6167,7 +6168,7 @@ img {
     }
     .typeit-block{
 
-        margin-left: 32rem;
+        margin-left: 32rem!important;
     }
 }
 
@@ -6179,9 +6180,7 @@ img {
         /* margin-left: 50px;
         margin-bottom: 130px; */
     }
-    .typeit-block{
-        margin-left: 18rem;
-    }
+  
   
     .typeit {
         font-size: 30px;
@@ -6213,7 +6212,7 @@ img {
         margin-bottom: 100px; */
     }
     .typeit-block{
-        margin-left: 18rem;
+        margin-left: 8rem;
     }
     .typeit {
         font-size: 40px;
@@ -6237,7 +6236,7 @@ img {
         margin-bottom: 80px; */
     }
     .typeit-block{
-        margin-left: 8rem;
+        margin-left: 4rem;
     }
     .typeit {
         font-size: 25px;
@@ -7367,6 +7366,7 @@ a.card-body.text-center:hover
 }
 
 @media only screen and (max-width:1199px) {
+  
     header.banner {
         height: auto;
         background-image: none;
@@ -8094,6 +8094,9 @@ span.btn-label {
     .typeit {
         font-size: 18px;
         font-weight: 900;
+    }
+    .typeit-block{
+        margin-left: 18rem;
     }
 }
 

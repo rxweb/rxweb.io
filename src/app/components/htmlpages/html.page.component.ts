@@ -96,6 +96,7 @@ export class HtmlPageComponent implements OnInit {
       element.appendChild(this.create(ContributionComponent, {}).rootNode());
       document.querySelectorAll('code').forEach((block) => {
         hljs.highlightBlock(block);
+        console.log(block);
       });
       document.title = "rxweb " + this.codeContent.title
       this.applicationBroadcaster.topSubject.next(this.codeContent);
