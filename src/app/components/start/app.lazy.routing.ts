@@ -23,16 +23,16 @@ import { QuickStartComponent } from "../quick-start/quick-start.component";
 
 const APP_LAZY_ROUTES: Routes = [
   {
-    path: '', redirectTo: 'angular-home', pathMatch: 'full'
+    path: '', redirectTo: 'home', pathMatch: 'full'
   },
   {
     path: 'dashboard', component: DashboardComponent
   },
   {
-    path: 'home', component: HomeComponent
+    path: 'aspnetcore', component: HomeComponent
   },
   {
-    path: 'angular-home', component: AngularHomeComponent
+    path: 'home', component: AngularHomeComponent
   },
   {
     path: 'getting-started', component: GettingStartedComponent
