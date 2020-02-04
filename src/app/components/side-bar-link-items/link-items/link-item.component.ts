@@ -20,6 +20,7 @@ export class LinkItemsComponent implements OnInit {
   }
 
   navigateTo(link: any): void {
+   
     if (link != null && link.uri != null) {
       this.links.forEach(element => {
         element.isActive = false;

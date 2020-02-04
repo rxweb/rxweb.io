@@ -35,6 +35,15 @@ export class SideBarComponent implements OnInit {
           this.setActiveLink(currentUrl);
         });       
       }
+     
+       else if (location.pathname.includes("vue")) {
+          this.http.get('assets/json/vue-sidebar.json').subscribe((response: any) => {
+            this.links = response.links;
+            var currentUrl = this.router.url;
+            this.setActiveLink(currentUrl);
+          });       
+        }
+    
       else {
         this.http.get('assets/json/links.json?v=' + environment.appVersion).subscribe((response: any) => {
           this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;

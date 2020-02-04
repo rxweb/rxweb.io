@@ -42,6 +42,9 @@ export class TopBarComponent implements OnInit {
     if (splitedArray.length > 0 && splitedArray[1]) {
       if (splitedArray.includes("rx-web-core"))
         this.secondLevelBreadCrumb = "AspNetCore";
+        else if(splitedArray.includes("vue")){
+          this.secondLevelBreadCrumb = "Vue";
+        }
       else
         this.secondLevelBreadCrumb = "Angular";
     }

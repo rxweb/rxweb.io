@@ -83,13 +83,20 @@ export class AppExampleRunnerComponent implements OnInit {
   }
 
   runCodeExample(exampleName) {
-    debugger;
+
     let example = this.exampleHeights.filter(x => x.exampleName == exampleName);
     if (example.length > 0)
       this.exampleHeight = example[0].height;
     else
       this.exampleHeight = 160;
     let codeUrl = "";
+    if(this.router.url.includes("vue")){
+      debugger;
+      codeUrl = "https://rxwebvue.z5.web.core.windows.net/#/" + this.router.url.split('/')[3]+ '-'+ `${this.dashCase(exampleName)}`;
+      this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
+      setTimeout(() => { this.isRunCode = true; }, 500)
+    }
+    else {
     if (this.router.url.includes("#"))
       codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("#")[0] + "?exampleName=" + exampleName;
     else
@@ -97,8 +104,21 @@ export class AppExampleRunnerComponent implements OnInit {
 
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
     setTimeout(() => { this.isRunCode = true; }, 500)
+    }
   }
 
+  private dashCase(value: string, seprator: string = "-") {
+    let count = 0;
+    value = value.replace(" ", seprator);
+    let newString = "";
+    value.split('').forEach(t => {
+      if (count != 0 && t != t.toLowerCase())
+        newString += seprator;
+      newString += t.toLowerCase();
+      count++;
+    });
+    return newString;
+  }
   openStackblitz() {
     var stackBlitz = new StackBlitzService();
     let form = stackBlitz.buildForm(this.decoratorName, this.exampleName, this.typeName, this.templateDrivenType, this.content, this.title)

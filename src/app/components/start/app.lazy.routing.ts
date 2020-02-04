@@ -18,6 +18,7 @@ import { ComingSoonComponent } from "../coming-soon/coming-soon.component";
 import { LinkItemsComponent } from "../side-bar-link-items/link-items/link-item.component";
 import { AngularHomeComponent } from "../angular-home-page/angular-home.component";
 import { QuickStartComponent } from "../quick-start/quick-start.component";
+import { VueGettingStartedComponent } from "../vue-getting-started/vue-getting-started.component";
 
 
 
@@ -52,6 +53,9 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'whats-next', component: WhatsNextComponent
   },
   {
+    path: 'vue-getting-started', component: VueGettingStartedComponent
+  },
+  {
     path: 'whats-new', component: WhatsNewComponent
   },
   {
@@ -73,6 +77,10 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path: 'form-validations',
+    loadChildren: 'src/app/components/form-validation/form-validation.module#FormValidationModule',
+  },
+  {
+    path: 'vue/form-validations',
     loadChildren: 'src/app/components/form-validation/form-validation.module#FormValidationModule',
   },
   {
