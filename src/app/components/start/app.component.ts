@@ -79,6 +79,7 @@ export class AppComponent implements OnInit {
       this.rightSidebarLinks = t.rightSidebarLinks;
     })
     router.events.subscribe((val) => {
+
       if (val instanceof NavigationEnd) {
         console.log("calling routes")
         if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home") || val.url.includes("/angular-home")) {
@@ -101,6 +102,18 @@ export class AppComponent implements OnInit {
                 this.isShowSidebar = true
               })
               this.lastRouteName = "generics"
+            }
+          }
+        }
+        else if (location.pathname.includes("vue")) {
+          if (this.lastRouteName != "vue") {
+           // this.lastRouteName = "vue";
+            if (this.lastRouteName != "vue") {
+              this.isShowSidebar = false;
+              this.http.get('assets/json/vue-sidebar.json').subscribe((response: any) => {
+                this.isShowSidebar = true
+              })
+              this.lastRouteName = "vue"
             }
           }
         }

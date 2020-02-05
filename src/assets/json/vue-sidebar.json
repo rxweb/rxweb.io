@@ -2,7 +2,7 @@
     "links": [
       {
         "title": "Getting Started",
-        "uri": "vue-getting-started",
+        "uri": "/vue/vue-getting-started",
         "otherUri": "vue-getting-started",
         "isOpen": true,
         "isActive": false

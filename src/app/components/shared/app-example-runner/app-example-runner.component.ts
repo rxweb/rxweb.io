@@ -91,8 +91,9 @@ export class AppExampleRunnerComponent implements OnInit {
       this.exampleHeight = 160;
     let codeUrl = "";
     if(this.router.url.includes("vue")){
-      debugger;
+    
       codeUrl = "https://rxwebvue.z5.web.core.windows.net/#/" + this.router.url.split('/')[3]+ '-'+ `${this.dashCase(exampleName)}`;
+      //codeUrl = "https://rxwebvue.z5.web.core.windows.net/#/" + this.router.url.split('/')[3]+ '-'+ `${this.dashCase(exampleName)}`;
       this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
       setTimeout(() => { this.isRunCode = true; }, 500)
     }

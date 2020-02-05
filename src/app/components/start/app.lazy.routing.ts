@@ -53,7 +53,7 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'whats-next', component: WhatsNextComponent
   },
   {
-    path: 'vue-getting-started', component: VueGettingStartedComponent
+    path: 'vue/vue-getting-started', component: VueGettingStartedComponent
   },
   {
     path: 'whats-new', component: WhatsNewComponent

@@ -27,10 +27,7 @@ export class GettingStartedComponent implements OnInit {
   templateDrivenType: string = "directives";
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private http: Http
   ) {
-    this.applicationBroadCaster.topSubject.subscribe(t=>{
-      this.rightSidebarLinks = t.rightSidebarLinks;
-     
-    })
+   
   }
 
   ngOnInit(): void {
@@ -38,7 +35,7 @@ export class GettingStartedComponent implements OnInit {
       this.codeContent = response.json();
       this.showComponent = true;
     });
-    this.applicationBroadCaster.topSubject.next({...this.rightSidebarLinks});
+    this.applicationBroadCaster.topSubject.next(this.rightSidebarLinks);
   }
 
   @HostListener('window:scroll', ['$event'])

@@ -113,7 +113,7 @@ export class HtmlPageComponent implements OnInit {
 
 
   scrollTo(section) {
-    debugger;
+ 
     window.location.hash = section;
   }
 }

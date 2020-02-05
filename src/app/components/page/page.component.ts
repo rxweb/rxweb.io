@@ -3,6 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient, HttpRequest, HttpErrorResponse } from '@angular/common/http';
 import { PageViewerComponent } from "src/app/components/shared/page-viewer/page-viewer.component";
 import { ActivatedRoute } from "@angular/router";
+
 import {
   trigger,
   style,
@@ -136,7 +137,7 @@ export class PageComponent implements OnInit {
     }
     else if(this.mainType == "vue"){
       let vuesSplitedArray = location.pathname.split('/');
-      codeUri = 'assets/json/generator/' + vuesSplitedArray[3] + '/'+  'validators' + '.json';
+      codeUri = 'assets/json/generator/' + vuesSplitedArray[3] + '/'+  'decorators' + '.json';
       htmlUri = 'assets/json/generator/vue/'  + vuesSplitedArray[3]  + '/'+ vuesSplitedArray[3] + '-' + 'vue' + '.json';
       titleString = "validator";
     }
@@ -149,7 +150,17 @@ export class PageComponent implements OnInit {
     }
 
       this.http.get(codeUri, this.options).subscribe(response => {
-        this.codeContent = JSON.parse(response.toString());
+      debugger
+        this.codeContent = JSON.parse(response.toString());  
+        if(location.pathname.includes("vue")){
+        
+       // this.codeContent.tabArray.removeAt(1);
+        console.log(this.codeContent);
+        let removeElement = $(this.codeContent.htmlContent).find("div");
+        let removeArray =    removeElement[20];
+      this.codeContent.htmlContent = this.codeContent.htmlContent.replace(removeArray.innerHTML  ,"");
+       console.log(this.codeContent.htmlContent);
+        }     
         this.http.get(htmlUri, this.options).subscribe((responseObj: object) => {
           this.jsonContent = JSON.parse(responseObj.toString());
           this.showComponent = true;

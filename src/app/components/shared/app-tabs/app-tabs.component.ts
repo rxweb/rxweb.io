@@ -17,10 +17,15 @@ export class AppTabsComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    // if(location.pathname.includes("vue")){
-    //   this.tabArray = this.tabArray.filter(x=>x.tabName == "Component");
-    // }
+    if(location.pathname.includes("vue")){
+     if(this.tabArray[3]){
+       if(this.tabArray[3].tabName == "Html"){
+         this.tabArray.remove(this.tabArray[3]);
+       }
+     } 
+    }
     if(this.tabArray != undefined && this.tabArray.length > 0){
+   
       this.activeTab = this.tabArray[0].tabName;
     }
   }
