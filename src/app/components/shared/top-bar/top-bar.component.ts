@@ -24,6 +24,7 @@ export class TopBarComponent implements OnInit {
   @Input('sidebarLinks') sidebarLinks: any = {};
   @Input('gitUrl') gitUrl: string;
   cloneSidebarLinks: any = [];
+  activeTab:string = "";
   gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/";
   isDynamic: boolean
   searchvalue1: string
@@ -40,13 +41,18 @@ export class TopBarComponent implements OnInit {
     this.mainType = splitedArray[1];
     this.validationName = splitedArray[2];
     if (splitedArray.length > 0 && splitedArray[1]) {
-      if (splitedArray.includes("rx-web-core"))
+      if (splitedArray.includes("rx-web-core")){
         this.secondLevelBreadCrumb = "AspNetCore";
+        this.activeTab = "aspnetcore";
+      }
         else if(splitedArray.includes("vue")){
           this.secondLevelBreadCrumb = "Vue";
+          this.activeTab = "vue";
         }
-      else
+      else{
         this.secondLevelBreadCrumb = "Angular";
+        this.activeTab = "angular";
+      }
     }
     this.cloneSideBarLinkItems();
   }

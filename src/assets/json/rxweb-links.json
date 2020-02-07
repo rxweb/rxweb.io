@@ -1,755 +1,755 @@
 [
     {
         "title": "Dirty Check",
-        "link": "/how-to/dirtyCheck/validators",
+        "href": "/how-to/dirtyCheck/validators",
         "linkTree":["How to"]
     },
     {
         "title": "Best way to show error message",
-        "link": "/how-to/errorMessages/validators",
+        "href": "/how-to/errorMessages/validators",
         "linkTree":["How to"]
     },
     {
         "title": "commit",
-        "link": "/how-to/commit/validators",        
+        "href": "/how-to/commit/validators",        
         "linkTree":["How to"]
     },
     {
         "title": "Globally Bind Error Message Strategy",
-        "link": "/how-to/errorMessageStrategy/validators",
+        "href": "/how-to/errorMessageStrategy/validators",
         "linkTrees": ["How to"]
     },
     {
         "title": "Post Image through formData",
-        "link": "/how-to/fileObject/validators",
+        "href": "/how-to/fileObject/validators",
         "linkTree":["How to"]
     },
     {
         "title": "Patch value by sending modifiedValue",
-        "link": "/how-to/modifiedValue/validators",
+        "href": "/how-to/modifiedValue/validators",
         "linkTree":["How to"]
     },
     {
         "title": "Post as FormData of Reactive Form value",
-        "link": "/how-to/formData/validators",
+        "href": "/how-to/formData/validators",
         "linkTree":["How to"]
     },
     {
         "title": "Reset Form",
-        "link": "/how-to/resetForm/validators",
+        "href": "/how-to/resetForm/validators",
         "linkTree":["How to"]
     },
     {
         "title": "StronglyTyped Angular Reactive Form",
-        "link": "/how-to/stronglyType/decorators",
+        "href": "/how-to/stronglyType/decorators",
         "linkTree":["How to"]
     },
     {
         "title": "Dynamically bind configuration in formGroup",
-        "link": "/how-to/bindConfig/validators",
+        "href": "/how-to/bindConfig/validators",
         "linkTree":["How to"]
     }, 
     {
         "title": "Use multiple validations using logical operators.",
-        "link": "/how-to/logicalOperators/validators",
+        "href": "/how-to/logicalOperators/validators",
         "linkTree":["How to"]
     },
     {
         "title": "Patch Model Value.",
-        "link": "/how-to/patchModelValue/validators",
+        "href": "/how-to/patchModelValue/validators",
         "linkTree":["How to"]
     },
     {
         "title": "Class Abstraction",
-        "link": "/how-to/classAbstraction/decorators",
+        "href": "/how-to/classAbstraction/decorators",
         "linkTree":["How to"]
     },
     {
         "title": "Generic property support in propObject and propArray decorator",
-        "link": "/how-to/genericModel/decorators",
+        "href": "/how-to/genericModel/decorators",
         "linkTree":["How to"]
     },
     {
         "title": "RxFormBuilder",
-        "link": "/api/RxFormBuilder/decorators",
+        "href": "/api/RxFormBuilder/decorators",
         "linkTree":["api"]
     },
    
     {
         "title": "ReactiveFormConfig",
-        "link": "/api/reactive-form-config/decorators",
+        "href": "/api/reactive-form-config/decorators",
         "linkTree":["api"]
     },
     {
         "title": "RxFormGroup",
-        "link": "/how-to/dirtyCheck/validators",
+        "href": "/how-to/dirtyCheck/validators",
         "linkTree":["api"]
     },
     {
         "title": "prop",
-        "link": "/decorators/prop/decorators",
+        "href": "/decorators/prop/decorators",
         "linkTree":["Decorators"]
     },
     {
         "title": "propArray",
-        "link": "/decorators/propArray/decorators",
+        "href": "/decorators/propArray/decorators",
         "linkTree":["Decorators"]
     },
     {
         "title": "propObject",
-        "link": "/decorators/propObject/decorators",
+        "href": "/decorators/propObject/decorators",
         "linkTree":["Decorators"]
     },
     {
         "title": "disable",
-        "link": "/decorators/disable/decorators",
+        "href": "/decorators/disable/decorators",
         "linkTree":["Decorators"]
     },
     {
         "title": "error",
-        "link": "/decorators/error/decorators",
+        "href": "/decorators/error/decorators",
         "linkTree":["Decorators"]
     },
     {
         "title": "elementClass",
-        "link": "/decorators/elementClass/decorators",
+        "href": "/decorators/elementClass/decorators",
         "description": "",
         "linkTree":["Decorators"]
     },
     {
         "title": "Apply same validation set on multiple properties",
-        "link": "/decorators/model/decorators",
+        "href": "/decorators/model/decorators",
         "linkTree":["Decorators"]
     },
     {
         "title": "allOf",
-        "link": "/form-validations/allOf/validators",
+        "href": "/form-validations/allOf/validators",
         "linkTree":["Form Validations","Array"]
     },
     {
         "title": "alpha",
-        "link": "/form-validations/alpha/validators",
+        "href": "/form-validations/alpha/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "alphaNumeric",
-        "link": "/form-validations/alphaNumeric/validators",
+        "href": "/form-validations/alphaNumeric/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "ascii",
-        "link": "/form-validations/ascii/validators",
+        "href": "/form-validations/ascii/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "async",
-        "link": "/form-validations/async/decorators",
+        "href": "/form-validations/async/decorators",
         "linkTree":["Form Validations","Custom"]
     },
     {
         "title": "choice",
-        "link": "/form-validations/choice/validators",
+        "href": "/form-validations/choice/validators",
         "linkTree":["Form Validations","Array"]
     },
     {
         "title": "compare",
-        "link": "/form-validations/compare/validators",
+        "href": "/form-validations/compare/validators",
         "linkTree":["Form Validations","Relational"]
     },
     {
         "title": "compose",
-        "link": "/form-validations/compose/validators",
+        "href": "/form-validations/compose/validators",
         "linkTree":["Form Validations","Custom"]
     },
     {
         "title": "contains",
-        "link": "/form-validations/contains/validators",
+        "href": "/form-validations/contains/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "creditCard",
-        "link": "/form-validations/creditCard/validators",
+        "href": "/form-validations/creditCard/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "cusip",
-        "link": "/form-validations/cusip/validators",
+        "href": "/form-validations/cusip/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "dataUri",
-        "link": "/form-validations/dataUri/validators",
+        "href": "/form-validations/dataUri/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "date",
-        "link": "/form-validations/date/validators",
+        "href": "/form-validations/date/validators",
         "linkTree":["Form Validations","Date and time"]
     },
     {
         "title": "different",
-        "link": "/form-validations/different/validators",
+        "href": "/form-validations/different/validators",
         "linkTree":["Form Validations","Relational"]
     },
     {
         "title": "digit",
-        "link": "/form-validations/digit/validators",
+        "href": "/form-validations/digit/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "email",
-        "link": "/form-validations/email/validators",
+        "href": "/form-validations/email/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "endsWith",
-        "link": "/form-validations/endsWith/validators",
+        "href": "/form-validations/endsWith/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "even",
-        "link": "/form-validations/even/validators",
+        "href": "/form-validations/even/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "extension",
-        "link": "/form-validations/extension/validators",
+        "href": "/form-validations/extension/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "factor",
-        "link": "/form-validations/factor/validators",
+        "href": "/form-validations/factor/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "file",
-        "link": "/form-validations/file/validators",
+        "href": "/form-validations/file/validators",
         "linkTree":["Form Validations","File"]
     },
     {
         "title": "fileSize",
-        "link": "/form-validations/fileSize/validators",
+        "href": "/form-validations/fileSize/validators",
         "linkTree":["Form Validations","File"]
     },
     {
         "title": "greaterThanEqualTo",
-        "link": "/form-validations/greaterThan/validators",
+        "href": "/form-validations/greaterThan/validators",
         "linkTree":["Form Validations","Relational"]
     },
     {
         "title": "greaterThan",
-        "link": "/form-validations/greaterThanEqualTo/validators",
+        "href": "/form-validations/greaterThanEqualTo/validators",
         "linkTree":["Form Validations","Relational"]
     },
     {
         "title": "grid",
-        "link": "/form-validations/grid/validators",
+        "href": "/form-validations/grid/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "hexColor",
-        "link": "/form-validations/hexColor/validators",
+        "href": "/form-validations/hexColor/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "image",
-        "link": "/form-validations/image/validators",
+        "href": "/form-validations/image/validators",
         "linkTree":["Form Validations","File"]
     },
     {
         "title": "ip",
-        "link": "/form-validations/ip/validators",
+        "href": "/form-validations/ip/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "json",
-        "link": "/form-validations/json/validators",
+        "href": "/form-validations/json/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "latitude",
-        "link": "/form-validations/latitude/validators",
+        "href": "/form-validations/latitude/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "latLong",
-        "link": "/form-validations/latLong/validators",
+        "href": "/form-validations/latLong/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "leapYear",
-        "link": "/form-validations/leapYear/validators",
+        "href": "/form-validations/leapYear/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "lessThan",
-        "link": "/form-validations/lessThan/validators",
+        "href": "/form-validations/lessThan/validators",
         "linkTree":["Form Validations","Relational"]
     },
     {
         "title": "lessThanEqualTo",
-        "link": "/form-validations/lessThanEqualTo/validators",
+        "href": "/form-validations/lessThanEqualTo/validators",
         "linkTree":["Form Validations","Relational"]
     },
     {
         "title": "longitude",
-        "link": "/form-validations/longitude/validators",
+        "href": "/form-validations/longitude/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "lowerCase",
-        "link": "/form-validations/lowerCase/validators",
+        "href": "/form-validations/lowerCase/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "mac",
-        "link": "/form-validations/mac/validators",
+        "href": "/form-validations/mac/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "maxDate",
-        "link": "/form-validations/maxDate/validators",
+        "href": "/form-validations/maxDate/validators",
         "linkTree":["Form Validations","Date and time"]
     },
     {
         "title": "maxLength",
-        "link": "/form-validations/maxLength/validators",
+        "href": "/form-validations/maxLength/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "maxNumber",
-        "link": "/form-validations/maxNumber/validators",
+        "href": "/form-validations/maxNumber/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "minDate",
-        "link": "/form-validations/minDate/validators",
+        "href": "/form-validations/minDate/validators",
         "linkTree":["Form Validations","Date and time"]
     },
     {
         "title": "MinTime",
-        "link": "/form-validations/minTime/validators",
+        "href": "/form-validations/minTime/validators",
         "linkTree":["Form Validations","Date and time"]
     },
     {
         "title": "MaxTime",
-        "link": "/form-validations/maxTime/validators",      
+        "href": "/form-validations/maxTime/validators",      
         "linkTree":["Form Validations","Date and time"]
     },
     {
         "title": "minLength",
-        "link": "/form-validations/minLength/validators",
+        "href": "/form-validations/minLength/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "minNumber",
-        "link": "/form-validations/minNumber/validators",
+        "href": "/form-validations/minNumber/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "NotEmpty",
-        "link": "/form-validations/notEmpty/validators",
+        "href": "/form-validations/notEmpty/validators",
         "linkTree":["Form Validations"]
     },
     {
         "title": "noneOf",
-        "link": "/form-validations/noneOf/validators",
+        "href": "/form-validations/noneOf/validators",
         "linkTree":["Form Validations","Array"]
     },
     {
         "title": "numeric",
-        "link": "/form-validations/numeric/validators",
+        "href": "/form-validations/numeric/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "odd",
-        "link": "/form-validations/odd/validators",
+        "href": "/form-validations/odd/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "oneOf",
-        "link": "/form-validations/oneOf/validators",
+        "href": "/form-validations/oneOf/validators",
         "linkTree":["Form Validations","Array"]
     },
     {
         "title": "password",
-        "link": "/form-validations/password/validators",
+        "href": "/form-validations/password/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "pattern",
-        "link": "/form-validations/pattern/validators",
+        "href": "/form-validations/pattern/validators",
         "linkTree":["Form Validations","Custom"]
     },
     {
         "title": "port",
-        "link": "/form-validations/port/validators",
+        "href": "/form-validations/port/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "primeNumber",
-        "link": "/form-validations/primeNumber/validators",
+        "href": "/form-validations/primeNumber/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "range",
-        "link": "/form-validations/range/validators",
+        "href": "/form-validations/range/validators",
         "linkTree":["Form Validations","Numeric"]
     },
     {
         "title": "required",
-        "link": "/form-validations/required/validators",
+        "href": "/form-validations/required/validators",
         "linkTree":["Form Validations"]
     },
     {
         "title": "startsWith",
-        "link": "/form-validations/startsWith/validators",
+        "href": "/form-validations/startsWith/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "time",
-        "link": "/form-validations/time/validators",
+        "href": "/form-validations/time/validators",
         "linkTree":["Form Validations","Date and time"]
     },
     {
         "title": "unique",
-        "link": "/form-validations/unique/validators",
+        "href": "/form-validations/unique/validators",
         "linkTree":["Form Validations","Array"]
     },
     {
         "title": "upperCase",
-        "link": "/form-validations/upperCase/validators",
+        "href": "/form-validations/upperCase/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "url",
-        "link": "/form-validations/url/validators",
+        "href": "/form-validations/url/validators",
         "linkTree":["Form Validations","String"]
     },
     {
         "title": "blacklist",
-        "link": "/sanitization/blacklist/decorators",
+        "href": "/sanitization/blacklist/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "escape",
-        "link": "/sanitization/escape/decorators",
+        "href": "/sanitization/escape/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "ltrim",
-        "link": "/sanitization/ltrim/decorators",
+        "href": "/sanitization/ltrim/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "trim",
-        "link": "/sanitization/rtrim/decorators",
+        "href": "/sanitization/rtrim/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "toBoolean",
-        "link": "/sanitization/toBoolean/decorators",
+        "href": "/sanitization/toBoolean/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "toDate",
-        "link": "/sanitization/toDate/decorators",
+        "href": "/sanitization/toDate/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "toDouble",
-        "link": "/sanitization/toDouble/decorators",
+        "href": "/sanitization/toDouble/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "toFloat",
-        "link": "/sanitization/toFloat/decorators",
+        "href": "/sanitization/toFloat/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "toInt",
-        "link": "/sanitization/toInt/decorators",
+        "href": "/sanitization/toInt/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "toString",
-        "link": "/sanitization/toString/decorators",
+        "href": "/sanitization/toString/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "trim",
-        "link": "/sanitization/trim/decorators",
+        "href": "/sanitization/trim/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "whitelist",
-        "link": "/sanitization/whitelist/decorators",
+        "href": "/sanitization/whitelist/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "Suffix",
-        "link": "/sanitization/suffix/decorators",
+        "href": "/sanitization/suffix/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "Custom",
-        "link": "/sanitization/sanitize/decorators",
+        "href": "/sanitization/sanitize/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "Prefix",
-        "link": "/sanitization/prefix/decorators",
+        "href": "/sanitization/prefix/decorators",
         "linkTree":["sanitization"]
     },
     {
         "title": "Step By Step Design",
-        "link": "/reactive-dynamic-forms/dynamic-forms/stepbystep",
+        "href": "/reactive-dynamic-forms/dynamic-forms/stepbystep",
         "description": "",
         "linkTrees": ["dynamic-forms"]
           
     },
     {
         "title": "Checkbox",
-        "link": "/reactive-dynamic-forms/controls/checkbox",
+        "href": "/reactive-dynamic-forms/controls/checkbox",
         "description": "",
         "linkTrees": ["static-binding"]
     },
     {
         "title": "color",
-        "link": "/reactive-dynamic-forms/controls/color",
+        "href": "/reactive-dynamic-forms/controls/color",
         "description": "",
         "linkTrees": ["static-binding"]
     },
     {
         "title": "date",
-        "link": "/reactive-dynamic-forms/controls/dynamicdate",
+        "href": "/reactive-dynamic-forms/controls/dynamicdate",
         "description": "",
         "linkTrees": ["static-binding"]
     },
     {
         "title": "DropDown",
-        "link": "/reactive-dynamic-forms/controls/dropdown",
+        "href": "/reactive-dynamic-forms/controls/dropdown",
         "description": "",
         "linkTrees":  ["controls"]
     },
     {
         "title": "Email",
-        "link": "/reactive-dynamic-forms/controls/dynamicemail",
+        "href": "/reactive-dynamic-forms/controls/dynamicemail",
         "description": "",
         "linkTrees":  ["controls"]
     },
     {
         "title": "File",
-        "link": "/reactive-dynamic-forms/controls/dynamicfile",
+        "href": "/reactive-dynamic-forms/controls/dynamicfile",
         "description": "",
         "linkTrees":  ["controls"]
     },
     {
         "title": "Password",
-        "link": "/reactive-dynamic-forms/controls/dynamicpassword",
+        "href": "/reactive-dynamic-forms/controls/dynamicpassword",
         "description": "",
         "linkTrees":  ["controls"]
     },
     {
         "title": "Radio",
-        "link": "/reactive-dynamic-forms/controls/radio",
+        "href": "/reactive-dynamic-forms/controls/radio",
         "description": "",
         "linkTrees":  ["controls"]
     },
     {
         "title": "Range",
-        "link": "/reactive-dynamic-forms/controls/dynamicrange",
+        "href": "/reactive-dynamic-forms/controls/dynamicrange",
         "description": "",
         "linkTrees":  ["controls"]
     },
     {
         "title": "Textarea",
-        "link": "/reactive-dynamic-forms/controls/textarea",
+        "href": "/reactive-dynamic-forms/controls/textarea",
         "description": "",
         "linkTrees": ["controls"]
     },
     {
         "title": "TextBox",
-        "link": "/reactive-dynamic-forms/controls/textbox",
+        "href": "/reactive-dynamic-forms/controls/textbox",
         "description": "",
         "linkTrees": ["controls"]
     
     },
     {
         "title": "Url",
-        "link": "/reactive-dynamic-forms/controls/dynamicurl",
+        "href": "/reactive-dynamic-forms/controls/dynamicurl",
         "description": "",
         "linkTrees":  ["controls"]
     },
     {
         "title": "Class",
-        "link": "/reactive-dynamic-forms/static-binding/class",
+        "href": "/reactive-dynamic-forms/static-binding/class",
         "linkTrees": ["static-binding"]
     },
 
 {
     "title": "Description",
-    "link": "/reactive-dynamic-forms/static-binding/description",
+    "href": "/reactive-dynamic-forms/static-binding/description",
     "description": "description can be used inside ui feature to display description for the particular formControl in the dynamic-form. description can be generated statically or conditionally based on your requirements.",
     "linkTrees": ["static-binding"]
 },
 {
     "title": "Disabled",
-    "link": "/reactive-dynamic-forms/static-binding/disabled",
+    "href": "/reactive-dynamic-forms/static-binding/disabled",
     "description": "disable can be used inside ui feature to disable the particular formControl in the dynamic-form. You can disable a formControl statically or conditionally based on your requirements.",
     "linkTrees": ["static-binding"]
 },
 {
     "title": "Focus",
-    "link": "/reactive-dynamic-forms/static-binding/focus",
+    "href": "/reactive-dynamic-forms/static-binding/focus",
     "linkTrees": ["static-binding"]
 },
 {
     "title": "Hide",
-    "link": "/reactive-dynamic-forms/static-binding/hide",
+    "href": "/reactive-dynamic-forms/static-binding/hide",
     "linkTrees": ["static-binding"]
 },
 {
     "title": "Label",
-    "link": "/reactive-dynamic-forms/static-binding/label",
+    "href": "/reactive-dynamic-forms/static-binding/label",
     "linkTrees": ["static-binding"]
 },
 {
     "title": "Placeholder",
-    "link": "/reactive-dynamic-forms/static-binding/placeholder",
+    "href": "/reactive-dynamic-forms/static-binding/placeholder",
     "linkTrees": ["static-binding"]
 },
 {
     "title": "Readonly",
-    "link": "/reactive-dynamic-forms/static-binding/readonly",
+    "href": "/reactive-dynamic-forms/static-binding/readonly",
     "description": "readonly can be used inside ui feature to convert the particular formControl in readonly state in your dynamic-form. You can set readonly statically or conditionally based on your requirements.",
     "linkTrees": ["static-binding"]
       
 },
 {
     "title": "Source",
-    "link": "/reactive-dynamic-forms/static-binding/source",
+    "href": "/reactive-dynamic-forms/static-binding/source",
     "linkTrees": ["static-binding"]
 },
 {
     "title": "Value",
-    "link": "/reactive-dynamic-forms/static-binding/value",
+    "href": "/reactive-dynamic-forms/static-binding/value",
     "linkTrees": ["static-binding"]
 },
 
 
 {
 "title": "ConditionalClass",
-"link": "/reactive-dynamic-forms/conditional-binding/conditionalclass",
+"href": "/reactive-dynamic-forms/conditional-binding/conditionalclass",
 "description": "description can be used inside ui feature to display description for the particular formControl in the dynamic-form. description can be generated statically or conditionally based on your requirements.",
 "linkTrees": ["conditional-binding"]
 },
 {
     "title": "conditionalDescription",
-    "link": "/reactive-dynamic-forms/conditional-binding/conditionaldescription",
+    "href": "/reactive-dynamic-forms/conditional-binding/conditionaldescription",
     "linkTrees": ["static-binding"]
 },
 {
 "title": "ConditionalDisabled",
-"link": "/reactive-dynamic-forms/conditional-binding/conditionaldisabled",
+"href": "/reactive-dynamic-forms/conditional-binding/conditionaldisabled",
 "description": "disable can be used inside ui feature to disable the particular formControl in the dynamic-form. You can disable a formControl statically or conditionally based on your requirements.",
 "linkTrees": ["conditional-binding"]
 },
 {
 "title": "conditionalHide",
-"link": "/reactive-dynamic-forms/conditional-binding/conditionalhide",
+"href": "/reactive-dynamic-forms/conditional-binding/conditionalhide",
 "linkTrees": ["conditional-binding"]
 },
 {
 "title": "conditionalLabel",
-"link": "/reactive-dynamic-forms/conditional-binding/conditionallabel",
+"href": "/reactive-dynamic-forms/conditional-binding/conditionallabel",
 "linkTrees": ["conditional-binding"]
 },
 {
 "title": "conditionalPlaceholder",
-"link": "/reactive-dynamic-forms/conditional-binding/conditionalplaceholder",
+"href": "/reactive-dynamic-forms/conditional-binding/conditionalplaceholder",
 "linkTrees": ["conditional-binding"]
 },
 {
 "title": "conditionalReadonly",
-"link": "/reactive-dynamic-forms/conditional-binding/conditionalreadonly",
+"href": "/reactive-dynamic-forms/conditional-binding/conditionalreadonly",
 "description": "readonly can be used inside ui feature to convert the particular formControl in readonly state in your dynamic-form. You can set readonly statically or conditionally based on your requirements.",
 "linkTrees": ["conditional-binding"]
   
 },
 {
 "title": "Value",
-"link": "/reactive-dynamic-forms/conditional-binding/conditionalvalue",
+"href": "/reactive-dynamic-forms/conditional-binding/conditionalvalue",
 "linkTrees": ["conditional-binding"]
 },
 {
     "title": "OverrideProps",
-    "link": "/reactive-dynamic-forms/dynamic-forms/overrideProps",
+    "href": "/reactive-dynamic-forms/dynamic-forms/overrideProps",
     "linkTrees": ["dynamic-forms"]
 },
 {
     "title": "Nested Form Group",
-    "link": "/reactive-dynamic-forms/advance-form-design/nestedformgroup",
+    "href": "/reactive-dynamic-forms/advance-form-design/nestedformgroup",
     "linkTrees": ["dynamic-forms"]
 },
 {
     "title": "Reset Form",
-    "link": "/reactive-dynamic-forms/dynamic-forms/dynamicresetform",
+    "href": "/reactive-dynamic-forms/dynamic-forms/dynamicresetform",
     "linkTrees": ["dynamic-forms"]
 },
 {
     "title": "Power of Dynamic forms",
-    "link": "/reactive-dynamic-forms/dynamic-forms/dynamic",
+    "href": "/reactive-dynamic-forms/dynamic-forms/dynamic",
     "linkTrees": ["dynamic-forms"]
 },
 {
     "title": "Async Validation",
-    "link": "/reactive-dynamic-forms/dynamic-forms/asyncvalidation",
+    "href": "/reactive-dynamic-forms/dynamic-forms/asyncvalidation",
     "linkTrees": ["dynamic-forms"]
 },
 {
     "title": "Custom Validation",
-    "link": "/reactive-dynamic-forms/dynamic-forms/customvalidation",
+    "href": "/reactive-dynamic-forms/dynamic-forms/customvalidation",
     "linkTrees": ["dynamic-forms"]
 },
 {
     "title": "Globally Bind Error Message Strategy",
-    "link": "/reactive-dynamic-forms/dynamic-forms/dynamicerrormessagestrategy",
+    "href": "/reactive-dynamic-forms/dynamic-forms/dynamicerrormessagestrategy",
     "linkTrees": ["dynamic-forms"]
 },
 {
     "title": "DynamicFormConfiguration",
-    "link": "/reactive-dynamic-forms/dynamic-forms/DynamicFormConfiguration",
+    "href": "/reactive-dynamic-forms/dynamic-forms/DynamicFormConfiguration",
     "linkTrees": ["dynamic-forms"]
 },
 {
     "title": "PreValue",
-    "link": "/reactive-dynamic-forms/dynamic-forms/preValueHook",
+    "href": "/reactive-dynamic-forms/dynamic-forms/preValueHook",
     "linkTrees": ["Hooks"]
 },
 {
     "title": "PostValue",
-    "link": "/reactive-dynamic-forms/dynamic-forms/postValueHook",
+    "href": "/reactive-dynamic-forms/dynamic-forms/postValueHook",
     "linkTrees": ["Hooks"]
 },
 {
     "title": "Generics",
-    "link": "/rxweb-generics/generics/list",
+    "href": "/rxweb-generics/generics/list",
     "linkTrees": ["generics"]
 },
 {
     "title": "Sanitizers",
-    "link": "/rxweb-sanitizers/sanitizers/sanitizer",
+    "href": "/rxweb-sanitizers/sanitizers/sanitizer",
     "linkTrees": ["sanitizers"]
 },
 {
     "title": "Get",
-    "link": "/rxweb-http/http/get",
+    "href": "/rxweb-http/http/get",
     "linkTrees": ["http"]
 },
 {
     "title": "Post",
-    "link": "/rxweb-http/http/post",
+    "href": "/rxweb-http/http/post",
     "linkTrees": ["http"]
 }
 ]

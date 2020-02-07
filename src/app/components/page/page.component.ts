@@ -150,17 +150,11 @@ export class PageComponent implements OnInit {
     }
 
       this.http.get(codeUri, this.options).subscribe(response => {
-      debugger
-        this.codeContent = JSON.parse(response.toString());  
-        if(location.pathname.includes("vue")){
-        
-       // this.codeContent.tabArray.removeAt(1);
-        console.log(this.codeContent);
-        let removeElement = $(this.codeContent.htmlContent).find("div");
-        let removeArray =    removeElement[20];
-      this.codeContent.htmlContent = this.codeContent.htmlContent.replace(removeArray.innerHTML  ,"");
-       console.log(this.codeContent.htmlContent);
-        }     
+        this.codeContent = JSON.parse(response.toString());   
+        if(this.router.url.includes("vue")){
+           this.codeContent.htmlContent = this.codeContent.htmlContent.replace("Through Angular FormBuilder service we create FormGroup in the component.","");
+           this.codeContent.htmlContent = this.codeContent.htmlContent.replace("Next, we need to write html code.","");
+        }       
         this.http.get(htmlUri, this.options).subscribe((responseObj: object) => {
           this.jsonContent = JSON.parse(responseObj.toString());
           this.showComponent = true;

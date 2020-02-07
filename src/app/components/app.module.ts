@@ -64,6 +64,7 @@ import { ChildLinkItemComponent } from './side-bar-link-items/child-link-items/c
 import { AngularHomeComponent } from './angular-home-page/angular-home.component';
 import { QuickStartComponent } from './quick-start/quick-start.component';
 import { VueGettingStartedComponent } from './vue-getting-started/vue-getting-started.component';
+import { VueHomePageComponent } from './vue-home-page/vue-home-page.component';
 registerLocaleData(localePt)
 
 //import { TextPageComponent } from './text-page/text-page.component';
@@ -73,7 +74,7 @@ registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
-    AppComponent, SideBarComponent, AngularHomeComponent,VueGettingStartedComponent, ChildLinkItemComponent, LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, QuickStartComponent],
+    AppComponent, SideBarComponent, VueHomePageComponent,AngularHomeComponent,VueGettingStartedComponent, ChildLinkItemComponent, LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, QuickStartComponent],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
     BrowserAnimationsModule,

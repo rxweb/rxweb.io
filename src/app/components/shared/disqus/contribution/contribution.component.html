@@ -1,7 +1,7 @@
 
 <div class="row page-section" id="contribution">
     <div class="col-lg-12 hpanel validation-tab plain-text" style="padding-left: 0px;">
-        <div class="mt-2">
+        <div *ngIf="!isVue" class="mt-2">
             <h2 class="title-level-2">Next Steps</h2>
             <button class="btn btn-primary" style="border-radius: 0px;cursor: pointer;" (click)="nextLink()">Next tutorial</button>
             <div class="mt-5">

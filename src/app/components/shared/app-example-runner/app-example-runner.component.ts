@@ -10,7 +10,7 @@ import { ViewChild } from "@angular/core";
 import { CodeExampleComponent } from "src/app/components/shared/code-example/code-example.component";
 import { StackBlitzService } from "src/app/components/shared/stackblitz/stackblitz.service";
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-
+import { getParameters } from "codesandbox/lib/api/define";
 
 @Component({
   selector: 'app-example-runner',
@@ -19,6 +19,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 
 export class AppExampleRunnerComponent implements OnInit {
+  clientSideValidationType:string;
   @Input() title: string;
   @Input() refComponent: string;
   @Input() decoratorName: string;
@@ -91,20 +92,23 @@ export class AppExampleRunnerComponent implements OnInit {
       this.exampleHeight = 160;
     let codeUrl = "";
     if(this.router.url.includes("vue")){
+     this.clientSideValidationType = "vue"
     
       codeUrl = "https://rxwebvue.z5.web.core.windows.net/#/" + this.router.url.split('/')[3]+ '-'+ `${this.dashCase(exampleName)}`;
-      //codeUrl = "https://rxwebvue.z5.web.core.windows.net/#/" + this.router.url.split('/')[3]+ '-'+ `${this.dashCase(exampleName)}`;
       this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
       setTimeout(() => { this.isRunCode = true; }, 500)
     }
     else {
+      this.clientSideValidationType == "angular"
     if (this.router.url.includes("#"))
       codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("#")[0] + "?exampleName=" + exampleName;
+      else if(this.router.url.includes("?"))
+      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("?")[0] + "?exampleName=" + exampleName;
     else
       codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=" + exampleName;
 
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
-    setTimeout(() => { this.isRunCode = true; }, 500)
+    setTimeout(() => { this.isRunCode = true; }, 500) 
     }
   }
 
@@ -120,7 +124,29 @@ export class AppExampleRunnerComponent implements OnInit {
     });
     return newString;
   }
+
+  
+
+  
+  // openSandbox(){
+   
+  //   const html = '<div id="root"></div>';
+    
+  //    let parameters = getParameters({
+  //      files: {
+  //       "package.json": {
+  //         content:"{'dependencies': {: 'latest','react-dom': 'latest'}}",
+  //         isBinary:false
+  //       }
+  
+  //    }
+  //    });
+  //   window.open("https://codesandbox.io/api/v1/sandboxes/define", "_blank");
+  //   document.getElementById("sandBox").innerHTML += `value=${parameters}`
+  // }
+
   openStackblitz() {
+    debugger;
     var stackBlitz = new StackBlitzService();
     let form = stackBlitz.buildForm(this.decoratorName, this.exampleName, this.typeName, this.templateDrivenType, this.content, this.title)
     document.body.appendChild(form);

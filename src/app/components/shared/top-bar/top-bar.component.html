@@ -12,14 +12,14 @@
 			<div class="collapse header_left_menu navbar-collapse order-3 order-md-2" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" routerLink="/rx-web-core/quick-start/quick-start"
+						<a class="nav-link" [class.active]="activeTab=='aspnetcore'" routerLink="/rx-web-core/quick-start/quick-start"
 							routerLinkActive="active">AspNetCore</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" routerLink="/getting-started" routerLinkActive="active">Angular</a>
+						<a class="nav-link" [class.active]="activeTab=='angular'"  routerLink="/getting-started" routerLinkActive="active">Angular</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" routerLink="/vue/vue-getting-started" routerLinkActive="active">Vue</a>
+						<a class="nav-link" [class.active]="activeTab=='vue'"  routerLink="/vue/vue-getting-started" routerLinkActive="active">Vue</a>
 					</li>
 					<li class="nav-item dropdown" routerLinkActive="active">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

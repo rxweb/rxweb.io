@@ -19,6 +19,7 @@ import { LinkItemsComponent } from "../side-bar-link-items/link-items/link-item.
 import { AngularHomeComponent } from "../angular-home-page/angular-home.component";
 import { QuickStartComponent } from "../quick-start/quick-start.component";
 import { VueGettingStartedComponent } from "../vue-getting-started/vue-getting-started.component";
+import { VueHomePageComponent } from "../vue-home-page/vue-home-page.component";
 
 
 
@@ -138,6 +139,10 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'coming-soon',
     component: ComingSoonComponent,
+  },
+  {
+    path: 'vue/home',
+    component: VueHomePageComponent,
   },
   {
     path: 'link-items',

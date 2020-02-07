@@ -7977,13 +7977,13 @@ a.card-body.text-center:hover
     margin: .75em auto 0;
 }
 
-/* .main-heading {
+.main-heading-vue {
     font: 400 3.7rem/1.25 Google Sans, sans-serif;
     color: #333;
     width: 72%;
     max-width: 13.5em;
     margin: .75em auto 0;
-} */
+}
 
 p.text-content {
     width: 60%;
@@ -7993,6 +7993,17 @@ p.text-content {
     color: #999;
     margin-block-start: 1em;
     margin-block-end: 1em;
+}
+
+p.text-content-vue {
+    width: 60%;
+    max-width: 620px;
+    margin: 2rem auto 3rem;
+    font: 400 1.4rem/1.8 Roboto, sans-serif;
+    color: #999;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: 1rem!important;
 }
 
 button.btn.home-page-links {

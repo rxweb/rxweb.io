@@ -15,6 +15,7 @@ import { ApplicationBroadcaster } from '@rx/core';
 export class ContributionComponent implements OnInit{
     gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/docs/reactive-form-validators";
     links: any;
+    isVue:boolean=false;
     pageName:string;
     fileName: string;
     upcomingLink: string;
@@ -24,6 +25,7 @@ export class ContributionComponent implements OnInit{
             this.gitEditUrl = t.gitDocPath;
             this.pageName = t.title;
         });
+        if(router.url.includes("rx-web-core")){
         this.http.get('assets/json/rxwebcore-links.json').subscribe((response: any) => {
             this.links = response;
             var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
@@ -33,11 +35,24 @@ export class ContributionComponent implements OnInit{
               this.upcomingLink = nextObj.title;
             }
           })
+        }
+        else{
+          this.http.get('assets/json/rxweb-links.json').subscribe((response: any) => {
+            this.links = response;
+            var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
+            if (currentObjIndex != undefined) {
+              currentObjIndex++;
+              var nextObj = this.links[currentObjIndex];
+              this.upcomingLink = nextObj.title;
+            }
+          })
+        }
     }
   
     
     ngOnInit(){
-       
+       if(location.pathname.includes("vue"))
+       this.isVue = true;
     }
 
     nextLink() {
