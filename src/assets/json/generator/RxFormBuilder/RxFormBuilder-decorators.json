@@ -21,6 +21,14 @@
     "formgroup":{
         "component":"export class UserComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: RxFormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n          userName:['',Validators.required],\r\n          password:['',[Validators.required,Validators.min(5)]],\r\n          confirmPassword:['',RxwebValidators.compare({fieldName:'password'})],\r\n          address:{\r\n            areaName:''\r\n          },\r\n          hobbies:[\r\n          {\r\n            name:''\r\n          }]\r\n        });\r\n    }\r\n}"
     },
+    "control":{
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators,ValidationAlphabetLocale,RxFormBuilder,RxFormGroup } from '@rxweb\/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-control-complete',\r\n    templateUrl: '.\/control-complete.component.html'\r\n})\r\nexport class ControlCompleteComponent implements OnInit {\r\n    countryFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: RxFormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n    let countryName = this.formBuilder.control('', [RxwebValidators.required()]);\r\n        this.countryFormGroup = this.formBuilder.group({\r\n          countryName \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form [formGroup]=\"countryFormGroup\">\r\n        <div class=\"form-group\">\r\n            <label>Country Name<\/label>\r\n            <input type=\"text\" formControlName=\"countryName\" class=\"form-control\" \/>\r\n        <\/div>\r\n    <\/form>\r\n<\/div>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
     "userobject":{"component":"{\r\n  \"firstName\":\"John\",\r\n  \"lastName\":\"Cena\"\r\n}"},
     "dynamicvalidationrules":{"component":"{\r\n  \"firstName\":{\r\n    \"required\":true\r\n  },\r\n  \"lastName\":{\r\n    \"required\":true\r\n  }\r\n}"},
     "servervalidationrules":{"component":"  this.userInfoFormGroup = this.formBuilder.group({\r\n          firstName:'',\r\n          lastName:''\r\n        },{\r\n          dynamicValidation:{\r\n            \"firstName\":{\r\n              \"required\":true\r\n            },\r\n            \"lastName\":{\r\n              \"required\":true\r\n            }\r\n          }\r\n        });"},

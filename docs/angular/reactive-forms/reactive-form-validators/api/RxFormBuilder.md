@@ -74,3 +74,9 @@ This can be used in edit form where the values are coming from the server and we
 </data-scope>
 As per the above code, You have to pass the two parameter first parameter is User model and the second is the server json data. The server data JSON object properties should be the same as User model properties.
 <div component="app-example-runner" ref-component="app-formgroup-add"></div>
+
+# control
+To create a new formControl using control method of `RxFormBuilder`. 
+
+<div component="app-code" key="RxFormBuilder-control-component"></div> 
+<div component="app-example-runner" ref-component="app-control-complete"></div>

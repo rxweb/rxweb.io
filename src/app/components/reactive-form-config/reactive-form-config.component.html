@@ -87,6 +87,22 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class='col-lg-12'>
+                                    <h4>Password validation Messages<a title="Link to this heading" class="link-header"
+                                            routerLink="/api/reactive-form-config" fragment="passwordvalidationMessage"><i class="fa fa-link"></i></a></h4>
+                                    <p>You can set multiple messages for password validation globally into the ReactiveFormConfig as below.</p>
+                                    <div class="model-ts">
+                                        <div class="code">
+                                            <a class="float-right copy-icon" ngxClipboard [cbContent]="codeContent.passwordValidationMessage"
+                                                (cbOnSuccess)="passwordValidationMessageCopied = true" [class.copied]="passwordValidationMessageCopied"><i
+                                                    class="fa fa-files-o" aria-hidden="true"></i></a>
+                                            <div highlight="pre code">
+                                                <pre><code [textContent]="codeContent.passwordValidationMessage"></code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class='row page-section' id="errorMessageStrategy">
                                 <div class='col-lg-12'>

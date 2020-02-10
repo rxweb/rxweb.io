@@ -59,6 +59,7 @@ Next, we need to write html code.
 <div component="app-example-runner" ref-component="app-pattern-add"></div>
 </data-scope>
 
+> You can add multiple validation messages globally in reactiveFormConfig. To know more, visit <a class="redirect-link" href="/api/reactive-form-config#passwordvalidationMessage">Multiple Validation Messages Globally</a> 
 # PatternConfig 
 <data-scope scope="['decorator']">
 Below options are not mandatory to use in the `@pattern()` decorator. If needed then use the below options.

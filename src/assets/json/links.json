@@ -800,6 +800,12 @@
                                     "uri": "api/RxFormBuilder/decorators#formgroup",
                                     "isActive": false,
                                     "linkTitle": "RxFormBuilder"
+                                },
+                                {
+                                    "title": "control",
+                                    "uri": "api/RxFormBuilder/decorators#control",
+                                    "isActive": false,
+                                    "linkTitle": "RxFormBuilder"
                                 }
                             ]
                         },
