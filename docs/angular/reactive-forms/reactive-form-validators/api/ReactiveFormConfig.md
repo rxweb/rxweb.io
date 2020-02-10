@@ -54,6 +54,21 @@ Apply global validation messages throughout the application, then configure the 
         });
 ```
 
+## Password validation Messages
+You can set multiple messages for password validation globally into the ReactiveFormConfig as below
+
+```js
+  ReactiveFormConfig.set({
+            "validationMessage": {
+                "password": {
+                    minLength: 'Minimum Character length should be 5.',
+                    maxLength: 'MaxLength allowed is 5',
+                    password: "Invalid Password"
+                },
+            }
+        });
+```
+
 ## locale
 Type : `string`
 

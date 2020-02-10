@@ -446,6 +446,11 @@
                                     "isActive": false
                                 },
                                 {
+                                    "title": "mask",
+                                    "uri": "/form-validations/mask/validators",
+                                    "isActive": false
+                                },
+                                {
                                     "title": "pattern",
                                     "uri": "/form-validations/pattern/validators",
                                     "isActive": false

@@ -151,6 +151,10 @@ const FORM_VALIDATION_ROUTES: Routes = [
 	loadChildren: './mac/mac.module#MacModule',
 },
 {
+	path:'mask',
+	loadChildren: './mask/mask.module#MaskModule',
+},
+{
 	path:'maxDate',
 	loadChildren: './maxDate/max-date.module#MaxDateModule',
 },

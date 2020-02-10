@@ -171,7 +171,7 @@ export class AppComponent implements OnInit {
         var t = setTimeout(() => {
           this.showFooter = true;
         }, 500);
-        if (location.host == "rxweb.io") {
+        if (location.host == "docs.rxweb.io") {
           (<any>window).ga('set', 'page', val.urlAfterRedirects);
           (<any>window).ga('send', 'pageview');
         }
