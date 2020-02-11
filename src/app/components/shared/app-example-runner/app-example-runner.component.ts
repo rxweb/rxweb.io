@@ -19,7 +19,7 @@ import { getParameters } from "codesandbox/lib/api/define";
 })
 
 export class AppExampleRunnerComponent implements OnInit {
-  clientSideValidationType:string;
+  clientSideValidationType:string = "angularss";
   @Input() title: string;
   @Input() refComponent: string;
   @Input() decoratorName: string;
@@ -84,7 +84,7 @@ export class AppExampleRunnerComponent implements OnInit {
   }
 
   runCodeExample(exampleName) {
-
+   debugger;
     let example = this.exampleHeights.filter(x => x.exampleName == exampleName);
     if (example.length > 0)
       this.exampleHeight = example[0].height;
@@ -99,13 +99,13 @@ export class AppExampleRunnerComponent implements OnInit {
       setTimeout(() => { this.isRunCode = true; }, 500)
     }
     else {
-      this.clientSideValidationType == "angular"
+      this.clientSideValidationType = "angular"
     if (this.router.url.includes("#"))
-      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("#")[0] + "?exampleName=" + exampleName;
+      codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url.split("#")[0] + "?exampleName=" + exampleName;
       else if(this.router.url.includes("?"))
-      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("?")[0] + "?exampleName=" + exampleName;
+      codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url.split("?")[0] + "?exampleName=" + exampleName;
     else
-      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=" + exampleName;
+      codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url + "?exampleName=" + exampleName;
 
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
     setTimeout(() => { this.isRunCode = true; }, 500) 
