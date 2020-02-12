@@ -1,0 +1,20 @@
+<form [formGroup]="dynamicFormBuildConfig.formGroup">
+    <div viewMode="basic" [rxwebDynamicForm]="dynamicFormBuildConfig" [uiBindings]="uiBindings"></div>
+</form>
+<!-- <pre>Confirm: {{dynamicFormBuildConfig.formGroup.controls.confirm.value}}</pre> -->
+
+<!-- <div>
+<div class="card" >
+<div class="card-header" >{{controlConfig.config.ui.text}}</div>
+<div class="card-body">
+ <form>
+<div *ngFor="let buildConfig of dynamicFormBuildConfig.controlsConfig[controlConfig.config.controlConfigName];let index=i;">
+    <button class="btn btn-primary" (click)="addItem()">Add</button>
+    <button class="btn btn-primary" (click)="removeItem(index)">Remove</button>
+    <div viewMode="basic" [rxwebDynamicForm]="{controlsConfig:buildConfig,formGroup:dynamicFormBuildConfig.formGroup.controls[controlConfig.config.controlConfigName].controls[index]}" [uiBindings]="controlConfig.config.childrens">
+    </div>
+</div>
+
+</form>
+</div>
+</div> -->

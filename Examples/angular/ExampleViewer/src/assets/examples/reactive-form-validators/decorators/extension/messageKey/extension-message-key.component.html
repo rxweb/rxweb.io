@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>Excel File</label>
+      <input type="file" formControlName="excelFile" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	<small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.excelFile.errors">{{userInfoFormGroup.controls.excelFile.errors.extension.message}}<br/></small>
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

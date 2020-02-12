@@ -1,0 +1,19 @@
+<div>
+    <div class="model-ts combined">
+     
+      
+        <div *ngIf="showElement" class="showHideExample">
+         
+            <div class="tab-content">
+                <div class="tab-pane" *ngFor="let tab of tabArray" [class.active]="activeTab == tab.tabName">
+                    <app-code [content]="tab.content"></app-code>
+                </div>
+            </div>
+            <hr/>
+        </div>
+        <div class="code-example">
+        
+            <code-example [Component]="refComponent" ></code-example>
+        </div>
+    </div>
+</div>

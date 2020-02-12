@@ -1,0 +1,11 @@
+<div>
+    <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
+      <div class="form-group">
+        <label>CountryName</label>
+          <input type="text" name="countryName" [(ngModel)]="user.countryName"  class="form-control" [async]="countryNameUnique.bind(this)"/>
+          <small class="form-text text-muted">To check unique async validation Enter 'India' in countryName<br/></small>
+         <small class="form-text text-danger" *ngIf="userForm.controls?.countryName?.errors">{{userForm.controls?.countryName?.errors?.async.message}}<br/></small>	
+      </div>
+      <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
+    </form>
+  </div>

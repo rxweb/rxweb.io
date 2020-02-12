@@ -1,0 +1,18 @@
+<div id="wrapper" *ngIf="showComponent">
+
+
+    <div class="content">
+        <div class="bg-white border-radius">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hpanel validation-tab plain-text" id="mainContent">
+            
+                    </div>                   
+                    &nbsp;&nbsp; &nbsp;&nbsp;  Refer to the  <a style="color: #0f96e4!important;" (click)="nextLink()">Next</a> documentation.
+                </div>
+            </div>
+        </div>
+  
+    </div>
+    <app-right-sidebar [sidebarLinks]="rightSidebarLinks"></app-right-sidebar>
+</div>

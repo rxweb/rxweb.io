@@ -1,0 +1,10 @@
+<div>
+  <form  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>Is Checked</label>&nbsp;
+      <input type="checkbox" formControlName="ischecked" /> <br/>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.ischecked.errors">{{userInfoFormGroup.controls.ischecked.errors.requiredTrue.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,1 @@
+{"firstName":{},"phoneNumber":{"mask":{"mask":"(999)-999 9999"}},"zipcode":{"mask":{"mask":"9999","conditionalExpression":"x => x.firstName == \"Bharat\""}},"contactNumber":{"mask":{"mask":"999-9999999","message":"Enter a valid Contact Number"}},"alternateContactNumber":{"mask":{"mask":"9999999999","messageKey":"maskMessageKey"}}}

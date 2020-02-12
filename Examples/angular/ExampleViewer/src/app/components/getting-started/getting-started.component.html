@@ -1,0 +1,67 @@
+<div id="wrapper" *ngIf="showComponent">
+    <div class="content">
+      <div class="title-bar">
+        <p> The most powerful validation framework for angular based enterprise application.</p>
+      </div>
+
+        <div class="bg-white border-radius" style="margin-top:22px;">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="hpanel">
+                        <div class="tab-content fade show">
+                            <div class="tab-pane panel-body validation-tab active">
+                                <div class="row page-section" id="examples" key="dynamic">
+                                    <div class='col-lg-12'>
+                                      <ul class="nav nav-tabs">
+                                        <li [class.active]="mainTab=='installation'"
+                                            (click)="mainTab='installation'"><a>Installation</a></li>
+                                        <li [class.active]="mainTab=='validator'"
+                                            (click)="mainTab='validator'"><a>Validator</a></li>
+                                        <li [class.active]="mainTab=='decorator'"
+                                            (click)="mainTab='decorator'"><a>Decorator</a></li>
+                                        <li [class.active]="mainTab=='template-driven'"
+                                            (click)="mainTab='template-driven'"><a>Template Driven</a></li>
+                                      </ul>
+                                      <div class="tab-content p-4">
+                                        <div class="tab-pane active"
+                                             *ngIf="mainTab=='installation'">
+                                          <img src="assets/images/npm-install.gif" />
+                                        </div>
+                                        <div class="tab-pane active"
+                                             *ngIf="mainTab=='validator'">
+                                          <img src="assets/images/validator.gif" />
+                                        </div>
+                                        <div class="tab-pane active"
+                                             *ngIf="mainTab=='decorator'">
+                                          <img src="assets/images/decorator.gif" />
+                                        </div>
+                                        <div class="tab-pane active"
+                                             *ngIf="mainTab=='template-driven'">
+                                          <img src="assets/images/template-driven.gif" />
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class='row page-section' id="goal">
+                                    <div class='col-lg-12'>
+                                        <h2>Goal<a title="Link to this heading" class="link-header"
+                                                routerLink="/getting-started" fragment="goal"><i
+                                                    class="fa fa-link"></i></a></h2>
+                                        <p>Provides all type of clientside validations.</p>
+                                        <p>Easy way to create Angular Reactive Form Group & Template Driven Form
+                                            Validation with
+                                            less lines of code.</p>
+                                        <p>Easy to create Dynamic Reactive Form / Template Driven Form.</p>
+                                    </div>
+                                </div>
+                                <app-contribution></app-contribution>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-right-sidebar [sidebarLinks]="rightSidebarLinks"></app-right-sidebar>
+</div>

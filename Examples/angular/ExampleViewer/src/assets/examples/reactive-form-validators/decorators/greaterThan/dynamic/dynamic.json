@@ -1,0 +1,31 @@
+{
+    "age": {},
+    "retiermentAge": {
+        "greaterThan": {
+            "fieldName": "age"
+        }
+    },
+    "voterAge": {
+        "greaterThan": {
+            "fieldName": "age",
+            "conditionalExpression": "x => x.age > 17"
+        }
+    },
+    "otherAge": {
+        "greaterThan": {
+            "fieldName": "age",
+            "message": "Please enter number which is greater than above field input."
+        }
+    },
+    "minimumAge": {
+        "greaterThan": {
+            "value": "18"
+        }
+    },
+    "joiningAge": {
+        "greaterThan": {
+            "fieldName": "age",
+            "messageKey": "greaterThanMessageKey"
+        }
+    }
+}

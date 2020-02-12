@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "firstName": "Usmi",
+      "lastName": "Dave",
+      "id": 2
+    },
+    {
+      "firstName": "Usmi",
+      "lastName": "Dave",
+      "id": 3
+    },
+    {
+      "firstName": "Srishti",
+      "lastName": "Khandelwal",
+      "id": 4
+    },
+    {
+      "firstName": "Srishti",
+      "lastName": "Khandelwal",
+      "department": "Dotnet",
+      "id": 5
+    },
+    {
+      "firstName": "Srishti",
+      "lastName": "Khandelwal",
+      "department": "Dotnet",
+      "id": 6
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

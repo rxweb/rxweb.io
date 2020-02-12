@@ -1,0 +1,70 @@
+<div class="main-header">
+    <div class="dynamic-home">
+        <div [class.dynamic-home-animate]="isAnimated">
+            <div class="home-title">
+                <div class="dynamic-main-heading">Why waste time? Let's Build.😃</div>
+                <div class="inline home-bttn">
+                    <button routerLink="/reactive-dynamic-forms/dynamic-forms/stepbystep" class="btn home-page-links">
+                        <span class="btn-label">Let's get started</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="type-it" style="height: 500px;">
+            <div [class.dynamic-animate]="isDynamicAnimated">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <span class="dynamic-typeit ">
+                        <div class="dynamic-text-typing" id="code_change_dynamic"
+                            style="text-align: left!important;width: 100%;max-height:150px;max-width: 820px;"></div>
+                    </span>
+                </div>
+               
+                    <div class="col-lg-6 col-md-6" *ngIf="serverData.length > 0">
+                        <div class="model-ts combined dynamic-home-form">
+                            <div class="code-example">
+                                <div class="ng-star-inserted">
+                                    <form *ngIf="isBind" [formGroup]="dynamicFormBuildConfig.formGroup">
+                                        <div viewMode="basic" [rxwebDynamicForm]="dynamicFormBuildConfig"
+                                            [uiBindings]="uiBindings">
+                                        </div>
+                                       
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+               
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- <div class="main-header">
+    <div class="home animate" [class.animate]="isAnimated">
+
+        <div>
+            <div class="main-heading">Why Waste Time? Let's Build..</div>
+            <div class="inline home-bttn">
+                <button routerLink="/getting-started" class="btn home-page-links">
+                    <span class="btn-label">Let's get started</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-12 dynamic">
+            
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 typeitdynamic">
+              
+                <span class="typeit" id="code_change" style="text-align: left!important;width: 100%;max-width: 820px;"></span>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 dynamic-block" >                
+                    <img id="dynamic_img" src="assets/images/dynamic-forms/start1.png" height="500" width="552" />
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div> -->

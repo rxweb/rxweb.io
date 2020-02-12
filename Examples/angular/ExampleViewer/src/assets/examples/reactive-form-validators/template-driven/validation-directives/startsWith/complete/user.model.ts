@@ -1,0 +1,19 @@
+
+export class User {
+
+	name: string;
+	
+	
+	profession: string;
+	
+	
+	taskId: string;
+	
+	
+	company: string;
+	
+	
+	skill: string;
+	
+	
+}

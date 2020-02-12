@@ -1,0 +1,34 @@
+import {  greaterThan,prop, } from   "@rxweb/reactive-form-validators"   
+
+export class User {
+
+	@prop()
+	age: number;
+
+	@greaterThan({fieldName:'age' }) 
+	retiermentAge: number;
+	
+	
+	//If you want to apply conditional expression of type 'function'
+	@greaterThan({fieldName:'age'  ,conditionalExpression:(x,y) => x.age > 17  }) 
+	memberAge: number;
+	
+	
+	//If you want to apply conditional expression of type 'string'
+	@greaterThan({fieldName:'age'  ,conditionalExpression:'x => x.age > 17' }) 
+	voterAge: number;
+	
+	
+	@greaterThan({fieldName:'age'  ,message:'Please enter number which is greater than above field input.' }) 
+	otherAge: number;
+	
+	
+	@greaterThan({value:18 }) 
+	minimumAge: number;
+	
+	
+	@greaterThan({fieldName:'age'  ,messageKey:'greaterThanMessageKey' }) 
+	joiningAge: number;
+	
+	
+}

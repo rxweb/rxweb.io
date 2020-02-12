@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="attandanceDetailFormGroup">
+    <div class="form-group">
+      <label>Break Hours</label>
+      <input type="text" formControlName="breakHours" class="form-control"  />
+      <small class="form-text text-muted">Value should be less than 00:10<br/></small>
+     <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.breakHours.errors">{{attandanceDetailFormGroup.controls.breakHours.errors.maxTime.message}}<br/></small>	
+    </div>
+    <button [disabled]="!attandanceDetailFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

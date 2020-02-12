@@ -1,0 +1,11 @@
+<div>
+  <form #jsoninfoForm = "ngForm" [rxwebForm]="jsoninfoForm" [model]="jsoninfo">
+    <div class="form-group">
+      <label>Location</label>
+	    <input type="text" name="location" [(ngModel)]="jsoninfo.location"  class="form-control" />
+
+	   <small class="form-text text-danger" *ngIf="jsoninfoForm.controls?.location?.errors">{{jsoninfoForm.controls?.location?.errors?.json.message}}<br/></small>	
+    </div>
+    <button [disabled]="!jsoninfoForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

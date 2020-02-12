@@ -1,0 +1,95 @@
+{
+    "links": [
+        {
+            "title": "Getting Started",
+            "uri": "rxweb-sanitizers/sanitizers-getting-started",
+            "isOpen": false,
+            "isActive": false,
+            "linkTitle": "sanitizers-getting-started"
+        },
+        {
+            "title": "Sanitizers",
+            "uri": null,
+            "isOpen": true,
+            "isActive": false,
+            "otherUri": "sanitizers",
+            "childrens": [
+                {
+                    "title": "blacklist",
+                    "uri": "rxweb-sanitizers/sanitizers/sanitizer#blacklist",
+                    "isActive": false
+                },
+                {
+                    "title": "escape",
+                    "uri": "/rxweb-sanitizers/sanitizers/sanitizer#escape",
+                    "isActive": false
+                },
+                {
+                    "title": "prefix",
+                    "uri": "/rxweb-sanitizers/sanitizers/sanitizer#prefix",
+                    "isActive": false
+                },
+                {
+                    "title": "ltrim",
+                    "uri": "/rxweb-sanitizers/sanitizers/sanitizer#ltrim",
+                    "isActive": false
+                },
+                {
+                    "title": "rtrim",
+                    "uri": "/rxweb-sanitizers/sanitizers/sanitizer#rtrim",
+                    "isActive": false
+                },
+                {
+                    "title": "suffix",
+                    "uri": "/rxweb-sanitizers/sanitizers/sanitizer#suffix",
+                    "isActive": false
+                },
+                {
+                    "title": "toBoolean",
+                    "uri": "/rxweb-sanitizers/sanitizers/sanitizer#toBoolean",
+                    "isActive": false
+                },
+                {
+                    "title": "toDouble",
+                    "uri": "rxweb-sanitizers/sanitizers/sanitizer#toDouble",
+                    "isActive": false
+                },
+                {
+                    "title": "toFloat",
+                    "uri": "rxweb-sanitizers/sanitizers/sanitizer#toFloat",
+                    "isActive": false
+                },
+                {
+                    "title": "toInt",
+                    "uri": "rxweb-sanitizers/sanitizers/sanitizer#toInt",
+                    "isActive": false
+                },
+                {
+                    "title": "toString",
+                    "uri": "rxweb-sanitizers/sanitizers/sanitizer#toString",
+                    "isActive": false
+                },
+                {
+                    "title": "trim",
+                    "uri": "rxweb-sanitizers/sanitizers/sanitizer#trim",
+                    "isActive": false
+                },
+                {
+                    "title": "whitelist",
+                    "uri": "rxweb-sanitizers/sanitizers/sanitizer#whitelist",
+                    "isActive": false
+                },
+                {
+                    "title": "uppercase",
+                    "uri": "rxweb-sanitizers/sanitizers/sanitizer#uppercase",
+                    "isActive": false
+                },
+                {
+                    "title": "lowercase",
+                    "uri": "rxweb-sanitizers/sanitizers/sanitizer#lowercase",
+                    "isActive": false
+                }
+            ]
+        }
+    ]
+}

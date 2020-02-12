@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="addressInfoFormGroup">
+    <div class="form-group">
+      <label>City Code</label>
+      <input type="text" formControlName="cityCode" class="form-control"  />
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+     <small class="form-text text-danger" *ngIf="addressInfoFormGroup.controls.cityCode.errors">{{addressInfoFormGroup.controls.cityCode.errors.alphaMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!addressInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

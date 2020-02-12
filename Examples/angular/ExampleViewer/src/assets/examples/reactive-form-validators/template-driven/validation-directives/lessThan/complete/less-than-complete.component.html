@@ -1,0 +1,40 @@
+<div>
+  <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
+    <div class="form-group">
+      <label>Obtained Marks</label>
+	    <input type="text" name="obtainedMarks" [(ngModel)]="user.obtainedMarks"  class="form-control" />
+
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.obtainedMarks?.errors">{{userForm.controls?.obtainedMarks?.errors?.lessThan.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Other Activity Marks</label>
+	    <input type="text" name="otherActivityMarks" [(ngModel)]="user.otherActivityMarks"  class="form-control" [lessThan]="{'fieldName':'obtainedMarks'}"/>
+
+      <small class="form-text text-muted">Other Activity Marks less than to Obtained marks<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherActivityMarks?.errors">{{userForm.controls?.otherActivityMarks?.errors?.lessThan.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Passing Marks</label>
+	    <input type="text" name="passingMarks" [(ngModel)]="user.passingMarks"  class="form-control" [lessThan]="{'fieldName':'obtainedMarks','conditionalExpression':'x => x.obtainedMarks < 35'}"/>
+
+      <small class="form-text text-muted">If you want to apply conditional validation on 'Passing Marks' then you need to add 'Obtained Marks' field less than '35'.<br/></small>
+      <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.passingMarks?.errors">{{userForm.controls?.passingMarks?.errors?.lessThan.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Other Marks</label>
+	    <input type="text" name="otherMarks" [(ngModel)]="user.otherMarks"  class="form-control" [lessThan]="{'fieldName':'obtainedMarks','message':'Please enter number which is less than above field input.'}"/>
+
+      <small class="form-text text-muted">Shows custom message<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherMarks?.errors">{{userForm.controls?.otherMarks?.errors?.lessThan.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Discipline Marks</label>
+	    <input type="text" name="disciplineMarks" [(ngModel)]="user.disciplineMarks"  class="form-control" [lessThan]="{'fieldName':'obtainedMarks','messageKey':'lessThanMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.disciplineMarks?.errors">{{userForm.controls?.disciplineMarks?.errors?.lessThan.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

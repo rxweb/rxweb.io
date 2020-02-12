@@ -1,0 +1,10 @@
+<div>
+  <form  [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>Alternate Contact Number</label>
+      <input type="text" formControlName="alternateContactNumber" class="form-control"  />
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.alternateContactNumber.errors">{{userFormGroup.controls.alternateContactNumber.errors.maskMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

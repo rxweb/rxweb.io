@@ -1,0 +1,54 @@
+<div>
+  <form  [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>Admin Website Url</label>
+      <input type="text" formControlName="adminWebsiteUrl" class="form-control"  />
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.adminWebsiteUrl.errors">{{userFormGroup.controls.adminWebsiteUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>QA Website Url</label>
+      <input type="text" formControlName="qaWebsiteUrl" class="form-control"  />
+      <small class="form-text text-muted">If you want to apply conditional validation on 'QA Website Url' then you need to add 'admin Website Url' input as 'https://google.co.in'.<br/></small>
+      <small class="form-text text-muted">Conditional Expression with type 'function'<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.qaWebsiteUrl.errors">{{userFormGroup.controls.qaWebsiteUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Customer Website Url</label>
+      <input type="text" formControlName="customerWebsiteUrl" class="form-control"  />
+      <small class="form-text text-muted">If you want to apply conditional validation on 'Customer Website Url' then you need to add 'admin Website Url' input as 'https://google.co.in'.<br/></small>
+      <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.customerWebsiteUrl.errors">{{userFormGroup.controls.customerWebsiteUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Maintenance Website Url</label>
+      <input type="text" formControlName="maintenanceWebSiteUrl" class="form-control"  />
+      <small class="form-text text-muted">Shows Custom Validation Message.<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.maintenanceWebSiteUrl.errors">{{userFormGroup.controls.maintenanceWebSiteUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>FQDN Domain Url</label>
+      <input type="text" formControlName="fqdnDomainUrl" class="form-control"  />
+      <small class="form-text text-muted">Enter valid FQDN url.<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.fqdnDomainUrl.errors">{{userFormGroup.controls.fqdnDomainUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Localhost Url</label>
+      <input type="text" formControlName="localhostUrl" class="form-control"  />
+      <small class="form-text text-muted">Enter valid localhost url.<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.localhostUrl.errors">{{userFormGroup.controls.localhostUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>IntraServer Url</label>
+      <input type="text" formControlName="intraServerUrl" class="form-control"  />
+      <small class="form-text text-muted">Enter valid IntraServer url.<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.intraServerUrl.errors">{{userFormGroup.controls.intraServerUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Deployed Website Url</label>
+      <input type="text" formControlName="deployedWebSiteUrl" class="form-control"  />
+      <small class="form-text text-muted">Shows Custom Validation Message based on message key<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.deployedWebSiteUrl.errors">{{userFormGroup.controls.deployedWebSiteUrl.errors.urlMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

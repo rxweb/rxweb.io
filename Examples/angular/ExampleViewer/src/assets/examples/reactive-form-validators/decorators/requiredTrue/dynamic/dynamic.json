@@ -1,0 +1,1 @@
+{"isAgree":{"requiredTrue":true},"checkMeOut":{"requiredTrue":{"conditionalExpression":"x => x.isAgree == true"}},"isActive":{"requiredTrue":{"message":"Should be active"}},"isBlocked":{"requiredTrue":{"messageKey":"requiredTrueMessageKey"}}}

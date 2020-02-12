@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>Promotion Year</label>
+      <input type="text" formControlName="promotionYear" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message based on message key.<br/></small>
+	<small class="form-text text-danger" *ngIf="userFormGroup.controls.promotionYear.errors">{{userFormGroup.controls.promotionYear.errors.leapYear.message}}<br/></small>
+    </div>
+    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

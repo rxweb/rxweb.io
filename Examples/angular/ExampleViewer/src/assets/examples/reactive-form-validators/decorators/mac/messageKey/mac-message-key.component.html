@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="macAddressInfoFormGroup">
+    <div class="form-group">
+      <label>Server MAC Address</label>
+      <input type="text" formControlName="serverMacAddress" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	<small class="form-text text-danger" *ngIf="macAddressInfoFormGroup.controls.serverMacAddress.errors">{{macAddressInfoFormGroup.controls.serverMacAddress.errors.mac.message}}<br/></small>
+    </div>
+    <button [disabled]="!macAddressInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

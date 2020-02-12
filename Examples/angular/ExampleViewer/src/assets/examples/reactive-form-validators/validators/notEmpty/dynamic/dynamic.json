@@ -1,0 +1,1 @@
+{"firstName":{"notEmpty":true},"lastName":{"notEmpty":{"conditionalExpression":"x => x.firstName == \"Bharat\""}},"userName":{"notEmpty":{"message":"Username cannot be blank."}},"fullName":{"notEmpty":{"messageKey":"notEmptyMessageKey"}}}
