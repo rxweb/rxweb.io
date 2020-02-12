@@ -2,8 +2,7 @@
   "compileOnSave": false,
   "include": ["./src/**/*", "./src/*" ],
   "exclude": [
-    "Examples",
-    "**/*.spec.ts"
+    "Examples"
 ],
   "compilerOptions": {
     "baseUrl": "./",

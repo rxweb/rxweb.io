@@ -95,11 +95,11 @@ export class AppExampleRunnerComponent implements OnInit {
      else {
        this.clientSideValidationType = "angular"
      if (this.router.url.includes("#"))
-       codeUrl = "http://localhost:9999/" + this.router.url.split("#")[0] + "?exampleName=" + this.exampleName;
+       codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url.split("#")[0] + "?exampleName=" + this.exampleName;
        else if(this.router.url.includes("?"))
-        codeUrl = "http://localhost:9999/" + this.router.url.split("?")[0] + "?exampleName=" + this.exampleName;
+        codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url.split("?")[0] + "?exampleName=" + this.exampleName;
       else
-        codeUrl = "http://localhost:9999/" + this.router.url + "?exampleName=" + this.exampleName;
+        codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url + "?exampleName=" + this.exampleName;
  
      this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
       this.isRunCode = true; 
