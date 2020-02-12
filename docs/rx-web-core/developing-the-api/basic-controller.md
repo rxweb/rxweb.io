@@ -16,6 +16,8 @@ The Candidate entity requires the basic data operations(Based upon the ResourceC
 
 > Name of that basic controller must have a suffix "Controller". For example: `CandidatesController`.
 
+<a role="button" target="_blank" class="git-link-button" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/HumanResourceApplication/HumanResourceApplication.Api/Controllers/Api/CandidateModule/CandidatesController.cs"><span style="vertical-align: middle">Download the Code</span><img class="_3-99 img" src="https://scontent.famd5-1.fna.fbcdn.net/v/t39.2365-6/21630666_872184906282544_8997395837269049344_n.png?_nc_cat=106&amp;_nc_ohc=ixvAzbNREvgAX9AAb7C&amp;_nc_ht=scontent.famd5-1.fna&amp;oh=738ee91e1ae8331712186222788828a0&amp;oe=5ED55A8A" height="25" alt="" style="vertical-align:middle;margin-left: 4px;max-width: 654px;"></a>
+
 ## Generate a Basic Controller
 
 To Create a basic controller, open the `Package Manager Console` and run the following command:

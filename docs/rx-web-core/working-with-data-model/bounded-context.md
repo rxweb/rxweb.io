@@ -13,6 +13,7 @@ There are some scenarios when you have to deal with too many tables, then it bec
 
 `Bounded context design pattern` can help you in maintaining a well structured application. This represents a logical and tangible boundery which will structurize the bigger application in terms of modules and domain. It is the core part of this strategic design pattern of `Domain-Driven approach`. The core concept of this design pattern is mainly focused on the models and structuring them based on the their fundamental context. 
 
+
 ## Scenario
 This will be helpful in those cases where we are building a large enterprise application. All features are segregated into the modules. So we take the advantage of bounded context and create the context modules wise based upon the Application needs. This gives us a comfort to add/remove the entity into the specific context without hindering to other modules(in terms of context).
 
@@ -63,6 +64,7 @@ rxwebcore --context --main Candidate --add-models Candidates
 
 > This will add tables and views of the particular entity in the context.
 
+
 **CandidateContext.cs:** 
 ````js
  public class CandidateContext : BaseBoundedDbContext, ICandidateContext
@@ -82,6 +84,8 @@ rxwebcore --context --main Candidate --add-models Candidates
 ```` 
 
 With the creation of BoundedContext, its UnitOfWork will be generated which will be further used in the API to interact with the data. To get further information about UnitOfWork Please refer this <a href="/rx-web-core/working-with-data-model/data-operations/overview" class="redirect-link" target="_blank">link.</a>
+
+<a role="button" target="_blank" class="git-link-button" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/HumanResourceApplication/HumanResourceApplication.BoundedContext/DbContext/Main/CandidateContext.cs"><span style="vertical-align: middle">Download the Code</span><img class="_3-99 img" src="https://scontent.famd5-1.fna.fbcdn.net/v/t39.2365-6/21630666_872184906282544_8997395837269049344_n.png?_nc_cat=106&amp;_nc_ohc=ixvAzbNREvgAX9AAb7C&amp;_nc_ht=scontent.famd5-1.fna&amp;oh=738ee91e1ae8331712186222788828a0&amp;oe=5ED55A8A" height="25" alt="" style="vertical-align:middle;margin-left: 4px;max-width: 654px;"></a>
 
 ## Create Lookup context
 lookup context contains DbSets of lookups used to bind dropdowns of the context in the application. 
@@ -107,3 +111,5 @@ rxwebcore --context main CandidateLookup --add-models Countries
     {
     }
 ```` 
+
+<a role="button" target="_blank" class="git-link-button" href="https://github.com/rxweb/RxWebCore/blob/master/src/Samples/AspNetCore/Documentation%20Examples/HumanResourceApplication/HumanResourceApplication.BoundedContext/DbContext/Main/CandidateLookupContext.cs"><span style="vertical-align: middle">Download the Code</span><img class="_3-99 img" src="https://scontent.famd5-1.fna.fbcdn.net/v/t39.2365-6/21630666_872184906282544_8997395837269049344_n.png?_nc_cat=106&amp;_nc_ohc=ixvAzbNREvgAX9AAb7C&amp;_nc_ht=scontent.famd5-1.fna&amp;oh=738ee91e1ae8331712186222788828a0&amp;oe=5ED55A8A" height="25" alt="" style="vertical-align:middle;margin-left: 4px;max-width: 654px;"></a>
