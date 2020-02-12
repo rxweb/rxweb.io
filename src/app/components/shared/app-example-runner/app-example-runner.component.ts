@@ -10,7 +10,7 @@ import { ViewChild } from "@angular/core";
 import { CodeExampleComponent } from "src/app/components/shared/code-example/code-example.component";
 import { StackBlitzService } from "src/app/components/shared/stackblitz/stackblitz.service";
 import { DomSanitizer, SafeResourceUrl, DOCUMENT } from '@angular/platform-browser';
-import { getParameters } from "codesandbox/lib/api/define";
+
 
 
 @Component({
@@ -20,7 +20,7 @@ import { getParameters } from "codesandbox/lib/api/define";
 })
 
 export class AppExampleRunnerComponent implements OnInit {
-  clientSideValidationType:string = "angularss";
+  clientSideValidationType:string = "angular";
   @Input() title: string;
   @Input() refComponent: string;
   @Input() decoratorName: string;
@@ -95,11 +95,11 @@ export class AppExampleRunnerComponent implements OnInit {
      else {
        this.clientSideValidationType = "angular"
      if (this.router.url.includes("#"))
-       codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url.split("#")[0] + "?exampleName=" + this.exampleName;
+       codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("#")[0] + "?exampleName=" + this.exampleName;
        else if(this.router.url.includes("?"))
-        codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url.split("?")[0] + "?exampleName=" + this.exampleName;
+        codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("?")[0] + "?exampleName=" + this.exampleName;
       else
-        codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url + "?exampleName=" + this.exampleName;
+        codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=" + this.exampleName;
  
      this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
       this.isRunCode = true; 
@@ -124,11 +124,11 @@ export class AppExampleRunnerComponent implements OnInit {
     else {
       this.clientSideValidationType = "angular"
     if (this.router.url.includes("#"))
-      codeUrl = "http://localhost:9999/" + this.router.url.split("#")[0] + "?exampleName=" + exampleName;
+      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("#")[0] + "?exampleName=" + exampleName;
       else if(this.router.url.includes("?"))
-      codeUrl = "http://localhost:9999/" + this.router.url.split("?")[0] + "?exampleName=" + exampleName;
+      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("?")[0] + "?exampleName=" + exampleName;
     else
-      codeUrl = "http://localhost:9999/" + this.router.url + "?exampleName=" + exampleName;
+      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=" + exampleName;
 
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
     setTimeout(() => { this.isRunCode = true; }, 500) 
