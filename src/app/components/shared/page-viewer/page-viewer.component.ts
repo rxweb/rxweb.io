@@ -67,6 +67,7 @@ export class PageViewerComponent extends BaseComponentProvider implements OnInit
             }
         })
     }
+   
     scrollTo(section) {
         location.hash = section;
         return false;

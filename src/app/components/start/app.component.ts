@@ -71,7 +71,7 @@ export class AppComponent implements OnInit {
   lastRouteName: string = ""
   rightSidebarLinks: any;
   constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer, private http: HttpClient) {
-    this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");
+    this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("http://localhost:9999/");
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
     });

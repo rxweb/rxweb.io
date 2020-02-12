@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter, AfterContentInit } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, OnInit, Input, EventEmitter, AfterContentInit, Inject, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { AppCodeComponent } from "src/app/components/shared/app-code/app-code.component";
@@ -9,8 +9,9 @@ import { ComponentView } from "src/app/domain/view";
 import { ViewChild } from "@angular/core";
 import { CodeExampleComponent } from "src/app/components/shared/code-example/code-example.component";
 import { StackBlitzService } from "src/app/components/shared/stackblitz/stackblitz.service";
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl, DOCUMENT } from '@angular/platform-browser';
 import { getParameters } from "codesandbox/lib/api/define";
+
 
 @Component({
   selector: 'app-example-runner',
@@ -38,15 +39,18 @@ export class AppExampleRunnerComponent implements OnInit {
   activeTab: string;
   showComponent: boolean = false;
   dataParam: any;
-  constructor(private router: Router, private sanitizer: DomSanitizer
-  ) {
-    //this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl('http://localhost:9999');
+  constructor(private router: Router, private sanitizer: DomSanitizer)
+  {
   }
+ 
   ngOnInit(): void {
+   
+   
+    let codeUrl = "";
     if (document.location.pathname.includes("dynamic-validation")) {
+
       this.showElement = true;
       this.exampleHeight = 750;
-      this.exampleUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=";
       this.isRunCode = true;
     }
     this.showElement = false;
@@ -81,10 +85,29 @@ export class AppExampleRunnerComponent implements OnInit {
         this.dataParam = this.content.dataParam;
       this.activeTab = this.tabArray[0].tabName;
     }
+    if(this.router.url.includes("vue")){
+      this.clientSideValidationType = "vue"
+     
+       codeUrl = "https://rxwebvue.z5.web.core.windows.net/#/" + this.router.url.split('/')[3]+ '-'+ `${this.dashCase(this.exampleName)}`;
+       this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
+       setTimeout(() => { this.isRunCode = true; }, 500)
+     }
+     else {
+       this.clientSideValidationType = "angular"
+     if (this.router.url.includes("#"))
+       codeUrl = "http://localhost:9999/" + this.router.url.split("#")[0] + "?exampleName=" + this.exampleName;
+       else if(this.router.url.includes("?"))
+        codeUrl = "http://localhost:9999/" + this.router.url.split("?")[0] + "?exampleName=" + this.exampleName;
+      else
+        codeUrl = "http://localhost:9999/" + this.router.url + "?exampleName=" + this.exampleName;
+ 
+     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
+      this.isRunCode = true; 
+     }
   }
 
   runCodeExample(exampleName) {
-   debugger;
+  
     let example = this.exampleHeights.filter(x => x.exampleName == exampleName);
     if (example.length > 0)
       this.exampleHeight = example[0].height;
@@ -101,11 +124,11 @@ export class AppExampleRunnerComponent implements OnInit {
     else {
       this.clientSideValidationType = "angular"
     if (this.router.url.includes("#"))
-      codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url.split("#")[0] + "?exampleName=" + exampleName;
+      codeUrl = "http://localhost:9999/" + this.router.url.split("#")[0] + "?exampleName=" + exampleName;
       else if(this.router.url.includes("?"))
-      codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url.split("?")[0] + "?exampleName=" + exampleName;
+      codeUrl = "http://localhost:9999/" + this.router.url.split("?")[0] + "?exampleName=" + exampleName;
     else
-      codeUrl = "https://rxwebangular.azureedge.net/" + this.router.url + "?exampleName=" + exampleName;
+      codeUrl = "http://localhost:9999/" + this.router.url + "?exampleName=" + exampleName;
 
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
     setTimeout(() => { this.isRunCode = true; }, 500) 
@@ -128,25 +151,13 @@ export class AppExampleRunnerComponent implements OnInit {
   
 
   
-  // openSandbox(){
+  openSandbox(){
    
-  //   const html = '<div id="root"></div>';
     
-  //    let parameters = getParameters({
-  //      files: {
-  //       "package.json": {
-  //         content:"{'dependencies': {: 'latest','react-dom': 'latest'}}",
-  //         isBinary:false
-  //       }
-  
-  //    }
-  //    });
-  //   window.open("https://codesandbox.io/api/v1/sandboxes/define", "_blank");
-  //   document.getElementById("sandBox").innerHTML += `value=${parameters}`
-  // }
+  }
 
   openStackblitz() {
-    debugger;
+  
     var stackBlitz = new StackBlitzService();
     let form = stackBlitz.buildForm(this.decoratorName, this.exampleName, this.typeName, this.templateDrivenType, this.content, this.title)
     document.body.appendChild(form);

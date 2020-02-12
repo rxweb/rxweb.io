@@ -27,7 +27,6 @@ export class SideBarComponent implements OnInit {
 
   }
   ngOnInit(): void {
-   debugger;
     if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") { 
       if (location.pathname.includes("rx-web-core")) {
         this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {

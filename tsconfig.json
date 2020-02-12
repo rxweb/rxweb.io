@@ -1,6 +1,10 @@
 {
   "compileOnSave": false,
   "include": ["./src/**/*", "./src/*" ],
+  "exclude": [
+    "Examples",
+    "**/*.spec.ts"
+],
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

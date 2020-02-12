@@ -164,7 +164,9 @@ export class PageComponent implements OnInit {
         });
       });
   }
-
+  onMouseWheel(evt) {
+    console.log('Wheel event: ', evt);
+}
   route(typeName: string, templateDrivenType?: string) {
    
     if (templateDrivenType)
