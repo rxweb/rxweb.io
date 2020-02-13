@@ -45,7 +45,6 @@ export class AppExampleRunnerComponent implements OnInit {
  
   ngOnInit(): void {
    
-   
     let codeUrl = "";
     if (document.location.pathname.includes("dynamic-validation")) {
 

@@ -7,8 +7,6 @@ import { HostListener } from "@angular/core";
 import { NavigationStart } from "@angular/router";
 import { trigger, style, animate, transition, query } from '@angular/animations';
 import { ApplicationBroadcaster } from '@rx/core';
-import { routerNgProbeToken } from '@angular/router/src/router_module';
-import { RightSideBarComponent } from '../shared/right-sidebar/right-sidebar.component';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientConfig } from '@rxweb/http';

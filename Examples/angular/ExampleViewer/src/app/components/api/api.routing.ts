@@ -4,15 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 const API_ROUTES: Routes = [
 {
 	path:'RxFormBuilder',
-	loadChildren: './RxFormBuilder/rx-form-builder.module#RxFormBuilderModule',
+	loadChildren: () => import('./RxFormBuilder/rx-form-builder.module').then(m => m.RxFormBuilderModule),
 },
 {
 	path:'FormBuilderConfiguration',
-	loadChildren: './FormBuilderConfiguration/form-builder-configuration.module#FormBuilderConfigurationModule',
+	loadChildren: () => import('./FormBuilderConfiguration/form-builder-configuration.module').then(m => m.FormBuilderConfigurationModule),
 },
 {
 	path:'RxFormGroup',
-	loadChildren: './RxFormGroup/rx-form-group.module#RxFormGroupModule',
+	loadChildren: () => import('./RxFormGroup/rx-form-group.module').then(m => m.RxFormGroupModule),
 },
 ];
 export const API_ROUTING: ModuleWithProviders = RouterModule.forChild(API_ROUTES);

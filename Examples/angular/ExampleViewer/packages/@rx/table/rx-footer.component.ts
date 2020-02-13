@@ -10,7 +10,7 @@ import { ApplicationPage } from '../core'
   template: ''
 })
 export class RxFooterComponent {
-  @ContentChild(RxCellTemplateDirective) content: RxCellTemplateDirective;
+  @ContentChild(RxCellTemplateDirective, {static: false}) content: RxCellTemplateDirective;
 
   templateRef: TemplateRef<any>;
 

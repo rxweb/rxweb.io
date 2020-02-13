@@ -1,4 +1,4 @@
-import {OnDestroy, ElementRef, Renderer, HostListener, Input,Directive } from "@angular/core";
+import { OnDestroy, ElementRef, Renderer2, HostListener, Input,Directive } from "@angular/core";
 import {Observable, Subscription} from "rxjs/Rx";
 import {Subject} from "rxjs/Subject";
 
@@ -11,7 +11,7 @@ export class RxTabDirective implements OnDestroy {
     tab: TabModel;
     private subjectTabSelected: Subject<RxTabDirective>;
     tabSelected: Observable<RxTabDirective>;
-    constructor(public elementRef: ElementRef, public renderer: Renderer) {
+    constructor(public elementRef: ElementRef, public renderer: Renderer2) {
         this.subjectTabSelected = new Subject<RxTabDirective>();
         this.tabSelected = this.subjectTabSelected.asObservable();
     }
@@ -35,7 +35,7 @@ export class RxTabDirective implements OnDestroy {
         this.subjectTabSelected.next(this);
     }
     setActiveClass(value: boolean) {
-        this.renderer.setElementClass(this.elementRef.nativeElement, 'active', value);
+        this.renderer.addClass(this.elementRef.nativeElement, 'active');
     }
 
     ngOnDestroy(): void {

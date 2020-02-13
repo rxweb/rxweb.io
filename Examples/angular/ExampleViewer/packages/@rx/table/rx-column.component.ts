@@ -12,7 +12,7 @@ import { ApplicationPage } from '../core'
 export class RxColumnComponent {
     private columnTitle: string;
     private applicationModuleId: number;
-    @ContentChild(RxCellTemplateDirective) content: RxCellTemplateDirective;
+    @ContentChild(RxCellTemplateDirective, {static: false}) content: RxCellTemplateDirective;
 
     @ContentChildren(RxPermissionItemTemplateDirective) permissionItems: QueryList<RxPermissionItemTemplateDirective>;
 

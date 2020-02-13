@@ -4,59 +4,59 @@ import { Routes, RouterModule } from '@angular/router';
 const HOWTO_ROUTES: Routes = [
 {
 	path:'errorMessages',
-	loadChildren: './errorMessages/error-messages.module#ErrorMessagesModule',
+	loadChildren: () => import('./errorMessages/error-messages.module').then(m => m.ErrorMessagesModule),
 },
 {
 	path:'formData',
-	loadChildren: './formData/form-data.module#FormDataModule',
+	loadChildren: () => import('./formData/form-data.module').then(m => m.FormDataModule),
 },
 {
 	path:'fileObject',
-	loadChildren: './fileObject/file-object.module#FileObjectModule',
+	loadChildren: () => import('./fileObject/file-object.module').then(m => m.FileObjectModule),
 },
 {
 	path:'dirtyCheck',
-	loadChildren: './dirtyCheck/dirty-check.module#DirtyCheckModule',
+	loadChildren: () => import('./dirtyCheck/dirty-check.module').then(m => m.DirtyCheckModule),
 },
 {
 	path:'resetForm',
-	loadChildren: './resetForm/reset-form.module#ResetFormModule',
+	loadChildren: () => import('./resetForm/reset-form.module').then(m => m.ResetFormModule),
 },
 {
 	path:'stronglyType',
-	loadChildren: './stronglyType/strongly-type.module#StronglyTypeModule',
+	loadChildren: () => import('./stronglyType/strongly-type.module').then(m => m.StronglyTypeModule),
 },
 {
 	path:'bindConfig',
-	loadChildren: './bindConfig/bind-config.module#BindConfigModule',
+	loadChildren: () => import('./bindConfig/bind-config.module').then(m => m.BindConfigModule),
 },
 {
 	path:'patchModelValue',
-	loadChildren: './patchModelValue/patch-model-value.module#PatchModelValueModule',
+	loadChildren: () => import('./patchModelValue/patch-model-value.module').then(m => m.PatchModelValueModule),
 },
 {
 	path:'logicalOperators',
-	loadChildren: './logicalOperators/logical-operators.module#LogicalOperatorsModule',
+	loadChildren: () => import('./logicalOperators/logical-operators.module').then(m => m.LogicalOperatorsModule),
 },
 {
 	path:'classAbstraction',
-	loadChildren: './classAbstraction/class-abstraction.module#ClassAbstractionModule',
+	loadChildren: () => import('./classAbstraction/class-abstraction.module').then(m => m.ClassAbstractionModule),
 },
 {
 	path:'genericModel',
-	loadChildren: './genericModel/generic-model.module#GenericModelModule',
+	loadChildren: () => import('./genericModel/generic-model.module').then(m => m.GenericModelModule),
 },
 {
 	path:'errorMessageStrategy',
-	loadChildren: './errorMessageStrategy/error-message-strategy.module#ErrorMessageStrategyModule',
+	loadChildren: () => import('./errorMessageStrategy/error-message-strategy.module').then(m => m.ErrorMessageStrategyModule),
 },
 {
 	path:'commit',
-	loadChildren: './commit/commit.module#CommitModule',
+	loadChildren: () => import('./commit/commit.module').then(m => m.CommitModule),
 },
 {
 	path:'modifiedValue',
-	loadChildren: './modifiedValue/modified-value.module#ModifiedValueModule',
+	loadChildren: () => import('./modifiedValue/modified-value.module').then(m => m.ModifiedValueModule),
 },
 ];
 export const HOWTO_ROUTING: ModuleWithProviders = RouterModule.forChild(HOWTO_ROUTES);

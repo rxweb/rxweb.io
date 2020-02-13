@@ -1,5 +1,5 @@
 
-import { Directive, OnInit, Input, Renderer, ElementRef } from "@angular/core";
+import { Directive, OnInit, Input, Renderer2, ElementRef } from "@angular/core";
 
 @Directive({
     selector: '[rxHtml]',
@@ -7,7 +7,7 @@ import { Directive, OnInit, Input, Renderer, ElementRef } from "@angular/core";
 export class RxHtmlDirective implements OnInit {
     @Input('rxHtml') data: string;
     element: HTMLDivElement;
-    constructor(private renderer: Renderer, private elementRef: ElementRef,
+    constructor(private renderer: Renderer2, private elementRef: ElementRef,
     ) {
         this.element = elementRef.nativeElement as HTMLDivElement;
     }

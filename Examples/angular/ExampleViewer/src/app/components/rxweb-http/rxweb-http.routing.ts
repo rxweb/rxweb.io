@@ -10,7 +10,7 @@ const RXWEB_HTTP_ROUTES: Routes = [
     },
     {
         path: 'http',
-        loadChildren: 'src/app/components/http/http.module#HttpModule',
+        loadChildren: () => import('src/app/components/http/http.module').then(m => m.HttpModule),
     }
 
 ];

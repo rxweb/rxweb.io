@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, Inject  } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 
 import { RxSpinner } from './spinner.service';

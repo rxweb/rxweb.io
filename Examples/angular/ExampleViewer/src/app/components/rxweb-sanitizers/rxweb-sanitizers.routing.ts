@@ -10,7 +10,7 @@ const RXWEB_SANITIZERS_ROUTES: Routes = [
     },
     {
         path: 'sanitizers',
-        loadChildren: 'src/app/components/sanitizers/sanitizers.module#SanitizersModule',
+        loadChildren: () => import('src/app/components/sanitizers/sanitizers.module').then(m => m.SanitizersModule),
     }
 
 ];

@@ -1,4 +1,4 @@
-import { ViewContainerRef, Component, Input, Output, EventEmitter, AfterContentInit, OnChanges, Renderer, ElementRef, forwardRef, OnDestroy, ViewChild, Inject } from "@angular/core";
+import { ViewContainerRef, Component, Input, Output, EventEmitter, AfterContentInit, OnChanges, Renderer2, ElementRef, forwardRef, OnDestroy, ViewChild, Inject } from "@angular/core";
 import { NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl } from "@angular/forms"
 
 import { ApplicationConfiguration } from '../../core';
@@ -52,7 +52,7 @@ export class RxTagComponent extends Multilingual implements AfterContentInit, On
     [key: string]: any
   };
 
-  constructor(public elementRef: ElementRef, public renderer: Renderer, public http: RxHttp) {
+  constructor(public elementRef: ElementRef, public renderer: Renderer2, public http: RxHttp) {
     super();
     this.mainSource = new Array<TagModel>();
     this.selectedTags = new Array<TagModel>();
@@ -423,7 +423,8 @@ export class RxTagComponent extends Multilingual implements AfterContentInit, On
 
   private clearValue(element: any): void {
     element.value = "";
-    this.renderer.invokeElementMethod(element, "focus", []);
+    // this.renderer.invokeElementMethod(element, "focus", []);
+    this.renderer.selectRootElement(element, true);
   }
 
   private clearActiveTabClass() {

@@ -9,11 +9,11 @@ import {
     ElementRef,
     Input,
     HostListener,
-    Renderer,
+    Renderer2,
     ComponentRef, EmbeddedViewRef, OnDestroy
 } from "@angular/core";
 
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 import {MOUSEOVER_EVENT, DOM_EVENT, FOCUSIN_EVENT, FOCUSOUT_EVENT, MOUSEOUT_EVENT, CLICK_EVENT } from "../../util/constants/constants";
 
@@ -57,7 +57,7 @@ export class RxTooltipDirective implements OnDestroy {
     componentView: ComponentView<RxTooltipComponent>;
     overlayViewHost: OverlayViewHost;
     overlayPositionHost: OverlayPositionHost;
-    constructor(private renderer: Renderer, private elementRef: ElementRef,
+    constructor(private renderer: Renderer2, private elementRef: ElementRef,
         private componentFactoryResolver: ComponentFactoryResolver,
         private viewContainerRef: ViewContainerRef, @Inject(DOCUMENT) private document: any
     ) {

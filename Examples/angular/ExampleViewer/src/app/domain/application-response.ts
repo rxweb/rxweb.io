@@ -1,4 +1,4 @@
-import { ReflectiveInjector, Inject } from "@angular/core";
+import { ReflectiveInjector, Inject, Injectable } from "@angular/core";
 import {Response } from "@angular/http";
 
 import { ResponseResult } from "@rx/http";
@@ -10,7 +10,7 @@ import '@rx/linq';
 import {requestCollection, Uri } from './request-uri';
 import { RxStorage } from "@rx/storage";
 
-
+@Injectable()
 export class ApplicationResponse implements ResponseResult {
     dataOperationMessage: {};
     storage: RxStorage;

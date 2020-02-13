@@ -35,7 +35,7 @@ export class RxTableComponent extends DataCollection implements AfterContentInit
 
   @ContentChildren(RxFooterComponent) footer: QueryList<RxFooterComponent>;
 
-  @ContentChild(RxTableDetailTemplateDirective) detailTemplate: RxTableDetailTemplateDirective;
+  @ContentChild(RxTableDetailTemplateDirective, {static: false}) detailTemplate: RxTableDetailTemplateDirective;
 
   @Input() dataSource: any;
 

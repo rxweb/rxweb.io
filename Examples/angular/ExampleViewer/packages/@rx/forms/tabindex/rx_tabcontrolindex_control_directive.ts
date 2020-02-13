@@ -5,7 +5,7 @@ import {RxTabindexDirective } from "./rx_tabindex_control_directive";
     selector: '[rxControlindex]'
 })
 export class RxControlIndexDirective implements AfterViewInit, OnDestroy {
-    @ContentChild(RxTabindexDirective) tabindexDirectives: RxTabindexDirective[];
+    @ContentChild(RxTabindexDirective, {static: false}) tabindexDirectives: RxTabindexDirective[];
     constructor() { }
 
     @Input('rxControlindex') pageName: string;
