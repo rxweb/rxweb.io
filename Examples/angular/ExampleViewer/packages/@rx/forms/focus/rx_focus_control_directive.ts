@@ -1,4 +1,4 @@
-import { Directive, AfterViewInit, ElementRef, Renderer, Input, OnDestroy } from "@angular/core";
+import { Directive, AfterViewInit, ElementRef, Renderer2, Input, OnDestroy } from "@angular/core";
 
 import { FOCUS_EVENT } from "../../util/constants/constants";
 
@@ -9,7 +9,7 @@ import { FOCUS_EVENT } from "../../util/constants/constants";
 export class RxFocusDirective implements AfterViewInit, OnDestroy {
   private element: Node;
   @Input('rxFocus') focus: string = undefined
-  constructor(private renderer: Renderer, private elementRef: ElementRef) {
+  constructor(private renderer: Renderer2, private elementRef: ElementRef) {
     this.element = this.elementRef.nativeElement as Node
   }
 
@@ -20,8 +20,8 @@ export class RxFocusDirective implements AfterViewInit, OnDestroy {
 
   setFocus(): void {    
     var t = setTimeout(() => {
-      this.renderer.invokeElementMethod(
-        this.element, FOCUS_EVENT, []);
+      this.renderer.selectRootElement(
+        this.element, true);
     }, 100);
   }
 

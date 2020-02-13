@@ -45,7 +45,6 @@ export class AppExampleRunnerComponent implements OnInit {
  
   ngOnInit(): void {
    
-   
     let codeUrl = "";
     if (document.location.pathname.includes("dynamic-validation")) {
 
@@ -85,7 +84,6 @@ export class AppExampleRunnerComponent implements OnInit {
         this.dataParam = this.content.dataParam;
       this.activeTab = this.tabArray[0].tabName;
     }
-    debugger;
     if(this.decoratorName.includes("Of")){
      this.exampleHeights =  [{ exampleName: 'add', height: 300 }, { exampleName: 'conditionalExpression', height: 800 }, { exampleName: 'allowWhiteSpace', height: 300 }, { exampleName: 'message', height: 360 }, { exampleName: 'messageKey', height: 360 }, { exampleName: 'locale', height: 160 }, { exampleName: 'complete', height: 1500 }, { exampleName: 'dynamic', height: 1500 }]
     }

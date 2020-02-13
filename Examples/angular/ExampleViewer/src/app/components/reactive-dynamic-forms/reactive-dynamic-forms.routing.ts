@@ -7,7 +7,7 @@ import { DynamicGettingStartedComponent } from './getting-started/getting-starte
 const REACTIVE_DYNAMIC_FORMS_ROUTES: Routes = [
 {
     path: 'dynamic-forms',
-    loadChildren: 'src/app/components/dynamic-forms/dynamic-forms.module#DynamicFormsModule',
+    loadChildren: () => import('src/app/components/dynamic-forms/dynamic-forms.module').then(m => m.DynamicFormsModule),
   },
   {
     path: 'home',
@@ -19,15 +19,15 @@ const REACTIVE_DYNAMIC_FORMS_ROUTES: Routes = [
   },
   {
     path: 'static-binding',
-    loadChildren: 'src/app/components/static-binding/static-binding.module#StaticBindingModule',
+    loadChildren: () => import('src/app/components/static-binding/static-binding.module').then(m => m.StaticBindingModule),
   },
   {
     path: 'conditional-binding',
-    loadChildren: 'src/app/components/conditional-binding/conditional-binding.module#ConditionalBindingModule',
+    loadChildren: () => import('src/app/components/conditional-binding/conditional-binding.module').then(m => m.ConditionalBindingModule),
   },
   {
     path: 'controls',
-    loadChildren: 'src/app/components/controls/controls.module#ControlsModule',
+    loadChildren: () => import('src/app/components/controls/controls.module').then(m => m.ControlsModule),
   },
   {
     path: 'dynamic-getting-started',
@@ -35,7 +35,7 @@ const REACTIVE_DYNAMIC_FORMS_ROUTES: Routes = [
   },
   {
     path:'advance-form-design',
-    loadChildren:'src/app/components/advance-form-design/advance-form-design.module#Advance_form_designModule'
+    loadChildren:() => import('src/app/components/advance-form-design/advance-form-design.module').then(m => m.Advance_form_designModule)
   }
 
 ];

@@ -4,47 +4,47 @@ import { Routes, RouterModule } from '@angular/router';
 const DYNAMIC_FORMS_ROUTES: Routes = [
 {
 	path:'stepbystep',
-	loadChildren: './stepbystep/stepbystep.module#StepbystepModule',
+	loadChildren: () => import('./stepbystep/stepbystep.module').then(m => m.StepbystepModule),
 },
 {
 	path:'dynamicresetform',
-	loadChildren: './dynamicresetform/dynamicresetform.module#DynamicresetformModule',
+	loadChildren: () => import('./dynamicresetform/dynamicresetform.module').then(m => m.DynamicresetformModule),
 },
 {
 	path:'dynamicerrormessagestrategy',
-	loadChildren: './dynamicerrormessagestrategy/dynamicerrormessagestrategy.module#DynamicerrormessagestrategyModule',
+	loadChildren: () => import('./dynamicerrormessagestrategy/dynamicerrormessagestrategy.module').then(m => m.DynamicerrormessagestrategyModule),
 },
 {
 	path:'customvalidation',
-	loadChildren: './customvalidation/customvalidation.module#CustomvalidationModule',
+	loadChildren: () => import('./customvalidation/customvalidation.module').then(m => m.CustomvalidationModule),
 },
 {
 	path:'asyncvalidation',
-	loadChildren: './asyncvalidation/asyncvalidation.module#AsyncvalidationModule',
+	loadChildren: () => import('./asyncvalidation/asyncvalidation.module').then(m => m.AsyncvalidationModule),
 },
 {
 	path:'DynamicFormConfiguration',
-	loadChildren: './DynamicFormConfiguration/dynamic-form-configuration.module#DynamicFormConfigurationModule',
+	loadChildren: () => import('./DynamicFormConfiguration/dynamic-form-configuration.module').then(m => m.DynamicFormConfigurationModule),
 },
 {
 	path:'dynamic',
-	loadChildren: './dynamic/dynamic.module#DynamicModule',
+	loadChildren: () => import('./dynamic/dynamic.module').then(m => m.DynamicModule),
 },
 {
 	path:'overrideProps',
-	loadChildren: './overrideProps/override-props.module#OverridePropsModule',
+	loadChildren: () => import('./overrideProps/override-props.module').then(m => m.OverridePropsModule),
 },
 {
 	path:'dynamicComponent',
-	loadChildren: './dynamicComponent/dynamic-component.module#DynamicComponentModule',
+	loadChildren: () => import('./dynamicComponent/dynamic-component.module').then(m => m.DynamicComponentModule),
 },
 {
 	path:'preValueHook',
-	loadChildren: './preValueHook/pre-value-hook.module#PreValueHookModule',
+	loadChildren: () => import('./preValueHook/pre-value-hook.module').then(m => m.PreValueHookModule),
 },
 {
 	path:'postValueHook',
-	loadChildren: './postValueHook/post-value-hook.module#PostValueHookModule',
+	loadChildren: () => import('./postValueHook/post-value-hook.module').then(m => m.PostValueHookModule),
 },
 ];
 export const DYNAMIC_FORMS_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMIC_FORMS_ROUTES);

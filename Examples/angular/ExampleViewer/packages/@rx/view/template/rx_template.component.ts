@@ -23,7 +23,7 @@ export class RxTemplateComponent extends TemplateCollection implements AfterCont
 
     columns: Array<string>;
 
-    @ContentChild(RxCellTemplateDirective) content: RxCellTemplateDirective;
+    @ContentChild(RxCellTemplateDirective, {static: false}) content: RxCellTemplateDirective;
 
     get template(): TemplateRef<any> {
         return this.content ? this.content.templateRef : undefined;

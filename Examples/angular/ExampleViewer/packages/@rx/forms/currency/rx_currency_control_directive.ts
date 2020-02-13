@@ -1,4 +1,4 @@
-import {Directive, forwardRef,ElementRef,Renderer,Input,HostListener} from "@angular/core";
+import { Directive, forwardRef, ElementRef, Renderer2,Input,HostListener} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from "@angular/forms";
 import {CurrencyPipe} from "@angular/common";
 
@@ -16,7 +16,6 @@ const RX_CURRENCY_VALUE_ACCESSOR = {
     multi: true
 }
 
-
 @Directive({
     selector: '[rxCurrency]',
     providers: [RX_CURRENCY_VALUE_ACCESSOR]
@@ -31,7 +30,7 @@ export class RxCurrencyDirective implements ControlValueAccessor {
     private onChange: any = (_: any) => { };
 
     constructor(private elementRef: ElementRef,
-        private renderer: Renderer,
+        private renderer: Renderer2,
         private currencyPipe: CurrencyPipe,
         private regularExpression: RegularExpression)
     {
@@ -97,6 +96,6 @@ export class RxCurrencyDirective implements ControlValueAccessor {
     }
 
     private setValueOnElement(value: string) {
-        this.renderer.setElementProperty(this.element, ELEMENT_VALUE, value);
+        this.renderer.setAttribute(this.element, ELEMENT_VALUE, value);
     }
 }

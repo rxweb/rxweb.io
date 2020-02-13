@@ -1,4 +1,4 @@
-import {Directive, AfterViewInit, Renderer, ElementRef, Input, ContentChild,OnDestroy} from "@angular/core";
+import { Directive, AfterViewInit, Renderer2, ElementRef, Input, ContentChild,OnDestroy} from "@angular/core";
 import {FormControlName, FormGroupDirective} from "@angular/forms"
 
 import {ApplicationConfiguration } from "../../core";
@@ -13,7 +13,7 @@ export class RxTabindexDirective implements AfterViewInit {
     private currentTabindex: string;
     private currentFormControlName: string;
 
-    constructor(private renderer: Renderer, private elementRef: ElementRef) { this.element = this.elementRef.nativeElement as Node; }
+    constructor(private renderer: Renderer2, private elementRef: ElementRef) { this.element = this.elementRef.nativeElement as Node; }
 
     @Input('rxTabindex') set tabindex(value: string) {
         this.currentTabindex = value;
@@ -40,7 +40,7 @@ export class RxTabindexDirective implements AfterViewInit {
     }
 
     private setElementTabIndex(value: string) {
-        this.renderer.setElementAttribute(this.element, TABINDEX, value);
+        this.renderer.setAttribute(this.element, TABINDEX, value);
     }
 
 }

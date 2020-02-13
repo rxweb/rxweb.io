@@ -3,7 +3,7 @@ import { Component, OnInit, ElementRef, Inject,
 
 } from '@angular/core';
 import { CanActivate } from "@angular/router"
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 
 import {OverlayViewHost, BackDrop} from "../../core/view/overlay_view_host";

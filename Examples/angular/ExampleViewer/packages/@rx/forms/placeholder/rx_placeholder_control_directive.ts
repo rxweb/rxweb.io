@@ -1,4 +1,4 @@
-import {Directive, HostListener, Input, AfterViewInit, Renderer, ElementRef } from "@angular/core";
+import { Directive, HostListener, Input, AfterViewInit, Renderer2, ElementRef } from "@angular/core";
 
 import { ApplicationConfiguration, ApplicationPage} from "../../core"
 import {PLACEHOLDER} from "../../util/constants/constants";
@@ -13,7 +13,7 @@ export class RxPlaceholderDirective {
     placeHolderName: string;
     placeHolderText: string;
     applicationModuleId: number;
-    constructor(private renderer: Renderer, private elementRef: ElementRef)
+    constructor(private renderer: Renderer2, private elementRef: ElementRef)
     {
         this.element = elementRef.nativeElement as Node;
         this.elementSubscription = ApplicationPage.moduleContentSubscriber.subscribe(t => this.textChanged());
@@ -44,7 +44,7 @@ export class RxPlaceholderDirective {
     }
 
     setPlaceholder(value: string): void {
-        this.renderer.setElementAttribute(
+        this.renderer.setAttribute(
             this.element, PLACEHOLDER, value);
     }
 }

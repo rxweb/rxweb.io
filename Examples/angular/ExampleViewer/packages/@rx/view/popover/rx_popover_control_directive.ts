@@ -5,11 +5,11 @@ import {
     Inject,
     Directive,
     OnInit, OnDestroy, ComponentFactoryResolver, ViewContainerRef } from "@angular/core"
-import { DOCUMENT } from '@angular/platform-browser';
 
 import {OverlayViewHost, OverlayPositionHost, OffSetModel} from "../../core/view/overlay_view_host";
 import {ComponentView, ComponentType} from "../../core/view/view";
 import {CLICK_EVENT, MOUSEOVER_EVENT, TARGET_ELEMENT } from "../../util/constants/constants";
+import { DOCUMENT } from '@angular/common';
 
 export class PopoverModel {
     position: string;
