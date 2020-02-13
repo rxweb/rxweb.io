@@ -44,7 +44,7 @@ export class TextPageComponent implements OnInit {
         this.codeContent = JSON.parse(response.toString());
         var element = document.getElementById("mainContent")
         element.innerHTML = this.codeContent.htmlContent;
-        document.title = "rxweb " + this.codeContent.title
+        document.title = this.codeContent.title + " - RxWeb";
         this.applicationBroadcaster.topSubject.next(this.codeContent);
     });
 

@@ -22,6 +22,7 @@ import { Http } from '@angular/http';
     }
 
   ngOnInit(): void {
+    document.title = "Getting Started(Sanitizers) - RxWeb";
     this.http.get('assets/json/generator/rxweb-sanitizers/sanitizer-install.json').subscribe(response => {
       this.codeContent = response.json();
       this.showComponent = true;

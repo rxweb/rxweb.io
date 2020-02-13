@@ -20,6 +20,7 @@ export class WhatsNextComponent implements OnInit {
      }
 
     ngOnInit() {
+        document.title = "Whats Next - RxWeb";
         this.applicationBroadcaster.topSubject.next(this.pageTitle);
         this.showComponent = true;
     }

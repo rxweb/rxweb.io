@@ -85,7 +85,6 @@ export class AppExampleRunnerComponent implements OnInit {
         this.dataParam = this.content.dataParam;
       this.activeTab = this.tabArray[0].tabName;
     }
-    debugger;
     if(this.decoratorName.includes("Of")){
      this.exampleHeights =  [{ exampleName: 'add', height: 300 }, { exampleName: 'conditionalExpression', height: 800 }, { exampleName: 'allowWhiteSpace', height: 300 }, { exampleName: 'message', height: 360 }, { exampleName: 'messageKey', height: 360 }, { exampleName: 'locale', height: 160 }, { exampleName: 'complete', height: 1500 }, { exampleName: 'dynamic', height: 1500 }]
     }
@@ -97,8 +96,8 @@ export class AppExampleRunnerComponent implements OnInit {
     
     if(this.router.url.includes("vue")){
       this.clientSideValidationType = "vue"
-     
-       codeUrl = "https://rxwebvue.z5.web.core.windows.net/#/" + this.router.url.split('/')[3]+ '-'+ `${this.dashCase(this.exampleName)}`;
+       let validationName = `${this.dashCase(this.router.url.split('/')[3])}`;
+       codeUrl = "https://rxwebvue.z5.web.core.windows.net/#/" + validationName+ '-'+ `${this.dashCase(this.exampleName)}`;
        this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
        setTimeout(() => { this.isRunCode = true; }, 500)
      }

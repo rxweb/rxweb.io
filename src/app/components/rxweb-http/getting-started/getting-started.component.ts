@@ -25,6 +25,7 @@ export class HttpGettingStartedComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.title = "Getting Started(RxHttp) - RxWeb";
     this.http.get('assets/json/generator/rxweb-http/http-install.json').subscribe(response => {
       this.codeContent = response.json();
       this.showComponent = true;

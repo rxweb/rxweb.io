@@ -31,6 +31,7 @@ export class GettingStartedComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.title = "Getting Started(Reactive Forms) - RxWeb";
     this.http.get('assets/json/generator/getting-started/getting-started.json?v=' + environment.appVersion).subscribe(response => {
       this.codeContent = response.json();
       this.showComponent = true;

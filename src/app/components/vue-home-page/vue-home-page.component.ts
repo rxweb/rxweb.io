@@ -112,7 +112,7 @@ isExistElement(){
   }
 
   ngOnInit(): void {
-    
+    document.title = "RxWeb - clean code built with purpose";
     window.setTimeout(() => { this.isAnimated = true },500)
     
    

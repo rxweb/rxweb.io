@@ -119,7 +119,7 @@ export class SideBarComponent implements OnInit {
   refLinks: any[] = [];
   lastSearchValue: string = '';
   bindLinks(searchResult: any[]) {
-
+    
     if (this.lastSearchValue != this.searchvalue) {
       this.lastSearchValue = this.searchvalue;
       if (this.searchvalue) {
@@ -128,10 +128,12 @@ export class SideBarComponent implements OnInit {
           let searchObject = this.links;
           if (t.linkTree) {
             t.linkTree.forEach(x => {
+  
               let refObject = searchObject.filter(y => y.title.toLowerCase() == x.toLowerCase())[0];
               if (refObject) {
                 refObject.isHide = false;
                 searchObject = refObject.childrens;
+                
               }
             })
             let refObject = searchObject.filter(y => y.title.toLowerCase() == t.title.toLowerCase())[0];
@@ -145,7 +147,9 @@ export class SideBarComponent implements OnInit {
               }
             }
           }
+          
         })
+        
       } else
         if (this.pageLoaded)
           this.hideAll(this.links, false, false);

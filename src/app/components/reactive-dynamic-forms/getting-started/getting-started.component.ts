@@ -21,6 +21,7 @@ import { Http } from '@angular/http';
     }
 
   ngOnInit(): void {
+    document.title = "Getting Started(Dynamic Forms) - RxWeb";
     this.showComponent = true;
     this.applicationBroadCaster.topSubject.next(this.pageTitle);
   }

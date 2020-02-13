@@ -21,6 +21,7 @@ import { Http } from '@angular/http';
     }
 
   ngOnInit(): void {
+    document.title = "Getting Started(Generics) - RxWeb";
     this.http.get('assets/json/generator/rxweb-generics/generic-install.json').subscribe(response => {
       this.codeContent = response.json();
       this.showComponent = true;

@@ -55,7 +55,7 @@ import { ContributorsComponent } from './contributors/contributors-component';
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-
+  
 
 import { TopBarSharedModule } from './shared/top-bar/top-bar-shared.module';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';

@@ -83,7 +83,7 @@ export class HtmlPageComponent implements OnInit {
       document.querySelectorAll('code').forEach((block) => {
         hljs.highlightBlock(block);
       });
-      document.title = "rxweb " + this.codeContent.title
+      document.title =  this.codeContent.title + " - RxWeb "; 
       this.applicationBroadcaster.topSubject.next(this.codeContent);
     });
   }

@@ -133,13 +133,15 @@ export class PageComponent implements OnInit {
           titleString = "template-driven";
           break;
       }
-      document.title = "rxweb " + splitedArray[2] + " : " + titleString;
+      debugger;
+      document.title = splitedArray[2]+ " - RxWeb" ;
     }
     else if(this.mainType == "vue"){
       let vuesSplitedArray = location.pathname.split('/');
       codeUri = 'assets/json/generator/' + vuesSplitedArray[3] + '/'+  'decorators' + '.json';
       htmlUri = 'assets/json/generator/vue/'  + vuesSplitedArray[3]  + '/'+ vuesSplitedArray[3] + '-' + 'vue' + '.json';
       titleString = "validator";
+      document.title = splitedArray[3]+ " - RxWeb" ;
     }
     else{
     
@@ -147,6 +149,7 @@ export class PageComponent implements OnInit {
       codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/'+  'validators' + '.json';
       htmlUri = 'assets/json/generator/'  + dynamicsplitedArray[3]  + '/'+ dynamicsplitedArray[3] + '-' + 'validators' + '.json';
       titleString = "validator";
+      document.title = splitedArray[3]+ " - RxWeb" ;
     }
 
       this.http.get(codeUri, this.options).subscribe(response => {
@@ -164,9 +167,7 @@ export class PageComponent implements OnInit {
         });
       });
   }
-  onMouseWheel(evt) {
-    console.log('Wheel event: ', evt);
-}
+
   route(typeName: string, templateDrivenType?: string) {
    
     if (templateDrivenType)
