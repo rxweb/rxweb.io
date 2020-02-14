@@ -112,7 +112,7 @@
 											<ul class="list-unstyled see-more-links" *ngIf="hits.length == 0">
 												<li class="bold">Go to : </li>
 												<li class="" *ngFor="let item of hit.refLinks">
-													<a [routerLink]="item.url">{{item.title}}</a>
+													<a [routerLink]="item.link">{{item.title}}</a>
 												</li>
 											</ul>
 										</li>

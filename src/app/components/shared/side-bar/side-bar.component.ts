@@ -18,6 +18,8 @@ export class SideBarComponent implements OnInit {
   isExist: boolean = false;
   searchvalue: string
   pageLoaded: boolean = false;
+  isSearch:boolean = false;
+  
   bindSideBarLinks: any;
   @ViewChild('search') searchInput: ElementRef;
 
@@ -27,62 +29,65 @@ export class SideBarComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") { 
+    if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") {
       if (location.pathname.includes("rx-web-core")) {
         this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
           this.links = response.links;
           var currentUrl = this.router.url;
           this.setActiveLink(currentUrl);
-        });       
+        });
       }
-     
-       else if (location.pathname.includes("vue")) {
-          this.http.get('assets/json/vue-sidebar.json').subscribe((response: any) => {
-            this.links = response.links;
-            var currentUrl = this.router.url;
-            this.setActiveLink(currentUrl);
-          });       
-        }
-    
+
+      else if (location.pathname.includes("vue")) {
+        this.http.get('assets/json/vue-sidebar.json').subscribe((response: any) => {
+          this.links = response.links;
+          var currentUrl = this.router.url;
+          this.setActiveLink(currentUrl);
+        });
+      }
+
       else {
         this.http.get('assets/json/links.json?v=' + environment.appVersion).subscribe((response: any) => {
           this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
-          this.links = response.links;   
+          this.links = response.links;
           var currentUrl = this.router.url;
-          this.setActiveLink(currentUrl);   
+          this.setActiveLink(currentUrl);
         });
-      }     
+      }
     }
     this.showComponent = true;
   }
 
 
-  setActiveLink(currentUrl: string) {
+  setActiveLink(currentUrl: string,isSearch:boolean = false) {
 
     for (let link of this.links) {
       if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
-        link.isActive = this.isActiveChildren(currentUrl, link.childrens);
+        link.isActive = this.isActiveChildren(currentUrl, link.childrens,isSearch);
       } else
-        link.isActive = link.uri == currentUrl;
-      if (link.isActive){
-      link.isOpen = true;
+        link.isActive = isSearch ? link.title == `${currentUrl.charAt(0).toLowerCase()}${currentUrl.replace(currentUrl.charAt(0),"")}` : link.uri == currentUrl;
+      if (link.isActive) {
+        link.isOpen = true;
         break;
-      }
+      }else if(isSearch)
+        link.isHide = true;
     }
   }
 
-  isActiveChildren(currentUrl: string, childrens: any[]) {
+  isActiveChildren(currentUrl: string, childrens: any[],isSearch) {
     let isActive = false;
     for (let link of childrens) {
       if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
-        link.isActive = this.isActiveChildren(currentUrl, link.childrens);
+        link.isActive = this.isActiveChildren(currentUrl, link.childrens,isSearch);
       } else
-        link.isActive = link.uri == currentUrl;
+        link.isActive = isSearch ? link.title == `${currentUrl.charAt(0).toLowerCase()}${currentUrl.replace(currentUrl.charAt(0),"")}` : link.uri == currentUrl;
       if (link.isActive) {
+        console.log(link.title)
         isActive = true;
         link.isOpen = true;
         break;
-      }
+      }else
+      link.isHide = true;
     }
     return isActive;
   }
@@ -106,7 +111,8 @@ export class SideBarComponent implements OnInit {
     }
   }
   showsearchcontent(event, searchvalue: string) {
-    if (event.key == "Escape")
+    this.isSearch = true;
+      if (event.key == "Escape")
       this.hideSearch();
     else {
       if (searchvalue != undefined && searchvalue.length > 0)
@@ -119,47 +125,72 @@ export class SideBarComponent implements OnInit {
   refLinks: any[] = [];
   lastSearchValue: string = '';
   bindLinks(searchResult: any[]) {
+    if(this.isSearch){
+      searchResult.forEach(t=>{
+        this.setActiveLink(t.title,true);
+      })
+      this.isSearch = false;
+    }else
+    this.isSearch = false;
     
-    if (this.lastSearchValue != this.searchvalue) {
-      this.lastSearchValue = this.searchvalue;
-      if (this.searchvalue) {
-        this.hideAll(this.links, true, true)
-        searchResult.forEach(t => {
-          let searchObject = this.links;
-          if (t.linkTree) {
-            t.linkTree.forEach(x => {
-  
-              let refObject = searchObject.filter(y => y.title.toLowerCase() == x.toLowerCase())[0];
-              if (refObject) {
-                refObject.isHide = false;
-                searchObject = refObject.childrens;
-                
-              }
-            })
-            let refObject = searchObject.filter(y => y.title.toLowerCase() == t.title.toLowerCase())[0];
-            if (refObject) {
-              refObject.isHide = false;
-              refObject.isOpen = true;
-              if (refObject.childrens) {
-                refObject.childrens.forEach(element => {
-                  element.isHide = false;
-                });
-              }
-            }
-          }
-          
-        })
-        
-      } else
-        if (this.pageLoaded)
-          this.hideAll(this.links, false, false);
-        else
-          this.pageLoaded = true;
+    // if (this.lastSearchValue != this.searchvalue) {
+    //   this.lastSearchValue = this.searchvalue;
+    //   if (this.searchvalue) {
+
+    //     searchResult.forEach(t => {
+    //      debugger;
+    //       let searchObject = this.links;
+    //       if (t.linkTrees) {
+
+    //         for (let link of this.links) {
+    //           if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
+    //             this.searchChildObject(t, link.childrens);
+    //           } else {
+    //             let refObject = searchObject.filter(y => y.title.toLowerCase() == t.title.toLowerCase())[0];
+    //             if (refObject) {
+    //               console.log(refObject);
+    //               this.hideAll(refObject.childrens, true, true)
+
+    //             }
+    //           }
+    //         }
+
+    //       }
+
+    //     })
+
+    //   } else{}
+    //     if (this.pageLoaded) {
+    //       debugger;
+    //       this.hideAll(this.links, false, false);
+    //     }
+    //     else
+    //       this.pageLoaded = true;
+    // }
+    // return;
+  }
+
+  searchChildObject(searchObject: any, childrens: any[]) {
+
+    for (let link of childrens) {
+      if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
+        this.searchChildObject(searchObject, link.childrens);
+      } else {
+        let refObject = childrens.filter(y => y.title.toLowerCase() == searchObject.title.toLowerCase())[0];
+        if (refObject) {
+          console.log(refObject);
+          this.hideAll(refObject, true, true)
+          refObject.isHide = false;
+          refObject.isOpen = true;
+          break;
+        }
+      }
     }
-    return;
+
   }
 
   hideAll(jObject: any[], isHide: boolean, isOpen: boolean) {
+    debugger;
     for (var i = 0; i < jObject.length; i++) {
       jObject[i].isHide = isHide;
       jObject[i].isOpen = isOpen;

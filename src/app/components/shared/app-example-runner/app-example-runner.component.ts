@@ -85,7 +85,7 @@ export class AppExampleRunnerComponent implements OnInit {
       this.activeTab = this.tabArray[0].tabName;
     }
     if(this.decoratorName.includes("Of")){
-     this.exampleHeights =  [{ exampleName: 'add', height: 300 }, { exampleName: 'conditionalExpression', height: 800 }, { exampleName: 'allowWhiteSpace', height: 300 }, { exampleName: 'message', height: 360 }, { exampleName: 'messageKey', height: 360 }, { exampleName: 'locale', height: 160 }, { exampleName: 'complete', height: 1500 }, { exampleName: 'dynamic', height: 1500 }]
+     this.exampleHeights =  [{ exampleName: 'add', height: 300 }, { exampleName: 'conditionalExpression', height: 800 }, { exampleName: 'allowWhiteSpace', height: 300 }, { exampleName: 'message', height: 360 }, { exampleName: 'messageKey', height: 360 }, { exampleName: 'locale', height: 160 }, { exampleName: 'complete', height: 1500 }, { exampleName: 'dynamic', height: 1200 }]
     }
     let example = this.exampleHeights.filter(x => x.exampleName == this.exampleName);
     if (example.length > 0)
@@ -165,7 +165,6 @@ export class AppExampleRunnerComponent implements OnInit {
   }
 
   openStackblitz() {
-  
     var stackBlitz = new StackBlitzService();
     let form = stackBlitz.buildForm(this.decoratorName, this.exampleName, this.typeName, this.templateDrivenType, this.content, this.title)
     document.body.appendChild(form);
