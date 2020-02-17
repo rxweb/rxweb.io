@@ -15,19 +15,20 @@ export class ChildLinkItemComponent implements OnInit {
   @Input() level: any;
   @Output() messageToEmit = new EventEmitter<string>();
   @Input() isOpen: boolean = false;
+  @Input() isSearch :boolean = false;
 
   constructor(private router: Router, private http: HttpClient) {
 
   }
 
   ngOnInit() {
-
-
+ 
+   
   }
 
   navigateTo(link: any): void {
     this.links.forEach(element => {
-      if (element.title != link.title) {
+      if (element.title != link.title) {  
         element.isActive = false;
         element.isOpen = false;
       }

@@ -18,8 +18,8 @@ export class SideBarComponent implements OnInit {
   isExist: boolean = false;
   searchvalue: string
   pageLoaded: boolean = false;
-  isSearch:boolean = false;
-  
+  isSearch: boolean = false;
+
   bindSideBarLinks: any;
   @ViewChild('search') searchInput: ElementRef;
 
@@ -59,35 +59,73 @@ export class SideBarComponent implements OnInit {
   }
 
 
-  setActiveLink(currentUrl: string,isSearch:boolean = false) {
+  setActiveLink(currentUrl: string, isSearch: boolean = false) {
 
     for (let link of this.links) {
       if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
-        link.isActive = this.isActiveChildren(currentUrl, link.childrens,isSearch);
+        link.isActive = this.isActiveChildren(currentUrl, link.childrens, isSearch);
       } else
-        link.isActive = isSearch ? link.title == `${currentUrl.charAt(0).toLowerCase()}${currentUrl.replace(currentUrl.charAt(0),"")}` : link.uri == currentUrl;
+        link.isActive = isSearch ? link.title == `${currentUrl.charAt(0).toLowerCase()}${currentUrl.replace(currentUrl.charAt(0), "")}` : link.uri == currentUrl;
+      if (isSearch) {
+        if (this.links != undefined) {
+          var activeChildLink = this.links.filter(x => x.isActive == true);
+          if (activeChildLink.length > 0) {
+            this.links.forEach(element => {
+              element.isHide = true;
+
+            });
+            activeChildLink.forEach(element => {
+              element.isHide = false;
+            })
+
+          }
+          else {
+            link.isHide = false;
+            link.isOpen = false;
+          }
+        }
+      }
+      
       if (link.isActive) {
         link.isOpen = true;
         break;
-      }else if(isSearch)
-        link.isHide = true;
+      }
     }
   }
 
-  isActiveChildren(currentUrl: string, childrens: any[],isSearch) {
+  isActiveChildren(currentUrl: string, childrens: any[], isSearch) {
     let isActive = false;
     for (let link of childrens) {
       if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
-        link.isActive = this.isActiveChildren(currentUrl, link.childrens,isSearch);
+        link.isActive = this.isActiveChildren(currentUrl, link.childrens, isSearch);
       } else
-        link.isActive = isSearch ? link.title == `${currentUrl.charAt(0).toLowerCase()}${currentUrl.replace(currentUrl.charAt(0),"")}` : link.uri == currentUrl;
+        link.isActive = isSearch ? link.title == `${currentUrl.charAt(0).toLowerCase()}${currentUrl.replace(currentUrl.charAt(0), "")}` : link.uri == currentUrl;
+      if (isSearch) {
+        if (this.links != undefined) {
+
+          var activeChildLink = childrens.filter(x => x.isActive == true);
+          if (activeChildLink.length > 0) {
+            childrens.forEach(element => {
+              element.isHide = true;
+
+            });
+            activeChildLink.forEach(element => {
+              element.isHide = false;
+            })
+
+          }
+        }
+        else {
+          link.isHide = false;
+          link.isOpen = false;
+        }
+      }
+     
       if (link.isActive) {
-        console.log(link.title)
         isActive = true;
         link.isOpen = true;
         break;
-      }else
-      link.isHide = true;
+      }
     }
     return isActive;
   }
@@ -112,7 +150,7 @@ export class SideBarComponent implements OnInit {
   }
   showsearchcontent(event, searchvalue: string) {
     this.isSearch = true;
-      if (event.key == "Escape")
+    if (event.key == "Escape")
       this.hideSearch();
     else {
       if (searchvalue != undefined && searchvalue.length > 0)
@@ -125,53 +163,16 @@ export class SideBarComponent implements OnInit {
   refLinks: any[] = [];
   lastSearchValue: string = '';
   bindLinks(searchResult: any[]) {
-    if(this.isSearch){
-      searchResult.forEach(t=>{
-        this.setActiveLink(t.title,true);
+    if (this.isSearch) {
+      searchResult.forEach(t => {
+        this.setActiveLink(t.title, true);
       })
       this.isSearch = false;
-    }else
-    this.isSearch = false;
-    
-    // if (this.lastSearchValue != this.searchvalue) {
-    //   this.lastSearchValue = this.searchvalue;
-    //   if (this.searchvalue) {
-
-    //     searchResult.forEach(t => {
-    //      debugger;
-    //       let searchObject = this.links;
-    //       if (t.linkTrees) {
-
-    //         for (let link of this.links) {
-    //           if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
-    //             this.searchChildObject(t, link.childrens);
-    //           } else {
-    //             let refObject = searchObject.filter(y => y.title.toLowerCase() == t.title.toLowerCase())[0];
-    //             if (refObject) {
-    //               console.log(refObject);
-    //               this.hideAll(refObject.childrens, true, true)
-
-    //             }
-    //           }
-    //         }
-
-    //       }
-
-    //     })
-
-    //   } else{}
-    //     if (this.pageLoaded) {
-    //       debugger;
-    //       this.hideAll(this.links, false, false);
-    //     }
-    //     else
-    //       this.pageLoaded = true;
-    // }
-    // return;
+    } else
+      this.isSearch = false;
   }
 
   searchChildObject(searchObject: any, childrens: any[]) {
-
     for (let link of childrens) {
       if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
         this.searchChildObject(searchObject, link.childrens);
@@ -190,7 +191,6 @@ export class SideBarComponent implements OnInit {
   }
 
   hideAll(jObject: any[], isHide: boolean, isOpen: boolean) {
-    debugger;
     for (var i = 0; i < jObject.length; i++) {
       jObject[i].isHide = isHide;
       jObject[i].isOpen = isOpen;
@@ -198,7 +198,10 @@ export class SideBarComponent implements OnInit {
         this.hideAll(jObject[i].childrens, isHide, isOpen);
     }
   }
+
   hideSearch() {
+    var currentUrl = this.router.url;
+    this.setActiveLink(currentUrl, false);
     setTimeout(() => {
       this.searchInput['searchBox'].nativeElement.value = "";
       this.searchvalue = "";
