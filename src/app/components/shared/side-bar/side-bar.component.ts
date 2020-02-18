@@ -60,7 +60,6 @@ export class SideBarComponent implements OnInit {
 
 
   setActiveLink(currentUrl: string, isSearch: boolean = false) {
-
     for (let link of this.links) {
       if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
         link.isActive = this.isActiveChildren(currentUrl, link.childrens, isSearch);
@@ -72,20 +71,18 @@ export class SideBarComponent implements OnInit {
           if (activeChildLink.length > 0) {
             this.links.forEach(element => {
               element.isHide = true;
-
             });
             activeChildLink.forEach(element => {
               element.isHide = false;
             })
-
           }
           else {
-            link.isHide = false;
-            link.isOpen = false;
+            this.links.forEach(element => {
+              element.isHide = false;
+            });
           }
         }
       }
-      
       if (link.isActive) {
         link.isOpen = true;
         break;
@@ -102,12 +99,10 @@ export class SideBarComponent implements OnInit {
         link.isActive = isSearch ? link.title == `${currentUrl.charAt(0).toLowerCase()}${currentUrl.replace(currentUrl.charAt(0), "")}` : link.uri == currentUrl;
       if (isSearch) {
         if (this.links != undefined) {
-
           var activeChildLink = childrens.filter(x => x.isActive == true);
           if (activeChildLink.length > 0) {
             childrens.forEach(element => {
               element.isHide = true;
-
             });
             activeChildLink.forEach(element => {
               element.isHide = false;
@@ -115,12 +110,14 @@ export class SideBarComponent implements OnInit {
 
           }
         }
-        else {
-          link.isHide = false;
-          link.isOpen = false;
-        }
       }
-     
+      else {
+       
+        console.log(childrens);
+        childrens.forEach(element => {
+          element.isHide = false;
+        })
+      }
       if (link.isActive) {
         isActive = true;
         link.isOpen = true;
@@ -149,12 +146,13 @@ export class SideBarComponent implements OnInit {
     }
   }
   showsearchcontent(event, searchvalue: string) {
-    this.isSearch = true;
     if (event.key == "Escape")
       this.hideSearch();
     else {
-      if (searchvalue != undefined && searchvalue.length > 0)
+      if (searchvalue != undefined && searchvalue.length > 0) {
+        this.isSearch = true;
         document.getElementById("searchlist-content1").style.display = "block";
+      }
       else
         this.hideSearch();
     }

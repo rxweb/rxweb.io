@@ -26,12 +26,12 @@ export class TopBarComponent implements OnInit {
   cloneSidebarLinks: any = [];
   activeTab:string = "";
   gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/";
-  isDynamic: boolean
+  isDynamic: boolean;
   searchvalue1: string
   @ViewChild('search1') searchInput: ElementRef;
   titleData: any = { codeContent: {} };
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private router: Router, private route: ActivatedRoute) {
-  
+
     this.cloneSideBarLinkItems();
   }
 

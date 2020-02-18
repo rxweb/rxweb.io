@@ -133,7 +133,6 @@ export class PageComponent implements OnInit {
           titleString = "template-driven";
           break;
       }
-      debugger;
       document.title = splitedArray[2]+ " - RxWeb" ;
     }
     else if(this.mainType == "vue"){
