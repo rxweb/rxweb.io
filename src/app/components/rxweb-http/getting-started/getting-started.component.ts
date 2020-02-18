@@ -12,7 +12,7 @@ export class HttpGettingStartedComponent implements OnInit {
   codeContent: any;
 
   showComponent: boolean = false;
-  rightSidebarLinks: any = [{ "id": "getting-started", "title": "Getting Started", "subLink": null }];
+  rightSidebarLinks: any = [{ "id": "getting-started", "title": "Getting Started", "subLink": null },{ "id": "getting-started", "title": "Quick Start", "subLink": null }];
   pageTitle: any = this.rightSidebarLinks[0];
   titleData: any = { codeContent: {} };
   mainTab: string = "installation"

@@ -10,7 +10,7 @@ import { TopBarComponent } from '../shared/top-bar/top-bar.component';
 export class VueGettingStartedComponent implements OnInit {
     sticky: boolean = false;
     showComponent:boolean = false;
-    rightSidebarLinks:any=[{"id":"vue-getting-started","title":"Getting-Started","subLink":null},{"title":"Getting-Started","subLink":null}
+    rightSidebarLinks:any=[{"id":"vue-getting-started","title":"Getting Started","subLink":null},{"title":"Getting Started","subLink":null}
    ];
     pageTitle:any = this.rightSidebarLinks[0];
     constructor(private applicationBroadcaster: ApplicationBroadcaster) {

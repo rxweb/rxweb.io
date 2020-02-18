@@ -36,7 +36,7 @@ export class GettingStartedComponent implements OnInit {
       this.codeContent = response.json();
       this.showComponent = true;
     });
-    this.applicationBroadCaster.topSubject.next(this.rightSidebarLinks);
+  //  this.applicationBroadCaster.topSubject.next(this.rightSidebarLinks);
   }
 
   @HostListener('window:scroll', ['$event'])

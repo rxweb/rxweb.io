@@ -69,7 +69,7 @@ export class AppComponent implements OnInit {
   // getRouteAnimation(outlet) {
   //   return outlet.activatedRouteData.animation
   // }
-  rightSidebarLinks: any;
+  rightSidebarLinks: any =[];
   //@ViewChild('rightSidenav') public rightsidenav: RightSideBarComponent;
   constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer, private http: HttpClient) {
     this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://gitter.im/rxweb-project/rxweb/~embed");

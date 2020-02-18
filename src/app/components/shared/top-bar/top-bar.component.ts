@@ -21,10 +21,10 @@ export class TopBarComponent implements OnInit {
   isFirstLevelBreadCrumb: boolean = true;
   isSecondLevelBreadCrumb: boolean = true;
   showExample: boolean = true;
-  @Input('sidebarLinks') sidebarLinks: any = {};
+  @Input('sidebarLinks') sidebarLinks: any = [];
   @Input('gitUrl') gitUrl: string;
   cloneSidebarLinks: any = [];
-  activeTab:string = "";
+  activeTab: string = "";
   gitEditUrl: string = "https://github.com/rxweb/rxweb.io/edit/master/";
   isDynamic: boolean;
   searchvalue1: string
@@ -37,19 +37,26 @@ export class TopBarComponent implements OnInit {
 
 
   ngOnInit(): void {
+    if (this.cloneSidebarLinks.length == 0) {
+      if (Array.isArray(this.cloneSidebarLinks)) {
+        this.cloneSidebarLinks = this.sidebarLinks;
+        if (this.cloneSidebarLinks[0])
+          this.titleData.title = this.cloneSidebarLinks[0].title;
+      }
+    }
     var splitedArray = location.pathname.split("/");
     this.mainType = splitedArray[1];
     this.validationName = splitedArray[2];
     if (splitedArray.length > 0 && splitedArray[1]) {
-      if (splitedArray.includes("rx-web-core")){
+      if (splitedArray.includes("rx-web-core")) {
         this.secondLevelBreadCrumb = "AspNetCore";
         this.activeTab = "aspnetcore";
       }
-        else if(splitedArray.includes("vue")){
-          this.secondLevelBreadCrumb = "Vue";
-          this.activeTab = "vue";
-        }
-      else{
+      else if (splitedArray.includes("vue")) {
+        this.secondLevelBreadCrumb = "Vue";
+        this.activeTab = "vue";
+      }
+      else {
         this.secondLevelBreadCrumb = "Angular";
         this.activeTab = "angular";
       }
@@ -59,9 +66,7 @@ export class TopBarComponent implements OnInit {
 
 
   cloneSideBarLinkItems() {
-
     this.applicationBroadCaster.topSubscriber.subscribe(t => {
-
       if (t.rightSidebarLinks) {
         this.sidebarLinks = t.rightSidebarLinks;
       }
@@ -79,21 +84,17 @@ export class TopBarComponent implements OnInit {
         if (isArray(this.sidebarLinks)) {
           this.sidebarLinks.forEach(t => {
             this.cloneSidebarLinks.push({ ...t, ...{ subLink: [] } })
-  
             if (t.subLink && t.subLink.length > 0) {
               t.subLink.forEach(x => {
                 this.cloneSidebarLinks.push(x);
-  
               })
             }
           })
-  
         }
-    
       }
     })
-   
   }
+
   scrollTo(section) {
 
     var node = document.querySelector('#' + section);

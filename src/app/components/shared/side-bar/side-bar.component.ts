@@ -112,8 +112,6 @@ export class SideBarComponent implements OnInit {
         }
       }
       else {
-       
-        console.log(childrens);
         childrens.forEach(element => {
           element.isHide = false;
         })
@@ -176,8 +174,7 @@ export class SideBarComponent implements OnInit {
         this.searchChildObject(searchObject, link.childrens);
       } else {
         let refObject = childrens.filter(y => y.title.toLowerCase() == searchObject.title.toLowerCase())[0];
-        if (refObject) {
-          console.log(refObject);
+        if (refObject) {  
           this.hideAll(refObject, true, true)
           refObject.isHide = false;
           refObject.isOpen = true;

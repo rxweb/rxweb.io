@@ -23,7 +23,7 @@ export class HtmlPageComponent implements OnInit {
   codeContent: any = "";
   validationName: string;
   mainType: string;
-  rightSidebarLinks: any;
+  rightSidebarLinks: any = [];
   rootFolder: string;
   fileName: string;
   showViewer: boolean = false;
