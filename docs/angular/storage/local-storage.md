@@ -16,6 +16,8 @@ linktitle: localstorage
 
 Local Storage is available in the `local` property of  the browserStorage object which extends the `ClientDataStorage` of  `@rxweb\storage`. You just need to inject `BrowserStorage`  in your component. This BrowserStorage is created and managed completely on the client-side with calling any server side scripting. 
 
+
+
 # Example
 
 Suppose you are developing a multilingual web application and you want to get the language code of any user which is stored in local storage then you can access it through `local` property of `ClientDataStorage`. 
