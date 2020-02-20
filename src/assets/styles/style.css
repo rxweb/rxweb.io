@@ -5788,11 +5788,11 @@ pre {
 .command{
     color:#37474f!important;
     padding-top: 0px!important;
-    background-color: #eaf2f7 !important;
+    background-color: hsla(0,0%,98%,1)!important;
 }
 
 .command-ts{
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .padding-zero-tab {

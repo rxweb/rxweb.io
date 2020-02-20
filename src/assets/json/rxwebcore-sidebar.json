@@ -5,8 +5,6 @@
             "path": "quick-start",
             "uri": "/rx-web-core/quick-start/quick-start"
         },
-        
-
         {
             "childrens": [
                 {
@@ -29,7 +27,6 @@
                             "path": "creating-views",
                             "uri": "/rx-web-core/tours-of-contoso-app/Beginner/creating-views"
                         },
-                      
                         {
                             "childrens": [],
                             "title": "Authentication",
@@ -853,7 +850,45 @@
         {
             "title": "CLI",
             "path": "rxwebcore-commands",
-            "uri":"/rx-web-core/cli/rxwebcore-commands"
+            "uri": null,
+            "childrens": [
+                {
+                    "childrens": [],
+                    "title": "Installation",
+                    "path": "installation",
+                    "uri": "/rx-web-core/cli/rxwebcore-commands"
+                },
+                {
+                    "childrens": [],
+                    "title": "New Project",
+                    "path": "new-project",
+                    "uri": "/rx-web-core/cli/dotnet-new"
+                },
+                {
+                    "childrens": [],
+                    "title": "Models",
+                    "path": "models",
+                    "uri": "/rx-web-core/cli/cli-models"
+                },
+                {
+                    "childrens": [],
+                    "title": "Contexts",
+                    "path": "contexts",
+                    "uri": "/rx-web-core/cli/cli-context"
+                },
+                {
+                    "childrens": [],
+                    "title": "Controllers",
+                    "path": "controllers",
+                    "uri": "/rx-web-core/cli/cli-controllers"
+                },
+                {
+                    "childrens": [],
+                    "title": "Localization",
+                    "path": "localization",
+                    "uri": "/rx-web-core/cli/cli-localization"
+                }
+            ]
         }
     ]
 }
