@@ -159,6 +159,10 @@ const FORM_VALIDATION_ROUTES: Routes = [
 	loadChildren: './maxLength/max-length.module#MaxLengthModule',
 },
 {
+	path:'mask',
+	loadChildren: './mask/mask.module#MaskModule',
+},
+{
 	path:'maxNumber',
 	loadChildren: './maxNumber/max-number.module#MaxNumberModule',
 },
