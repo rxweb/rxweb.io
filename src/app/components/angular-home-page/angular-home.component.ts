@@ -94,7 +94,7 @@ export class AngularHomeComponent implements OnInit {
   }
     
   ngOnInit(): void {
-    document.title = "RxWeb - clean code built with purpose";
+    document.title = "Angular Architecture - RxWeb Docs";
     var t = setTimeout(() => { this.changeText();},500)
   }
 }

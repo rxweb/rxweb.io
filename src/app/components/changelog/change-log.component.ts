@@ -24,7 +24,7 @@ export class ChangeLogComponent implements OnInit {
 
     }
     ngOnInit() {
-        document.title = "Change Log - RxWeb";
+        document.title = "Change Log - RxWeb Docs";
         this.applicationBroadcaster.topSubject.next(this.pageTitle);
             
         this.showComponent = true;

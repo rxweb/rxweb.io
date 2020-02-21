@@ -1,5 +1,5 @@
 ---
-title: rxweb core commands
+title: RxWeb Core Commands
 author: rxcontributorone
 category: rxwebcore 
 type:simple
@@ -20,28 +20,28 @@ To use RxWebCore commands using package manager console, you must install `rxweb
 
 ### Project Creation
 
-<ul class="bullet-list">
-  <li class="overview-nav-item"><a class="redirect-link" href="/rx-web-core/cli/dotnet-new">New</a></li>
-</ul>
+<ol class="bullet-list">
+  <li><a class="redirect-link" href="/rx-web-core/cli/dotnet-new">New</a></li>
+</ol>
 
 ### Scafollding Commands
 
-<ul class="bullet-list">
- <li class="overview-nav-item"><a class="redirect-link" href="/rx-web-core/cli/cli-models">Models</a></li>
- <li class="overview-nav-item"><a class="redirect-link" href="/rx-web-core/cli/cli-context">Contexts</a></li>
- <li class="overview-nav-item"><a class="redirect-link" href="/rx-web-core/cli/cli-controllers">Controllers</a></li>
-</ul>
+<ol class="bullet-list">
+ <li><a class="redirect-link" href="/rx-web-core/cli/cli-models">Models</a></li>
+ <li><a class="redirect-link" href="/rx-web-core/cli/cli-context">Contexts</a></li>
+ <li><a class="redirect-link" href="/rx-web-core/cli/cli-controllers">Controllers</a></li>
+</ol>
 
 ### Security
 
 <ul class="bullet-list">
- <li class="overview-nav-item"><a class="redirect-link">Authorize</a></li>
+ <li><a class="redirect-link">Authorize</a></li>
 </ul>
 
 ### Localization
 
 <ul class="bullet-list">
- <li class="overview-nav-item"><a class="redirect-link" href="/rx-web-core/cli/cli-localization">localization</a></li>
+ <li><a class="redirect-link" href="/rx-web-core/cli/cli-localization">localization</a></li>
 </ul>
 
 ### DevOps

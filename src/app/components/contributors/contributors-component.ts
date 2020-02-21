@@ -15,6 +15,7 @@ export class ContributorsComponent implements OnInit {
        
     }
     ngOnInit(){
+        document.title = "Hidden Gems - RxWeb Docs";
         this.applicationBroadcaster.topSubject.next(this.pageTitle);
     }
 }

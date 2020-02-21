@@ -112,7 +112,7 @@ isExistElement(){
   }
 
   ngOnInit(): void {
-    document.title = "RxWeb - clean code built with purpose";
+    document.title = "Vue Architecture - RxWeb Docs";
     window.setTimeout(() => { this.isAnimated = true },500)
     
    

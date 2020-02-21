@@ -134,7 +134,7 @@ export class PageComponent implements OnInit {
           titleString = "template-driven";
           break;
       }
-      document.title =  splitedArray[2] + " - RxWeb ";
+      document.title =  splitedArray[2] + " - RxWeb Docs";
     }
     else{
       let dynamicsplitedArray = location.pathname.split('/');

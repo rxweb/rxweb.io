@@ -18,6 +18,7 @@ export class VueGettingStartedComponent implements OnInit {
      }
 
     ngOnInit() {
+        document.title = "Getting Started Vue - RxWeb Docs";
         this.applicationBroadcaster.topSubject.next(this.rightSidebarLinks);
         this.showComponent = true;
     }

@@ -443,7 +443,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    document.title = "RxWeb - clean code built with purpose";
+    document.title = "AspNetCore Architecture- RxWeb Docs";
     window.setTimeout(() => { this.isAnimated = true }, 500)
 
     this.isLoggedIn = false;

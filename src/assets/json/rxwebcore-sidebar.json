@@ -719,8 +719,8 @@
                     "childrens": [],
                     "title": "Security Headers",
                     "path": "authentication",
-                    "uri": "/rx-web-core/security/security-headers"
-                },
+                    "uri": null
+                                },
                 {
                     "childrens": [],
                     "title": "Authentication",

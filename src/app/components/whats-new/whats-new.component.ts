@@ -46,7 +46,7 @@ export class WhatsNewComponent implements OnInit {
      }
 
     ngOnInit() {
-      document.title = "Whats New - RxWeb";
+      document.title = "Whats New - RxWeb Docs";
         this.applicationBroadcaster.topSubject.next(this.rightSidebarLinks);
         this.showComponent = true;
     }

@@ -133,14 +133,14 @@ export class PageComponent implements OnInit {
           titleString = "template-driven";
           break;
       }
-      document.title = splitedArray[2]+ " - RxWeb" ;
+      document.title = splitedArray[2]+ " - RxWeb Docs" ;
     }
     else if(this.mainType == "vue"){
       let vuesSplitedArray = location.pathname.split('/');
       codeUri = 'assets/json/generator/' + vuesSplitedArray[3] + '/'+  'decorators' + '.json';
       htmlUri = 'assets/json/generator/vue/'  + vuesSplitedArray[3]  + '/'+ vuesSplitedArray[3] + '-' + 'vue' + '.json';
       titleString = "validator";
-      document.title = splitedArray[3]+ " - RxWeb" ;
+      document.title = splitedArray[3]+ " - RxWeb Docs" ;
     }
     else{
     
@@ -148,7 +148,7 @@ export class PageComponent implements OnInit {
       codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/'+  'validators' + '.json';
       htmlUri = 'assets/json/generator/'  + dynamicsplitedArray[3]  + '/'+ dynamicsplitedArray[3] + '-' + 'validators' + '.json';
       titleString = "validator";
-      document.title = splitedArray[3]+ " - RxWeb" ;
+      document.title = splitedArray[3]+ " - RxWeb Docs" ;
     }
 
       this.http.get(codeUri, this.options).subscribe(response => {

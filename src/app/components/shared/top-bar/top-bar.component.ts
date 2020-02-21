@@ -40,7 +40,7 @@ export class TopBarComponent implements OnInit {
     if (this.cloneSidebarLinks.length == 0) {
       if (Array.isArray(this.cloneSidebarLinks)) {
         this.cloneSidebarLinks = this.sidebarLinks;
-        if (this.cloneSidebarLinks)
+        if (this.cloneSidebarLinks && this.cloneSidebarLinks.length > 0)
           this.titleData.title = this.cloneSidebarLinks[0].title;
       }
     }
