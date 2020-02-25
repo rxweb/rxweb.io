@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
 
       if (val instanceof NavigationEnd) {
         console.log("calling routes")
-        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home") || val.url.includes("/angular-home")) {
+        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home") || val.url.includes("/angular-home") || val.url.includes("/home?_ga")) {
           this.isHome = true;
         }
         else if (val.url.includes("rx-web-core")) {

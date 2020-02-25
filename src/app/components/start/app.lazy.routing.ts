@@ -137,6 +137,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/rxweb-sanitizers/rxweb-sanitizers.module#RxwebSanitizersModule',
   },
   {
+    path: 'rxweb-storage',
+    loadChildren: 'src/app/components/rxweb-storage/rxweb-storage.module#RxwebStorageModule',
+  },
+  {
     path: 'coming-soon',
     component: ComingSoonComponent,
   },

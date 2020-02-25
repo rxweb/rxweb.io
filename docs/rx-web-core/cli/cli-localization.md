@@ -9,7 +9,7 @@ linktitle:localization
 # Adding Localization
 
 ## Definition
-This will add json files of the data of languages that are there in the database tables. For more information refer &lta class="redirect-link" href="/localization-and-globalization/global-content.html"&gtGlobalization and Localization&lt/a&gt
+This will add json files of the data of languages that are there in the database tables. For more information refer <a class="redirect-link" href="/localization-and-globalization/global-content.html">Globalization and Localization</a>
 
 ## Usage 
 

@@ -22,7 +22,7 @@ It is used to commit changes in the database after execution of the operation wh
 ## RollbackTransaction
 It is used to rollback the transaction before commiting the changes to the database.
 
-## SqlQueryAsync
+## StoreProc
 It is used for executing  sql queries to fetch a result from stored procedure.
 
 ## Scenario
@@ -61,10 +61,10 @@ DbContextManager.BeginTransaction();
 ````
 
 ## Step 3: 
-Insert Candidate's Availabilites using `SqlQueryAsync` by passing necessary parameters.
+Insert Candidate's Availabilites using `StoreProc` by passing necessary parameters.
 
 ````js
-var result = await DbContextManager.SqlQueryAsync&ltStoreProcResult&gt("EXEC [dbo].spInsertcandidateAvailabilities @AvailableDate,  @FromTime, @ToTime, @CandidateId", spParameters);
+var result = await DbContextManager.StoreProc&ltStoreProcResult&gt("[dbo].spInsertcandidateAvailabilities", spParameters);
 ````
 
 ## Step 4:

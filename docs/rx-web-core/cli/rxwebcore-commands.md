@@ -13,7 +13,7 @@ RxWebCore commands are used for several operation in a .NET Core such as creatin
 To use RxWebCore commands using package manager console, you must install `rxwebcore` globally using this command:
 
 `````
- dotnet install tool -g rxwebcore
+ dotnet tool install --global RxWebCore 
 `````
 
 ## CLI Commands : 

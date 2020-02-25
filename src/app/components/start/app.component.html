@@ -106,7 +106,7 @@
 
     <div class="row">
       <div class="col-sm-2 space-left-sidebar" *ngIf="!isHome">
-        <app-side-bar *ngIf="isShowSidebar"></app-side-bar>
+        <app-side-bar *ngIf="isShowSidebar && !isHome"></app-side-bar>
       </div>
 
       <!-- <div [@routerAnimation]="getRouteAnimation(route)"> -->

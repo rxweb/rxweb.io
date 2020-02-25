@@ -2022,7 +2022,45 @@
         {
             "title": "Storage",
             "uri": null,
-            "childrens": [],
+            "childrens": [{
+                
+                    "title": "Getting Started",
+                    "uri": null,
+                    "isActive": false,
+                    "linkTitle": "getting-started"
+                
+            },
+            {
+                
+                "title": "ClientDataStorage",
+                "uri": null,
+                "isActive": false,
+                "linkTitle": "clientdatastorage",
+                "childrens": [
+                    {
+                        "title": "Local Storage",
+                        "uri": "/rxweb-storage/storage/local-storage",
+                        "isActive": false,
+                        "linkTitle": "local-storage"
+                    },
+                    {
+                        "title": "Session Storage",
+                        "uri": null,
+                        "isActive": false,
+                        "linkTitle": "session-storage"
+                    }
+                ]            
+        },
+        {
+                
+            "title": "Methods",
+            "uri": null,
+            "isActive": false,
+            "linkTitle": "methods"
+        
+           
+        
+    }],
             "isActive": false
         },
         {

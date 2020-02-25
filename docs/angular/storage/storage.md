@@ -86,5 +86,5 @@ this.browserStorage.local.clearAll();
 If, you want to clear the local storage, then you can do it by:
 
 ```
-this.browserStorage.local.clearAll();
+this.browserStorage.local.remove('username');
 ```

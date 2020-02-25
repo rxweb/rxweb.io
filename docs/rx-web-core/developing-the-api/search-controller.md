@@ -56,7 +56,7 @@ public class UsersSearchController : ControllerBase
         var spParameters = new object[2];
         spParameters[0] = new SqlParameter() { ParameterName = "Query", Value = searchParams["query"] };
         spParameters[1] = new SqlParameter() { ParameterName = "UserId", Value = UserClaim.UserId };
-        var result = await DbContextManager.SqlQueryAsync&ltStoreProcResult&gt("EXEC [dbo].spSearchUsers @Query, @UserId", spParameters);
+        var result = await DbContextManager.StoreProc&ltStoreProcResult&gt("[dbo].spSearchUsers", spParameters);
         return Ok(result.SingleOrDefault()?.Result);
     }
 }
