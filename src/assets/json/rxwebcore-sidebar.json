@@ -860,7 +860,7 @@
                 },
                 {
                     "childrens": [],
-                    "title": "Installation",
+                    "title": "Database Setup",
                     "path": "installation",
                     "uri": "/rx-web-core/cli/cli-databasesetup"
                 },

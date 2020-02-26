@@ -16,7 +16,7 @@ This will add default tables, views and stored procedures in the database. For u
 ## Usage 
 
 `````
-&gt rxwebcore --database-setup
+rxwebcore --database-setup
 `````
 
 ## Parameters
