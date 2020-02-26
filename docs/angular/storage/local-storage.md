@@ -6,45 +6,43 @@ type: simple
 linktitle: localstorage
 ---
 
-# Local Storage
+<div class="title-bar-storage"><p>Local Storage.</p></div>
+
+# Brief
  
 Local storage gives you accessibility to use `ClientDataStorage` where data can be stored accross browser sessions. This data has no expiry time.  It is stored in a key and value pair. The major difference between session storage and local storage is that data stored in sessionStorage gets cleared when the page closes(when the session ends).
 
-## Storage
+# Storage
 The `browserStorage` object used after resolving `ClientDataStorage` dependency contains local through which the storage data can be stored in the variable in typescript.
 
-`````js
-  var localStorageData = this.browserStorage.local;
-`````
+First we need to create an object of ClientDataStorage.
+<div component="app-code" key="local-storage-dependency-component"></div> 
 
-## Examples
-Using local storage you can clear, get, remove, save etc 
+Next step is to assign the value of the local storage
+<div component="app-code" key="local-storage-clientstorage-component"></div> 
 
-### Get local storage data 
+
+### Examples
+While accessing local storage you can clear, get, remove, save etc 
+
+## Get local storage data 
 `get()` method is used to retrieve any information from the storage. 
 
-`````js
-this.browserStorage.local.get('language_code');
-`````
+<div component="app-code" key="local-storage-get-component"></div> 
 
-### Remove data 
+## Remove data 
 `remove()` method is used to removes the specific information identified by key from the storage.
 
-`````js
-this.browserStorage.local.remove('username');
-`````
+<div component="app-code" key="local-storage-remove-component"></div> 
 
-### Clear All Data
+## Clear All Data
 There are some scenarios where you want to intentionally clear all the browser storage. In such cases, `clearAll()` method can help you in removing everything from the storage object.
 
-`````js
-this.browserStorage.local.clearAll();
-`````
+<div component="app-code" key="local-storage-clear-component"></div> 
 
-### Save Data
+## Save Data
 `save()` method is used to store data in any of that browser storage i.e. local or session.
 
-`````js
-this.browserStorage.local.save('username', 'John');
-`````
+<div component="app-code" key="local-storage-save-component"></div> 
+
 

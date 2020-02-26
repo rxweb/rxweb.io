@@ -64,7 +64,7 @@ DbContextManager.BeginTransaction();
 Insert Candidate's Availabilites using `StoreProc` by passing necessary parameters.
 
 ````js
-var result = await DbContextManager.StoreProc<StoreProcResult>("[dbo].spInsertcandidateAvailabilities, spParameters);
+var result = await DbContextManager.StoreProc<StoreProcResult>("[dbo].spInsertcandidateAvailabilities", spParameters);
 ````
 
 ## Step 4:

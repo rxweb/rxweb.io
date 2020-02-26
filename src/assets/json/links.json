@@ -2025,7 +2025,7 @@
             "childrens": [{
                 
                     "title": "Getting Started",
-                    "uri": null,
+                    "uri": "/rxweb-storage/storage-getting-started",
                     "isActive": false,
                     "linkTitle": "getting-started"
                 
@@ -2045,22 +2045,13 @@
                     },
                     {
                         "title": "Session Storage",
-                        "uri": null,
+                        "uri": "/rxweb-storage/storage/session-storage",
                         "isActive": false,
                         "linkTitle": "session-storage"
                     }
                 ]            
-        },
-        {
-                
-            "title": "Methods",
-            "uri": null,
-            "isActive": false,
-            "linkTitle": "methods"
-        
-           
-        
-    }],
+        }
+    ],
             "isActive": false
         },
         {

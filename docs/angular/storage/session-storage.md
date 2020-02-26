@@ -1,41 +1,45 @@
 ---
 title: Session Storage
-author: rxcontributortwo
+author: rxcontributorone
 category: storage
 type: simple
 linktitle: sessionstorage
 ---
 
-# Session Storage
+<div class="title-bar-storage"><p>Session Storage.</p></div>
 
-`session` property allows you to access the `Storage` object for the `BrowserStorage` base which maintains the data stored for the duration of a single page session. If multiple windows or tabs visit the same site, they will have two different Session Storage instances even if the browser is same.
+# Brief
+ 
+Local storage gives you accessibility to use `ClientDataStorage` where data can be stored accross browser sessions. This data has no expiry time.  It is stored in a key and value pair. The major difference between session storage and local storage is that data stored in sessionStorage gets cleared when the page closes(when the session ends).
 
-> Session storage is maintained only per session. Once the user’s browser is closed, that session would be lost and the persisted data will be deleted from the browser.
+# Storage
+The `browserStorage` object used after resolving `ClientDataStorage` dependency contains local through which the storage data can be stored in the variable in typescript.
 
-# Accessing the session storage
+First we need to create an object of ClientDataStorage.
+<div component="app-code" key="session-storage-dependency-component"></div> 
 
-Session storage is available in the `session` property of  the browserStorage object which extends the `ClientDataStorage` of  `@rxweb\storage`. You just need to inject `BrowserStorage`  in your component. 
+Next step is to assign the value of the local storage
+<div component="app-code" key="session-storage-clientstorage-component"></div> 
 
-# Example
+### Examples
+While accessing session storage you can clear, get, remove, save etc 
 
-Consider a scenario where you want to display the user's name on the UI, you just have to inject the BrowserStorage object in constructor of the component and use it like 
+## Get local storage data 
+`get()` method is used to retrieve any information from the storage. 
 
-> this.browserStorage.session.get('username');
+<div component="app-code" key="session-storage-get-component"></div> 
 
-Here is a sample component code mentioned.
+## Remove data 
+`remove()` method is used to removes the specific information identified by key from the storage.
 
-```
-@Component({
-    selector: 'app-user-add',
-    template: "<span>Hello {{user}}</span>"
-})
-export class UserAddComponent implements OnInit {
+<div component="app-code" key="session-storage-remove-component"></div> 
 
-  user: string = "";
-  constructor(private browserStorage: BrowserStorage) { }
+## Clear All Data
+There are some scenarios where you want to intentionally clear all the browser storage. In such cases, `clearAll()` method can help you in removing everything from the storage object.
 
-  ngOnInit() {
-    this.user = this.browserStorage.session.get('username');
-  }
-}
-```
+<div component="app-code" key="session-storage-clear-component"></div> 
+
+## Save Data
+`save()` method is used to store data in any of that browser storage i.e. local or session.
+
+<div component="app-code" key="session-storage-save-component"></div> 

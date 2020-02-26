@@ -9,6 +9,10 @@ const STORAGE_ROUTES: Routes = [
 {
 	path:'local-storage',
 	loadChildren: './local-storage/local-storage.module#LocalStorageModule',
+},
+{
+	path:'storage-methods',
+	loadChildren: './storage-methods/storage-methods.module#StorageMethodsModule',
 }
 ];
 export const STORAGE_ROUTING: ModuleWithProviders = RouterModule.forChild(STORAGE_ROUTES);

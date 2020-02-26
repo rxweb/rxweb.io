@@ -13,11 +13,12 @@ import { CommonSharedModule } from '../shared/common/common-shared.module';
 
 import { TopBarSharedModule } from '../shared/top-bar/top-bar-shared.module';
 import { RXWEB_STORAGE_ROUTING } from './rxweb-storage.routing';
+import { StorageGettingStartedComponent } from './getting-started/getting-started.component';
 
 
 @NgModule({
   imports: [RXWEB_STORAGE_ROUTING,CommonSharedModule,TopBarSharedModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
-  declarations: [],
+  declarations: [StorageGettingStartedComponent],
   providers:[{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
  exports:      [ RouterModule ]
 })

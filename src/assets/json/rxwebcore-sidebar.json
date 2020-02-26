@@ -860,6 +860,12 @@
                 },
                 {
                     "childrens": [],
+                    "title": "Installation",
+                    "path": "installation",
+                    "uri": "/rx-web-core/cli/cli-databasesetup"
+                },
+                {
+                    "childrens": [],
                     "title": "New Project",
                     "path": "new-project",
                     "uri": "/rx-web-core/cli/dotnet-new"

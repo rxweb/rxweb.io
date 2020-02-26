@@ -1,1 +1,23 @@
-{}
+{
+    "dependency":{
+        "component":"constructor(private browserStorage: ClientDataStorage){}"
+    },
+    "clientstorage":{
+        "component":"var sessionStorageData = this.browserStorage.session;"
+    },
+    "get":{
+        "component":"this.browserStorage.session.get('username');"
+    },
+    "remove":{
+       "component": "this.browserStorage.session.remove('username');"
+    },
+    "clear":
+    {
+        "component": "this.browserStorage.session.clearAll();"
+    },
+    "save":
+    {
+        "component": "this.browserStorage.session.save('username', 'John');"
+    }
+   
+}   

@@ -7162,6 +7162,12 @@ ul.nav.nav-third-level {
     font-weight: 300;
 }
 
+.title-bar-storage p{
+    font-size: 27px;
+    color: #212529;
+    font-weight: 500;
+}
+
 .header-link {
     text-align: center;
 }
