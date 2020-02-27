@@ -1,6 +1,6 @@
 {
     "dependency":{
-        "component":"constructor(private browserStorage: ClientDataStorage){}"
+        "component":"constructor(private browserStorage: BrowserStorage){}"
     },
     "clientstorage":{
         "component":"var sessionStorageData = this.browserStorage.session;"

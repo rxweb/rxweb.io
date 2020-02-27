@@ -102,7 +102,7 @@
                         {
                             "title": "addRange",
                             "uri": "rxweb-generics/generics/list#addrange",
-                            "isActive": false,
+                            "isActive": false, 
                             "linkTitle": "list",
                             "refUri": "addrange"
                         },
@@ -2021,7 +2021,6 @@
         },
         {
             "title": "Storage",
-            "uri": null,
             "childrens": [{
                 
                     "title": "Getting Started",
