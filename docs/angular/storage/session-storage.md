@@ -43,3 +43,5 @@ There are some scenarios where you want to intentionally clear all the browser s
 `save()` method is used to store data in any of that browser storage i.e. local or session.
 
 <div component="app-code" key="session-storage-save-component"></div> 
+
+<div component="app-example-runner" ref-component="app-session-storage-complete" key="complete"></div>
