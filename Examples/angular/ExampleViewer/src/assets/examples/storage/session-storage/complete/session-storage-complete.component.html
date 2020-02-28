@@ -1,0 +1,8 @@
+<div>
+  <button class="btn btn-primary" (click)="get()"">Get</button>
+  <button class="btn btn-primary" (click)="save({userId: 1, userName: 'John'})">Save</button>
+  <button class="btn btn-primary" (click)="clearAll()">Clear All</button>
+  <button class="btn btn-primary" (click)="remove('user')"">Remove</button>
+  <h2>session Storage Data</h2>
+  {{sessionStorageData}}
+</div>
