@@ -18,6 +18,14 @@
     "save":
     {
         "component": "this.browserStorage.local.save('username', 'John');"
+    },
+    "complete": {
+        "notes": [],
+        "component": "import { Component, OnInit, Injectable } from '@angular/core';\r\nimport { BrowserStorage } from './browser-storage';\r\n\r\n@Component({\r\n  selector: 'app-localstorage-complete',\r\n  templateUrl: './localstorage-complete.component.html'\r\n})\r\nexport class LocalstorageCompleteComponent implements OnInit {\r\n\r\n  userName: string = \"John\";\r\n  localStorageData: any;\r\n\r\n  constructor(private browserStorage: BrowserStorage) {}\r\n  \r\n  ngOnInit() {\r\n    this.browserStorage.local.save('userName', \"John\");\r\n    this.browserStorage.local.get('userName')\r\n  }\r\n\r\n  get() {\r\n    debugger\r\n    this.localStorageData = this.browserStorage.local.get('userName');\r\n  }\r\n\r\n  save() {\r\n    this.browserStorage.local.save('userName', \"Robert\");\r\n    this.localStorageData = this.browserStorage.local.get('userName');\r\n  }\r\n\r\n  clearAll() {\r\n    this.browserStorage.local.clearAll();\r\n    this.localStorageData = this.browserStorage.local.get('userName');\r\n  }\r\n\r\n  remove() {\r\n    this.browserStorage.local.remove('userName');\r\n    this.browserStorage.local.get('userName');\r\n  }\r\n\r\n}\r\n",
+        "html": "<div>\r\n  <button class=\"btn btn-primary mr-2\" (click)=get()>Get</button>\r\n  <button class=\"btn btn-primary mr-2\" (click)=\"save()\">Save</button>\r\n  <button class=\"btn btn-primary mr-2\" (click)=\"clearAll()\">Clear All</button>\r\n  <button class=\"btn btn-primary\" (click)=\"remove()\">Remove</button>\r\n  <h2>local Storage Data</h2>\r\n  <div *ngIf=\"localStorageData != null\">username => {{localStorageData}}</div>\r\n  <div *ngIf=\"localStorageData == null\">No data to display</div>\r\n</div>",
+        "model": "import { ClientDataStorage } from '@rxweb/storage';\r\nimport { Injectable } from '@angular/core';\r\n\r\n@Injectable({\r\n  providedIn: 'root',\r\n})\r\nexport class BrowserStorage extends ClientDataStorage {\r\n\r\n}\r\n",
+        "modelName": "browser-storage.ts",
+        "json": {}
     }
    
 }   

@@ -18,6 +18,13 @@
     "save":
     {
         "component": "this.browserStorage.session.save('username', 'John');"
+    },  
+    "complete": {
+        "notes": [],
+        "component": "import { Component, OnInit, Injectable } from '@angular/core';\r\nimport { BrowserStorage } from './browser-storage';\r\n\r\n\r\n@Component({\r\n  selector: 'app-sessionstorage-complete',\r\n  templateUrl: './sessionstorage-complete.component.html'\r\n})\r\nexport class SessionstorageCompleteComponent implements OnInit {\r\n\r\n  userName: string = \"John\";\r\n  sessionStorageData: any;\r\n\r\n  constructor(private browserStorage: BrowserStorage) {\r\n\r\n  }\r\n  \r\n  ngOnInit() {\r\n    this.browserStorage.session.save('userName', this.userName);\r\n    this.browserStorage.session.get('userName')\r\n  }\r\n\r\n  get() {\r\n    this.sessionStorageData = this.browserStorage.session.get('userName');\r\n  }\r\n\r\n  save() {\r\n    this.browserStorage.session.save('userName', \"Robert\");\r\n    this.sessionStorageData = this.browserStorage.session.get('userName');\r\n  }\r\n\r\n  clearAll() {\r\n    this.browserStorage.session.clearAll();\r\n    this.sessionStorageData = this.browserStorage.session.get('userName');\r\n  }\r\n\r\n  remove() {\r\n    this.sessionStorageData = this.browserStorage.session.remove('userName');\r\n  }\r\n\r\n}\r\n",
+        "html": "<div>\r\n  <button class=\"btn btn-primary mr-2\" (click)=get()>Get</button>\r\n  <button class=\"btn btn-primary mr-2\" (click)=\"save()\">Save</button>\r\n  <button class=\"btn btn-primary mr-2\" (click)=\"clearAll()\">Clear All</button>\r\n  <button class=\"btn btn-primary\" (click)=\"remove()\">Remove</button>\r\n  <h2>session Storage Data</h2>\r\n    <div *ngIf=\"sessionStorageData != null\">username => {{sessionStorageData}}</div>\r\n    <div *ngIf=\"sessionStorageData == null\">No data to display</div>\r\n</div>",
+        "model": "import { ClientDataStorage } from '@rxweb/storage';\r\nimport { Injectable } from '@angular/core';\r\n\r\n@Injectable({\r\n  providedIn: 'root',\r\n})\r\nexport class BrowserStorage extends ClientDataStorage {\r\n\r\n}\r\n",
+        "modelName": "browser-storage.ts",
+        "json": {}
     }
-   
 }   

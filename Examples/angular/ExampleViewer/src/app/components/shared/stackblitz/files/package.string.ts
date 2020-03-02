@@ -17,6 +17,7 @@ export const PACKAGE:string = `{
     "@rxweb/generics":"0.0.1-4",
     "@rxweb/sanitizers":"0.0.1-1",
     "@rxweb/http":"0.0.0-5",
+    "@rxweb/storage":"0.0.1",
     "rxjs": "^6.3.3",
     "zone.js": "^0.8.26"
   },

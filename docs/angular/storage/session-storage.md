@@ -44,4 +44,4 @@ There are some scenarios where you want to intentionally clear all the browser s
 
 <div component="app-code" key="session-storage-save-component"></div> 
 
-<div component="app-example-runner" ref-component="app-localstorage-complete"></div>
+<div component="app-example-runner" ref-component="app-sessionstorage-complete"></div>

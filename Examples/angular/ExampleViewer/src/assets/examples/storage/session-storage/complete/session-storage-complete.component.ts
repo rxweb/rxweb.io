@@ -3,7 +3,7 @@ import { BrowserStorage } from '../../browser-storage';
 
 
 @Component({
-  selector: 'app-localstorage-complete',
+  selector: 'app-sessionstorage-complete',
   templateUrl: './session-storage-complete.component.html'
 })
 export class SessionStorageCompleteComponent implements OnInit {
@@ -31,11 +31,11 @@ export class SessionStorageCompleteComponent implements OnInit {
 
   clearAll() {
     this.browserStorage.session.clearAll();
-    this.browserStorage.session.get('userName');
+    this.sessionStorageData = this.browserStorage.session.get('userName');
   }
 
   remove() {
-    this.browserStorage.session.remove('userName');
+    this.sessionStorageData = this.browserStorage.session.remove('userName');
   }
 
 }
