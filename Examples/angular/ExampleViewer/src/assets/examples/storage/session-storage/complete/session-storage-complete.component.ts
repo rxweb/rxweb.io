@@ -3,7 +3,7 @@ import { BrowserStorage } from '../../browser-storage';
 
 
 @Component({
-  selector: 'app-session-storage-complete',
+  selector: 'app-localstorage-complete',
   templateUrl: './session-storage-complete.component.html'
 })
 export class SessionStorageCompleteComponent implements OnInit {
@@ -12,12 +12,12 @@ export class SessionStorageCompleteComponent implements OnInit {
   sessionStorageData: any;
 
   constructor(private browserStorage: BrowserStorage) {
-    this.browserStorage.session.save('user', this.userName);
-    this.browserStorage.session.get('userName')
+
   }
   
   ngOnInit() {
-    this.sessionStorageData = this.browserStorage.session.get('userName');
+    this.browserStorage.session.save('userName', this.userName);
+    this.browserStorage.session.get('userName')
   }
 
   get() {
@@ -25,8 +25,8 @@ export class SessionStorageCompleteComponent implements OnInit {
   }
 
   save() {
-    this.browserStorage.session.save('userName', "Robert", false);
-    this.browserStorage.session.get('userName');
+    this.browserStorage.session.save('userName', "Robert");
+    this.sessionStorageData = this.browserStorage.session.get('userName');
   }
 
   clearAll() {

@@ -2,7 +2,7 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { BrowserStorage } from '../../browser-storage';
 
 @Component({
-  selector: 'app-local-storage-complete',
+  selector: 'app-localstorage-complete',
   templateUrl: './local-storage-complete.component.html'
 })
 export class LocalStorageCompleteComponent implements OnInit {
@@ -13,22 +13,23 @@ export class LocalStorageCompleteComponent implements OnInit {
   constructor(private browserStorage: BrowserStorage) {}
   
   ngOnInit() {
-    this.browserStorage.local.save('userName', "John", false);
+    this.browserStorage.local.save('userName', "John");
     this.browserStorage.local.get('userName')
   }
 
   get() {
+    debugger
     this.localStorageData = this.browserStorage.local.get('userName');
   }
 
   save() {
-    this.browserStorage.local.save('userName', "Robert", false);
-    this.browserStorage.local.get('userName');
+    this.browserStorage.local.save('userName', "Robert");
+    this.localStorageData = this.browserStorage.local.get('userName');
   }
 
   clearAll() {
     this.browserStorage.local.clearAll();
-    this.browserStorage.local.get('userName');
+    this.localStorageData = this.browserStorage.local.get('userName');
   }
 
   remove() {

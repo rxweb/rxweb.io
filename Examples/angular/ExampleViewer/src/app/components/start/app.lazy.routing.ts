@@ -93,6 +93,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: () => import('src/app/components/rxweb-sanitizers/rxweb-sanitizers.module').then(m => m.RxwebSanitizersModule),
   },
   {
+    path: 'rxweb-storage',
+    loadChildren: () => import('src/app/components/rxweb-storage/rxweb-storage.module').then(m => m.RxwebStorageModule),
+  },
+  {
     path: '**', 
     redirectTo:'home',
     pathMatch: 'full'

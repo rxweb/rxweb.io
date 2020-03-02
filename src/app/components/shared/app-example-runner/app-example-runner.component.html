@@ -1,30 +1,34 @@
 <div>
-    <a class="float-right file-icon" *ngIf="isRunCode  && clientSideValidationType =='angular' && !showTab"  (click)="openStackblitz()"><i aria-hidden="true" class="fa fa-external-link"></i></a>
+    <a class="float-right file-icon" *ngIf="isRunCode  && clientSideValidationType =='angular' && !showTab"
+        (click)="openStackblitz()"><i aria-hidden="true" class="fa fa-external-link"></i></a>
     <div class="model-ts combined">
-        <a class="float-right file-icon" *ngIf="isRunCode  && clientSideValidationType =='angular' && showTab"  (click)="openStackblitz()"><i aria-hidden="true" class="fa fa-external-link"></i></a>
-       
+        <a class="float-right file-icon" *ngIf="isRunCode  && clientSideValidationType =='angular' && showTab"
+            (click)="openStackblitz()"><i aria-hidden="true" class="fa fa-external-link"></i></a>
+
         <!-- <a class="float-right file-icon" *ngIf="isRunCode  && clientSideValidationType=='vue'"  (click)="openSandbox()"><i aria-hidden="true" class="fa fa-external-link"></i></a> -->
-    
-        <a class="float-right file-icon" *ngIf="tabArray.length > 0" (click)="showElement = !showElement"><i aria-hidden="true" class="fa fa-code"></i></a>
+
+        <a class="float-right file-icon" *ngIf="tabArray.length > 0" (click)="showElement = !showElement"><i
+                aria-hidden="true" class="fa fa-code"></i></a>
         <div class="code-example-title" *ngIf='title && isRunCode'>
             {{title}}
         </div>
         <div *ngIf="showElement" class="showHideExample">
             <ul class="nav nav-tabs">
-                <li *ngFor="let tab of tabArray" [class.active]="activeTab == tab.tabName" (click)="activeTab  = tab.tabName"><a>{{tab.tabName}}</a></li>
+                <li *ngFor="let tab of tabArray" [class.active]="activeTab == tab.tabName"
+                    (click)="activeTab  = tab.tabName"><a>{{tab.tabName}}</a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane" *ngFor="let tab of tabArray" [class.active]="activeTab == tab.tabName">
-                    <app-code  [content]="tab.content"></app-code>
+                    <app-code [content]="tab.content"></app-code>
                 </div>
             </div>
-            <hr/>
+            <hr />
         </div>
-        <div >
+        <div>
             <!-- <div (click)="runCodeExample(exampleName)" class="code_play_box"><img class="play ng-star-inserted" height="100" id="play" src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Windows_Media_Player_alt.png">Run The Code
                 </div> -->
-    </div>
-        <iframe  [height]="exampleHeight" [src]="exampleUrl" style="width:100%;border:none;"></iframe>
+        </div>
+        <iframe [height]="exampleHeight" [src]="exampleUrl" style="width:100%;border:none;"></iframe>
 
         <!-- <div class="code-example">
             <a class="float-right file-icon" *ngIf="tabArray.length == 0" (click)="openStackblitz()"><i aria-hidden="true" class="fa fa-external-link"></i></a>
