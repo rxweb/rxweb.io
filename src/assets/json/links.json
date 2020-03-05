@@ -67,8 +67,36 @@
         },
         {
             "title": "Routes",
-            "uri": null,
-            "childrens": [],
+            "childrens": [{
+                "title":"Getting Started",
+                "uri":"/rxweb-router/router-getting-started"
+            },{
+
+            "title":"Decorators",
+            "childrens": [
+                {
+                    "title": "routerModule",
+                    "uri": "/rxweb-router/router/router-module",
+                    "isActive": false
+                },
+                {
+                    "title": "access",
+                    "uri": "/rxweb-router/router/access",
+                    "isActive": false
+                },
+                {
+                    "title": "anonymous",
+                    "uri": "/rxweb-router/router/anonymous",
+                    "isActive": false
+                },
+                {
+                    "title": "middleware",
+                    "uri": "/rxweb-router/router/middleware",
+                    "isActive": false
+                }                        
+            ]
+            }
+         ],
             "isActive": false
         },
         {
@@ -2055,9 +2083,17 @@
         },
         {
             "title": "Localization",
-            "uri": null,
-            "childrens": [],
-            "isActive": false
+           
+            "childrens": [
+                {
+                    "title": "Quick Start",
+                    "uri": "rxweb-localization/localization/local-quick-start",
+                    "isActive": false,
+                    "linkTitle": "local-storage"
+                }
+            ]  ,
+            "isActive": false   
+           
         }
     ]
 }

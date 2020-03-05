@@ -69,8 +69,6 @@ export class AppExampleRunnerComponent implements OnInit {
       if (JSON.stringify(this.content.json) !== JSON.stringify({})) {
         var jsonObject = this.content.json;
         if (jsonObject) {
-
-
           for (var prop in jsonObject) {
             if (jsonObject.hasOwnProperty(prop) && this.decoratorName != "get") {
               this.tabArray.push({ "tabName": prop, "tabItem": prop, "content": jsonObject[prop] })
@@ -107,7 +105,7 @@ export class AppExampleRunnerComponent implements OnInit {
        else if(this.router.url.includes("?"))
         codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("?")[0] + "?exampleName=" + this.exampleName;
       else
-        codeUrl = "http://localhost:9999/" + this.router.url + "?exampleName=" + this.exampleName;
+        codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=" + this.exampleName;
  
      this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
       this.isRunCode = true; 

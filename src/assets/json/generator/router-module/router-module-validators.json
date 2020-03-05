@@ -1,0 +1,26 @@
+{"complete": {
+   
+    "component": "@routerModule({\r\n    authentication: AuthResolver,\r\n    authorization: AuthorizationResolver,\r\n    middlewares: [GlobalMultilingualContentResolver, ComponentMultilingualContentResolver],\r\n    urlEncryption:true\r\n})"
+  
+},
+"authentication": {
+   
+    "component": "import { Injectable } from '@angular\/core';\r\nimport { IAuthResolver } from '@rxweb\/angular-router'\r\n\r\n@Injectable({\r\n    providedIn: 'root',\r\n})\r\nexport class AuthResolver implements IAuthResolver {\r\n\r\n    resolveAuth(): Promise<{ [key: string]: any; }> | { [key: string]: any; } {\r\n        var promise = new Promise<{ [key: string]: any; }>((resolve, reject) => {\r\n            resolve(undefined)\r\n        })\r\n        return promise;\r\n    }\r\n}"
+  
+},
+"authorize": {
+   
+    "component": "import { Injectable } from '@angular\/core';\r\nimport { IAuthorize, AuthorizeConfig } from '@rxweb\/angular-router';\r\nimport { Router, ActivatedRouteSnapshot } from '@angular\/router';\r\n\r\n@Injectable({\r\n    providedIn: 'root',\r\n})\r\nexport class AuthorizationResolver implements IAuthorize {\r\n\r\n    constructor(private router: Router) { }\r\n\r\n    authorize(authorizeConfig: AuthorizeConfig, route: ActivatedRouteSnapshot): Promise<boolean> | boolean {\r\n        var promise = new Promise<boolean>((resolve, reject) => {\r\n            var t = this;\r\n            console.log(\"call authorization\");\r\n            resolve(true);\r\n        })\r\n        return promise;\r\n    }\r\n\r\n    authorizeChildren(authorizeConfig: AuthorizeConfig, pageAuthorizeConfig: AuthorizeConfig) {\r\n        return false;\r\n    }\r\n}\r\n"
+  
+},
+"middlewares": {
+   
+    "component": " middlewares: [GlobalMultilingualContentResolver, ComponentMultilingualContentResolver],"
+  
+},
+"url": {
+   
+    "component": "urlEncryption:true"
+  
+}
+}

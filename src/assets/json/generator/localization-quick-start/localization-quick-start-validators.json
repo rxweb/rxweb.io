@@ -1,0 +1,26 @@
+{"complete": {
+   
+    "component": "import { routerModule, IMultilingual } from '@rxweb\/angular-router';\r\nimport { NgModule } from '@angular\/core';\r\n\r\n\r\nimport { ComponentMultilingualContentResolver } from '.\/domain\/localization\/component-multilingual-content.resolver';\r\nimport { GlobalMultilingualContentResolver } from '.\/domain\/localization\/global-multilingual-content.resolver';\r\n\r\nimport { AuthorizationResolver } from '.\/domain\/security\/authorization-resolver';\r\nimport { AuthResolver } from '.\/domain\/security\/authentication-resolver';\r\n\r\n\r\n@routerModule({\r\n  authentication: AuthResolver,\r\n  authorization: AuthorizationResolver,\r\n  middlewares: [GlobalMultilingualContentResolver, ComponentMultilingualContentResolver],\r\n  urlEncryption: false,\r\n  childMultilingualResolver: ComponentMultilingualContentResolver,\r\n})\r\n@NgModule({\r\n  declarations: [\r\n  ],\r\n  imports: [\r\n  ],\r\n  providers: [],\r\n})\r\nexport class RxWebModule {\r\n\r\n}"
+  
+},
+"base": {
+   
+    "component": "import { IMultilingual, IMiddleware, } from \"@rxweb\/angular-router\"\r\nimport { RxHttp } from \"@rxweb\/http\"\r\nimport { MultiLingualData } from \"@rxweb\/localization\"\r\nimport { BrowserStorage } from '..\/services\/browser-storage';\r\nimport { ActivatedRouteSnapshot } from '@angular\/router';\r\nimport { CLIENT_URL } from '..\/system-constant';\r\n\r\nconst STORAGE_KEY: string = \"language\";\r\nconst LANGUAGE_CODE: string = \"en\";\r\n\r\nexport abstract class BaseMultilingualContentResolver extends RxHttp implements IMiddleware, IMultilingual {\r\n\r\n  resolve(name: string): boolean | Promise<boolean> {\r\n    throw new Error(\"Method not implemented.\");\r\n  }\r\n\r\n  private getName(component: Function) {\r\n    return MultiLingualData.getName(component)\r\n  }\r\n  resolveChildren(component: Function): boolean | Promise<boolean> {\r\n    debugger\r\n    let name = this.getName(component);\r\n    return this.resolveData(name);\r\n  }\r\n\r\n  constructor(private browserStorage: BrowserStorage, private isGlobal: boolean = false) { super() }\r\n\r\n  invoke(user: { [key: string]: any; }, activatedRouteSnapshot: ActivatedRouteSnapshot): boolean | Promise<boolean> {\r\n    let name = this.isGlobal ? 'global' : this.getName(activatedRouteSnapshot.component as Function);\r\n    return this.resolveData(name);\r\n\r\n  }\r\n\r\n  resolveData(name: string) {\r\n    if (name && !MultiLingualData.contains(name)) {\r\n      var promise = new Promise<boolean>((resolve, reject) => {\r\n        var language = this.browserStorage.local.get(STORAGE_KEY) || LANGUAGE_CODE;\r\n        this.get({ hostUri: CLIENT_URL, path: `assets\/localization\/${name}-${language}.json` }).subscribe(t => {\r\n          MultiLingualData.addOrUpdate(name, t);\r\n          resolve(true);\r\n        }, x => {\r\n          resolve(true)\r\n        })\r\n      })\r\n      return promise;\r\n    }\r\n    else\r\n      return true;\r\n  }\r\n}\r\n"
+  
+},
+"global": {
+   
+    "component": "import { Injectable } from '@angular\/core';\r\nimport { BaseMultilingualContentResolver } from '.\/base-multilingual-content.resolver';\r\nimport { BrowserStorage } from '..\/services\/browser-storage';\r\n\r\n@Injectable({\r\n    providedIn: 'root',\r\n})\r\nexport class ComponentMultilingualContentResolver extends BaseMultilingualContentResolver {\r\n    constructor(browserStorage: BrowserStorage) { super(browserStorage)}\r\n}\r\n"
+  
+},
+"componentspecific": {
+   
+    "component": "import { Injectable } from '@angular\/core';\r\nimport { BaseMultilingualContentResolver } from '.\/base-multilingual-content.resolver';\r\nimport { BrowserStorage } from '..\/services\/browser-storage';\r\n\r\n@Injectable({\r\n    providedIn: 'root',\r\n})\r\nexport class GlobalMultilingualContentResolver extends BaseMultilingualContentResolver {\r\n    constructor(browserStorage: BrowserStorage) {\r\n        super(browserStorage, true);\r\n    }\r\n}\r\n"
+  
+},
+"multilingual": {
+   
+    "component": "@multilingual(\"loginComponent\")\r\n@Component({\r\n    templateUrl: '.\/login.component.html',\r\n})\r\nexport class LoginComponent  implements OnInit {\r\n\r\n ngOnInit(): void {\r\n       \r\n    }\r\n\t\r\n}"
+  
+}
+}

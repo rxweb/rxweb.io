@@ -89,6 +89,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/rxweb-http/rxweb-http.module#RxwebHttpModule',
   },
   {
+    path: 'rxweb-localization',
+    loadChildren: 'src/app/components/rxweb-localization/rxweb-localization.module#RxwebLocalizationModule',
+  },
+  {
     path: 'decorators',
     loadChildren: 'src/app/components/decorators/decorators.module#DecoratorsModule',
   },
@@ -131,6 +135,10 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'rxweb-generics',
     loadChildren: 'src/app/components/rxweb-generics/rxweb-generics.module#RxwebGenericsModule',
+  },
+  {
+    path: 'rxweb-router',
+    loadChildren: 'src/app/components/rxweb-router/rxweb-router.module#RxwebRouterModule',
   },
   {
     path: 'rxweb-sanitizers',
