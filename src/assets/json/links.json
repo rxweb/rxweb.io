@@ -2087,7 +2087,7 @@
             "childrens": [
                 {
                     "title": "Quick Start",
-                    "uri": "rxweb-localization/localization/local-quick-start",
+                    "uri": "/rxweb-localization/localization/localization-quick-start",
                     "isActive": false,
                     "linkTitle": "local-storage"
                 }
