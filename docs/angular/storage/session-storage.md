@@ -24,6 +24,11 @@ Next step is to assign the value of the local storage
 ### Examples
 While accessing session storage you can clear, get, remove, save etc 
 
+## Save Data
+`save()` method is used to store data in any of that browser storage i.e. local or session.
+
+<div component="app-code" key="session-storage-save-component"></div> 
+
 ## Get local storage data 
 `get()` method is used to retrieve any information from the storage. 
 
@@ -39,9 +44,5 @@ There are some scenarios where you want to intentionally clear all the browser s
 
 <div component="app-code" key="session-storage-clear-component"></div> 
 
-## Save Data
-`save()` method is used to store data in any of that browser storage i.e. local or session.
-
-<div component="app-code" key="session-storage-save-component"></div> 
 
 <div component="app-example-runner" ref-component="app-sessionstorage-complete"></div>

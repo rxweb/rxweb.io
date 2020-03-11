@@ -6,6 +6,17 @@ type: simple
 linktitle: access
 ---
 
+# anonymous
+
+Authenticated APIs need an authentication token for accessing the api in the web application but some API need an authentication by pass. For example : Login.
+For such Api we need `@anonymous` decorator in the component  
+
+<div component="app-code" key="anonymous-complete-model"></div> 
+
+The second step is to pass the `@anonymous` decorator into the component as below 
+
+<div component="app-code" key="anonymous-complete-component"></div> 
+
 # access
 
 While performing role based authorization, It becomes important to maintain it on the client side as well. `@access` is used for managing the access based upon the role which is used for adjudging the role access based upon the application module and action.

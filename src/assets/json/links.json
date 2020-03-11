@@ -67,36 +67,25 @@
         },
         {
             "title": "Routes",
-            "childrens": [{
-                "title":"Getting Started",
-                "uri":"/rxweb-router/router-getting-started"
-            },{
-
-            "title":"Decorators",
             "childrens": [
+                {
+                    "title": "Getting Started",
+                    "uri": "/rxweb-router/router-getting-started"
+                },
                 {
                     "title": "routerModule",
                     "uri": "/rxweb-router/router/router-module",
                     "isActive": false
                 },
                 {
-                    "title": "access",
-                    "uri": "/rxweb-router/router/access",
-                    "isActive": false
+                    "title": "Authorization Resolver",
+                    "uri": "/rxweb-router/router/access"
                 },
                 {
-                    "title": "anonymous",
-                    "uri": "/rxweb-router/router/anonymous",
-                    "isActive": false
-                },
-                {
-                    "title": "middleware",
-                    "uri": "/rxweb-router/router/middleware",
-                    "isActive": false
-                }                        
-            ]
-            }
-         ],
+                    "title": "Middleware",
+                    "uri": "/rxweb-router/router/middleware"
+                }                         
+            ],
             "isActive": false
         },
         {
@@ -130,7 +119,7 @@
                         {
                             "title": "addRange",
                             "uri": "rxweb-generics/generics/list#addrange",
-                            "isActive": false, 
+                            "isActive": false,
                             "linkTitle": "list",
                             "refUri": "addrange"
                         },
@@ -2049,41 +2038,30 @@
         },
         {
             "title": "Storage",
-            "childrens": [{
-                
+            "childrens": [
+                {
                     "title": "Getting Started",
                     "uri": "/rxweb-storage/storage-getting-started",
                     "isActive": false,
                     "linkTitle": "getting-started"
-                
-            },
-            {
-                
-                "title": "ClientDataStorage",
-                "uri": null,
-                "isActive": false,
-                "linkTitle": "clientdatastorage",
-                "childrens": [
-                    {
-                        "title": "Local Storage",
-                        "uri": "/rxweb-storage/storage/local-storage",
-                        "isActive": false,
-                        "linkTitle": "local-storage"
-                    },
-                    {
-                        "title": "Session Storage",
-                        "uri": "/rxweb-storage/storage/session-storage",
-                        "isActive": false,
-                        "linkTitle": "session-storage"
-                    }
-                ]            
-        }
-    ],
+                },
+                {
+                    "title": "Local Storage",
+                    "uri": "/rxweb-storage/storage/local-storage",
+                    "isActive": false,
+                    "linkTitle": "local-storage"
+                },
+                {
+                    "title": "Session Storage",
+                    "uri": "/rxweb-storage/storage/session-storage",
+                    "isActive": false,
+                    "linkTitle": "session-storage"
+                }
+            ],
             "isActive": false
         },
         {
             "title": "Localization",
-           
             "childrens": [
                 {
                     "title": "Quick Start",
@@ -2091,9 +2069,8 @@
                     "isActive": false,
                     "linkTitle": "local-storage"
                 }
-            ]  ,
-            "isActive": false   
-           
+            ],
+            "isActive": false
         }
     ]
 }
