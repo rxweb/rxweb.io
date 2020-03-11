@@ -37,36 +37,80 @@
                                     </div>
                                 </div>
 
-                                <div class="row page-section" id="installpackage">
+                                <div class="row page-section" id="rxwebmodule">
                                     <div class="col-lg-12">
-                                     
-                                        <div class="col-lg-3">
-                                            <div class="card">
-                                                <a class="card-body text-center"
-                                                    routerLink="/rxweb-router/router/router-module"
-                                                    >routerModule</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="card">
-                                                <a class="card-body text-center"
-                                                    routerLink="/rxweb-router/router/access"
-                                                    >Authorization Resolver</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="card">
-                                                <a class="card-body text-center"
-                                                    routerLink="/rxweb-router/router/middleware"
-                                                    >Middleware</a>
-                                            </div>
-                                        </div>
-                                       
+                                   
+                                        <h2>Creating RxWebModule<a title="Link to this heading" class="link-header"><i
+                                                    class="fa fa-link"></i></a></h2>
+                                                    <p>For using multiple configurations and using the services of the router package, you first need to create `RxWebModule` and create <span class="highlighted">@routerModule</span> 
+                                        
+                                                    </p>
+                                                    <p>
+                                                        It is used to configure router configuration properties throughout the application which can be used for the following functionalities. 
+                                                       </p>
+                                                       <ol class="bullet-list-ordered">
+                                                        <li><a class="redirect-link" routerLink="/rxweb-router/router/router-module" fragment="authentication">Authentication</a> for resolving the authentication details from the server.
+                                                     
+                                                        </li>
+                                                        <li>For resolving the access from the server for a particular user
+                                                            <a class="redirect-link" routerLink="/rxweb-router/router/router-module" fragment="authorization">Authorization</a>
+                                                     
+                                                        </li>
+                                                        <li>For performing any action at the time of request calling 
+                                                            <a class="redirect-link" routerLink="/rxweb-router/router/middleware">Middleware</a>
+                                                     
+                                                        </li>
+                                                        <li>
+                                                            <a class="redirect-link" routerLink="/rxweb-router/router/router-module" fragment="urlencryption">Url Encryption </a>
+                                                           for encrypting the url.
+                                                        </li>
+                                                    </ol>
+                                                    <h2>The created RxWebModule is as below, register it into the app module as an import.</h2>
+                                                    <div class="model-ts">
+                                                        <div class="code">
+                                                            <a class="float-right copy-icon" ngxClipboard
+                                                                [cbContent]="codeContent.RxWebModule"
+                                                                (cbOnSuccess)="RxWebModuleCopied = true"
+                                                                [class.copied]="RxWebModuleCopied"><i class="fa fa-files-o"
+                                                                    aria-hidden="true"></i></a>
+                                                            <div highlight="pre code">
+                                                                <pre><code [textContent]="codeContent.RxWebModule"></code></pre>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                  
+                                                                        
                                     </div>
-
-                                  
-                                </div> 
-
+                                </div>
+                                <div class="row page-section" id="rxwebmodule">
+                                    <div class="col-lg-12">
+                                   
+                                        <h2>BaseCanActivate<a title="Link to this heading" class="link-header"><i
+                                                    class="fa fa-link"></i></a></h2>
+                                                    
+                                                    <p>
+                                                      To route the configured services at the time of navigation use the <span class="highlighted">BaseCanActivate</span>. 
+                                                       </p>
+                                                      
+                                                    <h2>Example of route using BaseCanActivate
+                                                    
+                                                    </h2>
+                                                    <div class="model-ts">
+                                                        <div class="code">
+                                                            <a class="float-right copy-icon" ngxClipboard
+                                                                [cbContent]="codeContent.canActivate"
+                                                                (cbOnSuccess)="canActivateCopied = true"
+                                                                [class.copied]="canActivateCopied"><i class="fa fa-files-o"
+                                                                    aria-hidden="true"></i></a>
+                                                            <div highlight="pre code">
+                                                                <pre><code [textContent]="codeContent.canActivate"></code></pre>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                  
+                                                                        
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
