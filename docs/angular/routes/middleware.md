@@ -12,7 +12,7 @@ Here in this class, the global multilingual data is used for resolving the globa
 
 <div component="app-code" key="middleware-router-component"></div> 
 
-# @middleware
+# middleware
 Using @middleware helps yoy to add middleware at the component level. Here is an example of using login middleware for the login component which  
 gets the anonymous web token generated. 
 
