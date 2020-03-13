@@ -1,7 +1,7 @@
 <div id="wrapper" *ngIf="showComponent">
     <div class="content">
         <div class="title-bar">
-            <p>It is used to manage navigation in single page applications along with determining access, authne managing
+            <p>It is used to manage navigation in single page applications along with determining user's access, resolving authentication, using
                 middleware.</p>
         </div>
 
@@ -40,15 +40,19 @@
 
                                         <h2>Creating RxWebModule<a title="Link to this heading" class="link-header"><i
                                                     class="fa fa-link"></i></a></h2>
-                                        <p>For using multiple configurations and using the services of the router
-                                            package, you first need to create `RxWebModule` and create <span
+                                        <p>RxWebModule is made for using multiple configurations and using the services of the router
+                                            package which resolves all the necessary information of the user from the server which is useful after navigating done which the help of router.  
+                                             you first need to create <span class="highlighted">RxWebModule</span> and create <span
                                                 class="highlighted">@routerModule</span>
 
                                         </p>
                                         <p>
-                                            It is used to configure router configuration properties throughout the
-                                            application which can be used for the following functionalities.
+                                            The router configuration properties throughout the
+                                            application which can be used for the functionalities as listed below.
                                         </p>
+                                        <blockquote>
+                                            <p>After creation of RxWebModule, it needs to be imported in app module</p>
+                                        </blockquote>
                                         <ol class="bullet-list-ordered">
                                             <li><a class="redirect-link" routerLink="/rxweb-router/router/router-module"
                                                     fragment="authentication">Authentication</a> for resolving the
@@ -71,8 +75,7 @@
                                                 for encrypting the url.
                                             </li>
                                         </ol>
-                                        <h2>The RxWebModule file is as below, register it into the app module as an
-                                            import.</h2>
+                                       
                                         <div class="model-ts">
                                             <div class="code">
                                                 <a class="float-right copy-icon" ngxClipboard
@@ -85,7 +88,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                       <p>The above code is of rxweb.module.ts from which RxWebModule is imported in the app module.</p>
 
                                     </div>
                                 </div>
@@ -96,8 +99,11 @@
                                                     class="fa fa-link"></i></a></h2>
 
                                         <p>
-                                            To route the configured services at the time of navigation use the <span
-                                                class="highlighted">BaseCanActivate</span>.
+                                            Routing enables you to navigate the path from one route to another. For more information about routing, visit <a target="_blank" class="redirect-link" href="https://angular.io/api/router/Router">Angular Routing</a> 
+                                            While declaring routes, we provide the path and the component name to the respective component name  
+                                            To route the configured services at the time of navigation use the <span class="highlighted">BaseCanActivate</span>. 
+                                            It will allow to use the @routerModule services while writting any custom code or adding any complex logic. 
+                                           
                                         </p>
 
                                         <h2>Example of route using BaseCanActivate

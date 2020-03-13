@@ -16,14 +16,14 @@ Rxweb module has the necessary imports and declarations such as `@routerModule` 
 
 <div component="app-code" key="localization-complete-component"></div> 
 
-## Adding basemultinguial, global and component data
+## Adding base multilingual, global and component data
 The BaseMultilingualContentResolver resolves the data of the global multilingual data and component multilingual data resolves component specific data. 
 
 # BaseMultilingualContentResolver
 <div component="app-code" key="localization-base-component"></div> 
-
+ 
 # GlobalMultilingualContentResolver
-Resolves global multilingual Data
+Resolves global multilingual Data 
 
 <div component="app-code" key="localization-global-component"></div> 
 

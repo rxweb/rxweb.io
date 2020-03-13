@@ -30,6 +30,8 @@ Lets consider a scenario where you want to create a `UsersController` with high 
 
 In the above command by writing --domain indicates its complexity high, Users is the controller name and User is the Module name. It will create a controller `UsersController` in `UsersModule` in Api folder of the project and `UsersDomain.cs` in the Domain folder of the project.
 
+In this controller, the password and salt fields value are inserted using the `Encrypt` method of `IPasswordHash`. The below domain file contains the business logic of inserting and updating a user having password and salt in encrypted form in the database. 
+
 ## Methods   
 
 <table class="table table-bordered">
@@ -56,60 +58,90 @@ In the above command by writing --domain indicates its complexity high, Users is
 
 The refered `IUserDomain` interface will be created  in  `UsersDomain.cs` in the Domain folder of the project where the business logic code will use methods of `Uow`.
 
+> Type conversion of the password field will be managed by created a partial class of the user having a userPassword field of string data type having `[NotMapped]` annotation as below
+
 ````js
-    public class UsersDomain : IUsersDomain
+ public partial class User
+    {        
+        [NotMapped]
+        public string UserPassword { get; set; }
+    }
+````
+
+````js
+    public class UserDomain : IUserDomain
     {
-        public UsersDomain(IUserUow uow) {
+        private IPasswordHash PasswordHash { get; set; }
+        public UserDomain(ILoginUow uow,IPasswordHash passwordHash) {
             this.Uow = uow;
+            this.passwordHash = passwordHash;
         }
 
-        public Task&ltobject&gt GetAsync(Dictionary&ltstring, object&gt parameters)
+        public Task<object> GetAsync(User user)
         {
-            throw new NotImplementedException();
+           var userList=(object) Uow.Repository<User>().AllInclude(p => p.UserRoles);
+            return Task.FromResult(userList);
         }
 
-        public Task&ltUser&gt GetBy(Dictionary&ltstring, object&gt parameters)
+        public Task<object> GetBy(User parameters)
         {
-            throw new NotImplementedException();
+            var userList = (object)this.Uow.Repository<User>().SingleOrDefault(m => m.UserId == parameters.UserId);
+            return Task.FromResult(userList);
         }
         
 
-        public HashSet&ltstring&gt AddValidation(User entity)
+        public HashSet<string> AddValidation(User entity)
         {
+            
             return ValidationMessages;
         }
 
         public async Task AddAsync(User entity)
         {
+                       
+            PasswordResult result = passwordHash.Encrypt(entity.UserPassword);
+            entity.Password = result.Signature;
+            entity.Salt = result.Salt;
+            
             await Uow.RegisterNewAsync(entity);
             await Uow.CommitAsync();
         }
 
-        public HashSet&ltstring&gt UpdateValidation(User entity)
+        public HashSet<string> UpdateValidation(User entity)
         {
             return ValidationMessages;
         }
 
         public async Task UpdateAsync(User entity)
         {
+
+
+            PasswordResult result = passwordHash.Encrypt(entity.UserPassword);
+            entity.Password = result.Signature;
+            entity.Salt = result.Salt;
             await Uow.RegisterDirtyAsync(entity);
             await Uow.CommitAsync();
         }
 
-        public HashSet&ltstring&gt DeleteValidation(Dictionary&ltstring, object&gt parameters)
+        public HashSet<string> DeleteValidation( User parameters)
         {
             return ValidationMessages;
         }
 
-        public Task DeleteAsync(Dictionary&ltstring, object&gt parameters)
+        public Task DeleteAsync(User parameters)
         {
-            throw new NotImplementedException();
+           User user= Uow.Repository<User>().FirstOrDefault(p => p.UserId == parameters.UserId);
+             Uow.RegisterDeletedAsync(user);
+          return  Uow.CommitAsync();
+
         }
 
-        public IMasterUow Uow { get; set; }
+        public ILoginUow Uow { get; set; }
 
-        private HashSet&ltstring&gt ValidationMessages { get; set; } = new HashSet&ltstring&gt();
-    }    
+        private HashSet<string> ValidationMessages { get; set; } = new HashSet<string>();
+    }
+
+    public interface IUserDomain : ICoreDomain<User,User> { }   
 ````
 
 

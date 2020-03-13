@@ -1,5 +1,5 @@
 {
     "installation":"npm install @rxweb/angular-router",
     "RxWebModule":"import { routerModule, IMultilingual } from '@rxweb/angular-router';\r\nimport { NgModule } from '@angular/core';\r\n\r\n\r\nimport { ComponentMultilingualContentResolver } from './domain/localization/component-multilingual-content.resolver';\r\nimport { GlobalMultilingualContentResolver } from './domain/localization/global-multilingual-content.resolver';\r\n\r\nimport { AuthorizationResolver } from './domain/security/authorization-resolver';\r\nimport { AuthResolver } from './domain/security/authentication-resolver';\r\n\r\n\r\n@routerModule({\r\n  authentication: AuthResolver,\r\n  authorization: AuthorizationResolver,\r\n  middlewares: [GlobalMultilingualContentResolver, ComponentMultilingualContentResolver],\r\n  urlEncryption: false,\r\n  childMultilingualResolver: ComponentMultilingualContentResolver,\r\n})\r\n@NgModule({\r\n  declarations: [\r\n  ],\r\n  imports: [\r\n  ],\r\n  providers: [],\r\n})\r\nexport class RxWebModule {\r\n\r\n}\r\n",
-    "canActivate":" {\r\n     path: '',\r\n    component: UserListComponent, canActivate: [BaseCanActivate]\r\n  }"
+    "canActivate":" {\r\n     path: '',\r\n    component: UserListComponent, canActivate: [BaseCanActivate]\r\n  \r\n}"
 }
