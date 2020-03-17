@@ -18,10 +18,7 @@ The `browserStorage` object used after resolving `ClientDataStorage` dependency 
 First we need to create an object of ClientDataStorage.
 <div component="app-code" key="session-storage-dependency-component"></div> 
 
-Next step is to assign the value of the local storage
-<div component="app-code" key="session-storage-clientstorage-component"></div> 
-
-### Examples
+### Methods
 While accessing session storage you can clear, get, remove, save etc 
 
 ## Save Data

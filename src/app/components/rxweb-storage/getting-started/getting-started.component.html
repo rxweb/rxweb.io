@@ -13,6 +13,24 @@
                             <div class="tab-pane panel-body validation-tab active">
                                 <div class="row page-section" id="installpackage">
                                     <div class="col-lg-12">
+                                        <p>
+                                            There arises a situation when the user is working on multiple browser tabs
+                                            or windows. Data stored or updated in one browser window is carried over to
+                                            other browser windows, as long as the other browser windows are on the same
+                                            website. This can be a problem when both the windows have different
+                                            important data, and due to any change in one window, the other window's data
+                                            is discarded.
+
+                                            <span class="highlighted">BrowserStorage</span> class of
+                                            <span>@rxweb/storage</span> framework provides a solution to this problem by
+                                            storing user's activity or data on that particular user's computer in the
+                                            `key/value pairs`. Web applications can locally store data within the
+                                            browser on the client side only. Changes in one separate browser tab/windows
+                                            will not be reflected in any other browser tab/window. This also offers
+                                            other benefits for web applications like it can provide you the seamless
+                                            experience despite any user's network connectivity issues and tracking any
+                                            user's activity across your web application.
+                                        </p>
                                         <h2>Install Package<a title="Link to this heading" class="link-header"
                                                 href="/rxweb-storage/storage-getting-started#installpackage"><i
                                                     class="fa fa-link"></i></a></h2>
@@ -41,7 +59,8 @@
                                         <h2>Register The Module<a title="Link to this heading" class="link-header"
                                                 href="/rxweb-storage/storage-getting-started#registerthemodules"><i
                                                     class="fa fa-link"></i></a></h2>
-                                                    <p class="showHideElement showElement">you need to add ClientDataStorage as provider in app module</p>
+                                        <p class="showHideElement showElement">you need to add ClientDataStorage as
+                                            provider in app module</p>
                                         <div class="model-ts">
                                             <div class="code">
                                                 <a class="float-right copy-icon" ngxClipboard
@@ -67,21 +86,20 @@
                                         <div class="col-lg-3">
                                             <div class="card">
                                                 <a class="card-body text-center"
-                                                    routerLink="/rxweb-storage/storage/local-storage"
-                                                    >Local Storage</a>
+                                                    routerLink="/rxweb-storage/storage/local-storage">Local Storage</a>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="card">
                                                 <a class="card-body text-center"
-                                                    routerLink="/rxweb-storage/storage/session-storage"
-                                                    >Session Storage</a>
+                                                    routerLink="/rxweb-storage/storage/session-storage">Session
+                                                    Storage</a>
                                             </div>
                                         </div>
-                                       
+
                                     </div>
 
-                                  
+
                                 </div>
                             </div>
 
@@ -92,4 +110,4 @@
         </div>
     </div>
     <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
-    </div>
+</div>

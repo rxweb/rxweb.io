@@ -5,6 +5,14 @@ const LOCALIZATION_ROUTES: Routes = [
 {
 	path:'localization-quick-start',
 	loadChildren: './localization-quick-start/localization-quick-start.module#LocalizationQuickStartModule',
+},
+{
+	path:'global-setup',
+	loadChildren: './global-setup/global-setup.module#GlobalSetupModule',
+},
+{
+	path:'page-level',
+	loadChildren: './page-level/page-level.module#PageLevelModule',
 }
 ];
-export const LOCALIZATION_ROUTING: ModuleWithProviders = RouterModule.forChild(LOCALIZATION_ROUTES);
+export const LOCALIZATION_ROUTING: ModuleWithProviders = RouterModule.forChild(LOCALIZATION_ROUTES);	

@@ -18,14 +18,13 @@ The `browserStorage` object used after resolving `ClientDataStorage` dependency 
 First we need to create an object of ClientDataStorage.
 <div component="app-code" key="local-storage-dependency-component"></div> 
 
-Next step is to assign the value of the local storage
-<div component="app-code" key="local-storage-clientstorage-component"></div> 
-
-### Examples
+### Methods
 While accessing local storage you can clear, get, remove, save etc 
 
 ## Save Data
 `save()` method is used to store data in any of that browser storage i.e. local or session.
+
+<div component="app-code" key="local-storage-save-component"></div> 
 
 ## Get local storage data 
 `get()` method is used to retrieve any information from the storage. 
@@ -42,8 +41,6 @@ There are some scenarios where you want to intentionally clear all the browser s
 
 <div component="app-code" key="local-storage-clear-component"></div> 
 
-
-<div component="app-code" key="local-storage-save-component"></div> 
 
 <div component="app-example-runner" ref-component="app-localstorage-complete" exampleName="complete"></div>
 

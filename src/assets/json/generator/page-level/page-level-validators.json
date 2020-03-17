@@ -1,0 +1,11 @@
+{
+    "multilingual":{
+        "component":"@multilingual(\"LoginComponent\")\r\n@Component({\r\n  selector: 'app-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.css']\r\n})"
+    },
+    "json":{
+        "component":"{\r\n    \"password_p\": \"Enter Password\",\r\n    \"password_t\":\"Password\",\r\n    \"email_p\":\"Enter Email\",\r\n    \"email_t\":\"Email\"\r\n}\r\n"
+    },
+    "template":{
+        "component":"\r\n <form class=\"account_form\" [formGroup]=\"userFormGroup\">\r\n          <div class=\"form-group\">\r\n            <label rxText=\"email\" for=\"exampleInputEmail1\">Email</label>\r\n            <input rxPlaceholder=\"email\" type=\"email\" formControlName=\"userName\" class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label rxText=\"password\" for=\"exampleInputPassword1\">Password</label>\r\n            <input rxPlaceholder=\"password\"  formControlName=\"password\" type=\"password\" class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <a (click)=\"signIn()\" class=\"btn btn-theme btn-block form_submit_btn\">Sign In</a>\r\n          </div>\n         </form>"
+    }
+}

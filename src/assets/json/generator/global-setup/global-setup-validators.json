@@ -1,0 +1,15 @@
+{
+    "installation": {
+        "component": "npm i @rxweb/localization"
+    },
+    "module":{
+        "component":"import { BrowserModule } from '@angular/platform-browser';\r\nimport { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';\r\nimport { RouterModule, PreloadAllModules } from '@angular/router';\r\nimport { RxWebModule } from './rxweb.module'\r\nimport { AppComponent } from './components/start/app.component';\r\nimport { ROUTES } from './components/start/lazy.routing'\r\nimport { Directive, Input, HostBinding } from \"@angular/core\";\r\nimport { RouterLinkWithHref, Router, ActivatedRoute } from \"@angular/router\";\r\nimport { ReactiveFormsModule, FormsModule } from '@angular/forms';\r\nimport { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';\r\nimport { RxLocalizationModule } from '@rxweb/angular-localization';\r\n\r\nconst route = RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules, onSameUrlNavigation: 'reload' });\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule, route, FormsModule, ReactiveFormsModule, RxReactiveFormsModule,RxRoutingModule,RxLocalizationModule\r\n  ],\r\n  providers: []\r\n  bootstrap: [AppComponent],\r\n  exports: [RouterModule,RxLocalizationModule],\r\n  schemas: [CUSTOM_ELEMENTS_SCHEMA]\r\n})\r\nexport class AppModule { }\r\n"
+    },
+    "baseActivate":{
+        "component":"import { Injectable } from '@angular/core';\r\nimport { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router'\r\nimport { MultiLingualData } from '@rxweb/localization';\r\nimport { RxHttp } from '@rxweb/http';\r\nimport { BrowserStorage } from '../services/browser-storage';\r\n\r\nconst STORAGE_KEY: string = \"language\";\r\nconst LANGUAGE_CODE: string = \"en\";\r\n@Injectable()\r\nexport class BaseMultilingualResolver extends RxHttp implements CanActivate {\r\n    isGlobal:boolean = false;\r\n    constructor(private browserStorage: BrowserStorage) { super() }\r\n    canActivate(route: ActivatedRouteSnapshot,\r\n        state: RouterStateSnapshot, ): any {\r\n    \r\n\r\n        //check some condition  \r\n\r\n\r\n        let name = this.isGlobal ? 'global' : MultiLingualData.getName(route.component as Function);\r\n        if (name && !MultiLingualData.contains(name)) {\r\n            var promise = new Promise<boolean>((resolve, reject) => {     \r\n                var language = this.browserStorage.local.get(STORAGE_KEY) || LANGUAGE_CODE;LANGUAGE_CODE;\r\n                this.get({ path: `assets/localization/${name}-${language}.json` }).subscribe(t => {\r\n                    console.log(t);\r\n                    MultiLingualData.addOrUpdate(name, t);\r\n                    resolve(true);\r\n                }, x => {\r\n                    resolve(true);\r\n                })\r\n            })\r\n            return promise;\r\n        }\r\n    }\r\n}"
+    },
+    "canActivate":{
+         "component":"{\r\n        component: LoginComponent, path: '', canActivate: [BaseMultilingualResolver ]\r\n}"
+    }
+   
+}

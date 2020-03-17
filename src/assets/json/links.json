@@ -2068,6 +2068,18 @@
                     "uri": "/rxweb-localization/localization/localization-quick-start",
                     "isActive": false,
                     "linkTitle": "local-storage"
+                },
+                {
+                    "title": "Global Setup",
+                    "uri": "/rxweb-localization/localization/global-setup",
+                    "isActive": false,
+                    "linkTitle": "global-setup"
+                },
+                {
+                    "title": "Page Level Rendering",
+                    "uri": "/rxweb-localization/localization/page-level",
+                    "isActive": false,
+                    "linkTitle": "page-level"
                 }
             ],
             "isActive": false
