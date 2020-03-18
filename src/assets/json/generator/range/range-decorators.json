@@ -91,7 +91,7 @@
         "notes": null,
         "component": null,
         "html": null,
-        "model": " @numeric({ allowDecimal: true })\n@range({minimumNumber:2  ,maximumNumber:10 }) \nsalary: number;",
+        "model": " @numeric({ allowDecimal: true })\n@range({minimumNumber:2  ,maximumNumber:10 }) \nexperience: number;",
         "modelName": null,
         "json": {}
     },
@@ -114,8 +114,8 @@
     "allowDecimal": {
         "notes": null,
         "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup } from \"@angular\/forms\"\r\nimport { RxFormBuilder } from '@rxweb\/reactive-form-validators';\r\n\r\nimport { EmployeeInfo } from '.\/employee-info.model';\r\n\r\n@Component({\r\n    selector: 'app-range-allowDecimal',\r\n    templateUrl: '.\/range-allow-decimal.component.html'\r\n})\r\nexport class RangeAllowDecimalComponent implements OnInit {\r\n    employeeInfoFormGroup: FormGroup\r\n\r\n    constructor(\r\n        private formBuilder: RxFormBuilder    ) { }\r\n\r\n    ngOnInit() {\r\n        let employeeInfo = new EmployeeInfo();\r\n        this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo);\r\n    }\r\n}",
-        "html": "<div>\r\n    <form  [formGroup]=\"employeeInfoFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>Salary<\/label>\r\n        <input type=\"text\" formControlName=\"salary\" class=\"form-control\"  \/>\r\n        <small class=\"form-text text-muted\">Please enter Employee salary between 2 to 10<br\/><\/small>\r\n      <small class=\"form-text text-danger\" *ngIf=\"employeeInfoFormGroup.controls.salary.errors\">{{employeeInfoFormGroup.controls.salary.errorMessage}}<br\/><\/small>\r\n      <\/div>\r\n      <button [disabled]=\"!employeeInfoFormGroup.valid\" class=\"btn btn-primary\">Submit<\/button>\r\n    <\/form>\r\n  <\/div>\r\n  ",
-        "model": "import {  range,numeric } from   \"@rxweb\/reactive-form-validators\"   \r\n\r\nexport class EmployeeInfo {\r\n\r\n    @numeric({ allowDecimal: true })\r\n\t@range({minimumNumber:2  ,maximumNumber:10 }) \r\n\tsalary: number;\r\n\t\r\n\t\r\n}\r\n",
+        "html": "<div>\r\n    <form  [formGroup]=\"employeeInfoFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>Experience<\/label>\r\n        <input type=\"text\" formControlName=\"experience\" class=\"form-control\"  \/>\r\n        <small class=\"form-text text-muted\">Please enter Employee experience between 2 to 10<br\/><\/small>\r\n      <small class=\"form-text text-danger\" *ngIf=\"employeeInfoFormGroup.controls.experience.errors\">{{employeeInfoFormGroup.controls.experience.errorMessage}}<br\/><\/small>\r\n      <\/div>\r\n      <button [disabled]=\"!employeeInfoFormGroup.valid\" class=\"btn btn-primary\">Submit<\/button>\r\n    <\/form>\r\n  <\/div>\r\n  ",
+        "model": "import {  range,numeric } from   \"@rxweb\/reactive-form-validators\"   \r\n\r\nexport class EmployeeInfo {\r\n\r\n    @numeric({ allowDecimal: true })\r\n\t@range({minimumNumber:2  ,maximumNumber:10 }) \r\n\texperience: number;\r\n\t\r\n\t\r\n}\r\n",
         "modelName": "employee-info.model.ts",
         "json": {}
     },

@@ -4,7 +4,7 @@ export class EmployeeInfo {
 
     @numeric({ allowDecimal: true })
 	@range({minimumNumber:2  ,maximumNumber:10 }) 
-	salary: number;
+	experience: number;
 	
 	
 }

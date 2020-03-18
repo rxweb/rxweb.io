@@ -67,8 +67,8 @@ registerLocaleData(localePt)
     {
       provide: API_HOST_URI,
       useValue: 'https://rxweb.io/'
-    }
-    ,{ provide: LOCALE_ID, useValue: 'pt' },
+    },
+   
     {
       provide: APP_VERSION,
       useValue: environment.appVersion
