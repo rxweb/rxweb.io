@@ -2,6 +2,10 @@ import { DateCompleteComponent } from "src/assets/examples/reactive-form-validat
 import { DateCompleteTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/date/complete/date-complete.component";
 import { DateCompleteTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/date/complete/date-complete.component";
 import { DateCompleteValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/date/complete/date-complete.component";
+import { DateAllowISODateComponent } from "src/assets/examples/reactive-form-validators/decorators/date/allowISODate/date-allow-i-s-o-date.component";
+import { DateAllowISODateTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/date/allowISODate/date-allow-i-s-o-date.component";
+import { DateAllowISODateTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/date/allowISODate/date-allow-i-s-o-date.component";
+import { DateAllowISODateValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/date/allowISODate/date-allow-i-s-o-date.component";
 import { DateConditionalExpressionComponent } from "src/assets/examples/reactive-form-validators/decorators/date/conditionalExpression/date-conditional-expression.component";
 import { DateConditionalExpressionTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/date/conditionalExpression/date-conditional-expression.component";
 import { DateConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/date/conditionalExpression/date-conditional-expression.component";
@@ -25,6 +29,7 @@ import { DateEditComponent } from "src/assets/examples/reactive-form-validators/
 export const DATE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
 						complete : DateCompleteComponent,
+						allowISODate : DateAllowISODateComponent,
 						conditionalExpression : DateConditionalExpressionComponent,
 						message : DateMessageComponent,
 						messageKey : DateMessageKeyComponent,
@@ -34,20 +39,15 @@ export const DATE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 			  },
 	template_driven_validation_directives:{
 						complete : DateCompleteTemplateDrivenValidationDirectivesComponent,
+						allowISODate : DateAllowISODateTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : DateConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : DateMessageTemplateDrivenValidationDirectivesComponent,
 						messageKey : DateMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : DateAddTemplateDrivenValidationDirectivesComponent,
 			  },
-	template_driven_validation_decorators:{
-						complete : DateCompleteTemplateDrivenValidationDecoratorsComponent,
-						conditionalExpression : DateConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
-						message : DateMessageTemplateDrivenValidationDecoratorsComponent,
-						messageKey : DateMessageKeyTemplateDrivenValidationDecoratorsComponent,
-						add : DateAddTemplateDrivenValidationDecoratorsComponent,
-			  },
 	validators:{
 						complete : DateCompleteValidatorComponent,
+						allowISODate : DateAllowISODateValidatorComponent,
 						conditionalExpression : DateConditionalExpressionValidatorComponent,
 						message : DateMessageValidatorComponent,
 						messageKey : DateMessageKeyValidatorComponent,

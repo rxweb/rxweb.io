@@ -4,6 +4,9 @@ export class User {
 	name: string;
 	
 	
+	department: string;
+	
+	
 	profession: string;
 	
 	

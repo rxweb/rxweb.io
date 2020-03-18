@@ -5,8 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { StartsWithCompleteComponent } from './complete/starts-with-complete.component';
 import { StartsWithValueComponent } from './value/starts-with-value.component';
+import { StartsWithIsRestrictComponent } from './isRestrict/starts-with-is-restrict.component';
 import { StartsWithConditionalExpressionComponent } from './conditionalExpression/starts-with-conditional-expression.component';
 import { StartsWithMessageComponent } from './message/starts-with-message.component';
 import { StartsWithMessageKeyComponent } from './messageKey/starts-with-message-key.component';
@@ -18,6 +22,7 @@ import { StartsWithEditComponent } from './edit/starts-with-edit.component';
   declarations: [
 	StartsWithCompleteComponent,
 	StartsWithValueComponent,
+	StartsWithIsRestrictComponent,
 	StartsWithConditionalExpressionComponent,
 	StartsWithMessageComponent,
 	StartsWithMessageKeyComponent,
@@ -28,6 +33,7 @@ import { StartsWithEditComponent } from './edit/starts-with-edit.component';
 entryComponents: [
 	StartsWithCompleteComponent,
 	StartsWithValueComponent,
+	StartsWithIsRestrictComponent,
 	StartsWithConditionalExpressionComponent,
 	StartsWithMessageComponent,
 	StartsWithMessageKeyComponent,
@@ -36,14 +42,17 @@ entryComponents: [
 	StartsWithEditComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	StartsWithCompleteComponent,
 	StartsWithValueComponent,
+	StartsWithIsRestrictComponent,
 	StartsWithConditionalExpressionComponent,
 	StartsWithMessageComponent,
 	StartsWithMessageKeyComponent,

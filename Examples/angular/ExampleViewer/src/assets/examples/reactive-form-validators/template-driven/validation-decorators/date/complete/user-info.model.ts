@@ -6,6 +6,10 @@ export class UserInfo {
 	birthDate: string;
 	
 	
+	@date({allowISODate:true }) 
+	registrationDate: string;
+	
+	
 	//If you want to apply conditional expression of type 'function'
 	@date({conditionalExpression:(x,y) => x.birthDate == "16/04/1997"  }) 
 	admissionDate: string;

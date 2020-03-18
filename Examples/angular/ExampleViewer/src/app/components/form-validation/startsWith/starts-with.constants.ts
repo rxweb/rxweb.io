@@ -6,6 +6,10 @@ import { StartsWithValueComponent } from "src/assets/examples/reactive-form-vali
 import { StartsWithValueTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/startsWith/value/starts-with-value.component";
 import { StartsWithValueTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/startsWith/value/starts-with-value.component";
 import { StartsWithValueValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/startsWith/value/starts-with-value.component";
+import { StartsWithIsRestrictComponent } from "src/assets/examples/reactive-form-validators/decorators/startsWith/isRestrict/starts-with-is-restrict.component";
+import { StartsWithIsRestrictTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/startsWith/isRestrict/starts-with-is-restrict.component";
+import { StartsWithIsRestrictTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/startsWith/isRestrict/starts-with-is-restrict.component";
+import { StartsWithIsRestrictValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/startsWith/isRestrict/starts-with-is-restrict.component";
 import { StartsWithConditionalExpressionComponent } from "src/assets/examples/reactive-form-validators/decorators/startsWith/conditionalExpression/starts-with-conditional-expression.component";
 import { StartsWithConditionalExpressionTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/startsWith/conditionalExpression/starts-with-conditional-expression.component";
 import { StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/startsWith/conditionalExpression/starts-with-conditional-expression.component";
@@ -30,6 +34,7 @@ export const STARTS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
 						complete : StartsWithCompleteComponent,
 						value : StartsWithValueComponent,
+						isRestrict : StartsWithIsRestrictComponent,
 						conditionalExpression : StartsWithConditionalExpressionComponent,
 						message : StartsWithMessageComponent,
 						messageKey : StartsWithMessageKeyComponent,
@@ -40,22 +45,16 @@ export const STARTS_WITH_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	template_driven_validation_directives:{
 						complete : StartsWithCompleteTemplateDrivenValidationDirectivesComponent,
 						value : StartsWithValueTemplateDrivenValidationDirectivesComponent,
+						isRestrict : StartsWithIsRestrictTemplateDrivenValidationDirectivesComponent,
 						conditionalExpression : StartsWithConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						message : StartsWithMessageTemplateDrivenValidationDirectivesComponent,
 						messageKey : StartsWithMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : StartsWithAddTemplateDrivenValidationDirectivesComponent,
 			  },
-	template_driven_validation_decorators:{
-						complete : StartsWithCompleteTemplateDrivenValidationDecoratorsComponent,
-						value : StartsWithValueTemplateDrivenValidationDecoratorsComponent,
-						conditionalExpression : StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
-						message : StartsWithMessageTemplateDrivenValidationDecoratorsComponent,
-						messageKey : StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
-						add : StartsWithAddTemplateDrivenValidationDecoratorsComponent,
-			  },
 	validators:{
 						complete : StartsWithCompleteValidatorComponent,
 						value : StartsWithValueValidatorComponent,
+						isRestrict : StartsWithIsRestrictValidatorComponent,
 						conditionalExpression : StartsWithConditionalExpressionValidatorComponent,
 						message : StartsWithMessageValidatorComponent,
 						messageKey : StartsWithMessageKeyValidatorComponent,

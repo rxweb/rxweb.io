@@ -4,6 +4,9 @@ export class UserInfo {
 	birthDate: string;
 	
 	
+	registrationDate: string;
+	
+	
 	admissionDate: string;
 	
 	

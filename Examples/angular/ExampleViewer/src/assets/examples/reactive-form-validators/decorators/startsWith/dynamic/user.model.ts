@@ -6,6 +6,9 @@ export class User {
 	name: string;
 
 	@prop()
+	department: string;
+
+	@prop()
 	taskId: string;
 
 	@prop()

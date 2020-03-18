@@ -5,8 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { StartsWithCompleteValidatorComponent } from './complete/starts-with-complete.component';
 import { StartsWithValueValidatorComponent } from './value/starts-with-value.component';
+import { StartsWithIsRestrictValidatorComponent } from './isRestrict/starts-with-is-restrict.component';
 import { StartsWithConditionalExpressionValidatorComponent } from './conditionalExpression/starts-with-conditional-expression.component';
 import { StartsWithMessageValidatorComponent } from './message/starts-with-message.component';
 import { StartsWithMessageKeyValidatorComponent } from './messageKey/starts-with-message-key.component';
@@ -17,6 +21,7 @@ import { StartsWithAddValidatorComponent } from './add/starts-with-add.component
   declarations: [
 	StartsWithCompleteValidatorComponent,
 	StartsWithValueValidatorComponent,
+	StartsWithIsRestrictValidatorComponent,
 	StartsWithConditionalExpressionValidatorComponent,
 	StartsWithMessageValidatorComponent,
 	StartsWithMessageKeyValidatorComponent,
@@ -26,6 +31,7 @@ import { StartsWithAddValidatorComponent } from './add/starts-with-add.component
 entryComponents: [
 	StartsWithCompleteValidatorComponent,
 	StartsWithValueValidatorComponent,
+	StartsWithIsRestrictValidatorComponent,
 	StartsWithConditionalExpressionValidatorComponent,
 	StartsWithMessageValidatorComponent,
 	StartsWithMessageKeyValidatorComponent,
@@ -33,14 +39,17 @@ entryComponents: [
 	StartsWithAddValidatorComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	StartsWithCompleteValidatorComponent,
 	StartsWithValueValidatorComponent,
+	StartsWithIsRestrictValidatorComponent,
 	StartsWithConditionalExpressionValidatorComponent,
 	StartsWithMessageValidatorComponent,
 	StartsWithMessageKeyValidatorComponent,

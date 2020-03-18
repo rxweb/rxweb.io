@@ -49,6 +49,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						conditionalExpression : AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						messageKey : AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
+						locale:AlphaNumericAddTemplateDrivenValidationDirectivesComponent
 					
 			  },
 	template_driven_validation_decorators:{

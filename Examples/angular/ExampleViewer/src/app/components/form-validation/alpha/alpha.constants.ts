@@ -48,6 +48,7 @@ export const ALPHA_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						message : AlphaMessageTemplateDrivenValidationDirectivesComponent,
 						messageKey : AlphaMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : AlphaAddTemplateDrivenValidationDirectivesComponent,
+						locale:AlphaAddTemplateDrivenValidationDirectivesComponent
 						
 			  },
 	template_driven_validation_decorators:{

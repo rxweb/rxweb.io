@@ -11,6 +11,7 @@ import { AlphaNumericMessageTemplateDrivenValidationDirectivesComponent } from '
 import { AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/alpha-numeric-conditional-expression.component';
 import { AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/alpha-numeric-message-key.component';
 import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from './add/alpha-numeric-add.component';
+import { AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent } from './locale/alpha-numeric-locale.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from './ad
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
+	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent
   ],
 entryComponents: [
 	AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent,
@@ -28,6 +30,7 @@ entryComponents: [
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
+	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -42,6 +45,7 @@ entryComponents: [
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
+	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent
   ],
 
 })

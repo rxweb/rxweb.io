@@ -4,7 +4,7 @@
       <label>Confirmation Date</label>
       <input type="text" formControlName="confirmationDate" class="form-control"  />
       <small class="form-text text-muted">Custom message based on messageKey<br/></small>
-	<small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.confirmationDate.errors">{{userInfoFormGroup.controls.confirmationDate.errors.date.message}}<br/></small>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.confirmationDate.errors">{{userInfoFormGroup.controls.confirmationDate.errors.dateMessageKey.message}}<br/></small>		
     </div>
     <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
   </form>

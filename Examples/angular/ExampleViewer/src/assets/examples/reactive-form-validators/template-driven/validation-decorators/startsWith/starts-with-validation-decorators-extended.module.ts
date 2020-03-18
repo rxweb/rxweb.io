@@ -5,8 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { StartsWithCompleteTemplateDrivenValidationDecoratorsComponent } from './complete/starts-with-complete.component';
 import { StartsWithValueTemplateDrivenValidationDecoratorsComponent } from './value/starts-with-value.component';
+import { StartsWithIsRestrictTemplateDrivenValidationDecoratorsComponent } from './isRestrict/starts-with-is-restrict.component';
 import { StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent } from './conditionalExpression/starts-with-conditional-expression.component';
 import { StartsWithMessageTemplateDrivenValidationDecoratorsComponent } from './message/starts-with-message.component';
 import { StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent } from './messageKey/starts-with-message-key.component';
@@ -16,6 +20,7 @@ import { StartsWithAddTemplateDrivenValidationDecoratorsComponent } from './add/
   declarations: [
 	StartsWithCompleteTemplateDrivenValidationDecoratorsComponent,
 	StartsWithValueTemplateDrivenValidationDecoratorsComponent,
+	StartsWithIsRestrictTemplateDrivenValidationDecoratorsComponent,
 	StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	StartsWithMessageTemplateDrivenValidationDecoratorsComponent,
 	StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
@@ -24,20 +29,24 @@ import { StartsWithAddTemplateDrivenValidationDecoratorsComponent } from './add/
 entryComponents: [
 	StartsWithCompleteTemplateDrivenValidationDecoratorsComponent,
 	StartsWithValueTemplateDrivenValidationDecoratorsComponent,
+	StartsWithIsRestrictTemplateDrivenValidationDecoratorsComponent,
 	StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	StartsWithMessageTemplateDrivenValidationDecoratorsComponent,
 	StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,
 	StartsWithAddTemplateDrivenValidationDecoratorsComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	StartsWithCompleteTemplateDrivenValidationDecoratorsComponent,
 	StartsWithValueTemplateDrivenValidationDecoratorsComponent,
+	StartsWithIsRestrictTemplateDrivenValidationDecoratorsComponent,
 	StartsWithConditionalExpressionTemplateDrivenValidationDecoratorsComponent,
 	StartsWithMessageTemplateDrivenValidationDecoratorsComponent,
 	StartsWithMessageKeyTemplateDrivenValidationDecoratorsComponent,

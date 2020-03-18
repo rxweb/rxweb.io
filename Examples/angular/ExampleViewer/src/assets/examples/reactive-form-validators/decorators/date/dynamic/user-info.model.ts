@@ -6,6 +6,9 @@ export class UserInfo {
 	birthDate: string;
 
 	@prop()
+	registrationDate: string;
+
+	@prop()
 	enrollmentDate: string;
 
 	@prop()

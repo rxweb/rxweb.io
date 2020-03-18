@@ -5,7 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { DateCompleteComponent } from './complete/date-complete.component';
+import { DateAllowISODateComponent } from './allowISODate/date-allow-i-s-o-date.component';
 import { DateConditionalExpressionComponent } from './conditionalExpression/date-conditional-expression.component';
 import { DateMessageComponent } from './message/date-message.component';
 import { DateMessageKeyComponent } from './messageKey/date-message-key.component';
@@ -16,6 +20,7 @@ import { DateEditComponent } from './edit/date-edit.component';
 @NgModule({
   declarations: [
 	DateCompleteComponent,
+	DateAllowISODateComponent,
 	DateConditionalExpressionComponent,
 	DateMessageComponent,
 	DateMessageKeyComponent,
@@ -25,6 +30,7 @@ import { DateEditComponent } from './edit/date-edit.component';
   ],
 entryComponents: [
 	DateCompleteComponent,
+	DateAllowISODateComponent,
 	DateConditionalExpressionComponent,
 	DateMessageComponent,
 	DateMessageKeyComponent,
@@ -33,13 +39,16 @@ entryComponents: [
 	DateEditComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	DateCompleteComponent,
+	DateAllowISODateComponent,
 	DateConditionalExpressionComponent,
 	DateMessageComponent,
 	DateMessageKeyComponent,
