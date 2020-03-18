@@ -86,6 +86,17 @@ Below options are not mandatory to use in the `range` validation. If needed then
 <tr><td><a (click)='scrollTo("#minimumNumber")' title="minimumnumber">minimumNumber</a></td><td> Minimum number is for define a minimum number of range.</td></tr>
 </table>
 
+<data-scope scope="['decorator']">
+
+# Allow Decimal Values
+To allow decimal values in range validation, you need to add `@numeric` decorator on the field name along with setting range decorator and set the `allowDecimal` property of numeric decorator `true`.
+
+<div component="app-code" key="range-allowDecimalExample-model"></div> 
+
+<div component="app-example-runner" ref-component="app-range-allowDecimal" title="range {{validatorType}} with allowDecimal" key="allowDecimal"></div>
+
+</data-scope>
+
 ## conditionalExpression 
 Type :  `Function`  |  `string`
 Range validation should be applied if the condition is matched in the `conditionalExpression` function. Validation framework will pass two parameters at the time of `conditionalExpression` check. Those two parameters are current `FormGroup` value and root `FormGroup` value. You can apply the condition on respective object value.

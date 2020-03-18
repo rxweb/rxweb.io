@@ -14,6 +14,7 @@ import { RangeMessageKeyComponent } from './messageKey/range-message-key.compone
 import { RangeDynamicComponent } from './dynamic/range-dynamic.component';
 import { RangeAddComponent } from './add/range-add.component';
 import { RangeEditComponent } from './edit/range-edit.component';
+import { RangeAllowDecimalComponent } from './allowDecimal/range-allow-decimal.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RangeEditComponent } from './edit/range-edit.component';
 	RangeDynamicComponent,
 	RangeAddComponent,
 	RangeEditComponent,
+	RangeAllowDecimalComponent
   ],
 entryComponents: [
 	RangeCompleteComponent,
@@ -37,6 +39,7 @@ entryComponents: [
 	RangeDynamicComponent,
 	RangeAddComponent,
 	RangeEditComponent,
+	RangeAllowDecimalComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -54,6 +57,7 @@ entryComponents: [
 	RangeDynamicComponent,
 	RangeAddComponent,
 	RangeEditComponent,
+	RangeAllowDecimalComponent
   ],
 
 })

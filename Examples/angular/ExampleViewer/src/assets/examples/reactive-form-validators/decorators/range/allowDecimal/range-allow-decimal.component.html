@@ -1,0 +1,12 @@
+<div>
+    <form  [formGroup]="employeeInfoFormGroup">
+      <div class="form-group">
+        <label>Salary</label>
+        <input type="text" formControlName="salary" class="form-control"  />
+        <small class="form-text text-muted">Please enter Employee salary between 2 to 10<br/></small>
+      <small class="form-text text-danger" *ngIf="employeeInfoFormGroup.controls.salary.errors">{{employeeInfoFormGroup.controls.salary.errorMessage}}<br/></small>
+      </div>
+      <button [disabled]="!employeeInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

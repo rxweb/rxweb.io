@@ -29,6 +29,7 @@ import { RangeAddTemplateDrivenValidationDirectivesComponent } from "src/assets/
 import { RangeAddTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/range/add/range-add.component";
 import { RangeAddValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/range/add/range-add.component";
 import { RangeEditComponent } from "src/assets/examples/reactive-form-validators/decorators/range/edit/range-edit.component";
+import { RangeAllowDecimalComponent } from 'src/assets/examples/reactive-form-validators/decorators/range/allowDecimal/range-allow-decimal.component';
 
 export const RANGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
@@ -41,6 +42,7 @@ export const RANGE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						dynamic : RangeDynamicComponent,
 						add : RangeAddComponent,
 						edit : RangeEditComponent,
+						allowDecimal: RangeAllowDecimalComponent
 			  },
 	template_driven_validation_directives:{
 						complete : RangeCompleteTemplateDrivenValidationDirectivesComponent,
