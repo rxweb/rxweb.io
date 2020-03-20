@@ -20,8 +20,8 @@ import { AlphaLocaleTemplateDrivenValidationDirectivesComponent } from './locale
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageKeyTemplateDrivenValidationDirectivesComponent,
-	AlphaAddTemplateDrivenValidationDirectivesComponent,
-	AlphaLocaleTemplateDrivenValidationDirectivesComponent
+	AlphaAddTemplateDrivenValidationDirectivesComponent
+	
   ],
 entryComponents: [
 	AlphaCompleteTemplateDrivenValidationDirectivesComponent,
@@ -29,8 +29,8 @@ entryComponents: [
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageKeyTemplateDrivenValidationDirectivesComponent,
-	AlphaAddTemplateDrivenValidationDirectivesComponent,
-	AlphaLocaleTemplateDrivenValidationDirectivesComponent
+	AlphaAddTemplateDrivenValidationDirectivesComponent
+	
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -44,8 +44,8 @@ entryComponents: [
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageKeyTemplateDrivenValidationDirectivesComponent,
-	AlphaAddTemplateDrivenValidationDirectivesComponent,
-	AlphaLocaleTemplateDrivenValidationDirectivesComponent
+	AlphaAddTemplateDrivenValidationDirectivesComponent
+	
   ],
 
 })

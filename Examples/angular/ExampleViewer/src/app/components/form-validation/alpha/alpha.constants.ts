@@ -47,8 +47,8 @@ export const ALPHA_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						allowWhiteSpace : AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 						message : AlphaMessageTemplateDrivenValidationDirectivesComponent,
 						messageKey : AlphaMessageKeyTemplateDrivenValidationDirectivesComponent,
-						add : AlphaAddTemplateDrivenValidationDirectivesComponent,
-						locale:AlphaAddTemplateDrivenValidationDirectivesComponent
+						add : AlphaAddTemplateDrivenValidationDirectivesComponent
+					
 						
 			  },
 	template_driven_validation_decorators:{
