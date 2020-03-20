@@ -11,7 +11,7 @@ import { AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent } from 
 import { AlphaMessageTemplateDrivenValidationDirectivesComponent } from './message/alpha-message.component';
 import { AlphaMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/alpha-message-key.component';
 import { AlphaAddTemplateDrivenValidationDirectivesComponent } from './add/alpha-add.component';
-import { AlphaLocaleTemplateDrivenValidationDirectivesComponent } from './locale/alpha-locale.component';
+
 
 @NgModule({
   declarations: [
