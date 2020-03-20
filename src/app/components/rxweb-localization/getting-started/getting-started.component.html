@@ -1,1 +1,64 @@
-<h1>RxWeb Localization</h1>
+<div id="wrapper" *ngIf="showComponent">
+    <div class="content">
+        <div class="title-bar">
+            <p>Step by Step guide to render multilingual data using <span class="highlighted">@rxweb/angular-localization</span>.</p>
+        </div>
+
+        <div class="bg-white border-radius" style="margin-top:22px;">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="hpanel">
+                        <div class="tab-content fade show">
+                            <div class="tab-pane panel-body validation-tab active">
+                                <div class="row page-section" id="examples" key="dynamic">
+                                    <div class='col-lg-12'>
+                                        <ul class="nav nav-tabs">
+                                            <li [class.active]="mainTab=='installation'"
+                                                (click)="mainTab='installation'"><a>1) Installation</a></li>
+                                            <li [class.active]="mainTab=='validator'" (click)="mainTab='validator'">
+                                                <a>2) Register Modules</a></li>
+                                            <li [class.active]="mainTab=='decorator'" (click)="mainTab='decorator'">
+                                                <a>3) Creating CanActive Multilingual Resolver</a></li>
+                                                <li [class.active]="mainTab=='component'"
+                                                (click)="mainTab='component'"><a>4)Adding Component Name</a></li>
+                                            <li [class.active]="mainTab=='template-driven'"
+                                                (click)="mainTab='template-driven'"><a>5) Html Template Directives</a></li>
+                                             
+                                            <li [class.active]="mainTab=='working-example'"
+                                                (click)="mainTab='working-example'"><a>6) Working Example</a></li>
+                                        </ul>
+                                        <div class="tab-content p-4">
+                                            <div class="tab-pane active" *ngIf="mainTab=='installation'">
+                                                <img src="assets/images/localization-install.gif" />
+                                            </div>
+                                            <div class="tab-pane active" *ngIf="mainTab=='validator'">
+                                                <img src="assets/images/localization-register-module.gif" />
+                                            </div>
+                                            <div class="tab-pane active" *ngIf="mainTab=='decorator'">
+                                                <img src="assets/images/localization-resolve-data.gif" />
+                                            </div>
+                                            <div class="tab-pane active" *ngIf="mainTab=='component'">
+                                                <img src="assets/images/localization-component.gif" />
+                                            </div>
+                                            <div class="tab-pane active" *ngIf="mainTab=='template-driven'">
+                                                <img src="assets/images/localization-template.gif" />
+                                            </div>
+                                           
+                                            <div class="tab-pane active" *ngIf="mainTab=='working-example'">
+                                                <img src="assets/images/localization-working-example.gif" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <!-- <app-contribution></app-contribution> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar> 
+</div>

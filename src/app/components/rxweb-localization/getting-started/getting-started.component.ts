@@ -24,11 +24,9 @@ export class LocalizationGettingStartedComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.showComponent = true;
     document.title = "Getting Started Localization - RxWeb Docs";
-    this.http.get('assets/json/generator/rxweb-localization/localization-install.json').subscribe(response => {
-      this.codeContent = response.json();
-      this.showComponent = true;
-    });
+    
     this.applicationBroadCaster.topSubject.next(this.pageTitle);
   }
 

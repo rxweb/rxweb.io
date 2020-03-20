@@ -105,7 +105,7 @@ export class AppExampleRunnerComponent implements OnInit {
        else if(this.router.url.includes("?"))
         codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("?")[0] + "?exampleName=" + this.exampleName;
       else
-        codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=" + this.exampleName;
+        codeUrl = "http://localhost:9999/" + this.router.url + "?exampleName=" + this.exampleName;
  
      this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
       this.isRunCode = true; 
@@ -113,7 +113,7 @@ export class AppExampleRunnerComponent implements OnInit {
   }
 
   runCodeExample(exampleName) {
-  
+   debugger;
     let example = this.exampleHeights.filter(x => x.exampleName == exampleName);
     if (example.length > 0)
       this.exampleHeight = example[0].height;
@@ -134,7 +134,7 @@ export class AppExampleRunnerComponent implements OnInit {
       else if(this.router.url.includes("?"))
       codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url.split("?")[0] + "?exampleName=" + exampleName;
     else
-      codeUrl = "https://rxwebangular.z20.web.core.windows.net/" + this.router.url + "?exampleName=" + exampleName;
+      codeUrl = "http://localhost:9999/" + this.router.url + "?exampleName=" + exampleName;
 
     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
     setTimeout(() => { this.isRunCode = true; }, 500) 

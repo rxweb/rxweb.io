@@ -103,7 +103,7 @@
                 },
                 {
                     "title": "List",
-                    "uri": "rxweb-generics/generics/list",
+                    "uri": null,
                     "otherUri": "list",
                     "linkTitle": "list",
                     "isOpen": true,
@@ -2065,7 +2065,7 @@
             "childrens": [
                 {
                     "title": "Quick Start",
-                    "uri": "/rxweb-localization/localization/localization-quick-start",
+                    "uri": "/rxweb-localization/localization-getting-started",
                     "isActive": false,
                     "linkTitle": "local-storage"
                 },
