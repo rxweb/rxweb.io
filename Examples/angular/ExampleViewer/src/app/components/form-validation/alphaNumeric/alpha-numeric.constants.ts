@@ -21,13 +21,13 @@ import { AlphaNumericMessageKeyValidatorComponent } from "src/assets/examples/re
 import { AlphaNumericDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/dynamic/alpha-numeric-dynamic.component";
 import { AlphaNumericDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alphaNumeric/dynamic/alpha-numeric-dynamic.component";
 import { AlphaNumericAddComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/add/alpha-numeric-add.component";
-import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-directives/alphaNumeric/add/alpha-numeric-add.component";
 import { AlphaNumericAddTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/alphaNumeric/add/alpha-numeric-add.component";
 import { AlphaNumericAddValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alphaNumeric/add/alpha-numeric-add.component";
 import { AlphaNumericEditComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/edit/alpha-numeric-edit.component";
 import { AlphaNumericLocaleComponent } from "src/assets/examples/reactive-form-validators/decorators/alphaNumeric/locale/alpha-numeric-locale.component";
 import { AlphaNumericLocaleValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/alphaNumeric/locale/alpha-numeric-locale.component";
 import { AlphaNumericLocaleTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/alphaNumeric/locale/alpha-numeric-locale.component";
+import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from 'src/assets/examples/reactive-form-validators/template-driven/validation-directives/alphaNumeric/add/alpha-numeric-add.component';
 
 
 export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
@@ -49,7 +49,7 @@ export const ALPHA_NUMERIC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
 						conditionalExpression : AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 						messageKey : AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
-						locale:AlphaNumericAddTemplateDrivenValidationDirectivesComponent
+						
 					
 			  },
 	template_driven_validation_decorators:{

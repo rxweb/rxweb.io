@@ -11,7 +11,7 @@ import { AlphaNumericMessageTemplateDrivenValidationDirectivesComponent } from '
 import { AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/alpha-numeric-conditional-expression.component';
 import { AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/alpha-numeric-message-key.component';
 import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from './add/alpha-numeric-add.component';
-import { AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent } from './locale/alpha-numeric-locale.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +20,8 @@ import { AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent } from '.
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent
+	AlphaNumericAddTemplateDrivenValidationDirectivesComponent
+	
   ],
 entryComponents: [
 	AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent,
@@ -29,8 +29,8 @@ entryComponents: [
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent
+	AlphaNumericAddTemplateDrivenValidationDirectivesComponent
+	
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -44,8 +44,8 @@ entryComponents: [
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent
+	AlphaNumericAddTemplateDrivenValidationDirectivesComponent
+	
   ],
 
 })
