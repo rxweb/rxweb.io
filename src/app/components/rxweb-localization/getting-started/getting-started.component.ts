@@ -29,5 +29,8 @@ export class LocalizationGettingStartedComponent implements OnInit {
     
     this.applicationBroadCaster.topSubject.next(this.pageTitle);
   }
+  scrollTo(section) {
+    window.location.hash = section;
+  }
 
 }

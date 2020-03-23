@@ -36,5 +36,6 @@ export class QuickStartComponent implements OnInit {
     this.applicationBroadCaster.topSubject.next(this.pageTitle);
     this.showComponent = true;
   }
+  
 
 }
