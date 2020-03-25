@@ -67,25 +67,7 @@
         },
         {
             "title": "Routes",
-            "childrens": [
-                {
-                    "title": "Getting Started",
-                    "uri": "/rxweb-router/router-getting-started"
-                },
-                {
-                    "title": "routerModule",
-                    "uri": "/rxweb-router/router/router-module",
-                    "isActive": false
-                },
-                {
-                    "title": "Authorization Resolver",
-                    "uri": "/rxweb-router/router/access"
-                },
-                {
-                    "title": "Middleware",
-                    "uri": "/rxweb-router/router/middleware"
-                }                         
-            ],
+             "uri":null,
             "isActive": false
         },
         {
@@ -2038,50 +2020,12 @@
         },
         {
             "title": "Storage",
-            "childrens": [
-                {
-                    "title": "Getting Started",
-                    "uri": "/rxweb-storage/storage-getting-started",
-                    "isActive": false,
-                    "linkTitle": "getting-started"
-                },
-                {
-                    "title": "Local Storage",
-                    "uri": "/rxweb-storage/storage/local-storage",
-                    "isActive": false,
-                    "linkTitle": "local-storage"
-                },
-                {
-                    "title": "Session Storage",
-                    "uri": "/rxweb-storage/storage/session-storage",
-                    "isActive": false,
-                    "linkTitle": "session-storage"
-                }
-            ],
-            "isActive": false
+            "uri":null,
+                       "isActive": false
         },
         {
             "title": "Localization",
-            "childrens": [
-                {
-                    "title": "Quick Start",
-                    "uri": "/rxweb-localization/localization-getting-started",
-                    "isActive": false,
-                    "linkTitle": "local-storage"
-                },
-                {
-                    "title": "Global Setup",
-                    "uri": "/rxweb-localization/localization/global-setup",
-                    "isActive": false,
-                    "linkTitle": "global-setup"
-                },
-                {
-                    "title": "Page Level Rendering",
-                    "uri": "/rxweb-localization/localization/page-level",
-                    "isActive": false,
-                    "linkTitle": "page-level"
-                }
-            ],
+             "uri":null,
             "isActive": false
         }
     ]

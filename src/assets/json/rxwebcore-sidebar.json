@@ -167,13 +167,13 @@
                     "childrens": [],
                     "title": "Database",
                     "path": "database",
-                    "uri": "/rx-web-core/best-practices/database"
+                    "uri": null
                 },
                 {
                     "childrens": [],
                     "title": "Restful",
                     "path": "restful",
-                    "uri": "/rx-web-core/best-practices/restful"
+                    "uri": null
                 },
                 {
                     "childrens": [],

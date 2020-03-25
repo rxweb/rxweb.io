@@ -23,7 +23,7 @@ This involves using Nouns instead of verbs. The url to access should contain the
 <ul class="bullet-list">
    <li class="overview-nav-item">Name the controller in the plural form.</li>   
    <li class="overview-nav-item">The constructed endpoint should be as below:
-   <b>Correct way</b>
+   <h3>Correct way</h3>
    <table class="table table-bordered">
    <tr><th>API Endpoint</th></tr>
    <tr><td>GET /Students/1</td></tr>
@@ -35,7 +35,7 @@ This involves using Nouns instead of verbs. The url to access should contain the
    
    </table>
 
-   <b>Incorrect way</b>
+   <h3>Incorrect way</h3>
  <table class="table table-bordered">
    <tr><th>API Endpoint</th></tr>
    <tr><td>GET /Student/getStudents/1</td></tr>
@@ -49,7 +49,7 @@ This involves using Nouns instead of verbs. The url to access should contain the
    </li>   
    <li class="overview-nav-item">While using child controller, the api endpoint should be:
 
-   <b>Child Controller</b>
+   <h3>Child Controller</h3>
    <table class="table table-bordered">
    <tr><th>API Endpoint</th></tr>
    <tr><td>GET /Students/1/StudentDetails/2</td></tr>
