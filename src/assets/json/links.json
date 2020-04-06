@@ -2022,11 +2022,7 @@
             "title": "Storage",
             "uri":null,
                        "isActive": false
-        },
-        {
-            "title": "Localization",
-             "uri":null,
-            "isActive": false
         }
+
     ]
 }
