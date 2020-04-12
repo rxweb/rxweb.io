@@ -18,9 +18,7 @@ export class StronglyTypeCompleteComponent implements OnInit {
 
     ngOnInit() {
         this.userFormGroup  = this.formBuilder.formGroup(User) as IFormGroup<User>;
-        this.userFormGroup.controls.fullName.setValue("John");
-        let fullName = this.userFormGroup.value.fullName;
-        
-    }
+        let user:User = this.userFormGroup.modelInstance;
+       }
 
 }
