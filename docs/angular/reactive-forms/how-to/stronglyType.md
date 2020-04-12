@@ -22,4 +22,14 @@ Next, we need to write html code.
 <div component="app-code" key="stronglyType-complete-html"></div> 
 <div component="app-example-runner" ref-component="app-stronglyType-complete"></div>
 
+# Maintaining formControl value as per the Defined Types
+As properties defined in the model can have different data types according to the field requirement and the form is strongly typed with the model, the formControl value should be according the type mentioned in the model. 
 
+This can be achieved using sanitizers of <a class="redirect-link" href="/rxweb-sanitizers/sanitizers-getting-started">@rxweb/sanitizers</a>. These sanitizers are used as decorator above the property in the model.
+
+In the below scenario i have a strongly typed form in which the `accept` property is boolean therefore adding `toBoolean` decorator on the property which retrieve the `accept` formControl as boolean  
+
+<div component="app-code" key="stronglyType-defined-component"></div> 
+Next, we need to write html code.
+<div component="app-code" key="stronglyType-defined-html"></div> 
+<div component="app-example-runner" ref-component="app-stronglyType-defined"></div>

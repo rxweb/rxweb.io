@@ -6,5 +6,13 @@
         "model": "import { prop } from \"@rxweb/reactive-form-validators\"\r\n\r\nexport class User{\r\n  \r\n  @prop()\r\n  fullName:string;\r\n\r\n}",
         "modelName": "user.model.ts",
         "json": {}
+    },
+    "define": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup,Validators } from \"@angular\/forms\"\r\n\r\nimport { RxFormBuilder,IFormGroup } from '@rxweb\/reactive-form-validators';\r\nimport { User } from \".\/user.model\"\r\n\r\n@Component({\r\n    selector: 'app-stronglyType-defined',\r\n    templateUrl: '.\/strongly-type-defined.component.html'\r\n})\r\nexport class StronglyTypeDefinedComponent implements OnInit {\r\n    acceptCookies =[\"Yes\",\"No\"];\r\n    userFormGroup: IFormGroup<User>\r\n\r\n    constructor(\r\n        private formBuilder: RxFormBuilder\r\n    ) { }\r\n\r\n    ngOnInit() {\r\n        this.userFormGroup  = this.formBuilder.formGroup(User) as IFormGroup<User>;\r\n    }\r\n\r\n}",
+        "html": "<div>\r\n    <form [formGroup]=\"userFormGroup\">\r\n        <div class=\"form-group\">\r\n            <label for=\"fullName\">Full Name<\/label>\r\n            <input id=\"fullName\" type=\"text\" formControlName=\"fullName\" class=\"form-control\" \/>\r\n        <\/div>\r\n        <div class=\"form-group\">\r\n            <label for=\"age\">Age<\/label>\r\n            <input id=\"age\" type=\"number\" formControlName=\"age\" class=\"form-control\" \/>\r\n        <\/div>\r\n        <div class=\"form-group\">\r\n            <label for=\"accepted\">Do you accept cookies?<\/label>\r\n            <select id=\"accepted\" formControlName=\"accepted\" class=\"form-control\">\r\n              <option *ngFor=\"let item of acceptCookies\">{{item}}<\/option>\r\n              <\/select>\r\n        <\/div>\r\n    <\/form>\r\n\r\n      {{this.userFormGroup.modelInstance | json}}\r\n\r\n<\/div>",
+        "model": "import { prop, toBoolean,sanitize } from \"@rxweb\/reactive-form-validators\"\r\n\r\nexport class User{\r\n\r\n  @prop()\r\n  fullName:string;\r\n\r\n  @prop()\r\n  age: number;\r\n\r\n  @prop()\r\n  @toBoolean()\r\n  accepted: boolean;\r\n}",
+        "modelName": "user.model.ts",
+        "json": {}
     }
 }

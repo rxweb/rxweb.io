@@ -4,17 +4,17 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { StronglyTypeCompleteComponent } from './complete/strongly-type-complete.component';
-
+import { StronglyTypeDefinedComponent } from './defined/strongly-type-defined.component';
 
 
 
 
 @NgModule({
   declarations: [
-    StronglyTypeCompleteComponent
+    StronglyTypeCompleteComponent,StronglyTypeDefinedComponent
   ],
 entryComponents: [
-	StronglyTypeCompleteComponent
+	StronglyTypeCompleteComponent,StronglyTypeDefinedComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -23,7 +23,7 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-	StronglyTypeCompleteComponent
+	StronglyTypeCompleteComponent,StronglyTypeDefinedComponent
   ],
 
 })
