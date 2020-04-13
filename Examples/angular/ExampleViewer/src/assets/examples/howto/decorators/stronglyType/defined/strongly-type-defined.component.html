@@ -11,7 +11,7 @@
         <div class="form-group">
             <label for="accepted">Do you accept cookies?</label>
             <select id="accepted" formControlName="accepted" class="form-control">
-              <option *ngFor="let item of acceptCookies">{{item}}</option>
+              <option [value]="item.value" *ngFor="let item of acceptCookies">{{item.text}}</option>
               </select>
         </div>
     </form>

@@ -9,7 +9,7 @@ import { User } from "./user.model"
     templateUrl: './strongly-type-defined.component.html'
 })
 export class StronglyTypeDefinedComponent implements OnInit {
-    acceptCookies =["Yes","No"];
+    acceptCookies =[{"text":"Yes",value:"True"},{"text":"No",value:"false"}];
     userFormGroup: IFormGroup<User>
 
     constructor(
