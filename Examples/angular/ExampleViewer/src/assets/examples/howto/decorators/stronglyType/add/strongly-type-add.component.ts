@@ -5,10 +5,10 @@ import { RxFormBuilder,IFormGroup } from '@rxweb/reactive-form-validators';
 import { User } from "./user.model"
 
 @Component({
-    selector: 'app-stronglyType-complete',
-    templateUrl: './strongly-type-complete.component.html'
+    selector: 'app-stronglyType-add',
+    templateUrl: './strongly-type-add.component.html'
 })
-export class StronglyTypeCompleteComponent implements OnInit {
+export class StronglyTypeAddComponent implements OnInit {
 
     userFormGroup: IFormGroup<User>
 
