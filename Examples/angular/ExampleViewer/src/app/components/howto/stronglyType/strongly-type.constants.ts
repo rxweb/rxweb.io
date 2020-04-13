@@ -1,6 +1,6 @@
-import { StronglyTypeCompleteComponent } from "src/assets/examples/howto/decorators/stronglyType/complete/strongly-type-complete.component";
 
-import { StronglyTypeDefinedComponent } from "src/assets/examples/howto/decorators/stronglyType/define/strongly-type-defined.component";
+import { StronglyTypeAddComponent } from 'src/assets/examples/howto/decorators/stronglyType/add/strongly-type-add.component';
+import { StronglyTypeDefinedComponent } from 'src/assets/examples/howto/decorators/stronglyType/defined/strongly-type-defined.component';
 
 
 
@@ -10,7 +10,7 @@ export const STRONGLY_TYPE_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = 
    
     decorators:
     {
-        complete:StronglyTypeCompleteComponent,
+        add:StronglyTypeAddComponent,
         defined:StronglyTypeDefinedComponent
     }
 }
