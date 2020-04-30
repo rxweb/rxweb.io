@@ -1,0 +1,9 @@
+{
+  "placeholder": {
+    "buildingName": "Entrez le nom de votre immeuble"
+  },
+  "text": {
+    "buildingName": "Nom du bâtiment",
+    "create": "Créer un compte"
+  }
+}

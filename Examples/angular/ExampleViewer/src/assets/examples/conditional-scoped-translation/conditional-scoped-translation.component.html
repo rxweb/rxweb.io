@@ -1,0 +1,10 @@
+<h4 class="example-title">{{global.conditionalScopeTitle}}</h4>
+<form class="work-sanslight mg-left-5 form-font-size">
+    <div class="form-group">
+      <div style="margin-top:10px;">
+        <button type="button" [class.active-bg-gray]="questionType == 1" (click)="askQuestion(1)" class="btn only-border padding-zero mr-2">{{global.text.firstQuestion}}</button>
+        <button type="button" [class.active-bg-gray]="questionType == 2" (click)="askQuestion(2)" class="btn only-border padding-zero">{{global.text.secondQuestion}}</button>
+      </div>
+        <p class="col-form-label" style="margin:10px;"><b>{{global.text.conditionalText}}</b></p>
+    </div>
+</form>

@@ -1,0 +1,91 @@
+<header>
+    <!-- <div class="bg__primary">
+        <div class="container container__lg container__lg">
+            <div class="top__menu__bar d-flex py-2">
+                <ul class="ml-auto d-flex m-0 p-0 top__lang__menu">
+                    <li class="ml-4">
+                        <a href="">EN</a>
+                    </li>
+                    <li class="ml-4">
+                        <a href="">FR</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <div class="rx__navbar">
+        <div class="container container__lg container__lg">
+
+            <nav class="navbar rx__navbar__expand navbar-expand-md p-0">
+                <a href="" class="navbar-brand pt-0">
+                    <img src="assets/images/logo.png" height="28" width="120" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse rx__navbar__collapse navbar-collapse " id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown mx-2" routerLinkActive="active">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Binding
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                <a *ngFor="let link of bindingLinks" class="dropdown-item" 
+                                    [routerLink]="link.uri">{{link.title}}</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown mx-2" routerLinkActive="active">
+                            <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translation Strategy
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                <a *ngFor="let link of translationStrategyLinks" class="dropdown-item"
+                                     [routerLink]="link.uri">{{link.title}}</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown mx-2" routerLinkActive="active">
+                            <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content Translation
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+
+                                <a *ngFor="let link of contentStrategyLinks" class="dropdown-item"
+                                    [routerLink]="link.uri">{{link.title}}</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item mx-2" routerLinkActive="active">
+                            <a class="nav-link " routerLink="/translate/api">Api</a>
+
+                        </li>
+                       
+                        <li class="nav-item  mx-2" routerLinkActive="active">
+                            <a class="nav-link" routerLink="/translate/power-tool">Power Tool</a>
+
+                        </li>
+                        <li class="nav-item mx-2" routerLinkActive="active">
+                            <a class="nav-link " routerLink="/translate/comparison">Comparison</a>
+
+                        </li>
+                    </ul>
+                </div>
+               
+                <!-- <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group  rx__navbar__search">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-append">
+                                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                          </div>
+                 
+                  </form> -->
+            </nav>
+        </div>
+    </div>
+</header>

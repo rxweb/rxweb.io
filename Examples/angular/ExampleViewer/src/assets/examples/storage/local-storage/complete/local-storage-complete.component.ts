@@ -18,7 +18,6 @@ export class LocalStorageCompleteComponent implements OnInit {
   }
 
   get() {
-    debugger
     this.localStorageData = this.browserStorage.local.get('userName');
   }
 

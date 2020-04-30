@@ -1,0 +1,29 @@
+{
+  "loginTitle": "S'identifier",
+  "asyncTitle": "Traduction de l'async",
+  "scopedTitle": "Variable de portée du composant de traduction avec clé",
+  "onDemandTitle": "Traduction de contenu à la demande",
+  "conditionalScopeTitle": "Liaison de portée conditionnelle",
+  "bindingByKeyNameLabel": "Architecture propre",
+  "placeholder": {
+    "userName": "Entrez votre nom d'utilisateur",
+    "password": "Tapez votre mot de passe",
+    "freeText": "Entrez du texte libre"
+  },
+  "text": {
+    "bindingByKeyNameDescription": "RxWeb suit les principes de conception qui produisent du code avec une séparation claire des préoccupations. Il en résulte un code bien structuré facilement testable.",
+    "preloadText": "La description affichée de la traduction de préchargement en arrière-plan est chargée via la stratégie de préchargement",
+    "selectedRecord": "Vous avez sélectionné l'enregistrement de '{name}'",
+    "firstQuestion": "Qui êtes vous?",
+    "secondQuestion": "Que faites-vous?",
+    "description": "",
+    "conditionalText": "this.fullName == '' ? '' : this.fullName != '' && this.questionType == 1 ? this.global.simpleAnswer : this.global.perfectAnswer",
+    "userName": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "freeText": "Texte libre",
+    "enteredText": "Vous avez saisi du texte est: {{freeText}}"
+  },
+  "simpleAnswer": "Je suis @rxweb/translate library, je serai bientôt dans votre projet pour un travail de traduction intelligent 😜.",
+  "perfectAnswer": "En ce moment, je te regarde. C'est gentil 😎."
+}

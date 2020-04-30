@@ -1,0 +1,174 @@
+<div>
+  <div class="container container__lg">
+    <section class="my-4 my-lg-5">
+      <div class="title-bar title-bar-translate top_title">
+        <p>
+          Content Translation
+        </p>
+      
+      </div>
+      <div class="title-bar-translate-description title-bar">
+        <p>We follow the design principle and practices for smart work, Like in any way with this package automatically
+        you are going to follow the <b class="description-highlighted">Single Responsibility Principle</b> and <b class="description-highlighted">Single Source Of Truth
+        </b>Practices. We are sure these practices won't bog you down even the application gets bigger gradually 😇.</p>
+      </div>
+    </section>
+    <div class="row mx-0 rxweb__card">
+      <div
+        class="col-md-6 section-background-light padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0 ">
+          <span>Content Translation By URL</span>
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          As large scale applications required the content translation based upon the URL alike <b>/en/user</b> or
+          <b>fr/user</b>, We prefer without putting our brain to resolve the content based upon URL language code, Let
+          library manage this work elegantly 👏.
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse10" role="button" aria-expanded="false"
+          aria-controls="card__collapse10">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Content Translation By URL Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-content-translation-by-url-btxdsr?file=src/app/signup/signup.component.html">
+          <i class="fa fa-external-link-alt"></i>
+        </a>
+        <app-content-translation-by-url *rxTranslate="true"></app-content-translation-by-url>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse10">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right">
+            <app-code class="dir cur__dir" [items]="urlContentTranslations" scopeName="urlContent" [treeItems]="urlContentTranslations">
+            </app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="urlContent-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code id="urlContent-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mg-top mx-0 rxweb__card">
+      <div
+        class="col-md-6 padding-top-15 padding-bottom-20 bold-title flex-column justify-content-center  rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0  mg-top-20">
+          <span>Programmable Content Translation</span>
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          This gives us full control to change the language based upon our business logic. For changing the language
+          we resolve the <b>RxTranslateService</b> class through component constructor and use the available method for
+          changing the language.
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse11" role="button" aria-expanded="false"
+          aria-controls="card__collapse11">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Programmable Content Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-programmable-content-translations-jd1zkr?file=src/app/login/login.component.ts">
+          <i class="fa fa-external-link-alt"></i>
+        </a>
+        <app-progammable-content-translation *rxTranslate="true"></app-progammable-content-translation>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse11">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right">
+            <app-code class="dir cur__dir" [items]="programmableContentTranslations" scopeName="programmableContent"
+              [treeItems]="programmableContentTranslations">
+            </app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="programmableContent-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code id="programmableContent-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mg-top mx-0 rxweb__card">
+      <div
+        class="col-md-6 section-background-light padding-bottom-20 padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0  mg-top-20">
+          <span>Fixed Content Translation</span>
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          Some of the shared component we may need to show the text in anyone fixed language rather than the application
+          current language. You can achieve this by simply passing the language value in the <b>@translate</b>
+          decorator.
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse12" role="button" aria-expanded="false"
+          aria-controls="card__collapse12">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Fixed Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-fixed-language-content-translations-uaq3aw?file=src/app/home/home.component.ts">
+          <i class="fa fa-external-link-alt"></i>
+        </a>
+        <app-fixed-language-translation *rxTranslate="true"></app-fixed-language-translation>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse12">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right">
+            <app-code class="dir cur__dir" [items]="fixedContentTranslations " scopeName="fixedContent" [treeItems]="fixedContentTranslations">
+            </app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="fixedContent-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code id="fixedContent-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>

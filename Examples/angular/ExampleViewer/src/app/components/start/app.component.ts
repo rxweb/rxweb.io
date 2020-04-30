@@ -119,7 +119,6 @@ export class AppComponent implements OnInit {
         else if (location.pathname.includes("rx-web-core")) {
           this.isShowSidebar = false;
           this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
-            debugger
             this.isShowSidebar = true
           })
         }

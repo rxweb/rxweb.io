@@ -1,0 +1,18 @@
+{
+  "urlContentTitle": "Traduction de contenu par URL",
+  "placeholder": {
+    "firstName": "Entrez votre prénom",
+    "lastName": "Entrer le nom de famille",
+    "email": "Entrer l'adresse e-mail",
+    "password": "Entrer le mot de passe"
+  },
+  "text": {
+    "lastName": "Nom de famille",
+    "firstName": "Prénom",
+    "userRegistration": "Enregistrement de l'utilisateur",
+    "create": "Créer un utilisateur",
+    "email": "Email",
+    "password": "Mot de passe",
+    "url": "URL"
+  }
+}

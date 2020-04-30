@@ -52,7 +52,7 @@ import { WhatsNewComponent } from './whats-new/whats-new.component';
 import { WhyRxwebComponent } from './why/why-component';
 import { ChangeLogComponent } from './changelog/change-log.component';
 import { ContributorsComponent } from './contributors/contributors-component';
-
+import { RxTranslateModule } from '@rxweb/translate';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
   
@@ -65,6 +65,7 @@ import { AngularHomeComponent } from './angular-home-page/angular-home.component
 import { QuickStartComponent } from './quick-start/quick-start.component';
 import { VueGettingStartedComponent } from './vue-getting-started/vue-getting-started.component';
 import { VueHomePageComponent } from './vue-home-page/vue-home-page.component';
+import { StaticTranslationComponent } from 'src/assets/examples/static-translation/static-translation.component';
 registerLocaleData(localePt)
 
 //import { TextPageComponent } from './text-page/text-page.component';
@@ -74,13 +75,21 @@ registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
-    AppComponent, SideBarComponent, VueHomePageComponent,AngularHomeComponent,VueGettingStartedComponent, ChildLinkItemComponent, LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, QuickStartComponent],
+    AppComponent, SideBarComponent, VueHomePageComponent,AngularHomeComponent,VueGettingStartedComponent, ChildLinkItemComponent, 
+    LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, 
+    ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, QuickStartComponent,
+    
+  ],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
     BrowserAnimationsModule,
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
-
+    RxTranslateModule.forRoot({
+      cacheLanguageWiseObject: true,
+      globalFilePath: "assets/i18n/{{language-code}}/global.{{language-code}}.json",
+      filePath: "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json"
+    })
   ],
   providers: [RxValidation, ApplicationBroadcaster,
     {

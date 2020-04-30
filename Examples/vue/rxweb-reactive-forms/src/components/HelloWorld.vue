@@ -70,7 +70,6 @@ export default class HelloWorld extends Vue {
   formBuilder:RxFormBuilder = new RxFormBuilder();
   constructor(){
     super();
-    debugger;
 this.formGroup = this.formBuilder.formGroup(UserInfo) as IFormGroup<UserInfo>
 console.log(this.formGroup);
   }

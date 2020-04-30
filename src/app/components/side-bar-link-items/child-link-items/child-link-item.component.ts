@@ -26,9 +26,20 @@ export class ChildLinkItemComponent implements OnInit {
    
   }
 
+  hideActive(item: any) {
+    item.isActive = false;
+    item.isOpen = false;
+    if (item.childrens) {
+      item.childrens.forEach(element => {
+        this.hideActive(element);
+      })
+    }
+  }
+
   navigateTo(link: any): void {
     this.links.forEach(element => {
       if (element.title != link.title) {  
+        // this.hideActive(element);
         element.isActive = false;
         element.isOpen = false;
       }

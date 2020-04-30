@@ -149,6 +149,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/rxweb-storage/rxweb-storage.module#RxwebStorageModule',
   },
   {
+    path: 'rxweb-translate',
+    loadChildren: 'src/app/components/rxweb-translate/rxweb-translate.module#RxwebTranslateModule',
+  },
+  {
     path: 'coming-soon',
     component: ComingSoonComponent,
   },

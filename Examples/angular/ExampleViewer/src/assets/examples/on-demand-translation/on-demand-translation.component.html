@@ -1,0 +1,36 @@
+<h4 class="example-title">{{multilingualContent.onDemandTitle}}</h4>
+<div class="work-sanslight mg-left-5">
+    <div class="table-responsive table-bordered">
+        <table class="table mb-0 fs-14 table_md">
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let user of users;">
+                    <td>{{user.name}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td class="text-center">
+                        <a (click)="selectUser(user)" class="mx-2 " title="Select">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 mx-auto mt-2">
+            <div *ngIf="message" style="background-color:#5e95ce!important;color:white;" class="alert alert-primary"
+                role="alert">
+                {{message}}
+            </div>
+        </div>
+    </div>
+</div>

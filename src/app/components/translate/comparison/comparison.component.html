@@ -1,0 +1,128 @@
+<div class="container container__lg">
+    <section class="my-4 my-lg-5">
+        <div class="title-bar title-bar-translate top_title">
+            <p>Comparison</p>
+        </div>
+    <!-- </section>
+    <section>
+        <div class="row mx-0 rxweb__card"> -->
+            <div class="title-bar-translate-description title-bar col-md-12 padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
+                <p>
+                    As a RxWeb Community Member, We respect all Open Source Community wonderful people on their
+                    extraordinary work, We are the kid in front of them. They give us the inspiration to do our best for
+                    providing the exemplary features of the library which makes enterprise application code must be
+                    readable, maintainable, and faster. We don't prefer to compare their features with ours, Because
+                    they have done a super job by spending a lot of time on the package for helping the community
+                    developers. It's up to you to decide which is suitable for your project after analyzing all aspects
+                    of your application requirement.
+                </p>
+                <p>
+                    <b class="description-highlighted">So, the question comes then Why we have created this page?</b>
+                </p>
+                <p class="comparison-content">
+                    We have created this page to help you to decide whether this package is suitable for your project or
+                    not. After releasing this package we have seen lots of queries where dev community is comparing this
+                    package with others and would like to know the different features which are not available in others.
+                    We are not saying that the features are provided by this package is not available in others. Every
+                    package is designed with the different objective to solve the developer community problem. Our
+                    objective is to provide elegant appraoch.
+                </p>
+                <p class="comparison-content">
+                    We got positive responses, exemplary suggestions to make our library more robust and give us the
+                    confidence to spend more time on this package. But on the other side, we got some open fire negative
+                    responses without knowing the features about the package on the good article posting sites. We are
+                    not getting upset with the negative responses but we are
+                    happy to know the problem rather than open fire statements.
+                </p>
+                <p class="comparison-content">
+                    Let's come to the point to share the features information.
+                </p>
+                <p class="comparison-content">
+                    Before deep dive into the features would like to share the reason for developing this package.
+                </p>
+                <p class="comparison-content">
+                    The core objective of developing this package is to code must be simple and readable, anyone can
+                    understand easily without looking into the multiple files. Instead of reinventing the wheel try to
+                    use as much as an available feature from the Angular and TypeScript.
+                </p>
+                <ol>
+                    <li class="rxweb_card_desc">
+                        Zero handwritten code for configuration, the 'rxweb' CLI automatically sets the configuration
+                        while setup the translation.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        Zero configuration required on module level imports or service creation. Import the RxWebModule
+                        in the root module and that works throughout the application.
+                    </li>
+
+                    <li class="rxweb_card_desc">
+                        We love design patterns/principles and with this package, you don't need to write any business
+                        logic in the template as templates are not meant for that. Use Angular Interpolation double
+                        curly bracket for traduction the text as per active language even though instance parameters required
+                        in the text. The parameterized / Conditional text will be automatically resolved without passing
+                        the additional object 😊. You may like it.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        As we are a developer and we are busy developing overembellish functionalities to the
+                        application. By considering this case we don't want you to write jumble of code of resolving the
+                        multilingual content. Everything will be managed by using the @translate decorator even those
+                        are Smart Component or Dumb (Page) Component.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        Strongly Typed translation property. We won't say anything more about this. Have a look at the
+                        video.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        Simple translation management through JSON file in a structured way.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        Our hunger won't be fulfilled by knowing the above features as there is a need where JSON file
+                        won't work like Lookup data which is coming from the backend server and those will be changed
+                        once
+                        the application language is changed. Don't worry we have an optimum solution for this by passing
+                        the
+                        custom service class to the '@asyncTranslate` decorator. This gives full control to the
+                        developer to
+                        load the content according to the application of business logic. But wait!, How can we subscribe
+                        to
+                        the language change event? No, you don't haftoo worry about that, the custom service class
+                        automatically initialized and method will be called once the application language will be
+                        changed.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        On-demand parameter based scoped translation can be managed through TranslationService.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        Flexibility to load the translation content Before resolving the page component/shared component
+                        as
+                        well as you can load the content with Angular Pre Loading Strategy.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        Numerous ways to change the language of the application By URL as well as programmable.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        We don't prefer to cache the object into the browser memory or load the all language content
+                        during load time of the page. Only those multilingual content will be loaded which is required. As we
+                        said we don't prefer to cache the object into the browser memory because CDN is available then why we
+                        have to cache the object. But still we have given a feature to cache the multilingual content into the
+                        memory.
+                    </li>
+                    <li class="rxweb_card_desc">
+                        The most extensive feature which saves your time with this package is automatically generates
+                        the keys in the JSON files based upon the written code in the template and Optimize the JSON file
+                        after build the project. Optimization is not that a like minify the JSON data into one line but this
+                        analyse all the template files and check that how many properties are defined in the JSON but not used
+                        in the template those will be removed after firing the optimize command through rxweb cli.
+                    </li>
+                </ol>
+                <p class="comparison-content">
+                    We hope you may liked the provided features, if you have any suggestion please feel free to share on
+                    our
+                    git repo or give a star to this package on 
+                    <a href="https://github.com/rxweb/rxweb" target="_blank">git repo</a>.
+                </p>
+            </div>
+        <!-- </div> -->
+    </section>
+</div>
+<app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>

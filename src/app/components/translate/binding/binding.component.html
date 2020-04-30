@@ -1,0 +1,327 @@
+<div class="container container__lg">
+  <section class="my-4 my-lg-5">
+    <div class="title-bar title-bar-translate top_title">
+      <p>
+        Binding
+      </p>
+
+    </div>
+    <div class="title-bar-translate-description title-bar">
+      <p>Our prima facie is to provide flexible, faster, simple translation binding and code easier to be changed when
+        needed. We have done it through decorators which tells our light weight package to resolve the localized text of the
+        component. We are sure you will love 🤗 all of the features 🌈. Have a look!</p>
+    </div>
+    <div class="language-tab top__menu__bar d-flex py-2 ml-auto">
+      <ul class="ml-auto d-flex m-0 p-0 top__lang__menu nav nav-tabs nav-fill">
+        <li class="nav-item nav-link">
+          <a title="English" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+            [class.active]="multilingualContent.languageCode == 'en'" (click)="changeLanguage('en')" role="tab"
+            aria-controls="nav-home" aria-selected="true">EN</a>
+        </li>
+        <li class="nav-item nav-link">
+          <a title="France" class="nav-item nav-link" id="nav-home-tab" data-toggle="tab"
+            [class.active]="multilingualContent.languageCode == 'fr'" (click)="changeLanguage('fr')" role="tab"
+            aria-controls="nav-home" aria-selected="true">FR</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row mx-0 rxweb__card">
+      <div
+        class="col-md-6 section-background-light padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
+        <h2 class="pt-left pt-4 pt-lg-0">
+          <span>Static</span> Translation
+        </h2>
+        <p class="px-lg-4 rxweb_card_desc">
+          This is the one of the most beautiful feature 🙃 of the library relys on the Angular interpolation for
+          displaying a localized text in the respective view template with double curly braces syntax. Have a look at
+          the example 👉
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse" role="button" aria-expanded="false"
+          aria-controls="card__collapse">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Static Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-static-translation-tenspt?file=src/app/global/global.component.html">
+          <i class="fa fa-external-link"></i>
+        </a>
+        <app-static-translation></app-static-translation>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code class="dir cur__dir" [items]="staticTranslations" scopeName="static" [treeItems]="staticTranslations"></app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="static-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code class="translate-code" class="translate-code" id="static-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mg-top mx-0 rxweb__card">
+      <div class="col-md-6  padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0 ">
+          <span>Scoped</span> Translation
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          We use Angular interpolation for Component Scoped Property Binding with translation text, This gives
+          fantabulous 😲 solution of the problem of writing the little lines of business logic in the template and with
+          this way the template is much clear.
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed  show-code"
+          data-toggle="collapse" href="#card__collapse1" role="button" aria-expanded="false"
+          aria-controls="card__collapse1">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Scoped Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-scope-translation-edi2ab?file=src/app/global/global.component.html">
+          <i class="fa fa-external-link"></i>
+        </a>
+        <app-scoped-translation></app-scoped-translation>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse1">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code scopeName="scoped" [items]="scopedTranslations" class="dir cur__dir" [treeItems]="scopedTranslations"></app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="scoped-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code class="translate-code" id="scoped-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mg-top mx-0 rxweb__card">
+      <div
+        class="col-md-6 section-background-light padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0">
+          <span>Conditional Scoped</span> Translation
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          One of the richest feature of the library 😍, which gives complete felxibility to run the translation property
+          string code same as same as existing component scoped method.
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse2" role="button" aria-expanded="false"
+          aria-controls="card__collapse2">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Conditional Scoped Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-conditional-scoped-translation-ukd3u1?file=src/app/global/global.component.ts">
+          <i class="fa fa-external-link"></i>
+        </a>
+        <app-conditional-scoped-translation></app-conditional-scoped-translation>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse2">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code scopeName="conditional" [items]="conditionalTranslations" class="dir cur__dir" [treeItems]="conditionalTranslations"></app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="conditional-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code class="translate-code" id="conditional-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mg-top mx-0 rxweb__card">
+      <div
+        class="col-md-6 padding-bottom-20 padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0 ">
+          <span>Async</span> Translation
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          One of the most Simplest and Richest feature of the library and the intergration is much cleaner than
+          expected, Yippee 😉.
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed  show-code"
+          data-toggle="collapse" href="#card__collapse3" role="button" aria-expanded="false"
+          aria-controls="card__collapse3">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Async Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-async-translation-hn6vmp?file=src/app/global/global.component.ts">
+          <i class="fa fa-external-link"></i>
+        </a>
+        <app-async-translation></app-async-translation>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse3">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code class="dir cur__dir" [items]="asyncTranslations" scopeName="async" [treeItems]="asyncTranslations"></app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="async-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code class="translate-code" id="async-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mg-top mx-0 rxweb__card">
+      <div
+        class="col-md-6 section-background-light padding-bottom-20 padding-top-15 bold-title flex-column justify-content-center rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0  ">
+          <span>Binding By</span> KeyName
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">We would not prefer to use this approach 😬, But sometimes we may have to use
+          this because the dynamic nature of the large scale enterprise application to resolve the localized text
+          dynamically. </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse4" role="button" aria-expanded="false"
+          aria-controls="card__collapse4">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Binding By Key Name Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-binding-by-key-name-qp9xsi?file=src/app/global/global.component.html">
+          <i class="fa fa-external-link"></i>
+        </a>
+        <app-binding-by-key-name></app-binding-by-key-name>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse4">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code class="dir cur__dir" [items]="bindingByKeyNameTranslations" scopeName="key-name" [treeItems]="bindingByKeyNameTranslations"></app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="key-name-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code class="translate-code" id="key-name-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mg-top mx-0 rxweb__card">
+      <div class="col-md-6 padding-top-15 bold-title flex-column justify-content-center rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0  ">
+          <span>On Demand Scoped</span> Translation
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          Nothing new approach invented 🤓 for on demand scoped translation. Translation will be done by calling the
+          simple method in the TypeScript Code.
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse5" role="button" aria-expanded="false"
+          aria-controls="card__collapse5">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">On Demand Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-on-demand-translations-mj5jwu?file=src/app/global/global.component.ts">
+          <i class="fa fa-external-link"></i>
+        </a>
+        <app-on-demand></app-on-demand>
+      </div>
+    </div>
+
+    <div class="collapse card__collapse__content bg-white" id="card__collapse5">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code class="dir cur__dir" [items]="ondemandtranslations" scopeName="on-demand" [treeItems]="ondemandtranslations"></app-code>
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="on-demand-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code class="translate-code" id="on-demand-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+<app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>

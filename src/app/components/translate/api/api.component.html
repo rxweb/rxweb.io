@@ -1,0 +1,131 @@
+<div class="container container__lg">
+    <section class="col-md-12 mt-4 mt-lg-5">
+      <div class="title-bar title-bar-translate top_title">
+        <p>Api</p>
+      
+      </div>
+      <div class="title-bar-translate-description title-bar">
+        <p>Parameters, options and usage of the decorators, services and directives of @rxweb translate</p>
+      </div>
+    </section>
+
+    <section>
+        
+      <div class="row mx-0">
+        <div class="col-md-12 padding-top-15 bold-title flex-column justify-content-center">
+          <h2>
+            <span>@translate</span>
+          </h2>
+          <p class="rxweb_card_desc">
+           translate decorator is used to initialize the multilingual content onject through which the translation content is appended into the html.
+          </p>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-active">
+                <tr><th>Parameter</th><th>Description</th></tr>
+              </thead>
+            <tbody>
+            <tr><td><a title="translationName">translationName</a></td><td>translation name is based upon the multilingual content to be resolved from the i18n folder based upon the language code. For example : if you want to retrieve information from  user.en.json the translation name should be user.</td></tr>
+            <tr><td><a title="language">language</a></td><td>languageCode in case of fixed language content</td></tr>
+            <tr><td><a  title="filePath">filePath</a></td><td>The custom path of the json file from which the multilingual content is resolved.</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="row mx-0">
+        <div class="col-md-12  padding-top-15 bold-title flex-column justify-content-center">
+          <h2>
+            <span>rxTranslate</span>
+          </h2>
+          <p class="rxweb_card_desc">
+          rxTranslate directive binds the translation content in the shared components
+          </p>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-active">
+                <tr><th>Parameter</th><th>Description</th></tr>
+              </thead>
+            <tbody>
+            <tr><td><a title="rxTranslate">[rxTranslate]</a></td><td>For Binding the translation content rxTranslate paramater is set true.</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="row mx-0">
+        <div class="col-md-12  padding-top-15 bold-title flex-column justify-content-center">
+          <h2>
+            <span>@asyncTranslate</span>
+          </h2>
+          <p class="rxweb_card_desc">
+          @asyncTranslation is used to perform async translation based upon the retrieval of server data. 
+        </p>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-active">
+                <tr><th>Parameter</th><th>Description</th></tr>
+              </thead>
+            <tbody>
+            <tr><td><a title="serviceModel">serviceModel</a></td><td>Name of the custom service.</td></tr>
+            <tr><td><a title="serviceMethod">serviceMethod</a></td><td>Name of the method of the service which is used for fetching the data.</td></tr>
+            </tbody></table>
+            </div>
+        </div>
+      
+      </div>
+
+      <div class="row mx-0">
+        <div class="col-md-12  padding-top-15 bold-title flex-column justify-content-center">
+          <h2>
+            <span>RxTranslateModule</span>
+          </h2>
+          <p class="rxweb_card_desc">
+         RxTranslateModule is the global configuration used for cache related configurations and path of the multilingual data. 
+        </p>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-active">
+                <tr><th>Parameter</th><th>Description</th></tr>
+              </thead>
+            <tbody>
+            <tr><td><a title="languageCode">languageCode</a></td><td>Language code.</td></tr>
+            <tr><td><a title="filePath">filePath</a></td><td>multilingual json file path.</td></tr>
+            <tr><td><a title="cacheActiveLanguageObject">cacheActiveLanguageObject</a></td><td>Store active language cache set to true or false.</td></tr>
+            <tr><td><a title="cacheLanguageWiseObject">cacheLanguageWiseObject</a></td><td>Store language wise cache set to true or false.</td></tr>
+            <tr><td><a title="globalFilePath">globalFilePath</a></td><td>global multilingual file path.</td></tr>
+            <tr><td><a title="preloadingStrategy">preloadingStrategy</a></td><td>Pre laod module for translation set to true or false</td></tr>
+            </tbody></table>
+            </div>
+        </div>
+      
+      </div>
+
+      <div class="row mx-0">
+        <div class="col-md-12  padding-top-15 bold-title flex-column justify-content-center">
+          <h2>
+            <span>RxTranslation</span>
+          </h2>
+          <p class="rxweb_card_desc">
+            RxTranslation is a service used for translating content and for changing language while programmable language change. 
+        </p>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="table-active">
+                <tr><th>Parameter</th><th>Description</th></tr>
+              </thead>
+            <tbody>
+            <tr><td><a title="change">change</a></td><td>To change the language code.</td></tr>
+            <tr><td><a title="translate">translate</a></td><td>To translate the text.</td></tr>
+
+            </tbody></table>
+          </div>
+        </div>
+      
+      </div>
+      
+    </section>
+</div>
+<app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>

@@ -97,6 +97,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: () => import('src/app/components/rxweb-storage/rxweb-storage.module').then(m => m.RxwebStorageModule),
   },
   {
+    path: 'rxweb-translate',
+    loadChildren: 'src/app/components/rxweb-translate/rxweb-translate.module#RxwebTranslateModule',
+  },
+  {
     path: '**', 
     redirectTo:'home',
     pathMatch: 'full'

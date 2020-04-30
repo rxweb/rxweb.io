@@ -12,11 +12,27 @@
     <div class="model-ts" *ngFor="let item of allContents">
         <div class="code-example-title ng-star-inserted">{{item.title}}</div>
         <div class="code">
-            <a class="float-right copy-icon" ngxClipboard [cbContent]="item.content" (cbOnSuccess)="CodeContentCopied = true"
-                [class.copied]="CodeContentCopied"><i class="fa fa-files-o" aria-hidden="true"></i></a>
+            <a class="float-right copy-icon" ngxClipboard [cbContent]="item.content"
+                (cbOnSuccess)="CodeContentCopied = true" [class.copied]="CodeContentCopied"><i class="fa fa-files-o"
+                    aria-hidden="true"></i></a>
             <div highlight="pre code">
                 <pre><code [textContent]="item.content"></code></pre>
             </div>
         </div>
+    </div>
+</div>
+
+<div *ngIf="scopeName != undefined || scopeName != ''">
+    <div class="dir cur__dir" *ngFor="let item of treeItems">
+        <p class="mb-0 dir__title translate-code" *ngIf="item.type == 'folder'">
+            <i class="fas fa-chevron-right"></i>
+            <i class="fa" [class.fa-folder]="item.type == 'folder'"></i>{{item.name}}
+        </p>
+        <div class="nav flex-column nav-pills content_hir" *ngIf="item.type == 'file'">
+            <a class="nav-link py-0 cursor-pointer" [class.active]="item.active" (click)="showCode(item)">
+                <i class="fas fa-file-code"></i>{{item.name}}
+            </a>
+        </div>
+        <app-code [scopeName]="scopeName" [items]="items" class="dir cur__dir" [treeItems]="item.childrens"></app-code>
     </div>
 </div>

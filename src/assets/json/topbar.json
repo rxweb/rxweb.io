@@ -1,0 +1,56 @@
+{
+    "binding-links":[
+    {
+        "title":"Static Translation",
+        "uri":"/translate/bindings"
+    },
+    {
+        "title":"Scoped Translation",
+        "uri":"/translate/bindings"
+    },
+    {
+        "title":"Conditional Scoped",
+        "uri":"/translate/bindings"
+        },
+    {
+        "title":"Async Translation",
+        "uri":"/translate/bindings"
+    },
+    {
+        "title": "Key Name Translation",
+        "uri": "/translate/bindings"
+    },
+    {
+        "title":"On Demand Translation",
+        "uri":"/translate/bindings"
+    }
+],
+"translation-strategy-links":[
+    {
+        "title":"Page Driven",
+        "uri":"/translate/translation-strategy"
+    },
+    {
+        "title":"Shared Component",
+        "uri":"/translate/translation-strategy"
+    },
+    {
+        "title":"Preloading Strategy",
+        "uri":"/translate/translation-strategy"
+    }
+],
+"content-translation-links":[
+    {
+        "title":"By Url",
+        "uri":"/translate/content-translation"
+    },
+    {
+        "title":"Programmable",
+        "uri":"/translate/content-translation"
+    },
+    {
+        "title":"Static Language",
+        "uri":"/translate/content-translation"
+    }
+]
+}

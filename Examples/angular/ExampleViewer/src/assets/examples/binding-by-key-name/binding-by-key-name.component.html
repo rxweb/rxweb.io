@@ -1,0 +1,5 @@
+<div *ngFor="let item of keys; let i = index">
+	<div class="work-sanslight m-2">
+		<p [class.example-title]="i == 0" [class.px-lg-3]="i != 0">{{multilingualContent.get(item)}}</p>
+	</div>
+</div>

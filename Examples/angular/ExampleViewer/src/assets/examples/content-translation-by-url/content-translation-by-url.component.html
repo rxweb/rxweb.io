@@ -1,0 +1,16 @@
+<h4 class="example-title" *ngIf="multilingualContent.text">{{multilingualContent.urlContentTitle}}</h4>
+<form class="work-sanslight mg-left-5 form-font-size">
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">{{multilingualContent.text.url}}</label>
+    <div class="col-sm-10 row">
+      <input class="url-control form-control" tabindex="-1" type="url" [placeholder]="multilingualContent.placeholder.url" value="{{url}}">
+      <div class="search-icon"></div>
+    </div>
+  </div>
+  <p class="small text-center text-gray-soft">
+    <a class="blue-link btn only-border mr-2" [class.active-language]="multilingualContent.languageCode == 'en'"
+      (click)="navigate('en')">English</a>
+    <a class="blue-link btn only-border" [class.active-language]="multilingualContent.languageCode == 'fr'"
+      (click)="navigate('fr')">French</a>
+  </p>
+</form>

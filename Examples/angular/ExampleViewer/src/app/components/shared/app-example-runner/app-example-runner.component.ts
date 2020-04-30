@@ -38,7 +38,6 @@ export class AppExampleRunnerComponent implements OnInit {
  
   }
   ngOnInit(): void {
-    debugger;
     this.showElement = false;
     if(this.decoratorName == "get"|| this.decoratorName == "post"  || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject" )
     {
@@ -46,7 +45,6 @@ export class AppExampleRunnerComponent implements OnInit {
     }
     this.tabArray = []; 
     if(this.content && this.showTab){
-      debugger;
       if(this.content.function != null)
       this.tabArray.push({"tabName": "Component", "tabItem": "component", "content": this.content.function})
       if (this.content.model != null)

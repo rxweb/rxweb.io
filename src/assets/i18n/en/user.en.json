@@ -1,0 +1,15 @@
+{
+  "pageWiseTitle": "Resolve Translation Page Wise",
+  "sharedComponentTitle": "Resolve Translation of Shared Component",
+  "placeholder": {
+    "firstName": "Enter your first name"
+  },
+  "text": {
+    "userRegistrationTitle": "User Registration",
+    "firstName": "First Name",
+    "create": "Create Account",
+    "no": "No",
+    "yes": "Yes",
+    "title": "Alert!"
+  }
+}

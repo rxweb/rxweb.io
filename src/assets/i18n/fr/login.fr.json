@@ -1,0 +1,20 @@
+{
+  "fixedContentTitle": "Traduction de contenu fixe",
+  "programmableContentTitle": "Traduction de contenu programmable",
+  "placeholder": {
+    "email": "Entrez votre adresse email",
+    "password": "Tapez votre mot de passe"
+  },
+  "text": {
+    "fixedLabel": "@rxweb/translate",
+    "purpose": "Internationalisation des composants",
+    "fixedDescription": "Différentes stratégies de traduction de contenu",
+    "email": "Identifiant e-mail",
+    "password": "mot de passe",
+    "signIn": "Se connecter",
+    "dontAccount": "Vous n'avez pas encore de compte?",
+    "signUp": "S'inscrire",
+    "offeredIn": "Offert en:",
+    "contosoUniversity": "Université Contoso"
+  }
+}

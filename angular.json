@@ -36,9 +36,8 @@
               "src/assets/scripts/lock.min.js",
               "src/assets/scripts/highlight.pack.js",
               "src/assets/scripts/moment.js",
-              "src/assets/scripts/showdown.js"
-            
-              
+              "src/assets/scripts/showdown.js",
+              "src/assets/scripts/prism.js"
             ]
           },
           "configurations": {
@@ -64,7 +63,8 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
-                }]
+                }
+              ]
             }
           }
         },
@@ -95,8 +95,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-            ],
+            "scripts": [],
             "assets": [
               "src/favicon.ico",
               "src/assets",

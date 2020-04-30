@@ -1,0 +1,182 @@
+<div class="container container__lg">
+  <section class="my-4 my-lg-5">
+    <div class="title-bar title-bar-translate top_title">
+      <p>
+        Translation Strategy
+      </p>
+    
+    </div>
+    <div class="title-bar-translate-description title-bar">
+      <p>We don't prefer to write the hefty of code for translation or load all language files even
+      thought it's not required except active language. We fully focus on to provide consistent, mantainable and
+      readable code base feature approach with better user experience for smoth transition. Catch a glimpse of
+      Impresive 😊 Features.</p>
+    </div>
+    <div class="language-tab top__menu__bar d-flex py-2 ml-auto">
+      <ul class="ml-auto d-flex m-0 p-0 top__lang__menu nav nav-tabs nav-fill">
+        <li class="nav-item nav-link">
+          <a title="English" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+            [class.active]="multilingualContent.languageCode == 'en'" (click)="changeLanguage('en')" role="tab"
+            aria-controls="nav-home" aria-selected="true">EN</a>
+        </li>
+        <li class="nav-item nav-link">
+          <a title="France" class="nav-item nav-link" id="nav-home-tab" data-toggle="tab"
+            [class.active]="multilingualContent.languageCode == 'fr'" (click)="changeLanguage('fr')" role="tab"
+            aria-controls="nav-home" aria-selected="true">FR</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row mx-0 rxweb__card">
+      <div
+        class="col-md-6 section-background-light padding-top-15 bold-title flex-column justify-content-center rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0">
+          <span>Resolve Translation Page Wise</span>
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          We have created a <b>@translate(...)</b> decorator for automatic resolving the localized text according to the
+          initialized component. Have a look at the example 👉
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse7" role="button" aria-expanded="false"
+          aria-controls="card__collapse7">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">PageWise Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-resolve-translation-page-wise-ckyt84?file=src/app/user/user.component.ts">
+          <i class="fa fa-external-link-alt"></i>
+        </a>
+        <app-page-wise-translation *rxTranslate="true"></app-page-wise-translation>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse7">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right">
+            <app-code class="dir cur__dir" scopeName="pageDriven" [treeItems]="pageDrivenTranslations"></app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="pageDriven-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code id="pageDriven-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mg-top mx-0 rxweb__card">
+      <div class="col-md-6 padding-top-15 bold-title flex-column justify-content-center rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0">
+          <span>Resolve Translation of Shared Component</span>
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          We have created a <b>rxTranslate</b> directive for esthetical process to resolve the shared component
+          localized text before initialization. You don't need to jumble up anything else in your code 👍🏻.
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse8" role="button" aria-expanded="false"
+          aria-controls="card__collapse8">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Shared Component Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-loading-shared-component-translation-vhjhap?file=src/app/user/user.component.ts">
+          <i class="fa fa-external-link-alt"></i>
+        </a>
+        <app-shared-translation *rxTranslate="true"></app-shared-translation>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse8">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right">
+            <app-code class="dir cur__dir" scopeName="sharedComponent" [treeItems]="sharedComponentTranslations">
+            </app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="sharedComponent-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code id="sharedComponent-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mg-top mx-0 rxweb__card">
+      <div
+        class="col-md-6 section-background-light padding-bottom-20 d-flex flex-column justify-content-center  rxweb__card__content">
+        <h4 class="pt-left pt-4 pt-lg-0  mg-top-20">
+          <span>Preload Translation in Background</span>
+        </h4>
+        <p class="px-lg-4 rxweb_card_desc">
+          We love a lot this feature because Angular provides tremendous feature of preloading strategy for the routed
+          modules, so we are taking that advantage for resolve the localize data in the background during module
+          resolution without affecting the application performance 🤑.
+        </p>
+        <a class="btn rxweb__card__collapse__btn align-self-start ml-lg-4 p-0 collapsed show-code"
+          data-toggle="collapse" href="#card__collapse9" role="button" aria-expanded="false"
+          aria-controls="card__collapse9">
+          Show me code
+          <i class="fas fa-chevron-down padding-left"></i>
+        </a>
+      </div>
+      <div class="col-md-6 py-4 rxweb__card__thumb">
+        <div class="code_eg">Preload Translation Working Example</div>
+        <a class="float-right file-icon" target="_blank"
+          href="https://stackblitz.com/edit/rxweb-preload-translations-5eljiz?file=src/app/rxweb.module.ts">
+          <i class="fa fa-external-link-alt"></i>
+        </a>
+        <app-preload-content-translation></app-preload-content-translation>
+      </div>
+    </div>
+    <div class="collapse card__collapse__content bg-white" id="card__collapse9">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-md-3 border-right">
+            <app-code class="dir cur__dir" scopeName="preload" [treeItems]="preloadTranslations">
+            </app-code>
+
+          </div>
+          <div class="col-md-9 px-0">
+            <ul class="d-flex opened__file__nav">
+              <li><a id="preload-link"></a></li>
+              <li class="ml-auto py-2 px-3 opened__code__action">
+                <a href=""><i class="fas fa-copy"></i></a>
+              </li>
+            </ul>
+            <div class="tab-content p-3" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
+                <pre><code id="preload-code"></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>

@@ -113,7 +113,6 @@ export class AppExampleRunnerComponent implements OnInit {
   }
 
   runCodeExample(exampleName) {
-   debugger;
     let example = this.exampleHeights.filter(x => x.exampleName == exampleName);
     if (example.length > 0)
       this.exampleHeight = example[0].height;
