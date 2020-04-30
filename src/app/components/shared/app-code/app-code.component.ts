@@ -50,9 +50,12 @@ export class AppCodeComponent implements OnInit {
   showCode(item: any) {
     const html = Prism.highlight(item.content, Prism.languages[item.contentType], item.contentType);
     if (html) {
-      this.items.forEach(element => {
-        this.hideActive(element);
-      });
+      if (this.items) {
+        this.items.forEach(element => {
+          this.hideActive(element);
+        });
+      }
+      
       item.active = true;
     }
     $(`#${this.scopeName}-code`).html(html)

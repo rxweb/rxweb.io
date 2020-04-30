@@ -605,6 +605,7 @@ li.nav-item.nav-link {
   color: #00A4FF;
   padding: 10px;
 }
+
 /* 
 app-header {
   position: fixed;
@@ -725,14 +726,14 @@ i.fas.fa-trash {
 
 /* 29/04/2020 */
 
-a.float-right.file-icon {
+/* a.float-right.file-icon {
   color: #2e2e2e;
   position: absolute;
   top: -7px;
   font-size: 13px;
   opacity: 0.7;
   right: 10px;
-}
+} */
 
 .code_eg {
   right: 40px!important;
@@ -835,4 +836,13 @@ p.comparison-content {
   font-size: 15px;
   line-height: 25px;
   color: black;
+}
+
+a.translate-code-icon.float-right.file-icon {
+  color: #2e2e2e;
+  position: absolute;
+  top: -7px;
+  font-size: 13px;
+  opacity: 0.7;
+  right: 10px;
 }
