@@ -4,7 +4,6 @@ import { PageModule } from "src/app/components/page/page.module";
 import { TRANSLATE_ROUTING } from './translate.routing';
 import { BindingComponent } from './binding/binding.component';
 import { StaticTranslationComponent } from 'src/assets/examples/static-translation/static-translation.component';
-import { HeaderComponent } from '../shared/header/header.component';
 import { ScopedTranslationComponent } from 'src/assets/examples/scoped-translation/scoped-translation.component';
 import { ConditionalScopedTranslationComponent } from 'src/assets/examples/conditional-scoped-translation/conditional-scoped-translation.component';
 import { BindingByKeyNameComponent } from 'src/assets/examples/binding-by-key-name/binding-by-key-name.component';
