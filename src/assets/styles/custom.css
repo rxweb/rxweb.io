@@ -605,7 +605,7 @@ li.nav-item.nav-link {
   color: #00A4FF;
   padding: 10px;
 }
-
+/* 
 app-header {
   position: fixed;
   top: 0;
@@ -614,7 +614,7 @@ app-header {
   z-index: 1051;
   background: #fff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26)!important;
-}
+} */
 
 .active-language {
   font-weight: bold;

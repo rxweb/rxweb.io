@@ -13,10 +13,11 @@ import { CommonSharedModule } from '../shared/common/common-shared.module';
 
 import { TopBarSharedModule } from '../shared/top-bar/top-bar-shared.module';
 import { RXWEB_TRANSLATE_ROUTING } from './rxweb-translate.routing';
+import { TranslateGettingStartedComponent } from './getting-started/getting-started.component';
 
 @NgModule({
   imports: [RXWEB_TRANSLATE_ROUTING, CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule, CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule],
-  declarations: [],
+  declarations: [TranslateGettingStartedComponent],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]
 })

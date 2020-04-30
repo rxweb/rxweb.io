@@ -2038,6 +2038,13 @@
             "otherUri": "translate",
             "childrens": [
                 {
+                    "title": "Getting Started",
+                    "uri": "/rxweb-translate/getting-started",
+                    "isActive": false,
+                    "linkTitle": "getting-started",
+                    "refUri": "getting-started"
+                },
+                {
                     "title": "Binding",
                     "uri": "/rxweb-translate/translate/binding",
                     "isActive": false,

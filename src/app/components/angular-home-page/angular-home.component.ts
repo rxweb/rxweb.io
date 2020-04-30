@@ -38,12 +38,13 @@ export class AngularHomeComponent implements OnInit {
     // }
   ]
   bindText(character: string, className: string) {
+    if (document.getElementById("code_change"))
     document.getElementById("code_change").innerHTML += `<span class='${className}'>${character}</span>`
   }
 
   removeChildNodes() {
     let codeElement = document.getElementById("code_change");
-    if (codeElement.children.length > this.currentTextGroup.fixText.length) {
+    if (codeElement && codeElement.children.length > this.currentTextGroup.fixText.length) {
       document.getElementById("code_change").removeChild(codeElement.children.item(codeElement.children.length - 1))
       var t = setTimeout(() => this.removeChildNodes(), 10);
     } else {
@@ -70,7 +71,7 @@ export class AngularHomeComponent implements OnInit {
     if (this.typeItTexts.length > this.totalIndex) {
       if (this.typeItTexts[this.totalIndex].codes.length > this.codeIndex) {
         this.currentTextGroup = this.typeItTexts[this.totalIndex]
-        if (isFirstTime && document.getElementById("code_change").children.length > 0 && this.totalIndex == 0)
+        if (isFirstTime && document.getElementById("code_change") && document.getElementById("code_change").children.length > 0 && this.totalIndex == 0)
           this.codeIndex++;
         this.processCharacters(this.typeItTexts[this.totalIndex].codes[this.codeIndex])
         this.codeIndex++;

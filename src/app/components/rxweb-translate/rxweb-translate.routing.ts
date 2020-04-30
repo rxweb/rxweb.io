@@ -1,12 +1,13 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TranslateGettingStartedComponent } from './getting-started/getting-started.component';
 
 
 const RXWEB_TRANSLATE_ROUTES: Routes = [
-  // {
-  //   path: "storage-getting-started",
-  //   component: StorageGettingStartedComponent
-  // },
+  {
+    path: "getting-started",
+    component: TranslateGettingStartedComponent
+  },
   {
     path: 'translate',
     loadChildren: 'src/app/components/translate/translate.module#TranslateModule',
