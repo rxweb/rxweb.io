@@ -58,6 +58,20 @@ export class SideBarComponent implements OnInit {
     this.showComponent = true;
   }
 
+  setHideLink(currentUrl: string, isSearch: boolean = false, element: any) {
+    if (element.title == currentUrl){
+      element.isHide = false;
+    }
+    else {
+      element.isHide = true;
+    }
+      
+    if (element.childrens) {
+      element.childrens.forEach(item => {
+        this.setHideLink(currentUrl, isSearch, item);
+      });
+    }
+  }
 
   setActiveLink(currentUrl: string, isSearch: boolean = false) {
     for (let link of this.links) {
@@ -71,6 +85,7 @@ export class SideBarComponent implements OnInit {
           if (activeChildLink.length > 0) {
             this.links.forEach(element => {
               element.isHide = true;
+              // this.setHideLink(currentUrl, isSearch, element);
             });
             activeChildLink.forEach(element => {
               element.isHide = false;
@@ -79,6 +94,7 @@ export class SideBarComponent implements OnInit {
           else {
             this.links.forEach(element => {
               element.isHide = false;
+              // this.setHideLink(element);
             });
           }
         }
@@ -174,7 +190,7 @@ export class SideBarComponent implements OnInit {
         this.searchChildObject(searchObject, link.childrens);
       } else {
         let refObject = childrens.filter(y => y.title.toLowerCase() == searchObject.title.toLowerCase())[0];
-        if (refObject) {  
+        if (refObject) {
           this.hideAll(refObject, true, true)
           refObject.isHide = false;
           refObject.isOpen = true;

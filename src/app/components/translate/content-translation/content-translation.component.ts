@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
-import { URL_CONTENT_TRANSLATIONS } from '../../data/content-translation-by-url';
-import { PROGRAMMABLE_CONTENT_TRANSLATIONS } from '../../data/programmable-content-translations';
-import { FIXED_CONTENT_TRANSLATIONS } from '../../data/fixed-content-translations';
+import { URL_CONTENT_TRANSLATIONS } from '../../data/urlContent-translations';
+import { PROGRAMMABLE_CONTENT_TRANSLATIONS } from '../../data/programmableContent-translations';
+import { FIXED_CONTENT_TRANSLATIONS } from '../../data/fixedContent-translations';
 import { RxTranslation } from '@rxweb/translate';
 
 @Component({

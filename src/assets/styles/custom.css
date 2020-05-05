@@ -800,7 +800,7 @@ p.mb-0.dir__title.translate-code {
 a.nav-link.py-0.cursor-pointer.active {
   font-size: 14px;
   font-weight: 400;
-  color: #3498db!important;
+  /* color: #3498db!important; */
 }
 
 a.nav-link.py-0.cursor-pointer.active:hover {

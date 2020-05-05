@@ -16,9 +16,9 @@
     <div class="row mx-0 rxweb__card">
       <div
         class="col-md-6 section-background-light padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0 ">
+        <h2 class="pt-left pt-4 pt-lg-0" id="content-translation-by-url">
           <span>Content Translation By URL</span>
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           As large scale applications required the content translation based upon the URL alike <b>/en/user</b> or
           <b>fr/user</b>, We prefer without putting our brain to resolve the content based upon URL language code, Let
@@ -43,8 +43,8 @@
     <div class="collapse card__collapse__content bg-white" id="card__collapse10">
       <div class="card card-body">
         <div class="row">
-          <div class="col-md-3 border-right">
-            <app-code class="dir cur__dir" [items]="urlContentTranslations" scopeName="urlContent" [treeItems]="urlContentTranslations">
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code class="dir cur__dir" scopeName="urlContent" [treeItems]="urlContentTranslations">
             </app-code>
 
           </div>
@@ -57,7 +57,7 @@
             </ul>
             <div class="tab-content p-3" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
-                <pre><code id="urlContent-code"></code></pre>
+                <pre><code class="translate-code" id="urlContent-code"></code></pre>
               </div>
             </div>
           </div>
@@ -68,9 +68,9 @@
     <div class="row mg-top mx-0 rxweb__card">
       <div
         class="col-md-6 padding-top-15 padding-bottom-20 bold-title flex-column justify-content-center  rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0  mg-top-20">
+        <h2 class="pt-left pt-4 pt-lg-0  mg-top-20" id="programmable-content-translation">
           <span>Programmable Content Translation</span>
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           This gives us full control to change the language based upon our business logic. For changing the language
           we resolve the <b>RxTranslateService</b> class through component constructor and use the available method for
@@ -95,8 +95,8 @@
     <div class="collapse card__collapse__content bg-white" id="card__collapse11">
       <div class="card card-body">
         <div class="row">
-          <div class="col-md-3 border-right">
-            <app-code class="dir cur__dir" [items]="programmableContentTranslations" scopeName="programmableContent"
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code class="dir cur__dir" scopeName="programmableContent"
               [treeItems]="programmableContentTranslations">
             </app-code>
 
@@ -110,7 +110,7 @@
             </ul>
             <div class="tab-content p-3" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
-                <pre><code id="programmableContent-code"></code></pre>
+                <pre><code class="translate-code" id="programmableContent-code"></code></pre>
               </div>
             </div>
           </div>
@@ -121,9 +121,9 @@
     <div class="row mg-top mx-0 rxweb__card">
       <div
         class="col-md-6 section-background-light padding-bottom-20 padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0  mg-top-20">
+        <h2 class="pt-left pt-4 pt-lg-0  mg-top-20" id="fixed-content-translation">
           <span>Fixed Content Translation</span>
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           Some of the shared component we may need to show the text in anyone fixed language rather than the application
           current language. You can achieve this by simply passing the language value in the <b>@translate</b>
@@ -148,8 +148,8 @@
     <div class="collapse card__collapse__content bg-white" id="card__collapse12">
       <div class="card card-body">
         <div class="row">
-          <div class="col-md-3 border-right">
-            <app-code class="dir cur__dir" [items]="fixedContentTranslations " scopeName="fixedContent" [treeItems]="fixedContentTranslations">
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code class="dir cur__dir" scopeName="fixedContent" [treeItems]="fixedContentTranslations">
             </app-code>
 
           </div>
@@ -162,7 +162,7 @@
             </ul>
             <div class="tab-content p-3" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
-                <pre><code id="fixedContent-code"></code></pre>
+                <pre><code class="translate-code" id="fixedContent-code"></code></pre>
               </div>
             </div>
           </div>

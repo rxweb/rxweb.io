@@ -25,9 +25,8 @@
         </li>
       </ul>
     </div>
-    <div class="row mx-0 rxweb__card">
-      <div
-        class="col-md-6 section-background-light padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
+    <div class="row mx-0 rxweb__card" >
+      <div class="col-md-6 section-background-light padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content" id="static-translation">
         <h2 class="pt-left pt-4 pt-lg-0">
           <span>Static</span> Translation
         </h2>
@@ -56,7 +55,7 @@
       <div class="card card-body">
         <div class="row">
           <div class="col-md-3 border-right translate-tree-items">
-            <app-code class="dir cur__dir" [items]="staticTranslations" scopeName="static" [treeItems]="staticTranslations"></app-code>
+            <app-code class="dir cur__dir" scopeName="static" [treeItems]="staticTranslations"></app-code>
 
           </div>
           <div class="col-md-9 px-0">
@@ -77,9 +76,9 @@
     </div>
     <div class="row mg-top mx-0 rxweb__card">
       <div class="col-md-6  padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0 ">
+        <h2 class="pt-left pt-4 pt-lg-0" id="scoped-translation">
           <span>Scoped</span> Translation
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           We use Angular interpolation for Component Scoped Property Binding with translation text, This gives
           fantabulous 😲 solution of the problem of writing the little lines of business logic in the template and with
@@ -105,7 +104,7 @@
       <div class="card card-body">
         <div class="row">
           <div class="col-md-3 border-right translate-tree-items">
-            <app-code scopeName="scoped" [items]="scopedTranslations" class="dir cur__dir" [treeItems]="scopedTranslations"></app-code>
+            <app-code scopeName="scoped" class="dir cur__dir" [treeItems]="scopedTranslations"></app-code>
 
           </div>
           <div class="col-md-9 px-0">
@@ -127,9 +126,9 @@
     <div class="row mg-top mx-0 rxweb__card">
       <div
         class="col-md-6 section-background-light padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0">
+        <h2 class="pt-left pt-4 pt-lg-0" id="conditional-scoped-translation">
           <span>Conditional Scoped</span> Translation
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           One of the richest feature of the library 😍, which gives complete felxibility to run the translation property
           string code same as same as existing component scoped method.
@@ -154,7 +153,7 @@
       <div class="card card-body">
         <div class="row">
           <div class="col-md-3 border-right translate-tree-items">
-            <app-code scopeName="conditional" [items]="conditionalTranslations" class="dir cur__dir" [treeItems]="conditionalTranslations"></app-code>
+            <app-code scopeName="conditional" class="dir cur__dir" [treeItems]="conditionalTranslations"></app-code>
 
           </div>
           <div class="col-md-9 px-0">
@@ -177,9 +176,9 @@
     <div class="row mg-top mx-0 rxweb__card">
       <div
         class="col-md-6 padding-bottom-20 padding-top-15 bold-title flex-column justify-content-center  rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0 ">
+        <h2 class="pt-left pt-4 pt-lg-0" id="async-translation">
           <span>Async</span> Translation
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           One of the most Simplest and Richest feature of the library and the intergration is much cleaner than
           expected, Yippee 😉.
@@ -204,7 +203,7 @@
       <div class="card card-body">
         <div class="row">
           <div class="col-md-3 border-right translate-tree-items">
-            <app-code class="dir cur__dir" [items]="asyncTranslations" scopeName="async" [treeItems]="asyncTranslations"></app-code>
+            <app-code class="dir cur__dir" scopeName="async" [treeItems]="asyncTranslations"></app-code>
 
           </div>
           <div class="col-md-9 px-0">
@@ -227,9 +226,9 @@
     <div class="row mg-top mx-0 rxweb__card">
       <div
         class="col-md-6 section-background-light padding-bottom-20 padding-top-15 bold-title flex-column justify-content-center rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0  ">
+        <h2 class="pt-left pt-4 pt-lg-0" id="binding-by-key-name-translation">
           <span>Binding By</span> KeyName
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">We would not prefer to use this approach 😬, But sometimes we may have to use
           this because the dynamic nature of the large scale enterprise application to resolve the localized text
           dynamically. </p>
@@ -253,19 +252,19 @@
       <div class="card card-body">
         <div class="row">
           <div class="col-md-3 border-right translate-tree-items">
-            <app-code class="dir cur__dir" [items]="bindingByKeyNameTranslations" scopeName="key-name" [treeItems]="bindingByKeyNameTranslations"></app-code>
+            <app-code class="dir cur__dir"  scopeName="binding-by-key-name" [treeItems]="bindingByKeyNameTranslations"></app-code>
 
           </div>
           <div class="col-md-9 px-0">
             <ul class="d-flex opened__file__nav">
-              <li><a id="key-name-link"></a></li>
+              <li><a id="binding-by-key-name-link"></a></li>
               <li class="ml-auto py-2 px-3 opened__code__action">
                 <a href=""><i class="fas fa-copy"></i></a>
               </li>
             </ul>
             <div class="tab-content p-3" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
-                <pre><code class="translate-code" id="key-name-code"></code></pre>
+                <pre><code class="translate-code" id="binding-by-key-name-code"></code></pre>
               </div>
             </div>
           </div>
@@ -274,9 +273,9 @@
     </div>
     <div class="row mg-top mx-0 rxweb__card">
       <div class="col-md-6 padding-top-15 bold-title flex-column justify-content-center rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0  ">
+        <h2 class="pt-left pt-4 pt-lg-0" id="on-demand-scoped-translation">
           <span>On Demand Scoped</span> Translation
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           Nothing new approach invented 🤓 for on demand scoped translation. Translation will be done by calling the
           simple method in the TypeScript Code.
@@ -302,7 +301,7 @@
       <div class="card card-body">
         <div class="row">
           <div class="col-md-3 border-right translate-tree-items">
-            <app-code class="dir cur__dir" [items]="ondemandtranslations" scopeName="on-demand" [treeItems]="ondemandtranslations"></app-code>
+            <app-code class="dir cur__dir" scopeName="on-demand" [treeItems]="ondemandtranslations"></app-code>
           </div>
           <div class="col-md-9 px-0">
             <ul class="d-flex opened__file__nav">
