@@ -42,7 +42,10 @@ export class StackBlitzService {
             fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
             fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
             if (fileName.indexOf("app.component.ts")) {
-
+               if(validationName == "autoPushFormGroup") {
+   
+                fileContent = fileContent.replace(`ngOnInit(){`,`ngOnInit(){  ReactiveFormConfig.autoInstancePush = true;`);
+              }
               let configObject = { validationMessage: {} };
               if (validationName.indexOf("Date") >= 0 || validationName.indexOf("date") == 0) {
                 if (exampleName == "complete") {
@@ -108,6 +111,7 @@ export class StackBlitzService {
                 configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
                 fileContent = fileContent.replace(new RegExp(/##global-config##/), JSON.stringify(configObject));
               }
+              
               else if (validationName == "errormessagestrategy") {
                 configObject['reactiveForm'] = VALIDATION_MESSAGES["reactiveForm"]
                 configObject.validationMessage["required"] = VALIDATION_MESSAGES["validationMessage"]["required"];

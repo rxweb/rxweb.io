@@ -38,20 +38,22 @@ export class AngularHomeComponent implements OnInit {
     // }
   ]
   bindText(character: string, className: string) {
-    if (document.getElementById("code_change"))
-    document.getElementById("code_change").innerHTML += `<span class='${className}'>${character}</span>`
+    if(document.getElementById("code_change_1") && location.pathname.includes('home'))
+    document.getElementById("code_change_1").innerHTML += `<span class='${className}'>${character}</span>`
   }
 
   removeChildNodes() {
-    let codeElement = document.getElementById("code_change");
-    if (codeElement && codeElement.children.length > this.currentTextGroup.fixText.length) {
-      document.getElementById("code_change").removeChild(codeElement.children.item(codeElement.children.length - 1))
+    let codeElement = document.getElementById("code_change_1");
+    if(codeElement){
+    if (codeElement.children.length > this.currentTextGroup.fixText.length) {
+      document.getElementById("code_change_1").removeChild(codeElement.children.item(codeElement.children.length - 1))
       var t = setTimeout(() => this.removeChildNodes(), 10);
     } else {
       this.totalIndex++;
       this.codeIndex = 0;
       this.changeCodeText();
     }
+  }
   }
 
 
@@ -71,11 +73,12 @@ export class AngularHomeComponent implements OnInit {
     if (this.typeItTexts.length > this.totalIndex) {
       if (this.typeItTexts[this.totalIndex].codes.length > this.codeIndex) {
         this.currentTextGroup = this.typeItTexts[this.totalIndex]
-        if (isFirstTime && document.getElementById("code_change") && document.getElementById("code_change").children.length > 0 && this.totalIndex == 0)
+        if (isFirstTime && document.getElementById("code_change_1").children.length > 0 && this.totalIndex == 0)
           this.codeIndex++;
         this.processCharacters(this.typeItTexts[this.totalIndex].codes[this.codeIndex])
         this.codeIndex++;
       } else {
+        
         var t = setTimeout(() => this.removeChildNodes(), 600);
 
         //this.changeCodeText();

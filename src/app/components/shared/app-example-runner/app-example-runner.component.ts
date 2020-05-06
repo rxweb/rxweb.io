@@ -44,7 +44,7 @@ export class AppExampleRunnerComponent implements OnInit {
   }
  
   ngOnInit(): void {
-   
+
     let codeUrl = "";
     if (document.location.pathname.includes("dynamic-validation")) {
 
@@ -84,6 +84,9 @@ export class AppExampleRunnerComponent implements OnInit {
     }
     if(this.decoratorName.includes("Of")){
      this.exampleHeights =  [{ exampleName: 'add', height: 300 }, { exampleName: 'conditionalExpression', height: 800 },  { exampleName: 'allowWhiteSpace', height: 300 }, { exampleName: 'message', height: 360 }, { exampleName: 'messageKey', height: 360 }, { exampleName: 'locale', height: 160 }, { exampleName: 'complete', height: 1500 }, { exampleName: 'dynamic', height: 1200 }]
+    }
+    else if(this.decoratorName.includes("greaterThanLessThanFormArray")){
+      this.exampleHeights =  [{ exampleName: 'add', height: 350 }, { exampleName: 'conditionalExpression', height: 800 },  { exampleName: 'allowWhiteSpace', height: 300 }, { exampleName: 'message', height: 360 }, { exampleName: 'messageKey', height: 360 }, { exampleName: 'locale', height: 160 }, { exampleName: 'complete', height: 350 }, { exampleName: 'dynamic', height: 1200 }]
     }
     let example = this.exampleHeights.filter(x => x.exampleName == this.exampleName);
     if (example.length > 0)

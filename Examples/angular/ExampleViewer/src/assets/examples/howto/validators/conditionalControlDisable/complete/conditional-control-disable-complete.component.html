@@ -1,0 +1,27 @@
+<div>
+    <form  [formGroup]="userFormGroup">
+       <div class="form-group">
+        <label>Permanent Address</label>
+        <input type="text" formControlName="permanentAddress" class="form-control"   />
+             <small class="form-text text-danger" *ngIf="userFormGroup.controls.permanentAddress.errors">{{userFormGroup.controls.permanentAddress.errors.required.message}}<br/></small>
+     
+      </div>
+      <div class="form-group">
+     
+        <input type="checkbox" formControlName="IsSameAddress"   />
+           <label>Same As Permanent Address</label><br/>
+        <small class="form-text text-muted">If you want to disable currentAddress field, check this value 'true'<br/></small>
+     
+      </div>
+     
+      <div class="form-group">
+        <label>Current Address</label>
+        <input type="text" formControlName="currentAddress" class="form-control"  />
+        <small class="form-text text-muted">Conditional Disable will be applied if the 'isSameAddress' field have value 'true'<br/></small>
+        <small class="form-text text-muted">Conditional Expression with type 'function'<br/></small>
+      <small class="form-text text-danger" *ngIf="userFormGroup.controls.currentAddress.errors">{{userFormGroup.controls.currentAddress.errors.required.message}}<br/></small>
+      </div>
+      <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

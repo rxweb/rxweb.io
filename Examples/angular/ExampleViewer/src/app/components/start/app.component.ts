@@ -181,6 +181,7 @@ export class AppComponent implements OnInit {
           });
         }
         else {
+          ReactiveFormConfig.autoInstancePush = true;
           HttpClientConfig.register({
             hostURIs: [{
               name: 'local',

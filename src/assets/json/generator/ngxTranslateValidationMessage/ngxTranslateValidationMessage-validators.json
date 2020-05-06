@@ -1,0 +1,12 @@
+{
+    "complete": {
+        "notes": [
+            "ngx-translate"
+        ],
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators } from '@rxweb\/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-ngxTranslateValidationMessage-complete-validator',\r\n    templateUrl: '.\/ngx-translate-validation-message-complete.component.html'\r\n})\r\nexport class NgxTranslateValidationMessageCompleteValidatorComponent implements OnInit {\r\n    userFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userFormGroup = this.formBuilder.group({\r\n            fullName:['', RxwebValidators.required({messageKey:'requiredMessageKey',isAddMessageKey:true })], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n    <form  [formGroup]=\"userFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>Full Name<\/label>\r\n        <input type=\"text\" formControlName=\"fullName\" class=\"form-control\"  \/>\r\n        <small class=\"form-text text-muted\">Shows Custom Validation Message based on message key<br\/><\/small>\r\n      <small class=\"form-text text-danger\" *ngIf=\"userFormGroup.controls.fullName.errors\">{{userFormGroup.controls.fullName.errors.required.message}}<br\/><\/small>\r\n      <\/div>\r\n      <button [disabled]=\"!userFormGroup.valid\" class=\"btn btn-primary\">Submit<\/button>\r\n    <\/form>\r\n  <\/div>\r\n  ",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }
+}

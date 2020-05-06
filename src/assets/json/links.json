@@ -670,6 +670,26 @@
                             "title": "Logical Validators",
                             "uri": "/how-to/logicalOperators/validators",
                             "isActive": false
+                        },
+                        {
+                            "title": "Conditionally Disable Control Using Validator",
+                            "uri": "/how-to/conditionalControlDisable/validators",
+                            "isActive": false
+                        },
+                        {
+                            "title": "Auto Push FormGroup into Array using Model",
+                            "uri": "/how-to/autoPushFormGroup/decorators",
+                            "isActive": false
+                        },
+                        {
+                            "title": "GreaterThan/LessThan validation in FormArray",
+                            "uri": "/how-to/greaterThanLessThanFormArray/validators",
+                            "isActive": false
+                        },
+                        {
+                             "title": "Manage Translated Validation Messages",
+                            "uri": "/how-to/ngxTranslateValidationMessage/validators",
+                            "isActive": false
                         }
                     ]
                 },

@@ -1,0 +1,14 @@
+{
+    
+        "complete": {
+            "notes": [
+                "conditional-disable"
+            ],
+            "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup,FormArray } from \"@angular\/forms\"\r\nimport { ReactiveFormConfig } from '@rxweb\/reactive-form-validators';\r\nimport { RxFormBuilder } from '@rxweb\/reactive-form-validators';\r\n\r\nimport { User,Cart } from '.\/user.model';\r\n\r\n@Component({\r\n    selector: 'app-autoPushFormGroup-complete',\r\n    templateUrl: '.\/auto-push-form-group-complete.component.html'\r\n})\r\nexport class AutoPushFormGroupCompleteComponent implements OnInit {\r\n\r\n    userFormGroup: FormGroup\r\n    user: User;\r\n    constructor(\r\n        private formBuilder: RxFormBuilder) { }\r\n\r\n    ngOnInit() {\r\n      \r\n        this.user = new User();\r\n        this.user.carts = new Array<Cart>();\r\n        this.user.carts.push(new Cart());\r\n        this.userFormGroup = this.formBuilder.formGroup(this.user);\r\n    }\r\n\r\n    addCartItem() {\r\n      this.user.carts.push( new Cart());\r\n    }\r\n}\r\n",
+            "html": "<form *ngIf=\"userFormGroup\" [formGroup]=\"userFormGroup\">\r\n   \r\n    <button class=\"btn btn-primary\" (click)=\"addCartItem()\">Add Item<\/button>\r\n    \r\n    <table class=\"table\">\r\n        <thead>\r\n            <tr>\r\n                <th scope=\"col\">#<\/th>\r\n                <th scope=\"col\">Products<\/th>\r\n               \r\n            <\/tr>\r\n        <\/thead>\r\n        <tbody>\r\n            <tr [formGroup]=\"cart\" *ngFor=\"let cart of userFormGroup.controls.carts.controls; let i = index\">\r\n                <th scope=\"row\">{{i + 1}}<\/th>\r\n                <td><input type=\"text\" formControlName=\"cartItem\" class=\"form-control\" \/>\r\n                <\/td>\r\n              \r\n            <\/tr>\r\n        <\/tbody>\r\n    <\/table>\r\n    <button (click)=\"onSubmit()\" [disabled]=\"!userFormGroup.valid\" class=\"btn btn-primary\">Submit<\/button>\r\n<\/form>",
+            "model": "import {unique,propArray} from '@rxweb\/reactive-form-validators'\r\nexport class Cart {\r\n\r\n    @unique()\r\n    cartItem: string;\r\n}\r\n\r\nexport class User {\r\n\r\n    @propArray(Cart)\r\n    carts: Cart[];\r\n\r\n}",
+            "modelName": "user.model.ts",
+            "json": {}
+        }
+    
+}

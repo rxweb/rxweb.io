@@ -64,6 +64,14 @@
         "modelName": "student.model.ts",
         "json": {}
     },
+    "abstractControlOptions":{
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators,RxFormBuilder } from '@rxweb\/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-formbuilderconfiguration-abstractControlOptions',\r\n    templateUrl: './formbuilderconfiguration-abstract-control-options.component.html'\r\n})\r\nexport class FormbuilderconfigurationAbstractControlOptionsComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: RxFormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            firstName:['', RxwebValidators.required()], \r\n        },{ abstractControlOptions: { firstName: 'blur' } });\r\n       \r\n    }\r\n\r\n}",
+        "html": "<div>\r\n    <form  [formGroup]=\"userInfoFormGroup\">\r\n      <div class=\"form-group\">\r\n        <label>First Name<\/label>\r\n        <input type=\"text\" formControlName=\"firstName\" class=\"form-control\"  \/>\r\n       <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.firstName.errors\">{{userInfoFormGroup.controls.firstName.errors.required.message}}<br\/><\/small>\t\r\n      <\/div>\r\n      <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit<\/button>\r\n    <\/form>\r\n  <\/div>",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
     "arrayinstance":{"component":" var formBuilderConfig = new FormBuilderConfiguration();\r\n        formBuilderConfig.autoInstanceConfig = {\r\n                arrayPropInstanceConfig: [{\r\n                            propertyName: 'skills',\r\n                            rowItems: 2\r\n                        }]\r\n                    } \r\n this.userInfoFormGroup = <RxFormGroup>this.formBuilder.formGroup(user,formBuilderConfig);"},
     "objectinstance":{"component":"   var formBuilderConfig = new FormBuilderConfiguration();\r\n        formBuilderConfig.autoInstanceConfig = {\r\n                        objectPropInstanceConfig: [{\r\n                            propertyName: 'address',\r\n                            \r\n                        }]\r\n        }"},
     "include":{"component":"formBuilderConfig.includeProps = [\"userName\",\"password\",\"confirmPassword\"]\r\n     "}

@@ -11,14 +11,17 @@ import { FormbuilderconfigurationIgnoreundefinedpropsComponent } from './ignoreU
 import { FormbuilderconfigurationDynamicdefaultComponent } from './dynamicDefaultValue/formbuilderconfiguration-dynamic.component';
 import { FormbuilderconfigurationAllPropsComponent } from './allProps/formbuilderconfiguration-allprops.component';
 import { FormbuilderconfigurationGenericEntitiesComponent } from './genericEntities/formbuilderconfiguration-genericentities.component';
+import { FormbuilderConfigurationAbstractControlOptionsComponent } from './abstractControlOptions/formbuilderconfiguration-abstractControlOptions.component';
 
 
 
 @NgModule({
   declarations: [
-    FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent,FormbuilderconfigurationIgnoreundefinedpropsComponent,FormbuilderconfigurationDynamicdefaultComponent,FormbuilderconfigurationAllPropsComponent,FormbuilderconfigurationGenericEntitiesComponent
+    FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent,FormbuilderconfigurationIgnoreundefinedpropsComponent,FormbuilderconfigurationDynamicdefaultComponent,FormbuilderconfigurationAllPropsComponent,FormbuilderconfigurationGenericEntitiesComponent,
+    FormbuilderConfigurationAbstractControlOptionsComponent
   ],
 entryComponents: [
+  FormbuilderConfigurationAbstractControlOptionsComponent,
 	FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent,FormbuilderconfigurationIgnoreundefinedpropsComponent,FormbuilderconfigurationDynamicdefaultComponent,FormbuilderconfigurationAllPropsComponent,FormbuilderconfigurationGenericEntitiesComponent
   ],
   imports: [
@@ -27,7 +30,7 @@ entryComponents: [
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports: [
+  exports: [FormbuilderConfigurationAbstractControlOptionsComponent,
     FormbuilderconfigurationCompleteComponent,FormbuilderconfigurationObjectComponent,FormbuilderconfigurationArrayobjectComponent,FormbuilderconfigurationIncludepropsComponent,FormbuilderconfigurationIgnoreundefinedpropsComponent,FormbuilderconfigurationDynamicdefaultComponent,FormbuilderconfigurationAllPropsComponent,FormbuilderconfigurationGenericEntitiesComponent
   ],
 

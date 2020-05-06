@@ -36,7 +36,7 @@
     "@rxweb/generics": "0.0.1-4",
     "@rxweb/http": "0.0.0-5",
     "@rxweb/reactive-dynamic-forms": "0.0.3",
-    "@rxweb/reactive-form-validators": "^1.9.9-beta4",
+    "@rxweb/reactive-form-validators": "^1.9.9",
     "@rxweb/sanitizers": "0.0.1-1",
     "@rxweb/storage": "0.0.1",
     "angular-instantsearch": "^2.1.0",

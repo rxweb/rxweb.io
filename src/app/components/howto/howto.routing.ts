@@ -58,5 +58,21 @@ const HOWTO_ROUTES: Routes = [
 	path:'modifiedValue',
 	loadChildren: './modifiedValue/modified-value.module#ModifiedValueModule',
 },
+{
+	path:'conditionalControlDisable',
+	loadChildren: './conditionalControlDisable/conditional-control-disable.module#ConditionalControlDisableModule',
+},
+{
+	path:'autoPushFormGroup',
+	loadChildren: './autoPushFormGroup/auto-push-form-group.module#AutoPushFormGroupModule',
+},
+{
+	path:'greaterThanLessThanFormArray',
+	loadChildren: './greaterThanLessThanFormArray/greater-than-less-than-form-array.module#GreaterThanLessThanFormArrayModule',
+},
+{
+	path:'ngxTranslateValidationMessage',
+	loadChildren: './ngxTranslateValidationMessage/ngx-translate-validation-message.module#NgxTranslateValidationMessageModule',
+},
 ];
 export const HOWTO_ROUTING: ModuleWithProviders = RouterModule.forChild(HOWTO_ROUTES);

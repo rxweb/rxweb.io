@@ -64,3 +64,8 @@ This is used to ignore the undefined properties dynamically using `formBuilderCo
 <div component="app-example-runner" ref-component="app-formbuilderconfiguration-ignoreundefined" title="ignoreundefined properties" key="ignoreundefined"></div> 
 </data-scope>
 
+# abstractControlOptions
+Options for event name for control to update upon known as `abstractControlOptions`. They are `blur`, `change`,`submit`.
+
+<div component="app-code" key="FormBuilderConfiguration-abstractControlOptions-component"></div> 
+<div component="app-example-runner" ref-component="app-formbuilderconfiguration-abstractControlOptions" title="Abstract Control Options" key="abstractControlOptions"></div>
