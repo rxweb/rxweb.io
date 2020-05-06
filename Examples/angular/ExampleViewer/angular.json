@@ -30,7 +30,6 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/scripts/jquery.min.js",
               "src/assets/scripts/bootstrap.min.js",
               "src/assets/scripts/custom.js",
               "src/assets/scripts/lock.min.js",

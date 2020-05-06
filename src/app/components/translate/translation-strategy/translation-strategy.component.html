@@ -29,9 +29,9 @@
     <div class="row mx-0 rxweb__card">
       <div
         class="col-md-6 section-background-light padding-top-15 bold-title flex-column justify-content-center rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0">
+        <h2 class="pt-left pt-4 pt-lg-0" id="resolve-translation-page-wise">
           <span>Resolve Translation Page Wise</span>
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           We have created a <b>@translate(...)</b> decorator for automatic resolving the localized text according to the
           initialized component. Have a look at the example 👉
@@ -55,20 +55,20 @@
     <div class="collapse card__collapse__content bg-white" id="card__collapse7">
       <div class="card card-body">
         <div class="row">
-          <div class="col-md-3 border-right">
-            <app-code class="dir cur__dir" scopeName="pageDriven" [treeItems]="pageDrivenTranslations"></app-code>
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code class="dir cur__dir" scopeName="page-driven" [treeItems]="pageDrivenTranslations"></app-code>
 
           </div>
           <div class="col-md-9 px-0">
             <ul class="d-flex opened__file__nav">
-              <li><a id="pageDriven-link"></a></li>
+              <li><a id="page-driven-link"></a></li>
               <li class="ml-auto py-2 px-3 opened__code__action">
                 <a href=""><i class="fas fa-copy"></i></a>
               </li>
             </ul>
             <div class="tab-content p-3" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
-                <pre><code id="pageDriven-code"></code></pre>
+                <pre><code class="translate-code" id="page-driven-code"></code></pre>
               </div>
             </div>
           </div>
@@ -78,9 +78,9 @@
 
     <div class="row mg-top mx-0 rxweb__card">
       <div class="col-md-6 padding-top-15 bold-title flex-column justify-content-center rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0">
+        <h2 class="pt-left pt-4 pt-lg-0" id="resolve-translation-of-shared-component">
           <span>Resolve Translation of Shared Component</span>
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           We have created a <b>rxTranslate</b> directive for esthetical process to resolve the shared component
           localized text before initialization. You don't need to jumble up anything else in your code 👍🏻.
@@ -104,21 +104,21 @@
     <div class="collapse card__collapse__content bg-white" id="card__collapse8">
       <div class="card card-body">
         <div class="row">
-          <div class="col-md-3 border-right">
-            <app-code class="dir cur__dir" scopeName="sharedComponent" [treeItems]="sharedComponentTranslations">
+          <div class="col-md-3 border-right translate-tree-items">
+            <app-code class="dir cur__dir" scopeName="shared-component" [treeItems]="sharedComponentTranslations">
             </app-code>
 
           </div>
           <div class="col-md-9 px-0">
             <ul class="d-flex opened__file__nav">
-              <li><a id="sharedComponent-link"></a></li>
+              <li><a id="shared-component-link"></a></li>
               <li class="ml-auto py-2 px-3 opened__code__action">
                 <a href=""><i class="fas fa-copy"></i></a>
               </li>
             </ul>
             <div class="tab-content p-3" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
-                <pre><code id="sharedComponent-code"></code></pre>
+                <pre><code class="translate-code" id="shared-component-code"></code></pre>
               </div>
             </div>
           </div>
@@ -129,9 +129,9 @@
     <div class="row mg-top mx-0 rxweb__card">
       <div
         class="col-md-6 section-background-light padding-bottom-20 d-flex flex-column justify-content-center  rxweb__card__content">
-        <h4 class="pt-left pt-4 pt-lg-0  mg-top-20">
+        <h2 class="pt-left pt-4 pt-lg-0  mg-top-20" id="preload-translation-in-background">
           <span>Preload Translation in Background</span>
-        </h4>
+        </h2>
         <p class="px-lg-4 rxweb_card_desc">
           We love a lot this feature because Angular provides tremendous feature of preloading strategy for the routed
           modules, so we are taking that advantage for resolve the localize data in the background during module
@@ -156,7 +156,7 @@
     <div class="collapse card__collapse__content bg-white" id="card__collapse9">
       <div class="card card-body">
         <div class="row">
-          <div class="col-md-3 border-right">
+          <div class="col-md-3 border-right translate-tree-items">
             <app-code class="dir cur__dir" scopeName="preload" [treeItems]="preloadTranslations">
             </app-code>
 
@@ -170,7 +170,7 @@
             </ul>
             <div class="tab-content p-3" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel" aria-labelledby="v-pills-one-tab">
-                <pre><code id="preload-code"></code></pre>
+                <pre><code class="translate-code" id="preload-code"></code></pre>
               </div>
             </div>
           </div>

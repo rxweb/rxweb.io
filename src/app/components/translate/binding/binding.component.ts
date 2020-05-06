@@ -1,10 +1,10 @@
 import {Component, Input} from '@angular/core';
 import { STATIC_TRANSLATIONS } from '../../data/static-translations';
-import { SCOPED_TRANSLATIONS } from '../../data/scoped-translation';
-import { CONDITIONAL_SCOPED_TRANSLATIONS } from '../../data/conditional-scoped-translation';
-import { ASYNC_TRANSLATIONS } from '../../data/async-translation';
-import { BINDING_BY_KEY_NAME_TRANSLATIONS } from '../../data/binding-by-key-name-translation';
-import { ON_DEMAND_TRANSLATIONS } from '../../data/on-demand-translation';
+import { SCOPED_TRANSLATIONS } from '../../data/scoped-translations';
+import { CONDITIONAL_SCOPED_TRANSLATIONS } from '../../data/conditional-translations';
+import { ASYNC_TRANSLATIONS } from '../../data/async-translations';
+import { BINDING_BY_KEY_NAME_TRANSLATIONS } from '../../data/binding-by-key-name-translations';
+import { ON_DEMAND_TRANSLATIONS } from '../../data/on-demand-translations';
 import { RxTranslation, translate } from '@rxweb/translate';
 import { TopBarComponent } from '../../shared/top-bar/top-bar.component';
 import { AppCodeComponent } from '../../shared/app-code/app-code.component';
