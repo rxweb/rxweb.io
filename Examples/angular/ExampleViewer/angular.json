@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": false,
+            "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -37,7 +37,6 @@
               "src/assets/scripts/highlight.pack.js",
               "src/assets/scripts/moment.js",
               "src/assets/scripts/showdown.js"
-              
             ]
           },
           "configurations": {
