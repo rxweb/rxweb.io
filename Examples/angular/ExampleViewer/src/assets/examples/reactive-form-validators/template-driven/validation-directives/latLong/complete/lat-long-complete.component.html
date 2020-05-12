@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Third Country</label>
-	    <input type="text" name="thirdCountry" [(ngModel)]="country.thirdCountry"  class="form-control" [latLong]="{'conditionalExpression':'x => x.continent ==\'Asia\''}"/>
+	    <input type="text" name="thirdCountry" [(ngModel)]="country.thirdCountry"  class="form-control" [rxlatLong]="{'conditionalExpression':'x => x.continent ==\'Asia\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Third Country' then you need to add 'Continent' input as 'Asia'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
       <label>First Country</label>
-	    <input type="text" name="firstCountry" [(ngModel)]="country.firstCountry"  class="form-control" [latLong]="{'message':'First Country is not a proper proper Latitude or Longitude'}"/>
+	    <input type="text" name="firstCountry" [(ngModel)]="country.firstCountry"  class="form-control" [rxlatLong]="{'message':'First Country is not a proper proper Latitude or Longitude'}"/>
 
       <small class="form-text text-muted">enter latitude or longitude only<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>
@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
       <label>Fourth Country</label>
-	    <input type="text" name="fourthCountry" [(ngModel)]="country.fourthCountry"  class="form-control" [latLong]="{'messageKey':'latLongMessageKey'}"/>
+	    <input type="text" name="fourthCountry" [(ngModel)]="country.fourthCountry"  class="form-control" [rxlatLong]="{'messageKey':'latLongMessageKey'}"/>
 
       <small class="form-text text-muted">Shows custom message based on message key.<br/></small>
 	   <small class="form-text text-danger" *ngIf="countryForm.controls?.fourthCountry?.errors">{{countryForm.controls?.fourthCountry?.errors?.latLong.message}}<br/></small>	

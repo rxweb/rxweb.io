@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Email</label>
-	    <input type="text" name="email" [(ngModel)]="user.email"  class="form-control" email/>
+	    <input type="text" name="email" [(ngModel)]="user.email"  class="form-control" rxemail/>
 
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.email?.errors">{{userForm.controls?.email?.errors?.email.message}}<br/></small>	
     </div>

@@ -2,13 +2,13 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>First Name</label>
-	    <input type="text" name="firstName" [(ngModel)]="user.firstName"  class="form-control" notEmpty/>
+	    <input type="text" name="firstName" [(ngModel)]="user.firstName"  class="form-control" rxnotEmpty/>
 
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.firstName?.errors">{{userForm.controls?.firstName?.errors?.notEmpty.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Last Name</label>
-	    <input type="text" name="lastName" [(ngModel)]="user.lastName"  class="form-control" [notEmpty]="{'conditionalExpression':'x => x.firstName == \'Bharat\''}"/>
+	    <input type="text" name="lastName" [(ngModel)]="user.lastName"  class="form-control" [rxnotEmpty]="{'conditionalExpression':'x => x.firstName == \'Bharat\''}"/>
 
       <small class="form-text text-muted">Conditional validation will be applied if the user enter 'Bharat' in 'First Name' field <br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>

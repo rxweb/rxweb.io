@@ -2,7 +2,7 @@
   <form #countryForm = "ngForm" [rxwebForm]="countryForm" [model]="country">
     <div class="form-group">
       <label>First Country Longitude</label>
-	    <input type="text" name="firstCountryLongitude" [(ngModel)]="country.firstCountryLongitude"  class="form-control" [longitude]="{'message':'First Country Longitude is not a longitude'}"/>
+	    <input type="text" name="firstCountryLongitude" [(ngModel)]="country.firstCountryLongitude"  class="form-control" [rxlongitude]="{'message':'First Country Longitude is not a longitude'}"/>
 
       <small class="form-text text-muted">You can enter only longitude<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>

@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { FileCompleteTemplateDrivenValidationDirectivesComponent } from './complete/file-complete.component';
 import { FileMaxFilesTemplateDrivenValidationDirectivesComponent } from './maxFiles/file-max-files.component';
 import { FileMinFilesTemplateDrivenValidationDirectivesComponent } from './minFiles/file-min-files.component';
@@ -33,8 +36,10 @@ entryComponents: [
 	FileAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

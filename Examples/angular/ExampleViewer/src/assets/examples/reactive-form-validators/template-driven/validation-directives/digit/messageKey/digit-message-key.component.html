@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>  Zip Code</label>
-	    <input type="text" name="zipCode" [(ngModel)]="user.zipCode"  class="form-control" [digit]="{'messageKey':'digitMessageKey'}"/>
+	    <input type="text" name="zipCode" [(ngModel)]="user.zipCode"  class="form-control" [rxdigit]="{'messageKey':'digitMessageKey'}"/>
 
       <small class="form-text text-muted">custom message based on messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.zipCode?.errors">{{userForm.controls?.zipCode?.errors?.digit.message}}<br/></small>	

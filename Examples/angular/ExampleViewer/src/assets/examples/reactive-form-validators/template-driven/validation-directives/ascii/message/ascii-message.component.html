@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Special Character Ascii Code</label>
-	    <input type="text" name="specialCharAsciiCode" [(ngModel)]="user.specialCharAsciiCode"  class="form-control" [ascii]="{'message':'Special Character Ascii Code is not an Ascii Code'}"/>
+	    <input type="text" name="specialCharAsciiCode" [(ngModel)]="user.specialCharAsciiCode"  class="form-control" [rxascii]="{'message':'Special Character Ascii Code is not an Ascii Code'}"/>
 
       <small class="form-text text-muted">enter Ascii Code only<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>

@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Passing Marks</label>
-	    <input type="text" name="passingMarks" [(ngModel)]="user.passingMarks"  class="form-control" [lessThanEqualTo]="{'fieldName':'totalMarks'}"/>
+	    <input type="text" name="passingMarks" [(ngModel)]="user.passingMarks"  class="form-control" [rxlessThanEqualTo]="{'fieldName':'totalMarks'}"/>
 
       <small class="form-text text-muted">Passing Marks less than to Total marks<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.passingMarks?.errors">{{userForm.controls?.passingMarks?.errors?.lessThanEqualTo.message}}<br/></small>	

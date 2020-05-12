@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { MinNumberCompleteTemplateDrivenValidationDirectivesComponent } from './complete/min-number-complete.component';
 import { MinNumberValueTemplateDrivenValidationDirectivesComponent } from './value/min-number-value.component';
 import { MinNumberMessageTemplateDrivenValidationDirectivesComponent } from './message/min-number-message.component';
@@ -30,8 +33,10 @@ entryComponents: [
 	MinNumberAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

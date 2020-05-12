@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Maximum Age</label>
-	    <input type="text" name="maximumAge" [(ngModel)]="user.maximumAge"  class="form-control" [lessThanEqualTo]="{'value':60}"/>
+	    <input type="text" name="maximumAge" [(ngModel)]="user.maximumAge"  class="form-control" [rxlessThanEqualTo]="{'value':60}"/>
 
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.maximumAge?.errors">{{userForm.controls?.maximumAge?.errors?.lessThanEqualTo.message}}<br/></small>	
     </div>

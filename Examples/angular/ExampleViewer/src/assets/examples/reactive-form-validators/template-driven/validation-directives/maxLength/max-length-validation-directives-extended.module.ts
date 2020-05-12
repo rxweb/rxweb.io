@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { MaxLengthCompleteTemplateDrivenValidationDirectivesComponent } from './complete/max-length-complete.component';
 import { MaxLengthValueTemplateDrivenValidationDirectivesComponent } from './value/max-length-value.component';
 import { MaxLengthConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/max-length-conditional-expression.component';
@@ -30,8 +33,10 @@ entryComponents: [
 	MaxLengthAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

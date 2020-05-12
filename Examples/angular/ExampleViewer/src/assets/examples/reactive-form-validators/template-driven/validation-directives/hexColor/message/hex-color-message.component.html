@@ -2,7 +2,7 @@
   <form #hexcolorinfoForm = "ngForm" [rxwebForm]="hexcolorinfoForm" [model]="hexcolorinfo">
     <div class="form-group">
       <label>Body Hexcode</label>
-	    <input type="text" name="bodyHexcolorCode" [(ngModel)]="hexcolorinfo.bodyHexcolorCode"  class="form-control" [hexColor]="{'message':'Please enter the right format of hexcode for body like \'#AFAFAF\''}"/>
+	    <input type="text" name="bodyHexcolorCode" [(ngModel)]="hexcolorinfo.bodyHexcolorCode"  class="form-control" [rxhexColor]="{'message':'Please enter the right format of hexcode for body like \'#AFAFAF\''}"/>
 
       <small class="form-text text-muted">Shows custom message<br/></small>
 	   <small class="form-text text-danger" *ngIf="hexcolorinfoForm.controls?.bodyHexcolorCode?.errors">{{hexcolorinfoForm.controls?.bodyHexcolorCode?.errors?.hexColor.message}}<br/></small>	

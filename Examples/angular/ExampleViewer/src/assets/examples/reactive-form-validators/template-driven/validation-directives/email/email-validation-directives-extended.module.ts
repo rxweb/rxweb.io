@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { EmailCompleteTemplateDrivenValidationDirectivesComponent } from './complete/email-complete.component';
 import { EmailConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/email-conditional-expression.component';
 import { EmailMessageTemplateDrivenValidationDirectivesComponent } from './message/email-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	EmailAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

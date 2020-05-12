@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Skill</label>
-	    <input type="text" name="skill" [(ngModel)]="user.skill"  class="form-control" [endsWith]="{'value':'r','messageKey':'endsWithMessageKey'}"/>
+	    <input type="text" name="skill" [(ngModel)]="user.skill"  class="form-control" [rxendsWith]="{'value':'r','messageKey':'endsWithMessageKey'}"/>
 
       <small class="form-text text-muted">custom message based on messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.skill?.errors">{{userForm.controls?.skill?.errors?.endsWith.message}}<br/></small>	

@@ -2,7 +2,7 @@
   <form #attandancedetailForm = "ngForm" [rxwebForm]="attandancedetailForm" [model]="attandancedetail">
     <div class="form-group">
       <label>Net-In Time</label>
-	    <input type="text" name="netInTime" [(ngModel)]="attandancedetail.netInTime"  class="form-control" [time]="{'messageKey':'timeMessageKey'}"/>
+	    <input type="text" name="netInTime" [(ngModel)]="attandancedetail.netInTime"  class="form-control" [rxtime]="{'messageKey':'timeMessageKey'}"/>
 
       <small class="form-text text-muted">Shows Custom Validation Message using message key<br/></small>
 	   <small class="form-text text-danger" *ngIf="attandancedetailForm.controls?.netInTime?.errors">{{attandancedetailForm.controls?.netInTime?.errors?.time.message}}<br/></small>	

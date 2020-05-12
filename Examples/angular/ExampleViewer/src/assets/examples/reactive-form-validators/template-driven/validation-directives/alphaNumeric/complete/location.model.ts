@@ -7,6 +7,9 @@ export class Location {
 	flatAddress: string;
 	
 	
+	spanishcityName: string;
+	
+	
 	postalAddress: string;
 	
 	

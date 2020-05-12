@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Age</label>
-	    <input type="text" name="age" [(ngModel)]="user.age"  class="form-control" digit/>
+	    <input type="text" name="age" [(ngModel)]="user.age"  class="form-control" rxdigit/>
 
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.age?.errors">{{userForm.controls?.age?.errors?.digit.message}}<br/></small>	
     </div>

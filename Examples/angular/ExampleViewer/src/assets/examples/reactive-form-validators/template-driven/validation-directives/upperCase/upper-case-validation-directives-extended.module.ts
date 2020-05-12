@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { UpperCaseCompleteTemplateDrivenValidationDirectivesComponent } from './complete/upper-case-complete.component';
 import { UpperCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/upper-case-conditional-expression.component';
 import { UpperCaseMessageTemplateDrivenValidationDirectivesComponent } from './message/upper-case-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	UpperCaseAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

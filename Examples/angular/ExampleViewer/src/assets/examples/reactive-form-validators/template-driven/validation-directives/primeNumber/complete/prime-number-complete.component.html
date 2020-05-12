@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Third Number</label>
-	    <input type="text" name="thirdNumber" [(ngModel)]="numberinfo.thirdNumber"  class="form-control" [primeNumber]="{'conditionalExpression':'x => x.numberType ==\'Prime\''}"/>
+	    <input type="text" name="thirdNumber" [(ngModel)]="numberinfo.thirdNumber"  class="form-control" [rxprimeNumber]="{'conditionalExpression':'x => x.numberType ==\'Prime\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Third Number' then you need to add 'Number Type' input as 'Prime'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
       <label>First Number</label>
-	    <input type="text" name="firstNumber" [(ngModel)]="numberinfo.firstNumber"  class="form-control" [primeNumber]="{'message':'First Number is not a prime number'}"/>
+	    <input type="text" name="firstNumber" [(ngModel)]="numberinfo.firstNumber"  class="form-control" [rxprimeNumber]="{'message':'First Number is not a prime number'}"/>
 
       <small class="form-text text-muted">You can enter only prime number<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>
@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
       <label>Fourth Number</label>
-	    <input type="text" name="fourthNumber" [(ngModel)]="numberinfo.fourthNumber"  class="form-control" [primeNumber]="{'messageKey':'primeNumberMessageKey'}"/>
+	    <input type="text" name="fourthNumber" [(ngModel)]="numberinfo.fourthNumber"  class="form-control" [rxprimeNumber]="{'messageKey':'primeNumberMessageKey'}"/>
 
       <small class="form-text text-muted">Shows custom message using messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="numberinfoForm.controls?.fourthNumber?.errors">{{numberinfoForm.controls?.fourthNumber?.errors?.primeNumber.message}}<br/></small>	

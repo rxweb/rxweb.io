@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { LeapYearCompleteTemplateDrivenValidationDirectivesComponent } from './complete/leap-year-complete.component';
 import { LeapYearConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/leap-year-conditional-expression.component';
 import { LeapYearMessageTemplateDrivenValidationDirectivesComponent } from './message/leap-year-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	LeapYearAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

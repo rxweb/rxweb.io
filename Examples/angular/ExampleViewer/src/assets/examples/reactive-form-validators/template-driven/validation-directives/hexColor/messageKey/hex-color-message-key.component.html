@@ -2,7 +2,7 @@
   <form #hexcolorinfoForm = "ngForm" [rxwebForm]="hexcolorinfoForm" [model]="hexcolorinfo">
     <div class="form-group">
       <label>Title Hexcode</label>
-	    <input type="text" name="titleHexcolorCode" [(ngModel)]="hexcolorinfo.titleHexcolorCode"  class="form-control" [hexColor]="{'messageKey':'hexColorMessageKey'}"/>
+	    <input type="text" name="titleHexcolorCode" [(ngModel)]="hexcolorinfo.titleHexcolorCode"  class="form-control" [rxhexColor]="{'messageKey':'hexColorMessageKey'}"/>
 
       <small class="form-text text-muted">Custom message based on message key<br/></small>
 	   <small class="form-text text-danger" *ngIf="hexcolorinfoForm.controls?.titleHexcolorCode?.errors">{{hexcolorinfoForm.controls?.titleHexcolorCode?.errors?.hexColor.message}}<br/></small>	

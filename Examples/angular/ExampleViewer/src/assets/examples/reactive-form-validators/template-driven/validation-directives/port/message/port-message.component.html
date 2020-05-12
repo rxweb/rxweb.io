@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Educational Website Port</label>
-	    <input type="text" name="educationalWebsitePort" [(ngModel)]="user.educationalWebsitePort"  class="form-control" [port]="{'message':'Educational Website Port is not a proper port number'}"/>
+	    <input type="text" name="educationalWebsitePort" [(ngModel)]="user.educationalWebsitePort"  class="form-control" [rxport]="{'message':'Educational Website Port is not a proper port number'}"/>
 
       <small class="form-text text-muted">enter port number only<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>

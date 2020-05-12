@@ -2,7 +2,7 @@
   <form #companyinfoForm = "ngForm" [rxwebForm]="companyinfoForm" [model]="companyinfo">
     <div class="form-group">
       <label>Oracle Corporation Cusip Code</label>
-	    <input type="text" name="oracleCorporationCusipCode" [(ngModel)]="companyinfo.oracleCorporationCusipCode"  class="form-control" cusip/>
+	    <input type="text" name="oracleCorporationCusipCode" [(ngModel)]="companyinfo.oracleCorporationCusipCode"  class="form-control" rxcusip/>
 
       <small class="form-text text-muted">You must enter a valid cusip Code only<br/></small>
 	   <small class="form-text text-danger" *ngIf="companyinfoForm.controls?.oracleCorporationCusipCode?.errors">{{companyinfoForm.controls?.oracleCorporationCusipCode?.errors?.cusip.message}}<br/></small>	

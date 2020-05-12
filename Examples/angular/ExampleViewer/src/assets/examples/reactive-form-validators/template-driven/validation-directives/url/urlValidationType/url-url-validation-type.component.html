@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Localhost Url</label>
-	    <input type="text" name="localhostUrl" [(ngModel)]="user.localhostUrl"  class="form-control" [url]="{'urlValidationType':2}"/>
+	    <input type="text" name="localhostUrl" [(ngModel)]="user.localhostUrl"  class="form-control" [rxurl]="{'urlValidationType':2}"/>
 
       <small class="form-text text-muted">Enter valid localhost url.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.localhostUrl?.errors">{{userForm.controls?.localhostUrl?.errors?.url.message}}<br/></small>	

@@ -2,7 +2,7 @@
   <form #companyinfoForm = "ngForm" [rxwebForm]="companyinfoForm" [model]="companyinfo">
     <div class="form-group">
       <label>Amazon Corporation Cusip Code</label>
-	    <input type="text" name="amazonCorporationCusipCode" [(ngModel)]="companyinfo.amazonCorporationCusipCode"  class="form-control" [cusip]="{'messageKey':'cusipMessageKey'}"/>
+	    <input type="text" name="amazonCorporationCusipCode" [(ngModel)]="companyinfo.amazonCorporationCusipCode"  class="form-control" [rxcusip]="{'messageKey':'cusipMessageKey'}"/>
 
       <small class="form-text text-muted">enter 9-character alphanumeric cusip Code only<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>

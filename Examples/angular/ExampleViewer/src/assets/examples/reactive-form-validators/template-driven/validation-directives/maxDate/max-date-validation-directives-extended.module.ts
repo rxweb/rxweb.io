@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { MaxDateCompleteTemplateDrivenValidationDirectivesComponent } from './complete/max-date-complete.component';
 import { MaxDateValueTemplateDrivenValidationDirectivesComponent } from './value/max-date-value.component';
 import { MaxDateConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/max-date-conditional-expression.component';
@@ -36,8 +39,10 @@ entryComponents: [
 	MaxDateAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

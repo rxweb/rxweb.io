@@ -5,11 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { LessThanCompleteTemplateDrivenValidationDirectivesComponent } from './complete/less-than-complete.component';
 import { LessThanFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/less-than-field-name.component';
+import { LessThanValueTemplateDrivenValidationDirectivesComponent } from './value/less-than-value.component';
 import { LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/less-than-conditional-expression.component';
 import { LessThanMessageTemplateDrivenValidationDirectivesComponent } from './message/less-than-message.component';
-import { LessThanValueTemplateDrivenValidationDirectivesComponent } from './value/less-than-value.component';
 import { LessThanMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/less-than-message-key.component';
 import { LessThanAddTemplateDrivenValidationDirectivesComponent } from './add/less-than-add.component';
 
@@ -17,33 +20,35 @@ import { LessThanAddTemplateDrivenValidationDirectivesComponent } from './add/le
   declarations: [
 	LessThanCompleteTemplateDrivenValidationDirectivesComponent,
 	LessThanFieldNameTemplateDrivenValidationDirectivesComponent,
+	LessThanValueTemplateDrivenValidationDirectivesComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageTemplateDrivenValidationDirectivesComponent,
-	LessThanValueTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	LessThanCompleteTemplateDrivenValidationDirectivesComponent,
 	LessThanFieldNameTemplateDrivenValidationDirectivesComponent,
+	LessThanValueTemplateDrivenValidationDirectivesComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageTemplateDrivenValidationDirectivesComponent,
-	LessThanValueTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	LessThanCompleteTemplateDrivenValidationDirectivesComponent,
 	LessThanFieldNameTemplateDrivenValidationDirectivesComponent,
+	LessThanValueTemplateDrivenValidationDirectivesComponent,
 	LessThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageTemplateDrivenValidationDirectivesComponent,
-	LessThanValueTemplateDrivenValidationDirectivesComponent,
 	LessThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	LessThanAddTemplateDrivenValidationDirectivesComponent,
   ],

@@ -2,7 +2,7 @@
   <form #digitalinfoForm = "ngForm" [rxwebForm]="digitalinfoForm" [model]="digitalinfo">
     <div class="form-group">
       <label>SoundRecording GRid</label>
-	    <input type="text" name="soundRecordingGrid" [(ngModel)]="digitalinfo.soundRecordingGrid"  class="form-control" grid/>
+	    <input type="text" name="soundRecordingGrid" [(ngModel)]="digitalinfo.soundRecordingGrid"  class="form-control" rxgrid/>
 
 	   <small class="form-text text-danger" *ngIf="digitalinfoForm.controls?.soundRecordingGrid?.errors">{{digitalinfoForm.controls?.soundRecordingGrid?.errors?.grid.message}}<br/></small>	
     </div>

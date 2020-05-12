@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Admission Year</label>
-	    <input type="text" name="admissionYear" [(ngModel)]="user.admissionYear"  class="form-control" [leapYear]="{'conditionalExpression':'x => x.name == \'Bharat\''}"/>
+	    <input type="text" name="admissionYear" [(ngModel)]="user.admissionYear"  class="form-control" [rxleapYear]="{'conditionalExpression':'x => x.name == \'Bharat\''}"/>
 
       <small class="form-text text-muted">To apply the validation of leapYear on 'Admission Year' field, then enter 'Bharat' in 'Name' textbox<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>

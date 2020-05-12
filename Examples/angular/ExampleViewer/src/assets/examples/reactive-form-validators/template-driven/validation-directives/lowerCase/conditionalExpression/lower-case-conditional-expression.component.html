@@ -2,13 +2,13 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Username</label>
-	    <input type="text" name="username" [(ngModel)]="user.username"  class="form-control" lowerCase/>
+	    <input type="text" name="username" [(ngModel)]="user.username"  class="form-control" rxlowerCase/>
 
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.username?.errors">{{userForm.controls?.username?.errors?.lowerCase.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Middle name</label>
-	    <input type="text" name="middleName" [(ngModel)]="user.middleName"  class="form-control" [lowerCase]="{'conditionalExpression':'x => x.username == \'jonathan.feldman\''}"/>
+	    <input type="text" name="middleName" [(ngModel)]="user.middleName"  class="form-control" [rxlowerCase]="{'conditionalExpression':'x => x.username == \'jonathan.feldman\''}"/>
 
       <small class="form-text text-muted">To apply the validation of lowerCase on 'Middle Name' field, then enter the value of 'jonathan.feldman' in username textbox.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>

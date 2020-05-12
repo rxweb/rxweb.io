@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Odd Number</label>
-	    <input type="text" name="oddNumber" [(ngModel)]="user.oddNumber"  class="form-control" odd/>
+	    <input type="text" name="oddNumber" [(ngModel)]="user.oddNumber"  class="form-control" rxodd/>
 
       <small class="form-text text-muted">you can enter only an odd number<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.oddNumber?.errors">{{userForm.controls?.oddNumber?.errors?.odd.message}}<br/></small>	

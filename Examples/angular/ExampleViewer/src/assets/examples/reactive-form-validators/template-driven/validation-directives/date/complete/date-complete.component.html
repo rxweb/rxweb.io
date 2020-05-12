@@ -2,21 +2,21 @@
   <form #userinfoForm = "ngForm" [rxwebForm]="userinfoForm" [model]="userinfo">
     <div class="form-group">
       <label>Birth Date</label>
-	    <input type="text" name="birthDate" [(ngModel)]="userinfo.birthDate"  class="form-control" date/>
+	    <input type="text" name="birthDate" [(ngModel)]="userinfo.birthDate"  class="form-control" rxdate/>
 
       <small class="form-text text-muted">You must enter a proper date format.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.birthDate?.errors">{{userinfoForm.controls?.birthDate?.errors?.date.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Registration Date</label>
-	    <input type="text" name="registrationDate" [(ngModel)]="userinfo.registrationDate"  class="form-control" [date]="{'allowISODate':true}"/>
+	    <input type="text" name="registrationDate" [(ngModel)]="userinfo.registrationDate"  class="form-control" [rxdate]="{'allowISODate':true}"/>
 
       <small class="form-text text-muted">allows standard way to express a numeric calendar date according to International Organization for Standardization.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.registrationDate?.errors">{{userinfoForm.controls?.registrationDate?.errors?.date.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Enrollment Date</label>
-	    <input type="text" name="enrollmentDate" [(ngModel)]="userinfo.enrollmentDate"  class="form-control" [date]="{'conditionalExpression':'x => x.birthDate ==\'16/04/1997\''}"/>
+	    <input type="text" name="enrollmentDate" [(ngModel)]="userinfo.enrollmentDate"  class="form-control" [rxdate]="{'conditionalExpression':'x => x.birthDate ==\'16/04/1997\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Enrollment Date' then you need to add 'birthDate' input as '16/04/1997'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
       <label>Allocation Date</label>
-	    <input type="text" name="allocationDate" [(ngModel)]="userinfo.allocationDate"  class="form-control" [date]="{'message':'Allocation Date is not a valid date'}"/>
+	    <input type="text" name="allocationDate" [(ngModel)]="userinfo.allocationDate"  class="form-control" [rxdate]="{'message':'Allocation Date is not a valid date'}"/>
 
       <small class="form-text text-muted">enter date format only<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>
@@ -32,7 +32,7 @@
     </div>
     <div class="form-group">
       <label>Confirmation Date</label>
-	    <input type="text" name="confirmationDate" [(ngModel)]="userinfo.confirmationDate"  class="form-control" [date]="{'messageKey':'dateMessageKey'}"/>
+	    <input type="text" name="confirmationDate" [(ngModel)]="userinfo.confirmationDate"  class="form-control" [rxdate]="{'messageKey':'dateMessageKey'}"/>
 
       <small class="form-text text-muted">Custom message based on messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.confirmationDate?.errors">{{userinfoForm.controls?.confirmationDate?.errors?.date.message}}<br/></small>	

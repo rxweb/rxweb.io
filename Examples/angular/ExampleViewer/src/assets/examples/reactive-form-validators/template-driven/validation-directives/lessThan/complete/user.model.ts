@@ -6,6 +6,9 @@ export class User {
 	otherActivityMarks: number;
 	
 	
+	maximumAge: number;
+	
+	
 	practicalExamMarks: number;
 	
 	

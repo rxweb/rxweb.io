@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { LongitudeCompleteTemplateDrivenValidationDirectivesComponent } from './complete/longitude-complete.component';
 import { LongitudeConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/longitude-conditional-expression.component';
 import { LongitudeMessageTemplateDrivenValidationDirectivesComponent } from './message/longitude-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	LongitudeAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { ImageCompleteTemplateDrivenValidationDirectivesComponent } from './complete/image-complete.component';
 import { ImageMaxHeightTemplateDrivenValidationDirectivesComponent } from './maxHeight/image-max-height.component';
 import { ImageMaxWidthTemplateDrivenValidationDirectivesComponent } from './maxWidth/image-max-width.component';
@@ -39,8 +42,10 @@ entryComponents: [
 	ImageAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

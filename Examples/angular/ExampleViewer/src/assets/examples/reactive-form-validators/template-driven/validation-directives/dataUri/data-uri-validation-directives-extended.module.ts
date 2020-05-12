@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { DataUriCompleteTemplateDrivenValidationDirectivesComponent } from './complete/data-uri-complete.component';
 import { DataUriConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/data-uri-conditional-expression.component';
 import { DataUriMessageTemplateDrivenValidationDirectivesComponent } from './message/data-uri-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	DataUriAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Shopping Website Port</label>
-	    <input type="text" name="shoppingWebsitePort" [(ngModel)]="user.shoppingWebsitePort"  class="form-control" [port]="{'conditionalExpression':'x => x.browser ==\'Chrome\''}"/>
+	    <input type="text" name="shoppingWebsitePort" [(ngModel)]="user.shoppingWebsitePort"  class="form-control" [rxport]="{'conditionalExpression':'x => x.browser ==\'Chrome\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Shopping Website Port' then you need to add 'Browser' input as 'Chrome'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
       <label>Educational Website Port</label>
-	    <input type="text" name="educationalWebsitePort" [(ngModel)]="user.educationalWebsitePort"  class="form-control" [port]="{'message':'Educational Website Port is not a proper port number'}"/>
+	    <input type="text" name="educationalWebsitePort" [(ngModel)]="user.educationalWebsitePort"  class="form-control" [rxport]="{'message':'Educational Website Port is not a proper port number'}"/>
 
       <small class="form-text text-muted">enter port number only<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>
@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
       <label>Commercial Website Port</label>
-	    <input type="text" name="commercialWebsitePort" [(ngModel)]="user.commercialWebsitePort"  class="form-control" [port]="{'messageKey':'portMessageKey'}"/>
+	    <input type="text" name="commercialWebsitePort" [(ngModel)]="user.commercialWebsitePort"  class="form-control" [rxport]="{'messageKey':'portMessageKey'}"/>
 
       <small class="form-text text-muted">Shows custom message using messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.commercialWebsitePort?.errors">{{userForm.controls?.commercialWebsitePort?.errors?.port.message}}<br/></small>	

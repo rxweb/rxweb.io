@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { PrimeNumberCompleteTemplateDrivenValidationDirectivesComponent } from './complete/prime-number-complete.component';
 import { PrimeNumberConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/prime-number-conditional-expression.component';
 import { PrimeNumberMessageTemplateDrivenValidationDirectivesComponent } from './message/prime-number-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	PrimeNumberAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

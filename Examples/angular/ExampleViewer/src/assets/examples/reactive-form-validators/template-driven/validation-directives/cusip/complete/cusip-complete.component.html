@@ -10,14 +10,14 @@
     </div>
     <div class="form-group">
       <label>Oracle Corporation Cusip Code</label>
-	    <input type="text" name="oracleCorporationCusipCode" [(ngModel)]="companyinfo.oracleCorporationCusipCode"  class="form-control" cusip/>
+	    <input type="text" name="oracleCorporationCusipCode" [(ngModel)]="companyinfo.oracleCorporationCusipCode"  class="form-control" rxcusip/>
 
       <small class="form-text text-muted">You must enter a 9-character alphanumeric cusic code.<br/></small>
 	   <small class="form-text text-danger" *ngIf="companyinfoForm.controls?.oracleCorporationCusipCode?.errors">{{companyinfoForm.controls?.oracleCorporationCusipCode?.errors?.cusip.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Microsoft Corporation Cusip Code</label>
-	    <input type="text" name="microsoftCorporationCusipCode" [(ngModel)]="companyinfo.microsoftCorporationCusipCode"  class="form-control" [cusip]="{'conditionalExpression':'x => x.companyName ==\'Microsoft\''}"/>
+	    <input type="text" name="microsoftCorporationCusipCode" [(ngModel)]="companyinfo.microsoftCorporationCusipCode"  class="form-control" [rxcusip]="{'conditionalExpression':'x => x.companyName ==\'Microsoft\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Microsoft Corporation Cusip Code' then you need to add 'Company Name' input as 'Microsoft'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
@@ -25,7 +25,7 @@
     </div>
     <div class="form-group">
       <label>Apple Inc Cusip Code</label>
-	    <input type="text" name="appleIncCusipCode" [(ngModel)]="companyinfo.appleIncCusipCode"  class="form-control" [cusip]="{'message':'Apple Inc Cusip Code is not a valid cusip Code'}"/>
+	    <input type="text" name="appleIncCusipCode" [(ngModel)]="companyinfo.appleIncCusipCode"  class="form-control" [rxcusip]="{'message':'Apple Inc Cusip Code is not a valid cusip Code'}"/>
 
       <small class="form-text text-muted">enter 9-character alphanumeric cusip Code only<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>
@@ -33,7 +33,7 @@
     </div>
     <div class="form-group">
       <label>Amazon Corporation Cusip Code</label>
-	    <input type="text" name="amazonCorporationCusipCode" [(ngModel)]="companyinfo.amazonCorporationCusipCode"  class="form-control" [cusip]="{'messageKey':'cusipMessageKey'}"/>
+	    <input type="text" name="amazonCorporationCusipCode" [(ngModel)]="companyinfo.amazonCorporationCusipCode"  class="form-control" [rxcusip]="{'messageKey':'cusipMessageKey'}"/>
 
       <small class="form-text text-muted">enter 9-character alphanumeric cusip Code only<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>

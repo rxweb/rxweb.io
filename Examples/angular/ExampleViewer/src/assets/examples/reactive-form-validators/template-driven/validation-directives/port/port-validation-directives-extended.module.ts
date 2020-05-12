@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { PortCompleteTemplateDrivenValidationDirectivesComponent } from './complete/port-complete.component';
 import { PortConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/port-conditional-expression.component';
 import { PortMessageTemplateDrivenValidationDirectivesComponent } from './message/port-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	PortAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { MinDateCompleteTemplateDrivenValidationDirectivesComponent } from './complete/min-date-complete.component';
 import { MinDateValueTemplateDrivenValidationDirectivesComponent } from './value/min-date-value.component';
 import { MinDateConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/min-date-conditional-expression.component';
@@ -36,8 +39,10 @@ entryComponents: [
 	MinDateAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

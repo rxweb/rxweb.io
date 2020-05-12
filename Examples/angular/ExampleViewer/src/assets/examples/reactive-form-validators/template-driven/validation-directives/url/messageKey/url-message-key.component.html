@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Deployed Website Url</label>
-	    <input type="text" name="deployedWebSiteUrl" [(ngModel)]="user.deployedWebSiteUrl"  class="form-control" [url]="{'messageKey':'urlMessageKey'}"/>
+	    <input type="text" name="deployedWebSiteUrl" [(ngModel)]="user.deployedWebSiteUrl"  class="form-control" [rxurl]="{'messageKey':'urlMessageKey'}"/>
 
       <small class="form-text text-muted">Shows Custom Validation Message based on message key<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.deployedWebSiteUrl?.errors">{{userForm.controls?.deployedWebSiteUrl?.errors?.url.message}}<br/></small>	

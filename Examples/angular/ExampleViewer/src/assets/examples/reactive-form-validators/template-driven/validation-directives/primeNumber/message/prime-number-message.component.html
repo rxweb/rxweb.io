@@ -2,7 +2,7 @@
   <form #numberinfoForm = "ngForm" [rxwebForm]="numberinfoForm" [model]="numberinfo">
     <div class="form-group">
       <label>First Number</label>
-	    <input type="text" name="firstNumber" [(ngModel)]="numberinfo.firstNumber"  class="form-control" [primeNumber]="{'message':'First Number is not a prime number'}"/>
+	    <input type="text" name="firstNumber" [(ngModel)]="numberinfo.firstNumber"  class="form-control" [rxprimeNumber]="{'message':'First Number is not a prime number'}"/>
 
       <small class="form-text text-muted">You can enter only prime number<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>

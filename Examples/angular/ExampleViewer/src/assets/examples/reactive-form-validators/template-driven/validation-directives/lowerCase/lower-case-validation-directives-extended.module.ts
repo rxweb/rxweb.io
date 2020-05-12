@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { LowerCaseCompleteTemplateDrivenValidationDirectivesComponent } from './complete/lower-case-complete.component';
 import { LowerCaseConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/lower-case-conditional-expression.component';
 import { LowerCaseMessageTemplateDrivenValidationDirectivesComponent } from './message/lower-case-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	LowerCaseAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

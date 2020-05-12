@@ -2,7 +2,7 @@
   <form #userinfoForm = "ngForm" [rxwebForm]="userinfoForm" [model]="userinfo">
     <div class="form-group">
       <label>Confirmation Date</label>
-	    <input type="text" name="confirmationDate" [(ngModel)]="userinfo.confirmationDate"  class="form-control" [date]="{'messageKey':'dateMessageKey'}"/>
+	    <input type="text" name="confirmationDate" [(ngModel)]="userinfo.confirmationDate"  class="form-control" [rxdate]="{'messageKey':'dateMessageKey'}"/>
 
       <small class="form-text text-muted">Custom message based on messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.confirmationDate?.errors">{{userinfoForm.controls?.confirmationDate?.errors?.date.message}}<br/></small>	

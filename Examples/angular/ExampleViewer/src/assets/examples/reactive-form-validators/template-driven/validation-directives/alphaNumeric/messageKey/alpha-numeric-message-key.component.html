@@ -2,7 +2,7 @@
   <form #locationForm = "ngForm" [rxwebForm]="locationForm" [model]="location">
     <div class="form-group">
       <label>Colony Name</label>
-	    <input type="text" name="colonyName" [(ngModel)]="location.colonyName"  class="form-control" [alphaNumeric]="{'messageKey':'alphaNumericMessageKey'}"/>
+	    <input type="text" name="colonyName" [(ngModel)]="location.colonyName"  class="form-control" [rxalphaNumeric]="{'messageKey':'alphaNumericMessageKey'}"/>
 
       <small class="form-text text-muted">custom message based on messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="locationForm.controls?.colonyName?.errors">{{locationForm.controls?.colonyName?.errors?.alphaNumeric.message}}<br/></small>	

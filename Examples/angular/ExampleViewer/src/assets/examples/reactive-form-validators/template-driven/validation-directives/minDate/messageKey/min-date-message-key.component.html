@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Resignation Date</label>
-	    <input type="text" name="resignationDate" [(ngModel)]="user.resignationDate"  class="form-control" [minDate]="{'value':'07/30/2018','messageKey':'minDateMessageKey'}"/>
+	    <input type="text" name="resignationDate" [(ngModel)]="user.resignationDate"  class="form-control" [rxminDate]="{'value':'07/30/2018','messageKey':'minDateMessageKey'}"/>
 
       <small class="form-text text-muted">Enterred date must be greater than the 30th July 2018<br/></small>
       <small class="form-text text-muted">Shows custom message based on message key<br/></small>

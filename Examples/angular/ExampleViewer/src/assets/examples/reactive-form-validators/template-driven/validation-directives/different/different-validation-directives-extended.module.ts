@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { DifferentCompleteTemplateDrivenValidationDirectivesComponent } from './complete/different-complete.component';
 import { DifferentFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/different-field-name.component';
 import { DifferentMessageTemplateDrivenValidationDirectivesComponent } from './message/different-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	DifferentAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

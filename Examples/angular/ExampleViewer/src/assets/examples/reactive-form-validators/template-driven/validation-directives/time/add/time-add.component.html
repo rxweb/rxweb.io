@@ -2,7 +2,7 @@
   <form #attandancedetailForm = "ngForm" [rxwebForm]="attandancedetailForm" [model]="attandancedetail">
     <div class="form-group">
       <label>Entry Time</label>
-	    <input type="text" name="entryTime" [(ngModel)]="attandancedetail.entryTime"  class="form-control" time/>
+	    <input type="text" name="entryTime" [(ngModel)]="attandancedetail.entryTime"  class="form-control" rxtime/>
 
 	   <small class="form-text text-danger" *ngIf="attandancedetailForm.controls?.entryTime?.errors">{{attandancedetailForm.controls?.entryTime?.errors?.time.message}}<br/></small>	
     </div>

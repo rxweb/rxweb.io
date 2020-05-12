@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Third Country Longitude</label>
-	    <input type="text" name="thirdCountryLongitude" [(ngModel)]="country.thirdCountryLongitude"  class="form-control" [longitude]="{'conditionalExpression':'x => x.continent ==\'Asia\''}"/>
+	    <input type="text" name="thirdCountryLongitude" [(ngModel)]="country.thirdCountryLongitude"  class="form-control" [rxlongitude]="{'conditionalExpression':'x => x.continent ==\'Asia\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Third Country Longitude' then you need to add 'Continent' input as 'Asia'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>

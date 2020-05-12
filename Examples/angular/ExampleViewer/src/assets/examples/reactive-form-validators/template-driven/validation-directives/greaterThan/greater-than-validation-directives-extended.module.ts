@@ -5,11 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { GreaterThanCompleteTemplateDrivenValidationDirectivesComponent } from './complete/greater-than-complete.component';
 import { GreaterThanFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/greater-than-field-name.component';
+import { GreaterThanValueTemplateDrivenValidationDirectivesComponent } from './value/greater-than-value.component';
 import { GreaterThanConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/greater-than-conditional-expression.component';
 import { GreaterThanMessageTemplateDrivenValidationDirectivesComponent } from './message/greater-than-message.component';
-import { GreaterThanValueTemplateDrivenValidationDirectivesComponent } from './value/greater-than-value.component';
 import { GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/greater-than-message-key.component';
 import { GreaterThanAddTemplateDrivenValidationDirectivesComponent } from './add/greater-than-add.component';
 
@@ -17,33 +20,35 @@ import { GreaterThanAddTemplateDrivenValidationDirectivesComponent } from './add
   declarations: [
 	GreaterThanCompleteTemplateDrivenValidationDirectivesComponent,
 	GreaterThanFieldNameTemplateDrivenValidationDirectivesComponent,
+	GreaterThanValueTemplateDrivenValidationDirectivesComponent,
 	GreaterThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanMessageTemplateDrivenValidationDirectivesComponent,
-	GreaterThanValueTemplateDrivenValidationDirectivesComponent,
 	GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	GreaterThanCompleteTemplateDrivenValidationDirectivesComponent,
 	GreaterThanFieldNameTemplateDrivenValidationDirectivesComponent,
+	GreaterThanValueTemplateDrivenValidationDirectivesComponent,
 	GreaterThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanMessageTemplateDrivenValidationDirectivesComponent,
-	GreaterThanValueTemplateDrivenValidationDirectivesComponent,
 	GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	GreaterThanCompleteTemplateDrivenValidationDirectivesComponent,
 	GreaterThanFieldNameTemplateDrivenValidationDirectivesComponent,
+	GreaterThanValueTemplateDrivenValidationDirectivesComponent,
 	GreaterThanConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	GreaterThanMessageTemplateDrivenValidationDirectivesComponent,
-	GreaterThanValueTemplateDrivenValidationDirectivesComponent,
 	GreaterThanMessageKeyTemplateDrivenValidationDirectivesComponent,
 	GreaterThanAddTemplateDrivenValidationDirectivesComponent,
   ],

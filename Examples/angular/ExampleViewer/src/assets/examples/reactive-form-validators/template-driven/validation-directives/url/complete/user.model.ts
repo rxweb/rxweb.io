@@ -13,10 +13,10 @@ export class User {
 	maintenanceWebSiteUrl: string;
 	
 	
-	fqdnDomainUrl: string;
-	
-	
 	localhostUrl: string;
+	
+	
+	fqdnDomainUrl: string;
 	
 	
 	intraServerUrl: string;

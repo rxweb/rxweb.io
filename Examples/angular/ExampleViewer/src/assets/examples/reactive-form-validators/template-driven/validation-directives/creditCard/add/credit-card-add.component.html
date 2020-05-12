@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
       <label>Credit Card No.</label>
-	    <input type="text" name="creditCardNumber" [(ngModel)]="user.creditCardNumber"  class="form-control" [creditCard]="{'fieldName':'cardType'}"/>
+	    <input type="text" name="creditCardNumber" [(ngModel)]="user.creditCardNumber"  class="form-control" [rxcreditCard]="{'fieldName':'cardType'}"/>
 
       <small class="form-text text-muted">Enter Selected Card's Card No<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.creditCardNumber?.errors">{{userForm.controls?.creditCardNumber?.errors?.creditCard.message}}<br/></small>	

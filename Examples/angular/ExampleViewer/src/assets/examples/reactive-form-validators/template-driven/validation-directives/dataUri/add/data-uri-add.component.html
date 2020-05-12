@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Video Data Uri</label>
-	    <input type="text" name="videoDataUri" [(ngModel)]="user.videoDataUri"  class="form-control" dataUri/>
+	    <input type="text" name="videoDataUri" [(ngModel)]="user.videoDataUri"  class="form-control" rxdataUri/>
 
       <small class="form-text text-muted">You must enter a data URI<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.videoDataUri?.errors">{{userForm.controls?.videoDataUri?.errors?.dataUri.message}}<br/></small>	

@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Pdf Data Uri</label>
-	    <input type="text" name="pdfDataUri" [(ngModel)]="user.pdfDataUri"  class="form-control" [dataUri]="{'messageKey':'dataUriMessageKey'}"/>
+	    <input type="text" name="pdfDataUri" [(ngModel)]="user.pdfDataUri"  class="form-control" [rxdataUri]="{'messageKey':'dataUriMessageKey'}"/>
 
       <small class="form-text text-muted">Custom message based on messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.pdfDataUri?.errors">{{userForm.controls?.pdfDataUri?.errors?.dataUri.message}}<br/></small>	

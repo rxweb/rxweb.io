@@ -2,7 +2,7 @@
   <form #countryForm = "ngForm" [rxwebForm]="countryForm" [model]="country">
     <div class="form-group">
       <label>First Country Latitude</label>
-	    <input type="text" name="firstCountryLatitude" [(ngModel)]="country.firstCountryLatitude"  class="form-control" [latitude]="{'message':'First Country Latitude is not a latitude'}"/>
+	    <input type="text" name="firstCountryLatitude" [(ngModel)]="country.firstCountryLatitude"  class="form-control" [rxlatitude]="{'message':'First Country Latitude is not a latitude'}"/>
 
       <small class="form-text text-muted">You can enter only latitude<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>

@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { DigitCompleteTemplateDrivenValidationDirectivesComponent } from './complete/digit-complete.component';
 import { DigitConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/digit-conditional-expression.component';
 import { DigitMessageTemplateDrivenValidationDirectivesComponent } from './message/digit-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	DigitAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

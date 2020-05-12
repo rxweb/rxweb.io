@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Admission Year</label>
-	    <input type="text" name="admissionYear" [(ngModel)]="user.admissionYear"  class="form-control" [leapYear]="{'conditionalExpression':'x => x.name == \'Bharat\''}"/>
+	    <input type="text" name="admissionYear" [(ngModel)]="user.admissionYear"  class="form-control" [rxleapYear]="{'conditionalExpression':'x => x.name == \'Bharat\''}"/>
 
       <small class="form-text text-muted">To apply the validation of leapYear on 'Admission Year' field, then enter 'Bharat' in 'Name' textbox<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
       <label>Joining Year</label>
-	    <input type="text" name="joiningYear" [(ngModel)]="user.joiningYear"  class="form-control" [leapYear]="{'message':'Joining Year is not a leap year'}"/>
+	    <input type="text" name="joiningYear" [(ngModel)]="user.joiningYear"  class="form-control" [rxleapYear]="{'message':'Joining Year is not a leap year'}"/>
 
       <small class="form-text text-muted">you can enter only a leap year<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>
@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
       <label>Promotion Year</label>
-	    <input type="text" name="promotionYear" [(ngModel)]="user.promotionYear"  class="form-control" [leapYear]="{'messageKey':'leapYearMessageKey'}"/>
+	    <input type="text" name="promotionYear" [(ngModel)]="user.promotionYear"  class="form-control" [rxleapYear]="{'messageKey':'leapYearMessageKey'}"/>
 
       <small class="form-text text-muted">Shows custom message based on message key.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.promotionYear?.errors">{{userForm.controls?.promotionYear?.errors?.leapYear.message}}<br/></small>	

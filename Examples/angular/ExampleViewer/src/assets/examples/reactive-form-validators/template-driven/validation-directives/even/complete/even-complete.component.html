@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Even Number</label>
-	    <input type="text" name="evenNumber" [(ngModel)]="user.evenNumber"  class="form-control" [even]="{'conditionalExpression':'x => x.type == \'Even\''}"/>
+	    <input type="text" name="evenNumber" [(ngModel)]="user.evenNumber"  class="form-control" [rxeven]="{'conditionalExpression':'x => x.type == \'Even\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Even Number' then you need to add 'Type' input as 'Even'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
@@ -16,7 +16,7 @@
     </div>
     <div class="form-group">
       <label>Multiples of Even Number</label>
-	    <input type="text" name="multiplesOfEvenNumber" [(ngModel)]="user.multiplesOfEvenNumber"  class="form-control" [even]="{'message':'Multiples of Even Number is not an even number'}"/>
+	    <input type="text" name="multiplesOfEvenNumber" [(ngModel)]="user.multiplesOfEvenNumber"  class="form-control" [rxeven]="{'message':'Multiples of Even Number is not an even number'}"/>
 
       <small class="form-text text-muted">you can enter only an even number<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>
@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
       <label>Other Even Number</label>
-	    <input type="text" name="otherEvenNumber" [(ngModel)]="user.otherEvenNumber"  class="form-control" [even]="{'messageKey':'evenMessageKey'}"/>
+	    <input type="text" name="otherEvenNumber" [(ngModel)]="user.otherEvenNumber"  class="form-control" [rxeven]="{'messageKey':'evenMessageKey'}"/>
 
       <small class="form-text text-muted">custom message based on messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherEvenNumber?.errors">{{userForm.controls?.otherEvenNumber?.errors?.even.message}}<br/></small>	

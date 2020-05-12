@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { FactorCompleteTemplateDrivenValidationDirectivesComponent } from './complete/factor-complete.component';
 import { FactorFieldNameTemplateDrivenValidationDirectivesComponent } from './fieldName/factor-field-name.component';
 import { FactorConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/factor-conditional-expression.component';
@@ -33,8 +36,10 @@ entryComponents: [
 	FactorAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

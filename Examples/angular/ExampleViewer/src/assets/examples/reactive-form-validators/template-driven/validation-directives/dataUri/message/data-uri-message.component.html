@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Video Data Uri</label>
-	    <input type="text" name="videoDataUri" [(ngModel)]="user.videoDataUri"  class="form-control" [dataUri]="{'message':'Video Data Uri is not a proper data URI'}"/>
+	    <input type="text" name="videoDataUri" [(ngModel)]="user.videoDataUri"  class="form-control" [rxdataUri]="{'message':'Video Data Uri is not a proper data URI'}"/>
 
       <small class="form-text text-muted">enter Data URI only<br/></small>
       <small class="form-text text-muted">Shows custom message.<br/></small>

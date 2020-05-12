@@ -2,7 +2,7 @@
   <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
     <div class="form-group">
       <label>Other Odd Number</label>
-	    <input type="text" name="otherOddNumber" [(ngModel)]="user.otherOddNumber"  class="form-control" [odd]="{'messageKey':'oddMessageKey'}"/>
+	    <input type="text" name="otherOddNumber" [(ngModel)]="user.otherOddNumber"  class="form-control" [rxodd]="{'messageKey':'oddMessageKey'}"/>
 
       <small class="form-text text-muted">custom message based on messageKey<br/></small>
 	   <small class="form-text text-danger" *ngIf="userForm.controls?.otherOddNumber?.errors">{{userForm.controls?.otherOddNumber?.errors?.odd.message}}<br/></small>	

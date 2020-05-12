@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { RequiredCompleteTemplateDrivenValidationDirectivesComponent } from './complete/required-complete.component';
 import { RequiredConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/required-conditional-expression.component';
 import { RequiredMessageTemplateDrivenValidationDirectivesComponent } from './message/required-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	RequiredAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

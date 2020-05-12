@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Alphabet Ascii Code</label>
-	    <input type="text" name="alphabetAsciiCode" [(ngModel)]="user.alphabetAsciiCode"  class="form-control" [ascii]="{'conditionalExpression':'x => x.language ==\'Java\''}"/>
+	    <input type="text" name="alphabetAsciiCode" [(ngModel)]="user.alphabetAsciiCode"  class="form-control" [rxascii]="{'conditionalExpression':'x => x.language ==\'Java\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Alphabet Ascii Code' then you need to add 'Language' input as 'Java'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>

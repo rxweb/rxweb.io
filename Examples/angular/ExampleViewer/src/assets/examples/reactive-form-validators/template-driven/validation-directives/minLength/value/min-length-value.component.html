@@ -2,7 +2,7 @@
   <form #contactForm = "ngForm" [rxwebForm]="contactForm" [model]="contact">
     <div class="form-group">
       <label>Mobile No.</label>
-	    <input type="text" name="mobileNo" [(ngModel)]="contact.mobileNo"  class="form-control" [minLength]="{'value':10}"/>
+	    <input type="text" name="mobileNo" [(ngModel)]="contact.mobileNo"  class="form-control" [rxminLength]="{'value':10}"/>
 
       <small class="form-text text-muted">Minimum length upto 10 characters.<br/></small>
       <small class="form-text text-muted">Shows message from ReactiveFormConfig.<br/></small>

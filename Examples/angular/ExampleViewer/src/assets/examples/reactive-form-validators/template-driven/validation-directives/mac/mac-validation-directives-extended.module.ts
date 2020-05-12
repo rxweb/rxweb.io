@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { MacCompleteTemplateDrivenValidationDirectivesComponent } from './complete/mac-complete.component';
 import { MacConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/mac-conditional-expression.component';
 import { MacMessageTemplateDrivenValidationDirectivesComponent } from './message/mac-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	MacAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

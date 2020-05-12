@@ -2,7 +2,7 @@
   <form #employeeinfoForm = "ngForm" [rxwebForm]="employeeinfoForm" [model]="employeeinfo">
     <div class="form-group">
       <label>Number of Projects</label>
-	    <input type="text" name="noOfprojects" [(ngModel)]="employeeinfo.noOfprojects"  class="form-control" [range]="{'minimumNumber':1,'maximumNumber':10,'messageKey':'rangeMessageKey'}"/>
+	    <input type="text" name="noOfprojects" [(ngModel)]="employeeinfo.noOfprojects"  class="form-control" [rxrange]="{'minimumNumber':1,'maximumNumber':10,'messageKey':'rangeMessageKey'}"/>
 
       <small class="form-text text-muted">Shows Custom Validation Message using message key<br/></small>
 	   <small class="form-text text-danger" *ngIf="employeeinfoForm.controls?.noOfprojects?.errors">{{employeeinfoForm.controls?.noOfprojects?.errors?.range.message}}<br/></small>	

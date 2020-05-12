@@ -3,7 +3,14 @@ export class User {
 
 	totalMarks: number;
 
-	marks: number;
-	
-	
+	passingMarks: number;
+
+	maximumAge: number;
+
+	practicalExamMarks: number;
+
+	otherMarks: number;
+
+	disciplineMarks: number;
+
 }

@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { GridCompleteTemplateDrivenValidationDirectivesComponent } from './complete/grid-complete.component';
 import { GridConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/grid-conditional-expression.component';
 import { GridMessageTemplateDrivenValidationDirectivesComponent } from './message/grid-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	GridAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

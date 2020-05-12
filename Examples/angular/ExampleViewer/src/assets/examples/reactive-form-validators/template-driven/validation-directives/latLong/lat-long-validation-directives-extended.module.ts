@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { LatLongCompleteTemplateDrivenValidationDirectivesComponent } from './complete/lat-long-complete.component';
 import { LatLongConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/lat-long-conditional-expression.component';
 import { LatLongMessageTemplateDrivenValidationDirectivesComponent } from './message/lat-long-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	LatLongAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

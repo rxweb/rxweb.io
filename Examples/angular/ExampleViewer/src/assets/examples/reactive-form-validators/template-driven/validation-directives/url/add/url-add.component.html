@@ -2,7 +2,7 @@
   <form #websiteinfomodelForm = "ngForm" [rxwebForm]="websiteinfomodelForm" [model]="websiteinfomodel">
     <div class="form-group">
       <label>Admin Website Url</label>
-	    <input type="text" name="adminWebsiteUrl" [(ngModel)]="websiteinfomodel.adminWebsiteUrl"  class="form-control" url/>
+	    <input type="text" name="adminWebsiteUrl" [(ngModel)]="websiteinfomodel.adminWebsiteUrl"  class="form-control" rxurl/>
 
 	   <small class="form-text text-danger" *ngIf="websiteinfomodelForm.controls?.adminWebsiteUrl?.errors">{{websiteinfomodelForm.controls?.adminWebsiteUrl?.errors?.url.message}}<br/></small>	
     </div>

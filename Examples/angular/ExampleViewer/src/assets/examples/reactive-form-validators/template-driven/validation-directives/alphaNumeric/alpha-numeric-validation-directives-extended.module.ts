@@ -5,47 +5,52 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent } from './complete/alpha-numeric-complete.component';
 import { AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent } from './allowWhiteSpace/alpha-numeric-allow-white-space.component';
+import { AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent } from './locale/alpha-numeric-locale.component';
 import { AlphaNumericMessageTemplateDrivenValidationDirectivesComponent } from './message/alpha-numeric-message.component';
 import { AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/alpha-numeric-conditional-expression.component';
 import { AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/alpha-numeric-message-key.component';
 import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from './add/alpha-numeric-add.component';
 
-
 @NgModule({
   declarations: [
 	AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
+	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericAddTemplateDrivenValidationDirectivesComponent
-	
+	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
 	AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
+	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericAddTemplateDrivenValidationDirectivesComponent
-	
+	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
+	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericAddTemplateDrivenValidationDirectivesComponent
-	
+	AlphaNumericAddTemplateDrivenValidationDirectivesComponent,
   ],
 
 })

@@ -6,6 +6,9 @@ export class User {
 	retiermentAge: number;
 	
 	
+	minimumAge: number;
+	
+	
 	voterAge: number;
 	
 	

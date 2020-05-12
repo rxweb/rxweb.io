@@ -2,7 +2,7 @@
   <form #digitalinfoForm = "ngForm" [rxwebForm]="digitalinfoForm" [model]="digitalinfo">
     <div class="form-group">
       <label>GraphicImage GRid</label>
-	    <input type="text" name="graphicImageGrid" [(ngModel)]="digitalinfo.graphicImageGrid"  class="form-control" [grid]="{'message':'This is Not valid GRid'}"/>
+	    <input type="text" name="graphicImageGrid" [(ngModel)]="digitalinfo.graphicImageGrid"  class="form-control" [rxgrid]="{'message':'This is Not valid GRid'}"/>
 
       <small class="form-text text-muted">Shows custom message.<br/></small>
 	   <small class="form-text text-danger" *ngIf="digitalinfoForm.controls?.graphicImageGrid?.errors">{{digitalinfoForm.controls?.graphicImageGrid?.errors?.grid.message}}<br/></small>	

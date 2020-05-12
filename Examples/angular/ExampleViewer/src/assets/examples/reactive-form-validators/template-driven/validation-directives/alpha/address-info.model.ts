@@ -5,6 +5,8 @@ export class AddressInfo {
 
 	cityName: string;
 
+	spanishcityName: string;
+
 	stateName: string;
 
 	stateCode: string;

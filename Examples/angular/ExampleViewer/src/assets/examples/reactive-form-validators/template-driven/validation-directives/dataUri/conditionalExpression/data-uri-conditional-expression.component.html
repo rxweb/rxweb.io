@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
       <label>Audio Data Uri</label>
-	    <input type="text" name="audioDataUri" [(ngModel)]="user.audioDataUri"  class="form-control" [dataUri]="{'conditionalExpression':'x => x.scheme ==\'DataUri\''}"/>
+	    <input type="text" name="audioDataUri" [(ngModel)]="user.audioDataUri"  class="form-control" [rxdataUri]="{'conditionalExpression':'x => x.scheme ==\'DataUri\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Audio Data Uri' then you need to add 'Scheme' input as 'DataUri'.<br/></small>
       <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>

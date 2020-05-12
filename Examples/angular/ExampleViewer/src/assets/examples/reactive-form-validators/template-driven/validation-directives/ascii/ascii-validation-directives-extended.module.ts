@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { AsciiCompleteTemplateDrivenValidationDirectivesComponent } from './complete/ascii-complete.component';
 import { AsciiConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/ascii-conditional-expression.component';
 import { AsciiMessageTemplateDrivenValidationDirectivesComponent } from './message/ascii-message.component';
@@ -27,8 +30,10 @@ entryComponents: [
 	AsciiAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
