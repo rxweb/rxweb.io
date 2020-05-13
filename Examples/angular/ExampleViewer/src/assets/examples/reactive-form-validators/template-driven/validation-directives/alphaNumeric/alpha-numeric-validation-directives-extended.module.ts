@@ -10,7 +10,6 @@ import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
 
 import { AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent } from './complete/alpha-numeric-complete.component';
 import { AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent } from './allowWhiteSpace/alpha-numeric-allow-white-space.component';
-import { AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent } from './locale/alpha-numeric-locale.component';
 import { AlphaNumericMessageTemplateDrivenValidationDirectivesComponent } from './message/alpha-numeric-message.component';
 import { AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/alpha-numeric-conditional-expression.component';
 import { AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/alpha-numeric-message-key.component';
@@ -20,7 +19,6 @@ import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from './ad
   declarations: [
 	AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
@@ -29,7 +27,6 @@ import { AlphaNumericAddTemplateDrivenValidationDirectivesComponent } from './ad
 entryComponents: [
 	AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,
@@ -46,7 +43,6 @@ entryComponents: [
   exports: [
 	AlphaNumericCompleteTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
-	AlphaNumericLocaleTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	AlphaNumericMessageKeyTemplateDrivenValidationDirectivesComponent,

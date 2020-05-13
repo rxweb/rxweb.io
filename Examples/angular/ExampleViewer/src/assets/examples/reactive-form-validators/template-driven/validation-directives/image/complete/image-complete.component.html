@@ -11,44 +11,44 @@
     </div>
     <div class="form-group">
       <label>Profile Photo</label>
-	    <input type="file" name="profilePhoto"  [(ngModel)]="userinfo.profilePhoto"  class="form-control" [rximage]="{'maxHeight':100,'maxWidth':100}"/>
+	    <input type="file" name="profilePhoto"  [(ngModel)]="userinfo.profilePhoto"  class="form-control" [image]="{'maxHeight':100,'maxWidth':100}"/>
 
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.profilePhoto?.errors">{{userinfoForm.controls?.profilePhoto?.errors?.image.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Signature</label>
-	    <input type="file" name="signature"  [(ngModel)]="userinfo.signature"  class="form-control" [rximage]="{'maxHeight':100,'maxWidth':100}"/>
+	    <input type="file" name="signature"  [(ngModel)]="userinfo.signature"  class="form-control" [image]="{'maxHeight':100,'maxWidth':100}"/>
 
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.signature?.errors">{{userinfoForm.controls?.signature?.errors?.image.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Voter Id</label>
-	    <input type="file" name="voterId"  [(ngModel)]="userinfo.voterId"  class="form-control" [rximage]="{'minHeight':10,'maxHeight':100,'minWidth':10,'maxWidth':10}"/>
+	    <input type="file" name="voterId"  [(ngModel)]="userinfo.voterId"  class="form-control" [image]="{'minHeight':10,'maxHeight':100,'minWidth':10,'maxWidth':10}"/>
 
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.voterId?.errors">{{userinfoForm.controls?.voterId?.errors?.image.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Identity Card</label>
-	    <input type="file" name="identityCard"  [(ngModel)]="userinfo.identityCard"  class="form-control" [rximage]="{'minHeight':10,'maxHeight':100,'maxWidth':100}"/>
+	    <input type="file" name="identityCard"  [(ngModel)]="userinfo.identityCard"  class="form-control" [image]="{'minHeight':10,'maxHeight':100,'maxWidth':100}"/>
 
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.identityCard?.errors">{{userinfoForm.controls?.identityCard?.errors?.image.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Driving License</label>
-	    <input type="file" name="drivinglicense"  [(ngModel)]="userinfo.drivinglicense"  class="form-control" [rximage]="{'maxHeight':100,'maxWidth':100}"/>
+	    <input type="file" name="drivinglicense"  [(ngModel)]="userinfo.drivinglicense"  class="form-control" [image]="{'maxHeight':100,'maxWidth':100}"/>
 
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.drivinglicense?.errors">{{userinfoForm.controls?.drivinglicense?.errors?.image.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Aadhar Card</label>
-	    <input type="file" name="aadharCard"  [(ngModel)]="userinfo.aadharCard"  class="form-control" [rximage]="{'maxHeight':50,'maxWidth':100,'conditionalExpression':'x => x.ImageType == \'IdentityCard\''}"/>
+	    <input type="file" name="aadharCard"  [(ngModel)]="userinfo.aadharCard"  class="form-control" [image]="{'maxHeight':50,'maxWidth':100,'conditionalExpression':'x => x.ImageType == \'IdentityCard\''}"/>
 
       <small class="form-text text-muted">If you want to apply conditional validation on 'Aadhar Card' then you need to add 'Image Type' input as 'IdentityCard'.<br/></small>
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.aadharCard?.errors">{{userinfoForm.controls?.aadharCard?.errors?.image.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>Residence Proof</label>
-	    <input type="file" name="residenceProof"  [(ngModel)]="userinfo.residenceProof"  class="form-control" [rximage]="{'maxHeight':100,'maxWidth':100,'message':'File exceed maximum Height.'}"/>
+	    <input type="file" name="residenceProof"  [(ngModel)]="userinfo.residenceProof"  class="form-control" [image]="{'maxHeight':100,'maxWidth':100,'message':'File exceed maximum Height.'}"/>
 
       <small class="form-text text-muted">Invalid Image height or width.<br/></small>
       <small class="form-text text-muted">It shows custom message<br/></small>
@@ -56,7 +56,7 @@
     </div>
     <div class="form-group">
       <label>Passport</label>
-	    <input type="file" name="passport"  [(ngModel)]="userinfo.passport"  class="form-control" [rximage]="{'maxHeight':100,'maxWidth':100,'messageKey':'imageMessageKey'}"/>
+	    <input type="file" name="passport"  [(ngModel)]="userinfo.passport"  class="form-control" [image]="{'maxHeight':100,'maxWidth':100,'messageKey':'imageMessageKey'}"/>
 
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.passport?.errors">{{userinfoForm.controls?.passport?.errors?.image.message}}<br/></small>	
     </div>

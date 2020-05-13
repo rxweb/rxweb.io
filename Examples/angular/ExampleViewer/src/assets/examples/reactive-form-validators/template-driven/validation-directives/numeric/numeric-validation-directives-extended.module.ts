@@ -5,9 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
-import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
-
-
 import { NumericCompleteTemplateDrivenValidationDirectivesComponent } from './complete/numeric-complete.component';
 import { NumericAcceptValueTemplateDrivenValidationDirectivesComponent } from './acceptValue/numeric-accept-value.component';
 import { NumericIsFormatTemplateDrivenValidationDirectivesComponent } from './isFormat/numeric-is-format.component';
@@ -15,6 +12,7 @@ import { NumericAllowDecimalTemplateDrivenValidationDirectivesComponent } from '
 import { NumericConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/numeric-conditional-expression.component';
 import { NumericMessageTemplateDrivenValidationDirectivesComponent } from './message/numeric-message.component';
 import { NumericMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/numeric-message-key.component';
+import { NumericDigitsInfoTemplateDrivenValidationDirectivesComponent } from './digitsInfo/numeric-digits-info.component';
 import { NumericAddTemplateDrivenValidationDirectivesComponent } from './add/numeric-add.component';
 
 @NgModule({
@@ -26,6 +24,7 @@ import { NumericAddTemplateDrivenValidationDirectivesComponent } from './add/num
 	NumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	NumericMessageTemplateDrivenValidationDirectivesComponent,
 	NumericMessageKeyTemplateDrivenValidationDirectivesComponent,
+	NumericDigitsInfoTemplateDrivenValidationDirectivesComponent,
 	NumericAddTemplateDrivenValidationDirectivesComponent,
   ],
 entryComponents: [
@@ -36,13 +35,12 @@ entryComponents: [
 	NumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	NumericMessageTemplateDrivenValidationDirectivesComponent,
 	NumericMessageKeyTemplateDrivenValidationDirectivesComponent,
+	NumericDigitsInfoTemplateDrivenValidationDirectivesComponent,
 	NumericAddTemplateDrivenValidationDirectivesComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
   ],
-  
- 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -54,6 +52,7 @@ entryComponents: [
 	NumericConditionalExpressionTemplateDrivenValidationDirectivesComponent,
 	NumericMessageTemplateDrivenValidationDirectivesComponent,
 	NumericMessageKeyTemplateDrivenValidationDirectivesComponent,
+	NumericDigitsInfoTemplateDrivenValidationDirectivesComponent,
 	NumericAddTemplateDrivenValidationDirectivesComponent,
   ],
 

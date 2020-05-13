@@ -2,7 +2,7 @@
   <form #userinfoForm = "ngForm" [rxwebForm]="userinfoForm" [model]="userinfo">
     <div class="form-group">
       <label>Formatted Decimal Number</label>
-	    <input type="text" name="formattedDecimalNumber" [(ngModel)]="userinfo.formattedDecimalNumber"  class="form-control" [numeric]="{'digitsInfo':'1.0-2','isFormat':true,'allowDecimal':true}"/>
+	    <input type="text" name="formattedDecimalNumber" [(ngModel)]="userinfo.formattedDecimalNumber"  class="form-control" [rxnumeric]="{'digitsInfo':'1.0-2','isFormat':true,'allowDecimal':true}"/>
 
       <small class="form-text text-muted">Format the decimal input upto 2 decimal places<br/></small>
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.formattedDecimalNumber?.errors">{{userinfoForm.controls?.formattedDecimalNumber?.errors?.numeric.message}}<br/></small>	

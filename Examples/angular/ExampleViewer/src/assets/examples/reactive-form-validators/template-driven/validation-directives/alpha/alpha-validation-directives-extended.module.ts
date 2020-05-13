@@ -10,7 +10,7 @@ import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
 
 import { AlphaCompleteTemplateDrivenValidationDirectivesComponent } from './complete/alpha-complete.component';
 import { AlphaConditionalExpressionTemplateDrivenValidationDirectivesComponent } from './conditionalExpression/alpha-conditional-expression.component';
-import { AlphaLocaleTemplateDrivenValidationDirectivesComponent } from './locale/alpha-locale.component';
+
 import { AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent } from './allowWhiteSpace/alpha-allow-white-space.component';
 import { AlphaMessageTemplateDrivenValidationDirectivesComponent } from './message/alpha-message.component';
 import { AlphaMessageKeyTemplateDrivenValidationDirectivesComponent } from './messageKey/alpha-message-key.component';
@@ -20,7 +20,6 @@ import { AlphaAddTemplateDrivenValidationDirectivesComponent } from './add/alpha
   declarations: [
 	AlphaCompleteTemplateDrivenValidationDirectivesComponent,
 	AlphaConditionalExpressionTemplateDrivenValidationDirectivesComponent,
-	AlphaLocaleTemplateDrivenValidationDirectivesComponent,
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageKeyTemplateDrivenValidationDirectivesComponent,
@@ -29,7 +28,6 @@ import { AlphaAddTemplateDrivenValidationDirectivesComponent } from './add/alpha
 entryComponents: [
 	AlphaCompleteTemplateDrivenValidationDirectivesComponent,
 	AlphaConditionalExpressionTemplateDrivenValidationDirectivesComponent,
-	AlphaLocaleTemplateDrivenValidationDirectivesComponent,
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageKeyTemplateDrivenValidationDirectivesComponent,
@@ -46,7 +44,6 @@ entryComponents: [
   exports: [
 	AlphaCompleteTemplateDrivenValidationDirectivesComponent,
 	AlphaConditionalExpressionTemplateDrivenValidationDirectivesComponent,
-	AlphaLocaleTemplateDrivenValidationDirectivesComponent,
 	AlphaAllowWhiteSpaceTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageTemplateDrivenValidationDirectivesComponent,
 	AlphaMessageKeyTemplateDrivenValidationDirectivesComponent,

@@ -2,7 +2,7 @@
   <form #userinfoForm = "ngForm" [rxwebForm]="userinfoForm" [model]="userinfo">
     <div class="form-group">
       <label>Excel File</label>
-	    <input type="file" name="excelFile"  [(ngModel)]="userinfo.excelFile"  class="form-control" [rxfileSize]="{'maxSize':100,'messageKey':'fileSizeMessageKey'}"/>
+	    <input type="file" name="excelFile"  [(ngModel)]="userinfo.excelFile"  class="form-control" [fileSize]="{'maxSize':100,'messageKey':'fileSizeMessageKey'}"/>
 
 	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.excelFile?.errors">{{userinfoForm.controls?.excelFile?.errors?.fileSize.message}}<br/></small>	
     </div>

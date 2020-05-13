@@ -15,4 +15,6 @@ export class UserInfo {
 
 	positiveNonDecimalNumber: number;
 
+	formattedDecimalNumber: number;
+
 }
