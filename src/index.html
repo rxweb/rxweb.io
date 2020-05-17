@@ -51,13 +51,14 @@
         m.parentNode.insertBefore(a, m)
       })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
       ga('create', 'UA-130246273-1', 'auto');
-      ga('send', 'pageview');
-      $.getJSON('https://json.geoiplookup.io', function (data) {
-        data = JSON.stringify(data, null, 2);
-        var dimensionValue = data.isp;
-        ga('set', 'dimension1', dimensionValue);
-        ga('send', 'pageview');
-      });
+       ga('require', 'ipMeta', {
+      apiKey: '5df431ee55084f8eb680a292c268ec42e885646022c525d963e759d8a179b0f3',
+      serviceProvider: 'dimension2',
+      networkDomain: 'dimension3',
+      networkType: 'dimension4',
+  });
+  ga('ipMeta:loadNetworkFields');
+  ga('send', 'pageview');
       (function () {
 
         window.ldfdr = window.ldfdr || {};
@@ -80,8 +81,8 @@
 
 
   </script>
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script async src="https://ipmeta.io/plugin.js"></script>
 </body>
 
 </html>
