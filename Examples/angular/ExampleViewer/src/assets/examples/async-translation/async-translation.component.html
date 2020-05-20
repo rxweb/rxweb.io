@@ -1,8 +1,0 @@
-<h4 class="example-title">{{global.asyncTitle}}</h4>
-<form class="work-sanslight mg-left-5 form-font-size">
-  <div>
-    <select name="control" class="form-control">
-      <option *ngFor="let item of countries | async" [value]="item.countryId">{{item.countryName}}</option>
-    </select>
-  </div>
-</form>

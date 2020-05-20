@@ -1,29 +1,18 @@
 {
-  "loginTitle": "Static Translation",
-  "asyncTitle": "Async Translation",
-  "onDemandTitle": "On Demand Content Translation",
-  "scopedTitle": "Scoped Translation",
-  "conditionalScopeTitle": "Conditional Scoped Binding",
-  "bindingByKeyNameLabel": "Clean Architecture",
-  "placeholder": {
-    "userName": "Enter Your User Name",
-    "password": "Enter Your Password",
-    "freeText": "Enter Free Text"
+  "plainText": "Showing Text in English.",
+  "scopedText": "Hey {{name}}!",
+  "conditionalText": "this.meridiem == 'am' ? 'Good Morning' : 'Have a Good Day'",
+  "selectedRecord": "You have selected record of '{name}'",
+  "keyOne": "Key One",
+  "nested": {
+    "keyOne": "Nested Key One"
   },
-  "text": {
-    "bindingByKeyNameDescription": "RxWeb follows design principles that produce code with clear separation of concerns. This results in well-structured code that is easily testable.",
-    "preloadText": "Displayed description of 'Preload Translation in Background' is loaded through preload strategy",
-    "selectedRecord": "You have selected record of '{name}'",
-    "firstQuestion": "Who are you?",
-    "secondQuestion":"What are you doing?",
-    "description":"",
-    "conditionalText": "this.fullName == '' ? '' : this.fullName != '' && this.questionType == 1 ? this.global.text.simpleAnswer : this.global.text.perfectAnswer",
-    "userName": "User Name",
-    "password": "Password",
-    "signIn": "Sign In",
-    "freeText": "Free Text",
-    "enteredText": "You have entered text is: {{freeText}}",
-    "simpleAnswer": "I am @rxweb/translate library, Soon I will be in your project for smart translation work 😜.",
-    "perfectAnswer": "Right now, I am looking you. How sweet {{userName}} 😎."
+  "reuseText": "{{global.scopedText}} {{global.conditionalText}}",
+  "validationErrorMessages": {
+    "required": "This Field is Required.",
+    "maxlength": "Maximum length is reached"
+  },
+  "placeholder": {
+    "freeText": "Enter your name!"
   }
 }
