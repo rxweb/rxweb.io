@@ -1003,7 +1003,7 @@ blockquote.command.showHideElement.showElement p {
 }
 
 .pre-code {
-  /* background-color: #fafafa; */
+  background-color: #fafafa;
   border-radius: 5px;
   padding: 10px;
   margin: 0px;
