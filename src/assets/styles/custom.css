@@ -1111,3 +1111,11 @@ input.ng-invalid {
 table.table.table-sm.example-table-color {
   width: 65%;
 }
+
+i.fa.fa-external-link.translate-external-link {
+  font-size: 13PX;
+  color: #7ea4db;
+  padding: 5px !important;
+  cursor: pointer;
+  font-weight: 500!important;
+}

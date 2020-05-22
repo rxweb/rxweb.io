@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { translate } from '@rxweb/translate';
+import { translate, RxTranslateModule } from '@rxweb/translate';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -13,6 +13,14 @@ export class PreLoadModuleComponent {
 
 @NgModule({
     declarations: [PreLoadModuleComponent],
-    imports: [RouterModule.forChild([{ path: '', component: PreLoadModuleComponent }])],
+    imports: [
+        RouterModule.forChild([{ path: '', component: PreLoadModuleComponent }]),
+        RxTranslateModule.forRoot({
+            preloadingStrategy: true,
+            cacheLanguageWiseObject: true,
+            globalFilePath: "assets/i18n/{{language-code}}/global.{{language-code}}.json",
+            filePath: "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json"
+        })
+    ],
 })
 export class PreLoadModule { }

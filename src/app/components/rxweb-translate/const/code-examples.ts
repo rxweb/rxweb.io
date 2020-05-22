@@ -30,8 +30,8 @@ export const CODE_EXAMPLES: { [key: string]: any } = {
 "plainText":"Showing Text in English."
 }`,
             fr: `{
-                "plainText": "Affichage du texte en français."
-            }`
+    "plainText": "Affichage du texte en français."
+}`
         } ,
         typescript: `
         @translate() global:{[key:string]:any}
@@ -45,24 +45,24 @@ export const CODE_EXAMPLES: { [key: string]: any } = {
 "scopedText": "Hey {{name}}!"
 }`,
             fr: `{
-                "scopedText": "Hey {{name}}!"
-            }`
+    "scopedText": "Hey {{name}}!"
+}`
         } ,
         typescript: `
   @translate() global:{[key:string]:any};
 
 name:string = "John";
 `,
-        html: `<input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" [placeholder]="global.placeholder.freeText" class="form-control translate-form-control">
+        html: `<input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control translate-form-control">
 <div class="margin-left badge"> {{global.scopedText}}</div>`
     },
     conditionalText: {
         json: {
             en: `{
-    "conditionalText": "this.meridiem == 'am' ? 'ante meridiem' : 'post meridiem'"
+    "conditionalText": "this.meridiem == 'am' ? 'Good Morning' : 'Have a Good Day'"
 }`,
             fr: `{
-    "conditionalText": "this.meridiem == 'am' ? 'Bonjour' : 'Bonne journée'"
+    "conditionalText": "this.meridiem == 'am' ? 'ante meridiem' : 'post meridiem'"
 }`
         },
         typescript: `
@@ -136,17 +136,17 @@ selectUser(user) {
     resolveTextByKeyName: {
         json: {
             en: `{
-                "keyOne": "Key One",
+  "keyOne": "Key One",
   "nested": {
     "keyOne": "Nested Key One"
   }
-            }`,
+}`,
             fr: `{
-                "keyOne": "Key One",
+  "keyOne": "Key One",
   "nested": {
     "keyOne": "Clé imbriquée"
   }
-            }`
+}`
         },
         typescript: `@translate() global:{[key:string]:any}
 keys: string[] = ["keyOne", "nested.keyOne"];`,
@@ -338,12 +338,30 @@ export class LazyLoadChildComponent {
     preload: {
         typescript: {
             module: `
-@NgModule({
-    declarations: [PreLoadModuleComponent],
-    imports: [RouterModule.forChild([{ path: '', component: PreLoadModuleComponent }])],
+NgModule({
+  imports: [
+    RxTranslateModule.forRoot({
+      preloadingStrategy: true,
+      cacheLanguageWiseObject: true,
+      globalFilePath:
+        "assets/i18n/{{language-code}}/global.{{language-code}}.json",
+      filePath:
+        "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json",
+      
+    })
+  ],
+  exports: [RxTranslateModule]
 })
-export class PreLoadModule { }
+export class RxWebModule {}
 `
+        },
+        ts: {
+            route: `
+            @NgModule({
+    imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules  })],
+    exports: [RouterModule]
+})
+export class AppRoutingModule { }`
         }
     },
 }

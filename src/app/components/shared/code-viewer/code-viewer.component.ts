@@ -47,6 +47,11 @@ export class CodeViewerComponent implements OnInit {
                     EXAMPLE_TITLES[t] = code['module'] ? 'MODULE' : code["service"] ? 'SERVICE' : EXAMPLE_TITLES[t]
                     code = code['module'] ? code["module"] : code["service"] ? code["service"] : code
                 }
+
+                if(t == "ts") {
+                    EXAMPLE_TITLES[t] = code['route'] ? 'ROUTING' : code["service"] ? 'SERVICE' : EXAMPLE_TITLES[t]
+                    code = code['route'] ? code["route"] : code["service"] ? code["service"] : code
+                }
                     
                     
                 codeText.push(`<div  class="code-div" >`);

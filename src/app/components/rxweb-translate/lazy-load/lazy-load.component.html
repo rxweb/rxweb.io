@@ -1,8 +1,10 @@
 <div *ngIf="global.plainText">
   <div class="mt-2 pt-2">
     <p class="text-right ">
-      <a class="blue-link english" [class.active-language]="global.languageCode == 'en'" (click)="navigate('en')">English</a>
-      <a class="blue-link french" [class.active-language]="global.languageCode == 'fr'" (click)="navigate('fr')">French</a>
+      <a class="blue-link english" [class.active-language]="global.languageCode == 'en'"
+        (click)="navigate('en')">English</a>
+      <a class="blue-link french" [class.active-language]="global.languageCode == 'fr'"
+        (click)="navigate('fr')">French</a>
     </p>
     <!--<h3>Binding With Angular Primary Expression</h3>-->
   </div>
@@ -14,15 +16,17 @@
       🌈 Working Example
     </div>
   </div>
-  <div class="row row-style">
+  <div class="row row-style" id="multilingualtextonly">
     <div class="col-sm-4 col-style">
       <div _ngcontent-nkq-c0="" class="col-text-style"><span class="col-hash-text"># </span>Multilingual Text Only</div>
     </div>
-    <div id="col-plainText" (mouseout)="mouseout($event)" class="col-sm-8 col-style">
+    <div id="col-plainText" class="col-sm-8 col-style">
       <div class="badge {{badgeClass}}">
         {{global.plainText}}
       </div>
       <app-code-viewer type='plainText'></app-code-viewer>
+      <a href="https://stackblitz.com/edit/rxweb-static-translation-a1ph9y?file=src%2Fapp%2Fglobal%2Fglobal.component.html"
+        target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
     </div>
   </div>
   <div class="row row-style">
@@ -30,9 +34,12 @@
       <div class="col-text-style"><span class="col-hash-text"># </span>Text with Parameter</div>
     </div>
     <div class="col-sm-8" style="padding-top:40px; padding-bottom:40px;">
-      <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" [placeholder]="global.placeholder.freeText" class="form-control translate-form-control">
+      <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"
+        class="form-control translate-form-control">
       <div class="margin-left badge {{badgeClass}}"> {{global.scopedText}}</div>
       <app-code-viewer type='scopedText'></app-code-viewer>
+      <a href="https://stackblitz.com/edit/rxweb-static-translation-a1ph9y?file=src%2Fapp%2Fglobal%2Fglobal.component.html"
+        target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
     </div>
   </div>
 
@@ -46,6 +53,8 @@
         {{meridiem == "am" ? 'Greet Good Day' : 'Greet Good Morning' }}
       </a>
       <app-code-viewer type='conditionalText'></app-code-viewer>
+      <a href="https://stackblitz.com/edit/rxweb-conditional-scoped-translation-fjhwge?file=src%2Fapp%2Fglobal%2Fglobal.component.html"
+        target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
     </div>
   </div>
   <div class="row row-style">
@@ -57,6 +66,8 @@
         {{global.reuseText}}
       </div>
       <app-code-viewer type='reuseText'></app-code-viewer>
+      <a href="https://stackblitz.com/edit/rxweb-reuse-text-xdmmr3?file=src%2Fapp%2Fglobal%2Fglobal.component.html"
+        target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
     </div>
   </div>
 
@@ -69,6 +80,8 @@
         <option *ngFor="let item of countries | async" [value]="item.countryId">{{item.countryName}}</option>
       </select>
       <app-code-viewer type='asyncSource'></app-code-viewer>
+      <a href="https://stackblitz.com/edit/rxweb-async-source-1p2zwi?file=src/app/global/global.component.html"
+        target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
     </div>
   </div>
 
@@ -81,7 +94,12 @@
         <tbody>
           <tr>
             <th style="width:50%">Name</th>
-            <th style="width:50%">Action<app-code-viewer type='onDemandText'></app-code-viewer></th>
+            <th style="width:50%">
+              Action
+              <app-code-viewer type='onDemandText'></app-code-viewer>
+              <a href="https://stackblitz.com/edit/rxweb-on-demand-text-fro9xr?file=src%2Fapp%2Fglobal%2Fglobal.component.html"
+                target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
+            </th>
           </tr>
           <tr *ngFor="let user of users;">
             <td>{{user.name}}</td>
@@ -96,7 +114,7 @@
       <div *ngIf="message" class="row">
         <div class="col-sm-8 mt-2">
           <div style="background-color: #94dcb4!important;color: #3e3e3e;font-weight: 600;" class="alert alert-primary"
-               role="alert">
+            role="alert">
             {{message}}
           </div>
         </div>
@@ -113,7 +131,11 @@
         <tbody>
           <tr>
             <th style="width:50%">Key Name</th>
-            <th style="width:50%">Key Value <app-code-viewer type='resolveTextByKeyName'></app-code-viewer></th>
+            <th style="width:50%">Key Value
+              <app-code-viewer type='resolveTextByKeyName'></app-code-viewer>
+              <a href="https://stackblitz.com/edit/rxweb-binding-by-key-name-akbfw5?file=src/app/global/global.component.html"
+                target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
+            </th>
           </tr>
           <tr *ngFor="let key of keys;">
             <td><span class="badge badge-light">{{key}}</span></td>
@@ -128,110 +150,154 @@
 
   <div class="row row-style">
     <div class="col-sm-4 col-style" style="padding-top:40px; padding-bottom:40px;">
-      <div class="col-text-style col-text-style-red"><span class="col-hash-text col-hash-text-red "># </span>Validation Message</div>
+      <div class="col-text-style col-text-style-red"><span class="col-hash-text col-hash-text-red "># </span>Validation
+        Message</div>
     </div>
     <div class="col-sm-8" style="padding-top:40px; padding-bottom:30px;">
       <form [formGroup]="formGroup">
-        <input type="text" [class.border-red]="formGroup.controls.fullName.errors" formControlName="fullName" class="form-control translate-form-control" /><app-code-viewer type='validationMessage'></app-code-viewer><br />
-        <span class="small red" *ngIf="formGroup.controls.fullName.errors">{{formGroup.controls.fullName.errors | json}}</span>
+        <input type="text" [class.border-red]="formGroup.controls.fullName.errors" formControlName="fullName"
+          class="form-control translate-form-control" />
+        <app-code-viewer type='validationMessage'></app-code-viewer>
+        <a href="https://stackblitz.com/edit/rxweb-validation-messages-qbu2y8?file=src%2Fapp%2Fglobal%2Fglobal.component.html"
+          target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a><br />
+        <span class="small red"
+          *ngIf="formGroup.controls.fullName.errors">{{formGroup.controls.fullName.errors | json}}</span>
       </form>
     </div>
   </div>
   <div class="row row-style">
     <div class="col-sm-4 col-style" style="padding-top:40px; padding-bottom:40px;">
-      <div class="col-text-style col-text-style-red"><span class="col-hash-text col-hash-text-red"># </span>Validation Message with Parameters</div>
+      <div class="col-text-style col-text-style-red"><span class="col-hash-text col-hash-text-red"># </span>Validation
+        Message with Parameters</div>
     </div>
     <div class="col-sm-8" style="padding-top:40px; padding-bottom:30px;">
       <form [formGroup]="formGroup">
-        <input type="text" [class.border-red]="formGroup.controls.designation.errors" formControlName="designation" class="form-control translate-form-control" /><app-code-viewer type='validationMessageWithParameters'></app-code-viewer><br />
-        <span class="small red" *ngIf="formGroup.controls.designation.errors">{{formGroup.controls.designation.errors.maxlength.message}}</span>
+        <input type="text" [class.border-red]="formGroup.controls.designation.errors" formControlName="designation"
+          class="form-control translate-form-control" />
+        <app-code-viewer type='validationMessageWithParameters'></app-code-viewer>
+        <a href="https://stackblitz.com/edit/rxweb-validation-message-with-parameters-xqjepu?file=src/app/global/global.component.ts"
+          target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a><br />
+        <span class="small red"
+          *ngIf="formGroup.controls.designation.errors">{{formGroup.controls.designation.errors.maxlength.message}}</span>
       </form>
     </div>
   </div>
   <div class="row row-style">
     <div class="col-sm-4 col-style" style="padding-top:40px; padding-bottom:40px;">
-      <div class="col-text-style col-text-style-red"><span class="col-hash-text col-hash-text-red"># </span>Validation Message with Array Parameter</div>
+      <div class="col-text-style col-text-style-red"><span class="col-hash-text col-hash-text-red"># </span>Validation
+        Message with Array Parameter</div>
     </div>
     <div class="col-sm-8" style="padding-top:40px; padding-bottom:30px;">
       <form [formGroup]="formGroup">
-        <input type="text" [class.border-red]="formGroup.controls.designation.errors" formControlName="designation" class="form-control translate-form-control" /><app-code-viewer type='validationMessageWithArrayParameters'></app-code-viewer><br />
-        <span class="small red" *ngIf="formGroup.controls.designation.errors">{{formGroup.controls.designation.errors.maxlength.message}}</span>
+        <input type="text" [class.border-red]="formGroup.controls.designation.errors" formControlName="designation"
+          class="form-control translate-form-control" />
+        <app-code-viewer type='validationMessageWithArrayParameters'></app-code-viewer>
+        <a href="https://stackblitz.com/edit/rxweb-validation-message-with-array-parameter-rzfhrq?file=src/app/global/global.component.html"
+          target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a><br />
+        <span class="small red"
+          *ngIf="formGroup.controls.designation.errors">{{formGroup.controls.designation.errors.maxlength.message}}</span>
       </form>
     </div>
   </div>
   <div class="row row-style">
     <div class="col-sm-4 col-style">
-      <div _ngcontent-nkq-c0="" class="col-text-style "><span class="col-hash-text col-hash-text-color"># </span>Resolve Content By Page Component</div>
+      <div _ngcontent-nkq-c0="" class="col-text-style "><span class="col-hash-text col-hash-text-color"># </span>Resolve
+        Content By Page Component</div>
     </div>
     <div class="col-sm-8 col-style">
       <div class="badge {{badgeClass}}">
         {{lazyLoadContent.text}}
       </div>
       <app-code-viewer type='resolveContentByPageComponent'></app-code-viewer>
+      <a href="https://stackblitz.com/edit/rxweb-resolve-content-by-page-component-4pf8kt?file=src/app/lazy-load/lazy-load.component.html"
+        target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
     </div>
   </div>
 
   <div class="row row-style">
     <div class="col-sm-4 col-style">
-      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span class="col-hash-text  col-hash-text-color"># </span>Resolve Content By Shared Component</div>
+      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span
+          class="col-hash-text  col-hash-text-color"># </span>Resolve Content By Shared Component</div>
     </div>
     <div class="col-sm-8 col-style">
       <app-lazy-load-child *rxTranslate="true"></app-lazy-load-child>
       <app-code-viewer type='resolveContentBySharedComponent'></app-code-viewer>
+      <a href="https://stackblitz.com/edit/rxweb-resolve-content-by-shared-component-gewsvu?file=src/app/lazy-load/lazy-load.component.html"
+        target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
     </div>
   </div>
 
   <div class="row row-style">
     <div class="col-sm-4 col-style">
-      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span class="col-hash-text  col-hash-text-color"># </span>Resolve Content By Angular Preload Module Strategy</div>
+      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span
+          class="col-hash-text  col-hash-text-color"># </span>Resolve Content By Angular Preload Module Strategy</div>
     </div>
     <div class="col-sm-8 col-style">
       <div style="text-align:justify;">
-        See the network request, you will see 'pre-load-module' which loads according to the pre loading startegy, Whenever this activates it's load all respective component multilingual JSON, like if you check the request then you will see the request of 'pre-load.en.json'.
+        See the network request, you will see 'pre-load-module' which loads according to the pre loading startegy,
+        Whenever this activates it's load all respective component multilingual JSON, like if you check the request then
+        you will see the request of 'pre-load.en.json'.
         <app-code-viewer type='preload'></app-code-viewer>
+        <a href="https://stackblitz.com/edit/rxweb-preload-module-strategy-1gjdac?file=src/app/app-routing.module.ts"
+          target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
   <div class="row row-style">
     <div class="col-sm-4 col-style">
-      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span class="col-hash-text col-hash-text-marron"># </span>By Url</div>
+      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span
+          class="col-hash-text col-hash-text-marron"># </span>By Url</div>
     </div>
     <div class="col-sm-8 col-style">
       <p class="small ">
         <a class="blue-link" [class.active-language]="activeLanguage  == 'en'" (click)="navigate('en')">English</a>
         <a class="blue-link" [class.active-language]="activeLanguage  == 'fr'" (click)="navigate('fr')">French</a>
         <app-code-viewer type='byUrl'></app-code-viewer>
+        <a href="https://stackblitz.com/edit/rxweb-translatiion-by-url-ykkq1r?file=src%2Fapp%2Flazy-load%2Flazy-load.component.html"
+          target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
       </p>
     </div>
   </div>
   <div class="row row-style">
     <div class="col-sm-4 col-style">
-      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span class="col-hash-text col-hash-text-marron"># </span>Through Code</div>
+      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span
+          class="col-hash-text col-hash-text-marron"># </span>Through Code</div>
     </div>
     <div class="col-sm-8 col-style">
       <p class="small ">
-        <a class="blue-link" [class.active-language]="lazyLoadContent.languageCode == 'en'" (click)="changeLanguage('en')">English</a>
-        <a class="blue-link" [class.active-language]="lazyLoadContent.languageCode == 'fr'" (click)="changeLanguage('fr')">French</a>
+        <a class="blue-link" [class.active-language]="lazyLoadContent.languageCode == 'en'"
+          (click)="changeLanguage('en')">English</a>
+        <a class="blue-link" [class.active-language]="lazyLoadContent.languageCode == 'fr'"
+          (click)="changeLanguage('fr')">French</a>
         <app-code-viewer type='throughCode'></app-code-viewer>
+        <a href="https://stackblitz.com/edit/rxweb-translation-through-code-tdrmxe?file=src%2Fapp%2Flazy-load%2Flazy-load.component.ts"
+          target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
       </p>
     </div>
   </div>
   <div class="row row-style">
     <div class="col-sm-4 col-style">
-      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span class="col-hash-text"># </span>Fixed Language (en)</div>
+      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span class="col-hash-text"># </span>Fixed
+        Language (en)</div>
     </div>
     <div class="col-sm-8 col-style">
-      <app-fixed-language *rxTranslate=""></app-fixed-language>
+      <app-fixed-language *rxTranslate="true"></app-fixed-language>
       <app-code-viewer type='fixedLanguage'></app-code-viewer>
+      <a href="https://stackblitz.com/edit/rxweb-fixed-language-fcagwc?file=src/app/fixed-language/fixed-language.component.html"
+        target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
     </div>
   </div>
   <div class="row row-style">
     <div class="col-sm-4 col-style">
-      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span class="col-hash-text"># </span>Automatically Set Page Title</div>
+      <div _ngcontent-nkq-c0="" class="col-text-style col-text-style-green"><span class="col-hash-text">#
+        </span>Automatically Set Page Title</div>
     </div>
     <div class="col-sm-8 col-style">
-      See the above title, which is being changed once you change the language. This works only adding the key of 'pageTitle' in JSON file.
+      See the above title, which is being changed once you change the language. This works only adding the key of
+      'pageTitle' in JSON file.
       <app-code-viewer type='automaticallySetPageTitle'></app-code-viewer>
+      <a href="https://stackblitz.com/edit/rxweb-automatically-set-page-title-d1krrd?file=src/app/lazy-load/lazy-load.component.html"
+        target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a>
     </div>
   </div>
 

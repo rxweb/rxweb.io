@@ -2067,8 +2067,147 @@
                 {
                     "title": "Features",
                     "isActive": false,
-                    "uri": "/rxweb-translate",
-                    "linkTitle": "binding"
+                    "uri": "/rxweb-translate/en/lazy-load",
+                    "linkTitle": "features",
+                    "childrens":[
+                        {
+                            "title": "Bindings",
+                            "isActive": false,
+                            "linkTitle": "bindings",
+                            "childrens": [
+                                {
+                                    "title": "Multilingual Text Only",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#multilingualtextonly",
+                                    "linkTitle": "multilingualtextonly"
+                                },
+                                {
+                                    "title": "Text with Parameter",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#textwithparameter",
+                                    "linkTitle": "textwithparameter"
+                                },
+                                {
+                                    "title": "Conditional Text",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#conditionaltext",
+                                    "linkTitle": "conditionaltext"
+                                },
+                                {
+                                    "title": "Reuse Text",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#reusetext",
+                                    "linkTitle": "reusetext"
+                                },
+                                {
+                                    "title": "Async Source",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#asyncsource",
+                                    "linkTitle": "asyncsource"
+                                },
+                                {
+                                    "title": "On Demand Text",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#ondemandtext",
+                                    "linkTitle": "ondemandtext"
+                                },
+                                {
+                                    "title": "Resolve Text By KeyName",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#resolvetextbykeyname",
+                                    "linkTitle": "resolvetextbykeyname"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Validation Message",
+                            "isActive": false,
+                            "linkTitle": "validationmessage",
+                            "childrens": [
+                                {
+                                    "title": "Validation Message",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#validationmessage",
+                                    "linkTitle": "validationmessage"
+                                },
+                                {
+                                    "title": "Validation Message with Parameters",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#validationmessagewithparameters",
+                                    "linkTitle": "validationmessagewithparameters"
+                                },
+                                {
+                                    "title": "Validation Message with Array Parameters",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#validationmessagewitharrayparameters",
+                                    "linkTitle": "validationmessagewitharrayparameters"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Translaton Strategy",
+                            "isActive": false,
+                            "linkTitle": "translationstrategy",
+                            "childrens": [
+                                {
+                                    "title": "Resolve Content By Page Component",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#resolvecontentbypagecomponent",
+                                    "linkTitle": "resolvecontentbypagecomponent"
+                                },
+                                {
+                                    "title": "Resolve Content By Shared Component",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#resolvecontentbysharedcomponent",
+                                    "linkTitle": "resolvecontentbysharedcomponent"
+                                },
+                                {
+                                    "title": "Resolve Content By Angular Preload Module Strategy",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#resolvecontentbyangularpreloadmodulestrategy",
+                                    "linkTitle": "resolvecontentbyangularpreloadmodulestrategy"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Content Translaton",
+                            "isActive": false,
+                            "linkTitle": "contenttranslation",
+                            "childrens": [
+                                {
+                                    "title": "By Url",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#byurl",
+                                    "linkTitle": "byurl"
+                                },
+                                {
+                                    "title": "Through Code",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#throughcode",
+                                    "linkTitle": "throughcode"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Others",
+                            "isActive": false,
+                            "linkTitle": "others",
+                            "childrens": [
+                                {
+                                    "title": "Fixed Language",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#fixedlanguage",
+                                    "linkTitle": "fixedlanguage"
+                                },
+                                {
+                                    "title": "Automatically Set Page Title",
+                                    "isActive": false,
+                                    "uri": "/rxweb-translate/en/lazy-load#automaticallysetpagetitle",
+                                    "linkTitle": "automaticallysetpagetitle"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

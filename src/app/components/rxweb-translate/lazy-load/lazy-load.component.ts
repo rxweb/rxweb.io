@@ -52,11 +52,6 @@ export class LazyLoadComponent implements OnInit {
 
     message: string;
 
-    mouseout(e) {
-        console.log(e)
-    }
-
-
     selectUser(user) {
         this.message = this.rxTranslation.translate(
             this.global.selectedRecord, user
