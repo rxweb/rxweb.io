@@ -58,7 +58,7 @@ export class CodeViewerComponent implements OnInit {
                 codeText.push(`<div class="code-section">`)
                 codes.push({type:t, title: EXAMPLE_TITLES[t], code: Prism.highlight((code), Prism.languages[t])})
                 codeText.push(`<div class="float-right font-size-eight ">${EXAMPLE_TITLES[t]}</div>`)
-                codeText.push('<pre class="pre-code"><code innerHTML="' + Prism.highlight((code), Prism.languages[t]) + '</code></pre>')
+                codeText.push('<pre class="pre-code features-pre-code"><code innerHTML="' + Prism.highlight((code), Prism.languages[t]) + '</code></pre>')
                 codeText.push(`</div>`)
                 codeText.push(`</div>`)
             })
