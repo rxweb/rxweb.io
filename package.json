@@ -50,6 +50,7 @@
     "json-server": "^0.15.1",
     "ngx-clipboard": "^11.1.9",
     "ngx-highlightjs": "^2.1.1",
+    "prismjs": "^1.20.0",
     "rxjs": "^6.4.0",
     "rxjs-compat": "^6.3.3",
     "zone.js": "~0.8.26"
