@@ -1111,3 +1111,12 @@ input.ng-invalid {
 table.table.table-sm.example-table-color {
   width: 65%;
 }
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  color: #0f96e4!important;
+  background-color:#fafafa!important;
+}
+li.nav-item.generated-item-1{
+  content: '✓'; 
+list-style: none;
+}
