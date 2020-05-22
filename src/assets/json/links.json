@@ -2208,6 +2208,13 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "title": "CLI",
+                    "uri": "/rxweb-translate/rxweb-cli",
+                    "isActive": false,
+                    "linkTitle": "rxweb-cli",
+                    "refUri": "rxweb-cli"
                 }
             ]
         }
