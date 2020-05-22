@@ -1,4 +1,9 @@
 {
+  "morningText":"Good Morning",
+  "goodDayText":"Good Day",
+  "conditionalTextGettingStarted":" this.day == 'Good Day' ? this.global.goodDayText : this.global.morningText",
+  "greetMessage":"Hey! {{global.conditionalTextGettingStarted}}, I hope you are doing well 🙃. You can translate me by selecting",
+  "changeTranslation":"You can translate me by selecting:",
   "plainText": "Showing Text in English.",
   "scopedText": "Hey {{name}}!",
   "conditionalText": "this.meridiem == 'am' ? 'Good Morning' : 'Have a Good Day'",

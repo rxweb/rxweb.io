@@ -1118,4 +1118,12 @@ i.fa.fa-external-link.translate-external-link {
   padding: 5px !important;
   cursor: pointer;
   font-weight: 500!important;
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  color: #0f96e4!important;
+  background-color:#fafafa!important;
+}
+li.nav-item.generated-item-1{
+  content: '✓'; 
+  list-style: none;
 }

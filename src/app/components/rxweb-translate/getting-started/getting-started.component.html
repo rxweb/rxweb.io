@@ -1,129 +1,352 @@
-<div class="container container__lg">
+<div id="wrapper" *ngIf="showComponent">
+  <div class="content">
+    <div class="title-bar">
+      <p>A simple library for Angular <span style="color: #0f96e4!important;">Internationalization(i18n)</span> with
+        intuitive features.</p>
+    </div>
+    <div class="bg-white border-radius" style="margin-top:40px;">
+      <div class="row col-md-12">
+
+        <div class="col-md-5">
+          <div class="row">
+            <div class="pr-0">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              
+                <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill" href="#v-pills-profile" role="tab"
+                  aria-controls="v-pills-profile" aria-selected="false">JSON</a>
+                  <a class="nav-link active" style="font-size: 11px;" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                  aria-controls="v-pills-home" aria-selected="true">Component</a>
+                <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                  aria-controls="v-pills-messages" aria-selected="false">Html</a>
+
+              </div>
+            </div>
+            <div class="pl-7">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                  aria-labelledby="v-pills-home-tab" style="width: 490px;">
+                  <div class="code-section p-0">
+
+                    <pre class="pre-code"><code [innerHtml]="mapTranslate">
+                    </code></pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  <div class="code-section p-0">
+
+                    <pre class="pre-code"><code [innerHtml]="code"></code></pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                  <div class="code-section p-0">
+
+                    <pre class="pre-code"><code [innerHtml]="htmlBinding"></code></pre>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-7">
+          <div>
+           
+            <div class="" style="line-height: 34px!important;margin-top: -8px;"><span style="font-size: 17px;">{{global.greetMessage}}</span>&nbsp;
+              <select>
+                <option (click)="navigate('en')">English</option>
+                <option (click)="navigate('fr')">French</option>
+              </select>
+              <h2 style="font-size: 17px!important;">
+                Why @rxweb/translate?</h2>
+              <ul class="bullet-list pl-2">
+                <li class="overview-nav-item">Simple, Maintainable and Readable Translation Code 🌈.
+                </li>
+                <li class="overview-nav-item">Lazy Load Translation Content Component Wise with
+                  Angular PreLoadModule 
+                  Stratergy.</li>
+                <li class="overview-nav-item">Language Translation By URL or 
+                  Code                                                        .</li>          
+                <li class="overview-nav-item">Automatic FormControl Error Message Translation.</li>
+                <li class="overview-nav-item">Powerful CLI with the features of Key Extraction,
+                  Optimize JSON, etc.
+
+                </li>
+
+              </ul>
+             
+            </div>
+
+          </div>
+        </div>
+        <div class='col-lg-12'>
+
+          <div class="bg-white border-radius" style="margin-top:22px;">
+            <div class="row">
+              <div class="col-lg-12">
+
+                <div class="hpanel">
+                  <div class="tab-content fade show">
+                    <div class="tab-pane panel-body validation-tab active">
+                      <div class="row page-section" id="examples" key="dynamic">
+                        <div class='col-lg-12'>
+                          <ul class="nav nav-tabs">
+                            <li [class.active]="mainTab=='installation'" (click)="mainTab='installation'">
+                              <a>Installation</a></li>
+                            <li [class.active]="mainTab=='validator'" (click)="mainTab='validator'"><a>Translation
+                                Setup</a></li>
+
+                          </ul>
+                          <div class="tab-content p-4">
+                            <div class="tab-pane active" *ngIf="mainTab=='installation'">
+                              <video controls>
+                                <source src="assets/images/rxweb-cli-install.mp4" type="video/mp4">
+
+                              </video>
+
+
+                            </div>
+                            <div class="tab-pane active" *ngIf="mainTab=='validator'">
+                              <video controls style="height: 450px!important;">
+                                <source src="assets/images/BIECJOSBDQPB9YDZ.mp4" type="video/mp4">
+
+                              </video>
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class='row page-section mx-0' id="goal">
+                        <div class='col-lg-12 padding-top-15 '>
+                       
+                        </div>
+                      </div>
+                      <app-contribution></app-contribution>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="hpanel">
+            <div class="tab-content fade show">
+              <div class="tab-pane panel-body validation-tab active">
+                <div class="row page-section" id="examples" key="dynamic">
+               
+                <div class='row page-section mx-0' id="goal">
+                  <div class='col-lg-12 padding-top-15 '>
+                    <h2>
+                      Why @rxweb/translate?<a title="Link to this heading" class="link-header"
+                        routerLink="/getting-started" fragment="goal"><i class="fa fa-link"></i></a></h2>
+                        <ul class="nav generated-links pl-2">
+                          <li class="nav-item generated-item">Simple, Maintainable and Readable Translation Code 🌈.</li>
+                          <li class="nav-item generated-item">Lazy Load Translation Content Component Wise with Angular PreLoadModule 😲 Stratergy.</li>
+                          <li class="nav-item generated-item">Language Translation By URL 😍 or Code..</li>
+                          <li class="nav-item generated-item">FormControl Error Message 😉 Translation.</li>
+                          <li class="nav-item generated-item">Powerful CLI 🤗 with the features of Key Extraction, Optimize JSON, etc.
+                
+                          </li>
+                
+                        </ul>
+                  </div>
+                </div>
+                <app-contribution></app-contribution>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <div class="container container__lg">
   <section class="my-4 my-lg-5">
     <div class="title-bar title-bar-translate top_title">
       <p>Getting Started</p>
     </div>
     <div class="title-bar">
-      <p> Internationalize your enterprise application in the most simplified and elegant manner.</p>
+      <p>A simple library for Angular Internationalization(i18n) with intuitive features 🤔.</p>
     </div>
-    <!-- </section>
-  <section> -->
+
+    <div class="hpanel">
+
+     
+    </div>
     <div class="row mx-0">
       <div class="padding-top-15 bold-title flex-column justify-content-center">
         <h2 id="howtostart">
-          How to start?
+          Installation
           <a title="Link to this heading" class="link-header" href="/rxweb-translate/getting-started#howtostart"><i
               class="fa fa-link"></i></a>
         </h2>
-        <p class="comparison-content">You can internationalize your application in just two simple steps without much
-          additional endeavour. To start with that, you need to install <span
-            class="highlighted">@rxweb/translate</span> package.</p>
-        <blockquote class="command showHideElement showElement">
-          <p>npm install @rxweb/translate</p>
-        </blockquote>
-        <p>You can either automatically set up all the necessary configuration needed for the translation and you can
-          check every detail by configuring manually in your application. Let's have a look at how it is done in both
-          ways.</p>
+  
+          <div class="rxweb-intall">
+            <img src='assets/images/rxweb-cli-install.gif' alt='rxweb-install'>
+          </div>
+
       </div>
     </div>
-    <div class="row page-section" id="registerthemodule">
-      <div class="col-lg-12">
-        <h2 id="manualsetupfortranslation"><b>Manual Setup for Translation</b><a title="Link to this heading"
-            class="link-header" href="/rxweb-translate/getting-started#manualsetupfortranslation"><i
+    <div class="row mx-0">
+      <div class="padding-top-15 bold-title flex-column justify-content-center">
+        <h2 id="howtostart">
+          Translation Setup
+          <a title="Link to this heading" class="link-header" href="/rxweb-translate/getting-started#howtostart"><i
               class="fa fa-link"></i></a>
         </h2>
-        <p>For manual setup, here are those 2 simple steps which I discussed above:</p>
-        <ol class="manual-configuration">
-          <li class="configuration-steps">Once the above package(@rxweb/translate) is installed, you need to register
-            the
-            RxTranslateModule in the main module of the application.</li>
-          <li class="configuration-steps">Map @translate decorator on the respective component property.</li>
-        </ol>
-        <p>Have a look at the detailed steps now.</p>
-        <h2>Register The Module</h2>
-        <p>Import <b>RxTranslateModule</b> with the resolution path of the translation content JSON file.</p>
-        <div highlight='pre code'>
-          <pre>
+        <p>You can automatically set up all the necessary configuration needed for the translation and you can
+          check every detail by configuring manually in your application.</p>
+          <video controls>
+            <source src="assets/images/BIECJOSBDQPB9YDZ.mp4" type="video/mp4">
+          </video>
+
+      </div>
+    </div>
+    <div class="row mx-0">
+      <div class="padding-top-15 bold-title flex-column justify-content-center">
+        <h2 id="howtostart">
+          Why @rxweb/translate?
+          <a title="Link to this heading" class="link-header" href="/rxweb-translate/getting-started#howtostart"><i
+              class="fa fa-link"></i></a>
+        </h2>
+        <ul class="nav generated-links">
+          <li class="nav-item generated-item">Simple, Maintainable and Readable Translation Code 🌈.</li>
+          <li class="nav-item generated-item">Lazy Load Translation Content Component Wise with Angular PreLoadModule 😲 Stratergy.</li>
+          <li class="nav-item generated-item">Language Translation By URL 😍 or Code..</li>
+          <li class="nav-item generated-item">FormControl Error Message 😉 Translation.</li>
+          <li class="nav-item generated-item">Powerful CLI 🤗 with the features of Key Extraction, Optimize JSON, etc.
+
+          </li>
+
+        </ul>
+      </div>
+    </div> -->
+  <!-- <div class="row mx-0">
+        <div class="padding-top-15 bold-title flex-column justify-content-center">
+          <h2 id="howtostart">
+            How to start?
+            <a title="Link to this heading" class="link-header" href="/rxweb-translate/getting-started#howtostart"><i
+                class="fa fa-link"></i></a>
+          </h2>
+          <p class="comparison-content">You can internationalize your application in just two simple steps without much
+            additional endeavour. To start with that, you need to install <span
+              class="highlighted">@rxweb/translate</span> package.</p>
+          <blockquote class="command showHideElement showElement">
+            <p>npm install @rxweb/translate</p>
+          </blockquote>
+          <p>You can either automatically set up all the necessary configuration needed for the translation and you can
+            check every detail by configuring manually in your application. Let's have a look at how it is done in both
+            ways.</p>
+        </div>
+      </div>
+      <div class="row page-section" id="registerthemodule">
+        <div class="col-lg-12">
+          <h2 id="manualsetupfortranslation"><b>Manual Setup for Translation</b><a title="Link to this heading"
+              class="link-header" href="/rxweb-translate/getting-started#manualsetupfortranslation"><i
+                class="fa fa-link"></i></a>
+          </h2>
+          <p>For manual setup, here are those 2 simple steps which I discussed above:</p>
+          <ol class="manual-configuration">
+            <li class="configuration-steps">Once the above package(@rxweb/translate) is installed, you need to register
+              the
+              RxTranslateModule in the main module of the application.</li>
+            <li class="configuration-steps">Map @translate decorator on the respective component property.</li>
+          </ol>
+          <p>Have a look at the detailed steps now.</p>
+          <h2>Register The Module</h2>
+          <p>Import <b>RxTranslateModule</b> with the resolution path of the translation content JSON file.</p>
+          <div highlight='pre code'>
+            <pre>
             <code [innerHTML]="importModule"></code>
           </pre>
-        </div>
-        <h2>Map Translate Decorator</h2>
-        <p>Next step is to map <b>translate</b> decorator on that component property where you want to display the
-          translated value. Here it is done with GlobalComponent. If you want to display with any other translation then
-          you can pass it's name in <b>translationName</b> property</p>
-        <div highlight='pre code'>
-          <pre>
+          </div>
+          <h2>Map Translate Decorator</h2>
+          <p>Next step is to map <b>translate</b> decorator on that component property where you want to display the
+            translated value. Here it is done with GlobalComponent. If you want to display with any other translation
+            then
+            you can pass it's name in <b>translationName</b> property</p>
+          <div highlight='pre code'>
+            <pre>
             <code [innerHTML]="mapTranslate"></code>
           </pre>
-        </div>
-        Now your application is ready for the internationalization. You just need the JSON file for your translation
-        content in their respective folders. Default location of those JSON files is assets/i18n/[languagecode].
-        Here shown a sample JSON file.
-        <div highlight='pre code'>
-          <pre>
+          </div>
+          Now your application is ready for the internationalization. You just need the JSON file for your translation
+          content in their respective folders. Default location of those JSON files is assets/i18n/[languagecode].
+          Here shown a sample JSON file.
+          <div highlight='pre code'>
+            <pre>
             <code [innerHTML]="enJsonFile"></code>
           </pre>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row page-section" id="registerthemodule">
-      <div class="col-lg-12">
-        <h2 id="automaticallyconfigurewithcli"><b>Automatically Configure Translation With CLI</b><a
-            title="Link to this heading" class="link-header"
-            href="/rxweb-translate/getting-started#automaticallyconfigurewithcli"><i class="fa fa-link"></i></a>
-        </h2>
-        <p class="showHideElement showElement">You can automatically configure everything which is needed to set the
-          translation in your application through Rxweb CLI. Seems much easy right? 😉
-          You just need to install <span class="highlighted">@rxweb/cli</span> globally in your system and you'll be
-          able to configure everything automatically.</p>
+      <div class="row page-section" id="registerthemodule">
+        <div class="col-lg-12">
+          <h2 id="automaticallyconfigurewithcli"><b>Automatically Configure Translation With CLI</b><a
+              title="Link to this heading" class="link-header"
+              href="/rxweb-translate/getting-started#automaticallyconfigurewithcli"><i class="fa fa-link"></i></a>
+          </h2>
+          <p class="showHideElement showElement">You can automatically configure everything which is needed to set the
+            translation in your application through Rxweb CLI. Seems much easy right? 😉
+            You just need to install <span class="highlighted">@rxweb/cli</span> globally in your system and you'll be
+            able to configure everything automatically.</p>
 
-        <blockquote class="command showHideElement showElement">
-          <p>npm install -g @rxweb/cli</p>
-        </blockquote>
+          <blockquote class="command showHideElement showElement">
+            <p>npm install -g @rxweb/cli</p>
+          </blockquote>
 
-        <p class="showHideElement showElement">Once the CLI is installed globally in your system, open command prompt at
-          the project directory and run <span class="highlighted">rxweb</span> command.</p>
-        <blockquote class="showHideElement showElement">
-          <ol class="manual-configuration">
-            <li class="configuration-steps">Go to your project directory.</li>
-            <li class="configuration-steps">Open command prompt at that location.</li>
-            <li class="configuration-steps">Run <b>rxweb</b> command.</li>
-          </ol>
-        </blockquote>
-        <div class="rxweb-intall">
-          <img src='assets/images/rxweb-install.gif' alt='rxweb-install'>
-        </div>
+          <p class="showHideElement showElement">Once the CLI is installed globally in your system, open command prompt
+            at
+            the project directory and run <span class="highlighted">rxweb</span> command.</p>
+          <blockquote class="showHideElement showElement">
+            <ol class="manual-configuration">
+              <li class="configuration-steps">Go to your project directory.</li>
+              <li class="configuration-steps">Open command prompt at that location.</li>
+              <li class="configuration-steps">Run <b>rxweb</b> command.</li>
+            </ol>
+          </blockquote>
+          <div class="rxweb-intall">
+            <img src='assets/images/rxweb-install.gif' alt='rxweb-install'>
+          </div>
 
-        <p>After running the above rxweb command in your application, below files/folders will be generated:</p>
+          <p>After running the above rxweb command in your application, below files/folders will be generated:</p>
 
-        <ul class="nav generated-links">
-          <li class="nav-item generated-item"><b>src/app/rxweb.module.ts</b>: This file resolves RxTranslateModule which
-            contains caching and filePaths. You need to import this RxWebModule in your root module.</li>
-          <li class="nav-item generated-item"><b>rxweb.json</b>: This file contains internationalization related
-            configuration.</li>
-          <li class="nav-item generated-item"><b>rxweb.webpack.dev.js</b>: This file webpack configuration file which
-            exports TranslationWebpackPlugin module.</li>
-          <li class="nav-item generated-item"><b>assets/i18n</b>: This folder contains multilingual data in a JSON
-            format in their respective language folders</li>
-          <li class="nav-item generated-item"><b>assets/i18n/en/global.en.json</b>: This global multilingual data file
-            used as default data file if you don't mention any translation name.</li>
-          <li class="nav-item generated-item"><b>src/app/i18n-models</b>: This folder contains models for strongly typed
-            binding.</li>
-        </ul>
-        <br />
-        <p>This will automatically resolve the RxTranslateModule and set the configuration needed for
-          internationalization.
-          Same as the manual process you need to map <b>translate</b> decorator on that component property where you
-          want to display the translated
-          value.</p>
-        <div highlight='pre code'>
-          <pre>
+          <ul class="nav generated-links">
+            <li class="nav-item generated-item"><b>src/app/rxweb.module.ts</b>: This file resolves RxTranslateModule
+              which
+              contains caching and filePaths. You need to import this RxWebModule in your root module.</li>
+            <li class="nav-item generated-item"><b>rxweb.json</b>: This file contains internationalization related
+              configuration.</li>
+            <li class="nav-item generated-item"><b>rxweb.webpack.dev.js</b>: This file webpack configuration file which
+              exports TranslationWebpackPlugin module.</li>
+            <li class="nav-item generated-item"><b>assets/i18n</b>: This folder contains multilingual data in a JSON
+              format in their respective language folders</li>
+            <li class="nav-item generated-item"><b>assets/i18n/en/global.en.json</b>: This global multilingual data file
+              used as default data file if you don't mention any translation name.</li>
+            <li class="nav-item generated-item"><b>src/app/i18n-models</b>: This folder contains models for strongly
+              typed
+              binding.</li>
+          </ul>
+          <br />
+          <p>This will automatically resolve the RxTranslateModule and set the configuration needed for
+            internationalization.
+            Same as the manual process you need to map <b>translate</b> decorator on that component property where you
+            want to display the translated
+            value.</p>
+          <div highlight='pre code'>
+            <pre>
             <code [innerHTML]="mapTranslate"></code>
           </pre>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-</div>
+      </div> -->
+  <!-- </section>
+</div> -->
 
-<app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
+
+
+
+  <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
