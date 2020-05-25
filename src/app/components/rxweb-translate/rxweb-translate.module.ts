@@ -19,10 +19,11 @@ import { CodeViewerComponent } from '../shared/code-viewer/code-viewer.component
 import { LazyLoadChildComponent } from './lazy-load/shared/lazy-load-child/lazy-load-child.component';
 import { FixedLanguageComponent } from './lazy-load/shared/fixed-language/fixed-language.component';
 import { RxTranslateModule } from '@rxweb/translate';
+import { CliComponent } from './cli/cli.component';
 
 @NgModule({
   imports: [RXWEB_TRANSLATE_ROUTING, CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule, CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule, RxTranslateModule],
-  declarations: [TranslateGettingStartedComponent, LazyLoadComponent, LazyLoadChildComponent, CodeViewerComponent, FixedLanguageComponent ],
+  declarations: [TranslateGettingStartedComponent,CliComponent, LazyLoadComponent, LazyLoadChildComponent, CodeViewerComponent, FixedLanguageComponent],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]
 })

@@ -6,7 +6,9 @@ import { ContentTranslationComponent } from './content-translation/content-trans
 import { ApiComponent } from './api/api.component';
 import { ComparisonComponent } from './comparison/comparison.component';
 
+
 const TRANSLATE_ROUTES: Routes = [
+ 
   {
     path: 'binding',
     component: BindingComponent

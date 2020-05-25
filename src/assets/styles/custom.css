@@ -1133,3 +1133,21 @@ li.nav-item.generated-item-1 {
 .features-pre-code {
   background-color: transparent!important;
 }
+.learn-video-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.learn-video-card-wrapper {
+  display: flex;
+  padding: 5px;
+}
+.learn-video-card {
+  border: 1px solid #c8c8c8;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+}
+.learn-video-img {
+  margin: -10px -10px 10px;
+}
