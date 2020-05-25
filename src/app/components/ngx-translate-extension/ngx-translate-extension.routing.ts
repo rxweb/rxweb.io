@@ -49,7 +49,7 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
     loadChildren: 'src/app/components/ngx-translate-extension/comparison/comparison.module#ComparisonModule',
   },
   {
-    path: 'Confidence',
+    path: 'confidence',
     component: ConfidenceComponent
   }
 
