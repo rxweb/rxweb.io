@@ -22,7 +22,7 @@ import { RxTranslateModule } from '@rxweb/translate';
 
 @NgModule({
   imports: [RXWEB_TRANSLATE_ROUTING, CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule, CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule, RxTranslateModule],
-  declarations: [TranslateGettingStartedComponent, LazyLoadComponent, LazyLoadChildComponent, CodeViewerComponent, FixedLanguageComponent],
+  declarations: [TranslateGettingStartedComponent, LazyLoadComponent, LazyLoadChildComponent, CodeViewerComponent, FixedLanguageComponent ],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]
 })

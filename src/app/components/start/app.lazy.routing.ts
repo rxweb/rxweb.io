@@ -153,6 +153,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/rxweb-translate/rxweb-translate.module#RxwebTranslateModule',
   },
   {
+    path: 'ngx-translate-extension',
+    loadChildren: 'src/app/components/ngx-translate-extension/ngx-translate-extension.module#NgxTranslateExtensionModule',
+  },
+  {
     path: 'coming-soon',
     component: ComingSoonComponent,
   },
