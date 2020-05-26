@@ -23,7 +23,8 @@
 				<div id="searchlist-content1" class="search-content">
 					<ais-hits>
 						<ng-template let-hits="hits" let-results="results">
-							{{bindLinks(hits)}}
+							{{searchResult}}
+							{{bindLinks(hits,searchvalue)}}
 						</ng-template>
 					</ais-hits>
 				</div>

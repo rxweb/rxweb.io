@@ -5,6 +5,9 @@ import { ApplicationBroadcaster } from "@rx/core";
 import { environment } from 'src/environments/environment';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { element } from '@angular/core/src/render3';
+import { identifierModuleUrl } from '@angular/compiler';
+import { isArray } from 'util';
+import { ignoreElements } from 'rxjs-compat/operator/ignoreElements';
 
 @Component({
   selector: 'app-side-bar',
@@ -58,47 +61,13 @@ export class SideBarComponent implements OnInit {
     this.showComponent = true;
   }
 
-  setHideLink(currentUrl: string, isSearch: boolean = false, element: any) {
-    if (element.title == currentUrl){
-      element.isHide = false;
-    }
-    else {
-      element.isHide = true;
-    }
-      
-    if (element.childrens) {
-      element.childrens.forEach(item => {
-        this.setHideLink(currentUrl, isSearch, item);
-      });
-    }
-  }
 
-  setActiveLink(currentUrl: string, isSearch: boolean = false) {
+  setActiveLink(currentUrl: string) {
     for (let link of this.links) {
       if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
-        link.isActive = this.isActiveChildren(currentUrl, link.childrens, isSearch);
+        link.isActive = this.isActiveChildren(currentUrl, link.childrens);
       } else
-        link.isActive = isSearch ? link.title == `${currentUrl.charAt(0).toLowerCase()}${currentUrl.replace(currentUrl.charAt(0), "")}` : link.uri == currentUrl;
-      if (isSearch) {
-        if (this.links != undefined) {
-          var activeChildLink = this.links.filter(x => x.isActive == true);
-          if (activeChildLink.length > 0) {
-            this.links.forEach(element => {
-              element.isHide = true;
-              // this.setHideLink(currentUrl, isSearch, element);
-            });
-            activeChildLink.forEach(element => {
-              element.isHide = false;
-            })
-          }
-          else {
-            this.links.forEach(element => {
-              element.isHide = false;
-              // this.setHideLink(element);
-            });
-          }
-        }
-      }
+        link.isActive = link.uri == currentUrl;
       if (link.isActive) {
         link.isOpen = true;
         break;
@@ -106,32 +75,13 @@ export class SideBarComponent implements OnInit {
     }
   }
 
-  isActiveChildren(currentUrl: string, childrens: any[], isSearch) {
+  isActiveChildren(currentUrl: string, childrens: any[]) {
     let isActive = false;
     for (let link of childrens) {
       if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
-        link.isActive = this.isActiveChildren(currentUrl, link.childrens, isSearch);
+        link.isActive = this.isActiveChildren(currentUrl, link.childrens);
       } else
-        link.isActive = isSearch ? link.title == `${currentUrl.charAt(0).toLowerCase()}${currentUrl.replace(currentUrl.charAt(0), "")}` : link.uri == currentUrl;
-      if (isSearch) {
-        if (this.links != undefined) {
-          var activeChildLink = childrens.filter(x => x.isActive == true);
-          if (activeChildLink.length > 0) {
-            childrens.forEach(element => {
-              element.isHide = true;
-            });
-            activeChildLink.forEach(element => {
-              element.isHide = false;
-            })
-
-          }
-        }
-      }
-      else {
-        childrens.forEach(element => {
-          element.isHide = false;
-        })
-      }
+        link.isActive = link.uri == currentUrl;
       if (link.isActive) {
         isActive = true;
         link.isOpen = true;
@@ -159,6 +109,7 @@ export class SideBarComponent implements OnInit {
       this.sticky = false;
     }
   }
+
   showsearchcontent(event, searchvalue: string) {
     if (event.key == "Escape")
       this.hideSearch();
@@ -174,34 +125,60 @@ export class SideBarComponent implements OnInit {
 
   refLinks: any[] = [];
   lastSearchValue: string = '';
-  bindLinks(searchResult: any[]) {
-    if (this.isSearch) {
-      searchResult.forEach(t => {
-        this.setActiveLink(t.title, true);
-      })
-      this.isSearch = false;
-    } else
-      this.isSearch = false;
-  }
+  bindLinks(searchResult: any[], searchvalue: string) {
+    if (this.lastSearchValue != this.searchvalue) {
+      this.lastSearchValue = this.searchvalue;
+      if (searchvalue != undefined && searchvalue.length > 0) {
+        this.isSearch = true;
 
-  searchChildObject(searchObject: any, childrens: any[]) {
-    for (let link of childrens) {
-      if (link.childrens && Array.isArray(link.childrens) && link.childrens.length > 0) {
-        this.searchChildObject(searchObject, link.childrens);
-      } else {
-        let refObject = childrens.filter(y => y.title.toLowerCase() == searchObject.title.toLowerCase())[0];
-        if (refObject) {
-          this.hideAll(refObject, true, true)
-          refObject.isHide = false;
-          refObject.isOpen = true;
-          break;
+        if (this.isSearch) {
+          this.hideAll(this.links, true, true)
+          if (Array.isArray(searchResult) && searchResult != undefined && searchResult.length > 0) {
+            searchResult.forEach(t => {
+              let searchObject = this.links;
+              if (t.linkTrees) {
+                t.linkTrees.forEach(x => {
+                  let refObject = searchObject.filter(y => y.title == x)
+                  if (refObject && refObject[0]) {
+                    refObject[0].isHide = false;
+                    refObject[0].isOpen = true;
+                    this.searchChildSearchLink(t.linkTrees, refObject[0].childrens, 1, t)
+                  }
+
+
+                })
+              }
+
+            })
+          }
+
+
+
+
         }
       }
     }
-
+  }
+  searchChildSearchLink(linkTrees: any[], childrens: any[], level: number, searchResult: any) {
+    if (childrens) {
+      let newrefObject = childrens.filter(z => z.title == linkTrees[level])
+      if (newrefObject && newrefObject[0]) {
+        newrefObject[0].isHide = false;
+        newrefObject[0].isOpen = true;
+        if (newrefObject[0].childrens) {
+          this.searchChildSearchLink(linkTrees, newrefObject[0].childrens, level + 1, searchResult)
+        }
+      }
+      else {
+        let searchLink = childrens.filter(x => x.title == searchResult.title)
+        searchLink[0].isHide = false;
+      }
+    }
   }
 
-  hideAll(jObject: any[], isHide: boolean, isOpen: boolean) {
+
+
+  hideAll(jObject: any[], isHide: boolean, isOpen?: boolean) {
     for (var i = 0; i < jObject.length; i++) {
       jObject[i].isHide = isHide;
       jObject[i].isOpen = isOpen;
@@ -211,8 +188,9 @@ export class SideBarComponent implements OnInit {
   }
 
   hideSearch() {
+    this.hideAll(this.links, false)
     var currentUrl = this.router.url;
-    this.setActiveLink(currentUrl, false);
+    this.setActiveLink(currentUrl);
     setTimeout(() => {
       this.searchInput['searchBox'].nativeElement.value = "";
       this.searchvalue = "";

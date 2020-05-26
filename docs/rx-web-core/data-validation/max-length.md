@@ -4,7 +4,7 @@ author: rxcontributorone
 category: rxwebcore
 subcategory: data-validation
 type:simple
-linktitle:maxlength 
+linktitle:max-length 
 ---
 # MaxLength 
 

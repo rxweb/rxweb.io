@@ -1,7 +1,8 @@
 ---
 title: Overview
 author: rxcontributortwo
-category: tours-of-contoso-app  
+category: rxwebcore
+subcategory : tours-of-contoso-app
 type: simple
 linktitle: overview
 ---

@@ -1,7 +1,8 @@
 ---
 title: Authorization
 author: rxcontributorone
-category: security
+category: rxwebcore
+subcategory : security
 type:simple
 linktitle:authorization
 ---

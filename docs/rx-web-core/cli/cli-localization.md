@@ -2,8 +2,9 @@
 title: Localization
 author: rxcontributorone
 category: rxwebcore 
+subcategory: cli
 type:simple
-linktitle:localization
+linktitle:cli-localization
 ---
 
 # Adding Localization

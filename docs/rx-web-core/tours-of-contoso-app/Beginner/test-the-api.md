@@ -1,7 +1,8 @@
 ---
 title: Test The Api
 author: rxcontributortwo
-category: beginner
+category: rxwebcore
+subcategory : tours-of-contoso-app
 type: simple
 linktitle: test-the-api
 ---

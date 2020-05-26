@@ -2,8 +2,9 @@
 title: Creating Controllers
 author: rxcontributorone
 category: rxwebcore 
+subcategory: cli
 type:simple
-linktitle:creatingcontrollers
+linktitle:cli-controllers
 ---
 
 # Creating Controllers
