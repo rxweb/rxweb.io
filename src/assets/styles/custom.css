@@ -1133,14 +1133,17 @@ li.nav-item.generated-item-1 {
 .features-pre-code {
   background-color: transparent!important;
 }
+
 .learn-video-list {
   display: flex;
   flex-wrap: wrap;
 }
+
 .learn-video-card-wrapper {
   display: flex;
   padding: 5px;
 }
+
 .learn-video-card {
   border: 1px solid #c8c8c8;
   display: flex;
@@ -1148,6 +1151,13 @@ li.nav-item.generated-item-1 {
   padding: 10px;
   width: 100%;
 }
+
 .learn-video-img {
   margin: -10px -10px 10px;
+}
+
+code.command.hljs.routeros {
+  padding-bottom: 1em!important;
+  color: #37474f!important;
+  background-color: hsla(0, 0%, 98%, 1)!important;
 }
