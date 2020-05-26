@@ -4,7 +4,7 @@ author: rxcontributorone
 category: rxwebcore
 subcategory: localization-and-globalization
 type:simple
-linktitle:globalcontent
+linktitle:global-content
 --- 
 # Global Content
 

@@ -2,7 +2,7 @@
 title: Data Validation
 author: rxcontributorone
 category: rxwebcore
-subcategory: data-validation
+subcategory : tours-of-contoso-app
 type:simple
 linktitle:data-validation
 ---

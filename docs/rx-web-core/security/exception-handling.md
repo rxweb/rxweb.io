@@ -1,9 +1,10 @@
 ---
 title: ExceptionHandlingAndLogging
 author: rxcontributorone
-category: security 
+category: rxwebcore
+subcategory : security
 type:simple
-linktitle:exceptionhandlingandlogging
+linktitle:exception-handling
 ---
 # Exception Handling
 

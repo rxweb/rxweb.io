@@ -1,9 +1,10 @@
 ---
 title: BoundedContext And Uow
 author: rxcontributorone
-category: beginner
+category: rxwebcore
+subcategory : tours-of-contoso-app
 type: simple
-linktitle: boundedcontext-and-uow
+linktitle: boundedcontext
 ---
 
 # Bounded Context

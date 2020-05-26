@@ -4,7 +4,7 @@ author: rxcontributortwo
 category: rxwebcore
 subcategory: developing-the-api
 type:simple
-linktitle:basiccontroller
+linktitle:basic-controller
 ---
 # Basic Controller
 

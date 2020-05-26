@@ -2,8 +2,9 @@
 title: Creating Contexts
 author: rxcontributorone
 category: rxwebcore 
+subcategory: cli
 type:simple
-linktitle:creatingcontexts
+linktitle:cli-context
 ---
 
 # Create Context

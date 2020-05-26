@@ -1,9 +1,10 @@
 ---
 title: Two Factor Authentication 
 author: rxcontributorone
-category: security 
+category: rxwebcore
+subcategory : security
 type:simple
-linktitle:twofactorauthentication
+linktitle:two-factor-authentication
 ---
 
 

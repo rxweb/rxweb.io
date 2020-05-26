@@ -1,7 +1,8 @@
 ---
 title: Authentication
 author: rxcontributortwo
-category: beginner
+category: rxwebcore
+subcategory : tours-of-contoso-app
 type: simple
 linktitle: overview
 ---
