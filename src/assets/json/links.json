@@ -5,7 +5,7 @@
             "uri": "getting-started",
             "otherUri": "getting-started",
             "isOpen": true,
-            "isHide":true,
+            "isHide": true,
             "isActive": false
         },
         {
@@ -687,7 +687,7 @@
                             "isActive": false
                         },
                         {
-                             "title": "Manage Translated Validation Messages",
+                            "title": "Manage Translated Validation Messages",
                             "uri": "/how-to/ngxTranslateValidationMessage/validators",
                             "isActive": false
                         }
@@ -2069,7 +2069,7 @@
                     "isActive": false,
                     "uri": "/rxweb-translate/en/lazy-load",
                     "linkTitle": "features",
-                    "childrens":[
+                    "childrens": [
                         {
                             "title": "Bindings",
                             "isActive": false,
@@ -2215,6 +2215,135 @@
                     "isActive": false,
                     "linkTitle": "rxweb-cli",
                     "refUri": "rxweb-cli"
+                }
+            ]
+        },
+        {
+            "title": "ngx-translate-extension",
+            "isOpen": false,
+            "isActive": false,
+            "otherUri": "ngx-translate-extension",
+            "childrens": [
+                {
+                    "title": "Getting Started",
+                    "uri": "/ngx-translate-extension/getting-started",
+                    "isActive": false,
+                    "linkTitle": "getting-started",
+                    "refUri": "getting-started"
+                },
+                {
+                    "title": "Powerhouse of Translation",
+                    "isActive": false,
+                    "linkTitle": "powerhouse-of-translation",
+                    "refUri": "powerhouse-of-translation",
+                    "childrens": [
+                        {
+                            "title": "Attribute Directive",
+                            "uri": "/ngx-translate-extension/attribute-directive",
+                            "isActive": false,
+                            "linkTitle": "attribute-directive",
+                            "refUri": "attribute-directive"
+                        },
+                        {
+                            "title": "Pipe",
+                            "uri": "/ngx-translate-extension/pipe",
+                            "isActive": false,
+                            "linkTitle": "pipe",
+                            "refUri": "pipe"
+                        },
+                        {
+                            "title": "Structural Directive",
+                            "uri": "/ngx-translate-extension/structural-directive",
+                            "isActive": false,
+                            "linkTitle": "structural-directive",
+                            "refUri": "structural-directive"
+                        },
+                        {
+                            "title": "Decorator",
+                            "uri": "/ngx-translate-extension/decorator",
+                            "isActive": false,
+                            "linkTitle": "decorator",
+                            "refUri": "decorator"
+                        },
+                        {
+                            "title": "Validation Message",
+                            "uri": "/ngx-translate-extension/validation-message",
+                            "isActive": false,
+                            "linkTitle": "validation-message",
+                            "refUri": "validation-message"
+                        }
+                    ]
+                },
+                {
+                    "title": "Code Comparison",
+                    "isActive": false,
+                    "linkTitle": "comparison",
+                    "refUri": "comparison",
+                    "childrens": [
+                        {
+                            "title": "missing-translation-handler",
+                            "uri": "/ngx-translate-extension/comparison/missing-translation-handler",
+                            "isActive": false,
+                            "linkTitle": "missing-translation-handler",
+                            "refUri": "missing-translation-handler"
+                        },
+                        {
+                            "title": "translate.compiler",
+                            "uri": "/ngx-translate-extension/comparison/translate-compiler",
+                            "isActive": false,
+                            "linkTitle": "translate-compiler",
+                            "refUri": "translate-compiler"
+                        },
+                        {
+                            "title": "translate.directive",
+                            "uri": "/ngx-translate-extension/comparison/translate-directive",
+                            "isActive": false,
+                            "linkTitle": "translate-directive",
+                            "refUri": "translate-directive"
+                        },
+                        {
+                            "title": "translate.loader",
+                            "uri": "/ngx-translate-extension/comparison/translate-loader",
+                            "isActive": false,
+                            "linkTitle": "translate-loader",
+                            "refUri": "translate-loader"
+                        },
+                        {
+                            "title": "translate.parser",
+                            "uri": "/ngx-translate-extension/comparison/translate-parser",
+                            "isActive": false,
+                            "linkTitle": "translate-parser",
+                            "refUri": "translate-parser"
+                        },
+                        {
+                            "title": "translate.pipe",
+                            "uri": "/ngx-translate-extension/comparison/translate-pipe",
+                            "isActive": false,
+                            "linkTitle": "translate-pipe",
+                            "refUri": "translate-pipe"
+                        },
+                        {
+                            "title": "translate.service",
+                            "uri": "/ngx-translate-extension/comparison/translate-service",
+                            "isActive": false,
+                            "linkTitle": "translate-service",
+                            "refUri": "translate-service"
+                        },
+                        {
+                            "title": "translate.store",
+                            "uri": "/ngx-translate-extension/comparison/translate-store",
+                            "isActive": false,
+                            "linkTitle": "translate-store",
+                            "refUri": "translate-store"
+                        }
+                    ]
+                },
+                {
+                    "title": "Confidence",
+                    "uri": "/ngx-translate-extension/confidence",
+                    "isActive": false,
+                    "linkTitle": "confidence",
+                    "refUri": "confidence"
                 }
             ]
         }
