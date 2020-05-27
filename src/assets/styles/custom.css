@@ -1161,3 +1161,7 @@ code.command.hljs.routeros {
   color: #37474f!important;
   background-color: hsla(0, 0%, 98%, 1)!important;
 }
+
+.searchbox-width {
+  width:500px;
+}

@@ -1,18 +1,14 @@
 
 
 
-<aside id="menu" [class.title-sticky]="sticky" *ngIf="showComponent">
+<aside id="menu" [class.title-sticky]="sticky" >
 
 	<div id="navigation">
 		
 
-		<div class="search-page  position-relative">
-
-			<ais-instantsearch [config]="{
-			  apiKey: '4f3d9e65c9459b43e692a149f365c74e',
-			  appId: 'U3S057LEMB',
-			  indexName: 'rxweb links'
-			}">
+		<div class="search-page  position-relative" *ngIf="config">
+    
+			<ais-instantsearch [config]="config">
 				<div class="search-box position-relative">
 					<ais-search-box id="search" placeholder="Search..." type="text"
 						(keyup)="showsearchcontent($event,searchvalue)" #search [(ngModel)]="searchvalue"
@@ -22,8 +18,7 @@
 				
 				<div id="searchlist-content1" class="search-content">
 					<ais-hits>
-						<ng-template let-hits="hits" let-results="results">
-							{{searchResult}}
+						<ng-template let-hits="hits" let-results="results">		
 							{{bindLinks(hits,searchvalue)}}
 						</ng-template>
 					</ais-hits>

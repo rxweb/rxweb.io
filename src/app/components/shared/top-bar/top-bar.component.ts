@@ -113,8 +113,19 @@ export class TopBarComponent implements OnInit {
     else
       body.classList.toggle('hide-sidebar');
   }
+  addSearchBoxWidth() {
+    var testarray = document.getElementsByClassName("ais-SearchBox");
+    for (var i = 0; i < testarray.length; i++) {
+      testarray[i].className += " searchbox-width";
+    }
+  }
 
   showsearchcontent1(event, searchvalue1: string) {
+    var testarray = document.getElementsByClassName("ais-SearchBox");
+    for (var i = 0; i < testarray.length; i++) {
+      if(!testarray[i].classList.contains("searchbox-width"))
+      testarray[i].className += " searchbox-width";
+    }
     if (event.key == "Escape")
       this.hideSearch1();
     else {
@@ -126,6 +137,10 @@ export class TopBarComponent implements OnInit {
   }
   hideSearch1() {
     setTimeout(() => {
+      var testarray = document.getElementsByClassName("ais-SearchBox");
+      for (var i = 0; i < testarray.length; i++) {
+        testarray[i].classList.remove("searchbox-width");
+      }
       this.searchInput['searchBox'].nativeElement.value = "";
       this.searchvalue1 = "";
       if (document.getElementById("searchlist-content") != undefined)
