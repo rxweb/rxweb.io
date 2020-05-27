@@ -1,4 +1,5 @@
 import { NGX_TRANSLATE_EXTENSION_ROUTING } from "./ngx-translate-extension.routing";
+import { HttpClientModule } from "@angular/common/http"
 import { CommonSharedModule } from "../shared/common/common-shared.module";
 import { TopBarSharedModule } from "../shared/top-bar/top-bar-shared.module";
 import { RxReactiveDynamicFormsModule } from "@rxweb/reactive-dynamic-forms";
@@ -26,9 +27,27 @@ import { PipeComponent } from "./powerhouse/pipe/pipe.component";
 import { StructuralDirectiveComponent } from "./powerhouse/structural-directive/structural-directive.component";
 import { DecoratorComponent } from "./powerhouse/decorator/decorator.component";
 import { ValidationMessageComponent } from "./powerhouse/validation-message/validation-message.component";
+import { TranslateModule, TranslateService } from "@rxweb/ngx-translate-extension";
+import { HttpClient } from "@angular/common/http";
+import { TranslateLoader } from "@ngx-translate/core";
+import { Observable } from 'rxjs';
+import { isObject } from 'util';
+import { Injectable } from "@angular/core";
+@Injectable()
+export class TranslateHttpLoader implements TranslateLoader {
+    constructor(private http: HttpClient) { }
+
+    public getTranslation(lang: any): Observable<Object> {
+        if (isObject(lang) && lang.translationName)
+            return this.http.get(`assets/i18n/${lang.translationName}/${lang.lang}.json`);
+        return this.http.get(`assets/i18n/${lang}.json`);
+    }
+}
 
 @NgModule({
-  imports: [NGX_TRANSLATE_EXTENSION_ROUTING, CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule, 
+    imports: [NGX_TRANSLATE_EXTENSION_ROUTING,HttpClientModule,
+        TranslateModule.forRoot({ loader: TranslateHttpLoader }),
+        CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule, 
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule],
   declarations: [ 
     NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, AttributeDirectiveComponent, PipeComponent, StructuralDirectiveComponent, DecoratorComponent, ValidationMessageComponent,
@@ -36,4 +55,12 @@ import { ValidationMessageComponent } from "./powerhouse/validation-message/vali
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]
 })
-export class NgxTranslateExtensionModule { }
+export class NgxTranslateExtensionModule {
+    constructor(public translate: TranslateService) {
+        translate.addLangs(['en', 'es', 'fr']);
+        translate.setDefaultLang('en');
+
+        const browserLang = translate.getBrowserLang();
+        translate.use('en');
+    }
+}

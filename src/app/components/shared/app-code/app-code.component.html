@@ -13,8 +13,7 @@
         <div class="code-example-title ng-star-inserted">{{item.title}}</div>
         <div class="code">
             <a class="float-right copy-icon" ngxClipboard [cbContent]="item.content"
-                (cbOnSuccess)="CodeContentCopied = true" [class.copied]="CodeContentCopied"><i class="fa fa-files-o"
-                    aria-hidden="true"></i></a>
+                (cbOnSuccess)="CodeContentCopied = true" [class.copied]="CodeContentCopied"><i class="fa fa-files-o" aria-hidden="true"></i></a>
             <div highlight="pre code">
                 <pre><code [textContent]="item.content"></code></pre>
             </div>

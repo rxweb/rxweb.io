@@ -1,1 +1,103 @@
 <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
+<div class="title-bar top_title"><p>Attribute Directive</p></div>
+<div class="title-bar"><p>Bind the multilingual text using <b>translate</b> directive.</p></div>
+
+<div class="bg-white border-radius" style="margin-top:40px;">
+  <div class="row col-md-12">
+
+    <div class="col-md-7">
+      <div class="row ">
+        <div class="col-md-3 remove-col-padding">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill" href="#v-pills-profile" role="tab"
+               aria-controls="v-pills-profile" aria-selected="false">en.json</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+               aria-controls="v-pills-messages" aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-9 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade " id="v-pills-home" role="tabpanel"
+                 aria-labelledby="v-pills-home-tab" style="width: 490px;">
+              <div class="code-section p-0">
+                <pre class="ngx-pre-code pre-code"><code [innerHtml]="json">
+                    </code></pre>
+              </div>
+            </div>
+            <div class="tab-pane fade show active" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+              <div class="code-section p-0">
+                <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-5 remove-col-padding">
+      <div>
+        <div class="ngx-output">
+          <span class="badge badge-warning" translate="firstName"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="showHideElement showElement">Use <span class="highlighted">translateParams</span> attribute for custom parameter interpolation.</p>
+    </div>
+
+  </div>
+  <div class="row col-md-12">
+
+    <div class="col-md-7">
+      <div class="row ">
+        <div class="col-md-3 remove-col-padding">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill" href="#v-pills-profile" role="tab"
+               aria-controls="v-pills-profile" aria-selected="false">en.json</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+               aria-controls="v-pills-messages" aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-9 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade " id="v-pills-home" role="tabpanel"
+                 aria-labelledby="v-pills-home-tab" style="width: 490px;">
+              <div class="code-section p-0">
+                <pre class="ngx-pre-code pre-code"><code [innerHtml]="json">
+                    </code></pre>
+              </div>
+            </div>
+            <div class="tab-pane fade show active" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+              <div class="code-section p-0">
+                <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-5 remove-col-padding">
+      <div>
+        <div class="ngx-output">
+          <span class="badge badge-warning" translate="firstName"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <br />
+
+    <label translate="notification" [translateParams]="{greet:'Good Morning'}"></label>
+    <br />
+
+    <label translate="note" translateLang="fr"></label>
+    <br />
+
+    <label translate="dashboardHeading" translationName="dashboard"></label>
+    <br />

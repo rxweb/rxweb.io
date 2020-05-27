@@ -1,0 +1,9 @@
+{
+  "firstName": "Entrez votre prénom:",
+  "notification": "Hey {{greet}}",
+  "note": "Ceci est le paquet ngx-translate-extension",
+  "validationErrorMessages": {
+    "required": "This Field is Required FR.",
+    "maxlength": "Maximum alloed length is {{requiredLength}} and you have entered {{actualLength}} FR."
+  }
+}

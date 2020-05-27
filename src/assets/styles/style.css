@@ -4108,8 +4108,8 @@ body {
 #menu {
     /* width: 299px; */
     /* width: 300px; */
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
     bottom: 0;
     /* float: left; */
     left: 0;
@@ -4621,7 +4621,7 @@ body.modal-open {
     text-transform: uppercase;
     font-weight: 700;
     padding: 10px 20px;
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: 18px;
 }
 
@@ -9351,4 +9351,19 @@ a.nav-link-translate.active{
     font-weight: 600;
     border-radius: 30px;
     background-color: #f1ecec;
+}
+.remove-col-padding {
+  padding-right:0px;
+  padding-left:0px;
+}
+
+.ngx-pre-code {
+  min-height: 80px !important;
+  padding: 30px !important;
+  font-size:18px !important;
+}
+.ngx-output {
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
 }
