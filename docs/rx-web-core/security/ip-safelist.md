@@ -1,9 +1,10 @@
 ---
 title: IpSafelist 
 author: rxcontributorone
-category: security 
+category: rxwebcore
+subcategory : security
 type:simple
-linktitle:ipsafelist
+linktitle:ip-safelist
 ---
 # Ip Safelist
 

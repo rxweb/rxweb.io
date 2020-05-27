@@ -2,8 +2,9 @@
 title: Create New Project
 author: rxcontributorone
 category: rxwebcore 
+subcategory: cli
 type:simple
-linktitle:createnewproject
+linktitle:dotnet-new
 ---
 
 # Create New Project

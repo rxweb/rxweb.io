@@ -1,9 +1,10 @@
 ---
 title: Database Setup
 author: rxcontributorone
+subcategory: cli
 category: rxwebcore 
 type:simple
-linktitle:database-setup
+linktitle:cli-databasesetup
 ---
 
 # Database Setup 

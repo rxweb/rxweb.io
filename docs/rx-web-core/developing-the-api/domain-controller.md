@@ -4,7 +4,7 @@ author: rxcontributorone
 category: rxwebcore
 subcategory: developing-the-api
 type:simple
-linktitle:domaincontroller
+linktitle:domain-controller
 ---
 # Domain Controller
 

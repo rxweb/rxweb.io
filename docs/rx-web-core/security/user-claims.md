@@ -1,9 +1,10 @@
 ---
 title: UserClaims
 author: rxcontributorone
-category: security
+category: rxwebcore
+subcategory : security
 type:simple
-linktitle:userclaims
+linktitle:user-claims
 ---
 # User Claims
 

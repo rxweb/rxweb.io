@@ -1,7 +1,8 @@
 ---
 title: Models
 author: rxcontributorone
-category: beginner
+category: rxwebcore
+subcategory : tours-of-contoso-app
 type: simple
 linktitle: models
 ---

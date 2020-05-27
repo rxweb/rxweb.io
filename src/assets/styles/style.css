@@ -9352,3 +9352,18 @@ a.nav-link-translate.active{
     border-radius: 30px;
     background-color: #f1ecec;
 }
+.remove-col-padding {
+  padding-right:0px;
+  padding-left:0px;
+}
+
+.ngx-pre-code {
+  min-height: 80px !important;
+  padding: 30px !important;
+  font-size:18px !important;
+}
+.ngx-output {
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}

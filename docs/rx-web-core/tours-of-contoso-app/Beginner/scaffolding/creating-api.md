@@ -1,7 +1,8 @@
 ---
 title: Creating Api
 author: rxcontributorone
-category: beginner
+category: rxwebcore
+subcategory : tours-of-contoso-app
 type: simple
 linktitle: creating-api
 ---

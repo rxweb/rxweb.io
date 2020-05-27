@@ -2,6 +2,7 @@
 title: Quick Start
 author: rxcontributorone
 category: step-by-step-guide
+subcategory : quick-start
 type:simple
 linktitle: quick-start
 ---

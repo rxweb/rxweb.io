@@ -1,9 +1,10 @@
 ---
 title: OWASP Top Standards
 author: rxcontributorone
-category: security 
+category: rxwebcore
+subcategory : security
 type:simple
-linktitle:owaspstandards
+linktitle:owasp-standards
 ---
 # OWASP Standards
 

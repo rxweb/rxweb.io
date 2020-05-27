@@ -1,9 +1,10 @@
 ---
 title: Request Logging
 author: rxcontributorone
-category: security 
+category: rxwebcore
+subcategory : security
 type:simple
-linktitle:requestlogging
+linktitle:request-logging
 ---
 # Request Logging
 

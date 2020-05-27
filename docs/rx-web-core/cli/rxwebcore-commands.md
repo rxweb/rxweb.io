@@ -2,8 +2,9 @@
 title: RxWeb Core Commands
 author: rxcontributorone
 category: rxwebcore 
+subcategory: cli
 type:simple
-linktitle:rxwebcorecommands
+linktitle:rxwebcore-commands
 ---
 
 # RxWebCore command line interface(CLI) commands:
