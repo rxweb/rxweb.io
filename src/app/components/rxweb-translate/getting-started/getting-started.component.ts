@@ -30,15 +30,6 @@ export class TranslateGettingStartedComponent implements OnInit {
 
    @translate() global: { [key: string]: any } 
   
-   @translateAsync({
-    serviceModel: LanguageService,
-    serviceMethod: LanguageService.prototype.get
-  }) languages : any[];
-
-   get day(){
-     var currentHour = (new Date()).getHours();
-     return currentHour < 12 ? 'Good Morning' : 'Good Day';
-   }
 }
 `
   isVideoClick: boolean = false;
