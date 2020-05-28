@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
 
       if (val instanceof NavigationEnd) {
         console.log("calling routes")
-        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home") || val.url.includes("/angular-home") || val.url.includes("/home?_ga")) {
+        if (val.url == "/" || val.url == "/form-builder" || val.url.includes("?") || val.url == "/dynamic-form-builder" || val.url.includes("/#") || val.url.includes("/home") || val.url.includes("/angular-home") || val.url.includes("/home?_ga")) {
           this.isHome = true;
         }
         else if (val.url.includes("rx-web-core")) {
@@ -115,6 +115,7 @@ export class AppComponent implements OnInit {
         }
         else {
           if (this.lastRouteName != "form-validations") {
+            debugger;
             this.lastRouteName = "form-validations";
             this.isShowSidebar = false;
             this.http.get('assets/json/links.json').subscribe((response: any) => {
