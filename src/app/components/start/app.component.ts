@@ -71,7 +71,7 @@ export class AppComponent implements OnInit {
   lastRouteName: string = ""
   rightSidebarLinks: any=[];
   constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer, private http: HttpClient) {
-    setTimeout(() => { this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://rxwebangular.z20.web.core.windows.net/")}, 200);
+    // setTimeout(() => { this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://rxwebangular.z20.web.core.windows.net/")}, 200);
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
     });
