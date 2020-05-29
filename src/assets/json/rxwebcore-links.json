@@ -2,265 +2,265 @@
     {
         "title": "Overview",
         "path": "overview",
-        "href": "/rx-web-core/tours-of-contoso-app/Beginner/overview"
+        "link": "/rx-web-core/tours-of-contoso-app/Beginner/overview"
     },
     {
         "title": "Creating Tables",
         "path": "creating-tables",
-        "href": "/rx-web-core/tours-of-contoso-app/Beginner/creating-tables"
+        "link": "/rx-web-core/tours-of-contoso-app/Beginner/creating-tables"
     },
     {
         "title": "Creating Views",
         "path": "creating-views",
-        "href": "/rx-web-core/tours-of-contoso-app/Beginner/creating-views"
+        "link": "/rx-web-core/tours-of-contoso-app/Beginner/creating-views"
     },
     {
         "title": "Authentication",
         "path": "authentication",
-        "href": "/rx-web-core/tours-of-contoso-app/Beginner/authentication"
+        "link": "/rx-web-core/tours-of-contoso-app/Beginner/authentication"
     },
    
     {
         "title": "Models",
         "path": "models",
-        "href": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/models"
+        "link": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/models"
     },
     {
         "title": "Context And Uow",
         "path": "context-and-uow",
-        "href": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/context-and-uow"
+        "link": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/context-and-uow"
     },
     {
         "title": "Creating Api",
         "path": "creating-api",
-        "href": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/creating-api"
+        "link": "/rx-web-core/tours-of-contoso-app/Beginner/scaffolding/creating-api"
     },
     {
         "title": "The Startup Class",
         "path": "the-startup-class",
-        "href": "/rx-web-core/fundamentals/the-startup-class"
+        "link": "/rx-web-core/fundamentals/the-startup-class"
     },
     {
         "title": "Configuration Options",
         "path": "configuration-options",
-        "href": "/rx-web-core/fundamentals/configuration-options"
+        "link": "/rx-web-core/fundamentals/configuration-options"
     },
     {
         "title": "Dependency Injection",
         "path": "dependency-injection",
-        "href": "/rx-web-core/fundamentals/dependency-injection"
+        "link": "/rx-web-core/fundamentals/dependency-injection"
     },
     {
         "title": "Security",
         "path": "security",
-        "href": "/rx-web-core/fundamentals/security"
+        "link": "/rx-web-core/fundamentals/security"
     },
     {
         "title": "Performance",
         "path": "performance",
-        "href": "/rx-web-core/fundamentals/performance"
+        "link": "/rx-web-core/fundamentals/performance"
     },
     {
         "title": "DbContext",
         "path": "dbcontext",
-        "href": "/rx-web-core/fundamentals/dbcontext"
+        "link": "/rx-web-core/fundamentals/dbcontext"
     },
     {
         "title": "Creating Tables",
         "path": "creating-tables",
-        "href": "/rx-web-core/working-with-data-model/database-approach/creating-tables"
+        "link": "/rx-web-core/working-with-data-model/database-approach/creating-tables"
     },
     {
         "title": "Database Provider",
         "path": "database-provider",
-        "href": "/rx-web-core/working-with-data-model/database-provider"
+        "link": "/rx-web-core/working-with-data-model/database-provider"
     },
     {
         "title": "Materialized View",
         "path": "materialized-view",
-        "href": "/rx-web-core/working-with-data-model/database-approach/materialized-view"
+        "link": "/rx-web-core/working-with-data-model/database-approach/materialized-view"
     },
     {
         "title": "Stored Procedures",
         "path": "stored-procedures",
-        "href": "/rx-web-core/working-with-data-model/database-approach/stored-procedures"
+        "link": "/rx-web-core/working-with-data-model/database-approach/stored-procedures"
     },
     {
         "title": "Generating Data Models",
         "path": "generating-data-models",
-        "href": "/rx-web-core/working-with-data-model/generating-data-models"
+        "link": "/rx-web-core/working-with-data-model/generating-data-models"
     },
     {
         "title": "Bounded Context",
         "path": "working-with-data-model/bounded-context#overview",
-        "href": "/rx-web-core/working-with-data-model/bounded-context"
+        "link": "/rx-web-core/working-with-data-model/bounded-context"
     },
     {
         "title": "Data Operations",
         "path": "overview",
-        "href": "/rx-web-core/working-with-data-model/data-operations/overview"
+        "link": "/rx-web-core/working-with-data-model/data-operations/overview"
     },
     {
         
         "title": "Create",
         "path": "create",
-        "href": "/rx-web-core/working-with-data-model/data-operations/create"
+        "link": "/rx-web-core/working-with-data-model/data-operations/create"
     },
     {
         "title": "Read",
         "path": "read",
-        "href": "/rx-web-core/working-with-data-model/data-operations/read"
+        "link": "/rx-web-core/working-with-data-model/data-operations/read"
     },
     {
         
         "title": "Update",
         "path": "update",
-        "href": "/rx-web-core/working-with-data-model/data-operations/update"
+        "link": "/rx-web-core/working-with-data-model/data-operations/update"
     },
     {
         
         "title": "Delete",
         "path": "delete",
-        "href": "/rx-web-core/working-with-data-model/data-operations/delete"
+        "link": "/rx-web-core/working-with-data-model/data-operations/delete"
     },
     {
         
         "title": "Add Objects Using Transaction",
         "path": "add-objects-using-transaction",
-        "href": "/rx-web-core/working-with-data-model/database-transactions/add-objects-using-transaction"
+        "link": "/rx-web-core/working-with-data-model/database-transactions/add-objects-using-transaction"
     },
     {
         
         "title": "Adding Objects With Store Procedure Transaction",
         "path": "add-objects-with-stored-procedure-transaction",
-        "href": "/rx-web-core/working-with-data-model/database-transactions/add-objects-with-stored-procedure-transaction"
+        "link": "/rx-web-core/working-with-data-model/database-transactions/add-objects-with-stored-procedure-transaction"
     },
     {
         "title": "Shared Database",
         "path": "shared-database",
-        "href": "/rx-web-core/working-with-data-model/multitenancy/shared-database"
+        "link": "/rx-web-core/working-with-data-model/multitenancy/shared-database"
     },
     {
         
         "title": "Multiple Database",
         "path": "multiple-database",
-        "href": "/rx-web-core/working-with-data-model/multitenancy/multiple-database"
+        "link": "/rx-web-core/working-with-data-model/multitenancy/multiple-database"
     },
     {
         
         "title": "MaxLength",
         "path": "max-length",
-        "href": "/rx-web-core/data-validation/max-length"
+        "link": "/rx-web-core/data-validation/max-length"
     },
     {
         
         "title": "Range",
         "path": "range",
-        "href": "/rx-web-core/data-validation/range"
+        "link": "/rx-web-core/data-validation/range"
     },
     {
         
         "title": "Required",
         "path": "required",
-        "href": "/rx-web-core/data-validation/required"
+        "link": "/rx-web-core/data-validation/required"
     },
     {
         
         "title": "Unique",
         "path": "unique",
-        "href": "/rx-web-core/data-validation/unique"
+        "link": "/rx-web-core/data-validation/unique"
     },
     {
         
         "title": "Brief",
         "path": "developing-the-api/api#brief",
-        "href": "/rx-web-core/developing-the-api/api"
+        "link": "/rx-web-core/developing-the-api/api"
     },
     {
         
         "title": "Basic Controller",
         "path": "basic-controller",
-        "href": "/rx-web-core/developing-the-api/basic-controller"
+        "link": "/rx-web-core/developing-the-api/basic-controller"
     },
     {
         
         "title": "Domain Controller",
         "path": "domain-controller",
-        "href": "/rx-web-core/developing-the-api/domain-controller"
+        "link": "/rx-web-core/developing-the-api/domain-controller"
     },
     {
         
         "title": "Lookup Controller",
         "path": "lookup-controller",
-        "href": "/rx-web-core/developing-the-api/lookup-controller"
+        "link": "/rx-web-core/developing-the-api/lookup-controller"
     },
     {
         
         "title": "Search Controller",
         "path": "search-controller",
-        "href": "/rx-web-core/developing-the-api/search-controller"
+        "link": "/rx-web-core/developing-the-api/search-controller"
     },
     {
         
         "title": "Authentication",
         "path": "authentication",
-        "href": "/rx-web-core/security/authentication"
+        "link": "/rx-web-core/security/authentication"
     },
     {
         
         "title": "Authorization",
         "path": "authorization",
-        "href": "/rx-web-core/security/authorization"
+        "link": "/rx-web-core/security/authorization"
     },
     {
         
         "title": "User Claims",
         "path": "user-claims",
-        "href": "/rx-web-core/security/user-claims"
+        "link": "/rx-web-core/security/user-claims"
     },
     {
         
         "title": "Exception Handling",
         "path": "exception-handling",
-        "href": "/rx-web-core/security/exception-handling"
+        "link": "/rx-web-core/security/exception-handling"
     },
     {
         
         "title": "IpSafelist",
         "path": "ip-safelist",
-        "href": "/rx-web-core/security/ip-safelist"
+        "link": "/rx-web-core/security/ip-safelist"
     },
     {
         "title": "OWASP Standards",
         "path": "",
-        "href": "/rx-web-core/security/owasp-standards"
+        "link": "/rx-web-core/security/owasp-standards"
     },
     {
         
         "title": "Request Logging",
         "path": "request-logging",
-        "href": "/rx-web-core/security/request-logging"
+        "link": "/rx-web-core/security/request-logging"
     },
     {
         "title": "Performance",
         "path": "performance",
-        "href": "/rx-web-core/performance/performance"
+        "link": "/rx-web-core/performance/performance"
     },
     {
         
         "title": "Global Content",
         "path": "global-content",
-        "href": "/rx-web-core/localization-and-globalization/global-content"
+        "link": "/rx-web-core/localization-and-globalization/global-content"
     },
     {
         
         "title": "Component Content",
         "path": "component-content",
-        "href": "/rx-web-core/localization-and-globalization/component-content"
+        "link": "/rx-web-core/localization-and-globalization/component-content"
     },
 {
         "title": "CLI",
         "path": "/rxwebcore-commands",
-        "href": "/rx-web-core/rxwebcore-commands/cli"
+        "link": "/rx-web-core/rxwebcore-commands/cli"
     }
 ]

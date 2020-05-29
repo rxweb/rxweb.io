@@ -115,7 +115,6 @@ export class AppComponent implements OnInit {
         }
         else {
           if (this.lastRouteName != "form-validations") {
-            debugger;
             this.lastRouteName = "form-validations";
             this.isShowSidebar = false;
             this.http.get('assets/json/links.json').subscribe((response: any) => {
@@ -148,7 +147,6 @@ export class AppComponent implements OnInit {
       }
       if (val instanceof NavigationStart) {
         this.showFooter = false;
-
       }
     });
   }

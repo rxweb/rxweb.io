@@ -64,7 +64,6 @@ export class SideBarComponent implements OnInit {
         this.http.get('assets/json/links.json?v=' + environment.appVersion).subscribe((response: any) => {
           this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
           this.links = response.links;
-          debugger
           var currentUrl = this.router.url;
           this.setActiveLink(currentUrl);
           this.config = {

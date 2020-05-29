@@ -11,13 +11,13 @@
           <div class="row">
             <div class="pr-0">
               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              
-                <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill" href="#v-pills-profile" role="tab"
-                  aria-controls="v-pills-profile" aria-selected="false">JSON</a>
-                  <a class="nav-link active" style="font-size: 11px;" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                  aria-controls="v-pills-home" aria-selected="true">Component</a>
-                <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-                  aria-controls="v-pills-messages" aria-selected="false">Html</a>
+
+                <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
+                  href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">JSON</a>
+                <a class="nav-link active" style="font-size: 11px;" id="v-pills-home-tab" data-toggle="pill"
+                  href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Component</a>
+                <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-tab" data-toggle="pill"
+                  href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Html</a>
 
               </div>
             </div>
@@ -51,21 +51,53 @@
         </div>
         <div class="col-md-7">
           <div>
-           
-            <div class="" style="line-height: 34px!important;margin-top: -8px;"><span style="font-size: 17px;">{{global.greetMessage}}</span>&nbsp;
+
+            <div class="" style="line-height: 34px!important;margin-top: -8px;"><span
+                style="font-size: 17px;">{{global.greetMessage}}</span>&nbsp;
               <select>
                 <option (click)="navigate('en')">English</option>
                 <option (click)="navigate('fr')">French</option>
               </select>
-           
-             
+
+
             </div>
 
           </div>
         </div>
         <div class='col-lg-12'>
+          <div class="learn-video-list row pt-2" id="cli">
 
-          <div class="bg-white border-radius" style="margin-top:22px;">
+            <div class="col-lg-6 col-md-6 col-sm-12 learn-video-card-wrapper">
+              <div class="learn-video-card" style="border:none!important;">
+                <div class="learn-video-img">
+                  <video controls style="width: 715px!important;
+                  height: 364px;
+                        
+                    ">
+                    <source src="assets/images/rxweb-cli-getting-started.mp4" type="video/mp4">
+
+                  </video>
+                </div>
+                <h1 style="font-size:21px;font-weight:500!important">Installation</h1>
+                <p>Installation of rxweb cli through npm for getting started with automated translation setup..</p>
+
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 learn-video-card-wrapper">
+              <div class="learn-video-card" style="border:none!important;">
+                <div class="learn-video-img">
+                  <video controls style="width: 655px!important;    height: 364px;">
+                    <source src="assets/images/BIECJOSBDQPB9YDZ.mp4" type="video/mp4">
+
+                  </video></div>
+                <h1 style="font-size:21px;font-weight:500!important">RxWeb Translate in 58 secs.</h1>
+                <p>This video tutorial gives a quick go through of rxweb translate during development setup and after build optimization.
+                </p>
+
+              </div>
+            </div>
+          </div>
+          <!-- <div class="bg-white border-radius" style="margin-top:22px;">
             <div class="row">
               <div class="col-lg-12">
 
@@ -112,7 +144,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- <div class="hpanel">
             <div class="tab-content fade show">
