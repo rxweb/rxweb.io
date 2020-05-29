@@ -1,20 +1,14 @@
 import { OnInit, Component } from '@angular/core';
 declare const $;
 import $ from 'jquery';
+import { translate } from '@rxweb/translate';
 
 @Component({
+  selector: 'structural-directive-child',
   templateUrl: './structural-directive-child.component.html',
 })
-export class StructuralDirectiveChildComponent implements OnInit {
+export class StructuralDirectiveChildComponent {
 
-  outputHtml: string;
-
-  json: any;
-  html: any;
-  ngOnInit() {
-    $('[data-toggle="tooltip"]').tooltip({
-      template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-directive-inner md-inner"></div></div>'
-    });
-  }
+  @translate({ translationName: 'structural-directive-child' }) structuralDirectiveChild: any;
 
 }

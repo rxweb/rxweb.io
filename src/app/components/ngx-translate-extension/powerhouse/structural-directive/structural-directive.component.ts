@@ -13,7 +13,13 @@ export class StructuralDirectiveComponent implements OnInit {
 
   examples: any = {
     structuralDirective: {
-      json: `{"structuralDirectiveChild":"structural-directive-child/en.json"}`,
+      json: `{"text":"structural-directive-child/en.json"}`,
+      typescript: `
+export class StructuralDirectiveChildComponent {
+
+  @translate({ translationName: 'structural-directive-child' }) structuralDirectiveChild: any;
+
+}`,
       html: `<structural-directive-child *rxTranslate="true"></structural-directive-child>`
     }
   }

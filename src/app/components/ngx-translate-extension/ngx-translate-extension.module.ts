@@ -47,7 +47,7 @@ export class TranslateHttpLoader implements TranslateLoader {
 
 @NgModule({
     imports: [NGX_TRANSLATE_EXTENSION_ROUTING,HttpClientModule,
-        TranslateModule.forRoot({ loader: TranslateHttpLoader }),
+        TranslateModule.forRoot({ loader: { provide: TranslateLoader, useClass: TranslateHttpLoader } }),
         CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule, 
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule],
   declarations: [ 

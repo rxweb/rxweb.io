@@ -17,16 +17,16 @@ export class CodeDisplayComponent implements OnInit {
 
   json: any;
   html: any;
+  ts: any;
   outputHtml: string;
 
   ngOnInit() {
-    console.log(this.item)
     console.log(this.innerHtml)
     if (this.innerHtml == 'json')
       this.outputHtml = Prism.highlight(this.item.json, Prism.languages['json'], 'json');
+    else if (this.innerHtml == 'typescript')
+      this.outputHtml = Prism.highlight(this.item.typescript, Prism.languages['typescript'], 'typescript');
     else
       this.outputHtml = Prism.highlight(this.item.html, Prism.languages['html'], 'html');
-
-    console.log(this.outputHtml)
   }
 }

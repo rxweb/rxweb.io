@@ -3,7 +3,7 @@
   <p>Structural Directive</p>
 </div>
 <div class="title-bar">
-  <p>Bind the multilingual text using <b>translate</b> directive.</p>
+  <p>Translate your child component using <b>rxTranslate</b> directive.</p>
 </div>
 
 <div class="bg-white border-radius" style="margin-top:40px;">
@@ -15,6 +15,9 @@
             <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
               href="#v-pills-profile-first" role="tab" aria-controls="v-pills-profile-first"
               aria-selected="false">en.json</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-component-first-tab" data-toggle="pill"
+              href="#v-pills-component-first" role="tab" aria-controls="v-pills-component-first"
+              aria-selected="false">*.component.ts</a>
             <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-first-tab" data-toggle="pill"
               href="#v-pills-messages-first" role="tab" aria-controls="v-pills-messages-first"
               aria-selected="false">*.component.html</a>
@@ -23,15 +26,20 @@
         <div class="col-md-10 remove-col-padding">
           <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade" id="v-pills-profile-first" role="tabpanel"
-              aria-labelledby="v-pills-profile-first-tab" style="width: 490px;">
+              aria-labelledby="v-pills-profile-first-tab" >
               <div class="code-section p-0">
-                <app-code-display innerHtml="json" [item]="examples.first"></app-code-display>
+                <app-code-display innerHtml="json" [item]="examples.structuralDirective"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-component-first" role="tabpanel" aria-labelledby="v-pills-component-first-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="typescript" [item]="examples.structuralDirective"></app-code-display>
               </div>
             </div>
             <div class="tab-pane fade show active" id="v-pills-messages-first" role="tabpanel"
               aria-labelledby="v-pills-messages-first-tab">
               <div class="code-section p-0">
-                <app-code-display innerHtml="html" [item]="examples.first"></app-code-display>
+                <app-code-display innerHtml="html" [item]="examples.structuralDirective"></app-code-display>
               </div>
             </div>
           </div>
@@ -43,7 +51,7 @@
         <div class="code_eg">Output</div>
         <div class="ngx-output">
           <span class="badge badge-warning" translate="firstName">
-            <!-- <structural-directive-child *rxTranslate="true"></structural-directive-child> -->
+            <structural-directive-child *rxTranslate="true"></structural-directive-child>
           </span>
         </div>
       </div>
