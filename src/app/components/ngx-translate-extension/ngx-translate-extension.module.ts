@@ -33,6 +33,7 @@ import { TranslateLoader } from "@ngx-translate/core";
 import { Observable } from 'rxjs';
 import { isObject } from 'util';
 import { Injectable } from "@angular/core";
+import { StructuralDirectiveChildComponent } from "./powerhouse/structural-directive/structural-directive-child/structural-directive-child.component";
 @Injectable()
 export class TranslateHttpLoader implements TranslateLoader {
     constructor(private http: HttpClient) { }
@@ -50,7 +51,7 @@ export class TranslateHttpLoader implements TranslateLoader {
         CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule, 
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule],
   declarations: [ 
-    NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, AttributeDirectiveComponent, PipeComponent, StructuralDirectiveComponent, DecoratorComponent, ValidationMessageComponent,
+      NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, AttributeDirectiveComponent, PipeComponent, StructuralDirectiveComponent, DecoratorComponent, ValidationMessageComponent, StructuralDirectiveChildComponent
   ],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]

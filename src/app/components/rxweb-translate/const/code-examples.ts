@@ -154,7 +154,7 @@ keys: string[] = ["keyOne", "nested.keyOne"];`,
     <tbody>
         <tr>
             <th style="width:50%">Key Name</th>
-            <th style="width:50%">Key Value <app-code-viewer type='resolveTextByKeyName'></app-code-viewer></th>
+            <th style="width:50%">Key Value</th>
         </tr>
         <tr *ngFor="let key of keys;">
             <td><span class="badge badge-light">{{key}}</span></td>
