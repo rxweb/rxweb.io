@@ -13,6 +13,8 @@ export class TranslateGettingStartedComponent implements OnInit {
   showComponent: boolean = false;
   rightSidebarLinks: any = [{ "id": "getting-started", "title": "Getting Started", "subLink": null }, { "id": "getting-started", "title": "Getting Started", "subLink": null }];
   pageTitle: any = this.rightSidebarLinks[0];
+ 
+
   htmlBinding: any = `<div class="badge badge-warning">{{global.greetMessage}}</div>
 <select>
  <option *ngFor="let item of languages | async" 
