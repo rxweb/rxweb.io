@@ -12,14 +12,16 @@
 			<div class="collapse header_left_menu navbar-collapse order-3 order-md-2" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" [class.active]="activeTab=='aspnetcore'" routerLink="/rx-web-core/quick-start/quick-start"
-							routerLinkActive="active">AspNetCore</a>
+						<a class="nav-link" [class.active]="activeTab=='aspnetcore'"
+							routerLink="/rx-web-core/quick-start/quick-start" routerLinkActive="active">AspNetCore</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" [class.active]="activeTab=='angular'"  routerLink="/getting-started" routerLinkActive="active">Angular</a>
+						<a class="nav-link" [class.active]="activeTab=='angular'" routerLink="/getting-started"
+							routerLinkActive="active">Angular</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" [class.active]="activeTab=='vue'"  routerLink="/vue/vue-getting-started" routerLinkActive="active">Vue</a>
+						<a class="nav-link" [class.active]="activeTab=='vue'" routerLink="/vue/vue-getting-started"
+							routerLinkActive="active">Vue</a>
 					</li>
 					<li class="nav-item dropdown" routerLinkActive="active">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -49,12 +51,14 @@
 							<a class="dropdown-item" target="_blank"
 								href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3Abug">Open
 								Issues</a>
+
 							<a class="dropdown-item" target="_blank"
 								href="https://github.com/rxweb/rxweb/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22">Feature
 								Request</a>
 
 						</div>
 					</li>
+
 					<li class="nav-item dropdown" routerLinkActive="active">
 						<a class="nav-link dropdown-toggle" href="#" id="releaseNote" role="button"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,6 +69,8 @@
 							<a class="dropdown-item" routerLink="/whats-next">Whats Next</a>
 						</div>
 					</li>
+					<a class="pt-2" routerLink="/ngx-translate-extension/en/playground" style="color: green!important;
+					font-weight: 600;"><img alt="logo" class="pr-2" src="assets/images/new-badge-3-32.png">ngx-translate-extension</a>
 				</ul>
 
 
@@ -128,8 +134,11 @@
 						class="nav-link"> <i class="fab fa-gitter"></i></a>
 				</li>
 				<li class="nav-item">
-					<a target="_blank" href="https://github.com/rxweb/rxweb.io" class="nav-link pr-0"><i
-							class="fab fa-github"></i></a>
+
+					<iframe class="pt-2" style="margin-left:-16px; "
+						src="https://ghbtns.com/github-btn.html?user=rxweb&repo=rxweb&type=star&count=true&size=large"
+						frameborder="0" scrolling="0" width="170" height="40" title="GitHub"></iframe>
+
 				</li>
 			</ul>
 		</nav>
@@ -199,7 +208,7 @@
 					aria-labelledby="navbarDropdown1">
 
 					<ul class="pl-0" id="rightsidebar-items">
-					
+
 						<li class="nav-item" *ngFor="let item of cloneSidebarLinks;let i = index"
 							[class.d-flex]="i == 0" [class.border-none]="i == 0"
 							[class.sidebar-list]="item.subLink?.length > 0">

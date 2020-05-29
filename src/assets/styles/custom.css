@@ -1163,5 +1163,12 @@ code.command.hljs.routeros {
 }
 
 .searchbox-width {
-  width:500px;
+  width:300px;
+}
+
+.header_right_menu .nav-link{
+  padding: 15px 15px 15px 0px!important;
+}
+.navbar-expand-md .navbar-nav .nav-link{
+  padding-right: 30px!important;
 }

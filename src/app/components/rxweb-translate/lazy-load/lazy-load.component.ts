@@ -10,7 +10,7 @@ import { CountryService } from '../countries.service';
 export class LazyLoadComponent implements OnInit {
     @translate({ translationName: 'lazy-load' }) lazyLoadContent: {[key:string]:any};
 
-    rightSidebarLinks: any = [{ "id": "features", "title": "Features", "subLink": null }, { "id": "features", "title": "Features", "subLink": null }];
+   
 
     activeLanguage: string;
     formGroup: FormGroup;
