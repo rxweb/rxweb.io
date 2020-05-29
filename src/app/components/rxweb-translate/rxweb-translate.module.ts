@@ -22,7 +22,11 @@ import { RxTranslateModule } from '@rxweb/translate';
 import { CliComponent } from './cli/cli.component';
 
 @NgModule({
-  imports: [RXWEB_TRANSLATE_ROUTING, CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule, CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule, RxTranslateModule],
+  imports: [RXWEB_TRANSLATE_ROUTING, CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule, 
+    CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, 
+    HighlightModule,
+    RxTranslateModule
+   ],
   declarations: [TranslateGettingStartedComponent,CliComponent, LazyLoadComponent, LazyLoadChildComponent, CodeViewerComponent, FixedLanguageComponent],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]

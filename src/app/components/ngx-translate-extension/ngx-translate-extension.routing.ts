@@ -9,40 +9,41 @@ import { TranslatePipeComponent } from './comparison/translate-pipe/translate-pi
 import { TranslateServiceComponent } from './comparison/translate-service/translate-service.component';
 import { TranslateStoreComponent } from './comparison/translate-store/translate-store.component';
 import { NgxTranslateExtensionGettingStartedComponent } from './getting-started/getting-started.component';
-import { AttributeDirectiveComponent } from './powerhouse/attribute-directive/attribute-directive.component';
-import { PipeComponent } from './powerhouse/pipe/pipe.component';
-import { StructuralDirectiveComponent } from './powerhouse/structural-directive/structural-directive.component';
-import { DecoratorComponent } from './powerhouse/decorator/decorator.component';
-import { ValidationMessageComponent } from './powerhouse/validation-message/validation-message.component';
+import { PowerhouseAttributeDirectiveComponent } from './powerhouse/attribute-directive/attribute-directive.component';
+import { PowerhousePipeComponent } from './powerhouse/pipe/pipe.component';
+import { PowerhouseStructuralDirectiveComponent } from './powerhouse/structural-directive/structural-directive.component';
+import { PowerhouseDecoratorComponent } from './powerhouse/decorator/decorator.component';
+import { PowerhouseValidationMessageComponent } from './powerhouse/validation-message/validation-message.component';
 import { ConfidenceComponent } from './confidence/confidence.component';
+import { ChangeLanguageComponent } from './playground/change-language/change-language.component';
+import { PlayGroundComponent } from './playground/playground.component';
 
 const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
-  {
-    path: '', redirectTo: 'getting-started', pathMatch: 'full'
-  },
+  { path: '', pathMatch: 'full', redirectTo: 'en/playground' },
+  { path: ':languageCode/playground', component: PlayGroundComponent },
   {
     path: 'getting-started',
     component: NgxTranslateExtensionGettingStartedComponent
   },
   {
     path: 'attribute-directive',
-    component: AttributeDirectiveComponent
+    component: PowerhouseAttributeDirectiveComponent
   },
   {
     path: 'pipe',
-    component: PipeComponent
+    component: PowerhousePipeComponent
   },
   {
     path: 'structural-directive',
-    component: StructuralDirectiveComponent
+    component: PowerhouseStructuralDirectiveComponent
   },
   {
     path: 'decorator',
-    component: DecoratorComponent
+    component: PowerhouseDecoratorComponent
   },
   {
     path: 'validation-message',
-    component: ValidationMessageComponent
+    component: PowerhouseValidationMessageComponent
   },
   {
     path: 'comparison',
@@ -51,6 +52,10 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   {
     path: 'confidence',
     component: ConfidenceComponent
+  },
+  {
+    path: 'playground',
+    component: PlayGroundComponent
   }
 
 ];

@@ -6,7 +6,7 @@ import $ from 'jquery';
 @Component({
   templateUrl: './structural-directive.component.html',
 })
-export class StructuralDirectiveComponent implements OnInit {
+export class PowerhouseStructuralDirectiveComponent implements OnInit {
 
   rightSidebarLinks: any = [{ "id": "structural-directive", "title": "Structural Directive", "subLink": null }, { "id": "structural-directive", "title": "Structural Directive", "subLink": null }];
   outputHtml: string;
@@ -17,7 +17,8 @@ export class StructuralDirectiveComponent implements OnInit {
       typescript: `
 export class StructuralDirectiveChildComponent {
 
-  @translate({ translationName: 'structural-directive-child' }) structuralDirectiveChild: any;
+  @translate({ translationName: 'structural-directive-child' })
+  structuralDirectiveChild: any;
 
 }`,
       html: `<structural-directive-child *rxTranslate="true"></structural-directive-child>`

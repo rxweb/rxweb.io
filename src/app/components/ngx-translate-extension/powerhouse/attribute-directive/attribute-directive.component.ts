@@ -7,7 +7,7 @@ import $ from 'jquery';
 @Component({
   templateUrl: './attribute-directive.component.html',
 })
-export class AttributeDirectiveComponent implements OnInit {
+export class PowerhouseAttributeDirectiveComponent implements OnInit {
 
   rightSidebarLinks: any = [{ "id": "attribute-directive", "title": "Attribute Directive", "subLink": null }, { "id": "attribute-directive", "title": "Attribute Directive", "subLink": null }];
   outputHtml: string;

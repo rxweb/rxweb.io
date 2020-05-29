@@ -2260,6 +2260,13 @@
                     "isActive": false,
                     "linkTitle": "confidence",
                     "refUri": "confidence"
+                },
+                {
+                    "title": "Playground",
+                    "uri": "/ngx-translate-extension/en/playground",
+                    "isActive": false,
+                    "linkTitle": "playground",
+                    "refUri": "playground"
                 }
             ]
         }
