@@ -9,72 +9,6 @@
             "isActive": false
         },
         {
-            "title": "Step By Step Guide",
-            "uri": null,
-            "otherUri": "step-by-step-guide",
-            "isOpen": false,
-            "isHide": true,
-            "isActive": false,
-            "childrens": [
-                {
-                    "title": "Your First App",
-                    "uri": null,
-                    "isActive": false,
-                    "isOpen": false,
-                    "childrens": []
-                },
-                {
-                    "title": "Generating Components",
-                    "uri": null,
-                    "isActive": false,
-                    "childrens": []
-                },
-                {
-                    "title": "Routing",
-                    "uri": null,
-                    "isActive": false,
-                    "childrens": []
-                },
-                {
-                    "title": "Forms",
-                    "uri": null,
-                    "isActive": false,
-                    "childrens": []
-                },
-                {
-                    "title": "Http Request",
-                    "uri": null,
-                    "isActive": false,
-                    "childrens": []
-                },
-                {
-                    "title": "Run The App",
-                    "uri": null,
-                    "isActive": false,
-                    "childrens": []
-                },
-                {
-                    "title": "Deployment",
-                    "uri": null,
-                    "isActive": false,
-                    "childrens": []
-                }
-            ]
-        },
-        {
-            "title": "Project Structure",
-            "uri": null,
-            "isHide": true,
-            "childrens": [],
-            "isActive": false
-        },
-        {
-            "title": "Routes",
-            "uri": null,
-            "isHide": true,
-            "isActive": false
-        },
-        {
             "title": "Reactive Forms",
             "childrens": [
                 {
@@ -1309,13 +1243,7 @@
             ],
             "isActive": false
         },
-        {
-            "title": "Grid",
-            "uri": null,
-            "isHide": true,
-            "isActive": false,
-            "childrens": []
-        },
+       
         {
             "title": "Dynamic Forms",
             "childrens": [
@@ -2038,19 +1966,7 @@
                 }
             ]
         },
-        {
-            "title": "UI Components",
-            "uri": null,
-            "isHide": true,
-            "childrens": [],
-            "isActive": false
-        },
-        {
-            "title": "Storage",
-            "uri": null,
-            "isHide": true,
-            "isActive": false
-        },
+       
         {
             "title": "Translate",
             "isOpen": false,

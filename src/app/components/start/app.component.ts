@@ -71,7 +71,7 @@ export class AppComponent implements OnInit {
   lastRouteName: string = ""
   rightSidebarLinks: any=[];
   constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer, private http: HttpClient) {
-    setTimeout(() => { this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://rxwebangular.z20.web.core.windows.net/")}, 200);
+    // setTimeout(() => { this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://rxwebangular.z20.web.core.windows.net/")}, 200);
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
     });
@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
 
       if (val instanceof NavigationEnd) {
         console.log("calling routes")
-        if (val.url == "/" || val.url == "/form-builder" || val.url == "/dynamic-form-builder" || val.url.includes("/home") || val.url.includes("/angular-home") || val.url.includes("/home?_ga")) {
+        if (val.url == "/" || val.url == "/form-builder" || val.url.includes("?") || val.url == "/dynamic-form-builder" || val.url.includes("/#") || val.url.includes("/home") || val.url.includes("/angular-home") || val.url.includes("/home?_ga")) {
           this.isHome = true;
         }
         else if (val.url.includes("rx-web-core")) {
@@ -147,7 +147,6 @@ export class AppComponent implements OnInit {
       }
       if (val instanceof NavigationStart) {
         this.showFooter = false;
-
       }
     });
   }

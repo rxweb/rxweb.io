@@ -22,7 +22,7 @@ export class SideBarComponent implements OnInit {
   searchvalue: string
   pageLoaded: boolean = false;
   isSearch: boolean = false;
-
+  config: any;
   bindSideBarLinks: any;
   @ViewChild('search') searchInput: ElementRef;
 
@@ -38,6 +38,12 @@ export class SideBarComponent implements OnInit {
           this.links = response.links;
           var currentUrl = this.router.url;
           this.setActiveLink(currentUrl);
+          this.config = {
+            apiKey: '4f3d9e65c9459b43e692a149f365c74e',
+            appId: 'U3S057LEMB',
+            indexName: 'rxwebcore links'
+          };
+         
         });
       }
 
@@ -46,6 +52,11 @@ export class SideBarComponent implements OnInit {
           this.links = response.links;
           var currentUrl = this.router.url;
           this.setActiveLink(currentUrl);
+          this.config = {
+            apiKey: '4f3d9e65c9459b43e692a149f365c74e',
+            appId: 'U3S057LEMB',
+            indexName: 'vue-sidebar links'
+          };
         });
       }
 
@@ -55,10 +66,14 @@ export class SideBarComponent implements OnInit {
           this.links = response.links;
           var currentUrl = this.router.url;
           this.setActiveLink(currentUrl);
+          this.config = {
+            apiKey: '4f3d9e65c9459b43e692a149f365c74e',
+            appId: 'U3S057LEMB',
+            indexName: 'rxweb links'
+          };
         });
       }
     }
-    this.showComponent = true;
   }
 
 
@@ -126,6 +141,7 @@ export class SideBarComponent implements OnInit {
   refLinks: any[] = [];
   lastSearchValue: string = '';
   bindLinks(searchResult: any[], searchvalue: string) {
+  
     if (this.lastSearchValue != this.searchvalue) {
       this.lastSearchValue = this.searchvalue;
       if (searchvalue != undefined && searchvalue.length > 0) {
@@ -144,21 +160,15 @@ export class SideBarComponent implements OnInit {
                     refObject[0].isOpen = true;
                     this.searchChildSearchLink(t.linkTrees, refObject[0].childrens, 1, t)
                   }
-
-
                 })
               }
-
             })
           }
-
-
-
-
         }
       }
     }
   }
+
   searchChildSearchLink(linkTrees: any[], childrens: any[], level: number, searchResult: any) {
     if (childrens) {
       let newrefObject = childrens.filter(z => z.title == linkTrees[level])
@@ -171,7 +181,8 @@ export class SideBarComponent implements OnInit {
       }
       else {
         let searchLink = childrens.filter(x => x.title == searchResult.title)
-        searchLink[0].isHide = false;
+        if (searchLink[0])
+          searchLink[0].isHide = false;
       }
     }
   }

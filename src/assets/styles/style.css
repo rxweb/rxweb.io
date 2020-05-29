@@ -4147,8 +4147,8 @@ body {
 #menu {
     /* width: 299px; */
     /* width: 300px; */
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
     bottom: 0;
     /* float: left; */
     left: 0;
@@ -4660,7 +4660,7 @@ body.modal-open {
     text-transform: uppercase;
     font-weight: 700;
     padding: 10px 20px;
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: 18px;
 }
 

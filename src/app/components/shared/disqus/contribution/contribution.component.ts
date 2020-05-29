@@ -37,7 +37,7 @@ export class ContributionComponent implements OnInit{
           })
         }
         else{
-          this.http.get('assets/json/rxweb-links.json').subscribe((response: any) => {
+          this.http.get('assets/json/search1.json').subscribe((response: any) => {
             this.links = response;
             var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
             if (currentObjIndex != undefined) {
@@ -56,11 +56,11 @@ export class ContributionComponent implements OnInit{
     }
 
     nextLink() {
-        var currentObjIndex = this.links.findIndex(a => a.href == location.pathname);
+        var currentObjIndex = this.links.findIndex(a => a.link == location.pathname);
         if (currentObjIndex != undefined) {
           currentObjIndex++;
           var nextObj = this.links[currentObjIndex];
-          this.router.navigate([nextObj.href]);
+          this.router.navigate([nextObj.link]);
         }
         document.body.scrollTop = 0;
       }

@@ -79,7 +79,7 @@
 						  }">
 						<div class="search-box position-relative">
 
-							<ais-search-box id="search1" placeholder='' type="text"
+							<ais-search-box id="search1" placeholder='' type="text" (click)="addSearchBoxWidth()"
 								(keyup)="showsearchcontent1($event,searchvalue1)" #search1 [(ngModel)]="searchvalue1"
 								name="searchvalue1" (blur)="hideSearch1()"
 								class="search-field search-field-focus ais-SearchBox-input" ngDefaultControl focus>
