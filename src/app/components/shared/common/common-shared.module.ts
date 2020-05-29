@@ -14,11 +14,12 @@ import { DisqusSharedModule } from "src/app/components/shared/disqus/disqus-shar
 import { DisqusComponent } from "src/app/components/shared/disqus/disqus/disqus.component";
 import { GitHubIssueComponent } from "src/app/components/shared/disqus/github-issue/github-issue.component";
 import { ContributionComponent } from '../disqus/contribution/contribution.component';
+import { CodeDisplayComponent } from '../code-display/code-display.component';
 
 @NgModule({
  imports:      [CommonModule,ClipboardModule,HighlightModule ,DisqusSharedModule ],
- declarations: [ PageViewerComponent,AppCodeComponent,AppExampleRunnerComponent,CodeExampleComponent,AppTabsComponent ],
- exports:      [ CommonModule, FormsModule,AppCodeComponent,AppExampleRunnerComponent,PageViewerComponent,CodeExampleComponent,AppTabsComponent,DisqusSharedModule ],
+  declarations: [PageViewerComponent, AppCodeComponent,CodeDisplayComponent,AppExampleRunnerComponent,CodeExampleComponent,AppTabsComponent ],
+  exports: [CommonModule, FormsModule, AppCodeComponent,CodeDisplayComponent,AppExampleRunnerComponent,PageViewerComponent,CodeExampleComponent,AppTabsComponent,DisqusSharedModule ],
  entryComponents: [GitHubIssueComponent,DisqusComponent,ContributionComponent],
 })
 export class CommonSharedModule { }

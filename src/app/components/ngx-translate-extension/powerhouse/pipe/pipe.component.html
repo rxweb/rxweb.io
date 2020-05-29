@@ -1,1 +1,224 @@
 <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
+<div class="title-bar top_title">
+  <p>Pipe</p>
+</div>
+<div class="title-bar">
+  <p>Resolve the translation using rxweb <b>translate</b> pipe.</p>
+</div>
+
+<div class="bg-white border-radius" style="margin-top:40px;">
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-first" role="tab" aria-controls="v-pills-profile-first"
+              aria-selected="false">en.json</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-first-tab" data-toggle="pill"
+              href="#v-pills-messages-first" role="tab" aria-controls="v-pills-messages-first"
+              aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade" id="v-pills-profile-first" role="tabpanel"
+              aria-labelledby="v-pills-profile-first-tab" style="width: 490px;">
+              <div class="code-section p-0">
+                <!-- <pre class="ngx-pre-code pre-code">
+                  <code [innerHtml]="json"></code>
+                </pre> -->
+                <app-code-display innerHtml="json" [item]="examples.first"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade show active" id="v-pills-messages-first" role="tabpanel"
+              aria-labelledby="v-pills-messages-first-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="html" [item]="examples.first"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <label class="badge badge-warning">{{'firstName' | translate}}</label><br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-style">
+    <div class="col-text-style"><span class="col-hash-text-red" data-toggle="tooltip"
+        title="Want to bind custom parameter in existing text? Here I am. 😎 Pass your translation text object in the translate pipe."
+        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>Custom Parameter Interpolation
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-translateParams-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-translateParams" role="tab" aria-controls="v-pills-profile-translateParams"
+              aria-selected="false">en.json</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-translateParams-tab"
+              data-toggle="pill" href="#v-pills-messages-translateParams" role="tab"
+              aria-controls="v-pills-messages-translateParams" aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade" id="v-pills-profile-translateParams" role="tabpanel"
+              aria-labelledby="v-pills-profile-translateParams-tab" style="width: 490px;">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="json" [item]="examples.translateParams"></app-code-display>
+                <!-- <pre class="ngx-pre-code pre-code">
+                  <code [innerHtml]="json"></code>
+                </pre> -->
+              </div>
+            </div>
+            <div class="tab-pane fade active show" id="v-pills-messages-translateParams" role="tabpanel"
+              aria-labelledby="v-pills-messages-translateParams-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="html" [item]="examples.translateParams"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <label class="badge badge-warning">{{'notification' | translate:{greet:'Good Morning'} }}</label><br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row col-style">
+  <div _ngcontent-nkq-c0="" class="col-text-style"><span class="col-hash-text col-hash-text-red"># </span>Fixed Language
+    Translation</div>
+</div> -->
+  <div class="row col-style">
+    <div class="col-text-style"><span class="col-hash-text-red" data-toggle="tooltip"
+        title="Salut! je suis 'lang' 😇. Need a fixed language? Just pass me in your translate pipe."
+        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>Fixed Language Translation
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-md-12">
+      <p class="showHideElement showElement">Use <span class="highlighted">translateLang</span> attribute for <span class="attribute-directive-title">fixed
+      language translation</span>.</p>
+    </div>
+
+  </div> -->
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-translateLang-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-translateLang" role="tab" aria-controls="v-pills-profile-translateLang"
+              aria-selected="false">fr.json</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-translateLang-tab"
+              data-toggle="pill" href="#v-pills-messages-translateLang" role="tab"
+              aria-controls="v-pills-messages-translateLang" aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade " id="v-pills-profile-translateLang" role="tabpanel"
+              aria-labelledby="v-pills-profile-translateLang-tab" style="width: 490px;">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="json" [item]="examples.translateLang"></app-code-display>
+                <!-- <pre class="ngx-pre-code pre-code">
+                    <code [innerHtml]="json"></code>
+                  </pre> -->
+              </div>
+            </div>
+            <div class="tab-pane fade show active" id="v-pills-messages-translateLang" role="tabpanel"
+              aria-labelledby="v-pills-messages-translateLang-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="html" [item]="examples.translateLang"></app-code-display>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <label class="badge badge-warning">{{'note' | translate:{lang:'fr'} }}</label><br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-style">
+    <div class="col-text-style"><span class="col-hash-text-red" data-toggle="tooltip"
+        title="Want to be component specific? here, I am translationName 🤘" data-placement="top"><i
+          class="fa fa-info-circle" aria-hidden="true"></i> </span>Component Wise Translation
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-md-12">
+      <p class="showHideElement showElement">Use <span class="highlighted">translationName</span> attribute for
+        <span class="attribute-directive-title">component wise translation</span>.</p>
+    </div>
+
+  </div> -->
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
+               href="#v-pills-profile" role="tab"
+              aria-controls="v-pills-profile" aria-selected="false">en.json</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-tab" data-toggle="pill"
+               href="#v-pills-messages" role="tab"
+              aria-controls="v-pills-messages" aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade " id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+              style="width: 490px;">
+              <div class="code-section p-0">
+                <!-- <pre class="ngx-pre-code pre-code">
+                  <code [innerHtml]="json"></code>
+                </pre> -->
+                <app-code-display innerHtml="json" [item]="examples.translationName"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade show active" id="v-pills-messages" role="tabpanel"
+              aria-labelledby="v-pills-messages-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="html" [item]="examples.translationName"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <label class="badge badge-warning">{{'dashboardHeading' | translate:{translationName:'dashboard'} }} </label><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

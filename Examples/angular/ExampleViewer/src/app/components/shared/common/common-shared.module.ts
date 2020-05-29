@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-
 import { AppCodeComponent } from "src/app/components/shared/app-code/app-code.component";
 import { ClipboardModule } from "ngx-clipboard";
 import { HighlightModule } from "ngx-highlightjs";
@@ -17,8 +15,8 @@ import { ContributionComponent } from '../disqus/contribution/contribution.compo
 
 @NgModule({
  imports:      [CommonModule,ClipboardModule,HighlightModule ,DisqusSharedModule ],
- declarations: [ PageViewerComponent,AppCodeComponent,AppExampleRunnerComponent,CodeExampleComponent,AppTabsComponent ],
- exports:      [ CommonModule, FormsModule,AppCodeComponent,AppExampleRunnerComponent,PageViewerComponent,CodeExampleComponent,AppTabsComponent,DisqusSharedModule ],
+  declarations: [PageViewerComponent, AppCodeComponent,CodeDisplayComponent, AppExampleRunnerComponent,CodeExampleComponent,AppTabsComponent ],
+  exports: [CommonModule, FormsModule, AppCodeComponent,AppExampleRunnerComponent,PageViewerComponent,CodeExampleComponent,AppTabsComponent,DisqusSharedModule ],
  entryComponents: [GitHubIssueComponent,DisqusComponent,ContributionComponent],
 })
 export class CommonSharedModule { }
