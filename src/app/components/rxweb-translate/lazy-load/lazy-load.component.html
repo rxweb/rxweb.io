@@ -161,7 +161,7 @@
         <a href="https://stackblitz.com/edit/rxweb-validation-messages-qbu2y8?file=src%2Fapp%2Fglobal%2Fglobal.component.html"
           target="_blank"><i class="fa fa-external-link translate-external-link" aria-hidden="true"></i></a><br />
         <span class="small red"
-          *ngIf="formGroup.controls.fullName.errors">{{formGroup.controls.fullName.errors | json}}</span>
+          *ngIf="formGroup.controls.fullName.errors">{{formGroup.controls.fullName.errors.required?.message}}</span>
       </form>
     </div>
   </div>
