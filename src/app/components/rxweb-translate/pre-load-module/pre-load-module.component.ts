@@ -10,7 +10,6 @@ export class PreLoadModuleComponent {
 
 }
 
-
 @NgModule({
     declarations: [PreLoadModuleComponent],
     imports: [

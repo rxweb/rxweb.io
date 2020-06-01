@@ -58,18 +58,11 @@ export class TranslateHttpLoader implements TranslateLoader {
         return this.http.get(`assets/i18n/${lang}.json`);
     }
 }
-
 @NgModule({
     imports: [NGX_TRANSLATE_EXTENSION_ROUTING, HttpClientModule,
         TranslateModule.forRoot({ loader: { provide: TranslateLoader, useClass: TranslateHttpLoader } }),
         CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule,
         CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
-        RxTranslateModule.forRoot({
-            preloadingStrategy: true, // Lazy load the translation content while resolving the module, refer the route of 'pre-load-module'.
-            controlErrorMessage: { path: 'validationErrorMessages' }, // configure the validation message path for binding the validation messages according to the active language, refer this file `assets\i18n\en.json`
-            forNgxTranslate: true, // work with ngx-translate-extension package
-            cacheLanguageWiseObject: true, // the resolved content should be cached.
-        }),
     ],
     declarations: [
         NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, PowerhouseAttributeDirectiveComponent, PowerhousePipeComponent,
@@ -81,11 +74,4 @@ export class TranslateHttpLoader implements TranslateLoader {
     exports: [RouterModule]
 })
 export class NgxTranslateExtensionModule {
-    constructor(public translate: TranslateService) {
-        translate.addLangs(['en', 'es', 'fr']);
-        translate.setDefaultLang('en');
-
-        const browserLang = translate.getBrowserLang();
-        translate.use('en');
-    }
 }

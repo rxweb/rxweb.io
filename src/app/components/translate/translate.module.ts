@@ -27,7 +27,6 @@ import { RxTranslateModule } from '@rxweb/translate';
 import { AddressComponent } from 'src/assets/examples/shared-component-translation/address/address.component';
 import { ApiComponent } from './api/api.component';
 import { ComparisonComponent } from './comparison/comparison.component';
-
 @NgModule({
   imports: [TRANSLATE_ROUTING, PageModule, FormsModule, ReactiveFormsModule, CommonModule, TopBarSharedModule, CommonSharedModule,
     RxTranslateModule.forRoot({

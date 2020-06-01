@@ -86,9 +86,8 @@ registerLocaleData(localePt)
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
     RxTranslateModule.forRoot({
-      cacheLanguageWiseObject: true,
-      globalFilePath: "assets/i18n/{{language-code}}/global.{{language-code}}.json",
-      filePath: "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json",
+        cacheLanguageWiseObject: true,
+        forNgxTranslate: true,
       controlErrorMessage: {
         path: 'validationErrorMessages'
       }
