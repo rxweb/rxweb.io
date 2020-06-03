@@ -2,7 +2,6 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TranslateGettingStartedComponent } from './getting-started/getting-started.component';
 import { LazyLoadComponent } from './lazy-load/lazy-load.component';
-import { CliComponent } from './cli/cli.component';
 
 
 const RXWEB_TRANSLATE_ROUTES: Routes = [
@@ -19,10 +18,7 @@ const RXWEB_TRANSLATE_ROUTES: Routes = [
     path: "getting-started",
     component: TranslateGettingStartedComponent
   },
-  {
-    path:"rxweb-cli",
-    component:CliComponent
-  },
+ 
   {
     path: 'translate',
     loadChildren: 'src/app/components/translate/translate.module#TranslateModule',
