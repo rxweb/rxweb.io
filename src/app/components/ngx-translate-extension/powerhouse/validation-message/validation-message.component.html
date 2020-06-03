@@ -1,2 +1,191 @@
-<h2> Information coming soon </h2>
 <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
+<div class="title-bar top_title">
+  <p>Validation Messages</p>
+</div>
+<div class="title-bar">
+  <p>Bind the translated validation messages using <b>controlErrorMessage</b> directive.</p>
+</div>
+
+<div class="bg-white border-radius" style="margin-top:40px;">
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-module-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-module-basic" role="tab" aria-controls="v-pills-module-basic"
+              aria-selected="false">app.module.ts</a>
+            <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-basic" role="tab" aria-controls="v-pills-profile-basic"
+              aria-selected="false">en.json</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-component-basic-tab" data-toggle="pill"
+              href="#v-pills-component-basic" role="tab" aria-controls="v-pills-component-basic"
+              aria-selected="false">*.component.ts</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-basic-tab" data-toggle="pill"
+              href="#v-pills-messages-basic" role="tab" aria-controls="v-pills-messages-basic"
+              aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-module-basic" role="tabpanel" aria-labelledby="v-pills-module-basic-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="ts" [item]="examples.basic"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile-basic" role="tabpanel" aria-labelledby="v-pills-profile-basic-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="json" [item]="examples.basic"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-component-basic" role="tabpanel"
+              aria-labelledby="v-pills-component-basic-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="typescript" [item]="examples.basic"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages-basic" role="tabpanel"
+              aria-labelledby="v-pills-messages-basic-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="html" [item]="examples.basic"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <form [formGroup]="formGroup">
+            <input type="text" formControlName="fullName" class="form-control" />
+            <span class="margin-left small red"
+              *ngIf="formGroup.controls.fullName.errors">{{formGroup.controls.fullName.errors.required.message}}</span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-style">
+    <div class="col-text-style"><span class="col-hash-text-marron" data-toggle="tooltip"
+        title="Hey! I am translateParams 😃. You can use me for binding translate through Custom Parameter Interpolation"
+        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>Validating with parameter interpolation
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-profile-paramater-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-paramater" role="tab" aria-controls="v-pills-profile-paramater"
+              aria-selected="false">en.json</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-component-paramater-tab" data-toggle="pill"
+              href="#v-pills-component-paramater" role="tab" aria-controls="v-pills-component-paramater"
+              aria-selected="false">*.component.ts</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-paramater-tab"
+              data-toggle="pill" href="#v-pills-messages-paramater" role="tab"
+              aria-controls="v-pills-messages-paramater" aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-profile-paramater" role="tabpanel"
+              aria-labelledby="v-pills-profile-paramater-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="json" [item]="examples.paramater"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-component-paramater" role="tabpanel"
+              aria-labelledby="v-pills-component-paramater-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="typescript" [item]="examples.paramater"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages-paramater" role="tabpanel"
+              aria-labelledby="v-pills-messages-paramater-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="html" [item]="examples.paramater"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <form [formGroup]="formGroup">
+            <input type="text" formControlName="designation" class="form-control" />
+            <span class="margin-left small red"
+              *ngIf="formGroup.controls.designation.errors">{{formGroup.controls.designation.errors.maxlength.message}}</span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-style">
+    <div class="col-text-style"><span class="col-hash-text-marron" data-toggle="tooltip"
+        title="Hey! I am translateLang. If you are willing to keep your language fixed then I can be helpful 😉"
+        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>Validating with array parameter interpolation
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-profile-array-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-array" role="tab" aria-controls="v-pills-profile-array"
+              aria-selected="false">en.json</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-component-array-tab" data-toggle="pill"
+              href="#v-pills-component-array" role="tab" aria-controls="v-pills-component-array"
+              aria-selected="false">*.component.ts</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-array-tab" data-toggle="pill"
+              href="#v-pills-messages-array" role="tab" aria-controls="v-pills-messages-array"
+              aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-profile-array" role="tabpanel"
+              aria-labelledby="v-pills-profile-array-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="json" [item]="examples.array"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-component-array" role="tabpanel"
+              aria-labelledby="v-pills-component-array-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="typescript" [item]="examples.array"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages-array" role="tabpanel"
+              aria-labelledby="v-pills-messages-array-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="html" [item]="examples.array"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <form [formGroup]="formGroup">
+            <input type="text" formControlName="userName" class="form-control" />
+            <span class="margin-left small red" *ngIf="formGroup.controls.userName.errors">{{formGroup.controls.userName.errors.identityRevealed.message}}</span>
+          </form>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

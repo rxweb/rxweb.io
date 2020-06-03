@@ -21,11 +21,17 @@ export class CodeDisplayComponent implements OnInit {
   outputHtml: string;
 
   ngOnInit() {
-    console.log(this.innerHtml)
     if (this.innerHtml == 'json')
       this.outputHtml = Prism.highlight(this.item.json, Prism.languages['json'], 'json');
     else if (this.innerHtml == 'typescript')
       this.outputHtml = Prism.highlight(this.item.typescript, Prism.languages['typescript'], 'typescript');
+    else if (this.innerHtml == 'ts')
+      if (this.item.ts.service)
+        this.outputHtml = Prism.highlight(this.item.ts.service, Prism.languages['ts'], 'ts');
+      else if (this.item.ts.module)
+        this.outputHtml = Prism.highlight(this.item.ts.module, Prism.languages['ts'], 'ts');
+      else
+        this.outputHtml = Prism.highlight(this.item.ts, Prism.languages['ts'], 'ts');
     else
       this.outputHtml = Prism.highlight(this.item.html, Prism.languages['html'], 'html');
   }

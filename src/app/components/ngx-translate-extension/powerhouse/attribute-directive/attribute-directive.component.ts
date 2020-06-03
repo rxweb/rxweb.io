@@ -13,12 +13,12 @@ export class PowerhouseAttributeDirectiveComponent implements OnInit {
   outputHtml: string;
   examples: any = {
     first: {
-      json: `{"firstName":"Enter Your First Name"}`,
-      html: `<span translate="firstName"></span>`
+      json: `{"greet": "Hello! How are you"}`,
+      html: `<span translate="greet"></span>`
     },
     translateParams: {
-      json: `{"notification":"Hey {greet}"}`,
-      html: `<label translate="notification" [translateParams]="{greet:'Good Morning'}"></label>`
+      json: `"notification": "Hello {{name}}"`,
+      html: `<span translate="notification" [translateParams]="{'name':name}"></span>`
     },
     translateLang: {
       json: `{"note":"Ceci est le paquet ngx-translate-extension"}`,

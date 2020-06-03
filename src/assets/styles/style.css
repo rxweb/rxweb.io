@@ -9448,6 +9448,14 @@ div#v-pills-tabContent {
     background-color: #f3d7df!important;
 }
 
+.md-decorator-inner {
+    background-color: #ffffe1!important;
+}
+
+.md-validation-inner {
+    background-color: #9a28a821!important;
+}
+
 .tooltip.top .tooltip-arrow {
     border-top-color: #f7fcff;
 }
