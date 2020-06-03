@@ -1288,3 +1288,7 @@ th {
 .navbar-expand-md .navbar-nav .nav-link {
   padding-right: 30px!important;
 }
+
+.float-comparison-right {
+  padding-left: 632px!important;
+}
