@@ -14,5 +14,9 @@
   "keyOne": "Key One",
   "nested": {
     "keyOne": "Nested Key One"
-  }
+  },
+  "morningText": "Good Morning",
+  "goodDayText": "Good Day",
+  "conditionalText": "this.day == 'Good Day' ? this.global.goodDayText: this.global.morningText",
+  "greetMessage": "Hey! {{global.conditionalText}}, I hope you are doing well 🙃. You can translate me by selecting"
 }
