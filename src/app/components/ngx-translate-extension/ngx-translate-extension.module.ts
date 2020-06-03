@@ -46,6 +46,8 @@ import { ValidationMessageComponent } from "./playground/validation-message/vali
 import { RxTranslateModule } from "@rxweb/translate";
 import { CountryService } from "./playground/service/country.service";
 import { CliComponent } from "./cli/cli.component";
+import { PowerhouseChangeLanguageComponent } from "./powerhouse/change-language/change-language.component";
+import { PowerhouseOtherIntruitiveFeaturesComponent } from "./powerhouse/other-intuitive-features/other-intuitive-features.component";
 @Injectable()
 export class TranslateHttpLoader implements TranslateLoader {
     constructor(private http: HttpClient) { }
@@ -69,7 +71,7 @@ export class TranslateHttpLoader implements TranslateLoader {
         NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, PowerhouseAttributeDirectiveComponent, PowerhousePipeComponent,
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,
-        PreLoadModuleComponent, StructuralDirectiveComponent, ValidationMessageComponent
+        PreLoadModuleComponent, StructuralDirectiveComponent, ValidationMessageComponent, PowerhouseChangeLanguageComponent, PowerhouseOtherIntruitiveFeaturesComponent
     ],
     providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CountryService],
     exports: [RouterModule]

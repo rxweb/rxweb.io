@@ -9429,6 +9429,10 @@ div#v-pills-tabContent {
     background-color: #f3d7df;
 }
 
+a#v-pills-component-first-tab, a#v-pills-html-first-tab {
+    margin-left: 20px;
+}
+
 /* tooltip */
 
 .tooltip-inner {
@@ -9453,7 +9457,15 @@ div#v-pills-tabContent {
 }
 
 .md-validation-inner {
-    background-color: #9a28a821!important;
+    background-color: #f0d7f3!important;
+}
+
+.md-change-inner {
+    background-color: #e9dfdb!important;
+}
+
+.md-intruitive-inner {
+    background-color: #c7e9d7!important;
 }
 
 .tooltip.top .tooltip-arrow {

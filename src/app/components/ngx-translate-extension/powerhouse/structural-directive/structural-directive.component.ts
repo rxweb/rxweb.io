@@ -21,7 +21,8 @@ export class StructuralDirectiveChildComponent {
   structuralDirectiveChild: any;
 
 }`,
-      html: `<structural-directive-child *rxTranslate="true"></structural-directive-child>`
+      html: `<structural-directive-child *rxTranslate="true"></structural-directive-child>`,
+      mathml: `<div>{{structuralDirectiveChild.text}}</div>`
     }
   }
 

@@ -2183,6 +2183,52 @@
                                     "refUri": "basic"
                                 }
                             ]
+                        },
+                        {
+                            "title": "Change Language Options",
+                            "uri": "/ngx-translate-extension/en/change-language",
+                            "isActive": false,
+                            "linkTitle": "change-language",
+                            "refUri": "change-language",
+                            "childrens": [
+                                {
+                                    "title": "Through Program",
+                                    "uri": "/ngx-translate-extension/en/change-language#throughprogram",
+                                    "isActive": false,
+                                    "linkTitle": "throughprogram",
+                                    "refUri": "throughprogram"
+                                },
+                                {
+                                    "title": "By URL",
+                                    "uri": "/ngx-translate-extension/en/change-language#byurl",
+                                    "isActive": false,
+                                    "linkTitle": "byurl",
+                                    "refUri": "byurl"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Other Intuitive Features",
+                            "uri": "/ngx-translate-extension/other-intuitive-features",
+                            "isActive": false,
+                            "linkTitle": "other-intuitive-features",
+                            "refUri": "other-intuitive-features",
+                            "childrens": [
+                                {
+                                    "title": "Through Program",
+                                    "uri": "/ngx-translate-extension/other-intuitive-features#throughprogram",
+                                    "isActive": false,
+                                    "linkTitle": "throughprogram",
+                                    "refUri": "throughprogram"
+                                },
+                                {
+                                    "title": "By URL",
+                                    "uri": "/ngx-translate-extension/other-intuitive-features#byurl",
+                                    "isActive": false,
+                                    "linkTitle": "byurl",
+                                    "refUri": "byurl"
+                                }
+                            ]
                         }
                     ]
                 },

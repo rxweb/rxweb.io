@@ -1,16 +1,17 @@
 <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
 <div class="title-bar top_title">
-  <p>Change Language Options</p>
+  <p>Other Intuitive Features</p>
 </div>
 <div class="title-bar">
-  <p>Change the translation language mannually <b>programmatically</b> or through <b>URL</b> by adding language code in URL.</p>
+  <p>Change the translation language mannually <b>programmatically</b> or through <b>URL</b> by adding language code in
+    URL.</p>
 </div>
 
 <div class="bg-white border-radius" style="margin-top:40px;">
   <div class="row col-style">
-    <div class="col-text-style"><span class="col-hash-text-brown" data-toggle="tooltip"
-        title="Hi! I am use, one of the methods of TranslateService 😊. You can use me for changing language programmatically. Just pass the language as a parameter in me, and you're all set 🤝"
-        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>Through Program
+    <div class="col-text-style"><span class="col-hash-text-green" data-toggle="tooltip"
+        title="Want translated page title also? Meet me, I am pageTitle 😇. Set my value in JSON which you want to display as title"
+        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>Automatically Set Page Title
     </div>
   </div>
   <div class="row col-md-12">
@@ -18,37 +19,37 @@
       <div class="row ">
         <div class="col-md-2">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <!-- <a class="nav-link active" id="v-pills-profile-paramater-tab" style="font-size: 11px;" data-toggle="pill"
-              href="#v-pills-profile-paramater" role="tab" aria-controls="v-pills-profile-paramater"
-              aria-selected="false">en.json</a> -->
-            <a class="nav-link active" style="font-size: 11px;" id="v-pills-component-program-tab" data-toggle="pill"
+            <a class="nav-link active" id="v-pills-profile-title-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-title" role="tab" aria-controls="v-pills-profile-title"
+              aria-selected="false">en.json</a>
+            <!-- <a class="nav-link active" style="font-size: 11px;" id="v-pills-component-program-tab" data-toggle="pill"
               href="#v-pills-component-program" role="tab" aria-controls="v-pills-component-program"
               aria-selected="false">*.component.ts</a>
             <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-program-tab" data-toggle="pill"
               href="#v-pills-messages-program" role="tab" aria-controls="v-pills-messages-program"
-              aria-selected="false">*.component.html</a>
+              aria-selected="false">*.component.html</a> -->
           </div>
         </div>
         <div class="col-md-10 remove-col-padding">
           <div class="tab-content" id="v-pills-tabContent">
-            <!-- <div class="tab-pane fade show active" id="v-pills-profile-paramater" role="tabpanel"
-              aria-labelledby="v-pills-profile-paramater-tab">
+            <div class="tab-pane fade show active" id="v-pills-profile-title" role="tabpanel"
+              aria-labelledby="v-pills-profile-title-tab">
               <div class="code-section p-0">
-                <app-code-display innerHtml="json" [item]="examples.paramater"></app-code-display>
+                <app-code-display innerHtml="json" [item]="examples.title"></app-code-display>
               </div>
-            </div> -->
+            </div>
             <div class="tab-pane fade show active" id="v-pills-component-program" role="tabpanel"
               aria-labelledby="v-pills-component-program-tab">
               <div class="code-section p-0">
                 <app-code-display innerHtml="typescript" [item]="examples.program"></app-code-display>
               </div>
             </div>
-            <div class="tab-pane fade" id="v-pills-messages-program" role="tabpanel"
+            <!-- <div class="tab-pane fade" id="v-pills-messages-program" role="tabpanel"
               aria-labelledby="v-pills-messages-program-tab">
               <div class="code-section p-0">
                 <app-code-display innerHtml="html" [item]="examples.program"></app-code-display>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -58,18 +59,18 @@
       <div>
         <div class="code_eg">Output</div>
         <div class="ngx-output">
-          <p class="small ">
-            <a class="blue-link" [class.active-language]="activeLanguage  == 'en'" (click)="navigate('en')">English</a>
-            <a class="blue-link" [class.active-language]="activeLanguage  == 'fr'" (click)="navigate('fr')">French</a>
+          <p>
+            See the page title, which is being changed once you change the language. This works only adding the key of 'pageTitle'
+            in JSON file.
           </p>
         </div>
       </div>
     </div>
   </div>
   <div class="row col-style">
-    <div class="col-text-style"><span class="col-hash-text-brown" data-toggle="tooltip"
-        title="Want URL based translation? I am here to help you ✌. Just set the languageCode before your last route, as you can see in above route 😉"
-        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>By URL
+    <div class="col-text-style"><span class="col-hash-text-green" data-toggle="tooltip"
+        title="Hey! I am preloadingStrategy. Set me as true to apply preload Module Strategy ✌"
+        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>Resolve Content By Angular Preload Module Strategy
     </div>
   </div>
   <div class="row col-md-12">
@@ -81,11 +82,11 @@
               href="#v-pills-profile-array" role="tab" aria-controls="v-pills-profile-array"
               aria-selected="false">en.json</a> -->
             <a class="nav-link active" style="font-size: 11px;" id="v-pills-component-url-tab" data-toggle="pill"
-              href="#v-pills-component-url" role="tab" aria-controls="v-pills-component-url"
-              aria-selected="false">*.component.ts</a>
-            <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-url-tab" data-toggle="pill"
-              href="#v-pills-messages-url" role="tab" aria-controls="v-pills-messages-url"
-              aria-selected="false">*.component.html</a>
+              href="#v-pills-component-preload" role="tab" aria-controls="v-pills-component-preload"
+              aria-selected="false">app.lazy.routing.ts</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-preload-tab" data-toggle="pill"
+              href="#v-pills-messages-preload" role="tab" aria-controls="v-pills-messages-preload"
+              aria-selected="false">app.module.ts</a>
           </div>
         </div>
         <div class="col-md-10 remove-col-padding">
@@ -96,16 +97,16 @@
                 <app-code-display innerHtml="json" [item]="examples.array"></app-code-display>
               </div>
             </div> -->
-            <div class="tab-pane fade show active" id="v-pills-component-url" role="tabpanel"
-              aria-labelledby="v-pills-component-url-tab">
+            <div class="tab-pane fade show active" id="v-pills-component-preload" role="tabpanel"
+              aria-labelledby="v-pills-component-preload-tab">
               <div class="code-section p-0">
-                <app-code-display innerHtml="typescript" [item]="examples.url"></app-code-display>
+                <app-code-display innerHtml="typescript" [item]="examples.preload"></app-code-display>
               </div>
             </div>
-            <div class="tab-pane fade" id="v-pills-messages-url" role="tabpanel"
-              aria-labelledby="v-pills-messages-url-tab">
+            <div class="tab-pane fade" id="v-pills-messages-preload" role="tabpanel"
+              aria-labelledby="v-pills-messages-preload-tab">
               <div class="code-section p-0">
-                <app-code-display innerHtml="html" [item]="examples.url"></app-code-display>
+                <app-code-display innerHtml="ts" [item]="examples.preload"></app-code-display>
               </div>
             </div>
           </div>
@@ -117,9 +118,10 @@
       <div>
         <div class="code_eg">Output</div>
         <div class="ngx-output">
-          <p class="small ">
-            <a class="blue-link" [class.active-language]="global.languageCode == 'en'" (click)="changeLanguage('en')">English</a>
-            <a class="blue-link" [class.active-language]="global.languageCode == 'fr'" (click)="changeLanguage('fr')">French</a>
+          <p>
+            See the network request, you will see 'pre-load-module' which loads according to the pre loading startegy, Whenever this
+            activates it's load all respective component multilingual JSON, like if you check the request then you will see the
+            request of 'i18n/child-data/en.json'.
           </p>
           <br />
         </div>

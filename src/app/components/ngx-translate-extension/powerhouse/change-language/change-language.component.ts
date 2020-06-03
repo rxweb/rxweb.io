@@ -3,6 +3,8 @@ declare const Prism;
 declare const $;
 import $ from 'jquery';
 import { TranslateService } from '@rxweb/ngx-translate-extension';
+import { Router, ActivatedRoute } from '@angular/router';
+import { translate } from '@rxweb/translate';
 
 @Component({
   templateUrl: './change-language.component.html',
@@ -11,22 +13,47 @@ export class PowerhouseChangeLanguageComponent implements OnInit {
 
   rightSidebarLinks: any = [{ "id": "change-language", "title": "Change Language", "subLink": null }, { "id": "change-language", "title": "Change Language", "subLink": null }];
   outputHtml: string;
+  activeLanguage: string;
+
+  @translate({ translationName: 'lazy-load' }) global: any;
 
   examples: any = {
-    first: {
-      json: `{"greet": "Hello! How are you"}`,
-      html: `<label >{{ 'greet' | translate }}</label><br />`
+    program: {
+      typescript: `changeLanguage(languageCode: string) {
+    this.translate.use(languageCode);
+  }`,
+      html: `<p class="small ">
+  <a class="blue-link" [class.active-language]="activeLanguage  == 'en'" (click)="navigate('en')">English</a>
+  <a class="blue-link" [class.active-language]="activeLanguage  == 'fr'" (click)="navigate('fr')">French</a>
+</p>`
     },
-    translateParams: {
-      json: `{"notification":"Hey {{name}}"}`,
-      html: `<label>{{'notification' | translate:{'name':name} }}</label><br />`
+    url: {
+      typescript: `navigate(languageCode: string) {
+    this.router.navigate(["ngx-translate-extension", languageCode, "change-language"])
+  }`,
+      html: `<p class="small ">
+  <a class="blue-link" [class.active-language]="global.languageCode == 'en'" (click)="changeLanguage('en')">English</a>
+  <a class="blue-link" [class.active-language]="global.languageCode == 'fr'" (click)="changeLanguage('fr')">French</a>
+</p>`
     }
   }
 
-  constructor(public translate: TranslateService) {
+  changeLanguage(languageCode: string) {
+    this.translate.use(languageCode);
+  }
+
+  navigate(languageCode: string) {
+    this.router.navigate(["ngx-translate-extension", languageCode, "change-language"])
+  }
+
+  constructor(public translate: TranslateService, private router: Router, private activatedRoute: ActivatedRoute) {
     translate.addLangs(['en', 'es', 'fr']);
     translate.setDefaultLang('en');
     translate.use('en');
+    
+    activatedRoute.params.subscribe(t => {
+      this.activeLanguage = t["languageCode"];
+    })
   }
 
   ngOnInit() {
