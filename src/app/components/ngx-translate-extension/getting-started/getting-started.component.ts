@@ -2,6 +2,7 @@ import { OnInit, Component } from '@angular/core';
 import { ApplicationBroadcaster } from '@rx/core';
 import { Http } from '@angular/http';
 
+import { TranslateService } from '@rxweb/ngx-translate-extension';
 import { translate, RxTranslation } from '@rxweb/translate';
 declare const Prism;
 declare const $;
@@ -62,8 +63,12 @@ get day(){
   frcode: any = `{
   "title":"Traduire avec RxWeb"
 }`
-  constructor(private applicationBroadCaster: ApplicationBroadcaster, private http: Http, private rxTranslation: RxTranslation
-  ) {
+    constructor(private applicationBroadCaster: ApplicationBroadcaster, private http: Http, private rxTranslation: RxTranslation, public translate: TranslateService
+    ) {
+        translate.addLangs(['en', 'es', 'fr']);
+        translate.setDefaultLang('en');
+
+        translate.use('en');
     this.applicationBroadCaster.topSubscriber.subscribe(t => {
       this.titleData = t;
     })
