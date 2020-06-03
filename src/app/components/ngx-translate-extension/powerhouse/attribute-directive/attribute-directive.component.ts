@@ -2,6 +2,7 @@ import { OnInit, Component } from '@angular/core';
 declare const Prism;
 declare const $;
 import $ from 'jquery';
+import { TranslateService } from '@rxweb/ngx-translate-extension';
 // import 'bootstrap';
 
 @Component({
@@ -32,6 +33,14 @@ export class PowerhouseAttributeDirectiveComponent implements OnInit {
 
   json: any;
   html: any;
+  name: string = 'John';
+
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['en', 'es', 'fr']);
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+
   ngOnInit() {
     $('[data-toggle="tooltip"]').tooltip({
       template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-directive-inner md-inner"></div></div>'

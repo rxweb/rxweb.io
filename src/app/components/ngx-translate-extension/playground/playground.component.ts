@@ -10,10 +10,8 @@ export class PlayGroundComponent {
   rightSidebarLinks: any = [{ "id": "playground", "title": "Playground", "subLink": null }, { "id": "playground", "title": "Playground", "subLink": null }];
 
   constructor(public translate: TranslateService) {
-    debugger
     translate.addLangs(['en', 'es', 'fr']);
     translate.setDefaultLang('en');
-
     translate.use('en');
   }
   title = 'ngx-translate-demo';

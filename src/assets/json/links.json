@@ -2251,13 +2251,6 @@
                     ]
                 },
                 {
-                    "title": "Confidence",
-                    "uri": "/ngx-translate-extension/confidence",
-                    "isActive": false,
-                    "linkTitle": "confidence",
-                    "refUri": "confidence"
-                },
-                {
                     "title": "CLI",
                     "uri": "/ngx-translate-extension/rxweb-cli",
                     "isActive": false,
@@ -2270,13 +2263,6 @@
                     "isActive": false,
                     "linkTitle": "ngxtranslateextensionplayground",
                     "refUri": "ngxtranslateextensionplayground"
-                },
-                {
-                    "title": "Translate Playground",
-                    "uri": "/rxweb-translate/en/lazy-load",
-                    "isActive": false,
-                    "linkTitle": "lazy-load",
-                    "refUri": "lazy-load"
                 }
             ]
         }

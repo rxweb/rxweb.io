@@ -46,7 +46,7 @@
       <div>
         <div class="code_eg">Output</div>
         <div class="ngx-output">
-          <label class="badge badge-warning">{{'firstName' | translate}}</label><br />
+          <label class="badge badge-warning">{{ 'greet' | translate }}</label><br />
         </div>
       </div>
     </div>
@@ -97,7 +97,10 @@
       <div>
         <div class="code_eg">Output</div>
         <div class="ngx-output">
-          <label class="badge badge-warning">{{'notification' | translate:{greet:'Good Morning'} }}</label><br />
+          <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control">
+          <span class="margin-left badge badge-{{translate.currentLang}}">
+            {{'notification' | translate:{'name':name} }}
+          </span>
         </div>
       </div>
     </div>
