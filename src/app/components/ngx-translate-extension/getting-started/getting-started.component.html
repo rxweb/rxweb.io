@@ -1,2 +1,186 @@
-<app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
-<h2> Information coming soon </h2>
+<div id="wrapper" *ngIf="showComponent">
+    <div class="content">
+        <div class="title-bar">
+            <p>A simple and extensible library for Angular <span
+                    style="color: #0f96e4!important;">Internationalization(i18n)</span>
+                with
+                intuitive features.</p>
+        </div>
+        <div class="bg-white border-radius" style="margin-top:40px;">
+            <div class="row col-md-12">
+
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="pr-0">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+
+                                <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
+                                    href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                    aria-selected="false">JSON</a>
+                                <a class="nav-link active" style="font-size: 11px;" id="v-pills-home-tab"
+                                    data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                    aria-selected="true">Component</a>
+                                <a class="nav-link" style="font-size: 11px;" id="v-pills-messages-tab"
+                                    data-toggle="pill" href="#v-pills-messages" role="tab"
+                                    aria-controls="v-pills-messages" aria-selected="false">Html</a>
+
+                            </div>
+                        </div>
+                        <div class="pl-7">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab" style="width: 490px;">
+                                    <div class="code-section p-0">
+
+                                        <pre class="pre-code"><code [innerHtml]="mapTranslate">
+                      </code></pre>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab">
+                                    <div class="code-section p-0">
+
+                                        <pre class="pre-code"><code [innerHtml]="code"></code></pre>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                    aria-labelledby="v-pills-messages-tab">
+                                    <div class="code-section p-0">
+
+                                        <pre class="pre-code"><code [innerHtml]="htmlBinding"></code></pre>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-7">
+                    <div>
+
+                        <div class="pl-5" style="line-height: 34px!important;margin-top: -8px;"><span
+                                style="font-size: 17px;">{{global.greetMessage}}</span>&nbsp;
+                            <select>
+                                <option (click)="navigate('en')">English</option>
+                                <option (click)="navigate('fr')">French</option>
+                            </select>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row pt-3">
+            
+            <div class="col-lg-12">
+
+                <div class="hpanel">
+                    <div class="tab-content fade show">
+                        <div class="tab-pane panel-body validation-tab active">
+                            <div class="row page-section" id="examples" key="dynamic">
+                                <div class='col-lg-12'>
+                                    <ul class="nav nav-tabs">
+                                        <li [class.active]="mainTab=='installation'" (click)="mainTab='installation'">
+                                            <a>translate</a></li>
+                                        <li [class.active]="mainTab=='validator'" (click)="mainTab='validator'">
+                                            <a>ngx-translate-extension</a></li>
+
+                                    </ul>
+                                    <div class="tab-content p-4">
+                                        <div class='col-lg-12' *ngIf="mainTab=='installation'">
+                                            <div class="learn-video-list row pt-2" id="cli" >
+
+                                                <div class="col-lg-6 col-md-6 col-sm-12 learn-video-card-wrapper">
+                                                    <div class="learn-video-card" style="border:none!important;">
+                                                        <div class="learn-video-img">
+                                                            <video controls style="width: 715px!important;
+                                            height: 364px;
+                                                  
+                                              ">
+                                                                <source
+                                                                    src="assets/images/rxweb-cli-getting-started.mp4"
+                                                                    type="video/mp4">
+
+                                                            </video>
+                                                        </div>
+                                                        <h1 style="font-size:21px;font-weight:500!important">
+                                                            Installation</h1>
+                                                        <p>Installation of rxweb cli through npm for getting started
+                                                            with automated translation
+                                                            setup..</p>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 learn-video-card-wrapper">
+                                                    <div class="learn-video-card"
+                                                        style="border:none!important;width: 646px!important;">
+                                                        <div class="learn-video-img">
+                                                            <video controls
+                                                                style="width: 655px!important;    height: 364px;">
+                                                                <source src="assets/images/BIECJOSBDQPB9YDZ.mp4"
+                                                                    type="video/mp4">
+
+                                                            </video></div>
+                                                        <h1 style="font-size:21px;font-weight:500!important; ">Setup
+                                                            Translation in 58 sec.</h1>
+                                                        <p>This video tutorial gives a quick go through of rxweb
+                                                            translate during development
+                                                            setup and after build optimization.
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class='col-lg-12' *ngIf="mainTab=='validator'">
+                                            <div class="learn-video-list row pt-2" id="cli" >
+
+                                                <div class="col-lg-6 col-md-6 col-sm-12 learn-video-card-wrapper">
+                                                    <div class="learn-video-card" style="border:none!important;">
+                                                        <div class="learn-video-img">
+                                                            <video controls style="height: 509px;
+                                                            width: 604px!important;"
+                                                  
+                                              >
+                                                                <source
+                                                                    src="assets/images/ngx-translation-setup.mp4"
+                                                                    type="video/mp4">
+
+                                                            </video>
+                                                        </div>
+                                                        <h1 style="font-size:21px;font-weight:500!important">
+                                                            ngx-translate-extension</h1>
+                                                        <p>Installation and usage of ngx-translate-extension explained..</p>
+
+                                                    </div>
+                                                </div>
+                                              
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+
+
+    <app-top-bar></app-top-bar>
+</div>

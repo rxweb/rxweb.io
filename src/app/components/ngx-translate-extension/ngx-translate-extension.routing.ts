@@ -17,6 +17,7 @@ import { PowerhouseValidationMessageComponent } from './powerhouse/validation-me
 import { ConfidenceComponent } from './confidence/confidence.component';
 import { ChangeLanguageComponent } from './playground/change-language/change-language.component';
 import { PlayGroundComponent } from './playground/playground.component';
+import { CliComponent } from './cli/cli.component';
 
 const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'en/playground' },
@@ -48,6 +49,10 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   {
     path: 'comparison',
     loadChildren: 'src/app/components/ngx-translate-extension/comparison/comparison.module#ComparisonModule',
+  },
+  {
+    path:"rxweb-cli",
+    component:CliComponent
   },
   {
     path: 'confidence',

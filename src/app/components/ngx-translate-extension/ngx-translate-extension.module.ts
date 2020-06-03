@@ -45,12 +45,12 @@ import { StructuralDirectiveComponent } from "./playground/structural-directive/
 import { ValidationMessageComponent } from "./playground/validation-message/validation-message.component";
 import { RxTranslateModule } from "@rxweb/translate";
 import { CountryService } from "./playground/service/country.service";
+import { CliComponent } from "./cli/cli.component";
 @Injectable()
 export class TranslateHttpLoader implements TranslateLoader {
     constructor(private http: HttpClient) { }
 
     public getTranslation(lang: any): Observable<Object> {
-        debugger
         if (lang && lang.translationName && !lang.filePath)
             return this.http.get(`assets/i18n/${lang.translationName}/${lang.lang}.json`);
         else if (lang && lang.filePath)
@@ -65,6 +65,7 @@ export class TranslateHttpLoader implements TranslateLoader {
         CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
     ],
     declarations: [
+        CliComponent,
         NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, PowerhouseAttributeDirectiveComponent, PowerhousePipeComponent,
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,
