@@ -20,7 +20,7 @@ import { PlayGroundComponent } from './playground/playground.component';
 import { PowerhouseChangeLanguageComponent } from './powerhouse/change-language/change-language.component';
 import { PowerhouseOtherIntruitiveFeaturesComponent } from './powerhouse/other-intuitive-features/other-intuitive-features.component';
 import { CliComponent } from './cli/cli.component';
-import { CleanCodeComponent } from './clean-code/clean-code.component';
+
 
 const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'en/playground' },

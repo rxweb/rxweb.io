@@ -48,7 +48,7 @@ import { CountryService } from "./playground/service/country.service";
 import { CliComponent } from "./cli/cli.component";
 import { PowerhouseChangeLanguageComponent } from "./powerhouse/change-language/change-language.component";
 import { PowerhouseOtherIntruitiveFeaturesComponent } from "./powerhouse/other-intuitive-features/other-intuitive-features.component";
-import { CleanCodeComponent } from "./clean-code/clean-code.component";
+
 @Injectable()
 export class TranslateHttpLoader implements TranslateLoader {
     constructor(private http: HttpClient) { }
@@ -73,7 +73,7 @@ export class TranslateHttpLoader implements TranslateLoader {
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,
         PreLoadModuleComponent, StructuralDirectiveComponent, ValidationMessageComponent, PowerhouseChangeLanguageComponent, 
-        PowerhouseOtherIntruitiveFeaturesComponent, CleanCodeComponent
+        PowerhouseOtherIntruitiveFeaturesComponent
     ],
     providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CountryService],
     exports: [RouterModule]

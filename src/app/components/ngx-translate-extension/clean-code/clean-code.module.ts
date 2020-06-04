@@ -9,10 +9,12 @@ import { RxViewModule } from "@rx/view";
 import { ClipboardModule } from "ngx-clipboard";
 import { HighlightModule } from "ngx-highlightjs";
 import { NgModule } from "@angular/core";
-import { ComparingOnPushComponent } from "./on-push/on-push.component";
+
 import { TopBarSharedModule } from "../../shared/top-bar/top-bar-shared.module";
 import { CommonSharedModule } from "../../shared/common/common-shared.module";
 import { CLEAN_CODE_ROUTING } from "./clean-code.routing";
+import { ConfigurationComponent } from "./configuration/configuration.component";
+import { HomeComponent } from "./home/home.component";
 
 @NgModule({
   imports: [CLEAN_CODE_ROUTING, HttpClientModule,
@@ -21,7 +23,7 @@ import { CLEAN_CODE_ROUTING } from "./clean-code.routing";
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
   ],
   declarations: [
-    ComparingOnPushComponent
+    HomeComponent,ConfigurationComponent
   ],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]

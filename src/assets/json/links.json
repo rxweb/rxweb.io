@@ -1243,7 +1243,6 @@
             ],
             "isActive": false
         },
-       
         {
             "title": "Dynamic Forms",
             "childrens": [
@@ -2311,17 +2310,81 @@
                     "refUri": "ngxtranslateextensionplayground"
                 },
                 {
-                    "title": "Clean Code",
+                    "title": "Translate Clean Code Vs",
                     "isActive": false,
                     "linkTitle": "clean-code",
                     "refUri": "clean-code",
                     "childrens": [
                         {
-                            "title": "on-push",
-                            "uri": "/ngx-translate-extension/clean-code-comparison/on-push",
+                            "title": "Transloco",
                             "isActive": false,
-                            "linkTitle": "on-push",
-                            "refUri": "on-push"
+                            "linkTitle": "transloco",
+                            "refUri": "transloco",
+                            "childrens": [
+                                {
+                                    "title": "Configuration",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/configuration",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Home",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/clean-code-home",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Lazy",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/home",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Lazy",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/home",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Scope Sharing",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/home",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Inline Loaders",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/home",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Dynamic Translation",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/home",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Multiple Languages",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/home",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Transpilers",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/home",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                }
+                            ]
                         }
                     ]
                 }

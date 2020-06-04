@@ -1,0 +1,96 @@
+{
+  "configuration": [
+    {
+      "tabName": "app.module.ts",
+      "outputHtml": {
+        "transloco": ""
+      }
+    }
+  ],
+  "home": [
+    {
+      "tabName": "home.component.ts",
+      "outputHtml": {
+        "transloco": "export class OnPushComponent {\r\n\r\n  \r\n\r\n}",
+        "rxweb": "export class OnPushComponent {\r\n\r\n    @translate() global: { [key: string]: any };\r\n\r\n}",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngx-translate/core/blob/master/projects/ngx-translate/core/tests/missing-translation-handler.spec.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/client-side/angular/test/ngx-translate-extension/missing-translation-handler.spec.ts"
+      }
+    },
+    {
+      "tabName": "home.component.html",
+      "outputHtml": {
+        "transloco": "<ng-container *transloco=\"let t\">\r\n  <ul>\r\n    <li>{{ t('home') }}<\/li>\r\n    <li>{{ t('alert', { value: dynamic }) }}<\/li>\r\n    <li>{{ t('a.b.c') }}<\/li>\r\n  <\/ul>\r\n<\/ng-container>\r\n\r\n<ul>\r\n  <li><span transloco=\"home\"><\/span><\/li>\r\n  <li><span transloco=\"alert\" [translocoParams]=\"{ value: dynamic }\"><\/span><\/li>\r\n  <li><span transloco=\"a.b.c\"><\/span><\/li>\r\n  <li><span [transloco]=\"key\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n  <li>{{ 'home' | transloco }}<\/li>\r\n  <li>{{ 'alert' | transloco: { value: dynamic } }}<\/li>\r\n  <li>{{ 'a.b.c' | transloco }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n  <li *ngFor=\"let key of translateList\">{{ key | transloco }}<\/li>\r\n<\/ul>",
+        "rxweb": "  <ul>\r\n    <li>{{ global.home }}<\/li>\r\n    <li>{{ global.alert }}<\/li>\r\n    <li>{{ global.a.b.c }}<\/li>\r\n  <\/ul>\r\n\r\n<ul>\r\n  <li><b>Regular: <\/b><span>{{ global.home }}<\/span><\/li>\r\n  <li><span>{{ global.alert }}<\/span><\/li>\r\n  <li><span>{{ global.a.b.c }}<\/span><\/li>\r\n  <li><span [innerText]=\"global[key]\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n  <li>{{ global.home }}<\/li>\r\n  <li>{{ global.alert }}<\/li>\r\n  <li>{{ global.a.b.c }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n  <li *ngFor=\"let key of translateList\">{{ global.get(key) }}<\/li>\r\n<\/ul>",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngx-translate/core/blob/master/projects/ngx-translate/core/tests/missing-translation-handler.spec.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/client-side/angular/test/ngx-translate-extension/missing-translation-handler.spec.ts"
+      }
+    }
+  ],
+  "lazy": [
+    {
+      "tabName": "lazy.component.ts",
+      "outputHtml": ""
+    },
+    {
+      "tabName": "lazy.component.html",
+      "outputHtml": ""
+    }
+  ],
+  "scope-sharing": [
+    {
+      "tabName": "scope-sharing.component.ts",
+      "outputHtml": ""
+    },
+    {
+      "tabName": "scope-sharing.component.html",
+      "outputHtml": ""
+    }
+  ],
+  "inline-loaders": [
+    {
+      "tabName": "inline-loaders.component.ts",
+      "outputHtml": ""
+    },
+    {
+      "tabName": "inline-loaders.component.html",
+      "outputHtml": ""
+    }
+  ],
+  "dynamic-translation": [
+    {
+      "tabName": "dynamic-translation.component.ts",
+      "outputHtml": ""
+    },
+    {
+      "tabName": "dynamic-translation.component.html",
+      "outputHtml": ""
+    }
+  ],
+  "multi-langs": [
+    {
+      "tabName": "multi-langs.component.ts",
+      "outputHtml": ""
+    },
+    {
+      "tabName": "multi-langs.component.html",
+      "outputHtml": ""
+    }
+  ],
+  "transpilers": [
+    {
+      "tabName": "multi-langs.component.ts",
+      "outputHtml": ""
+    },
+    {
+      "tabName": "multi-langs.component.html",
+      "outputHtml": ""
+    }
+  ]
+}
