@@ -2312,10 +2312,18 @@
                 },
                 {
                     "title": "Clean Code",
-                    "uri": "/ngx-translate-extension/clean-code",
                     "isActive": false,
                     "linkTitle": "clean-code",
-                    "refUri": "clean-code"
+                    "refUri": "clean-code",
+                    "childrens": [
+                        {
+                            "title": "on-push",
+                            "uri": "/ngx-translate-extension/clean-code-comparison/on-push",
+                            "isActive": false,
+                            "linkTitle": "on-push",
+                            "refUri": "on-push"
+                        }
+                    ]
                 }
             ]
         }

@@ -68,8 +68,8 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
     component: PlayGroundComponent
   },
   {
-    path: 'clean-code',
-    component: CleanCodeComponent
+    path: 'clean-code-comparison',
+    loadChildren: 'src/app/components/ngx-translate-extension/clean-code/clean-code.module#CleanCodeModule',
   },
   {
     path: ':languageCode/pre-load-module', loadChildren: './playground/pre-load-module/pre-load-module.component#PreLoadModule'

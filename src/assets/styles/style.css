@@ -9433,6 +9433,16 @@ a#v-pills-component-first-tab, a#v-pills-html-first-tab {
     margin-left: 20px;
 }
 
+.d2h-del {
+    background-color: #fffafa;
+    border-color: #e9aeae;
+}
+
+.d2h-ins {
+    background-color: #f7fff7;
+    border-color: #b4e2b4;
+}
+
 /* tooltip */
 
 .tooltip-inner {
