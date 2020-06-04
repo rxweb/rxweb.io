@@ -5,64 +5,65 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms"
 import { USERS } from '../const/data';
 import { CountryService } from '../countries.service';
 @Component({
-    templateUrl: './lazy-load.component.html',
+  templateUrl: './lazy-load.component.html',
 })
 export class LazyLoadComponent implements OnInit {
-    @translate({ translationName: 'lazy-load' }) lazyLoadContent: {[key:string]:any};
+  @translate() lazyLoad: { [key: string]: any };
 
-   
 
-    activeLanguage: string;
-    formGroup: FormGroup;
-    constructor(private rxTranslation: RxTranslation, private router: Router, private activatedRoute: ActivatedRoute,private formBuilder:FormBuilder) {
-        activatedRoute.params.subscribe(t => {
-            this.activeLanguage = t["languageCode"];
-        })
-    }
 
-    ngOnInit() {
-        this.formGroup = this.formBuilder.group({
-            fullName: ['', Validators.required],
-            designation: ['Software', Validators.maxLength(5)]
-        })
-    }
-
-    changeLanguage(languageCode: string) {
-        this.rxTranslation.change(languageCode);
-    }
-
-    @translate() global: any;
-    @asyncTranslate({
-        serviceModel: CountryService,
-        serviceMethod: CountryService.prototype.get
+  activeLanguage: string;
+  formGroup: FormGroup;
+  constructor(private rxTranslation: RxTranslation, private router: Router, private activatedRoute: ActivatedRoute, private formBuilder: FormBuilder) {
+    activatedRoute.params.subscribe(t => {
+      this.activeLanguage = t["languageCode"];
+      this.activeLanguage = t["languageCode"];
     })
-    countries: any;
-    name: string = "John";
-    meridiem: string = "am";
-    users: any[] = USERS;
-    keys: string[] = ["keyOne", "nested.keyOne"];
+  }
 
-    changeName() {
-        this.name = this.name == "John" ? "Mike" : "John";
-    }
+  ngOnInit() {
+    this.formGroup = this.formBuilder.group({
+      fullName: ['', Validators.required],
+      designation: ['Software', Validators.maxLength(5)]
+    })
+  }
 
-    changeMeridiem() {
-        this.meridiem = this.meridiem == "am" ? "pm" : "am";
-    }
+  changeLanguage(languageCode: string) {
+    this.rxTranslation.change(languageCode);
+  }
 
-    message: string;
+  @translate() global: any;
+  @asyncTranslate({
+    serviceModel: CountryService,
+    serviceMethod: CountryService.prototype.get
+  })
+  countries: any;
+  name: string = "John";
+  meridiem: string = "am";
+  users: any[] = USERS;
+  keys: string[] = ["keyOne", "nested.keyOne"];
 
-    selectUser(user) {
-        this.message = this.rxTranslation.translate(
-            this.global.selectedRecord, user
-        );
-    }
+  changeName() {
+    this.name = this.name == "John" ? "Mike" : "John";
+  }
 
-    navigate(languageCode: string) {
-        this.router.navigate(["/rxweb-translate/" + languageCode + "/lazy-load"])
-    }
+  changeMeridiem() {
+    this.meridiem = this.meridiem == "am" ? "pm" : "am";
+  }
 
-    get badgeClass() {
-        return this.global && this.global.languageCode && this.global.languageCode == "en" ? "badge-warning" : "badge-success";
-    }
+  message: string;
+
+  selectUser(user) {
+    this.message = this.rxTranslation.translate(
+      this.global.selectedRecord, user
+    );
+  }
+
+  navigate(languageCode: string) {
+    this.router.navigate(["/rxweb-translate/" + languageCode + "/lazy-load"])
+  }
+
+  get badgeClass() {
+    return this.global && this.global.languageCode && this.global.languageCode == "en" ? "badge-warning" : "badge-success";
+  }
 }

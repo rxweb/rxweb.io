@@ -2309,6 +2309,13 @@
                     "isActive": false,
                     "linkTitle": "ngxtranslateextensionplayground",
                     "refUri": "ngxtranslateextensionplayground"
+                },
+                {
+                    "title": "Clean Code",
+                    "uri": "/ngx-translate-extension/clean-code",
+                    "isActive": false,
+                    "linkTitle": "clean-code",
+                    "refUri": "clean-code"
                 }
             ]
         }
