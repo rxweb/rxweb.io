@@ -163,10 +163,10 @@
 		</nav>
 
 		<ul class="navbar-nav ml-lg-auto flex-row breadcrumb_right_action">
-			<li *ngIf="mainType != 'getting-started'&& mainType != 'hidden-gems' && mainType !='whats-new' && mainType !='whats-next' && mainType !='changelog'"
+			<li *ngIf="mainType != 'getting-started'&& mainType != 'hidden-gems' && mainType !='whats-new' && mainType !='ngx-translate-extension' && mainType !='whats-next' && mainType !='changelog'"
 				class="mr-4"><a target="_blank" href="{{gitEditUrl}}" class="nav-link py-1"><i class="fa fa-pencil mr-2"
 						aria-hidden="true"></i>Edit</a></li>
-			<li *ngIf="mainType != 'rxweb-translate' && mainType != 'community'  && mainType !='changelog' && mainType != 'hidden-gems'  && mainType != 'rx-web-core' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'"
+			<li *ngIf="mainType != 'rxweb-translate' && mainType != 'community' && mainType !='ngx-translate-extension'  && mainType !='changelog' && mainType != 'hidden-gems'  && mainType != 'rx-web-core' && mainType != 'getting-started' &&  mainType != 'whats-new' && mainType != 'whats-next' && mainType != 'api'"
 				class="mr-4 d-none d-md-inline-block"><a class="nav-link py-1" target="_blank" (click)="routeExample()">
 					<i [class.fa-toggle-off]="toogleOpen" [class.fa-toggle-on]="!toogleOpen" class="fa mr-2"
 						data-toggle="tooltip" title="Examples Only" aria-hidden="true"></i>Examples Only</a></li>
