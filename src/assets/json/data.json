@@ -221,7 +221,7 @@
       "tabName": "multi-langs.module.ts",
       "outputHtml": {
         "transloco": "@NgModule({\r\n  declarations: [MultilangsComponent, ProviderLangComponent],\r\n  imports: [\r\n    CommonModule,\r\n    TranslocoModule,\r\n    MultilangsRoutingModule\r\n  ]\r\n})\r\nexport class MultilangsModule {\r\n}\r\n",
-        "rxweb": "@NgModule({\r\n    declarations: [MultilangsComponent, ProviderLangComponent],\r\n    imports: [\r\n        CommonModule,\r\n        RxTranslateModule,\r\n        MultilangsRoutingModule\r\n    ]\r\n})\r\nexport class MultilangsModule {\r\n}\r\n",
+        "rxweb": "@NgModule({\r\n  declarations: [MultilangsComponent, ProviderLangComponent],\r\n  imports: [\r\n    CommonModule,\r\n    RxTranslateModule,\r\n    MultilangsRoutingModule\r\n  ]\r\n})\r\nexport class MultilangsModule {\r\n}",
         "diff": ""
       },
       "githubLink": {
@@ -259,7 +259,7 @@
       "tabName": "transpilers.component.ts",
       "outputHtml": {
         "transloco": "export class TranspilersComponent {\r\n  dynamic = '\uD83E\uDD84';\r\n  key = 'home';\r\n  userGender = 'female';\r\n\r\n  changeParam() {\r\n    this.dynamic = this.dynamic === '\uD83E\uDD84' ? '\uD83E\uDD84\uD83E\uDD84\uD83E\uDD84' : '\uD83E\uDD84';\r\n  }\r\n}\r\n",
-        "rxweb": "export class TranspilersComponent {\r\n  value = '\uD83E\uDD84';\r\n    key = 'home';\r\n   gender = 'female';\r\n    @translate({ translationName: 'transpilers\/messageformat' }) transpilers: { [key: string]: any };\r\n    changeParam() {\r\n        this.value = this.value === '\uD83E\uDD84' ? '\uD83E\uDD84\uD83E\uDD84\uD83E\uDD84' : '\uD83E\uDD84';\r\n    }\r\n}",
+        "rxweb": "export class TranspilersComponent {\r\n  value = '\uD83E\uDD84';\r\n  key = 'home';\r\n  gender = 'female';\r\n  @translate({ translationName: 'transpilers\/messageformat' }) transpilers: { [key: string]: any };\r\n  changeParam() {\r\n    this.value = this.value === '\uD83E\uDD84' ? '\uD83E\uDD84\uD83E\uDD84\uD83E\uDD84' : '\uD83E\uDD84';\r\n  }\r\n}",
         "diff": ""
       },
       "githubLink": {
@@ -271,7 +271,7 @@
       "tabName": "transpilers.component.html",
       "outputHtml": {
         "transloco": "<h2>MessageFormat Transpiler<\/h2>\r\n<hr \/>\r\n<h4>Structural Directive<\/h4>\r\n<ng-container *transloco=\"let t\">\r\n  <ul>\r\n    <li><b>Regular: <\/b>{{ t('mf.home') }}<\/li>\r\n    <li><b>With params: <\/b>{{ t('mf.params', { value: dynamic }) }}<\/li>\r\n    <li>\r\n      <b>With translation reuse: <\/b> {{ t('mf.a.b.c') }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat: <\/b>{{ t('mf.messageFormat', { gender: 'male' }) }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with dynamic value: <\/b>{{ t('mf.messageFormat', { gender: userGender }) }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with transloco standard params: <\/b\r\n      >{{ t('mf.messageFormatWithParams', { value: 'transloco params', gender: '' }) }}\r\n    <\/li>\r\n  <\/ul>\r\n<\/ng-container>",
-        "rxweb": "<h2>MessageFormat Transpiler<\/h2>\r\n<hr \/>\r\n<h4>Structural Directive<\/h4>\r\n<ul>\r\n  <li><b>Regular: <\/b>{{ transpilers.home }}<\/li>\r\n  <li><b>With params: <\/b>{{ transpilers.params }}<\/li>\r\n  <li>\r\n    <b>With translation reuse: <\/b> {{ transpilers.a.b.c }}\r\n  <\/li>\r\n  <li>\r\n    <b>Using messageformat: <\/b>{{ transpilers.json.messageFormat | rxTranslate:{ gender: 'male' } }}\r\n  <\/li>\r\n  <li>\r\n    <b>Using messageformat with dynamic value: <\/b>{{ transpilers.messageFormat }}\r\n  <\/li>\r\n  <li>\r\n    <b>Using messageformat with transloco standard params: <\/b>{{ transpilers.json.messageFormatWithParams | rxTranslate:{ value: 'transloco params', gender: '' } }}\r\n  <\/li>\r\n<\/ul>",
+        "rxweb": "<h2>MessageFormat Transpiler<\/h2>\r\n<hr \/>\r\n<h4>Structural Directive<\/h4>\r\n\r\n  <ul>\r\n    <li><b>Regular: <\/b>{{ transpilers.home }}<\/li>\r\n    <li><b>With params: <\/b>{{ transpilers.params }}<\/li>\r\n    <li>\r\n      <b>With translation reuse: <\/b> {{ transpilers.a.b.c }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat: <\/b>{{ transpilers.json.messageFormat | rxTranslate:{ gender: 'male' } }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with dynamic value: <\/b>{{ transpilers.messageFormat }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with transloco standard params: <\/b>{{ transpilers.json.messageFormatWithParams | rxTranslate:{ value: 'transloco params', gender: '' } }}\r\n    <\/li>\r\n  <\/ul>\r\n",
         "diff": ""
       },
       "githubLink": {
@@ -283,7 +283,7 @@
       "tabName": "transpilers.module.ts",
       "outputHtml": {
         "transloco": "@NgModule({\r\n  declarations: [TranspilersComponent],\r\n  imports: [CommonModule, RouterModule.forChild(routes), TranslocoModule],\r\n  providers: [\r\n    {\r\n      provide: TRANSLOCO_SCOPE,\r\n      useValue: {\r\n        scope: 'transpilers\/messageformat',\r\n        alias: 'mf'\r\n      }\r\n    }\r\n  ]\r\n})\r\nexport class TranspilersModule {}\r\n",
-        "rxweb": "@NgModule({\r\n    declarations: [TranspilersComponent],\r\n    imports: [CommonModule, RouterModule.forChild(routes), RxTranslateModule],\r\n})\r\nexport class TranspilersModule {}",
+        "rxweb": "@NgModule({\r\n  declarations: [TranspilersComponent],\r\n  imports: [CommonModule, RouterModule.forChild(routes), RxTranslateModule],\r\n})\r\nexport class TranspilersModule { }",
         "diff": ""
       },
       "githubLink": {
