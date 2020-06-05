@@ -19,7 +19,7 @@ export class LazyComponent implements OnInit {
     this.http.get("assets/json/data.json").subscribe(response => {
       this.tabArray = response['lazy'];
       console.log(this.tabArray)
-      this.activeTab = this.tabArray[0].tabName;
+      this.activeTab = this.tabArray[1].tabName;
       if (this.tabArray.length > 0) {
         this.tabArray.forEach(element => {
           this.init(element);
