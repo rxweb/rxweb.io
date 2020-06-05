@@ -9443,6 +9443,10 @@ a#v-pills-component-first-tab, a#v-pills-html-first-tab {
     border-color: #b4e2b4;
 }
 
+.clean-comparison-right {
+    padding-left: 670px!important;
+}
+
 /* tooltip */
 
 .tooltip-inner {
