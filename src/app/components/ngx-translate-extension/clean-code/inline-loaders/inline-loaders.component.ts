@@ -4,11 +4,11 @@ import * as Diff from 'diff'
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  templateUrl: './home.component.html',
+  templateUrl: './inline-loaders.component.html',
 })
-export class HomeComponent implements OnInit {
+export class InlineLoadersComponent implements OnInit {
 
-  rightSidebarLinks: any = [{ "id": "on-push", "title": "on-push", "subLink": null }, { "id": "on-push", "title": "on-push", "subLink": null }];
+  rightSidebarLinks: any = [{ "id": "inline-loaders", "title": "Inline Loaders", "subLink": null }, { "id": "inline-loaders", "title": "Inline Loaders", "subLink": null }];
   outputHtml: string;
 
   tabArray: any[] = [];
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) {
 
     this.http.get("assets/json/data.json").subscribe(response => {
-      this.tabArray = response['home'];
+      this.tabArray = response['inline-loaders'];
       console.log(this.tabArray)
       this.activeTab = this.tabArray[0].tabName;
       if (this.tabArray.length > 0) {
