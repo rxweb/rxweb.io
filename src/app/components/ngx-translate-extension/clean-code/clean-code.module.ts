@@ -15,6 +15,12 @@ import { CommonSharedModule } from "../../shared/common/common-shared.module";
 import { CLEAN_CODE_ROUTING } from "./clean-code.routing";
 import { ConfigurationComponent } from "./configuration/configuration.component";
 import { HomeComponent } from "./home/home.component";
+import { ScopeSharingComponent } from "./scope-sharing/scope-sharing.component";
+import { MultiLangsComponent } from "./multi-langs/multi-langs.component";
+import { TranspilersComponent } from "./transpilers/transpilers.component";
+import { LazyComponent } from "./lazy/lazy.component";
+import { InlineLoadersComponent } from "./inline-loaders/inline-loaders.component";
+import { DynamicTranslationComponent } from "./dynamic-translation/dynamic-translation.component";
 
 @NgModule({
   imports: [CLEAN_CODE_ROUTING, HttpClientModule,
@@ -23,7 +29,7 @@ import { HomeComponent } from "./home/home.component";
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
   ],
   declarations: [
-    HomeComponent,ConfigurationComponent
+    HomeComponent,ConfigurationComponent,ScopeSharingComponent,MultiLangsComponent,TranspilersComponent,LazyComponent, InlineLoadersComponent, DynamicTranslationComponent
   ],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]

@@ -4,9 +4,9 @@ import * as Diff from 'diff'
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  templateUrl: './home.component.html',
+  templateUrl: './multi-langs.component.html',
 })
-export class HomeComponent implements OnInit {
+export class MultiLangsComponent implements OnInit {
 
   rightSidebarLinks: any = [{ "id": "on-push", "title": "on-push", "subLink": null }, { "id": "on-push", "title": "on-push", "subLink": null }];
   outputHtml: string;
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) {
 
     this.http.get("assets/json/data.json").subscribe(response => {
-      this.tabArray = response['home'];
+      this.tabArray = response['multi-langs'];
       console.log(this.tabArray)
       this.activeTab = this.tabArray[1].tabName;
       if (this.tabArray.length > 0) {

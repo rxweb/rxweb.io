@@ -3,94 +3,293 @@
     {
       "tabName": "app.module.ts",
       "outputHtml": {
-        "transloco": ""
+        "transloco": "@Injectable({ providedIn: 'root' })\r\nexport class HttpLoader implements TranslocoLoader {\r\n  constructor(private http: HttpClient) {}\r\n\r\n  getTranslation(langPath: string, { scope }) {\r\n    return this.http.get<Translation>(`\/assets\/i18n\/${langPath}.json`);\r\n  }\r\n}\r\n\r\nexport const httpLoader = { provide: TRANSLOCO_LOADER, useClass: HttpLoader };\r\n\r\n@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [\r\n    TranslocoModule,\r\n    TranslocoMessageFormatModule.init(),\r\n    TranslocoLocaleModule.init({\r\n      langToLocaleMapping: {\r\n        en: 'en-US',\r\n        es: 'es-ES'\r\n      }\r\n    })\r\n     TranslocoPreloadLangsModule.preload(['es', 'todos-page'])\r\n     TranslocoPersistLangModule.init({\r\n     getLangFn,\r\n      storage: {\r\n      provide: TRANSLOCO_PERSIST_LANG_STORAGE,\r\n      useValue: localStorage\r\n      }\r\n    }),\r\n     TranslocoPersistTranslationsModule.init({\r\n      loader: HttpLoader,\r\n       storage: {\r\n        provide: PERSIST_TRANSLATIONS_STORAGE,\r\n        useValue: localStorage\r\n    }\r\n   })\r\n  ],\r\n  providers: [\r\n    httpLoader,\r\n    {\r\n      provide: TRANSLOCO_CONFIG,\r\n      useValue: translocoConfig({\r\n        prodMode: environment.production,\r\n        availableLangs: [{ id: 'en', label: 'English' }, { id: 'es', label: 'Spanish' }],\r\n        reRenderOnLangChange: true,\r\n        fallbackLang: 'es',\r\n        defaultLang: 'en',\r\n        missingHandler: {\r\n          useFallbackTranslation: false\r\n        }\r\n      })\r\n    }\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule {}",
+        "rxweb": "@NgModule({\r\n  declarations: [AppComponent],\r\n  imports: [\r\n      RxTranslateModule.forRoot({\r\n          cacheLanguageWiseObject: true,\r\n          globalFilePath: \"assets\/i18n\/{{language-code}}.json\",\r\n          filePath: \"assets\/i18n\/{{translation-name}}\/{{language-code}}.json\",\r\n      }),\r\n    HttpClientModule,\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule {}",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/app.module.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/app.module.ts"
       }
     }
   ],
   "home": [
     {
-      "tabName": "home.component.ts",
-      "outputHtml": {
-        "transloco": "export class OnPushComponent {\r\n\r\n  \r\n\r\n}",
-        "rxweb": "export class OnPushComponent {\r\n\r\n    @translate() global: { [key: string]: any };\r\n\r\n}",
-        "diff": ""
-      },
-      "githubLink": {
-        "transloco": "https://github.com/ngx-translate/core/blob/master/projects/ngx-translate/core/tests/missing-translation-handler.spec.ts",
-        "rxweb": "https://github.com/rxweb/rxweb/blob/master/client-side/angular/test/ngx-translate-extension/missing-translation-handler.spec.ts"
-      }
+    "tabName": "on-push.component.html",
+    "outputHtml": {
+    "transloco": "<ng-container transloco=\"let t\">\r\n <ul>\r\n <li>{{ t('home') }}<\/li>\r\n <li>{{ t('alert', { value: dynamic }) }}<\/li>\r\n <li>{{ t('a.b.c') }}<\/li>\r\n <\/ul>\r\n<\/ng-container>\r\n\r\n<ul>\r\n <li><span transloco=\"home\"><\/span><\/li>\r\n <li><span transloco=\"alert\" [translocoParams]=\"{ value: dynamic }\"><\/span><\/li>\r\n <li><span transloco=\"a.b.c\"><\/span><\/li>\r\n <li><span [transloco]=\"key\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li>{{ 'home' | transloco }}<\/li>\r\n <li>{{ 'alert' | transloco: { value: dynamic } }}<\/li>\r\n <li>{{ 'a.b.c' | transloco }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li ngFor=\"let key of translateList\">{{ key | transloco }}<\/li>\r\n<\/ul>",
+    "rxweb": " <ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n <\/ul>\r\n\r\n<ul>\r\n <li><b>Regular: <\/b><span>{{ global.home }}<\/span><\/li>\r\n <li><span>{{ global.alert }}<\/span><\/li>\r\n <li><span>{{ global.a.b.c }}<\/span><\/li>\r\n <li><span [innerText]=\"global[key]\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li *ngFor=\"let key of translateList\">{{ global.get(key) }}<\/li>\r\n<\/ul>",
+    "diff": ""
     },
-    {
-      "tabName": "home.component.html",
-      "outputHtml": {
-        "transloco": "<ng-container *transloco=\"let t\">\r\n  <ul>\r\n    <li>{{ t('home') }}<\/li>\r\n    <li>{{ t('alert', { value: dynamic }) }}<\/li>\r\n    <li>{{ t('a.b.c') }}<\/li>\r\n  <\/ul>\r\n<\/ng-container>\r\n\r\n<ul>\r\n  <li><span transloco=\"home\"><\/span><\/li>\r\n  <li><span transloco=\"alert\" [translocoParams]=\"{ value: dynamic }\"><\/span><\/li>\r\n  <li><span transloco=\"a.b.c\"><\/span><\/li>\r\n  <li><span [transloco]=\"key\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n  <li>{{ 'home' | transloco }}<\/li>\r\n  <li>{{ 'alert' | transloco: { value: dynamic } }}<\/li>\r\n  <li>{{ 'a.b.c' | transloco }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n  <li *ngFor=\"let key of translateList\">{{ key | transloco }}<\/li>\r\n<\/ul>",
-        "rxweb": "  <ul>\r\n    <li>{{ global.home }}<\/li>\r\n    <li>{{ global.alert }}<\/li>\r\n    <li>{{ global.a.b.c }}<\/li>\r\n  <\/ul>\r\n\r\n<ul>\r\n  <li><b>Regular: <\/b><span>{{ global.home }}<\/span><\/li>\r\n  <li><span>{{ global.alert }}<\/span><\/li>\r\n  <li><span>{{ global.a.b.c }}<\/span><\/li>\r\n  <li><span [innerText]=\"global[key]\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n  <li>{{ global.home }}<\/li>\r\n  <li>{{ global.alert }}<\/li>\r\n  <li>{{ global.a.b.c }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n  <li *ngFor=\"let key of translateList\">{{ global.get(key) }}<\/li>\r\n<\/ul>",
-        "diff": ""
-      },
-      "githubLink": {
-        "transloco": "https://github.com/ngx-translate/core/blob/master/projects/ngx-translate/core/tests/missing-translation-handler.spec.ts",
-        "rxweb": "https://github.com/rxweb/rxweb/blob/master/client-side/angular/test/ngx-translate-extension/missing-translation-handler.spec.ts"
-      }
+    "githubLink": {
+    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/on-push/on-push.component.html",
+    "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/on-push/on-push.component.html"
     }
-  ],
-  "lazy": [
-    {
-      "tabName": "lazy.component.ts",
-      "outputHtml": ""
     },
     {
+    "tabName": "on-push.component.ts",
+    "outputHtml": {
+    "transloco": "export class OnPushComponent {\r\n\r\n \r\n\r\n}",
+    "rxweb": "export class OnPushComponent {\r\n\r\n @translate() global: { [key: string]: any };\r\n\r\n}",
+    "diff": ""
+    },
+    "githubLink": {
+    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/on-push/on-push.component.ts",
+    "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/on-push/on-push.component.ts"
+    }
+    }
+    ],
+    "lazy": [
+      {
+      "tabName": "lazy.module.ts",
+      "outputHtml": {
+      "transloco": "@NgModule({\r\n declarations: [LazyComponent],\r\n providers: [\r\n { provide: TRANSLOCO_SCOPE, useValue: 'admin-page' },\r\n {\r\n provide: TRANSLOCO_LOADING_TEMPLATE,\r\n useValue: `<span id=\"default-loading-template\">Loading template...<\/span>`\r\n }\r\n ],\r\n imports: [CommonModule, RouterModule.forChild(routes), TranslocoModule]\r\n})\r\nexport class LazyModule {\r\n}",
+      "rxweb": "@NgModule({\r\n declarations: [LazyComponent],\r\n imports: [CommonModule, RouterModule.forChild(routes), RxTranslateModule]\r\n})\r\nexport class LazyModule {\r\n}",
+      "diff": ""
+      },
+      "githubLink": {
+      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/lazy/lazy.module.ts",
+      "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/lazy/lazy.module.ts"
+      }
+      },
+      {
       "tabName": "lazy.component.html",
-      "outputHtml": ""
-    }
-  ],
+      "outputHtml": {
+      "transloco": "<h4>Scope is set to `admin-page` in module's providers<\/h4>\r\n<ng-container transloco=\"let t\">\r\n <p>{{ t('adminPage.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h4>Read from the default scope `admin-page`<\/h4>\r\n<ng-container transloco=\"let t; read: 'adminPage'\">\r\n <p>{{ t('read') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h4>Scope is set to `lazy-page` inline in the directive<\/h4>\r\n<ng-container *transloco=\"let t; scope: 'lazy-page'; loadingTpl: loading\">\r\n <p>{{ t('lazyPage.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-template #loading>\r\n <p>Loading...<\/p>\r\n<\/ng-template>\r\n",
+      "rxweb": "<h4>Scope is set to `admin-page` in module's providers<\/h4>\r\n <p>{{ adminPage.title }}<\/p>\r\n\r\n<h4>Read from the default scope `admin-page`<\/h4>\r\n <p>{{ adminPage.read }}<\/p>\r\n\r\n<h4>Scope is set to `lazy-page` inline in the directive<\/h4>\r\n <p>{{ lazyPage.title }}<\/p>\r\n",
+      "diff": ""
+      },
+      "githubLink": {
+      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/lazy/lazy.component.html",
+      "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/lazy/lazy.component.html"
+      }
+      },
+      {
+      "tabName": "lazy.component.ts",
+      "outputHtml": {
+      "transloco": "export class LazyComponent implements OnInit {\r\n\r\n\r\n\r\n}",
+      "rxweb": "export class LazyComponent implements OnInit {\r\n\r\n @translate({ translationName: 'admin-page' }) adminPage: { [key: string]: any };\r\n\r\n @translate({ translationName: 'lazy-page' }) lazyPage: { [key: string]: any };\r\n\r\n}",
+      "diff": ""
+      },
+      "githubLink": {
+      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/lazy/lazy.component.ts",
+      "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/lazy/lazy.component.ts"
+      }
+      }
+      ],
   "scope-sharing": [
     {
       "tabName": "scope-sharing.component.ts",
-      "outputHtml": ""
+      "outputHtml": {
+        "transloco": "export class ScopeSharingComponent {\r\n\r\n}\r\n",
+        "rxweb": "export class ScopeSharingComponent {\r\n\r\n    @translate({ translationName: 'todos-page' }) todos: { [key: string]: any };\r\n\r\n    @translate({ translationName: 'lazy-page' }) lazyPage: { [key: string]: any };\r\n\r\n    @translate() global: { [key: string]: any };\r\n}\r\n",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/scope-sharing/scope-sharing.component.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/scope-sharing/scope-sharing.component.ts"
+      }
     },
     {
       "tabName": "scope-sharing.component.html",
-      "outputHtml": ""
+      "outputHtml": {
+        "transloco": "<h5>Structural<\/h5>\r\n<ng-container *transloco=\"let t\">\r\n  <p>{{ t('todos.title') }}<\/p>\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h5>Directive<\/h5>\r\n<h6>Scope is set to `lazy-page` inline<\/h6>\r\n<p transloco=\"lazyPage.title\" translocoScope=\"lazy-page\"><\/p>\r\n<p transloco=\"b\"><\/p>\r\n\r\n<h5>Pipe<\/h5>\r\n<p>{{ 'todos.title' | transloco }}<\/p>\r\n<p>{{ 'home' | transloco }}<\/p>\r\n\r\n<h5>Use read to get translations of a nested property<\/h5>\r\n\r\n<ng-container *transloco=\"let t; read: 'nested'\">\r\n  <h5>{{ t('title') }}<\/h5>\r\n  <p>{{ t('desc') }}<\/p>\r\n<\/ng-container>",
+        "rxweb": "<h5>Structural<\/h5>\r\n<p>{{ todos.title }}<\/p>\r\n<p>{{ global.home }}<\/p>\r\n\r\n<h5>Directive<\/h5>\r\n<h6>Scope is set to `lazy-page` inline<\/h6>\r\n<p>{{ lazyPage.title }}<\/p>\r\n<p>{{ global.b }}<\/p>\r\n\r\n<h5>Pipe<\/h5>\r\n<p>{{ todos.title }}<\/p>\r\n<p>{{ global.home }}<\/p>\r\n\r\n<h5>Use read to get translations of a nested property<\/h5>\r\n\r\n<h5>{{ global.nested.title }}<\/h5>\r\n<p>{{ global.nested.desc }}<\/p>\r\n",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/scope-sharing/scope-sharing.component.html",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/scope-sharing/scope-sharing.component.html"
+      }
+    },
+    {
+      "tabName": "scope-sharing.module.ts",
+      "outputHtml": {
+        "transloco": "@NgModule({\r\n  declarations: [ScopeSharingComponent],\r\n  providers: [\r\n    {\r\n      provide: TRANSLOCO_SCOPE,\r\n      useValue: {\r\n        scope: 'todos-page',\r\n        alias: 'todos'\r\n      }\r\n    },\r\n    {\r\n      provide: TRANSLOCO_LOADING_TEMPLATE,\r\n      useValue: `<span id=\"default-loading-template\">Loading template...<\/span>`\r\n    }\r\n  ],\r\n  imports: [CommonModule, RouterModule.forChild(routes), TranslocoModule]\r\n})\r\nexport class ScopeSharingModule {}",
+        "rxweb": "@NgModule({\r\n  declarations: [ScopeSharingComponent],\r\n  imports: [CommonModule, RouterModule.forChild(routes), RxTranslateModule]\r\n})\r\nexport class ScopeSharingModule {}\r\n",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/scope-sharing/scope-sharing.module.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/scope-sharing/scope-sharing.module.ts"
+      }
     }
   ],
   "inline-loaders": [
     {
-      "tabName": "inline-loaders.component.ts",
-      "outputHtml": ""
+    "tabName": "inline-loaders.module.ts",
+    "outputHtml": {
+    "transloco": "const loader = ['en', 'es'].reduce((acc: any, lang: string) => {\r\n acc[lang] = () => import(`.\/i18n\/${lang}.json`);\r\n return acc;\r\n}, {});\r\n\r\n@NgModule({\r\n declarations: [InlineComponent],\r\n providers: [\r\n {\r\n provide: TRANSLOCO_SCOPE,\r\n useValue: {\r\n scope: 'inline',\r\n loader\r\n }\r\n }\r\n ],\r\n imports: [InlineLoadersRoutingModule, TranslocoModule]\r\n})\r\nexport class InlineLoadersModule { }",
+    "rxweb": "@NgModule({\r\n declarations: [InlineComponent],\r\n imports: [InlineLoadersRoutingModule, RxTranslateModule]\r\n})\r\nexport class InlineLoadersModule { }",
+    "diff": ""
     },
-    {
-      "tabName": "inline-loaders.component.html",
-      "outputHtml": ""
+    "githubLink": {
+    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/inline-loaders/inline-loaders.module.ts",
+    "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/inline-loaders/inline-loaders.module.ts"
     }
-  ],
-  "dynamic-translation": [
-    {
-      "tabName": "dynamic-translation.component.ts",
-      "outputHtml": ""
     },
     {
+    "tabName": "inline-loaders.component.html",
+    "outputHtml": {
+    "transloco": "<ng-container *transloco=\"let t\">\r\n {{ t('inline.title') }}\r\n <p>\r\n {{ t('alert') }}\r\n <\/p>\r\n<\/ng-container>\r\n\r\n<p>{{ 'inline.title' | transloco }}<\/p>\r\n",
+    "rxweb": " {{ inline.title }}\r\n <p>\r\n {{ global.alert }}\r\n <\/p>\r\n\r\n<p>{{ inline.title }}<\/p>",
+    "diff": ""
+    },
+    "githubLink": {
+    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/inline-loaders/inline/inline.component.html",
+    "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/inline-loaders/inline/inline.component.html"
+    }
+    },
+    {
+    "tabName": "inline-loaders.component.ts",
+    "outputHtml": {
+    "transloco": "export class InlineComponent implements OnInit {\r\n constructor(private translocoService: TranslocoService, @Inject(TRANSLOCO_SCOPE) private scope) { }\r\n\r\n ngOnInit() {\r\n this.translocoService.selectTranslate('title', {}, this.scope).subscribe(console.log);\r\n }\r\n}",
+    "rxweb": "export class InlineComponent implements OnInit {\r\n constructor() { }\r\n\r\n ngOnInit() {\r\n\r\n }\r\n\r\n @translate({\r\n translationName: 'inliners',\r\n inlineTranslations: {\r\n en: () => import('..\/i18n\/en.json'),\r\n es: () => import('..\/i18n\/es.json')\r\n }\r\n }) inline: any;\r\n\r\n @translate() global: { [key: string]: any };\r\n}",
+    "diff": ""
+    },
+    "githubLink": {
+    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/inline-loaders/inline/inline.component.ts",
+    "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/inline-loaders/inline/inline.component.ts"
+    }
+    }
+    ],
+    "dynamic-translation": [
+      {
+      "tabName": "dynamic-translation.module.ts",
+      "outputHtml": {
+      "transloco": "@NgModule({\r\n declarations: [DynamicTranslationComponent],\r\n imports: [CommonModule, DynamicTranslationRoutingModule, TranslocoModule],\r\n})\r\nexport class DynamicTranslationModule {\r\n}",
+      "rxweb": "@NgModule({\r\n declarations: [DynamicTranslationComponent],\r\n imports: [CommonModule, DynamicTranslationRoutingModule, RxTranslateModule],\r\n})\r\nexport class DynamicTranslationModule {\r\n}",
+      "diff": ""
+      },
+      "githubLink": {
+      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/dynamic-translation/dynamic-translation.module.ts",
+      "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/dynamic-translation/dynamic-translation.module.ts"
+      }
+      },
+      {
       "tabName": "dynamic-translation.component.html",
-      "outputHtml": ""
-    }
-  ],
+      "outputHtml": {
+      "transloco": "<h4>Set Translation<\/h4>\r\n\r\n<ng-container transloco=\"let t\">\r\n <p>{{ t('home') }}<\/p>\r\n <p>Press Add new key to see me: {{ t('newKey') }}<\/p>\r\n<\/ng-container>\r\n\r\n<button (click)=\"updateTitle()\">\r\n Update the home key\r\n<\/button>\r\n\r\n<button (click)=\"addNewKey()\">\r\n Add new key\r\n<\/button>\r\n\r\n<hr \/>\r\n\r\n<h4>Add Translation Object<\/h4>\r\n\r\n<ng-container transloco=\"let t\">\r\n <p>New translation object title: {{ t('newTranslation.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<button (click)=\"addTranslationObj()\">\r\n Add Translation Object\r\n<\/button>\r\n",
+      "rxweb": "<h4>Set Translation<\/h4>\r\n\r\n <p>{{ global.home }}<\/p>\r\n <p>Press Add new key to see me: {{ global.newKey }}<\/p>\r\n\r\n<button (click)=\"updateTitle()\">\r\n Update the home key\r\n<\/button>\r\n\r\n<button (click)=\"addNewKey()\">\r\n Add new key\r\n<\/button>\r\n\r\n<hr \/>\r\n\r\n<h4>Add Translation Object<\/h4>\r\n\r\n<div>\r\n <p>New translation object title: <span *ngIf=\"global.newTranslation\">{{ global.newTranslation.title }}<\/span><\/p>\r\n<\/div>\r\n\r\n<button (click)=\"addTranslationObj()\">\r\n Add Translation Object\r\n<\/button>\r\n",
+      "diff": ""
+      },
+      "githubLink": {
+      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.html",
+      "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.html"
+      }
+      },
+      {
+      "tabName": "dynamic-translation.component.ts",
+      "outputHtml": {
+      "transloco": "export class DynamicTranslationComponent implements OnInit {\r\n constructor(private translate: TranslocoService) {}\r\n\r\n ngOnInit() {}\r\n\r\n updateTitle() {\r\n this.translate.setTranslationKey('home', 'New title');\r\n }\r\n\r\n addNewKey() {\r\n this.translate.setTranslationKey('newKey', 'New key');\r\n }\r\n\r\n addTranslationObj() {\r\n const newTranslation = {\r\n newTranslation: {\r\n title: 'New translation title'\r\n }\r\n };\r\n this.translate.setTranslation(newTranslation, 'en', { merge: true });\r\n }\r\n}",
+      "rxweb": "export class DynamicTranslationComponent implements OnInit {\r\n constructor() { }\r\n\r\n ngOnInit() { }\r\n @translate() global: { [key: string]: any };\r\n updateTitle() {\r\n this.global.addOrUpdateKey('home', 'New title');\r\n }\r\n\r\n addNewKey() {\r\n this.global.addOrUpdateKey('newKey', 'New key');\r\n }\r\n\r\n addTranslationObj() {\r\n\r\n const newTranslation = {\r\n title: 'New translation title'\r\n };\r\n this.global.addOrUpdateKey('newTranslation', newTranslation);\r\n }\r\n}",
+      "diff": ""
+      },
+      "githubLink": {
+      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.ts",
+      "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.ts"
+      }
+      }
+      ],,
   "multi-langs": [
     {
       "tabName": "multi-langs.component.ts",
-      "outputHtml": ""
+      "outputHtml": {
+        "transloco": "export class MultilangsComponent {\r\n\r\n\r\n}",
+        "rxweb": "export class MultilangsComponent {\r\n\r\n    @translate() global: { [key: string]: any };\r\n\r\n    @translate({ translationName: 'lazy-page', language: 'es' }) lazyPage: { [key: string]: any };\r\n\r\n    @translate({ translationName: 'global', language: 'es' }) globalSpanish: { [key: string]: any };\r\n\r\n    @translate({ translationName: 'lazy-page', language: 'es' }) lazyPageSpanish: { [key: string]: any };\r\n\r\n}",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/multilangs.component.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/multilangs.component.ts"
+      }
+    
     },
     {
       "tabName": "multi-langs.component.html",
-      "outputHtml": ""
+      "outputHtml": {
+        "transloco": "<h4>English: (global)<\/h4>\r\n<ng-container *transloco=\"let t\">\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h4>Spanish: (inline lang, scope: lazy-page)<\/h4>\r\n<ng-container *transloco=\"let t; lang: 'es'; loadingTpl: loading; scope: 'lazy-page'\">\r\n  <p>{{ t('lazyPage.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<provider-lang><\/provider-lang>\r\n\r\n<h4>Static Lang: <code>es<\/code><\/h4>\r\n<ng-container *transloco=\"let t; lang: 'es|static'; loadingTpl: loading\">\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h4>Static Lang with scope <code>lazy-page\/es<\/code><\/h4>\r\n<ng-container *transloco=\"let t; lang: 'es|static'; loadingTpl: loading; scope: 'lazy-page'\">\r\n  <p>{{ t('lazyPage.title') }}<\/p>\r\n<\/ng-container>",
+        "rxweb": "<h4>English: (global)<\/h4>\r\n  <p>{{ global.home }}<\/p>\r\n\r\n<h4>Spanish: (inline lang, scope: lazy-page)<\/h4>\r\n  <p>{{ lazyPage.title }}<\/p>\r\n\r\n<provider-lang *rxTranslate=\"true\"><\/provider-lang>\r\n\r\n<h4>Static Lang: <code>es<\/code><\/h4>\r\n  <p>{{ globalSpanish.home }}<\/p>\r\n\r\n<h4>Static Lang with scope <code>lazy-page\/es<\/code><\/h4>\r\n  <p>{{ lazyPageSpanish.title }}<\/p>\r\n",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/multilangs.component.html",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/multilangs.component.html"
+      }
+    },
+    {
+      "tabName": "multi-langs.module.ts",
+      "outputHtml": {
+        "transloco": "@NgModule({\r\n  declarations: [MultilangsComponent, ProviderLangComponent],\r\n  imports: [\r\n    CommonModule,\r\n    TranslocoModule,\r\n    MultilangsRoutingModule\r\n  ]\r\n})\r\nexport class MultilangsModule {\r\n}\r\n",
+        "rxweb": "@NgModule({\r\n    declarations: [MultilangsComponent, ProviderLangComponent],\r\n    imports: [\r\n        CommonModule,\r\n        RxTranslateModule,\r\n        MultilangsRoutingModule\r\n    ]\r\n})\r\nexport class MultilangsModule {\r\n}\r\n",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/multilangs.module.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/multilangs.module.ts"
+      }
+    },
+    {
+      "tabName": "provider-lang.component.ts",
+      "outputHtml": {
+        "transloco": "export class ProviderLangComponent {\r\n\r\n\r\n}",
+        "rxweb": "export class ProviderLangComponent {\r\n\r\n    @translate({ translationName: 'global', language: 'es' }) globalSpanish: { [key: string]: any };\r\n\r\n    @translate() global: { [key: string]: any };\r\n\r\n}\r\n",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/provider-lang/provider-lang.component.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/provider-lang/provider-lang.component.ts"
+      }
+    },
+    {
+      "tabName": "provider-lang.component.html",
+      "outputHtml": {
+        "transloco": "<h4>Provider Scope (lang is set to `es` in providers)<\/h4>\r\n<ng-container *transloco=\"let t\">\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-container *transloco=\"let t; lang: 'en'\">\r\n  <p>Inline (en) wins: {{ t('home') }}<\/p>\r\n<\/ng-container>\r\n",
+        "rxweb": "<h4>Provider Scope (lang is set to `es` in providers)<\/h4>\r\n <p>{{ globalSpanish.home }}<\/p>\r\n\r\n <p>Inline (en) wins: {{ global.home }}<\/p>",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/provider-lang/provider-lang.component.html",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/provider-lang/provider-lang.component.html"
+      }
     }
   ],
   "transpilers": [
     {
-      "tabName": "multi-langs.component.ts",
-      "outputHtml": ""
+      "tabName": "transpilers.component.ts",
+      "outputHtml": {
+        "transloco": "export class TranspilersComponent {\r\n  dynamic = '\uD83E\uDD84';\r\n  key = 'home';\r\n  userGender = 'female';\r\n\r\n  changeParam() {\r\n    this.dynamic = this.dynamic === '\uD83E\uDD84' ? '\uD83E\uDD84\uD83E\uDD84\uD83E\uDD84' : '\uD83E\uDD84';\r\n  }\r\n}\r\n",
+        "rxweb": "export class TranspilersComponent {\r\n  value = '\uD83E\uDD84';\r\n    key = 'home';\r\n   gender = 'female';\r\n    @translate({ translationName: 'transpilers\/messageformat' }) transpilers: { [key: string]: any };\r\n    changeParam() {\r\n        this.value = this.value === '\uD83E\uDD84' ? '\uD83E\uDD84\uD83E\uDD84\uD83E\uDD84' : '\uD83E\uDD84';\r\n    }\r\n}",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/transpilers/transpilers.component.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/transpilers/transpilers.component.ts"
+      }    
     },
     {
-      "tabName": "multi-langs.component.html",
-      "outputHtml": ""
+      "tabName": "transpilers.component.html",
+      "outputHtml": {
+        "transloco": "<h2>MessageFormat Transpiler<\/h2>\r\n<hr \/>\r\n<h4>Structural Directive<\/h4>\r\n<ng-container *transloco=\"let t\">\r\n  <ul>\r\n    <li><b>Regular: <\/b>{{ t('mf.home') }}<\/li>\r\n    <li><b>With params: <\/b>{{ t('mf.params', { value: dynamic }) }}<\/li>\r\n    <li>\r\n      <b>With translation reuse: <\/b> {{ t('mf.a.b.c') }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat: <\/b>{{ t('mf.messageFormat', { gender: 'male' }) }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with dynamic value: <\/b>{{ t('mf.messageFormat', { gender: userGender }) }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with transloco standard params: <\/b\r\n      >{{ t('mf.messageFormatWithParams', { value: 'transloco params', gender: '' }) }}\r\n    <\/li>\r\n  <\/ul>\r\n<\/ng-container>",
+        "rxweb": "<h2>MessageFormat Transpiler<\/h2>\r\n<hr \/>\r\n<h4>Structural Directive<\/h4>\r\n<ul>\r\n  <li><b>Regular: <\/b>{{ transpilers.home }}<\/li>\r\n  <li><b>With params: <\/b>{{ transpilers.params }}<\/li>\r\n  <li>\r\n    <b>With translation reuse: <\/b> {{ transpilers.a.b.c }}\r\n  <\/li>\r\n  <li>\r\n    <b>Using messageformat: <\/b>{{ transpilers.json.messageFormat | rxTranslate:{ gender: 'male' } }}\r\n  <\/li>\r\n  <li>\r\n    <b>Using messageformat with dynamic value: <\/b>{{ transpilers.messageFormat }}\r\n  <\/li>\r\n  <li>\r\n    <b>Using messageformat with transloco standard params: <\/b>{{ transpilers.json.messageFormatWithParams | rxTranslate:{ value: 'transloco params', gender: '' } }}\r\n  <\/li>\r\n<\/ul>",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/transpilers/transpilers.component.html",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/transpilers/transpilers.component.html"
+      } 
+    },
+    {
+      "tabName": "transpilers.module.ts",
+      "outputHtml": {
+        "transloco": "@NgModule({\r\n  declarations: [TranspilersComponent],\r\n  imports: [CommonModule, RouterModule.forChild(routes), TranslocoModule],\r\n  providers: [\r\n    {\r\n      provide: TRANSLOCO_SCOPE,\r\n      useValue: {\r\n        scope: 'transpilers\/messageformat',\r\n        alias: 'mf'\r\n      }\r\n    }\r\n  ]\r\n})\r\nexport class TranspilersModule {}\r\n",
+        "rxweb": "@NgModule({\r\n    declarations: [TranspilersComponent],\r\n    imports: [CommonModule, RouterModule.forChild(routes), RxTranslateModule],\r\n})\r\nexport class TranspilersModule {}",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/transpilers/transpilers.module.ts",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/transpilers/transpilers.module.ts"
+      }
     }
   ]
 }
