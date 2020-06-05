@@ -246,7 +246,7 @@
       "tabName": "provider-lang.component.html",
       "outputHtml": {
         "transloco": "<h4>Provider Scope (lang is set to `es` in providers)<\/h4>\r\n<ng-container *transloco=\"let t\">\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-container *transloco=\"let t; lang: 'en'\">\r\n  <p>Inline (en) wins: {{ t('home') }}<\/p>\r\n<\/ng-container>\r\n",
-        "rxweb": "<h4>Provider Scope (lang is set to `es` in providers)<\/h4>\r\n  <p data-cy=\"in-provider\">{{ globalSpanish.home }}<\/p>\r\n\r\n  <p data-cy=\"inline\">Inline (en) wins: {{ global.home }}<\/p>",
+        "rxweb": "<h4>Provider Scope (lang is set to `es` in providers)<\/h4>\r\n  <p>{{ globalSpanish.home }}<\/p>\r\n\r\n  <p>Inline (en) wins: {{ global.home }}<\/p>",
         "diff": ""
       },
       "githubLink": {

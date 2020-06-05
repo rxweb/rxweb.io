@@ -1300,3 +1300,7 @@ th {
 .float-comparison-right {
   padding-left: 632px;
 }
+
+th.comprasion{
+ border-top: 1px solid #dee2e6;
+}

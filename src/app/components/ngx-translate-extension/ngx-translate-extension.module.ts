@@ -48,6 +48,7 @@ import { CountryService } from "./playground/service/country.service";
 import { CliComponent } from "./cli/cli.component";
 import { PowerhouseChangeLanguageComponent } from "./powerhouse/change-language/change-language.component";
 import { PowerhouseOtherIntruitiveFeaturesComponent } from "./powerhouse/other-intuitive-features/other-intuitive-features.component";
+import { ComparsionToOtherLibrariesComponent } from "./comparison-to-other-libraries/comparison-to-other-libraries.component";
 
 @Injectable()
 export class TranslateHttpLoader implements TranslateLoader {
@@ -68,7 +69,7 @@ export class TranslateHttpLoader implements TranslateLoader {
         CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
     ],
     declarations: [
-        CliComponent,
+        CliComponent,ComparsionToOtherLibrariesComponent,
         NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, PowerhouseAttributeDirectiveComponent, PowerhousePipeComponent,
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,

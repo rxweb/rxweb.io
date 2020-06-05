@@ -20,6 +20,7 @@ import { PlayGroundComponent } from './playground/playground.component';
 import { PowerhouseChangeLanguageComponent } from './powerhouse/change-language/change-language.component';
 import { PowerhouseOtherIntruitiveFeaturesComponent } from './powerhouse/other-intuitive-features/other-intuitive-features.component';
 import { CliComponent } from './cli/cli.component';
+import { ComparsionToOtherLibrariesComponent } from './comparison-to-other-libraries/comparison-to-other-libraries.component';
 
 
 const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
@@ -66,6 +67,10 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   {
     path: 'playground',
     component: PlayGroundComponent
+  },
+  {
+    path: 'compare-to',
+    component: ComparsionToOtherLibrariesComponent
   },
   {
     path: 'clean-code-comparison',

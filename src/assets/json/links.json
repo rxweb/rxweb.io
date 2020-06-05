@@ -2382,6 +2382,13 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "title": "Check Differentiation",
+                    "uri": "/ngx-translate-extension/compare-to",
+                    "isActive": false,
+                    "linkTitle": "compare-to",
+                    "refUri": "compare-to"
                 }
             ]
         }
