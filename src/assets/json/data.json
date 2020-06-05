@@ -14,18 +14,7 @@
     }
   ],
   "home": [
-    {
-    "tabName": "on-push.component.html",
-    "outputHtml": {
-    "transloco": "<ng-container transloco=\"let t\">\r\n <ul>\r\n <li>{{ t('home') }}<\/li>\r\n <li>{{ t('alert', { value: dynamic }) }}<\/li>\r\n <li>{{ t('a.b.c') }}<\/li>\r\n <\/ul>\r\n<\/ng-container>\r\n\r\n<ul>\r\n <li><span transloco=\"home\"><\/span><\/li>\r\n <li><span transloco=\"alert\" [translocoParams]=\"{ value: dynamic }\"><\/span><\/li>\r\n <li><span transloco=\"a.b.c\"><\/span><\/li>\r\n <li><span [transloco]=\"key\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li>{{ 'home' | transloco }}<\/li>\r\n <li>{{ 'alert' | transloco: { value: dynamic } }}<\/li>\r\n <li>{{ 'a.b.c' | transloco }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li ngFor=\"let key of translateList\">{{ key | transloco }}<\/li>\r\n<\/ul>",
-    "rxweb": " <ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n <\/ul>\r\n\r\n<ul>\r\n <li><b>Regular: <\/b><span>{{ global.home }}<\/span><\/li>\r\n <li><span>{{ global.alert }}<\/span><\/li>\r\n <li><span>{{ global.a.b.c }}<\/span><\/li>\r\n <li><span [innerText]=\"global[key]\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li *ngFor=\"let key of translateList\">{{ global.get(key) }}<\/li>\r\n<\/ul>",
-    "diff": ""
-    },
-    "githubLink": {
-    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/on-push/on-push.component.html",
-    "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/on-push/on-push.component.html"
-    }
-    },
+    
     {
     "tabName": "on-push.component.ts",
     "outputHtml": {
@@ -37,7 +26,19 @@
     "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/on-push/on-push.component.ts",
     "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/on-push/on-push.component.ts"
     }
-    }
+    },
+    {
+      "tabName": "on-push.component.html",
+      "outputHtml": {
+      "transloco": "<ng-container transloco=\"let t\">\r\n <ul>\r\n <li>{{ t('home') }}<\/li>\r\n <li>{{ t('alert', { value: dynamic }) }}<\/li>\r\n <li>{{ t('a.b.c') }}<\/li>\r\n <\/ul>\r\n<\/ng-container>\r\n\r\n<ul>\r\n <li><span transloco=\"home\"><\/span><\/li>\r\n <li><span transloco=\"alert\" [translocoParams]=\"{ value: dynamic }\"><\/span><\/li>\r\n <li><span transloco=\"a.b.c\"><\/span><\/li>\r\n <li><span [transloco]=\"key\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li>{{ 'home' | transloco }}<\/li>\r\n <li>{{ 'alert' | transloco: { value: dynamic } }}<\/li>\r\n <li>{{ 'a.b.c' | transloco }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li ngFor=\"let key of translateList\">{{ key | transloco }}<\/li>\r\n<\/ul>",
+      "rxweb": " <ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n <\/ul>\r\n\r\n<ul>\r\n <li><b>Regular: <\/b><span>{{ global.home }}<\/span><\/li>\r\n <li><span>{{ global.alert }}<\/span><\/li>\r\n <li><span>{{ global.a.b.c }}<\/span><\/li>\r\n <li><span [innerText]=\"global[key]\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li *ngFor=\"let key of translateList\">{{ global.get(key) }}<\/li>\r\n<\/ul>",
+      "diff": ""
+      },
+      "githubLink": {
+      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/on-push/on-push.component.html",
+      "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/on-push/on-push.component.html"
+      }
+      }
     ],
     "lazy": [
       {
