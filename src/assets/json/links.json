@@ -2321,7 +2321,6 @@
                             "linkTitle": "transloco",
                             "refUri": "transloco",
                             "childrens": [
-                                
                                 {
                                     "title": "Configuration",
                                     "uri": "/ngx-translate-extension/clean-code-comparison/configuration",
@@ -2343,7 +2342,6 @@
                                     "linkTitle": "lazy",
                                     "refUri": "lazy"
                                 },
-                               
                                 {
                                     "title": "Scope Sharing",
                                     "uri": "/ngx-translate-extension/clean-code-comparison/scope-sharing",
@@ -2361,7 +2359,7 @@
                                 {
                                     "title": "Dynamic Translation",
                                     "uri": "/ngx-translate-extension/clean-code-comparison/dynamic-translation",
-                                       "isActive": false,
+                                    "isActive": false,
                                     "linkTitle": "configuration",
                                     "refUri": "configuration"
                                 },
@@ -2380,15 +2378,66 @@
                                     "refUri": "configuration"
                                 }
                             ]
+                        },
+                        {
+                            "title": "Angular i18n",
+                            "isActive": false,
+                            "linkTitle": "angular-i18n",
+                            "refUri": "angular-i18n",
+                            "childrens": [
+                                {
+                                    "title": "Home",
+                                    "isActive": false,
+                                    "linkTitle": "angular-code-compare",
+                                    "refUri": "angular-code-compare",
+                                    "childrens": [
+                                        {
+                                            "title": "Api",
+                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-api",
+                                            "isActive": false,
+                                            "linkTitle": "api",
+                                            "refUri": "api"
+                                        },
+                                        {
+                                            "title": "Pipe",
+                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-pipe",
+                                            "isActive": false,
+                                            "linkTitle": "pipe",
+                                            "refUri": "pipe"
+                                        },
+                                        {
+                                            "title": "Directive",
+                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-directive",
+                                            "isActive": false,
+                                            "linkTitle": "pipe",
+                                            "refUri": "pipe"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Lazy",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-lazy",
+                                    "isActive": false,
+                                    "linkTitle": "lazy",
+                                    "refUri": "lazy"
+                                },
+                                {
+                                    "title": "On Push",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-on-push",
+                                    "isActive": false,
+                                    "linkTitle": "on-push",
+                                    "refUri": "on-push"
+                                },
+                                {
+                                    "title": "Validation",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-validation",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                }
+                            ]
                         }
                     ]
-                },
-                {
-                    "title": "Check Differentiation",
-                    "uri": "/ngx-translate-extension/compare-to",
-                    "isActive": false,
-                    "linkTitle": "compare-to",
-                    "refUri": "compare-to"
                 }
             ]
         }

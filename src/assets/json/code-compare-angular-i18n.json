@@ -1,0 +1,198 @@
+{
+    "api":[{
+        "tabName": "api.component.ts",
+        "outputHtml": {
+            "angulari18n": "export class ApiComponent implements OnInit, OnChanges {\r\n\r\n    @Input() today: number;\r\n    @Input() timeAgo: string;\r\n    @Input() value: number;\r\n\r\n    greeting: string;\r\n    whoIAm: string;\r\n    description: string;\r\n\r\n    formattedToday: string;\r\n    formattedTimeAgo: string;\r\n    formattedValue: string;\r\n\r\n    constructor(private translation: L10nTranslationService, private intl: L10nIntlService) { }\r\n\r\n    ngOnInit() {\r\n        this.translation.onChange().subscribe({\r\n            next: () => {\r\n                this.greeting = this.translation.translate('home.greeting');\r\n                this.whoIAm = this.translation.translate('home.whoIAm', { name: 'Angular l10n' });\r\n                this.description = this.translation.translate('home.description');\r\n\r\n                this.formattedToday = this.intl.formatDate(this.today, { dateStyle: 'full', timeStyle: 'short' });\r\n                this.formattedTimeAgo = this.intl.formatRelativeTime(this.timeAgo, 'second', { numeric: 'always', style: 'long' });\r\n                this.formattedValue = this.intl.formatNumber(this.value, { digits: '1.2-2', style: 'currency' });\r\n            }\r\n        });\r\n    }\r\n\r\n    ngOnChanges(changes: SimpleChanges) {\r\n        this.formattedTimeAgo = this.intl.formatRelativeTime(changes.timeAgo.currentValue, 'second', { numeric: 'always', style: 'long' });\r\n    }\r\n\r\n}",
+            "rxweb": "export class ApiComponent {\r\n\r\n    @Input() today: number;\r\n    @Input() timeAgo: string;\r\n    @Input() value: number;\r\n\r\n\r\n    name:string = \"@rxweb\/translate\"\r\n\r\n    constructor() { }\r\n\r\n    @translate() global: any;\r\n\r\n}",
+          "diff": ""
+        },
+        "githubLink": {
+          "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/home/api/api.component.ts",
+          "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/home/api/api.component.ts"
+        }
+      },
+      {
+        "tabName": "api.component.html",
+        "outputHtml": {
+          "angulari18n": "<h3>APIs<\/h3>\r\n<p title=\"{{ greeting }}\">{{ greeting }}<\/p>\r\n<p>{{ whoIAm }}<\/p>\r\n<p innerHTML=\"{{ description }}\"><\/p>\r\n<br>\r\n<p>{{ formattedToday }}<\/p>\r\n<p>{{ formattedTimeAgo }}<\/p>\r\n<br>\r\n<p>{{ formattedValue }}<\/p>",
+          "rxweb": "  \r\n<h3>APIs<\/h3>\r\n<p title=\"{{ global.home.greeting }}\">{{ global.home.greeting }}<\/p>\r\n<p>{{ global.home.whoIAm }}<\/p>\r\n<p innerHTML=\"{{ global.home.description }}\"><\/p>\r\n<br>\r\n<p>{{ global.home.formattedToday }}<\/p>\r\n<p>{{ global.home.formattedTimeAgo }}<\/p>\r\n<br>\r\n<p>{{ global.home.formattedValue }}<\/p>",
+          "diff": ""
+        },
+        "githubLink": {
+          "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/home/api/api.component.html",
+          "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/home/api/api.component.html"
+        }
+      }],
+      "pipe":[{
+        "tabName": "pipe.component.ts",
+        "outputHtml": {
+          "angulari18n": "export class PipeComponent implements OnInit {\r\n\r\n    @Input() today: number;\r\n    @Input() timeAgo: string;\r\n    @Input() value: number;\r\n\r\n    constructor(@Inject(L10N_LOCALE) public locale: L10nLocale) { }\r\n\r\n    ngOnInit() {\r\n    }\r\n\r\n}",
+          "rxweb": "export class PipeComponent {\r\n\r\n    @Input() today: number;\r\n    @Input() timeAgo: string;\r\n    @Input() value: number;\r\n\r\n    name: string = \"@rxweb\/translate\";\r\n\r\n    @translate() global: any;\r\n}",
+          "diff": ""
+        },
+        "githubLink": {
+          "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/home/pipe/pipe.component.ts",
+          "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/home/pipe/pipe.component.ts"
+        }
+      },
+      {
+        "tabName": "pipe.component.html",
+        "outputHtml": {
+          "angulari18n": "<h3>Pure Pipes<\/h3>\r\n<p title=\"{{ 'home.greeting' | translate:locale.language }}\">{{ 'home.greeting' | translate:locale.language }}<\/p>\r\n<p>{{ 'home.whoIAm' | translate:locale.language:{ name: 'Angular l10n' } }}<\/p>\r\n<p innerHTML=\"{{ 'home.description' | translate:locale.language }}\"><\/p>\r\n<br>\r\n<p>{{ today | l10nDate:locale.language:{ dateStyle: 'full', timeStyle: 'short' } }}<\/p>\r\n<p>{{ timeAgo | l10nTimeAgo:locale.language:'second':{ numeric:'always', style:'long' } }}<\/p>\r\n<br>\r\n<p>{{ value | l10nNumber:locale.language:{ digits: '1.2-2', style: 'currency' } }}<\/p>",
+          "rxweb": "<h3>Pure Pipes<\/h3>\r\n<p>{{ global.home.greeting }}<\/p>\r\n<p>{{ global.home.whoIAm }}<\/p>\r\n<p innerHTML=\"{{ global.home.description }}\"><\/p>\r\n<br>\r\n<p>{{ global.home.formattedToday }}<\/p>\r\n<p>{{ global.home.formattedTimeAgo }}<\/p>\r\n<br>\r\n<p>{{ global.home.formattedValue }}<\/p>",
+          "diff": ""
+        },
+        "githubLink": {
+          "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/home/pipe/pipe.component.html",
+          "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/home/pipe/pipe.component.html"
+        }
+      }],
+      "directive":[{
+        "tabName": "directive.component.ts",
+        "outputHtml": {
+          "angulari18n": "export class DirectiveComponent {\r\n\r\n    @Input() today: number;\r\n    @Input() timeAgo: string;\r\n    @Input() value: number;\r\n\r\n\r\n}",
+          "rxweb": "export class DirectiveComponent {\r\n\r\n    @Input() today: number;\r\n    @Input() timeAgo: string;\r\n    @Input() value: number;\r\n\r\n    name: string = \"@rxweb\/translate\";\r\n\r\n    @translate() global: any;\r\n}",
+          "diff": ""
+        },
+        "githubLink": {
+          "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/home/directive/directive.component.ts",
+          "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/home/directive/directive.component.ts"
+        }
+      },
+      {
+        "tabName": "directive.component.html",
+        "outputHtml": {
+          "angulari18n": "<h3>Directives<\/h3>\r\n<p l10n-title title=\"home.greeting\" l10nTranslate>home.greeting<\/p>\r\n<p [params]=\"{ name: 'Angular l10n' }\" l10nTranslate>home.whoIAm<\/p>\r\n<p innerHTML=\"home.description\" l10nTranslate><\/p>\r\n<br>\r\n<p [options]=\"{ dateStyle: 'full', timeStyle: 'short' }\" l10nDate>{{ today }}<\/p>\r\n<p [options]=\"{ numeric:'always', style:'long' }\" unit=\"second\" l10nTimeAgo>{{ timeAgo }}<\/p>\r\n<br>\r\n<p [options]=\"{ digits: '1.2-2', style: 'currency' }\" l10nNumber>{{ value }}<\/p>",
+          "rxweb": "<h3>Directives<\/h3>\r\n<p>{{ global.home.greeting }}<\/p>\r\n<p>{{ global.home.whoIAm }}<\/p>\r\n<p [innerHTML]=\"global.home.description\" l10nTranslate><\/p>\r\n<br>\r\n<p>{{ global.home.formattedToday }}<\/p>\r\n<p>{{ global.home.formattedTimeAgo }}<\/p>\r\n<br>\r\n<p>{{ global.home.formattedValue }}<\/p>",
+          "diff": ""
+        },
+        "githubLink": {
+          "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/home/directive/directive.component.html",
+          "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/home/directive/directive.component.html"
+        }
+      }],
+    "home": [
+        {
+          "tabName": "home.component.ts",
+          "outputHtml": {
+            "angulari18n": "export class HomeComponent implements OnInit {\r\n\r\n    count = 0;\r\n\r\n    today = Date.now();\r\n    timeAgo = '-0';\r\n    value = Math.round(Math.random() * 1000000) \/ 100;\r\n\r\n    constructor(@Inject(L10N_LOCALE) public locale: L10nLocale) { }\r\n\r\n    ngOnInit() {\r\n        setInterval(() => {\r\n            this.timeAgo = `-${++this.count}`;\r\n        }, 1000);\r\n    }\r\n\r\n}",
+            "rxweb": "export class HomeComponent implements OnInit {\r\n\r\n    count = 0;\r\n\r\n    today = Date.now();\r\n    timeAgo: number = Date.now();\r\n    value = Math.round(Math.random() * 1000000) \/ 100;\r\n\r\n    @translate() global: any;\r\n\r\n    ngOnInit() {\r\n        setInterval(() => {\r\n            this.timeAgo = Date.now();\r\n        }, 1000);\r\n    }\r\n\r\n}",
+            "diff": ""
+          },
+          "githubLink": {
+            "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/home/home.component.ts",
+            "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/home/home.component.ts"
+          }
+        },
+        {
+            "tabName": "home.component.html",
+            "outputHtml": {
+              "angulari18n": "<h1>{{ 'home.title' | translate:locale.language }}<\/h1>\r\n<h2>{{ 'home.subtitle' | translate:locale.language }}<\/h2>\r\n\r\n<hr>\r\n\r\n<div class=\"box\">\r\n    <div>\r\n        <app-pipe [today]=\"today\" [timeAgo]=\"timeAgo\" [value]=\"value\"><\/app-pipe>\r\n    <\/div>\r\n    <div>\r\n        <app-directive [today]=\"today\" [timeAgo]=\"timeAgo\" [value]=\"value\"><\/app-directive>\r\n    <\/div>\r\n    <div>\r\n        <app-api [today]=\"today\" [timeAgo]=\"timeAgo\" [value]=\"value\"><\/app-api>\r\n    <\/div>\r\n<\/div>",
+              "rxweb": "<h1>{{ global.home.title }}<\/h1>\r\n<h2>{{ global.home.subtitle }}<\/h2>\r\n\r\n<hr>\r\n\r\n<div class=\"box\">\r\n  <div>\r\n    <app-pipe [today]=\"today\" [timeAgo]=\"timeAgo\" [value]=\"value\"><\/app-pipe>\r\n  <\/div>\r\n  <div>\r\n    <app-directive [today]=\"today\" [timeAgo]=\"timeAgo\" [value]=\"value\"><\/app-directive>\r\n  <\/div>\r\n  <div>\r\n    <app-api [today]=\"today\" [timeAgo]=\"timeAgo\" [value]=\"value\"><\/app-api>\r\n  <\/div>\r\n<\/div>",
+              "diff": ""
+            },
+            "githubLink": {
+              "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/home/home.component.html",
+              "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/home/home.component.html"
+            }
+          }
+          
+          
+      ],
+      "lazy": [
+        {
+          "tabName": "lazy.component.ts",
+          "outputHtml": {
+            "angulari18n": "export class LazyComponent implements OnInit {\r\n\r\n    constructor(@Inject(L10N_LOCALE) public locale: L10nLocale, @Inject(L10N_CONFIG) private l10nConfig: L10nConfig) { }\r\n\r\n    ngOnInit() {\r\n        console.log(this.l10nConfig.providers);\r\n    }\r\n\r\n}",
+            "rxweb": "export class LazyComponent {\r\n\r\n    @translate({ translationName: 'lazy' }) lazy: any;\r\n\r\n}",
+            "diff": ""
+          },
+          "githubLink": {
+            "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/lazy/lazy.component.ts",
+            "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/lazy/lazy.component.ts"
+          }
+        },
+        {
+            "tabName": "lazy.component.html",
+            "outputHtml": {
+              "angulari18n": "<h1>{{ 'lazy.title' | translate:locale.language }}<\/h1>",
+              "rxweb": "<h1>{{ lazy.title }}</h1>",
+              "diff": ""
+            },
+            "githubLink": {
+              "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/lazy/lazy.component.html",
+              "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/lazy/lazy.component.html"
+            }
+          },
+          {
+            "tabName": "lazy.module.ts",
+            "outputHtml": {
+              "angulari18n": "@NgModule({\r\n    declarations: [LazyComponent],\r\n    imports: [\r\n        CommonModule,\r\n        LazyRoutingModule,\r\n        L10nTranslationModule\r\n    ]\r\n})\r\nexport class LazyModule { }",
+              "rxweb": "@NgModule({\r\n    declarations: [LazyComponent],\r\n    imports: [\r\n        CommonModule,\r\n        LazyRoutingModule,\r\n        RxTranslateModule\r\n    ]\r\n})\r\nexport class LazyModule { }",
+              "diff": ""
+            },
+            "githubLink": {
+              "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/lazy/lazy.module.ts",
+              "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/lazy/lazy.module.ts"
+            }
+          }
+          
+          
+      ],
+      "on-push": [
+        {
+          "tabName": "on-push.component.ts",
+          "outputHtml": {
+            "angulari18n": "export class OnPushComponent {\r\n\r\n\r\n}",
+            "rxweb": "export class OnPushComponent {\r\n\r\n    @translate() global: any;\r\n}",
+            "diff": ""
+          },
+          "githubLink": {
+            "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/on-push/on-push.component.ts",
+            "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/on-push/on-push.component.ts"
+          }
+        },
+        {
+            "tabName": "on-push.component.html",
+            "outputHtml": {
+              "angulari18n": "<h1>{{ 'onPush.title' | translateAsync }}<\/h1>",
+              "rxweb": "<h1>{{ global.onPush.title }}<\/h1>\r\n<h1>{{ global.changeLocale}}<\/h1>",
+              "diff": ""
+            },
+            "githubLink": {
+              "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/on-push/on-push.component.html",
+              "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/on-push/on-push.component.html"
+            }
+          }
+          
+          
+      ],
+      "validation": [
+        {
+          "tabName": "validation.component.ts",
+          "outputHtml": {
+            "angulari18n": "export class ValidationComponent implements OnInit {\r\n\r\n    model = { decimal: null };\r\n\r\n    options: L10nNumberFormatOptions = { digits: '1.2-2', useGrouping: false };\r\n    minValue = -Math.round(Math.random() * 100000) \/ 100;\r\n    maxValue = Math.round(Math.random() * 100000) \/ 100;\r\n\r\n    parsedValue: number | null = null;\r\n\r\n    constructor(\r\n        @Inject(L10N_LOCALE) public locale: L10nLocale,\r\n        private translation: L10nTranslationService,\r\n        private validation: L10nValidation\r\n    ) { }\r\n\r\n    ngOnInit() {\r\n        this.translation.onChange().subscribe({\r\n            next: () => {\r\n                this.model.decimal = null;\r\n                this.parsedValue = null;\r\n            }\r\n        });\r\n    }\r\n\r\n    onNumberSubmit(): void {\r\n        this.parsedValue = this.validation.parseNumber(this.model.decimal, this.options);\r\n    }\r\n\r\n}",
+            "rxweb": "export class ValidationComponent {\r\n    numberForm: FormGroup;\r\n    model = { decimal: null };\r\n\r\n    minValue = -Math.round(Math.random() * 100000) \/ 100;\r\n    maxValue = Math.round(Math.random() * 100000) \/ 100;\r\n\r\n    parsedValue: number | null = null;\r\n\r\n    decimal: FormControl;\r\n    ngOnInit() {\r\n        this.decimal = new FormControl('', { validators: [Validators.required, Validators.max(this.maxValue), Validators.min(this.minValue)] })\r\n    }\r\n\r\n    @translate() global: any;\r\n\r\n}",
+            "diff": ""
+          },
+          "githubLink": {
+            "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/validation/validation.component.ts",
+            "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/validation/validation.component.ts"
+          }
+        },
+        {
+            "tabName": "validation.component.html",
+            "outputHtml": {
+              "angulari18n": "<h1>{{ 'validation.title' | translate:locale.language }}<\/h1>\r\n\r\n<hr>\r\n\r\n<h3>{{ 'validation.numbers' | translate:locale.language }}<\/h3>\r\n<form #numberForm=\"ngForm\" (ngSubmit)=\"onNumberSubmit()\" novalidate>\r\n    <div>\r\n        <input [(ngModel)]=\"model.decimal\" name=\"decimal\" #decimal=\"ngModel\"\r\n            placeholder=\"{{ 1000 | l10nNumber:locale.language:options }}\" [options]=\"options\" [minValue]=\"minValue\"\r\n            [maxValue]=\"maxValue\" required (keyup)=\"decimal.valid ? parsedValue : parsedValue = null\"\r\n            l10nValidateNumber>\r\n        <div  *ngIf=\"decimal.hasError('required')\">\r\n            {{ 'validation.numberIsRequired' | translate:locale.language }}\r\n        <\/div>\r\n        <div*ngIf=\"decimal.hasError('format')\">\r\n            {{ 'validation.numberIsInvalid' | translate:locale.language:{ format: 1000 |\r\n                l10nNumber:locale.language:options } }}\r\n        <\/div>\r\n        <div *ngIf=\"decimal.hasError('minValue')\">\r\n            {{ 'validation.minValueError' | translate:locale.language:{ minValue: minValue |\r\n                    l10nNumber:locale.language:options } }}\r\n        <\/div>\r\n        <div class=\"error\" *ngIf=\"decimal.hasError('maxValue')\">\r\n            {{ 'validation.maxValueError' | translate:locale.language:{ maxValue: maxValue |\r\n                    l10nNumber:locale.language:options } }}\r\n        <\/div>\r\n    <\/div>\r\n    <br>\r\n    <button type=\"submit\" [disabled]=\"!numberForm.form.valid\">{{\r\n            'validation.submit' | translate:locale.language }}<\/button>\r\n    <br>\r\n    <p>{{ 'validation.numberValue' | translate:locale.language:{ parsedValue: parsedValue || '' } }}<\/p>\r\n<\/form>",
+              "rxweb": "<h1>{{ global.validation.title }}<\/h1>\r\n\r\n<hr>\r\n\r\n<h3>{{ global.validation.numbers }}<\/h3>\r\n<form >\r\n    <div>\r\n        <input [formControl]=\"decimal\" >\r\n        <div *ngIf=\"decimal.hasError('required')\">\r\n            {{ decimal.errors.required.message }}\r\n        <\/div>\r\n        <div class=\"error\" *ngIf=\"decimal.hasError('max')\">\r\n            {{ decimal.errors.max.message }}\r\n        <\/div>\r\n        <div  *ngIf=\"decimal.hasError('min')\">\r\n            {{ decimal.errors.min.message  }}\r\n        <\/div>\r\n    <\/div>\r\n    <br>\r\n    <button type=\"submit\" [disabled]=\"!decimal.valid\">{{ global.validation.submit }}<\/button>\r\n    <br>\r\n    <p>{{ global.validation.numberValue }}<\/p>\r\n<\/form>",
+              "diff": ""
+            },
+            "githubLink": {
+              "angulari18n": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/before/src/app/validation/validation.component.html",
+              "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-l18n-to-translate/after/src/app/validation/validation.component.html"
+            }
+          }
+          
+          
+      ]
+}

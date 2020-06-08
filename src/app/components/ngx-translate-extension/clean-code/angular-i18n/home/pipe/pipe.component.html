@@ -1,0 +1,15 @@
+<h2>Difference of Pipe Component : </h2>
+
+<div>
+  <ul class="nav nav-tabs active" *ngIf="tabArray.length > 1">
+    <li *ngFor="let item of tabArray" [class.active]="activeTab == item.tabName" (click)="activeTab = item.tabName">
+      <a>{{item.tabName}}</a></li>
+  </ul>
+  <div class="tab-content pt-2">
+    <div class="tab-pane" [class.active]="activeTab == item.tabName" *ngFor="let item of tabArray">
+      <div [innerHtml]="item.diff"></div>
+    </div>
+  </div>
+</div>
+
+<app-top-bar></app-top-bar>

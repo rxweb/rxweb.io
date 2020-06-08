@@ -4714,6 +4714,10 @@ body.modal-open {
     padding-left: 20px;
     font-weight: 400;
 }
+.fifth-level {
+    padding-left: 20px;
+    font-weight: 400;
+}
 
 #side-menu.nav>li>a:hover, #side-menu.nav>li>a:focus, #side-menu li .nav-second-level li a:hover {
     background: #dfeff8;

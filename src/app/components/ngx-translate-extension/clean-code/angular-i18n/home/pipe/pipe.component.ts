@@ -4,10 +4,10 @@ import * as Diff from 'diff'
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-configuration',
-  templateUrl: './configuration.component.html',
+  selector: 'app-pipe',
+  templateUrl: './pipe.component.html',
 })
-export class ConfigurationComponent {
+export class PipeAngularComparisonComponent {
 
   rightSidebarLinks: any = [{ "id": "on-push", "title": "on-push", "subLink": null }, { "id": "on-push", "title": "on-push", "subLink": null }];
   outputHtml: string;
@@ -17,8 +17,8 @@ export class ConfigurationComponent {
 
   constructor(private http: HttpClient) {
 
-    this.http.get("assets/json/data.json").subscribe(response => {
-      this.tabArray = response['configuration'];
+    this.http.get("assets/json/code-compare-angular-i18n.json").subscribe(response => {
+      this.tabArray = response['pipe'];
       console.log(this.tabArray)
       this.activeTab = this.tabArray[0].tabName;
       if (this.tabArray.length > 0) {
@@ -30,13 +30,9 @@ export class ConfigurationComponent {
     
   }
 
-  ngOnInit() {
-
-  }
-
+  
   init(content) {
-    debugger;
-    var diff = Diff.createTwoFilesPatch("transloco", "transloco", content.outputHtml.transloco, content.outputHtml.rxweb);
+    var diff = Diff.createTwoFilesPatch("angulari18n", "angulari18n", content.outputHtml.angulari18n, content.outputHtml.rxweb);
 
     let outputHtml = Diff2Html.html(diff, {
       drawFileList: false, matching: 'lines', outputFormat: 'side-by-side'
