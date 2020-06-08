@@ -13,14 +13,22 @@ import { NgModule } from "@angular/core";
 import { TopBarSharedModule } from "../../shared/top-bar/top-bar-shared.module";
 import { CommonSharedModule } from "../../shared/common/common-shared.module";
 import { CLEAN_CODE_ROUTING } from "./clean-code.routing";
-import { ConfigurationComponent } from "./configuration/configuration.component";
-import { HomeComponent } from "./home/home.component";
-import { ScopeSharingComponent } from "./scope-sharing/scope-sharing.component";
-import { MultiLangsComponent } from "./multi-langs/multi-langs.component";
-import { TranspilersComponent } from "./transpilers/transpilers.component";
-import { LazyComponent } from "./lazy/lazy.component";
-import { InlineLoadersComponent } from "./inline-loaders/inline-loaders.component";
-import { DynamicTranslationComponent } from "./dynamic-translation/dynamic-translation.component";
+import { HomeComponent } from './transloco/home/home.component';
+import { LazyComponent } from './transloco/lazy/lazy.component';
+import { InlineLoadersComponent } from './transloco/inline-loaders/inline-loaders.component';
+import { DynamicTranslationComponent } from './transloco/dynamic-translation/dynamic-translation.component';
+import { ConfigurationComponent } from './transloco/configuration/configuration.component';
+import { ScopeSharingComponent } from './transloco/scope-sharing/scope-sharing.component';
+import { MultiLangsComponent } from './transloco/multi-langs/multi-langs.component';
+import { TranspilersComponent } from './transloco/transpilers/transpilers.component';
+import { CleanCodeAngularComparisonComponent } from "./angular-i18n/home/home.component";
+import { ApiAngularComparisonComponent } from "./angular-i18n/home/api/api.component";
+import { PipeAngularComparisonComponent } from "./angular-i18n/home/pipe/pipe.component";
+import { DirectiveAngularComparisonComponent } from "./angular-i18n/home/directive/directive.component";
+import { LazyComparisonComponent } from "./angular-i18n/lazy/lazy.component";
+import { OnPushComparisonComponent } from "./angular-i18n/on-push/on-push.component";
+import { ValidationComparisonComponent } from "./angular-i18n/validation/validation.component";
+
 
 @NgModule({
   imports: [CLEAN_CODE_ROUTING, HttpClientModule,
@@ -29,7 +37,7 @@ import { DynamicTranslationComponent } from "./dynamic-translation/dynamic-trans
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
   ],
   declarations: [
-    HomeComponent,ConfigurationComponent,ScopeSharingComponent,MultiLangsComponent,TranspilersComponent,LazyComponent, InlineLoadersComponent, DynamicTranslationComponent
+    HomeComponent,ValidationComparisonComponent,OnPushComparisonComponent,ConfigurationComponent,LazyComparisonComponent,DirectiveAngularComparisonComponent, PipeAngularComparisonComponent,ApiAngularComparisonComponent,CleanCodeAngularComparisonComponent,ScopeSharingComponent,MultiLangsComponent,TranspilersComponent,LazyComponent, InlineLoadersComponent, DynamicTranslationComponent
   ],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]
