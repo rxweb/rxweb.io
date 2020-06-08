@@ -1301,6 +1301,10 @@ th {
   padding-left: 632px;
 }
 
-th.comprasion{
- border-top: 1px solid #dee2e6;
+th.comprasion {
+  border-top: 1px solid #dee2e6;
+}
+
+.margin-right {
+  margin-right: 2px;
 }

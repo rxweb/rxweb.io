@@ -3,6 +3,7 @@ declare const Prism;
 declare const $;
 import $ from 'jquery';
 import { TranslateService } from '@rxweb/ngx-translate-extension';
+import { translate } from '@rxweb/translate';
 
 @Component({
   templateUrl: './pipe.component.html',
@@ -12,6 +13,8 @@ export class PowerhousePipeComponent implements OnInit {
   rightSidebarLinks: any = [{ "id": "pipe", "title": "Pipe", "subLink": null }, { "id": "pipe", "title": "Pipe", "subLink": null }];
   outputHtml: string;
 
+  @translate() global: { [key: string]: any };
+  
   examples: any = {
     first: {
       json: `{"greet": "Hello! How are you"}`,
@@ -20,6 +23,25 @@ export class PowerhousePipeComponent implements OnInit {
     translateParams: {
       json: `{"notification":"Hey {{name}}"}`,
       html: `<label>{{'notification' | translate:{'name':name} }}</label><br />`
+    },
+    static: {
+      json: `{
+    "notification": "Hello {{name}}"
+}`,
+      typescipt: `
+@translate() global: { [key: string]: any };
+      `,
+      html: `<label>{{global.raw.notification | rxTranslate:{'name':'Munad'} }}</label><br />`
+    },
+    dynamic: {
+      json: `{
+    "notification": "Hello {{name}}"
+}`,
+      typescipt: `
+name: string = "John";
+@translate() global: { [key: string]: any };
+      `,
+      html: `<label>{{global.raw.notification | rxTranslate:{'name':name} }}</label><br />`
     },
     translateLang: {
       json: `{"note":"Ceci est le paquet ngx-translate-extension"}`,
@@ -40,7 +62,7 @@ export class PowerhousePipeComponent implements OnInit {
 
   ngOnInit() {
     $('[data-toggle="tooltip"]').tooltip({
-      template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-pipe-inner md-inner"></div></div>'
+      template: '`<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-pipe-inner md-inner"></div></div>'
     });
   }
 

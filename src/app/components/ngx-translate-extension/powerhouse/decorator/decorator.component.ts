@@ -27,6 +27,13 @@ export class PowerhouseDecoratorComponent implements OnInit {
   })
   countries: any;
 
+  @translate({
+    translationName: 'inliners',
+    inlineTranslations: {
+      en: () => import('./i18n/en.json'),
+      fr: () => import('./i18n/fr.json')
+    }
+  }) inline: any;
 
   constructor(public translate: TranslateService, public rxTranslation: RxTranslation) { 
     translate.addLangs(['en', 'fr']);
@@ -90,6 +97,19 @@ export class PowerhouseDecoratorComponent implements OnInit {
 }`,
       typescript: `@translate() global: any;`,
       html: `<span>{{global.reuseText}}</span>`
+    },
+    inline: {
+      json: `{
+  "text": "Content loaded through inline loader."
+}`,
+      typescript: `@translate({
+  translationName: 'inliners',
+  inlineTranslations: {
+      en: () => import('./i18n/en.json'),
+      fr: () => import('./i18n/fr.json')
+  }
+}) inline: any;`,
+      html: `<span>{{inline.text}}</span>`
     },
     async: {
       typescript: `@asyncTranslate({

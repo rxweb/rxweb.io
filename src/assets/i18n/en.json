@@ -2,6 +2,7 @@
   "firstName": "Enter Your First Name:",
   "greet": "Hello! How are you",
   "notification": "Hello {{name}}",
+  
   "note": "This is ngx-translate-extension package",
   "validationErrorMessages": {
     "required": "This Field is Required.",
