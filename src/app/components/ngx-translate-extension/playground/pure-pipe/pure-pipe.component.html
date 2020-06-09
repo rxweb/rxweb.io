@@ -1,0 +1,41 @@
+<div class="">
+  <h1 class="display-4">Pure Pipe Examples
+    <a routerLink="/ngx-translate-extension/pure-pipe"><i class="fa fa-code" style="font-size: 20px;padding-left: 9px;"></i></a>
+  </h1>
+  <table class="table" width="100%">
+    <thead>
+      <tr>
+        <th width="50%">Category</th>
+        <th width="50%">Output</th>
+      </tr>
+    </thead>
+
+    <tr>
+      <td class="category">Multilingual Text with Static Parameter </td>
+      <td>
+        <span class="margin-left badge badge-{{global.languageCode}}">
+
+          {{global.raw.notification | rxTranslate:{'name':'Munad'} }}
+
+        </span>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td class="category">Multilingual Text with Dynamic Parameter </td>
+      <td>
+        <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control">
+
+        <span class="margin-left badge badge-{{global.languageCode}}">
+
+          {{global.raw.notification | rxTranslate:{'name':name} }}
+
+        </span>
+
+      </td>
+    </tr>
+
+
+  </table>
+</div>

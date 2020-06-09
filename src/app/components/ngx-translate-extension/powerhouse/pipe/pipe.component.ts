@@ -18,30 +18,12 @@ export class PowerhousePipeComponent implements OnInit {
   examples: any = {
     first: {
       json: `{"greet": "Hello! How are you"}`,
+      typescipt: ``,
       html: `<label >{{ 'greet' | translate }}</label><br />`
     },
     translateParams: {
       json: `{"notification":"Hey {{name}}"}`,
       html: `<label>{{'notification' | translate:{'name':name} }}</label><br />`
-    },
-    static: {
-      json: `{
-    "notification": "Hello {{name}}"
-}`,
-      typescipt: `
-@translate() global: { [key: string]: any };
-      `,
-      html: `<label>{{global.raw.notification | rxTranslate:{'name':'Munad'} }}</label><br />`
-    },
-    dynamic: {
-      json: `{
-    "notification": "Hello {{name}}"
-}`,
-      typescipt: `
-name: string = "John";
-@translate() global: { [key: string]: any };
-      `,
-      html: `<label>{{global.raw.notification | rxTranslate:{'name':name} }}</label><br />`
     },
     translateLang: {
       json: `{"note":"Ceci est le paquet ngx-translate-extension"}`,

@@ -2059,6 +2059,29 @@
                             ]
                         },
                         {
+                            "title": "Pure Pipe",
+                            "uri": "/ngx-translate-extension/pure-pipe",
+                            "isActive": false,
+                            "linkTitle": "pipe",
+                            "refUri": "pipe",
+                            "childrens": [
+                                {
+                                    "title": "Static Parameter",
+                                    "uri": "/ngx-translate-extension/pure-pipe",
+                                    "isActive": false,
+                                    "linkTitle": "basic",
+                                    "refUri": "basic"
+                                },
+                                {
+                                    "title": "Dynamic Parameter",
+                                    "uri": "/ngx-translate-extension/pure-pipe#dynamicparameter",
+                                    "isActive": false,
+                                    "linkTitle": "dynamicparameter",
+                                    "refUri": "dynamicparameter"
+                                }
+                            ]
+                        },
+                        {
                             "title": "Structural Directive",
                             "uri": "/ngx-translate-extension/structural-directive",
                             "isActive": false,
@@ -2228,6 +2251,71 @@
                                     "refUri": "byurl"
                                 }
                             ]
+                        },
+                        {
+                            "title": "Sanitizer",
+                            "uri": "/ngx-translate-extension/sanitize",
+                            "isActive": false,
+                            "linkTitle": "sanitize",
+                            "refUri": "sanitize",
+                            "childrens": [
+                                {
+                                    "title": "Currency",
+                                    "uri": "/ngx-translate-extension/sanitize#currency",
+                                    "isActive": false,
+                                    "linkTitle": "currency",
+                                    "refUri": "currency"
+                                },
+                                {
+                                    "title": "Date",
+                                    "uri": "/ngx-translate-extension/sanitize#date",
+                                    "isActive": false,
+                                    "linkTitle": "date",
+                                    "refUri": "date"
+                                },
+                                {
+                                    "title": "Decimal",
+                                    "uri": "/ngx-translate-extension/sanitize#decimal",
+                                    "isActive": false,
+                                    "linkTitle": "decimal",
+                                    "refUri": "decimal"
+                                },
+                                {
+                                    "title": "Percent",
+                                    "uri": "/ngx-translate-extension/sanitize#percent",
+                                    "isActive": false,
+                                    "linkTitle": "percent",
+                                    "refUri": "percent"
+                                },
+                                {
+                                    "title": "LowerCase",
+                                    "uri": "/ngx-translate-extension/sanitize#lowercase",
+                                    "isActive": false,
+                                    "linkTitle": "lowercase",
+                                    "refUri": "lowercase"
+                                },
+                                {
+                                    "title": "UpperCase",
+                                    "uri": "/ngx-translate-extension/sanitize#uppercase",
+                                    "isActive": false,
+                                    "linkTitle": "uppercase",
+                                    "refUri": "uppercase"
+                                },
+                                {
+                                    "title": "TitleCase",
+                                    "uri": "/ngx-translate-extension/sanitize#titlecase",
+                                    "isActive": false,
+                                    "linkTitle": "titlecase",
+                                    "refUri": "titlecase"
+                                },
+                                {
+                                    "title": "Custom",
+                                    "uri": "/ngx-translate-extension/sanitize#custom",
+                                    "isActive": false,
+                                    "linkTitle": "custom",
+                                    "refUri": "custom"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -2303,7 +2391,7 @@
                     "refUri": "rxweb-cli"
                 },
                 {
-                    "title": "Ngx-translate-extension Playground",
+                    "title": "Playground",
                     "uri": "/ngx-translate-extension/en/playground",
                     "isActive": false,
                     "linkTitle": "ngxtranslateextensionplayground",

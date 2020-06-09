@@ -51,6 +51,9 @@ import { PowerhouseOtherIntruitiveFeaturesComponent } from "./powerhouse/other-i
 import { ComparsionToOtherLibrariesComponent } from "./comparison-to-other-libraries/comparison-to-other-libraries.component";
 import { SanitizeComponent } from "./playground/sanitize/sanitize.component";
 import { PowerhouseSanitizeComponent } from "./powerhouse/sanitize/sanitize.component";
+import { CustomPipe } from "./playground/sanitize/custom.pipe";
+import { PowerhousePurePipeComponent } from "./powerhouse/pure-pipe/pure-pipe.component";
+import { PurePipeComponent } from "./playground/pure-pipe/pure-pipe.component";
 
 @Injectable()
 export class TranslateHttpLoader implements TranslateLoader {
@@ -76,9 +79,9 @@ export class TranslateHttpLoader implements TranslateLoader {
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,
         PreLoadModuleComponent, StructuralDirectiveComponent, ValidationMessageComponent, PowerhouseChangeLanguageComponent, 
-        PowerhouseOtherIntruitiveFeaturesComponent, SanitizeComponent, PowerhouseSanitizeComponent
+        PowerhouseOtherIntruitiveFeaturesComponent, SanitizeComponent, PowerhouseSanitizeComponent, PowerhousePurePipeComponent, PurePipeComponent
     ],
-    providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CountryService],
+    providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CountryService, CustomPipe],
     exports: [RouterModule]
 })
 export class NgxTranslateExtensionModule {

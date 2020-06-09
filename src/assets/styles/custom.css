@@ -1308,3 +1308,7 @@ th.comprasion {
 .margin-right {
   margin-right: 2px;
 }
+
+.sanitize-form-control {
+  width: 160px !important;
+}
