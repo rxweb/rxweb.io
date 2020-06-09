@@ -44,7 +44,7 @@ export class PowerhousePipeComponent implements OnInit {
 
   ngOnInit() {
     $('[data-toggle="tooltip"]').tooltip({
-      template: '`<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-pipe-inner md-inner"></div></div>'
+      template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-pipe-inner md-inner"></div></div>'
     });
   }
 
