@@ -9487,6 +9487,14 @@ div#v-pills-tabContent {
     background-color: #c7e9d7!important;
 }
 
+.md-sanitizer-inner {
+    background-color: #cad0f3!important;
+}
+
+.md-pure-pipe-inner {
+    background-color: #f7aca6!important;
+}
+
 .tooltip.top .tooltip-arrow {
     border-top-color: #f7fcff;
 }

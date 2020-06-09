@@ -950,6 +950,14 @@ blockquote.command.showHideElement.showElement p {
   font-size: 16px;
 }
 
+.col-hash-text-pure {
+  color: #F44336;
+}
+
+.col-hash-text-teal {
+  color: #5264c6;
+}
+
 .badge {
   padding: 9px;
   font-weight: 600;
