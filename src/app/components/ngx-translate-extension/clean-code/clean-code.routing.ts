@@ -15,6 +15,9 @@ import { DirectiveAngularComparisonComponent } from './angular-i18n/home/directi
 import { LazyComparisonComponent } from './angular-i18n/lazy/lazy.component';
 import { OnPushComparisonComponent } from './angular-i18n/on-push/on-push.component';
 import { ValidationComparisonComponent } from './angular-i18n/validation/validation.component';
+import { SimpleDemoAngularNextComparisonComponent } from './angular-i18n-next/content/simple-demo/simple-demo.component';
+import { AccessDeniedAngularNextComparisonComponent } from './angular-i18n-next/content/access-denied/access-denied.component';
+import { RoutingAngularNextComparisonComponent } from './angular-i18n-next/routing/routing.component';
 
 
 
@@ -81,6 +84,18 @@ const CLEAN_CODE_ROUTES: Routes = [
   {
     path:'angular-comparison-validation',
     component:ValidationComparisonComponent
+  },
+  {
+    path:'angular-comparison-simple-demo',
+    component:SimpleDemoAngularNextComparisonComponent
+  },
+  {
+    path:'angular-comparison-access-denied',
+    component:AccessDeniedAngularNextComparisonComponent
+  },
+  {
+    path:'angular-comparison-routing',
+    component:RoutingAngularNextComparisonComponent
   }
   
 ];
