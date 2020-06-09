@@ -2436,6 +2436,64 @@
                                     "refUri": "configuration"
                                 }
                             ]
+                        },
+                        {
+                            "title": "Angular i18next",
+                            "isActive": false,
+                            "linkTitle": "angular-i18next",
+                            "refUri": "angular-i18next",
+                            "childrens": [
+                                {
+                                    "title": "Content",
+                                    "isActive": false,
+                                    "linkTitle": "content",
+                                    "refUri": "content",
+                                    "childrens": [
+                                        {
+                                            "title": "Simple Demo",
+                                            "uri":"/ngx-translate-extension/clean-code-comparison/angular-comparison-simple-demo",
+                                            "isActive": false,
+                                            "linkTitle": "angular-comparison-simple-demo",
+                                            "refUri": "angular-comparison-simple-demo"
+                                        },
+                                        {
+                                            "title": "Access Denied",
+                                            "uri":"/ngx-translate-extension/clean-code-comparison/angular-comparison-access-denied",
+                                            "isActive": false,
+                                            "linkTitle": "angular-comparison-simple-demo",
+                                            "refUri": "angular-comparison-simple-demo"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Features",
+                                    "isActive": false,
+                                    "linkTitle": "lazy",
+                                    "refUri": "lazy",
+                                    "childrens": [
+                                        {
+                                            "title": "Rich Form Feature",
+                                            "isActive": false,
+                                            "linkTitle": "rich-form-feature",
+                                            "refUri": "rich-form-feature"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Routing",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-routing",
+                                    "isActive": false,
+                                    "linkTitle": "routing",
+                                    "refUri": "routing"
+                                },
+                                {
+                                    "title": "Structure",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-validation",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                }
+                            ]
                         }
                     ]
                 }

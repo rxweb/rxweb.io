@@ -28,6 +28,9 @@ import { DirectiveAngularComparisonComponent } from "./angular-i18n/home/directi
 import { LazyComparisonComponent } from "./angular-i18n/lazy/lazy.component";
 import { OnPushComparisonComponent } from "./angular-i18n/on-push/on-push.component";
 import { ValidationComparisonComponent } from "./angular-i18n/validation/validation.component";
+import { SimpleDemoAngularNextComparisonComponent } from "./angular-i18n-next/content/simple-demo/simple-demo.component";
+import { AccessDeniedAngularNextComparisonComponent } from "./angular-i18n-next/content/access-denied/access-denied.component";
+import { RoutingAngularNextComparisonComponent } from "./angular-i18n-next/routing/routing.component";
 
 
 @NgModule({
@@ -37,7 +40,7 @@ import { ValidationComparisonComponent } from "./angular-i18n/validation/validat
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
   ],
   declarations: [
-    HomeComponent,ValidationComparisonComponent,OnPushComparisonComponent,ConfigurationComponent,LazyComparisonComponent,DirectiveAngularComparisonComponent, PipeAngularComparisonComponent,ApiAngularComparisonComponent,CleanCodeAngularComparisonComponent,ScopeSharingComponent,MultiLangsComponent,TranspilersComponent,LazyComponent, InlineLoadersComponent, DynamicTranslationComponent
+    HomeComponent,RoutingAngularNextComparisonComponent,SimpleDemoAngularNextComparisonComponent,AccessDeniedAngularNextComparisonComponent,ValidationComparisonComponent,OnPushComparisonComponent,ConfigurationComponent,LazyComparisonComponent,DirectiveAngularComparisonComponent, PipeAngularComparisonComponent,ApiAngularComparisonComponent,CleanCodeAngularComparisonComponent,ScopeSharingComponent,MultiLangsComponent,TranspilersComponent,LazyComponent, InlineLoadersComponent, DynamicTranslationComponent
   ],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]

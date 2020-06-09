@@ -1,0 +1,106 @@
+{
+    "simple-demo": [
+        {
+            "tabName": "simple-demo.component.ts",
+            "outputHtml": {
+                "angulari18nnext": "export class SimpleDemoComponent {\r\n  value: Number = 15;\r\n  str: string = 'Hello';\r\n}",
+                "rxweb": "export class SimpleDemoComponent {\r\n    value: Number = 15;\r\n    str: string = 'Hello';\r\n\r\n    @translate({ translationName: 'translation' }) translation: { [key: string]: any };\r\n}",
+                "diff": ""
+            },
+            "githubLink": {
+                "angulari18nnext": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/before/src/app/content/simple-demo.component.ts",
+                "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/after/src/app/content/simple-demo.component.ts"
+            }
+        },
+        {
+            "tabName": "simple-demo.component.html",
+            "outputHtml": {
+                "angulari18nnext": "<h1>{{ 'simple_demo' | i18nextCap }}<\/h1>\r\n\r\n<h4>\r\n            {{ 'parametrized_string_title' | i18nextCap }}\r\n        <\/h4>\r\n    \r\n                    <span>{{ 'parametrized_string' | i18next: { value: value, str: str } }}<\/span>\r\n                <\/div>\r\n           \r\n                    <input name=\"number\" type=\"number\" class=\"form-control\" [(ngModel)]=\"value\">               \r\n         \r\n                    <input name=\"str\" type=\"text\" class=\"form-control\" [(ngModel)]=\"str\">\r\n            \r\n        <h4>\r\n            {{ 'case_demo_title' | i18nextCap }}\r\n        <\/h4>\r\n   \r\n            <table>\r\n                <thead>\r\n                    <tr>\r\n                        <th>original<\/th>\r\n                        <th>capitalize<\/th>\r\n                        <th>lowercase<\/th>\r\n                        <th>uppercase<\/th>\r\n                    <\/tr>\r\n                <\/thead>\r\n                <tbody>\r\n                    <tr>\r\n                        <td>{{ 'case_demo' | i18next }}<\/td>\r\n                        <td>{{ 'case_demo' | i18next: { format: 'capitalize' } }}<\/td>\r\n                        <td>{{ 'case_demo' | i18next: { format: 'lowercase' } }}<\/td>\r\n                        <td>{{ 'case_demo' | i18next | i18nextFormat: 'uppercase' }}<\/td>\r\n                    <\/tr>\r\n                <\/tbody>\r\n            <\/table>\r\n     ",
+                "rxweb": "<h1>{{ translation.simple_demo }}<\/h1>\r\n\r\n<h4>\r\n            {{ translation.parametrized_string_title }}r\n        <\/h4>\r\n    \r\n                    {{ translation.parametrized_string }}<\/span>\r\n                \r\n                    <input name=\"number\" type=\"number\" class=\"form-control\" [(ngModel)]=\"value\">                \r\n                    <input name=\"str\" type=\"text\" class=\"form-control\" [(ngModel)]=\"str\">             \r\n\r\n        <h4>\r\n            {{ translation.case_demo_title }}\r\n        <\/h4>\r\n        <div class=\"form-inline\">\r\n            <table class=\"table table-hover\">\r\n                <thead>\r\n                    <tr>\r\n                        <th>original<\/th>\r\n                        <th>capitalize<\/th>\r\n                        <th>lowercase<\/th>\r\n                        <th>uppercase<\/th>\r\n                    <\/tr>\r\n                <\/thead>\r\n                <tbody>\r\n                    <tr>\r\n                        <td>{{ translation.case_demo }}<\/td>\r\n                        <td>{{ translation.case_demo | titlecase }}<\/td>\r\n                        <td>{{ translation.case_demo | lowercase }}<\/td>\r\n                        <td>{{ translation.case_demo | uppercase }}<\/td>\r\n                    <\/tr>\r\n                <\/tbody>\r\n            <\/table>\r\n      ",
+                "diff": ""
+            },
+            "githubLink": {
+                "angulari18nnext": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/before/src/app/content/simple-demo.component.html",
+                "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/after/src/app/content/simple-demo.component.html"
+            }
+        }
+    ],
+    "access-denied": [
+        {
+            "tabName": "access-denied.component.ts",
+            "outputHtml": {
+                "angulari18nnext": "export class AccessDeniedComponent {\r\n\r\n}",
+                "rxweb": "export class AccessDeniedComponent {\r\n    @translate({ translationName: \"error\" }) error: { [key: string]: any };\r\n}",
+                "diff": ""
+            },
+            "githubLink": {
+                "angulari18nnext": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/before/src/app/content/simple-demo.component.ts",
+                "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/after/src/app/content/simple-demo.component.ts"
+            }
+        },
+        {
+            "tabName": "access-denied.component.html",
+            "outputHtml": {
+                "angulari18nnext": " <h2>{{ 'error:access_denied' | i18next: { case: 'cap' } }}<\/h2>",
+                "rxweb": " <h2>{{ error.access_denied }}<\/h2>",
+                "diff": ""
+            },
+            "githubLink": {
+                "angulari18nnext": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/before/src/app/content/access-denied/access-denied.component.html",
+                "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/after/src/app/content/access-denied/access-denied.component.html"
+            }
+        }
+    ],
+    "rich-form": [
+        {
+            "tabName": "rich-form.component.ts",
+            "outputHtml": {
+                "angulari18nnext": "export class RichFormComponent implements OnInit {\r\n\r\n  form: FormGroup;\r\n  model: RichFormModel = new RichFormModel();\r\n\r\n  constructor(private fb: FormBuilder, private vdc: ValidationDirtyChecker){\r\n    this.form = this.fb.group({\r\n      'count': [this.model.count, [Validators.min(1), Validators.max(3)]],\r\n      'email': [this.model.email, [Validators.email]],\r\n      'technicalContact': this.fb.group({\r\n        'firstName': [this.model.technicalContact.firstName, [Validators.required]],\r\n        'lastName': [this.model.technicalContact.lastName, [Validators.required]],\r\n        'middleName': [this.model.technicalContact.middleName, [Validators.required]],\r\n      })\r\n    });\r\n  }\r\n\r\n\r\n  ngOnInit() {\r\n\r\n  }\r\n\r\n  onSubmit(e: Event) {\r\n    this.form.controls['technicalContact'].updateValueAndValidity();\r\n\r\n    if (!this.form.valid) {\r\n      this.vdc.markControlsDirty(this.form);\r\n    }\r\n  }\r\n}",
+                "rxweb": "export class RichFormComponent implements OnInit {\r\n\r\n  form: FormGroup;\r\n    model: RichFormModel = new RichFormModel();\r\n    @translate({ translationName: 'feature.rich_form' }) richForm: { [key: string]: any };\r\n  constructor(private fb: FormBuilder){\r\n    this.form = this.fb.group({\r\n      'count': [this.model.count, [Validators.min(1), Validators.max(3)]],\r\n      'email': [this.model.email, [Validators.email]],\r\n      'technicalContact': this.fb.group({\r\n        'firstName': [this.model.technicalContact.firstName, [Validators.required]],\r\n        'lastName': [this.model.technicalContact.lastName, [Validators.required]],\r\n        'middleName': [this.model.technicalContact.middleName, [Validators.required]],\r\n      })\r\n    });\r\n  }\r\n\r\n\r\n  ngOnInit() {\r\n\r\n  }\r\n\r\n  onSubmit(e: Event) {\r\n  }\r\n}",
+                "diff": ""
+            },
+            "githubLink": {
+                "angulari18nnext": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/before/src/app/features/rich_form_feature/rich-form.component.ts",
+                "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/after/src/app/features/rich_form_feature/rich-form.component.ts"
+            }
+        },
+        {
+            "tabName": "rich-form.component.html",
+            "outputHtml": {
+                "angulari18nnext": "<div>\r\n    <h1>{{ 'title' | i18next: { case: 'cap' } }}<\/h1>\r\n\r\n<form #requestHtmlForm class=\"form-default\" name=\"requestHtmlForm\" [formGroup]=\"form\" (ngSubmit)=\"onSubmit($event)\">\r\n\r\n                <label class=\"control-label control-label-sm text-muted\">{{ 'email' | i18nextCap }}<\/label>\r\n                <input validate-onblur validationMessage name=\"email\" type=\"email\" class=\"form-control\" formControlName=\"email\" [(ngModel)]=\"model.email\" \/>\r\n            \r\n        \r\n                <label class=\"control-label control-label-sm text-muted\">{{ 'count' | i18nextCap }}<\/label>\r\n                <input validate-onblur validationMessage name=\"count\" type=\"number\" class=\"form-control\" formControlName=\"count\" [(ngModel)]=\"model.count\" \/>\r\n           \r\n\r\n        <div>{{ 'technical_contact' | i18nextEager }}<\/div>\r\n   \r\n\r\n    <div formGroupName=\"technicalContact\">\r\n\r\n       \r\n                    <label class=\"control-label control-label-sm text-muted\">{{ '_person.last_name' | i18next: { format: 'cap' } }}<\/label>\r\n                    <input validate-onblur validationMessage class=\"form-control\" type=\"text\" formControlName=\"lastName\" [(ngModel)]=\"model.technicalContact.lastName\" \/>\r\n                \r\n                    <label class=\"control-label control-label-sm text-muted\">{{ '_person.first_name' | i18next: { format: 'cap' } }}<\/label>\r\n            \r\n       \r\n                    <label class=\"control-label control-label-sm text-muted\">{{ '_person.middle_name' | i18next: { format: 'cap' } }}<\/label>\r\n                    <input validate-onblur validationMessage class=\"form-control\" type=\"text\" formControlName=\"middleName\" [(ngModel)]=\"model.technicalContact.middleName\">\r\n               \r\n           \r\n\r\n                <button type=\"submit\" class=\"btn btn-primary btn-block\">{{ '_buttons.send' | i18nextCap }}<\/button>\r\n          <\/div>\r\n<\/form>\r\n<\/div>",
+                "rxweb": "<div>\r\n         <h1>{{ richForm.title | titlecase }}<\/h1>\r\n \r\n    <form #requestHtmlForm class=\"form-default\" name=\"requestHtmlForm\" [formGroup]=\"form\" (ngSubmit)=\"onSubmit($event)\">\r\n\r\n                    <label class=\"control-label control-label-sm text-muted\">{{ richForm._person.email }}<\/label>\r\n                    <input name=\"email\" type=\"email\" class=\"form-control\" formControlName=\"email\" \/>\r\n                    <div *ngIf=\"form.controls.email.hasError('email')\">{{form.controls.email.errors.email.message}}<\/div>\r\n            \r\n                    <label class=\"control-label control-label-sm text-muted\">{{ richForm.count }}<\/label>\r\n                    <input name=\"count\" type=\"number\" class=\"form-control\" formControlName=\"count\" \/>\r\n                    <div *ngIf=\"form.controls.count.hasError('min')\">{{form.controls.count.errors.min.message}}<\/div>\r\n                    <div *ngIf=\"form.controls.count.hasError('max')\">{{form.controls.count.errors.max.message}}<\/div>\r\n               \r\n  \r\n            <div>{{ richForm.technical_contact }}<\/div>\r\n       \r\n\r\n        <div formGroupName=\"technicalContact\">\r\n\r\n           \r\n                          <label>{{ richForm._person.last_name | titlecase }}<\/label>\r\n                          <input  type=\"text\" formControlName=\"lastName\" \/>\r\n                          <div *ngIf=\"form.controls.technicalContact.controls.lastName.hasError('required')\">{{form.controls.technicalContact.controls.lastName.errors.required.message}}<\/div>\r\n                    \r\n                          <label>{{ richForm._person.first_name | titlecase }}<\/label>\r\n                          <input type=\"text\" formControlName=\"firstName\">\r\n                          <div *ngIf=\"form.controls.technicalContact.controls.firstName.hasError('required')\">{{form.controls.technicalContact.controls.firstName.errors.required.message}}<\/div>\r\n                \r\n           \r\n                        <label>{{ richForm._person.middle_name | titlecase }}<\/label>\r\n                        <input type=\"text\" formControlName=\"middleName\">\r\n                        <div *ngIf=\"form.controls.technicalContact.controls.middleName.hasError('required')\">{{form.controls.technicalContact.controls.middleName.errors.required.message}}<\/div>\r\n                   \r\n               \r\n    \r\n                    <button type=\"submit\" class=\"btn btn-primary btn-block\">{{ richForm._buttons.send }}<\/button>\r\n              <\/div>\r\n    <\/form>\r\n<\/div>",
+                "diff": ""
+            },
+            "githubLink": {
+                "angulari18nnext": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/before/src/app/features/rich_form_feature/rich-form.component.html",
+                "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/after/src/app/features/rich_form_feature/rich-form.component.html"
+            }
+        },
+        {
+            "tabName": "rich-form.module.ts",
+            "outputHtml": {
+                "angulari18nnext": "export const declarations = [\r\n  RichFormComponent\r\n];\r\n\r\nexport const providers = [\r\n  FormBuilder,\r\n  {\r\n    provide: I18NEXT_NAMESPACE,\r\n    useValue: ['not_existing_namespace', 'feature.rich_form']\r\n  }\r\n];\r\n\r\n@NgModule({\r\n  bootstrap: declarations,\r\n  declarations: declarations,\r\n  providers: providers,\r\n  imports: [\r\n    \/\/core\r\n    CommonModule,\r\n    FormsModule,\r\n    ReactiveFormsModule,\r\n    \/\/feature\r\n    RichFormFeatureRouterModule,\r\n\r\n    \/\/lib\r\n    I18NextModule,\r\n    ValidationModule,\r\n    I18NextValidationMessageModule,\r\n  ]\r\n})\r\nexport class RichFormFeatureModule {}",
+                "rxweb": "export const declarations = [\r\n  RichFormComponent\r\n];\r\n\r\nexport const providers = [\r\n  FormBuilder\r\n];\r\n\r\n@NgModule({\r\n  bootstrap: declarations,\r\n  declarations: declarations,\r\n  providers: providers,\r\n  imports: [\r\n    \/\/core\r\n    CommonModule,\r\n    FormsModule,\r\n    ReactiveFormsModule,\r\n    \/\/feature\r\n    RichFormFeatureRouterModule,\r\n\r\n    \/\/lib\r\n      RxTranslateModule\r\n  ]\r\n})\r\nexport class RichFormFeatureModule {}",
+                "diff": ""
+            },
+            "githubLink": {
+                "angulari18nnext": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/before/src/app/features/rich_form_feature/RichFormFeatureModule.ts",
+                "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/after/src/app/features/rich_form_feature/RichFormFeatureModule.ts"
+            }
+        }
+    ],
+    "routing": [
+        {
+            "tabName": "AppRouterModule.ts",
+            "outputHtml": {
+                "angulari18nnext": "export const appRoutes: Routes = [\r\n    { path: '', component: SimpleDemoComponent },\r\n    {\r\n        path: 'rich_form',\r\n        loadChildren: () => import('..\/features\/rich_form_feature\/RichFormFeatureModule').then(m => m.RichFormFeatureModule),\r\n        data: {\r\n            i18nextNamespaces: ['feature.rich_form']\r\n        },\r\n        resolve: {\r\n            i18next: I18NEXT_NAMESPACE_RESOLVER\r\n        }\r\n    },\r\n    { path: 'denied', component: AccessDeniedComponent, data: { title: 'error:access_denied' } }\r\n];\r\n@NgModule({\r\n    imports: [\r\n        RouterModule.forRoot(appRoutes)\r\n    ],\r\n    exports: [\r\n        RouterModule\r\n    ],\r\n    providers: [\r\n    ]\r\n})\r\nexport class AppRouterModule { }",
+                "rxweb": "export const appRoutes: Routes = [\r\n    { path: '', component: SimpleDemoComponent },\r\n    {\r\n        path: 'rich_form',\r\n        loadChildren: () => import('..\/features\/rich_form_feature\/RichFormFeatureModule').then(m => m.RichFormFeatureModule),\r\n        data: {\r\n            i18nextNamespaces: ['feature.rich_form']\r\n        },\r\n        resolve: {\r\n            i18next: I18NEXT_NAMESPACE_RESOLVER\r\n        }\r\n    },\r\n    { path: 'denied', component: AccessDeniedComponent, data: { title: 'error:access_denied' } }\r\n];\r\n@NgModule({\r\n    imports: [\r\n        RouterModule.forRoot(appRoutes)\r\n    ],\r\n    exports: [\r\n        RouterModule\r\n    ],\r\n    providers: [\r\n    ]\r\n})\r\nexport class AppRouterModule { }",
+                "diff": ""
+            },
+            "githubLink": {
+                "angulari18nnext": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/before/src/app/routing/AppRouterModule.ts",
+                "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/angular-i18next-to-translate/after/src/app/routing/AppRouterModule.ts"
+            }
+        }
+    ]
+}
