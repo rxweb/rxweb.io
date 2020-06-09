@@ -4714,6 +4714,7 @@ body.modal-open {
     padding-left: 20px;
     font-weight: 400;
 }
+
 .fifth-level {
     padding-left: 20px;
     font-weight: 400;
@@ -9433,7 +9434,7 @@ div#v-pills-tabContent {
     background-color: #f3d7df;
 }
 
-a#v-pills-component-first-tab, a#v-pills-html-first-tab {
+.nested-tab {
     margin-left: 20px;
 }
 

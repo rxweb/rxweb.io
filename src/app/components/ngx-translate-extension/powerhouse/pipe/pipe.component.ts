@@ -3,6 +3,7 @@ declare const Prism;
 declare const $;
 import $ from 'jquery';
 import { TranslateService } from '@rxweb/ngx-translate-extension';
+import { translate } from '@rxweb/translate';
 
 @Component({
   templateUrl: './pipe.component.html',
@@ -12,9 +13,12 @@ export class PowerhousePipeComponent implements OnInit {
   rightSidebarLinks: any = [{ "id": "pipe", "title": "Pipe", "subLink": null }, { "id": "pipe", "title": "Pipe", "subLink": null }];
   outputHtml: string;
 
+  @translate() global: { [key: string]: any };
+  
   examples: any = {
     first: {
       json: `{"greet": "Hello! How are you"}`,
+      typescipt: ``,
       html: `<label >{{ 'greet' | translate }}</label><br />`
     },
     translateParams: {

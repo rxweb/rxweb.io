@@ -21,6 +21,8 @@ import { PowerhouseChangeLanguageComponent } from './powerhouse/change-language/
 import { PowerhouseOtherIntruitiveFeaturesComponent } from './powerhouse/other-intuitive-features/other-intuitive-features.component';
 import { CliComponent } from './cli/cli.component';
 import { ComparsionToOtherLibrariesComponent } from './comparison-to-other-libraries/comparison-to-other-libraries.component';
+import { PowerhouseSanitizeComponent } from './powerhouse/sanitize/sanitize.component';
+import { PowerhousePurePipeComponent } from './powerhouse/pure-pipe/pure-pipe.component';
 
 
 const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
@@ -52,6 +54,8 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   },
   { path: ':languageCode/change-language', component: PowerhouseChangeLanguageComponent },
   { path: 'other-intuitive-features', component: PowerhouseOtherIntruitiveFeaturesComponent },
+  { path: 'sanitize', component: PowerhouseSanitizeComponent },
+  { path: 'pure-pipe', component: PowerhousePurePipeComponent },
   {
     path: 'comparison',
     loadChildren: 'src/app/components/ngx-translate-extension/comparison/comparison.module#ComparisonModule',

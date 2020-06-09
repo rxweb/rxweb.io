@@ -22,6 +22,13 @@ export class DecoratorComponent {
     })
     countries: any;
 
+    @translate({
+        translationName: 'inliners',
+        inlineTranslations: {
+            en: () => import('./i18n/en.json'),
+            fr: () => import('./i18n/fr.json') 
+        }
+    }) inline: any;
 
     constructor(public translate: TranslateService, public rxTranslation: RxTranslation) { }
 

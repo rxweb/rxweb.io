@@ -43,12 +43,17 @@ import { PipeComponent } from "./playground/pipe/pipe.component";
 import { PreLoadModuleComponent } from "./playground/pre-load-module/pre-load-module.component";
 import { StructuralDirectiveComponent } from "./playground/structural-directive/structural-directive.component";
 import { ValidationMessageComponent } from "./playground/validation-message/validation-message.component";
-import { RxTranslateModule } from "@rxweb/translate";
+import { RxTranslateModule, RxTranslateSanitizeModule } from "@rxweb/translate";
 import { CountryService } from "./playground/service/country.service";
 import { CliComponent } from "./cli/cli.component";
 import { PowerhouseChangeLanguageComponent } from "./powerhouse/change-language/change-language.component";
 import { PowerhouseOtherIntruitiveFeaturesComponent } from "./powerhouse/other-intuitive-features/other-intuitive-features.component";
 import { ComparsionToOtherLibrariesComponent } from "./comparison-to-other-libraries/comparison-to-other-libraries.component";
+import { SanitizeComponent } from "./playground/sanitize/sanitize.component";
+import { PowerhouseSanitizeComponent } from "./powerhouse/sanitize/sanitize.component";
+import { CustomPipe } from "./playground/sanitize/custom.pipe";
+import { PowerhousePurePipeComponent } from "./powerhouse/pure-pipe/pure-pipe.component";
+import { PurePipeComponent } from "./playground/pure-pipe/pure-pipe.component";
 
 @Injectable()
 export class TranslateHttpLoader implements TranslateLoader {
@@ -64,7 +69,7 @@ export class TranslateHttpLoader implements TranslateLoader {
 }
 @NgModule({
     imports: [NGX_TRANSLATE_EXTENSION_ROUTING, HttpClientModule,
-        TranslateModule.forRoot({ loader: { provide: TranslateLoader, useClass: TranslateHttpLoader } }),
+        TranslateModule.forRoot({ loader: { provide: TranslateLoader, useClass: TranslateHttpLoader } }), RxTranslateSanitizeModule,
         CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule,
         CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
     ],
@@ -74,9 +79,9 @@ export class TranslateHttpLoader implements TranslateLoader {
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,
         PreLoadModuleComponent, StructuralDirectiveComponent, ValidationMessageComponent, PowerhouseChangeLanguageComponent, 
-        PowerhouseOtherIntruitiveFeaturesComponent
+        PowerhouseOtherIntruitiveFeaturesComponent, SanitizeComponent, PowerhouseSanitizeComponent, PowerhousePurePipeComponent, PurePipeComponent
     ],
-    providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CountryService],
+    providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CountryService, CustomPipe],
     exports: [RouterModule]
 })
 export class NgxTranslateExtensionModule {

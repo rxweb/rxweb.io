@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { TranslateService } from '@rxweb/ngx-translate-extension';
+import { translate } from '@rxweb/translate';
 
 @Component({
     selector: 'app-pipe',
