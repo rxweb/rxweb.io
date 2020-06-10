@@ -1981,6 +1981,7 @@
                 {
                     "title": "Translation Powerhouse",
                     "isActive": false,
+                    "isOpen": true,
                     "linkTitle": "powerhouse-of-translation",
                     "refUri": "powerhouse-of-translation",
                     "childrens": [
@@ -2238,22 +2239,22 @@
                         },
                         {
                             "title": "Sanitizer",
-                            "uri": "/ngx-translate-extension/sanitize",
                             "isActive": false,
+                            "isOpen": true,
                             "linkTitle": "sanitize",
                             "refUri": "sanitize",
                             "childrens": [
                                 {
                                     "title": "Currency",
-                                    "uri": "/ngx-translate-extension/sanitize#currency",
+                                    "uri": "/ngx-translate-extension/sanitize/currency",
                                     "isActive": false,
                                     "linkTitle": "currency",
                                     "refUri": "currency"
                                 },
                                 {
                                     "title": "Date",
-                                    "uri": "/ngx-translate-extension/sanitize#date",
-                                    "isActive": false,
+                                    "uri": "/ngx-translate-extension/sanitize/date",
+                                    "isActive": true,
                                     "linkTitle": "date",
                                     "refUri": "date"
                                 },

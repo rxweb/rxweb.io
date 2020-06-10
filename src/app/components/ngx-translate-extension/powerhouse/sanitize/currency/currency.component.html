@@ -3,5 +3,286 @@
   <p>Currency</p>
 </div>
 <div class="title-bar">
-  <p>Internatio your input the translation using rxweb <b>sanitizer</b> pipe.</p>
+  <p>Internationalize your currency input using <b>sanitizer</b> pipe.</p>
+</div>
+
+<div class="bg-white border-radius" style="margin-top:40px;" *ngIf="sanitize.raw">
+<div class="row col-md-12">
+  <div class="col-md-8">
+    <div class="row ">
+      <div class="col-md-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
+            href="#v-pills-profile-currencyStaticValue" role="tab" aria-controls="v-pills-profile-currencyStaticValue"
+            aria-selected="false">sanitize/en.json</a>
+          <a class="nav-link" style="font-size: 11px;" id="v-pills-component-currencyStaticValue-tab" data-toggle="pill"
+            href="#v-pills-component-currencyStaticValue" role="tab" aria-controls="v-pills-component-currencyStaticValue"
+            aria-selected="false">*.component.ts</a>
+          <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-currencyStaticValue-tab" data-toggle="pill"
+            href="#v-pills-messages-currencyStaticValue" role="tab" aria-controls="v-pills-messages-currencyStaticValue"
+            aria-selected="false">*.component.html</a>
+        </div>
+      </div>
+      <div class="col-md-10 remove-col-padding">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade" id="v-pills-profile-currencyStaticValue" role="tabpanel"
+            aria-labelledby="v-pills-profile-currencyStaticValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="json" [item]="examples.currencyStaticValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-component-currencyStaticValue" role="tabpanel"
+            aria-labelledby="v-pills-component-currencyStaticValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="typescript" [item]="examples.currencyStaticValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade show active" id="v-pills-messages-currencyStaticValue" role="tabpanel"
+            aria-labelledby="v-pills-messages-currencyStaticValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="html" [item]="examples.currencyStaticValue"></app-code-display>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 remove-col-padding">
+    <div>
+      <div class="code_eg">Output</div>
+      <div class="ngx-output">
+        <table class="table table-sm example-table-color" style="margin-top: -40px;">
+          <tbody>
+            <tr>
+              <th style="width:25%">Particular</th>
+              <th style="width:25%">Text</th>
+              <th style="width:50%">Transformed</th>
+            </tr>
+            <tr>
+              <td style="width:25%"><span class="ft-small badge badge-light">Static Value</span></td>
+              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyStaticValue}}</span></td>
+              <td style="width:50%">
+                <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyStaticValue}}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row col-style">
+    <div class="col-text-style"><span class="col-hash-text-teal" data-toggle="tooltip"
+        title="Now easily internationalize your date input using me! 😍" data-placement="top"><i class="fa fa-info-circle"
+          aria-hidden="true"></i> </span>Dynamic Value
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-currencyDynamicValue" role="tab" aria-controls="v-pills-profile-currencyDynamicValue"
+              aria-selected="false">sanitize/en.json</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-component-currencyDynamicValue-tab" data-toggle="pill"
+              href="#v-pills-component-currencyDynamicValue" role="tab"
+              aria-controls="v-pills-component-currencyDynamicValue" aria-selected="false">*.component.ts</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-currencyDynamicValue-tab"
+              data-toggle="pill" href="#v-pills-messages-currencyDynamicValue" role="tab"
+              aria-controls="v-pills-messages-currencyDynamicValue" aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade" id="v-pills-profile-currencyDynamicValue" role="tabpanel"
+              aria-labelledby="v-pills-profile-currencyDynamicValue-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="json" [item]="examples.currencyDynamicValue"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-component-currencyDynamicValue" role="tabpanel"
+              aria-labelledby="v-pills-component-currencyDynamicValue-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="typescript" [item]="examples.currencyDynamicValue"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade show active" id="v-pills-messages-currencyDynamicValue" role="tabpanel"
+              aria-labelledby="v-pills-messages-currencyDynamicValue-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="html" [item]="examples.currencyDynamicValue"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <table class="table table-sm example-table-color" style="margin-top: -40px;">
+            <tbody>
+              <tr>
+                <th style="width:25%">Particular</th>
+                <th style="width:25%">Text</th>
+                <th style="width:50%">Transformed</th>
+              </tr>
+              <tr>
+                <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
+                <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyDynamicValue}}</span></td>
+                <td style="width:50%">
+                  <input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}"
+                    class="form-control sanitize-form-control margin-right">
+                  <span class="badge badge-{{sanitize.languageCode}}" style="margin-top: 5px;">{{sanitize.currencyDynamicValue}}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="row col-style">
+      <div class="col-text-style"><span class="col-hash-text-teal" data-toggle="tooltip"
+          title="Now easily internationalize your date input using me! 😍" data-placement="top"><i class="fa fa-info-circle"
+            aria-hidden="true"></i> </span>Static Param
+      </div>
+    </div>
+    <div class="row col-md-12">
+      <div class="col-md-8">
+        <div class="row ">
+          <div class="col-md-2">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
+                href="#v-pills-profile-staticParam" role="tab" aria-controls="v-pills-profile-staticParam"
+                aria-selected="false">sanitize/en.json</a>
+              <a class="nav-link" style="font-size: 11px;" id="v-pills-component-staticParam-tab"
+                data-toggle="pill" href="#v-pills-component-staticParam" role="tab"
+                aria-controls="v-pills-component-staticParam" aria-selected="false">*.component.ts</a>
+              <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-staticParam-tab"
+                data-toggle="pill" href="#v-pills-messages-staticParam" role="tab"
+                aria-controls="v-pills-messages-staticParam" aria-selected="false">*.component.html</a>
+            </div>
+          </div>
+          <div class="col-md-10 remove-col-padding">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade" id="v-pills-profile-staticParam" role="tabpanel"
+                aria-labelledby="v-pills-profile-staticParam-tab">
+                <div class="code-section p-0">
+                  <app-code-display innerHtml="json" [item]="examples.staticParam"></app-code-display>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-component-staticParam" role="tabpanel"
+                aria-labelledby="v-pills-component-staticParam-tab">
+                <div class="code-section p-0">
+                  <app-code-display innerHtml="typescript" [item]="examples.staticParam"></app-code-display>
+                </div>
+              </div>
+              <div class="tab-pane fade show active" id="v-pills-messages-staticParam" role="tabpanel"
+                aria-labelledby="v-pills-messages-staticParam-tab">
+                <div class="code-section p-0">
+                  <app-code-display innerHtml="html" [item]="examples.staticParam"></app-code-display>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 remove-col-padding">
+        <div>
+          <div class="code_eg">Output</div>
+          <div class="ngx-output">
+            <table class="table table-sm example-table-color" style="margin-top: -40px;">
+              <tbody>
+                <tr>
+                  <th style="width:25%">Particular</th>
+                  <th style="width:25%">Text</th>
+                  <th style="width:50%">Transformed</th>
+                </tr>
+                <tr>
+                  <td style="width:25%"><span class="ft-small badge badge-light">Static Param</span></td>
+                  <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyStaticParam}}</span></td>
+                  <td style="width:50%">
+                    <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyStaticParam}}</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row col-style">
+      <div class="col-text-style"><span class="col-hash-text-teal" data-toggle="tooltip"
+          title="Now easily internationalize your date input using me! 😍" data-placement="top"><i class="fa fa-info-circle"
+            aria-hidden="true"></i> </span>Dynamic Param
+      </div>
+    </div>
+    <div class="row col-md-12">
+      <div class="col-md-8">
+        <div class="row ">
+          <div class="col-md-2">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link" id="v-pills-profile-tab" style="font-size: 11px;" data-toggle="pill"
+                href="#v-pills-profile-dynamicParam" role="tab" aria-controls="v-pills-profile-dynamicParam"
+                aria-selected="false">sanitize/en.json</a>
+              <a class="nav-link" style="font-size: 11px;" id="v-pills-component-dynamicParam-tab" data-toggle="pill"
+                href="#v-pills-component-dynamicParam" role="tab" aria-controls="v-pills-component-dynamicParam"
+                aria-selected="false">*.component.ts</a>
+              <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-dynamicParam-tab" data-toggle="pill"
+                href="#v-pills-messages-dynamicParam" role="tab" aria-controls="v-pills-messages-dynamicParam"
+                aria-selected="false">*.component.html</a>
+            </div>
+          </div>
+          <div class="col-md-10 remove-col-padding">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade" id="v-pills-profile-dynamicParam" role="tabpanel"
+                aria-labelledby="v-pills-profile-dynamicParam-tab">
+                <div class="code-section p-0">
+                  <app-code-display innerHtml="json" [item]="examples.dynamicParam"></app-code-display>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="v-pills-component-dynamicParam" role="tabpanel"
+                aria-labelledby="v-pills-component-dynamicParam-tab">
+                <div class="code-section p-0">
+                  <app-code-display innerHtml="typescript" [item]="examples.dynamicParam"></app-code-display>
+                </div>
+              </div>
+              <div class="tab-pane fade show active" id="v-pills-messages-dynamicParam" role="tabpanel"
+                aria-labelledby="v-pills-messages-dynamicParam-tab">
+                <div class="code-section p-0">
+                  <app-code-display innerHtml="html" [item]="examples.dynamicParam"></app-code-display>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 remove-col-padding">
+        <div>
+          <div class="code_eg">Output</div>
+          <div class="ngx-output">
+            <table class="table table-sm example-table-color" style="margin-top: -40px;">
+              <tbody>
+                <tr>
+                  <th style="width:25%">Particular</th>
+                  <th style="width:25%">Text</th>
+                  <th style="width:50%">Transformed</th>
+                </tr>
+                <tr>
+                  <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Param</span></td>
+                  <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyDynamicParam}}</span></td>
+                  <td style="width:50%">
+                    <input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}"
+                      class="form-control sanitize-form-control margin-right">
+                    <span class="badge badge-{{sanitize.languageCode}}"  style="margin-top: 5px;">{{sanitize.currencyDynamicParam}}</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>

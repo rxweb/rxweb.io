@@ -55,8 +55,9 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   },
   { path: ':languageCode/change-language', component: PowerhouseChangeLanguageComponent },
   { path: 'other-intuitive-features', component: PowerhouseOtherIntruitiveFeaturesComponent },
-  { path: 'sanitize', component: PowerhouseSanitizeComponent,
-    // loadChildren: 'src/app/components/ngx-translate-extension/sanitize/sanitize.module#SanitizeModule' 
+  { path: 'sanitize', 
+  // component: PowerhouseSanitizeComponent,
+    loadChildren: 'src/app/components/ngx-translate-extension/powerhouse/sanitize/sanitize.module#SanitizeModule' 
   },
   { path: 'pure-pipe', component: PowerhousePurePipeComponent },
   {
