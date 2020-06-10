@@ -25,6 +25,7 @@ import { PowerhouseSanitizeComponent } from './powerhouse/sanitize/sanitize.comp
 import { PowerhousePurePipeComponent } from './powerhouse/pure-pipe/pure-pipe.component';
 import { NgxCodeComponent } from './code/code.component';
 import { ComparisonComponent } from './comparison/comparison.component';
+import { TranslateCleanCodeComponent } from './translate-clean-code/translate-clean-code.component';
 
 
 const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
@@ -72,6 +73,10 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   {
     path: 'comparison',
     component: ComparisonComponent
+  },
+  {
+    path: 'translate-clean-code',
+    component: TranslateCleanCodeComponent
   },
   {
     path: 'rxweb-cli',

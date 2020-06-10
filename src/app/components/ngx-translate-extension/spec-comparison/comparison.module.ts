@@ -9,6 +9,8 @@ import { ClipboardModule } from "ngx-clipboard";
 import { HighlightModule } from "ngx-highlightjs";
 import { NgModule } from "@angular/core";
 import { COMPARISION_ROUTING } from "./comparison.routing";
+import { CommonSharedModule } from "../../shared/common/common-shared.module";
+import { TopBarSharedModule } from "../../shared/top-bar/top-bar-shared.module";
 import { MissingTranslationHandlerComponent } from "./missing-translation-handler/missing-translation-handler.component";
 import { TranslateCompilerComponent } from "./translate-compiler/translate-compiler.component";
 import { TranslateDirectiveComponent } from "./translate-directive/translate-directive.component";
@@ -17,8 +19,6 @@ import { TranslatePipeComponent } from "./translate-pipe/translate-pipe.componen
 import { TranslateServiceComponent } from "./translate-service/translate-service.component";
 import { TranslateStoreComponent } from "./translate-store/translate-store.component";
 import { TranslateParserComponent } from "./translate-parser/translate-parser.component";
-import { CommonSharedModule } from "../../shared/common/common-shared.module";
-import { TopBarSharedModule } from "../../shared/top-bar/top-bar-shared.module";
 
 @NgModule({
   imports: [COMPARISION_ROUTING, CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule,

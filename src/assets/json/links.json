@@ -2314,6 +2314,7 @@
                 },
                 {
                     "title": "<b>Translate</b> Clean Code Vs",
+                    "uri": "/ngx-translate-extension/translate-clean-code",
                     "isActive": false,
                     "linkTitle": "clean-code",
                     "refUri": "clean-code",

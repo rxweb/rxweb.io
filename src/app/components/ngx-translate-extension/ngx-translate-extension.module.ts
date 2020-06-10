@@ -47,6 +47,7 @@ import { PowerhousePurePipeComponent } from "./powerhouse/pure-pipe/pure-pipe.co
 import { PurePipeComponent } from "./playground/pure-pipe/pure-pipe.component";
 import { NgxCodeComponent } from "./code/code.component";
 import { ComparisonComponent } from "./comparison/comparison.component";
+import { TranslateCleanCodeComponent } from "./translate-clean-code/translate-clean-code.component";
 
 @Injectable()
 export class TranslateHttpLoader implements TranslateLoader {
@@ -67,7 +68,7 @@ export class TranslateHttpLoader implements TranslateLoader {
         CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
     ],
     declarations: [
-        CliComponent, ComparsionToOtherLibrariesComponent, ComparisonComponent,
+        CliComponent, ComparsionToOtherLibrariesComponent, ComparisonComponent, TranslateCleanCodeComponent, 
         NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, PowerhouseAttributeDirectiveComponent, PowerhousePipeComponent,
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,
