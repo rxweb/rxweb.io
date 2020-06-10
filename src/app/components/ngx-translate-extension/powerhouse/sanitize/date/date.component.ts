@@ -5,28 +5,30 @@ import $ from 'jquery';
 import { translate } from '@rxweb/translate';
 
 @Component({
-  selector: 'app-currency',
-  templateUrl: './currency.component.html',
+  selector: 'app-date',
+  templateUrl: './date.component.html',
 })
-export class CurrencyComponent implements OnInit {
+export class DateComponent implements OnInit {
   @translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
 
-  pay: number = 0.259
+  today: number = Date.now();
 
   examples: any = {
-    currencyStaticValue: {
+    dateDynamicValue: {
       json: `{  
-  "currencyStaticValue": "Pay {{0.259 | currency}}"
+  "dateDynamicValue": "Today is {{today | date}}"
 }`,
-      typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };`,
+      typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
+
+      today: number = Date.now();`,
       html: `<tr>
-  <td><span>Static Value</span></td>
-  <td><span>{{sanitize.raw.currencyStaticValue}}</span></td>
-  <td><span>{{sanitize.currencyStaticValue}}</span></td>
+  <td><span>Dynamic Value</span></td>
+  <td><span>{{sanitize.raw.dateDynamicValue}}</span></td>
+  <td><span>{{sanitize.dateDynamicValue}}</span></td>
 </tr>
 `
     },
-    currencyDynamicValue: {
+    dateDynamicParam: {
       json: `{  
   "currencyDynamicValue": "Pay {{pay | currency}}"
 }`,
