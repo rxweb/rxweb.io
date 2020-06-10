@@ -291,6 +291,30 @@
         "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/transpilers/transpilers.module.ts",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/transpilers/transpilers.module.ts"
       }
+    },
+    {
+      "tabName": "en.json",
+      "outputHtml": {
+        "transloco": "{\r\n  \"home\": \"Home - english\",\r\n  \"params\": \"Replaces standard {{value}} - english\",\r\n  \"messageFormat\": \"The {{{this.gender == 'male' ? 'boy won his' : this.gender == 'female' ? 'girl won her' : 'person won their'}}} race - english\",\r\n  \"messageFormatWithParams\": \"Can replace {{value}} and also give parse messageformat: The {{{this.gender == 'male' ? 'boy won his' : this.gender == 'female' ? 'girl won her' : 'person won their'}}} race - english\",\r\n  \"fromList\": \"from list\",\r\n  \"a\": {\r\n    \"b\": {\r\n      \"c\": \"a.b.c {{fromList}} - english\"\r\n    }\r\n  }\r\n}",
+        "rxweb": "{\r\n  \"home\": \"Home - english\",\r\n  \"params\": \"Replaces standard {{value}} - english\",\r\n  \"messageFormat\": \"The {{{this.gender == 'male' ? 'boy won his' : this.gender == 'female' ? 'girl won her' : 'person won their'}}} race - english\",\r\n  \"messageFormatWithParams\": \"Can replace {{value}} and also give parse messageformat: The {{{this.gender == 'male' ? 'boy won his' : this.gender == 'female' ? 'girl won her' : 'person won their'}}} race - english\",\r\n  \"fromList\": \"from list\",\r\n  \"a\": {\r\n    \"b\": {\r\n      \"c\": \"a.b.c {{fromList}} - english\"\r\n    }\r\n  }\r\n}",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/assets/i18n/transpilers/messageformat/en.json",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/assets/i18n/transpilers/messageformat/en.json"
+      }
+    },
+    {
+      "tabName": "es.json",
+      "outputHtml": {
+        "transloco": "{\r\n  \"home\": \"Home - spanish\",\r\n  \"params\": \"Replaces standard {{value}} - spanish\",\r\n  \"messageFormat\": \"The {gender, select, male {boy won his} female {girl won her} other {person won their}} race - spanish\",\r\n  \"messageFormatWithParams\": \"Can replace {{value}} and also give parse messageformat: The {gender, select, male {boy won his} female {girl won her} other {person won their}} race - spanish\",\r\n  \"fromList\": \"from list\",\r\n  \"a\": {\r\n    \"b\": {\r\n      \"c\": \"a.b.c {{fromList}} - spanish\"\r\n    }\r\n  }\r\n}",
+        "rxweb": "{\r\n  \"home\": \"Home - spanish\",\r\n  \"params\": \"Replaces standard {{value}} - spanish\",\r\n  \"messageFormat\": \"The {gender, select, male {boy won his} female {girl won her} other {person won their}} race - spanish\",\r\n  \"messageFormatWithParams\": \"Can replace {{value}} and also give parse messageformat: The {gender, select, male {boy won his} female {girl won her} other {person won their}} race - spanish\",\r\n  \"fromList\": \"from list\",\r\n  \"a\": {\r\n    \"b\": {\r\n      \"c\": \"a.b.c {{fromList}} - spanish\"\r\n    }\r\n  }\r\n}",
+        "diff": ""
+      },
+      "githubLink": {
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/assets/i18n/transpilers/messageformat/es.json",
+        "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/assets/i18n/transpilers/messageformat/es.json"
+      }
     }
   ]
 }
