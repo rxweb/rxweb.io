@@ -1971,13 +1971,20 @@
             "isActive": false,
             "otherUri": "ngx-translate-extension",
             "childrens": [
-                {
-                    "title": "Getting Started",
-                    "uri": "/ngx-translate-extension/getting-started",
-                    "isActive": false,
-                    "linkTitle": "getting-started",
-                    "refUri": "getting-started"
-                },
+              {
+                "title": "Getting Started",
+                "uri": "/ngx-translate-extension/getting-started",
+                "isActive": false,
+                "linkTitle": "getting-started",
+                "refUri": "getting-started"
+              },
+              {
+                "title": "Feature Comparison",
+                "uri": "/ngx-translate-extension/comparison",
+                "isActive": false,
+                "linkTitle": "comparison",
+                "refUri": "comparison"
+              },
                 {
                     "title": "Translation Powerhouse",
                     "isActive": false,
@@ -2594,14 +2601,8 @@
                     "isActive": false,
                     "linkTitle": "ngxtranslateextensionplayground",
                     "refUri": "ngxtranslateextensionplayground"
-                },
-                {
-                    "title": "Comparison",
-                    "uri": "/ngx-translate-extension/comparison",
-                    "isActive": false,
-                    "linkTitle": "comparison",
-                    "refUri": "comparison"
                 }
+                
             ]
         }
     ]
