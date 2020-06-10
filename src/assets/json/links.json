@@ -2526,67 +2526,24 @@
                                     "uri": "/ngx-translate-extension/code",
                                     "linkTitle": "code",
                                     "refUri": "code",
-                                    "childrens": [
-                                        {
-                                            "title": "SharedModule",
-                                            "isActive": false,
-                                            "uri": "/ngx-translate-extension/code",
-                                            "linkTitle": "code",
-                                            "refUri": "code"
-                                        },
-                                        {
-                                            "title": "Lazy Loaded Modules",
-                                            "isActive": false,
-                                            "uri": "/ngx-translate-extension/code",
-                                            "linkTitle": "code",
-                                            "refUri": "code"
-                                        },
-                                        {
-                                            "title": "Configuration",
-                                            "isActive": false,
-                                            "uri": "/ngx-translate-extension/code",
-                                            "linkTitle": "code",
-                                            "refUri": "code"
-                                        }
-                                    ]
+                                    "childrens": []
                                 },
                                 {
-                                    "title": "Default Language",
+                                    "title": "Lazy Load Modules",
                                     "isActive": false,
                                     "uri": "/ngx-translate-extension/code",
                                     "linkTitle": "code",
                                     "refUri": "code"
                                 },
                                 {
-                                    "title": "TranslateService",
+                                    "title": "Use TranslateService",
                                     "isActive": false,
                                     "uri": "/ngx-translate-extension/code",
                                     "linkTitle": "code",
                                     "refUri": "code"
                                 },
                                 {
-                                    "title": "Define the Translations",
-                                    "isActive": false,
-                                    "uri": "/ngx-translate-extension/code",
-                                    "linkTitle": "code",
-                                    "refUri": "code"
-                                },
-                                {
-                                    "title": "Use Service, pipe or directive",
-                                    "isActive": false,
-                                    "uri": "/ngx-translate-extension/code",
-                                    "linkTitle": "code",
-                                    "refUri": "code"
-                                },
-                                {
-                                    "title": "Use Html Tag",
-                                    "isActive": false,
-                                    "uri": "/ngx-translate-extension/code",
-                                    "linkTitle": "code",
-                                    "refUri": "code"
-                                },
-                                {
-                                    "title": "API",
+                                    "title": "Your Own Loader",
                                     "isActive": false,
                                     "uri": "/ngx-translate-extension/code",
                                     "linkTitle": "code",
