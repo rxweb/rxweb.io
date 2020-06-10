@@ -30,10 +30,10 @@ export class DateComponent implements OnInit {
     },
     dateDynamicParam: {
       json: `{  
-  "currencyDynamicValue": "Pay {{pay | currency}}"
+  "dateStaticParam": "Or if you prefer, {{today | date:'fullDate'}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
-pay: number = 0.259`,
+today: number = Date.now();`,
       html: `<tr>
   <td><span>Dynamic Value</span></td>
   <td><span>{{sanitize.raw.currencyDynamicValue}}</span></td>
@@ -46,13 +46,15 @@ pay: number = 0.259`,
     },
     staticParam: {
       json: `{  
-  "currencyStaticParam": "Pay {{pay | currency:'CAD'}}"
+  "dateDynamicParam": "The time is {{today | date:time}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };`,
       html: `<tr>
-  <td><span>Static Param</span></td>
-  <td><span>{{sanitize.raw.currencyStaticParam}}</span></td>
-  <td><span>{{sanitize.currencyStaticParam}}</span></td>
+  <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Param</span></td>
+  <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.dateDynamicParam}}</span></td>
+  <td style="width:50%">
+    <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.dateDynamicParam}}</span>
+  </td>
 </tr>
 `
     },

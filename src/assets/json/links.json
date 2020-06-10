@@ -4,7 +4,7 @@
             "title": "Getting Started",
             "uri": "getting-started",
             "otherUri": "getting-started",
-            "isOpen": true,
+            "isOpen": false,
             "isHide": true,
             "isActive": false
         },
@@ -15,7 +15,7 @@
                     "title": "Getting Started",
                     "uri": "/getting-started",
                     "otherUri": "getting-started",
-                    "isOpen": true,
+                    "isOpen": false,
                     "isActive": false
                 },
                 {
@@ -1981,7 +1981,7 @@
                 {
                     "title": "Translation Powerhouse",
                     "isActive": false,
-                    "isOpen": true,
+                    "isOpen": false,
                     "linkTitle": "powerhouse-of-translation",
                     "refUri": "powerhouse-of-translation",
                     "childrens": [
@@ -2240,7 +2240,7 @@
                         {
                             "title": "Sanitizer",
                             "isActive": false,
-                            "isOpen": true,
+                            "isOpen": false,
                             "linkTitle": "sanitize",
                             "refUri": "sanitize",
                             "childrens": [
@@ -2254,7 +2254,7 @@
                                 {
                                     "title": "Date",
                                     "uri": "/ngx-translate-extension/sanitize/date",
-                                    "isActive": true,
+                                    "isActive": false,
                                     "linkTitle": "date",
                                     "refUri": "date"
                                 },
@@ -2602,56 +2602,56 @@
                             "childrens": [
                                 {
                                     "title": "missing-translation-handler",
-                                    "uri": "/ngx-translate-extension/comparison/missing-translation-handler",
+                                    "uri": "/ngx-translate-extension/spec-comparison/missing-translation-handler",
                                     "isActive": false,
                                     "linkTitle": "missing-translation-handler",
                                     "refUri": "missing-translation-handler"
                                 },
                                 {
                                     "title": "translate.compiler",
-                                    "uri": "/ngx-translate-extension/comparison/translate-compiler",
+                                    "uri": "/ngx-translate-extension/spec-comparison/translate-compiler",
                                     "isActive": false,
                                     "linkTitle": "translate-compiler",
                                     "refUri": "translate-compiler"
                                 },
                                 {
                                     "title": "translate.directive",
-                                    "uri": "/ngx-translate-extension/comparison/translate-directive",
+                                    "uri": "/ngx-translate-extension/spec-comparison/translate-directive",
                                     "isActive": false,
                                     "linkTitle": "translate-directive",
                                     "refUri": "translate-directive"
                                 },
                                 {
                                     "title": "translate.loader",
-                                    "uri": "/ngx-translate-extension/comparison/translate-loader",
+                                    "uri": "/ngx-translate-extension/spec-comparison/translate-loader",
                                     "isActive": false,
                                     "linkTitle": "translate-loader",
                                     "refUri": "translate-loader"
                                 },
                                 {
                                     "title": "translate.parser",
-                                    "uri": "/ngx-translate-extension/comparison/translate-parser",
+                                    "uri": "/ngx-translate-extension/spec-comparison/translate-parser",
                                     "isActive": false,
                                     "linkTitle": "translate-parser",
                                     "refUri": "translate-parser"
                                 },
                                 {
                                     "title": "translate.pipe",
-                                    "uri": "/ngx-translate-extension/comparison/translate-pipe",
+                                    "uri": "/ngx-translate-extension/spec-comparison/translate-pipe",
                                     "isActive": false,
                                     "linkTitle": "translate-pipe",
                                     "refUri": "translate-pipe"
                                 },
                                 {
                                     "title": "translate.service",
-                                    "uri": "/ngx-translate-extension/comparison/translate-service",
+                                    "uri": "/ngx-translate-extension/spec-comparison/translate-service",
                                     "isActive": false,
                                     "linkTitle": "translate-service",
                                     "refUri": "translate-service"
                                 },
                                 {
                                     "title": "translate.store",
-                                    "uri": "/ngx-translate-extension/comparison/translate-store",
+                                    "uri": "/ngx-translate-extension/spec-comparison/translate-store",
                                     "isActive": false,
                                     "linkTitle": "translate-store",
                                     "refUri": "translate-store"
@@ -2673,6 +2673,13 @@
                     "isActive": false,
                     "linkTitle": "ngxtranslateextensionplayground",
                     "refUri": "ngxtranslateextensionplayground"
+                },
+                {
+                    "title": "Comparison",
+                    "uri": "/ngx-translate-extension/comparison",
+                    "isActive": false,
+                    "linkTitle": "comparison",
+                    "refUri": "comparison"
                 }
             ]
         }

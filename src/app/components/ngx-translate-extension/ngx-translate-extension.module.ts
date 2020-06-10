@@ -11,15 +11,7 @@ import { RxFormsModule } from "@rx/forms";
 import { RxViewModule } from "@rx/view";
 import { ClipboardModule } from "ngx-clipboard";
 import { HighlightModule } from "ngx-highlightjs";
-import { MissingTranslationHandlerComponent } from "./comparison/missing-translation-handler/missing-translation-handler.component";
 import { NgModule } from "@angular/core";
-import { TranslateCompilerComponent } from "./comparison/translate-compiler/translate-compiler.component";
-import { TranslateDirectiveComponent } from "./comparison/translate-directive/translate-directive.component";
-import { TranslateLoaderComponent } from "./comparison/translate-loader/translate-loader.component";
-import { TranslatePipeComponent } from "./comparison/translate-pipe/translate-pipe.component";
-import { TranslateServiceComponent } from "./comparison/translate-service/translate-service.component";
-import { TranslateStoreComponent } from "./comparison/translate-store/translate-store.component";
-import { TranslateParserComponent } from "./comparison/translate-parser/translate-parser.component";
 import { NgxTranslateExtensionGettingStartedComponent } from "./getting-started/getting-started.component";
 import { ConfidenceComponent } from "./confidence/confidence.component";
 import { PowerhouseAttributeDirectiveComponent } from "./powerhouse/attribute-directive/attribute-directive.component";
@@ -31,7 +23,6 @@ import { TranslateModule, TranslateService } from "@rxweb/ngx-translate-extensio
 import { HttpClient } from "@angular/common/http";
 import { TranslateLoader } from "@ngx-translate/core";
 import { Observable } from 'rxjs';
-import { isObject } from 'util';
 import { Injectable } from "@angular/core";
 import { PowerhouseStructuralDirectiveChildComponent } from "./powerhouse/structural-directive/structural-directive-child/structural-directive-child.component";
 import { ChangeLanguageComponent } from "./playground/change-language/change-language.component";
@@ -55,6 +46,7 @@ import { CustomPipe } from "./playground/sanitize/custom.pipe";
 import { PowerhousePurePipeComponent } from "./powerhouse/pure-pipe/pure-pipe.component";
 import { PurePipeComponent } from "./playground/pure-pipe/pure-pipe.component";
 import { NgxCodeComponent } from "./code/code.component";
+import { ComparisonComponent } from "./comparison/comparison.component";
 
 @Injectable()
 export class TranslateHttpLoader implements TranslateLoader {
@@ -75,7 +67,7 @@ export class TranslateHttpLoader implements TranslateLoader {
         CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
     ],
     declarations: [
-        CliComponent,ComparsionToOtherLibrariesComponent,
+        CliComponent, ComparsionToOtherLibrariesComponent, ComparisonComponent,
         NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, PowerhouseAttributeDirectiveComponent, PowerhousePipeComponent,
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,
