@@ -1,13 +1,13 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MissingTranslationHandlerComponent } from './comparison/missing-translation-handler/missing-translation-handler.component';
-import { TranslateCompilerComponent } from './comparison/translate-compiler/translate-compiler.component';
-import { TranslateDirectiveComponent } from './comparison/translate-directive/translate-directive.component';
-import { TranslateLoaderComponent } from './comparison/translate-loader/translate-loader.component';
-import { TranslateParserComponent } from './comparison/translate-parser/translate-parser.component';
-import { TranslatePipeComponent } from './comparison/translate-pipe/translate-pipe.component';
-import { TranslateServiceComponent } from './comparison/translate-service/translate-service.component';
-import { TranslateStoreComponent } from './comparison/translate-store/translate-store.component';
+import { MissingTranslationHandlerComponent } from './spec-comparison/missing-translation-handler/missing-translation-handler.component';
+import { TranslateCompilerComponent } from './spec-comparison/translate-compiler/translate-compiler.component';
+import { TranslateDirectiveComponent } from './spec-comparison/translate-directive/translate-directive.component';
+import { TranslateLoaderComponent } from './spec-comparison/translate-loader/translate-loader.component';
+import { TranslateParserComponent } from './spec-comparison/translate-parser/translate-parser.component';
+import { TranslatePipeComponent } from './spec-comparison/translate-pipe/translate-pipe.component';
+import { TranslateServiceComponent } from './spec-comparison/translate-service/translate-service.component';
+import { TranslateStoreComponent } from './spec-comparison/translate-store/translate-store.component';
 import { NgxTranslateExtensionGettingStartedComponent } from './getting-started/getting-started.component';
 import { PowerhouseAttributeDirectiveComponent } from './powerhouse/attribute-directive/attribute-directive.component';
 import { PowerhousePipeComponent } from './powerhouse/pipe/pipe.component';
@@ -23,6 +23,8 @@ import { CliComponent } from './cli/cli.component';
 import { ComparsionToOtherLibrariesComponent } from './comparison-to-other-libraries/comparison-to-other-libraries.component';
 import { PowerhouseSanitizeComponent } from './powerhouse/sanitize/sanitize.component';
 import { PowerhousePurePipeComponent } from './powerhouse/pure-pipe/pure-pipe.component';
+import { NgxCodeComponent } from './code/code.component';
+import { ComparisonComponent } from './comparison/comparison.component';
 
 
 const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
@@ -54,11 +56,22 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   },
   { path: ':languageCode/change-language', component: PowerhouseChangeLanguageComponent },
   { path: 'other-intuitive-features', component: PowerhouseOtherIntruitiveFeaturesComponent },
-  { path: 'sanitize', component: PowerhouseSanitizeComponent },
+  { path: 'sanitize', 
+  // component: PowerhouseSanitizeComponent,
+    loadChildren: 'src/app/components/ngx-translate-extension/powerhouse/sanitize/sanitize.module#SanitizeModule' 
+  },
   { path: 'pure-pipe', component: PowerhousePurePipeComponent },
   {
+    path: 'spec-comparison',
+    loadChildren: 'src/app/components/ngx-translate-extension/spec-comparison/comparison.module#ComparisonModule',
+  },
+  {
+    path: 'code',
+    component: NgxCodeComponent
+  },
+  {
     path: 'comparison',
-    loadChildren: 'src/app/components/ngx-translate-extension/comparison/comparison.module#ComparisonModule',
+    component: ComparisonComponent
   },
   {
     path: 'rxweb-cli',

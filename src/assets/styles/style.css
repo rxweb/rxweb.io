@@ -9439,8 +9439,8 @@ div#v-pills-tabContent {
 }
 
 .d2h-del {
-    background-color: #fffafa;
-    border-color: #e9aeae;
+  background-color: #ffeded;
+  border-color: #e9aeae;
 }
 
 .d2h-ins {
@@ -9487,6 +9487,14 @@ div#v-pills-tabContent {
     background-color: #c7e9d7!important;
 }
 
+.md-sanitizer-inner {
+    background-color: #cad0f3!important;
+}
+
+.md-pure-pipe-inner {
+    background-color: #f7aca6!important;
+}
+
 .tooltip.top .tooltip-arrow {
     border-top-color: #f7fcff;
 }
@@ -9501,4 +9509,94 @@ div#v-pills-tabContent {
 
 .tooltip.left .tooltip-arrow {
     border-left-color: #f7fcff;
+}
+
+.ngx-highlight {
+  background-color: #fff4f6;
+  color: #9b112b;
+  padding: 3px;
+  border-radius: 5px;
+}
+.ngx-extension-highlight {
+  background-color: #eafaf6;
+  color: #093f30;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.ts-code-design {
+  padding:20px;
+  font-size:16px;
+  cursor:pointer;
+}
+  .ts-code-design .hljs-keyword {
+    color: #1a20ff;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .ts-code-design .hljs-keyword-black {
+    color: #090c0f;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .ts-code-design .import-class {
+    color: #52a8cb;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .ts-code-design .hljs-string-remove {
+    background-color: #fff4f6;
+    color: #9b112b;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+
+  .ts-code-design .hljs-string-add {
+    background-color: #eafaf6;
+    color: #093f30;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+.remove-code-background {
+  background-color: #fcfcfc;
+}
+  .remove-code-background:hover {
+    background-color: #faf3f3;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  }
+.add-code-background {
+  background-color: #fcfcfc;
+  border-left: solid 1px #ebe8e8;
+}
+
+
+  .add-code-background:hover {
+    background-color: #ecf8f6;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  }
+  .heading-margin{
+    margin-top:50px !important;
+    margin-bottom:10px;
+  }
+.padding-right-zero {
+  padding-right: 0px !important;
+}
+
+.padding-left-zero {
+  padding-left: 0px;
+}
+
+.extension h2 {
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 15px;
+  color: #0b263b;
+   font-weight: normal; 
 }

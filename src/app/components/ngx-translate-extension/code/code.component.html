@@ -1,0 +1,110 @@
+<app-top-bar></app-top-bar>
+
+<div class="code-component hpanel extension">
+  <div class="title-bar top_title"><p>Extend Your Ngx-Translate Code</p></div>
+  <div class="title-bar"><p>Extensible guide of <span class="ngx-highlight">@ngx-translate/core</span> to <span class="ngx-extension-highlight">@rxweb/ngx-translate-extension</span>.</p></div>
+
+  <div class="row page-section">
+    <div class="col-lg-12">
+      <h2>Installation</h2>
+      <p>
+        You don't have to uninstall the <span class="highlighted">@ngx-translate/core</span> package, instead of you have to install two packages to avail more feature but the base is <span class="highlighted">@ngx-translate/core</span>.
+      </p>
+      <div class="row">
+        <div class="col-lg-12 ts-code-design add-code-background" style="background-color: #f8f8f8;
+    ">
+          <span>npm</span> install <span style="padding-left: 10px;padding-right: 10px;">@rxweb/ngx-translate-extension</span>
+          <span style="padding-right: 10px;">@rxweb/translate</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row page-section">
+    <div class="col-lg-12">
+      <h2 class="heading-margin">Import TranslateModule</h2>
+      <p>
+        Throughout application the <span class="highlighted">TranslateModule</span> will be imported from <span class="highlighted">@rxweb/ngx-translate-extension</span>.
+      </p>
+      <div class="row">
+        <div class="col-md-6 ts-code-design remove-code-background">
+          <div class="code_eg">Before</div>
+          <span class="hljs-keyword">import</span>
+          {{'{'}}<span class="import-class">TranslateModule</span>{{'}'}}
+          <span class="hljs-keyword">from</span>
+          <span class="hljs-string-remove">"@ngx-translate/core"</span>
+        </div>
+        <div class="col-md-6 ts-code-design add-code-background">
+          <div class="code_eg">After</div>
+          <span class="hljs-keyword">import</span>
+          {{'{'}}<span class="import-class">TranslateModule</span>{{'}'}}
+          <span class="hljs-keyword">from</span>
+          <span class="hljs-string-add">"@rxweb/ngx-translate-extension"</span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="row page-section">
+    <div class="col-lg-12">
+      <h2 class="heading-margin">Lazy Load Modules</h2>
+      <p>
+        There is no need use <span class="highlighted">forChild</span> in child modules.
+      </p>
+      <div class="row">
+        <div class="col-md-6 ts-code-design remove-code-background">
+          <div class="code_eg">Before</div>
+          <span class="hljs-keyword-black">imports:</span>
+          <span class="hljs-keyword-black">[</span>
+          <span class="import-class padding-right-zero">TranslateModule</span><span class="hljs-keyword-black padding-left-zero hljs-string-remove">.forChild({{'{'}}...{{'}'}})</span>
+          <span class="hljs-keyword-black">]</span>
+        </div>
+        <div class="col-md-6 ts-code-design add-code-background">
+          <div class="code_eg">After</div>
+          <span class="hljs-keyword-black">imports:</span>
+          <span class="hljs-keyword-black">[</span>
+          <span class="import-class">TranslateModule</span>
+          <span class="hljs-keyword-black">]</span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="row page-section">
+    <div class="col-lg-12">
+      <h2 class="heading-margin">Use TranslateService</h2>
+      <p>
+        All methods and properties is same as before, the only thing is you have to change the package name, while importing the <span class="highlighted">TranslateService</span>.
+      </p>
+      <div class="row">
+        <div class="col-md-6 ts-code-design remove-code-background">
+          <div class="code_eg">Before</div>
+          <span class="hljs-keyword">import</span>
+          {{'{'}}<span class="import-class">TranslateService</span>{{'}'}}
+          <span class="hljs-keyword">from</span>
+          <span class="hljs-string-remove">"@ngx-translate/core"</span>
+        </div>
+        <div class="col-md-6 ts-code-design add-code-background">
+          <div class="code_eg">After</div>
+          <span class="hljs-keyword">import</span>
+          {{'{'}}<span class="import-class">TranslateService</span>{{'}'}}
+          <span class="hljs-keyword">from</span>
+          <span class="hljs-string-add">"@rxweb/ngx-translate-extension"</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row page-section">
+    <div class="col-lg-12">
+      <h2 class="heading-margin">Your Own Loader</h2>
+      <p>
+        Slight change in paramter value, You will get <span class="highlighted">string</span> as well as <span class="highlighted">LoaderTranslationConfig</span> object. As <span class="highlighted">LoaderTranslationConfig</span> object contains 'translationName', 'lang' and 'filePath'. Its not necessary all time you will get all properties values.
+      </p>
+    </div>
+  </div>

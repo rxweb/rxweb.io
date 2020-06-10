@@ -31,7 +31,7 @@
       "tabName": "on-push.component.html",
       "outputHtml": {
       "transloco": "<ng-container transloco=\"let t\">\r\n <ul>\r\n <li>{{ t('home') }}<\/li>\r\n <li>{{ t('alert', { value: dynamic }) }}<\/li>\r\n <li>{{ t('a.b.c') }}<\/li>\r\n <\/ul>\r\n<\/ng-container>\r\n\r\n<ul>\r\n <li><span transloco=\"home\"><\/span><\/li>\r\n <li><span transloco=\"alert\" [translocoParams]=\"{ value: dynamic }\"><\/span><\/li>\r\n <li><span transloco=\"a.b.c\"><\/span><\/li>\r\n <li><span [transloco]=\"key\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li>{{ 'home' | transloco }}<\/li>\r\n <li>{{ 'alert' | transloco: { value: dynamic } }}<\/li>\r\n <li>{{ 'a.b.c' | transloco }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li ngFor=\"let key of translateList\">{{ key | transloco }}<\/li>\r\n<\/ul>",
-      "rxweb": " <ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n <\/ul>\r\n\r\n<ul>\r\n <li><b>Regular: <\/b><span>{{ global.home }}<\/span><\/li>\r\n <li><span>{{ global.alert }}<\/span><\/li>\r\n <li><span>{{ global.a.b.c }}<\/span><\/li>\r\n <li><span [innerText]=\"global[key]\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li *ngFor=\"let key of translateList\">{{ global.get(key) }}<\/li>\r\n<\/ul>",
+      "rxweb": " <ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n <\/ul>\r\n\r\n<ul>\r\n <li><span>{{ global.home }}<\/span><\/li>\r\n <li><span>{{ global.alert }}<\/span><\/li>\r\n <li><span>{{ global.a.b.c }}<\/span><\/li>\r\n <li><span [innerText]=\"global[key]\"><\/span><\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li>{{ global.home }}<\/li>\r\n <li>{{ global.alert }}<\/li>\r\n <li>{{ global.a.b.c }}<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n <li *ngFor=\"let key of translateList\">{{ global.get(key) }}<\/li>\r\n<\/ul>",
       "diff": ""
       },
       "githubLink": {
@@ -56,8 +56,8 @@
       {
       "tabName": "lazy.component.html",
       "outputHtml": {
-      "transloco": "<h4>Scope is set to `admin-page` in module's providers<\/h4>\r\n<ng-container transloco=\"let t\">\r\n <p>{{ t('adminPage.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h4>Read from the default scope `admin-page`<\/h4>\r\n<ng-container transloco=\"let t; read: 'adminPage'\">\r\n <p>{{ t('read') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h4>Scope is set to `lazy-page` inline in the directive<\/h4>\r\n<ng-container *transloco=\"let t; scope: 'lazy-page'; loadingTpl: loading\">\r\n <p>{{ t('lazyPage.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-template #loading>\r\n <p>Loading...<\/p>\r\n<\/ng-template>\r\n",
-      "rxweb": "<h4>Scope is set to `admin-page` in module's providers<\/h4>\r\n <p>{{ adminPage.title }}<\/p>\r\n\r\n<h4>Read from the default scope `admin-page`<\/h4>\r\n <p>{{ adminPage.read }}<\/p>\r\n\r\n<h4>Scope is set to `lazy-page` inline in the directive<\/h4>\r\n <p>{{ lazyPage.title }}<\/p>\r\n",
+      "transloco": "<ng-container transloco=\"let t\">\r\n <p>{{ t('adminPage.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n\r\n<ng-container transloco=\"let t; read: 'adminPage'\">\r\n <p>{{ t('read') }}<\/p>\r\n<\/ng-container>\r\n\r\n\r\n<ng-container *transloco=\"let t; scope: 'lazy-page'; loadingTpl: loading\">\r\n <p>{{ t('lazyPage.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-template #loading>\r\n <p>Loading...<\/p>\r\n<\/ng-template>\r\n",
+      "rxweb": " <p>{{ adminPage.title }}<\/p>\r\n\r\n\r\n <p>{{ adminPage.read }}<\/p>\r\n\r\n\r\n <p>{{ lazyPage.title }}<\/p>\r\n",
       "diff": ""
       },
       "githubLink": {
@@ -94,8 +94,8 @@
     {
       "tabName": "scope-sharing.component.html",
       "outputHtml": {
-        "transloco": "<h5>Structural<\/h5>\r\n<ng-container *transloco=\"let t\">\r\n  <p>{{ t('todos.title') }}<\/p>\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h5>Directive<\/h5>\r\n<h6>Scope is set to `lazy-page` inline<\/h6>\r\n<p transloco=\"lazyPage.title\" translocoScope=\"lazy-page\"><\/p>\r\n<p transloco=\"b\"><\/p>\r\n\r\n<h5>Pipe<\/h5>\r\n<p>{{ 'todos.title' | transloco }}<\/p>\r\n<p>{{ 'home' | transloco }}<\/p>\r\n\r\n<h5>Use read to get translations of a nested property<\/h5>\r\n\r\n<ng-container *transloco=\"let t; read: 'nested'\">\r\n  <h5>{{ t('title') }}<\/h5>\r\n  <p>{{ t('desc') }}<\/p>\r\n<\/ng-container>",
-        "rxweb": "<h5>Structural<\/h5>\r\n<p>{{ todos.title }}<\/p>\r\n<p>{{ global.home }}<\/p>\r\n\r\n<h5>Directive<\/h5>\r\n<h6>Scope is set to `lazy-page` inline<\/h6>\r\n<p>{{ lazyPage.title }}<\/p>\r\n<p>{{ global.b }}<\/p>\r\n\r\n<h5>Pipe<\/h5>\r\n<p>{{ todos.title }}<\/p>\r\n<p>{{ global.home }}<\/p>\r\n\r\n<h5>Use read to get translations of a nested property<\/h5>\r\n\r\n<h5>{{ global.nested.title }}<\/h5>\r\n<p>{{ global.nested.desc }}<\/p>\r\n",
+        "transloco": "<ng-container *transloco=\"let t\">\r\n  <p>{{ t('todos.title') }}<\/p>\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n\r\n<p transloco=\"lazyPage.title\" translocoScope=\"lazy-page\"><\/p>\r\n<p transloco=\"b\"><\/p>\r\n\r\n\r\n<p>{{ 'todos.title' | transloco }}<\/p>\r\n<p>{{ 'home' | transloco }}<\/p>\r\n\r\n\r\n\r\n<ng-container *transloco=\"let t; read: 'nested'\">\r\n  <h5>{{ t('title') }}<\/h5>\r\n  <p>{{ t('desc') }}<\/p>\r\n<\/ng-container>",
+        "rxweb": "  <p>{{ todos.title }}<\/p>\r\n  <p>{{ global.home }}<\/p>\r\n\r\n\r\n<p>{{ lazyPage.title }}<\/p>\r\n<p>{{ global.b }}<\/p>\r\n\r\n\r\n<p>{{ todos.title }}<\/p>\r\n<p>{{ global.home }}<\/p>\r\n\r\n\r\n\r\n  <h5>{{ global.nested.title }}<\/h5>\r\n  <p>{{ global.nested.desc }}<\/p>\r\n",
         "diff": ""
       },
       "githubLink": {
@@ -170,8 +170,8 @@
       {
       "tabName": "dynamic-translation.component.html",
       "outputHtml": {
-      "transloco": "<h4>Set Translation<\/h4>\r\n\r\n<ng-container transloco=\"let t\">\r\n <p>{{ t('home') }}<\/p>\r\n <p>Press Add new key to see me: {{ t('newKey') }}<\/p>\r\n<\/ng-container>\r\n\r\n<button (click)=\"updateTitle()\">\r\n Update the home key\r\n<\/button>\r\n\r\n<button (click)=\"addNewKey()\">\r\n Add new key\r\n<\/button>\r\n\r\n<hr \/>\r\n\r\n<h4>Add Translation Object<\/h4>\r\n\r\n<ng-container transloco=\"let t\">\r\n <p>New translation object title: {{ t('newTranslation.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<button (click)=\"addTranslationObj()\">\r\n Add Translation Object\r\n<\/button>\r\n",
-      "rxweb": "<h4>Set Translation<\/h4>\r\n\r\n <p>{{ global.home }}<\/p>\r\n <p>Press Add new key to see me: {{ global.newKey }}<\/p>\r\n\r\n<button (click)=\"updateTitle()\">\r\n Update the home key\r\n<\/button>\r\n\r\n<button (click)=\"addNewKey()\">\r\n Add new key\r\n<\/button>\r\n\r\n<hr \/>\r\n\r\n<h4>Add Translation Object<\/h4>\r\n\r\n<div>\r\n <p>New translation object title: <span *ngIf=\"global.newTranslation\">{{ global.newTranslation.title }}<\/span><\/p>\r\n<\/div>\r\n\r\n<button (click)=\"addTranslationObj()\">\r\n Add Translation Object\r\n<\/button>\r\n",
+      "transloco": "<ng-container transloco=\"let t\">\r\n <p>{{ t('home') }}<\/p>\r\n <p>Press Add new key to see me: {{ t('newKey') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-container transloco=\"let t\">\r\n <p>New translation object title: {{ t('newTranslation.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n",
+      "rxweb": " <p>{{ global.home }}<\/p>\r\n <p>Press Add new key to see me: {{ global.newKey }}<\/p>\r\n\r\n<p>New translation object title: {{ global.newTranslation.title }}<\/p>\r\n",
       "diff": ""
       },
       "githubLink": {
@@ -209,8 +209,8 @@
     {
       "tabName": "multi-langs.component.html",
       "outputHtml": {
-        "transloco": "<h4>English: (global)<\/h4>\r\n<ng-container *transloco=\"let t\">\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h4>Spanish: (inline lang, scope: lazy-page)<\/h4>\r\n<ng-container *transloco=\"let t; lang: 'es'; loadingTpl: loading; scope: 'lazy-page'\">\r\n  <p>{{ t('lazyPage.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<provider-lang><\/provider-lang>\r\n\r\n<h4>Static Lang: <code>es<\/code><\/h4>\r\n<ng-container *transloco=\"let t; lang: 'es|static'; loadingTpl: loading\">\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<h4>Static Lang with scope <code>lazy-page\/es<\/code><\/h4>\r\n<ng-container *transloco=\"let t; lang: 'es|static'; loadingTpl: loading; scope: 'lazy-page'\">\r\n  <p>{{ t('lazyPage.title') }}<\/p>\r\n<\/ng-container>",
-        "rxweb": "<h4>English: (global)<\/h4>\r\n  <p>{{ global.home }}<\/p>\r\n\r\n<h4>Spanish: (inline lang, scope: lazy-page)<\/h4>\r\n  <p>{{ lazyPage.title }}<\/p>\r\n\r\n<provider-lang *rxTranslate=\"true\"><\/provider-lang>\r\n\r\n<h4>Static Lang: <code>es<\/code><\/h4>\r\n  <p>{{ globalSpanish.home }}<\/p>\r\n\r\n<h4>Static Lang with scope <code>lazy-page\/es<\/code><\/h4>\r\n  <p>{{ lazyPageSpanish.title }}<\/p>\r\n",
+        "transloco": "<ng-container *transloco=\"let t\">\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-container *transloco=\"let t; lang: 'es'; loadingTpl: loading; scope: 'lazy-page'\">\r\n  <p>{{ t('lazyPage.title') }}<\/p>\r\n<\/ng-container>\r\n\r\n<provider-lang><\/provider-lang>\r\n\r\n<ng-container *transloco=\"let t; lang: 'es|static'; loadingTpl: loading\">\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-container *transloco=\"let t; lang: 'es|static'; loadingTpl: loading; scope: 'lazy-page'\">\r\n  <p>{{ t('lazyPage.title') }}<\/p>\r\n<\/ng-container>",
+        "rxweb": "  <p>{{ global.home }}<\/p>\r\n\r\n  <p>{{ lazyPage.title }}<\/p>\r\n\r\n<provider-lang *rxTranslate=\"true\"><\/provider-lang>\r\n\r\n  <p>{{ globalSpanish.home }}<\/p>\r\n\r\n  <p>{{ lazyPageSpanish.title }}<\/p>\r\n",
         "diff": ""
       },
       "githubLink": {
@@ -245,8 +245,8 @@
     {
       "tabName": "provider-lang.component.html",
       "outputHtml": {
-        "transloco": "<h4>Provider Scope (lang is set to `es` in providers)<\/h4>\r\n<ng-container *transloco=\"let t\">\r\n  <p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-container *transloco=\"let t; lang: 'en'\">\r\n  <p>Inline (en) wins: {{ t('home') }}<\/p>\r\n<\/ng-container>\r\n",
-        "rxweb": "<h4>Provider Scope (lang is set to `es` in providers)<\/h4>\r\n  <p>{{ globalSpanish.home }}<\/p>\r\n\r\n  <p>Inline (en) wins: {{ global.home }}<\/p>",
+        "transloco": "<ng-container *transloco=\"let t\">\r\n<p>{{ t('home') }}<\/p>\r\n<\/ng-container>\r\n\r\n<ng-container *transloco=\"let t; lang: 'en'\">\r\n  <p>Inline (en) wins: {{ t('home') }}<\/p>\r\n<\/ng-container>\r\n",
+        "rxweb": "<p>{{ globalSpanish.home }}<\/p>\r\n\r\n  <p>Inline (en) wins: {{ global.home }}<\/p>",
         "diff": ""
       },
       "githubLink": {
@@ -271,8 +271,8 @@
     {
       "tabName": "transpilers.component.html",
       "outputHtml": {
-        "transloco": "<h2>MessageFormat Transpiler<\/h2>\r\n<hr \/>\r\n<h4>Structural Directive<\/h4>\r\n<ng-container *transloco=\"let t\">\r\n  <ul>\r\n    <li><b>Regular: <\/b>{{ t('mf.home') }}<\/li>\r\n    <li><b>With params: <\/b>{{ t('mf.params', { value: dynamic }) }}<\/li>\r\n    <li>\r\n      <b>With translation reuse: <\/b> {{ t('mf.a.b.c') }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat: <\/b>{{ t('mf.messageFormat', { gender: 'male' }) }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with dynamic value: <\/b>{{ t('mf.messageFormat', { gender: userGender }) }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with transloco standard params: <\/b\r\n      >{{ t('mf.messageFormatWithParams', { value: 'transloco params', gender: '' }) }}\r\n    <\/li>\r\n  <\/ul>\r\n<\/ng-container>",
-        "rxweb": "<h2>MessageFormat Transpiler<\/h2>\r\n<hr \/>\r\n<h4>Structural Directive<\/h4>\r\n\r\n  <ul>\r\n    <li><b>Regular: <\/b>{{ transpilers.home }}<\/li>\r\n    <li><b>With params: <\/b>{{ transpilers.params }}<\/li>\r\n    <li>\r\n      <b>With translation reuse: <\/b> {{ transpilers.a.b.c }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat: <\/b>{{ transpilers.json.messageFormat | rxTranslate:{ gender: 'male' } }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with dynamic value: <\/b>{{ transpilers.messageFormat }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with transloco standard params: <\/b>{{ transpilers.json.messageFormatWithParams | rxTranslate:{ value: 'transloco params', gender: '' } }}\r\n    <\/li>\r\n  <\/ul>\r\n",
+        "transloco": "<ng-container *transloco=\"let t\">\r\n  <ul>\r\n    <li><b>Regular: <\/b>{{ t('mf.home') }}<\/li>\r\n    <li><b>With params: <\/b>{{ t('mf.params', { value: dynamic }) }}<\/li>\r\n    <li>\r\n      <b>With translation reuse: <\/b> {{ t('mf.a.b.c') }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat: <\/b>{{ t('mf.messageFormat', { gender: 'male' }) }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with dynamic value: <\/b>{{ t('mf.messageFormat', { gender: userGender }) }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with transloco standard params: <\/b\r\n      >{{ t('mf.messageFormatWithParams', { value: 'transloco params', gender: '' }) }}\r\n    <\/li>\r\n  <\/ul>\r\n<\/ng-container>",
+        "rxweb": "  <ul>\r\n    <li><b>Regular: <\/b>{{ transpilers.home }}<\/li>\r\n    <li><b>With params: <\/b>{{ transpilers.params }}<\/li>\r\n    <li>\r\n      <b>With translation reuse: <\/b> {{ transpilers.a.b.c }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat: <\/b>{{ transpilers.json.messageFormat | rxTranslate:{ gender: 'male' } }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with dynamic value: <\/b>{{ transpilers.messageFormat }}\r\n    <\/li>\r\n    <li>\r\n      <b>Using messageformat with transloco standard params: <\/b>{{ transpilers.json.messageFormatWithParams | rxTranslate:{ value: 'transloco params', gender: '' } }}\r\n    <\/li>\r\n  <\/ul>\r\n",
         "diff": ""
       },
       "githubLink": {

@@ -10,19 +10,19 @@
       </tr>
     </thead>
 
-    <tr>
+    <tr  *ngIf="global.raw">
       <td class="category">Multilingual Text with Static Parameter </td>
       <td>
-        <!-- <span class="margin-left badge badge-{{global.languageCode}}">
+        <span class="margin-left badge badge-{{global.languageCode}}">
 
           {{global.raw.notification | rxTranslate:{'name':'Munad'} }}
 
-        </span> -->
+        </span>
 
       </td>
     </tr>
 
-    <!-- <tr>
+    <tr *ngIf="global.raw">
       <td class="category">Multilingual Text with Dynamic Parameter </td>
       <td>
         <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control">
@@ -34,8 +34,6 @@
         </span>
 
       </td>
-    </tr> -->
-
-
+    </tr>
   </table>
 </div>
