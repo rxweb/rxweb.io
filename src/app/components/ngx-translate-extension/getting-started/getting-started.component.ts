@@ -17,12 +17,7 @@ export class NgxTranslateExtensionGettingStartedComponent implements OnInit {
   pageTitle: any = this.rightSidebarLinks[0];
  
 
-  htmlBinding: any = `<div class="badge badge-warning">{{global.greetMessage}}</div>
-<select>
- <option *ngFor="let item of languages | async" 
- [value]="item.languageId">{{item.languageName}}</option>
-</select>
-  `;
+  htmlBinding: any = `<div class="badge badge-warning">{{global.greetMessage}}</div>`;
   titleData: any = { codeContent: {} };
   mainTab: string = "installation"
   importModule: any = `RxTranslateModule.forRoot({
