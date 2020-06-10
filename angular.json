@@ -37,7 +37,8 @@
               "src/assets/scripts/highlight.pack.js",
               "src/assets/scripts/moment.js",
               "src/assets/scripts/showdown.js",
-              "src/assets/scripts/prism.js"
+              "src/assets/scripts/prism.js",
+              "src/assets/scripts/giffer.js"
             ]
           },
           "configurations": {

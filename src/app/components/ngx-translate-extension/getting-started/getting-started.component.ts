@@ -4,8 +4,14 @@ import { Http } from '@angular/http';
 
 import { TranslateService } from '@rxweb/ngx-translate-extension';
 import { translate, RxTranslation } from '@rxweb/translate';
+
+
 declare const Prism;
 declare const $;
+
+declare function Gifffer(): any;
+
+
 
 @Component({
   templateUrl: './getting-started.component.html',
@@ -15,7 +21,7 @@ export class NgxTranslateExtensionGettingStartedComponent implements OnInit {
   showComponent: boolean = false;
   rightSidebarLinks: any = [{ "id": "getting-started", "title": "Getting Started", "subLink": null }, { "id": "getting-started", "title": "Getting Started", "subLink": null }];
   pageTitle: any = this.rightSidebarLinks[0];
- 
+
 
   htmlBinding: any = `<div class="badge badge-warning">{{global.greetMessage}}</div>`;
   titleData: any = { codeContent: {} };
@@ -42,10 +48,10 @@ export class NgxTranslateExtensionGettingStartedComponent implements OnInit {
     "create": "Create Account"
   }
 }`
-get day(){
-  var currentHour = (new Date()).getHours();
-  return currentHour < 12 ? 'Good Morning' : 'Good Day';
-}
+  get day() {
+    var currentHour = (new Date()).getHours();
+    return currentHour < 12 ? 'Good Morning' : 'Good Day';
+  }
 
   code: any = `{
   "morningText":"Good Morning",
@@ -58,12 +64,12 @@ get day(){
   frcode: any = `{
   "title":"Traduire avec RxWeb"
 }`
-    constructor(private applicationBroadCaster: ApplicationBroadcaster, private http: Http, private rxTranslation: RxTranslation, public translate: TranslateService
-    ) {
-        translate.addLangs(['en', 'es', 'fr']);
-        translate.setDefaultLang('en');
+  constructor(private applicationBroadCaster: ApplicationBroadcaster, private http: Http, private rxTranslation: RxTranslation, public translate: TranslateService
+  ) {
+    translate.addLangs(['en', 'es', 'fr']);
+    translate.setDefaultLang('en');
 
-        translate.use('en');
+    translate.use('en');
     this.applicationBroadCaster.topSubscriber.subscribe(t => {
       this.titleData = t;
     })
@@ -79,7 +85,10 @@ get day(){
   global: { [key: string]: any }
   languageIdentifier: string = 'javascript';
   ngOnInit(): void {
-    console.log(this.day);
+    Gifffer();
+
+
+
     this.code = Prism.highlight(this.code, Prism.languages['json'], 'json');
     this.frcode = Prism.highlight(this.frcode, Prism.languages['json'], 'json');
     this.mapTranslate = Prism.highlight((this.mapTranslate), Prism.languages[this.languageIdentifier]);
@@ -89,4 +98,7 @@ get day(){
     this.applicationBroadCaster.topSubject.next(this.pageTitle);
   }
 
+  giffer() {
+    Gifffer();
+  }
 }

@@ -2314,7 +2314,6 @@
                 },
                 {
                     "title": "<b>Translate</b> Clean Code Vs",
-                    "uri": "/ngx-translate-extension/translate-clean-code",
                     "isActive": false,
                     "linkTitle": "clean-code",
                     "refUri": "clean-code",
@@ -2448,54 +2447,18 @@
                             "refUri": "angular-i18next",
                             "childrens": [
                                 {
-                                    "title": "Content",
+                                    "title": "Simple Demo",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-simple-demo",
                                     "isActive": false,
-                                    "linkTitle": "content",
-                                    "refUri": "content",
-                                    "childrens": [
-                                        {
-                                            "title": "Simple Demo",
-                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-simple-demo",
-                                            "isActive": false,
-                                            "linkTitle": "angular-comparison-simple-demo",
-                                            "refUri": "angular-comparison-simple-demo"
-                                        },
-                                        {
-                                            "title": "Access Denied",
-                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-access-denied",
-                                            "isActive": false,
-                                            "linkTitle": "angular-comparison-simple-demo",
-                                            "refUri": "angular-comparison-simple-demo"
-                                        }
-                                    ]
+                                    "linkTitle": "angular-comparison-simple-demo",
+                                    "refUri": "angular-comparison-simple-demo"
                                 },
                                 {
-                                    "title": "Features",
+                                    "title": "Rich Form Feature",
                                     "isActive": false,
-                                    "linkTitle": "lazy",
-                                    "refUri": "lazy",
-                                    "childrens": [
-                                        {
-                                            "title": "Rich Form Feature",
-                                            "isActive": false,
-                                            "linkTitle": "rich-form-feature",
-                                            "refUri": "rich-form-feature"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "title": "Routing",
-                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-routing",
-                                    "isActive": false,
-                                    "linkTitle": "routing",
-                                    "refUri": "routing"
-                                },
-                                {
-                                    "title": "Structure",
-                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-validation",
-                                    "isActive": false,
-                                    "linkTitle": "configuration",
-                                    "refUri": "configuration"
+                                    "linkTitle": "rich-form-feature",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-rich-form",
+                                    "refUri": "rich-form-feature"
                                 }
                             ]
                         }

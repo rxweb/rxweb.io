@@ -35,7 +35,7 @@ export class ConfigurationComponent {
   }
 
   init(content) {
-    var diff = Diff.createTwoFilesPatch("transloco", "transloco", content.outputHtml.angulari18n, content.outputHtml.rxweb);
+    var diff = Diff.createTwoFilesPatch("transloco", "transloco", content.outputHtml.transloco, content.outputHtml.rxweb);
 
     let outputHtml = Diff2Html.html(diff, {
       drawFileList: false, matching: 'lines', outputFormat: 'side-by-side'

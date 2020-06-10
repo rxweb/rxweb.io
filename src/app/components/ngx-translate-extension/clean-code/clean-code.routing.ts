@@ -18,6 +18,7 @@ import { ValidationComparisonComponent } from './angular-i18n/validation/validat
 import { SimpleDemoAngularNextComparisonComponent } from './angular-i18n-next/content/simple-demo/simple-demo.component';
 import { AccessDeniedAngularNextComparisonComponent } from './angular-i18n-next/content/access-denied/access-denied.component';
 import { RoutingAngularNextComparisonComponent } from './angular-i18n-next/routing/routing.component';
+import { RichFormAngularNextComparisonComponent } from './angular-i18n-next/features/rich-form/rich-form.component';
 
 
 
@@ -92,6 +93,10 @@ const CLEAN_CODE_ROUTES: Routes = [
   {
     path:'angular-comparison-access-denied',
     component:AccessDeniedAngularNextComparisonComponent
+  },
+  {
+    path:'angular-comparison-rich-form',
+    component:RichFormAngularNextComparisonComponent
   },
   {
     path:'angular-comparison-routing',

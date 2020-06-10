@@ -26,7 +26,7 @@ export class PowerhouseAttributeDirectiveComponent implements OnInit {
       html: `<label translate="note" translateLang="fr"></label>`
     },
     translationName: {
-      json: `{"dashboardHeading": "Dashboard/en.json"}`,
+      json: `{"dashboardHeading": "The Text loaded from this path 'dashboard/en'"}`,
       html: `<label translate="dashboardHeading" translationName="dashboard"></label>`
     }
   }
