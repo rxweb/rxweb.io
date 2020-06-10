@@ -38,8 +38,8 @@
       {
         "tabName": "pipe.component.html",
         "outputHtml": {
-          "angulari18n": "<h3>Pure Pipes<\/h3>\r\n<p title=\"{{ 'home.greeting' | translate:locale.language }}\">{{ 'home.greeting' | translate:locale.language }}<\/p>\r\n<p>{{ 'home.whoIAm' | translate:locale.language:{ name: 'Angular l10n' } }}<\/p>\r\n<p innerHTML=\"{{ 'home.description' | translate:locale.language }}\"><\/p>\r\n<br>\r\n<p>{{ today | l10nDate:locale.language:{ dateStyle: 'full', timeStyle: 'short' } }}<\/p>\r\n<p>{{ timeAgo | l10nTimeAgo:locale.language:'second':{ numeric:'always', style:'long' } }}<\/p>\r\n<br>\r\n<p>{{ value | l10nNumber:locale.language:{ digits: '1.2-2', style: 'currency' } }}<\/p>",
-          "rxweb": "<h3>Pure Pipes<\/h3>\r\n<p>{{ global.home.greeting }}<\/p>\r\n<p>{{ global.home.whoIAm }}<\/p>\r\n<p innerHTML=\"{{ global.home.description }}\"><\/p>\r\n<br>\r\n<p>{{ global.home.formattedToday }}<\/p>\r\n<p>{{ global.home.formattedTimeAgo }}<\/p>\r\n<br>\r\n<p>{{ global.home.formattedValue }}<\/p>",
+          "angulari18n": "<p title=\"{{ 'home.greeting' | translate:locale.language }}\">{{ 'home.greeting' | translate:locale.language }}<\/p>\r\n<p>{{ 'home.whoIAm' | translate:locale.language:{ name: 'Angular l10n' } }}<\/p>\r\n<p innerHTML=\"{{ 'home.description' | translate:locale.language }}\"><\/p>\r\n<br>\r\n<p>{{ today | l10nDate:locale.language:{ dateStyle: 'full', timeStyle: 'short' } }}<\/p>\r\n<p>{{ timeAgo | l10nTimeAgo:locale.language:'second':{ numeric:'always', style:'long' } }}<\/p>\r\n<br>\r\n<p>{{ value | l10nNumber:locale.language:{ digits: '1.2-2', style: 'currency' } }}<\/p>",
+          "rxweb": "<p>{{ global.home.greeting }}<\/p>\r\n<p>{{ global.home.whoIAm }}<\/p>\r\n<p innerHTML=\"{{ global.home.description }}\"><\/p>\r\n<br>\r\n<p>{{ global.home.formattedToday }}<\/p>\r\n<p>{{ global.home.formattedTimeAgo }}<\/p>\r\n<br>\r\n<p>{{ global.home.formattedValue }}<\/p>",
           "diff": ""
         },
         "githubLink": {
@@ -156,7 +156,7 @@
             "tabName": "on-push.component.html",
             "outputHtml": {
               "angulari18n": "<h1>{{ 'onPush.title' | translateAsync }}<\/h1>",
-              "rxweb": "<h1>{{ global.onPush.title }}<\/h1>\r\n<h1>{{ global.changeLocale}}<\/h1>",
+              "rxweb": "<h1>{{ global.onPush.title }}<\/h1>",
               "diff": ""
             },
             "githubLink": {
