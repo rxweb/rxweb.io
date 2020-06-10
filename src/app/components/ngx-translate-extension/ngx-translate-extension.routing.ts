@@ -23,6 +23,7 @@ import { CliComponent } from './cli/cli.component';
 import { ComparsionToOtherLibrariesComponent } from './comparison-to-other-libraries/comparison-to-other-libraries.component';
 import { PowerhouseSanitizeComponent } from './powerhouse/sanitize/sanitize.component';
 import { PowerhousePurePipeComponent } from './powerhouse/pure-pipe/pure-pipe.component';
+import { NgxCodeComponent } from './code/code.component';
 
 
 const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
@@ -54,11 +55,17 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   },
   { path: ':languageCode/change-language', component: PowerhouseChangeLanguageComponent },
   { path: 'other-intuitive-features', component: PowerhouseOtherIntruitiveFeaturesComponent },
-  { path: 'sanitize', component: PowerhouseSanitizeComponent },
+  { path: 'sanitize', component: PowerhouseSanitizeComponent,
+    // loadChildren: 'src/app/components/ngx-translate-extension/sanitize/sanitize.module#SanitizeModule' 
+  },
   { path: 'pure-pipe', component: PowerhousePurePipeComponent },
   {
     path: 'comparison',
     loadChildren: 'src/app/components/ngx-translate-extension/comparison/comparison.module#ComparisonModule',
+  },
+  {
+    path: 'code',
+    component: NgxCodeComponent
   },
   {
     path: 'rxweb-cli',

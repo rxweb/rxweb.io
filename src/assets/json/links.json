@@ -1970,636 +1970,710 @@
             "isOpen": false,
             "isActive": false,
             "otherUri": "ngx-translate-extension",
-          "childrens": [
-            {
-              "title": "Getting Started",
-              "uri": "/ngx-translate-extension/getting-started",
-              "isActive": false,
-              "linkTitle": "getting-started",
-              "refUri": "getting-started"
-            },
-            {
-              "title": "Translation Powerhouse",
-              "isActive": false,
-              "linkTitle": "powerhouse-of-translation",
-              "refUri": "powerhouse-of-translation",
-              "childrens": [
+            "childrens": [
                 {
-                  "title": "Attribute Directive",
-                  "uri": "/ngx-translate-extension/attribute-directive",
-                  "isActive": false,
-                  "linkTitle": "attribute-directive",
-                  "refUri": "attribute-directive",
-                  "childrens": [
-                    {
-                      "title": "Basic",
-                      "uri": "/ngx-translate-extension/attribute-directive",
-                      "isActive": false,
-                      "linkTitle": "basic",
-                      "refUri": "basic"
-                    },
-                    {
-                      "title": "Custom Parameter Interpolation",
-                      "uri": "/ngx-translate-extension/attribute-directive#customparameterinterpolation",
-                      "isActive": false,
-                      "linkTitle": "customparameterinterpolation",
-                      "refUri": "customparameterinterpolation"
-                    },
-                    {
-                      "title": "Fixed Language Translation",
-                      "uri": "/ngx-translate-extension/attribute-directive#fixedlanguagetranslation",
-                      "isActive": false,
-                      "linkTitle": "fixedlanguagetranslation",
-                      "refUri": "fixedlanguagetranslation"
-                    },
-                    {
-                      "title": "Content By Translation Name",
-                      "uri": "/ngx-translate-extension/attribute-directive#componentwisetranslation",
-                      "isActive": false,
-                      "linkTitle": "componentwisetranslation",
-                      "refUri": "componentwisetranslation"
-                    }
-                  ]
+                    "title": "Getting Started",
+                    "uri": "/ngx-translate-extension/getting-started",
+                    "isActive": false,
+                    "linkTitle": "getting-started",
+                    "refUri": "getting-started"
                 },
                 {
-                  "title": "Pipe",
-                  "uri": "/ngx-translate-extension/pipe",
-                  "isActive": false,
-                  "linkTitle": "pipe",
-                  "refUri": "pipe",
-                  "childrens": [
-                    {
-                      "title": "Basic",
-                      "uri": "/ngx-translate-extension/pipe",
-                      "isActive": false,
-                      "linkTitle": "basic",
-                      "refUri": "basic"
-                    },
-                    {
-                      "title": "Custom Parameter Interpolation",
-                      "uri": "/ngx-translate-extension/pipe#customparameterinterpolation",
-                      "isActive": false,
-                      "linkTitle": "customparameterinterpolation",
-                      "refUri": "customparameterinterpolation"
-                    },
-                    {
-                      "title": "Fixed Language Translation",
-                      "uri": "/ngx-translate-extension/pipe#fixedlanguagetranslation",
-                      "isActive": false,
-                      "linkTitle": "fixedlanguagetranslation",
-                      "refUri": "fixedlanguagetranslation"
-                    },
-                    {
-                      "title": "Content By Translation Name",
-                      "uri": "/ngx-translate-extension/pipe#componentwisetranslation",
-                      "isActive": false,
-                      "linkTitle": "componentwisetranslation",
-                      "refUri": "componentwisetranslation"
-                    }
-                  ]
-                },
-                {
-                  "title": "Pure Pipe",
-                  "uri": "/ngx-translate-extension/pure-pipe",
-                  "isActive": false,
-                  "linkTitle": "pipe",
-                  "refUri": "pipe",
-                  "childrens": [
-                    {
-                      "title": "Static Parameter",
-                      "uri": "/ngx-translate-extension/pure-pipe",
-                      "isActive": false,
-                      "linkTitle": "basic",
-                      "refUri": "basic"
-                    },
-                    {
-                      "title": "Dynamic Parameter",
-                      "uri": "/ngx-translate-extension/pure-pipe#dynamicparameter",
-                      "isActive": false,
-                      "linkTitle": "dynamicparameter",
-                      "refUri": "dynamicparameter"
-                    }
-                  ]
-                },
-
-                {
-                  "title": "Decorator",
-                  "uri": "/ngx-translate-extension/decorator",
-                  "isActive": false,
-                  "linkTitle": "decorator",
-                  "refUri": "decorator",
-                  "childrens": [
-                    {
-                      "title": "Basic",
-                      "uri": "/ngx-translate-extension/decorator",
-                      "isActive": false,
-                      "linkTitle": "basic",
-                      "refUri": "basic"
-                    },
-                    {
-                      "title": "Dynamic Parameter",
-                      "uri": "/ngx-translate-extension/decorator#customparameterinterpolation",
-                      "isActive": false,
-                      "linkTitle": "customparameterinterpolation",
-                      "refUri": "customparameterinterpolation"
-                    },
-                    {
-                      "title": "Conditional Translation",
-                      "uri": "/ngx-translate-extension/decorator#conditionalscopedtranslation",
-                      "isActive": false,
-                      "linkTitle": "conditionalscopedtranslation",
-                      "refUri": "conditionalscopedtranslation"
-                    },
-                    {
-                      "title": "Reuse Text",
-                      "uri": "/ngx-translate-extension/decorator#reusetext",
-                      "isActive": false,
-                      "linkTitle": "reusetext",
-                      "refUri": "reusetext"
-                    },
-                    {
-                      "title": "Async Translation",
-                      "uri": "/ngx-translate-extension/decorator#asyncscope",
-                      "isActive": false,
-                      "linkTitle": "asyncscope",
-                      "refUri": "asyncscope"
-                    },
-                    {
-                      "title": "On Demand Translation",
-                      "uri": "/ngx-translate-extension/decorator#ondemandtranslation",
-                      "isActive": false,
-                      "linkTitle": "ondemandtranslation",
-                      "refUri": "ondemandtranslation"
-                    },
-                    {
-                      "title": "Key Based Translation",
-                      "uri": "/ngx-translate-extension/decorator#keybasedtranslation",
-                      "isActive": false,
-                      "linkTitle": "keybasedtranslation",
-                      "refUri": "keybasedtranslation"
-                    },
-                    {
-                      "title": "Component Based Translation",
-                      "uri": "/ngx-translate-extension/decorator#componentbasedtranslation",
-                      "isActive": false,
-                      "linkTitle": "componentbasedtranslation",
-                      "refUri": "componentbasedtranslation"
-                    },
-                    {
-                      "title": "Fixed File Path",
-                      "uri": "/ngx-translate-extension/decorator#customfilepathbasedtranslation",
-                      "isActive": false,
-                      "linkTitle": "customfilepathbasedtranslation",
-                      "refUri": "customfilepathbasedtranslation"
-                    },
-                    {
-                      "title": "Fixed Language Translation",
-                      "uri": "/ngx-translate-extension/decorator#fixedlanguagetranslation",
-                      "isActive": false,
-                      "linkTitle": "fixedlanguagetranslation",
-                      "refUri": "fixedlanguagetranslation"
-                    }
-                  ]
-                },
-                {
-                  "title": "Validation Message",
-                  "uri": "/ngx-translate-extension/validation-message",
-                  "isActive": false,
-                  "linkTitle": "validation-message",
-                  "refUri": "validation-message",
-                  "childrens": [
-                    {
-                      "title": "Basic",
-                      "uri": "/ngx-translate-extension/validation-message",
-                      "isActive": false,
-                      "linkTitle": "basic",
-                      "refUri": "basic"
-                    },
-                    {
-                      "title": "Interpolate Parameter",
-                      "uri": "/ngx-translate-extension/validation-message",
-                      "isActive": false,
-                      "linkTitle": "basic",
-                      "refUri": "basic"
-                    },
-                    {
-                      "title": "Interpolate Array Parameter",
-                      "uri": "/ngx-translate-extension/validation-message",
-                      "isActive": false,
-                      "linkTitle": "basic",
-                      "refUri": "basic"
-                    }
-                  ]
-                },
-                {
-                  "title": "Change Language By",
-                  "uri": "/ngx-translate-extension/en/change-language",
-                  "isActive": false,
-                  "linkTitle": "change-language",
-                  "refUri": "change-language",
-                  "childrens": [
-                    {
-                      "title": "URL",
-                      "uri": "/ngx-translate-extension/en/change-language#byurl",
-                      "isActive": false,
-                      "linkTitle": "byurl",
-                      "refUri": "byurl"
-                    },
-                    {
-                      "title": "Code",
-                      "uri": "/ngx-translate-extension/en/change-language#throughprogram",
-                      "isActive": false,
-                      "linkTitle": "throughprogram",
-                      "refUri": "throughprogram"
-                    }
-                  ]
-                },
-                {
-                  "title": "Intuitive Features",
-                  "uri": "/ngx-translate-extension/other-intuitive-features",
-                  "isActive": false,
-                  "linkTitle": "other-intuitive-features",
-                  "refUri": "other-intuitive-features",
-                  "childrens": [
-                    {
-                      "title": "Set Page Title",
-                      "uri": "/ngx-translate-extension/other-intuitive-features#throughprogram",
-                      "isActive": false,
-                      "linkTitle": "throughprogram",
-                      "refUri": "throughprogram"
-                    },
-                    {
-                      "title": "Preload Strategy",
-                      "uri": "/ngx-translate-extension/other-intuitive-features#byurl",
-                      "isActive": false,
-                      "linkTitle": "byurl",
-                      "refUri": "byurl"
-                    }
-                  ]
-                },
-                {
-                  "title": "Sanitizer",
-                  "uri": "/ngx-translate-extension/sanitize",
-                  "isActive": false,
-                  "linkTitle": "sanitize",
-                  "refUri": "sanitize",
-                  "childrens": [
-                    {
-                      "title": "Currency",
-                      "uri": "/ngx-translate-extension/sanitize#currency",
-                      "isActive": false,
-                      "linkTitle": "currency",
-                      "refUri": "currency"
-                    },
-                    {
-                      "title": "Date",
-                      "uri": "/ngx-translate-extension/sanitize#date",
-                      "isActive": false,
-                      "linkTitle": "date",
-                      "refUri": "date"
-                    },
-                    {
-                      "title": "Decimal",
-                      "uri": "/ngx-translate-extension/sanitize#decimal",
-                      "isActive": false,
-                      "linkTitle": "decimal",
-                      "refUri": "decimal"
-                    },
-                    {
-                      "title": "Percent",
-                      "uri": "/ngx-translate-extension/sanitize#percent",
-                      "isActive": false,
-                      "linkTitle": "percent",
-                      "refUri": "percent"
-                    },
-                    {
-                      "title": "LowerCase",
-                      "uri": "/ngx-translate-extension/sanitize#lowercase",
-                      "isActive": false,
-                      "linkTitle": "lowercase",
-                      "refUri": "lowercase"
-                    },
-                    {
-                      "title": "UpperCase",
-                      "uri": "/ngx-translate-extension/sanitize#uppercase",
-                      "isActive": false,
-                      "linkTitle": "uppercase",
-                      "refUri": "uppercase"
-                    },
-                    {
-                      "title": "TitleCase",
-                      "uri": "/ngx-translate-extension/sanitize#titlecase",
-                      "isActive": false,
-                      "linkTitle": "titlecase",
-                      "refUri": "titlecase"
-                    },
-                    {
-                      "title": "Custom",
-                      "uri": "/ngx-translate-extension/sanitize#custom",
-                      "isActive": false,
-                      "linkTitle": "custom",
-                      "refUri": "custom"
-                    }
-                  ]
-                },
-                {
-                  "title": "Structural Directive",
-                  "uri": "/ngx-translate-extension/structural-directive",
-                  "isActive": false,
-                  "linkTitle": "structural-directive",
-                  "refUri": "structural-directive",
-                  "childrens": [
-
-                  ]
-                }
-              ]
-            },
-            {
-              "title": "<b>Translate</b> Clean Code Vs",
-              "isActive": false,
-              "linkTitle": "clean-code",
-              "refUri": "clean-code",
-              "childrens": [
-                {
-                  "title": "Transloco",
-                  "isActive": false,
-                  "linkTitle": "transloco",
-                  "refUri": "transloco",
-                  "childrens": [
-                    {
-                      "title": "Configuration",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/configuration",
-                      "isActive": false,
-                      "linkTitle": "configuration",
-                      "refUri": "configuration"
-                    },
-                    {
-                      "title": "On Push",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/on-push",
-                      "isActive": false,
-                      "linkTitle": "on-push",
-                      "refUri": "on-push"
-                    },
-                    {
-                      "title": "Lazy",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/lazy",
-                      "isActive": false,
-                      "linkTitle": "lazy",
-                      "refUri": "lazy"
-                    },
-                    {
-                      "title": "Scope Sharing",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/scope-sharing",
-                      "isActive": false,
-                      "linkTitle": "configuration",
-                      "refUri": "configuration"
-                    },
-                    {
-                      "title": "Inline Loaders",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/inline-loaders",
-                      "isActive": false,
-                      "linkTitle": "inline-loaders",
-                      "refUri": "inline-loaders"
-                    },
-                    {
-                      "title": "Dynamic Translation",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/dynamic-translation",
-                      "isActive": false,
-                      "linkTitle": "configuration",
-                      "refUri": "configuration"
-                    },
-                    {
-                      "title": "Multiple Languages",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/multi-langs",
-                      "isActive": false,
-                      "linkTitle": "configuration",
-                      "refUri": "configuration"
-                    },
-                    {
-                      "title": "Transpilers",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/transpilers",
-                      "isActive": false,
-                      "linkTitle": "configuration",
-                      "refUri": "configuration"
-                    }
-                  ]
-                },
-                {
-                  "title": "Angular i18n",
-                  "isActive": false,
-                  "linkTitle": "angular-i18n",
-                  "refUri": "angular-i18n",
-                  "childrens": [
-                    {
-                      "title": "Home",
-                      "isActive": false,
-                      "linkTitle": "angular-code-compare",
-                      "refUri": "angular-code-compare",
-                      "childrens": [
+                    "title": "Translation Powerhouse",
+                    "isActive": false,
+                    "linkTitle": "powerhouse-of-translation",
+                    "refUri": "powerhouse-of-translation",
+                    "childrens": [
                         {
-                          "title": "Api",
-                          "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-api",
-                          "isActive": false,
-                          "linkTitle": "api",
-                          "refUri": "api"
+                            "title": "Attribute Directive",
+                            "uri": "/ngx-translate-extension/attribute-directive",
+                            "isActive": false,
+                            "linkTitle": "attribute-directive",
+                            "refUri": "attribute-directive",
+                            "childrens": [
+                                {
+                                    "title": "Basic",
+                                    "uri": "/ngx-translate-extension/attribute-directive",
+                                    "isActive": false,
+                                    "linkTitle": "basic",
+                                    "refUri": "basic"
+                                },
+                                {
+                                    "title": "Custom Parameter Interpolation",
+                                    "uri": "/ngx-translate-extension/attribute-directive#customparameterinterpolation",
+                                    "isActive": false,
+                                    "linkTitle": "customparameterinterpolation",
+                                    "refUri": "customparameterinterpolation"
+                                },
+                                {
+                                    "title": "Fixed Language Translation",
+                                    "uri": "/ngx-translate-extension/attribute-directive#fixedlanguagetranslation",
+                                    "isActive": false,
+                                    "linkTitle": "fixedlanguagetranslation",
+                                    "refUri": "fixedlanguagetranslation"
+                                },
+                                {
+                                    "title": "Content By Translation Name",
+                                    "uri": "/ngx-translate-extension/attribute-directive#componentwisetranslation",
+                                    "isActive": false,
+                                    "linkTitle": "componentwisetranslation",
+                                    "refUri": "componentwisetranslation"
+                                }
+                            ]
                         },
                         {
-                          "title": "Pipe",
-                          "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-pipe",
-                          "isActive": false,
-                          "linkTitle": "pipe",
-                          "refUri": "pipe"
+                            "title": "Pipe",
+                            "uri": "/ngx-translate-extension/pipe",
+                            "isActive": false,
+                            "linkTitle": "pipe",
+                            "refUri": "pipe",
+                            "childrens": [
+                                {
+                                    "title": "Basic",
+                                    "uri": "/ngx-translate-extension/pipe",
+                                    "isActive": false,
+                                    "linkTitle": "basic",
+                                    "refUri": "basic"
+                                },
+                                {
+                                    "title": "Custom Parameter Interpolation",
+                                    "uri": "/ngx-translate-extension/pipe#customparameterinterpolation",
+                                    "isActive": false,
+                                    "linkTitle": "customparameterinterpolation",
+                                    "refUri": "customparameterinterpolation"
+                                },
+                                {
+                                    "title": "Fixed Language Translation",
+                                    "uri": "/ngx-translate-extension/pipe#fixedlanguagetranslation",
+                                    "isActive": false,
+                                    "linkTitle": "fixedlanguagetranslation",
+                                    "refUri": "fixedlanguagetranslation"
+                                },
+                                {
+                                    "title": "Content By Translation Name",
+                                    "uri": "/ngx-translate-extension/pipe#componentwisetranslation",
+                                    "isActive": false,
+                                    "linkTitle": "componentwisetranslation",
+                                    "refUri": "componentwisetranslation"
+                                }
+                            ]
                         },
                         {
-                          "title": "Directive",
-                          "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-directive",
-                          "isActive": false,
-                          "linkTitle": "pipe",
-                          "refUri": "pipe"
-                        }
-                      ]
-                    },
-                    {
-                      "title": "Lazy",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-lazy",
-                      "isActive": false,
-                      "linkTitle": "lazy",
-                      "refUri": "lazy"
-                    },
-                    {
-                      "title": "On Push",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-on-push",
-                      "isActive": false,
-                      "linkTitle": "on-push",
-                      "refUri": "on-push"
-                    },
-                    {
-                      "title": "Validation",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-validation",
-                      "isActive": false,
-                      "linkTitle": "configuration",
-                      "refUri": "configuration"
-                    }
-                  ]
-                },
-                {
-                  "title": "Angular i18next",
-                  "isActive": false,
-                  "linkTitle": "angular-i18next",
-                  "refUri": "angular-i18next",
-                  "childrens": [
-                    {
-                      "title": "Content",
-                      "isActive": false,
-                      "linkTitle": "content",
-                      "refUri": "content",
-                      "childrens": [
-                        {
-                          "title": "Simple Demo",
-                          "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-simple-demo",
-                          "isActive": false,
-                          "linkTitle": "angular-comparison-simple-demo",
-                          "refUri": "angular-comparison-simple-demo"
+                            "title": "Pure Pipe",
+                            "uri": "/ngx-translate-extension/pure-pipe",
+                            "isActive": false,
+                            "linkTitle": "pipe",
+                            "refUri": "pipe",
+                            "childrens": [
+                                {
+                                    "title": "Static Parameter",
+                                    "uri": "/ngx-translate-extension/pure-pipe",
+                                    "isActive": false,
+                                    "linkTitle": "basic",
+                                    "refUri": "basic"
+                                },
+                                {
+                                    "title": "Dynamic Parameter",
+                                    "uri": "/ngx-translate-extension/pure-pipe#dynamicparameter",
+                                    "isActive": false,
+                                    "linkTitle": "dynamicparameter",
+                                    "refUri": "dynamicparameter"
+                                }
+                            ]
                         },
                         {
-                          "title": "Access Denied",
-                          "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-access-denied",
-                          "isActive": false,
-                          "linkTitle": "angular-comparison-simple-demo",
-                          "refUri": "angular-comparison-simple-demo"
-                        }
-                      ]
-                    },
-                    {
-                      "title": "Features",
-                      "isActive": false,
-                      "linkTitle": "lazy",
-                      "refUri": "lazy",
-                      "childrens": [
+                            "title": "Decorator",
+                            "uri": "/ngx-translate-extension/decorator",
+                            "isActive": false,
+                            "linkTitle": "decorator",
+                            "refUri": "decorator",
+                            "childrens": [
+                                {
+                                    "title": "Basic",
+                                    "uri": "/ngx-translate-extension/decorator",
+                                    "isActive": false,
+                                    "linkTitle": "basic",
+                                    "refUri": "basic"
+                                },
+                                {
+                                    "title": "Dynamic Parameter",
+                                    "uri": "/ngx-translate-extension/decorator#customparameterinterpolation",
+                                    "isActive": false,
+                                    "linkTitle": "customparameterinterpolation",
+                                    "refUri": "customparameterinterpolation"
+                                },
+                                {
+                                    "title": "Conditional Translation",
+                                    "uri": "/ngx-translate-extension/decorator#conditionalscopedtranslation",
+                                    "isActive": false,
+                                    "linkTitle": "conditionalscopedtranslation",
+                                    "refUri": "conditionalscopedtranslation"
+                                },
+                                {
+                                    "title": "Reuse Text",
+                                    "uri": "/ngx-translate-extension/decorator#reusetext",
+                                    "isActive": false,
+                                    "linkTitle": "reusetext",
+                                    "refUri": "reusetext"
+                                },
+                                {
+                                    "title": "Async Translation",
+                                    "uri": "/ngx-translate-extension/decorator#asyncscope",
+                                    "isActive": false,
+                                    "linkTitle": "asyncscope",
+                                    "refUri": "asyncscope"
+                                },
+                                {
+                                    "title": "On Demand Translation",
+                                    "uri": "/ngx-translate-extension/decorator#ondemandtranslation",
+                                    "isActive": false,
+                                    "linkTitle": "ondemandtranslation",
+                                    "refUri": "ondemandtranslation"
+                                },
+                                {
+                                    "title": "Key Based Translation",
+                                    "uri": "/ngx-translate-extension/decorator#keybasedtranslation",
+                                    "isActive": false,
+                                    "linkTitle": "keybasedtranslation",
+                                    "refUri": "keybasedtranslation"
+                                },
+                                {
+                                    "title": "Component Based Translation",
+                                    "uri": "/ngx-translate-extension/decorator#componentbasedtranslation",
+                                    "isActive": false,
+                                    "linkTitle": "componentbasedtranslation",
+                                    "refUri": "componentbasedtranslation"
+                                },
+                                {
+                                    "title": "Fixed File Path",
+                                    "uri": "/ngx-translate-extension/decorator#customfilepathbasedtranslation",
+                                    "isActive": false,
+                                    "linkTitle": "customfilepathbasedtranslation",
+                                    "refUri": "customfilepathbasedtranslation"
+                                },
+                                {
+                                    "title": "Fixed Language Translation",
+                                    "uri": "/ngx-translate-extension/decorator#fixedlanguagetranslation",
+                                    "isActive": false,
+                                    "linkTitle": "fixedlanguagetranslation",
+                                    "refUri": "fixedlanguagetranslation"
+                                }
+                            ]
+                        },
                         {
-                          "title": "Rich Form Feature",
-                          "isActive": false,
-                          "linkTitle": "rich-form-feature",
-                          "refUri": "rich-form-feature"
+                            "title": "Validation Message",
+                            "uri": "/ngx-translate-extension/validation-message",
+                            "isActive": false,
+                            "linkTitle": "validation-message",
+                            "refUri": "validation-message",
+                            "childrens": [
+                                {
+                                    "title": "Basic",
+                                    "uri": "/ngx-translate-extension/validation-message",
+                                    "isActive": false,
+                                    "linkTitle": "basic",
+                                    "refUri": "basic"
+                                },
+                                {
+                                    "title": "Interpolate Parameter",
+                                    "uri": "/ngx-translate-extension/validation-message",
+                                    "isActive": false,
+                                    "linkTitle": "basic",
+                                    "refUri": "basic"
+                                },
+                                {
+                                    "title": "Interpolate Array Parameter",
+                                    "uri": "/ngx-translate-extension/validation-message",
+                                    "isActive": false,
+                                    "linkTitle": "basic",
+                                    "refUri": "basic"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Change Language By",
+                            "uri": "/ngx-translate-extension/en/change-language",
+                            "isActive": false,
+                            "linkTitle": "change-language",
+                            "refUri": "change-language",
+                            "childrens": [
+                                {
+                                    "title": "URL",
+                                    "uri": "/ngx-translate-extension/en/change-language#byurl",
+                                    "isActive": false,
+                                    "linkTitle": "byurl",
+                                    "refUri": "byurl"
+                                },
+                                {
+                                    "title": "Code",
+                                    "uri": "/ngx-translate-extension/en/change-language#throughprogram",
+                                    "isActive": false,
+                                    "linkTitle": "throughprogram",
+                                    "refUri": "throughprogram"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Intuitive Features",
+                            "uri": "/ngx-translate-extension/other-intuitive-features",
+                            "isActive": false,
+                            "linkTitle": "other-intuitive-features",
+                            "refUri": "other-intuitive-features",
+                            "childrens": [
+                                {
+                                    "title": "Set Page Title",
+                                    "uri": "/ngx-translate-extension/other-intuitive-features#throughprogram",
+                                    "isActive": false,
+                                    "linkTitle": "throughprogram",
+                                    "refUri": "throughprogram"
+                                },
+                                {
+                                    "title": "Preload Strategy",
+                                    "uri": "/ngx-translate-extension/other-intuitive-features#byurl",
+                                    "isActive": false,
+                                    "linkTitle": "byurl",
+                                    "refUri": "byurl"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Sanitizer",
+                            "uri": "/ngx-translate-extension/sanitize",
+                            "isActive": false,
+                            "linkTitle": "sanitize",
+                            "refUri": "sanitize",
+                            "childrens": [
+                                {
+                                    "title": "Currency",
+                                    "uri": "/ngx-translate-extension/sanitize#currency",
+                                    "isActive": false,
+                                    "linkTitle": "currency",
+                                    "refUri": "currency"
+                                },
+                                {
+                                    "title": "Date",
+                                    "uri": "/ngx-translate-extension/sanitize#date",
+                                    "isActive": false,
+                                    "linkTitle": "date",
+                                    "refUri": "date"
+                                },
+                                {
+                                    "title": "Decimal",
+                                    "uri": "/ngx-translate-extension/sanitize#decimal",
+                                    "isActive": false,
+                                    "linkTitle": "decimal",
+                                    "refUri": "decimal"
+                                },
+                                {
+                                    "title": "Percent",
+                                    "uri": "/ngx-translate-extension/sanitize#percent",
+                                    "isActive": false,
+                                    "linkTitle": "percent",
+                                    "refUri": "percent"
+                                },
+                                {
+                                    "title": "LowerCase",
+                                    "uri": "/ngx-translate-extension/sanitize#lowercase",
+                                    "isActive": false,
+                                    "linkTitle": "lowercase",
+                                    "refUri": "lowercase"
+                                },
+                                {
+                                    "title": "UpperCase",
+                                    "uri": "/ngx-translate-extension/sanitize#uppercase",
+                                    "isActive": false,
+                                    "linkTitle": "uppercase",
+                                    "refUri": "uppercase"
+                                },
+                                {
+                                    "title": "TitleCase",
+                                    "uri": "/ngx-translate-extension/sanitize#titlecase",
+                                    "isActive": false,
+                                    "linkTitle": "titlecase",
+                                    "refUri": "titlecase"
+                                },
+                                {
+                                    "title": "Custom",
+                                    "uri": "/ngx-translate-extension/sanitize#custom",
+                                    "isActive": false,
+                                    "linkTitle": "custom",
+                                    "refUri": "custom"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Structural Directive",
+                            "uri": "/ngx-translate-extension/structural-directive",
+                            "isActive": false,
+                            "linkTitle": "structural-directive",
+                            "refUri": "structural-directive",
+                            "childrens": []
                         }
-                      ]
-                    },
-                    {
-                      "title": "Routing",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-routing",
-                      "isActive": false,
-                      "linkTitle": "routing",
-                      "refUri": "routing"
-                    },
-                    {
-                      "title": "Structure",
-                      "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-validation",
-                      "isActive": false,
-                      "linkTitle": "configuration",
-                      "refUri": "configuration"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "title": "NGX Extensible Guide",
-              "isActive": false,
-              "linkTitle": "comparison",
-              "refUri": "comparison",
-              "childrens": [
-                {
-                  "title": "Code",
-                  "isActive": false,
-                  "linkTitle": "angular-code-compare",
-                  "refUri": "angular-code-compare",
-                  "childrens": []
+                    ]
                 },
                 {
-                  "title": "Spec",
-                  "isActive": false,
-                  "linkTitle": "angular-code-compare",
-                  "refUri": "angular-code-compare",
-                  "childrens": [
-                    {
-                      "title": "missing-translation-handler",
-                      "uri": "/ngx-translate-extension/comparison/missing-translation-handler",
-                      "isActive": false,
-                      "linkTitle": "missing-translation-handler",
-                      "refUri": "missing-translation-handler"
-                    },
-                    {
-                      "title": "translate.compiler",
-                      "uri": "/ngx-translate-extension/comparison/translate-compiler",
-                      "isActive": false,
-                      "linkTitle": "translate-compiler",
-                      "refUri": "translate-compiler"
-                    },
-                    {
-                      "title": "translate.directive",
-                      "uri": "/ngx-translate-extension/comparison/translate-directive",
-                      "isActive": false,
-                      "linkTitle": "translate-directive",
-                      "refUri": "translate-directive"
-                    },
-                    {
-                      "title": "translate.loader",
-                      "uri": "/ngx-translate-extension/comparison/translate-loader",
-                      "isActive": false,
-                      "linkTitle": "translate-loader",
-                      "refUri": "translate-loader"
-                    },
-                    {
-                      "title": "translate.parser",
-                      "uri": "/ngx-translate-extension/comparison/translate-parser",
-                      "isActive": false,
-                      "linkTitle": "translate-parser",
-                      "refUri": "translate-parser"
-                    },
-                    {
-                      "title": "translate.pipe",
-                      "uri": "/ngx-translate-extension/comparison/translate-pipe",
-                      "isActive": false,
-                      "linkTitle": "translate-pipe",
-                      "refUri": "translate-pipe"
-                    },
-                    {
-                      "title": "translate.service",
-                      "uri": "/ngx-translate-extension/comparison/translate-service",
-                      "isActive": false,
-                      "linkTitle": "translate-service",
-                      "refUri": "translate-service"
-                    },
-                    {
-                      "title": "translate.store",
-                      "uri": "/ngx-translate-extension/comparison/translate-store",
-                      "isActive": false,
-                      "linkTitle": "translate-store",
-                      "refUri": "translate-store"
-                    }
-
-                  ]
-
+                    "title": "<b>Translate</b> Clean Code Vs",
+                    "isActive": false,
+                    "linkTitle": "clean-code",
+                    "refUri": "clean-code",
+                    "childrens": [
+                        {
+                            "title": "Transloco",
+                            "isActive": false,
+                            "linkTitle": "transloco",
+                            "refUri": "transloco",
+                            "childrens": [
+                                {
+                                    "title": "Configuration",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/configuration",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "On Push",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/on-push",
+                                    "isActive": false,
+                                    "linkTitle": "on-push",
+                                    "refUri": "on-push"
+                                },
+                                {
+                                    "title": "Lazy",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/lazy",
+                                    "isActive": false,
+                                    "linkTitle": "lazy",
+                                    "refUri": "lazy"
+                                },
+                                {
+                                    "title": "Scope Sharing",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/scope-sharing",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Inline Loaders",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/inline-loaders",
+                                    "isActive": false,
+                                    "linkTitle": "inline-loaders",
+                                    "refUri": "inline-loaders"
+                                },
+                                {
+                                    "title": "Dynamic Translation",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/dynamic-translation",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Multiple Languages",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/multi-langs",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                },
+                                {
+                                    "title": "Transpilers",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/transpilers",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Angular i18n",
+                            "isActive": false,
+                            "linkTitle": "angular-i18n",
+                            "refUri": "angular-i18n",
+                            "childrens": [
+                                {
+                                    "title": "Home",
+                                    "isActive": false,
+                                    "linkTitle": "angular-code-compare",
+                                    "refUri": "angular-code-compare",
+                                    "childrens": [
+                                        {
+                                            "title": "Api",
+                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-api",
+                                            "isActive": false,
+                                            "linkTitle": "api",
+                                            "refUri": "api"
+                                        },
+                                        {
+                                            "title": "Pipe",
+                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-pipe",
+                                            "isActive": false,
+                                            "linkTitle": "pipe",
+                                            "refUri": "pipe"
+                                        },
+                                        {
+                                            "title": "Directive",
+                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-directive",
+                                            "isActive": false,
+                                            "linkTitle": "pipe",
+                                            "refUri": "pipe"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Lazy",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-lazy",
+                                    "isActive": false,
+                                    "linkTitle": "lazy",
+                                    "refUri": "lazy"
+                                },
+                                {
+                                    "title": "On Push",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-on-push",
+                                    "isActive": false,
+                                    "linkTitle": "on-push",
+                                    "refUri": "on-push"
+                                },
+                                {
+                                    "title": "Validation",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-validation",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Angular i18next",
+                            "isActive": false,
+                            "linkTitle": "angular-i18next",
+                            "refUri": "angular-i18next",
+                            "childrens": [
+                                {
+                                    "title": "Content",
+                                    "isActive": false,
+                                    "linkTitle": "content",
+                                    "refUri": "content",
+                                    "childrens": [
+                                        {
+                                            "title": "Simple Demo",
+                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-simple-demo",
+                                            "isActive": false,
+                                            "linkTitle": "angular-comparison-simple-demo",
+                                            "refUri": "angular-comparison-simple-demo"
+                                        },
+                                        {
+                                            "title": "Access Denied",
+                                            "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-access-denied",
+                                            "isActive": false,
+                                            "linkTitle": "angular-comparison-simple-demo",
+                                            "refUri": "angular-comparison-simple-demo"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Features",
+                                    "isActive": false,
+                                    "linkTitle": "lazy",
+                                    "refUri": "lazy",
+                                    "childrens": [
+                                        {
+                                            "title": "Rich Form Feature",
+                                            "isActive": false,
+                                            "linkTitle": "rich-form-feature",
+                                            "refUri": "rich-form-feature"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Routing",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-routing",
+                                    "isActive": false,
+                                    "linkTitle": "routing",
+                                    "refUri": "routing"
+                                },
+                                {
+                                    "title": "Structure",
+                                    "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-validation",
+                                    "isActive": false,
+                                    "linkTitle": "configuration",
+                                    "refUri": "configuration"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "NGX Extensible Guide",
+                    "isActive": false,
+                    "linkTitle": "comparison",
+                    "refUri": "comparison",
+                    "childrens": [
+                        {
+                            "title": "Code",
+                            "isActive": false,
+                            "uri": "/ngx-translate-extension/code",
+                            "linkTitle": "angular-code-compare",
+                            "refUri": "angular-code-compare",
+                            "childrens": [
+                                {
+                                    "title": "Installation",
+                                    "isActive": false,
+                                    "uri": "/ngx-translate-extension/code",
+                                    "linkTitle": "code",
+                                    "refUri": "code"
+                                },
+                                {
+                                    "title": "Import the TranslateModule",
+                                    "isActive": false,
+                                    "uri": "/ngx-translate-extension/code",
+                                    "linkTitle": "code",
+                                    "refUri": "code",
+                                    "childrens": [
+                                        {
+                                            "title": "SharedModule",
+                                            "isActive": false,
+                                            "uri": "/ngx-translate-extension/code",
+                                            "linkTitle": "code",
+                                            "refUri": "code"
+                                        },
+                                        {
+                                            "title": "Lazy Loaded Modules",
+                                            "isActive": false,
+                                            "uri": "/ngx-translate-extension/code",
+                                            "linkTitle": "code",
+                                            "refUri": "code"
+                                        },
+                                        {
+                                            "title": "Configuration",
+                                            "isActive": false,
+                                            "uri": "/ngx-translate-extension/code",
+                                            "linkTitle": "code",
+                                            "refUri": "code"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Default Language",
+                                    "isActive": false,
+                                    "uri": "/ngx-translate-extension/code",
+                                    "linkTitle": "code",
+                                    "refUri": "code"
+                                },
+                                {
+                                    "title": "TranslateService",
+                                    "isActive": false,
+                                    "uri": "/ngx-translate-extension/code",
+                                    "linkTitle": "code",
+                                    "refUri": "code"
+                                },
+                                {
+                                    "title": "Define the Translations",
+                                    "isActive": false,
+                                    "uri": "/ngx-translate-extension/code",
+                                    "linkTitle": "code",
+                                    "refUri": "code"
+                                },
+                                {
+                                    "title": "Use Service, pipe or directive",
+                                    "isActive": false,
+                                    "uri": "/ngx-translate-extension/code",
+                                    "linkTitle": "code",
+                                    "refUri": "code"
+                                },
+                                {
+                                    "title": "Use Html Tag",
+                                    "isActive": false,
+                                    "uri": "/ngx-translate-extension/code",
+                                    "linkTitle": "code",
+                                    "refUri": "code"
+                                },
+                                {
+                                    "title": "API",
+                                    "isActive": false,
+                                    "uri": "/ngx-translate-extension/code",
+                                    "linkTitle": "code",
+                                    "refUri": "code"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Spec",
+                            "isActive": false,
+                            "linkTitle": "angular-code-compare",
+                            "refUri": "angular-code-compare",
+                            "childrens": [
+                                {
+                                    "title": "missing-translation-handler",
+                                    "uri": "/ngx-translate-extension/comparison/missing-translation-handler",
+                                    "isActive": false,
+                                    "linkTitle": "missing-translation-handler",
+                                    "refUri": "missing-translation-handler"
+                                },
+                                {
+                                    "title": "translate.compiler",
+                                    "uri": "/ngx-translate-extension/comparison/translate-compiler",
+                                    "isActive": false,
+                                    "linkTitle": "translate-compiler",
+                                    "refUri": "translate-compiler"
+                                },
+                                {
+                                    "title": "translate.directive",
+                                    "uri": "/ngx-translate-extension/comparison/translate-directive",
+                                    "isActive": false,
+                                    "linkTitle": "translate-directive",
+                                    "refUri": "translate-directive"
+                                },
+                                {
+                                    "title": "translate.loader",
+                                    "uri": "/ngx-translate-extension/comparison/translate-loader",
+                                    "isActive": false,
+                                    "linkTitle": "translate-loader",
+                                    "refUri": "translate-loader"
+                                },
+                                {
+                                    "title": "translate.parser",
+                                    "uri": "/ngx-translate-extension/comparison/translate-parser",
+                                    "isActive": false,
+                                    "linkTitle": "translate-parser",
+                                    "refUri": "translate-parser"
+                                },
+                                {
+                                    "title": "translate.pipe",
+                                    "uri": "/ngx-translate-extension/comparison/translate-pipe",
+                                    "isActive": false,
+                                    "linkTitle": "translate-pipe",
+                                    "refUri": "translate-pipe"
+                                },
+                                {
+                                    "title": "translate.service",
+                                    "uri": "/ngx-translate-extension/comparison/translate-service",
+                                    "isActive": false,
+                                    "linkTitle": "translate-service",
+                                    "refUri": "translate-service"
+                                },
+                                {
+                                    "title": "translate.store",
+                                    "uri": "/ngx-translate-extension/comparison/translate-store",
+                                    "isActive": false,
+                                    "linkTitle": "translate-store",
+                                    "refUri": "translate-store"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Power Tool",
+                    "uri": "/ngx-translate-extension/rxweb-cli",
+                    "isActive": false,
+                    "linkTitle": "rxweb-cli",
+                    "refUri": "rxweb-cli"
+                },
+                {
+                    "title": "Playground",
+                    "uri": "/ngx-translate-extension/en/playground",
+                    "isActive": false,
+                    "linkTitle": "ngxtranslateextensionplayground",
+                    "refUri": "ngxtranslateextensionplayground"
                 }
-              ]
-            },
-
-            {
-              "title": "Power Tool",
-              "uri": "/ngx-translate-extension/rxweb-cli",
-              "isActive": false,
-              "linkTitle": "rxweb-cli",
-              "refUri": "rxweb-cli"
-            },
-            {
-              "title": "Playground",
-              "uri": "/ngx-translate-extension/en/playground",
-              "isActive": false,
-              "linkTitle": "ngxtranslateextensionplayground",
-              "refUri": "ngxtranslateextensionplayground"
-            }
-
-          ]
+            ]
         }
     ]
 }
