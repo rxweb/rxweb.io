@@ -23,8 +23,8 @@
   <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/diff2html/dist/diff2html.min.css">
   <script src="https://cdn.jsdelivr.net/npm/diff2html/dist/diff2html.min.js"></script>
-
-  <script src="src/assets/scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/scripts/gifffer.js"></script>
+  <script src="assets/scripts/jquery.min.js"></script>
 
   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/go.min.js"></script> -->
@@ -37,7 +37,11 @@
   <iframe crossorigin="anonymous" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" id="xFrame"
     src="about:blank" style="display:none;"></iframe>
   <app-root></app-root>
-
+<script>
+  window.onload = function() {
+  Gifffer();
+}
+  </script>
     <!-- Hotjar Tracking Code for docs.rxweb.io -->
     <script>
       (function (h, o, t, j, a, r) {

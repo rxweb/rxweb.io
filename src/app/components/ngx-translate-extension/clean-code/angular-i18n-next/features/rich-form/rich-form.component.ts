@@ -18,7 +18,7 @@ export class RichFormAngularNextComparisonComponent {
   constructor(private http: HttpClient) {
 
     this.http.get("assets/json/code-compare-angular-i18n-next.json").subscribe(response => {
-      this.tabArray = response['rich-demo'];
+      this.tabArray = response['rich-form'];
       console.log(this.tabArray)
       this.activeTab = this.tabArray[0].tabName;
       if (this.tabArray.length > 0) {
