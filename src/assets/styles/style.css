@@ -9600,3 +9600,24 @@ div#v-pills-tabContent {
   color: #0b263b;
    font-weight: normal; 
 }
+.available {
+  color: #46cb93;
+  font-size: 21px;
+}
+.not-available {
+  color: #e96060;
+  font-size: 20px;
+}
+.feature-title {
+  padding: .40rem !important;
+  color: #363e45;
+}
+.td-pad-left {
+  padding-left:30px !important;
+}
+
+.feature table thead th {
+  font-size: 20px;
+  font-weight: 600;
+  color: #11436e;
+}
