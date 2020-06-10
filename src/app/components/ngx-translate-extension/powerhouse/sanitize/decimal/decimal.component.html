@@ -1,0 +1,236 @@
+<app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
+<div class="title-bar top_title">
+  <p>Decimal</p>
+</div>
+<div class="title-bar">
+  <p>Sanitize your decimal input using <b>sanitizer</b> pipe.</p>
+</div>
+
+<div class="bg-white border-radius" style="margin-top:40px;" *ngIf="sanitize.raw">
+<div class="row col-md-12">
+  <div class="col-md-8">
+    <div class="row ">
+      <div class="col-md-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link" id="v-pills-profile-decimalStaticValue-tab" style="font-size: 11px;" data-toggle="pill"
+            href="#v-pills-profile-decimalStaticValue" role="tab" aria-controls="v-pills-profile-decimalStaticValue"
+            aria-selected="false">sanitize/en.json</a>
+          <a class="nav-link" style="font-size: 11px;" id="v-pills-component-decimalStaticValue-tab"
+            data-toggle="pill" href="#v-pills-component-decimalStaticValue" role="tab"
+            aria-controls="v-pills-component-decimalStaticValue" aria-selected="false">*.component.ts</a>
+          <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-decimalStaticValue-tab" data-toggle="pill"
+            href="#v-pills-messages-decimalStaticValue" role="tab" aria-controls="v-pills-messages-decimalStaticValue "
+            aria-selected="false">*.component.html</a>
+        </div>
+      </div>
+      <div class="col-md-10 remove-col-padding">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade" id="v-pills-profile-decimalStaticValue" role="tabpanel"
+            aria-labelledby="v-pills-profile-decimalStaticValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="json" [item]="examples.decimalStaticValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-component-decimalStaticValue" role="tabpanel"
+            aria-labelledby="v-pills-component-decimalStaticValue-tab">
+            <div class="code-section p-0">
+              <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+              <app-code-display innerHtml="typescript" [item]="examples.decimalStaticValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade show active" id="v-pills-messages-decimalStaticValue" role="tabpanel"
+            aria-labelledby="v-pills-messages-decimalStaticValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="html" [item]="examples.decimalStaticValue"></app-code-display>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4 remove-col-padding">
+    <div>
+      <div class="code_eg">Output</div>
+      <div class="ngx-output">
+        <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.decimalStaticValue}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row col-style">
+  <div class="col-text-style"><span class="col-hash-text-teal" data-toggle="tooltip"
+      title="Now easily internationalize your date input using me! 😍" data-placement="top"><i class="fa fa-info-circle"
+        aria-hidden="true"></i> </span>Dynamic value
+  </div>
+</div>
+<div class="row col-md-12">
+  <div class="col-md-8">
+    <div class="row ">
+      <div class="col-md-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link" id="v-pills-profile-decimalDynamicValue-tab" style="font-size: 11px;" data-toggle="pill"
+            href="#v-pills-profile-decimalDynamicValue" role="tab" aria-controls="v-pills-profile-decimalDynamicValue"
+            aria-selected="false">sanitize/en.json</a>
+          <a class="nav-link" style="font-size: 11px;" id="v-pills-component-decimalDynamicValue-tab"
+            data-toggle="pill" href="#v-pills-component-decimalDynamicValue" role="tab"
+            aria-controls="v-pills-component-decimalDynamicValue" aria-selected="false">*.component.ts</a>
+          <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-decimalDynamicValue-tab" data-toggle="pill"
+            href="#v-pills-messages-decimalDynamicValue" role="tab" aria-controls="v-pills-messages-decimalDynamicValue"
+            aria-selected="false">*.component.html</a>
+        </div>
+      </div>
+      <div class="col-md-10 remove-col-padding">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade" id="v-pills-profile-decimalDynamicValue" role="tabpanel"
+            aria-labelledby="v-pills-profile-decimalDynamicValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="json" [item]="examples.decimalDynamicValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-component-decimalDynamicValue" role="tabpanel"
+            aria-labelledby="v-pills-component-decimalDynamicValue-tab">
+            <div class="code-section p-0">
+              <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+              <app-code-display innerHtml="typescript" [item]="examples.decimalDynamicValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade show active" id="v-pills-messages-decimalDynamicValue" role="tabpanel"
+            aria-labelledby="v-pills-messages-decimalDynamicValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="html" [item]="examples.decimalDynamicValue"></app-code-display>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4 remove-col-padding">
+    <div>
+      <div class="code_eg">Output</div>
+      <div class="ngx-output">
+        <input type="text" [(ngModel)]="numeric" [ngModelOptions]="{standalone: true}"
+          class="form-control sanitize-form-control margin-right">
+        <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.decimalDynamicValue}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row col-style">
+  <div class="col-text-style"><span class="col-hash-text-teal" data-toggle="tooltip"
+      title="Now easily internationalize your date input using me! 😍" data-placement="top"><i class="fa fa-info-circle"
+        aria-hidden="true"></i> </span>Static Params
+  </div>
+</div>
+<div class="row col-md-12">
+  <div class="col-md-8">
+    <div class="row ">
+      <div class="col-md-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link" id="v-pills-profile-staticParam-tab" style="font-size: 11px;" data-toggle="pill"
+            href="#v-pills-profile-staticParam" role="tab" aria-controls="v-pills-profile-staticParam"
+            aria-selected="false">sanitize/en.json</a>
+          <a class="nav-link" style="font-size: 11px;" id="v-pills-component-staticParam-tab" data-toggle="pill"
+            href="#v-pills-component-staticParam" role="tab"
+            aria-controls="v-pills-component-staticParam" aria-selected="false">*.component.ts</a>
+          <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-staticParam-tab"
+            data-toggle="pill" href="#v-pills-messages-staticParam" role="tab"
+            aria-controls="v-pills-messages-staticParam" aria-selected="false">*.component.html</a>
+        </div>
+      </div>
+      <div class="col-md-10 remove-col-padding">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade" id="v-pills-profile-staticParam" role="tabpanel"
+            aria-labelledby="v-pills-profile-staticParam-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="json" [item]="examples.staticParam"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-component-staticParam" role="tabpanel"
+            aria-labelledby="v-pills-component-staticParam-tab">
+            <div class="code-section p-0">
+              <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+              <app-code-display innerHtml="typescript" [item]="examples.staticParam"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade show active" id="v-pills-messages-staticParam" role="tabpanel"
+            aria-labelledby="v-pills-messages-staticParam-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="html" [item]="examples.staticParam"></app-code-display>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4 remove-col-padding">
+    <div>
+      <div class="code_eg">Output</div>
+      <div class="ngx-output">
+        <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.decimalStaticParam}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row col-style">
+  <div class="col-text-style"><span class="col-hash-text-teal" data-toggle="tooltip"
+      title="Now easily internationalize your date input using me! 😍" data-placement="top"><i class="fa fa-info-circle"
+        aria-hidden="true"></i> </span>Dynamic Params
+  </div>
+</div>
+<div class="row col-md-12">
+  <div class="col-md-8">
+    <div class="row ">
+      <div class="col-md-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link" id="v-pills-profile-dynamicParam-tab" style="font-size: 11px;" data-toggle="pill"
+            href="#v-pills-profile-dynamicParam" role="tab" aria-controls="v-pills-profile-dynamicParam"
+            aria-selected="false">sanitize/en.json</a>
+          <a class="nav-link" style="font-size: 11px;" id="v-pills-component-dynamicParam-tab" data-toggle="pill"
+            href="#v-pills-component-dynamicParam" role="tab" aria-controls="v-pills-component-dynamicParam"
+            aria-selected="false">*.component.ts</a>
+          <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-dynamicParam-tab" data-toggle="pill"
+            href="#v-pills-messages-dynamicParam" role="tab" aria-controls="v-pills-messages-dynamicParam"
+            aria-selected="false">*.component.html</a>
+        </div>
+      </div>
+      <div class="col-md-10 remove-col-padding">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade" id="v-pills-profile-dynamicParam" role="tabpanel"
+            aria-labelledby="v-pills-profile-dynamicParam-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="json" [item]="examples.dynamicParam"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-component-dynamicParam" role="tabpanel"
+            aria-labelledby="v-pills-component-dynamicParam-tab">
+            <div class="code-section p-0">
+              <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+              <app-code-display innerHtml="typescript" [item]="examples.dynamicParam"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade show active" id="v-pills-messages-dynamicParam" role="tabpanel"
+            aria-labelledby="v-pills-messages-dynamicParam-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="html" [item]="examples.dynamicParam"></app-code-display>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4 remove-col-padding">
+    <div>
+      <div class="code_eg">Output</div>
+      <div class="ngx-output">
+        <input type="text" [(ngModel)]="numeric" [ngModelOptions]="{standalone: true}"
+          class="form-control sanitize-form-control margin-right">
+        <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.decimalDynamicParam}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

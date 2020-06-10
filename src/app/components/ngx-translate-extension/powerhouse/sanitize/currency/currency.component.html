@@ -51,22 +51,7 @@
     <div>
       <div class="code_eg">Output</div>
       <div class="ngx-output">
-        <table class="table table-sm example-table-color" style="margin-top: -40px;">
-          <tbody>
-            <tr>
-              <th style="width:25%">Particular</th>
-              <th style="width:25%">Text</th>
-              <th style="width:50%">Transformed</th>
-            </tr>
-            <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyStaticValue}}</span></td>
-              <td style="width:50%">
-                <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyStaticValue}}</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyStaticValue}}</span>
       </div>
     </div>
   </div>
@@ -121,24 +106,9 @@
       <div>
         <div class="code_eg">Output</div>
         <div class="ngx-output">
-          <table class="table table-sm example-table-color" style="margin-top: -40px;">
-            <tbody>
-              <tr>
-                <th style="width:25%">Particular</th>
-                <th style="width:25%">Text</th>
-                <th style="width:50%">Transformed</th>
-              </tr>
-              <tr>
-                <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
-                <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyDynamicValue}}</span></td>
-                <td style="width:50%">
-                  <input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}"
-                    class="form-control sanitize-form-control margin-right">
-                  <span class="badge badge-{{sanitize.languageCode}}" style="margin-top: 5px;">{{sanitize.currencyDynamicValue}}</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}"
+            class="form-control sanitize-form-control margin-right">
+          <span class="badge badge-{{sanitize.languageCode}}" style="margin-top: 5px;">{{sanitize.currencyDynamicValue}}</span>
         </div>
       </div>
     </div>
@@ -193,22 +163,7 @@
         <div>
           <div class="code_eg">Output</div>
           <div class="ngx-output">
-            <table class="table table-sm example-table-color" style="margin-top: -40px;">
-              <tbody>
-                <tr>
-                  <th style="width:25%">Particular</th>
-                  <th style="width:25%">Text</th>
-                  <th style="width:50%">Transformed</th>
-                </tr>
-                <tr>
-                  <td style="width:25%"><span class="ft-small badge badge-light">Static Param</span></td>
-                  <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyStaticParam}}</span></td>
-                  <td style="width:50%">
-                    <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyStaticParam}}</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyStaticParam}}</span>
           </div>
         </div>
       </div>
@@ -263,24 +218,9 @@
         <div>
           <div class="code_eg">Output</div>
           <div class="ngx-output">
-            <table class="table table-sm example-table-color" style="margin-top: -40px;">
-              <tbody>
-                <tr>
-                  <th style="width:25%">Particular</th>
-                  <th style="width:25%">Text</th>
-                  <th style="width:50%">Transformed</th>
-                </tr>
-                <tr>
-                  <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Param</span></td>
-                  <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyDynamicParam}}</span></td>
-                  <td style="width:50%">
-                    <input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}"
-                      class="form-control sanitize-form-control margin-right">
-                    <span class="badge badge-{{sanitize.languageCode}}"  style="margin-top: 5px;">{{sanitize.currencyDynamicParam}}</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}"
+              class="form-control sanitize-form-control margin-right">
+            <span class="badge badge-{{sanitize.languageCode}}" style="margin-top: 5px;">{{sanitize.currencyDynamicParam}}</span>
           </div>
         </div>
       </div>

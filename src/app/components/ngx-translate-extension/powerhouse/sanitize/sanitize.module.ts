@@ -18,16 +18,18 @@ import { CurrencyComponent } from "./currency/currency.component";
 import { RxTranslateSanitizeModule } from "@rxweb/translate";
 import { NGX_SANITIZE_ROUTING } from "./sanitize.routing";
 import { DateComponent } from "./date/date.component";
-
+import { DecimalComponent } from "./decimal/decimal.component";
+import { PercentComponent } from "./percent/percent.component";
+import { LowerCaseComponent } from "./lower-case/lower-case.component";
 
 @NgModule({
   imports: [NGX_SANITIZE_ROUTING, HttpClientModule,
-    // TranslateModule, RxTranslateSanitizeModule,
+    RxTranslateSanitizeModule,
     CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule,
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
   ],
   declarations: [
-    CurrencyComponent, DateComponent
+    CurrencyComponent, DateComponent, DecimalComponent, PercentComponent, LowerCaseComponent
   ],
   providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]

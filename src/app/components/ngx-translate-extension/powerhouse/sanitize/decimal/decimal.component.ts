@@ -5,50 +5,52 @@ import $ from 'jquery';
 import { translate } from '@rxweb/translate';
 
 @Component({
-  selector: 'app-currency',
-  templateUrl: './currency.component.html',
+  selector: 'app-decimal',
+  templateUrl: './decimal.component.html',
 })
-export class CurrencyComponent implements OnInit {
+export class DecimalComponent implements OnInit {
   @translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
 
-  pay: number = 0.259
+  numeric: number = 2.718281828459045;
 
   examples: any = {
-    currencyStaticValue: {
+    decimalStaticValue: {
       json: `{  
-  "currencyStaticValue": "Pay {{0.259 | currency}}"
+  "decimalStaticValue": "{{2.71828 | decimal}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };`,
-      html: `<span>{{sanitize.currencyStaticValue}}</span>`
+      html: `<span>{{sanitize.decimalStaticValue}}</span>`
     },
-    currencyDynamicValue: {
+    decimalDynamicValue: {
       json: `{  
-  "currencyDynamicValue": "Pay {{pay | currency}}"
+  "decimalDynamicValue": "{{numeric | decimal}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
-pay: number = 0.259`,
-      html: `<input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}">
-<span>{{sanitize.currencyDynamicValue}}</span>
+numeric: number = 2.718281828459045;`,
+      html: `<input type="text" [(ngModel)]="numeric" [ngModelOptions]="{standalone: true}">
+<span>{{sanitize.decimalDynamicValue}}</span>
 `
     },
     staticParam: {
       json: `{  
-  "currencyStaticParam": "Pay {{pay | currency:'CAD'}}"
+  "decimalStaticParam": "{{numeric | decimal:'3.1-5'}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };`,
-      html: `<span>{{sanitize.currencyStaticParam}}</span>
-`
+      html: `<span>{{sanitize.decimalStaticParam}}</span>`
     },
     dynamicParam: {
       json: `{  
-  "currencyDynamicParam": "Pay {{pay | currency:currencyCode}}"
+  "decimalDynamicParam": "{{numeric | decimal:formatting}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
-
-pay: number = 0.259`,
-      html: `<input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}">
-<span>{{sanitize.currencyDynamicParam}}</span>`
+numeric: number = 2.718281828459045;`,
+      html: `<input type="text" [(ngModel)]="numeric" [ngModelOptions]="{standalone: true}">
+<span>{{sanitize.decimalDynamicValue}}</span>`
     }
+  }
+
+  get formatting() {
+    return '4.5-5';
   }
 
   ngOnInit() {

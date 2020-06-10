@@ -5,50 +5,52 @@ import $ from 'jquery';
 import { translate } from '@rxweb/translate';
 
 @Component({
-  selector: 'app-currency',
-  templateUrl: './currency.component.html',
+  selector: 'app-percent',
+  templateUrl: './percent.component.html',
 })
-export class CurrencyComponent implements OnInit {
+export class PercentComponent implements OnInit {
   @translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
 
-  pay: number = 0.259
+  percentage: number = 0.259;
 
   examples: any = {
-    currencyStaticValue: {
+    percentStaticValue: {
       json: `{  
-  "currencyStaticValue": "Pay {{0.259 | currency}}"
+  "percentStaticValue": "{{0.259 | percent}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };`,
-      html: `<span>{{sanitize.currencyStaticValue}}</span>`
+      html: `<span>{{sanitize.percentStaticValue}}</span>`
     },
-    currencyDynamicValue: {
+    percentDynamicValue: {
       json: `{  
-  "currencyDynamicValue": "Pay {{pay | currency}}"
+  "percentDynamicValue": "{{percentage | percent}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
-pay: number = 0.259`,
-      html: `<input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}">
-<span>{{sanitize.currencyDynamicValue}}</span>
+percentage: number = 0.259;`,
+      html: `<input type="text" [(ngModel)]="percentage" [ngModelOptions]="{standalone: true}">
+<span>{{sanitize.percentDynamicValue}}</span>
 `
     },
     staticParam: {
       json: `{  
-  "currencyStaticParam": "Pay {{pay | currency:'CAD'}}"
+  "percentStaticParam": "{{percentage | percent:'4.3-5'}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };`,
-      html: `<span>{{sanitize.currencyStaticParam}}</span>
-`
+      html: `<span>{{sanitize.percentStaticParam}}</span>`
     },
     dynamicParam: {
       json: `{  
-  "currencyDynamicParam": "Pay {{pay | currency:currencyCode}}"
+  "percentDynamicParam": "{{percentage | percent:percentFormatting}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
-
-pay: number = 0.259`,
-      html: `<input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}">
-<span>{{sanitize.currencyDynamicParam}}</span>`
+percentage: number = 0.259;`,
+      html: `<input type="text" [(ngModel)]="percentage" [ngModelOptions]="{standalone: true}">
+<span>{{sanitize.percentDynamicParam}}</span>`
     }
+  }
+
+  get percentFormatting() {
+    return '4.3-5';
   }
 
   ngOnInit() {

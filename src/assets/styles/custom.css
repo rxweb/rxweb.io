@@ -1314,9 +1314,9 @@ th.comprasion {
 }
 
 .margin-right {
-  margin-right: 2px;
+  margin-right: 10px;
 }
 
 .sanitize-form-control {
-  width: 160px !important;
+  width: 100px !important;
 }
