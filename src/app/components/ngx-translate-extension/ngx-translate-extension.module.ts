@@ -63,9 +63,9 @@ export class TranslateHttpLoader implements TranslateLoader {
 }
 @NgModule({
     imports: [NGX_TRANSLATE_EXTENSION_ROUTING, HttpClientModule,
-        TranslateModule.forRoot({ loader: { provide: TranslateLoader, useClass: TranslateHttpLoader } }), RxTranslateSanitizeModule,
+        
         CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule,
-        CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
+        CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule, TranslateModule, RxTranslateSanitizeModule
     ],
     declarations: [
         CliComponent, ComparsionToOtherLibrariesComponent, ComparisonComponent, TranslateCleanCodeComponent, CustomPipe,
@@ -79,4 +79,9 @@ export class TranslateHttpLoader implements TranslateLoader {
     exports: [RouterModule]
 })
 export class NgxTranslateExtensionModule {
+    constructor(public translate: TranslateService) {
+    translate.addLangs(['en', 'es', 'fr']);
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 }

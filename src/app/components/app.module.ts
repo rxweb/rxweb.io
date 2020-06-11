@@ -66,6 +66,9 @@ import { QuickStartComponent } from './quick-start/quick-start.component';
 import { VueGettingStartedComponent } from './vue-getting-started/vue-getting-started.component';
 import { VueHomePageComponent } from './vue-home-page/vue-home-page.component';
 import { StaticTranslationComponent } from 'src/assets/examples/static-translation/static-translation.component';
+import { TranslateModule, TranslateLoader} from "@rxweb/ngx-translate-extension";
+import { RxTranslateSanitizeModule } from "@rxweb/translate";
+import { TranslateHttpLoader } from './ngx-translate-extension/ngx-translate-extension.module';
 registerLocaleData(localePt)
 
 //import { TextPageComponent } from './text-page/text-page.component';
@@ -84,16 +87,16 @@ registerLocaleData(localePt)
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
     BrowserAnimationsModule,
     RxSecurityModule, CommonModule,
-    RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
-    RxTranslateModule.forRoot({
-        cacheLanguageWiseObject: true,
-        //globalFilePath: "assets/i18n/{{language-code}}/global.{{language-code}}.json",
-        //filePath: "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json",
-        forNgxTranslate: true,
-      controlErrorMessage: {
-        path: 'validationErrorMessages'
-      }
-    })
+      RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
+      TranslateModule.forRoot(
+          {
+              loader:
+                  { provide: TranslateLoader, useClass: TranslateHttpLoader },
+              controlErrorMessage: {
+                  path: 'validationErrorMessages'
+              }
+          },
+      ), RxTranslateSanitizeModule,
   ],
   providers: [RxValidation, ApplicationBroadcaster,
     {
@@ -108,8 +111,8 @@ registerLocaleData(localePt)
     { provide: 'RequestHeaders', useClass: ApplicationRequestHeaders },
     { provide: 'ResponseResult', useClass: ApplicationResponse },
     ApplicationBroadcaster, PromptUpdateService, LogUpdateService, CheckForUpdateService,
-  ],
-  exports: [RouterModule],
+    ],
+    exports: [RouterModule],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
