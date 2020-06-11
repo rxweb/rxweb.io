@@ -42,7 +42,6 @@ import { PowerhouseOtherIntruitiveFeaturesComponent } from "./powerhouse/other-i
 import { ComparsionToOtherLibrariesComponent } from "./comparison-to-other-libraries/comparison-to-other-libraries.component";
 import { SanitizeComponent } from "./playground/sanitize/sanitize.component";
 import { PowerhouseSanitizeComponent } from "./powerhouse/sanitize/sanitize.component";
-import { CustomPipe } from "./playground/sanitize/custom.pipe";
 import { PowerhousePurePipeComponent } from "./powerhouse/pure-pipe/pure-pipe.component";
 import { PurePipeComponent } from "./playground/pure-pipe/pure-pipe.component";
 import { NgxCodeComponent } from "./code/code.component";
