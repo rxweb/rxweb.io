@@ -25,7 +25,7 @@ export class NgxTranslateExtensionGettingStartedComponent implements OnInit {
 
     htmlBinding: any = `<div class="badge badge-warning">{{global.greetMessage}}</div>`;
     titleData: any = { codeContent: {} };
-    mainTab: string = "installation"
+    mainTab: string = "translate"
     importModule: any = `RxTranslateModule.forRoot({
           cacheLanguageWiseObject: true,
           globalFilePath: "assets/i18n/{{language-code}}/global.{{language-code}}.json",
@@ -56,7 +56,7 @@ export class NgxTranslateExtensionGettingStartedComponent implements OnInit {
     code: any = `{
   "morningText":"Good Morning",
   "goodDayText":"Good Day",
-  "conditionalText":" this.day == 'Good Day' ? 
+  "conditionalText":"this.day == 'Good Day' ? 
   this.global.goodDayText : this.global.morningText",
   "greetMessage":"Hey! {{global.conditionalText}},
    I hope you are doing well 🙃. You can translate me by selecting",

@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-md-7">
                   <div style="padding-top:40px;">
-                    <div class="code_git"><a href="#"><i class="fa fa-github fa-github-icon"></i></a></div>
+                    <div class="code_git"><a target="_blank" href="https://github.com/rxweb/rxweb/tree/master/examples/client-side/angular/translate/getting-started"><i class="fa fa-github fa-github-icon"></i></a></div>
                     <div style="line-height: 34px!important;margin-top: -8px;">
                       <span style="font-size: 17px;">{{global.greetMessage}}</span>&nbsp;
                       <select (click)="changeLanguage($event.target.value)">
@@ -86,20 +86,20 @@
                             <div class="row page-section" id="examples" key="dynamic">
                                 <div class='col-lg-12'>
                                     <ul class="nav nav-tabs">
-                                        <li [class.active]="mainTab=='installation'" (click)="changeTab('installation')">
+                                        <li [class.active]="mainTab=='translate'" (click)="changeTab('translate')">
                                             <a>translate</a></li>
-                                        <li [class.active]="mainTab=='validator'" (click)="changeTab('validator')">
+                                        <li [class.active]="mainTab=='ngx-translate-extension'" (click)="changeTab('ngx-translate-extension')">
                                           <a>ngx-translate to extension</a></li>
 
                                     </ul>
                                     <div class="tab-content p-4">
                                      
-                                        <div class='col-lg-12'  *ngIf="mainTab=='installation'">
+                                        <div class='col-lg-12'  *ngIf="mainTab=='translate'">
                                             
                                           <img  data-gifffer="assets/images/translate-installation.gif">
 
                                         </div>
-                                        <div class='col-lg-12' *ngIf="mainTab=='validator'">
+                                        <div class='col-lg-12' *ngIf="mainTab=='ngx-translate-extension'">
 
                                           <img  data-gifffer="assets/images/ngx-translate-extension.gif">
 
