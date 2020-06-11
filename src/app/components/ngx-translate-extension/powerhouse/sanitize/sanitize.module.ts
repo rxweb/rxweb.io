@@ -27,15 +27,15 @@ import { CustomPipe } from "./custom/custom.pipe";
 import { CustomComponent } from "./custom/custom.component";
 
 @NgModule({
-  imports: [NGX_SANITIZE_ROUTING, HttpClientModule, RxTranslateSanitizeModule,
+  imports: [NGX_SANITIZE_ROUTING, HttpClientModule, 
     CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule,
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
   ],
   declarations: [
     CurrencyComponent, DateComponent, DecimalComponent, PercentComponent, LowerCaseComponent, UpperCaseComponent, 
-    TitleCaseComponent, CustomComponent, CustomPipe
+    TitleCaseComponent, CustomComponent
   ],
-  providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CustomPipe],
+  providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]
 })
 export class SanitizeModule {

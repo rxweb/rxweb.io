@@ -65,17 +65,17 @@ export class TranslateHttpLoader implements TranslateLoader {
     imports: [NGX_TRANSLATE_EXTENSION_ROUTING, HttpClientModule,
         
         CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule,
-        CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule, TranslateModule, RxTranslateSanitizeModule
+        CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule, TranslateModule
     ],
     declarations: [
-        CliComponent, ComparsionToOtherLibrariesComponent, ComparisonComponent, TranslateCleanCodeComponent, CustomPipe,
+        CliComponent, ComparsionToOtherLibrariesComponent, ComparisonComponent, TranslateCleanCodeComponent, 
         NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, PowerhouseAttributeDirectiveComponent, PowerhousePipeComponent,
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,
         PreLoadModuleComponent, StructuralDirectiveComponent, ValidationMessageComponent, PowerhouseChangeLanguageComponent, NgxCodeComponent,
         PowerhouseOtherIntruitiveFeaturesComponent, SanitizeComponent, PowerhouseSanitizeComponent, PowerhousePurePipeComponent, PurePipeComponent
     ],
-    providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CountryService, CustomPipe],
+    providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CountryService],
     exports: [RouterModule]
 })
 export class NgxTranslateExtensionModule {
