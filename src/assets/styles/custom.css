@@ -1334,3 +1334,18 @@ p.text-right.playground-links {
   font-size: 15px;
   color: #ccc;
 }
+
+p.clean-code {
+  line-height: 30px;
+  font-size: 16px;
+}
+
+h6.packages {
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+li.diff-points {
+  line-height: 27px;
+  list-style: decimal;
+}

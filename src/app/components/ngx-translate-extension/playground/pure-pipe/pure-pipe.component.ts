@@ -9,7 +9,7 @@ import { TranslateService } from '@rxweb/ngx-translate-extension';
 export class PurePipeComponent {
   @translate() global: { [key: string]: any };
 
-  name: string = "Munad"
+  name: string = "John"
 
   constructor(public translate: TranslateService) { }
 }

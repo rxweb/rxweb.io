@@ -14,7 +14,7 @@
   "lowerCaseDynamicValue": "{{lowerCase | lowercase}}",
   "upperCaseStaticValue": "{{'good repository' | uppercase}}",
   "upperCaseDynamicValue": "{{upperCase | uppercase}}",
-  "titleCaseStaticValue": "{{'my name is  munad' | titlecase}}",
+  "titleCaseStaticValue": "{{'my name is john' | titlecase}}",
   "titleCaseDynamicValue": "{{titleCase | titlecase}}",
   "percentStaticValue": "{{0.259 | percent}}",
   "percentDynamicValue": "{{percentage | percent}}",

@@ -18,8 +18,7 @@ export class CustomComponent implements OnInit {
       json: `{  
   "customStaticValue": "{{'Superb' | custom}}"
 }`,
-      ts: `
-@sanitize({ name: 'custom' })
+      ts: `@sanitize({ name: 'custom' })
 @Pipe({ name: 'custom' })
 export class CustomPipe implements PipeTransform {
   transform(value: number, emoji: string = ""): string {

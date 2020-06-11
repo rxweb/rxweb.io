@@ -60,33 +60,35 @@ export class PowerhouseDecoratorComponent implements OnInit {
 
   examples: any = {
     basic: {
-      json: `{"greet": "Hello! How are you"}`, 
+      json: `{
+  "greet": "Hello! How are you"
+}`, 
       typescript: `@translate() global: any;`,
       html: `<span>{{global.greet}}</span>`
     },
     translateParams: {
-      json: `{"notification": "Hello {{name}}"}`,
-      typescript: `
-      @translate() global: any;
-      name: string = "John";
-      `,
+      json: `{
+  "notification": "Hello {{name}}"
+}`,
+      typescript: `@translate() global: any;
+name: string = "John";`,
       html: `<span>{{global.notification}}</span>`
     },
     conditional: {
-      json: `{"conditionalText": "this.meridiem == 'am' ? 'Good Morning' : 'Have a Good Day'",}`,
+      json: `{
+  "conditionalText": "this.meridiem == 'am' ? 'Good Morning' : 'Have a Good Day'"
+}`,
       typescript: `
-      @translate() global: any;
-      
-      meridiem: string = "am";
+@translate() global: any;
+meridiem: string = "am";
 
-      changeMeridiem() {
-        this.meridiem = this.meridiem == "am" ? "pm" : "am";
-      }`,
-      html: `
-      <span>{{global.conditionalText}}</span>
-      <a (click)="changeMeridiem()">
-        {{meridiem == "am" ? 'Greet Good Day' : 'Greet Good Morning' }}
-      </a>
+changeMeridiem() {
+  this.meridiem = this.meridiem == "am" ? "pm" : "am";
+}`,
+      html: `<span>{{global.conditionalText}}</span>
+<a (click)="changeMeridiem()">
+  {{meridiem == "am" ? 'Greet Good Day' : 'Greet Good Morning' }}
+</a>
       `
     },
     reuse: {
@@ -136,17 +138,16 @@ export class CountryService {
       json: `{
   "selectedRecord": "You have selected record of '{name}'"
 }`,
-      typescript: `
-      @translate() global: any;
-      message: string;
+      typescript: `@translate() global: any;
+message: string;
 
-      constructor(public rxTranslation: RxTranslation) { }
-      
-      selectUser(user) {
-        this.message = this.rxTranslation.translate(
-            this.global.selectedRecord, user
-        );
-      }
+constructor(public rxTranslation: RxTranslation) { }
+
+selectUser(user) {
+  this.message = this.rxTranslation.translate(
+    this.global.selectedRecord, user
+  );
+}
       `,
       html: `<div role="alert">
   {{message}}
@@ -159,10 +160,9 @@ export class CountryService {
     "keyOne": "Nested Key One"
   }
 }`,
-      typescript: `
-      @translate() global: any;
+      typescript: `@translate() global: any;
 
-      keys: string[] = ["keyOne", "nested.keyOne"];
+keys: string[] = ["keyOne", "nested.keyOne"];
       `,
       html: `<tr *ngFor="let key of keys;">
   <td><span class="badge">{{key}}</span></td>
@@ -188,8 +188,7 @@ dashboardEnglish: { [key: string]: any };`,
     },
     translateLang: {
       json: `{"greet": "salut! Comment ça va:"}`,
-      typescript: `
-      @translate({ translationName: 'global', language: 'fr' }) globalFrench: { [key: string]: any };`,
+      typescript: `@translate({ translationName: 'global', language: 'fr' }) globalFrench: { [key: string]: any };`,
       html: `<span>{{globalFrench.greet}}</span>`
     }
   }
