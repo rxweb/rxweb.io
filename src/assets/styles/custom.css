@@ -1325,3 +1325,12 @@ th.comprasion {
 p.text-right.playground-links {
   position: fixed;
 }
+
+.code_git_right {
+  position: absolute;
+  top: 20px;
+  right: 86px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ccc;
+}
