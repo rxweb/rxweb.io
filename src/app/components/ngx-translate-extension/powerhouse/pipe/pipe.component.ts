@@ -30,7 +30,7 @@ export class PowerhousePipeComponent implements OnInit {
       html: `<label>{{'note' | translate:{lang:'fr'} }}</label><br />`
     },
     translationName: {
-      json: `{"dashboardHeading": "Dashboard/en.json"}`,
+      json: `{"dashboardHeading": "The text loaded from this path 'dashboard/en'"}`,
       html: `<label>{{'dashboardHeading' | translate:{translationName:'dashboard'} }} </label><br />`
     }
   }

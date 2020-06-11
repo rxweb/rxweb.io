@@ -1968,6 +1968,7 @@
         {
             "title": "Ngx Translate Extension",
             "isOpen": false,
+            
             "isActive": false,
             "otherUri": "ngx-translate-extension",
             "childrens": [
@@ -2199,26 +2200,27 @@
                             ]
                         },
                         {
-                            "title": "Change Language By",
+                            "title": "Runtime Change Language",
                             "uri": "/ngx-translate-extension/en/change-language",
                             "isActive": false,
                             "linkTitle": "change-language",
                             "refUri": "change-language",
                             "childrens": [
                                 {
-                                    "title": "URL",
-                                    "uri": "/ngx-translate-extension/en/change-language#byurl",
-                                    "isActive": false,
-                                    "linkTitle": "byurl",
-                                    "refUri": "byurl"
-                                },
-                                {
                                     "title": "Code",
                                     "uri": "/ngx-translate-extension/en/change-language#throughprogram",
                                     "isActive": false,
                                     "linkTitle": "throughprogram",
                                     "refUri": "throughprogram"
+                                },
+                                {
+                                    "title": "URL",
+                                    "uri": "/ngx-translate-extension/en/change-language#byurl",
+                                    "isActive": false,
+                                    "linkTitle": "byurl",
+                                    "refUri": "byurl"
                                 }
+                               
                             ]
                         },
                         {
@@ -2322,6 +2324,7 @@
                 {
                     "title": "<b>Translate</b> Clean Code Vs",
                     "isActive": false,
+                    "uri": "/ngx-translate-extension/translate-clean-code",
                     "linkTitle": "clean-code",
                     "refUri": "clean-code",
                     "childrens": [

@@ -1,6 +1,9 @@
 <app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
 <div class="title-bar top_title">
   <p>Pipe</p>
+  <div class="code_git_right"><a target="_blank"
+    href="https://github.com/rxweb/rxweb/tree/master/examples/client-side/angular/ngx-translate-extension/translation-powerhouse/src/app/pipe"><i
+      class="fa fa-github fa-github-icon"></i></a></div>
 </div>
 <div class="title-bar">
   <p>Resolve the translation using rxweb <b>translate</b> pipe.</p>
@@ -162,7 +165,7 @@
       <div>
         <div class="code_eg">Output</div>
         <div class="ngx-output">
-          <label class="badge badge-warning">{{'note' | translate:{lang:'fr'} }}</label><br />
+          <label class="badge badge-fr">{{'note' | translate:{lang:'fr'} }}</label><br />
         </div>
       </div>
     </div>
