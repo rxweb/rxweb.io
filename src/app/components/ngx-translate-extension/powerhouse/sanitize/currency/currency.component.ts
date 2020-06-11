@@ -51,6 +51,10 @@ pay: number = 0.259`,
     }
   }
 
+  get currencyCode() {
+    return this.sanitize.languageCode == 'en' ? 'CAD' : 'EUR'
+  }
+  
   ngOnInit() {
     $('[data-toggle="tooltip"]').tooltip({
       template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-sanitizer-inner md-inner"></div></div>'

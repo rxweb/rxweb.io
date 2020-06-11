@@ -1126,6 +1126,7 @@ input.ng-invalid {
 
 table.table.table-sm.example-table-color {
   width: 100%;
+  background-color: transparent;
 }
 
 i.fa.fa-external-link.translate-external-link {
@@ -1320,11 +1321,7 @@ th.comprasion {
 .sanitize-form-control {
   width: 100px !important;
 }
-.code_git_right {
-  position: absolute;
-  top: 20px;
-  right: 86px;
-  font-weight: bold;
-  font-size: 15px;
-  color: #ccc;
+
+p.text-right.playground-links {
+  position: fixed;
 }

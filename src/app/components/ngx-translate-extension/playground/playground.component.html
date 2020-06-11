@@ -1,4 +1,4 @@
-<div>
+<div style="position: relative;">
   <div class="container-fluid">
     <div class="">
       <div class="row">
@@ -6,7 +6,7 @@
           The most powerful flexible, faster, simple translation binding for Angular Applications.
         </div>
         <div class="col-md-2" style="margin-top:10px;">
-          <p class="text-right ">
+          <p class="text-right playground-links">
             <a (click)="translate.use('en')" [class.active-language]="translate.currentLang == 'en'"
               class="blue-link english active-language">English</a>
             <a (click)="translate.use('fr')" [class.active-language]="translate.currentLang == 'fr'"
@@ -31,7 +31,7 @@
   </div>
   <div class="opac">
     <!--Pure Pipe Example Binding-->
-    <!-- <app-pure-pipe *rxTranslate="true"></app-pure-pipe> -->
+    <app-pure-pipe *rxTranslate="true"></app-pure-pipe>
   </div>
 
   <div class="opac">
