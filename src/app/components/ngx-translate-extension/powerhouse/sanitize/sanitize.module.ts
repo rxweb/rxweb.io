@@ -35,7 +35,7 @@ import { CustomComponent } from "./custom/custom.component";
     CurrencyComponent, DateComponent, DecimalComponent, PercentComponent, LowerCaseComponent, UpperCaseComponent, 
     TitleCaseComponent, CustomComponent
   ],
-  providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
+    providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CustomPipe],
   exports: [RouterModule]
 })
 export class SanitizeModule {
