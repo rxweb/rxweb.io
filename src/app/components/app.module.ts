@@ -81,7 +81,7 @@ registerLocaleData(localePt)
   declarations: [
     AppComponent, SideBarComponent, VueHomePageComponent,AngularHomeComponent,VueGettingStartedComponent, ChildLinkItemComponent, 
     LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, 
-    ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, QuickStartComponent,
+        ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, QuickStartComponent, CustomPipe
     
   ],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
