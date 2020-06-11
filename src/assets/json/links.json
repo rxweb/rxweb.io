@@ -2334,13 +2334,7 @@
                             "linkTitle": "transloco",
                             "refUri": "transloco",
                             "childrens": [
-                                {
-                                    "title": "Configuration",
-                                    "uri": "/ngx-translate-extension/clean-code-comparison/configuration",
-                                    "isActive": false,
-                                    "linkTitle": "configuration",
-                                    "refUri": "configuration"
-                                },
+                               
                                 {
                                     "title": "On Push",
                                     "uri": "/ngx-translate-extension/clean-code-comparison/on-push",
@@ -2393,17 +2387,12 @@
                             ]
                         },
                         {
-                            "title": "Angular i18n",
+                            "title": "Angular L10n",
                             "isActive": false,
                             "linkTitle": "angular-i18n",
                             "refUri": "angular-i18n",
                             "childrens": [
-                                {
-                                    "title": "Home",
-                                    "isActive": false,
-                                    "linkTitle": "angular-code-compare",
-                                    "refUri": "angular-code-compare",
-                                    "childrens": [
+                                
                                         {
                                             "title": "Api",
                                             "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-api",
@@ -2425,8 +2414,8 @@
                                             "linkTitle": "pipe",
                                             "refUri": "pipe"
                                         }
-                                    ]
-                                },
+                                    
+                                ,
                                 {
                                     "title": "Lazy",
                                     "uri": "/ngx-translate-extension/clean-code-comparison/angular-comparison-lazy",

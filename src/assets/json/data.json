@@ -23,7 +23,7 @@
     "diff": ""
     },
     "githubLink": {
-    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/on-push/on-push.component.ts",
+    "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/on-push/on-push.component.ts",
     "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/on-push/on-push.component.ts"
     }
     },
@@ -35,7 +35,7 @@
       "diff": ""
       },
       "githubLink": {
-      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/on-push/on-push.component.html",
+      "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/on-push/on-push.component.html",
       "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/on-push/on-push.component.html"
       }
       }
@@ -49,7 +49,7 @@
       "diff": ""
       },
       "githubLink": {
-      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/lazy/lazy.module.ts",
+      "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/lazy/lazy.module.ts",
       "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/lazy/lazy.module.ts"
       }
       },
@@ -61,7 +61,7 @@
       "diff": ""
       },
       "githubLink": {
-      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/lazy/lazy.component.html",
+      "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/lazy/lazy.component.html",
       "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/lazy/lazy.component.html"
       }
       },
@@ -73,7 +73,7 @@
       "diff": ""
       },
       "githubLink": {
-      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/lazy/lazy.component.ts",
+      "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/lazy/lazy.component.ts",
       "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/lazy/lazy.component.ts"
       }
       }
@@ -87,7 +87,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/scope-sharing/scope-sharing.component.ts",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/scope-sharing/scope-sharing.component.ts",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/scope-sharing/scope-sharing.component.ts"
       }
     },
@@ -99,7 +99,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/scope-sharing/scope-sharing.component.html",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/scope-sharing/scope-sharing.component.html",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/scope-sharing/scope-sharing.component.html"
       }
     },
@@ -111,7 +111,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/scope-sharing/scope-sharing.module.ts",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/scope-sharing/scope-sharing.module.ts",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/scope-sharing/scope-sharing.module.ts"
       }
     }
@@ -125,7 +125,7 @@
     "diff": ""
     },
     "githubLink": {
-    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/inline-loaders/inline-loaders.module.ts",
+    "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/inline-loaders/inline-loaders.module.ts",
     "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/inline-loaders/inline-loaders.module.ts"
     }
     },
@@ -137,7 +137,7 @@
     "diff": ""
     },
     "githubLink": {
-    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/inline-loaders/inline/inline.component.html",
+    "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/inline-loaders/inline/inline.component.html",
     "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/inline-loaders/inline/inline.component.html"
     }
     },
@@ -149,7 +149,7 @@
     "diff": ""
     },
     "githubLink": {
-    "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/inline-loaders/inline/inline.component.ts",
+    "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/inline-loaders/inline/inline.component.ts",
     "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/inline-loaders/inline/inline.component.ts"
     }
     }
@@ -163,7 +163,7 @@
       "diff": ""
       },
       "githubLink": {
-      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/dynamic-translation/dynamic-translation.module.ts",
+      "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/dynamic-translation/dynamic-translation.module.ts",
       "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/dynamic-translation/dynamic-translation.module.ts"
       }
       },
@@ -175,7 +175,7 @@
       "diff": ""
       },
       "githubLink": {
-      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.html",
+      "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.html",
       "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.html"
       }
       },
@@ -187,7 +187,7 @@
       "diff": ""
       },
       "githubLink": {
-      "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.ts",
+      "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.ts",
       "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/dynamic-translation/dynamic-translation/dynamic-translation.component.ts"
       }
       }
@@ -201,7 +201,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/multilangs.component.ts",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/multilangs/multilangs.component.ts",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/multilangs.component.ts"
       }
     
@@ -214,7 +214,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/multilangs.component.html",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/multilangs/multilangs.component.html",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/multilangs.component.html"
       }
     },
@@ -226,7 +226,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/multilangs.module.ts",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/multilangs/multilangs.module.ts",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/multilangs.module.ts"
       }
     },
@@ -238,7 +238,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/provider-lang/provider-lang.component.ts",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/multilangs/provider-lang/provider-lang.component.ts",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/provider-lang/provider-lang.component.ts"
       }
     },
@@ -250,7 +250,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/multilangs/provider-lang/provider-lang.component.html",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/multilangs/provider-lang/provider-lang.component.html",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/multilangs/provider-lang/provider-lang.component.html"
       }
     }
@@ -264,7 +264,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/transpilers/transpilers.component.ts",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/transpilers/transpilers.component.ts",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/transpilers/transpilers.component.ts"
       }    
     },
@@ -276,7 +276,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/transpilers/transpilers.component.html",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/transpilers/transpilers.component.html",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/transpilers/transpilers.component.html"
       } 
     },
@@ -288,7 +288,7 @@
         "diff": ""
       },
       "githubLink": {
-        "transloco": "https://github.com/ngneat/transloco/blob/master/src/app/transpilers/transpilers.module.ts",
+        "transloco": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/before/src/app/transpilers/transpilers.module.ts",
         "rxweb": "https://github.com/rxweb/rxweb/blob/master/examples/client-side/angular/translate/clean%20code/transloco-to-translate/after/src/app/transpilers/transpilers.module.ts"
       }
     },
