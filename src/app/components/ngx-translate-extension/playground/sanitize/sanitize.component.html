@@ -17,39 +17,39 @@
         <table class="table table-sm">
           <tbody *ngIf="sanitize.raw">
             <tr>
-              <th style="width:25%">Particular</th>
-              <th style="width:25%">Text</th>
-              <th style="width:50%">Transformed</th>
+              <th class="particular">Particular</th>
+              <th class="text">Text</th>
+              <th class="transformed">Transformed</th>
             </tr>
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyStaticValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.currencyStaticValue}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyStaticValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyDynamicValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.currencyDynamicValue}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyDynamicValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyStaticParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.currencyStaticParam}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyStaticParam}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.currencyDynamicParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.currencyDynamicParam}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.currencyDynamicParam}}</span>
               </td>
@@ -67,31 +67,31 @@
         <table class="table table-sm">
           <tbody>
             <tr>
-              <th style="width:25%">Particular</th>
-              <th style="width:25%">Text</th>
-              <th style="width:50%">Transformed</th>
+              <th class="particular" style="min-width: 146px;">Particular</th>
+              <th class="text">Text</th>
+              <th class="transformed">Transformed</th>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.dateDynamicValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.dateDynamicValue}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.dateDynamicValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.dateStaticParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.dateStaticParam}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.dateStaticParam}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.dateDynamicParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.dateDynamicParam}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.dateDynamicParam}}</span>
               </td>
             </tr>
@@ -108,39 +108,39 @@
         <table class="table table-sm">
           <tbody>
             <tr>
-              <th style="width:25%">Particular</th>
-              <th style="width:25%">Text</th>
-              <th style="width:50%">Transformed</th>
+              <th class="particular" style="min-width: 115px;">Particular</th>
+              <th class="text">Text</th>
+              <th class="transformed">Transformed</th>
             </tr>
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.decimalStaticValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.decimalStaticValue}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.decimalStaticValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.decimalDynamicValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.decimalDynamicValue}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="numeric" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.decimalDynamicValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.decimalStaticParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.decimalStaticParam}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.decimalStaticParam}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.decimalDynamicParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.decimalDynamicParam}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="numeric" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.decimalDynamicParam}}</span>
               </td>
@@ -158,39 +158,39 @@
         <table class="table table-sm">
           <tbody>
             <tr>
-              <th style="width:25%">Particular</th>
-              <th style="width:25%">Text</th>
-              <th style="width:50%">Transformed</th>
+              <th class="particular">Particular</th>
+              <th class="text">Text</th>
+              <th class="transformed">Transformed</th>
             </tr>
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.percentStaticValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.percentStaticValue}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.percentStaticValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.percentDynamicValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.percentDynamicValue}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="percentage" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.percentDynamicValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.percentStaticParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.percentStaticParam}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.percentStaticParam}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.percentDynamicParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.percentDynamicParam}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="percentage" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.percentDynamicParam}}</span>
               </td>
@@ -208,22 +208,22 @@
         <table class="table table-sm">
           <tbody>
             <tr>
-              <th style="width:25%">Particular</th>
-              <th style="width:25%">Text</th>
-              <th style="width:50%">Transformed</th>
+              <th class="particular" style="min-width: 130px;">Particular</th>
+              <th class="text">Text</th>
+              <th class="transformed">Transformed</th>
             </tr>
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.lowerCaseStaticValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.lowerCaseStaticValue}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.lowerCaseStaticValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.lowerCaseDynamicValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.lowerCaseDynamicValue}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="lowerCase" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span
                   class="badge badge-{{sanitize.languageCode}}">{{sanitize.lowerCaseDynamicValue}}</span>
@@ -242,22 +242,22 @@
         <table class="table table-sm">
           <tbody>
             <tr>
-              <th style="width:25%">Particular</th>
-              <th style="width:25%">Text</th>
-              <th style="width:50%">Transformed</th>
+              <th class="particular" style="min-width: 130px;">Particular</th>
+              <th class="text">Text</th>
+              <th class="transformed">Transformed</th>
             </tr>
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.upperCaseStaticValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.upperCaseStaticValue}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.upperCaseStaticValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.upperCaseDynamicValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.upperCaseDynamicValue}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="upperCase" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span
                   class="badge badge-{{sanitize.languageCode}}">{{sanitize.upperCaseDynamicValue}}</span>
@@ -276,22 +276,22 @@
         <table class="table table-sm">
           <tbody>
             <tr>
-              <th style="width:25%">Particular</th>
-              <th style="width:25%">Text</th>
-              <th style="width:50%">Transformed</th>
+              <th class="particular" style="min-width: 130px;">Particular</th>
+              <th class="text">Text</th>
+              <th class="transformed">Transformed</th>
             </tr>
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.titleCaseStaticValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.titleCaseStaticValue}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.titleCaseStaticValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.titleCaseDynamicValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.titleCaseDynamicValue}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="titleCase" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span
                   class="badge badge-{{sanitize.languageCode}}">{{sanitize.titleCaseDynamicValue}}</span>
@@ -310,39 +310,39 @@
         <table class="table table-sm">
           <tbody>
             <tr>
-              <th style="width:25%">Particular</th>
-              <th style="width:25%">Text</th>
-              <th style="width:50%">Transformed</th>
+              <th class="particular" style="min-width: 130px;">Particular</th>
+              <th class="text">Text</th>
+              <th class="transformed">Transformed</th>
             </tr>
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.customStaticValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.customStaticValue}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.customStaticValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Value</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.customDynamicValue}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Value</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.customDynamicValue}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="custom" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.customDynamicValue}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Static Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.customStaticParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Static Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.customStaticParam}}</span></td>
+              <td class="transformed">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.customStaticParam}}</span>
               </td>
             </tr>
 
             <tr>
-              <td style="width:25%"><span class="ft-small badge badge-light">Dynamic Param</span></td>
-              <td style="width:25%"><span class="badge badge-light">{{sanitize.raw.customDynamicParam}}</span></td>
-              <td style="width:50%">
+              <td class="particular"><span class="ft-small badge badge-light">Dynamic Param</span></td>
+              <td class="text"><span class="badge badge-light">{{sanitize.raw.customDynamicParam}}</span></td>
+              <td class="transformed">
                 <input type="text" [(ngModel)]="custom" [ngModelOptions]="{standalone: true}" class="form-control sanitize-form-control margin-right">
                 <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.customDynamicParam}}</span>
               </td>
