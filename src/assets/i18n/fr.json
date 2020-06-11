@@ -14,5 +14,9 @@
     "required": "Ce champ est requis.",
     "maxlength": "La longueur maximale allouée est {{requiredLength}} et vous êtes entré {{actualLength}} FR.",
     "identityRevealed": "Vous êtes entré '{{0}}', seulement '{{1}}' la valeur est autorisée."
-  }
+  },
+  "morningText": "Bonjour",
+  "goodDayText": "Bonne journée",
+  "conditionalGreetText": "this.day == 'Good Day' ? this.global.goodDayText: this.global.morningText",
+  "greetMessage": "Hey! {{global.conditionalGreetText}}, J'espère que vous allez bien 🙃. Vous pouvez me traduire en sélectionnant"
 }
