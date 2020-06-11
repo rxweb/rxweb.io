@@ -9621,3 +9621,20 @@ div#v-pills-tabContent {
   font-weight: 600;
   color: #11436e;
 }
+.code_git {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ccc;
+}
+.fa-github-icon {
+  font-size: 20px !important;
+  cursor: pointer;
+  color: #000101!important;
+  opacity:0.5;
+}
+  .fa-github-icon:hover {
+    opacity:1 !important;
+  }
