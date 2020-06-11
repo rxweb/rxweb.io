@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 declare const $;
 import $ from 'jquery';
 import { translate } from '@rxweb/translate';

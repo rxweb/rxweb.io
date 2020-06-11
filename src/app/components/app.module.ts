@@ -69,6 +69,7 @@ import { StaticTranslationComponent } from 'src/assets/examples/static-translati
 import { TranslateModule, TranslateLoader} from "@rxweb/ngx-translate-extension";
 import { RxTranslateSanitizeModule } from "@rxweb/translate";
 import { TranslateHttpLoader } from './ngx-translate-extension/ngx-translate-extension.module';
+import { CustomPipe } from './ngx-translate-extension/playground/sanitize/custom.pipe';
 registerLocaleData(localePt)
 
 //import { TextPageComponent } from './text-page/text-page.component';
@@ -96,9 +97,10 @@ registerLocaleData(localePt)
                   path: 'validationErrorMessages'
               }
           },
-      ), RxTranslateSanitizeModule,
+      ),
+      RxTranslateSanitizeModule
   ],
-  providers: [RxValidation, ApplicationBroadcaster,
+    providers: [RxValidation, ApplicationBroadcaster, CustomPipe,
     {
       provide: API_HOST_URI,
       useValue: 'https://rxweb.io/'

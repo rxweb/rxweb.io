@@ -25,26 +25,18 @@ import { UpperCaseComponent } from "./upper-case/upper-case.component";
 import { TitleCaseComponent } from "./title-case/title-case.component";
 import { CustomPipe } from "./custom/custom.pipe";
 import { CustomComponent } from "./custom/custom.component";
-import { TranslateService } from "@rxweb/ngx-translate-extension";
 
 @NgModule({
-  imports: [NGX_SANITIZE_ROUTING, HttpClientModule, TranslateModule, RxTranslateSanitizeModule,
+  imports: [NGX_SANITIZE_ROUTING, HttpClientModule, 
     CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule,
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
   ],
   declarations: [
     CurrencyComponent, DateComponent, DecimalComponent, PercentComponent, LowerCaseComponent, UpperCaseComponent, 
-    TitleCaseComponent, CustomComponent, CustomPipe
+    TitleCaseComponent, CustomComponent
   ],
-  providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CustomPipe],
+  providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
   exports: [RouterModule]
 })
 export class SanitizeModule {
-}
-export class NgxTranslateExtensionModule {
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'es', 'fr']);
-    translate.setDefaultLang('en');
-    translate.use('en');
-  }
 }
