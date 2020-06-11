@@ -68,7 +68,7 @@ export class TranslateHttpLoader implements TranslateLoader {
         CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
     ],
     declarations: [
-        CliComponent, ComparsionToOtherLibrariesComponent, ComparisonComponent, TranslateCleanCodeComponent, 
+        CliComponent, ComparsionToOtherLibrariesComponent, ComparisonComponent, TranslateCleanCodeComponent, CustomPipe,
         NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, PowerhouseAttributeDirectiveComponent, PowerhousePipeComponent,
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,

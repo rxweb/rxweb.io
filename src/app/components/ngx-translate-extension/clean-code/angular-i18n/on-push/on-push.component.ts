@@ -43,7 +43,7 @@ export class OnPushComparisonComponent {
     var nameTitle = this.outputHtml.substring(476, 525); 
     this.outputHtml = this.outputHtml.replace(nameTitle, nameTitle += '<span class="d2h-file-name clean-comparison-right">@rxweb/ngx-translate-extension</span> <a class="pl-1"  target="_blank" href="' + content.githubLink.rxweb + '"><i class="fa fa-github" aria-hidden="true"></i></a>');
     var gitlink = this.outputHtml.substring(476, 525);
-    this.outputHtml = this.outputHtml.replace(gitlink, gitlink += `<a class="pl-1" href="` + content.githubLink.transloco + `" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>`)
+    this.outputHtml = this.outputHtml.replace(gitlink, gitlink += `<a class="pl-1" href="` + content.githubLink.angulari18n + `" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>`)
     content.diff = this.outputHtml
   }
 

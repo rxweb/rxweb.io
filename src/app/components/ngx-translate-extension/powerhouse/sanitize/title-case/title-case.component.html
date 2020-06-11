@@ -1,0 +1,126 @@
+<app-top-bar [sidebarLinks]="rightSidebarLinks"></app-top-bar>
+<div class="title-bar top_title">
+  <p>TitleCase</p>
+</div>
+<div class="title-bar">
+  <p>Internationalize and convert your input to title case using rxweb <b>sanitizers</b>.</p>
+</div>
+
+<div class="bg-white border-radius" style="margin-top:40px;" *ngIf="sanitize.raw">
+<div class="row col-style">
+  <div class="col-text-style"><span class="col-hash-text-teal" data-toggle="tooltip"
+      title="I can convert your input in title case 😀" data-placement="top"><i class="fa fa-info-circle"
+        aria-hidden="true"></i> </span>Static Value
+  </div>
+</div>
+<div class="row col-md-12">
+  <div class="col-md-8">
+    <div class="row ">
+      <div class="col-md-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link" id="v-pills-profile-titleCaseStaticValue-tab" style="font-size: 11px;" data-toggle="pill"
+            href="#v-pills-profile-titleCaseStaticValue" role="tab" aria-controls="v-pills-profile-titleCaseStaticValue"
+            aria-selected="false">sanitize/en.json</a>
+          <a class="nav-link" style="font-size: 11px;" id="v-pills-component-titleCaseStaticValue-tab" data-toggle="pill"
+            href="#v-pills-component-titleCaseStaticValue" role="tab" aria-controls="v-pills-component-titleCaseStaticValue"
+            aria-selected="false">*.component.ts</a>
+          <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-titleCaseStaticValue-tab" data-toggle="pill"
+            href="#v-pills-messages-titleCaseStaticValue" role="tab" aria-controls="v-pills-messages-titleCaseStaticValue"
+            aria-selected="false">*.component.html</a>
+        </div>
+      </div>
+      <div class="col-md-10 remove-col-padding">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade" id="v-pills-profile-titleCaseStaticValue" role="tabpanel"
+            aria-labelledby="v-pills-profile-titleCaseStaticValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="json" [item]="examples.titleCaseStaticValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-component-titleCaseStaticValue" role="tabpanel"
+            aria-labelledby="v-pills-component-titleCaseStaticValue-tab">
+            <div class="code-section p-0">
+              <!--<pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre>-->
+              <app-code-display innerHtml="typescript" [item]="examples.titleCaseStaticValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade show active" id="v-pills-messages-titleCaseStaticValue" role="tabpanel"
+            aria-labelledby="v-pills-messages-titleCaseStaticValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="html" [item]="examples.titleCaseStaticValue"></app-code-display>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4 remove-col-padding">
+    <div>
+      <div class="code_eg">Output</div>
+      <div class="ngx-output">
+        <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.titleCaseStaticValue}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row col-style">
+  <div class="col-text-style"><span class="col-hash-text-teal" data-toggle="tooltip"
+      title="I can convert your input in lower case 😀" data-placement="top"><i class="fa fa-info-circle"
+        aria-hidden="true"></i> </span>Dynamic Value
+  </div>
+</div>
+<div class="row col-md-12">
+  <div class="col-md-8">
+    <div class="row ">
+      <div class="col-md-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link" id="v-pills-profile-titleCaseDynamicValue-tab" style="font-size: 11px;" data-toggle="pill"
+            href="#v-pills-profile-titleCaseDynamicValue" role="tab" aria-controls="v-pills-profile-titleCaseDynamicValue"
+            aria-selected="false">sanitize/en.json</a>
+          <a class="nav-link" style="font-size: 11px;" id="v-pills-component-titleCaseDynamicValue-tab"
+            data-toggle="pill" href="#v-pills-component-titleCaseDynamicValue" role="tab"
+            aria-controls="v-pills-component-titleCaseDynamicValue" aria-selected="false">*.component.ts</a>
+          <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-titleCaseDynamicValue-tab"
+            data-toggle="pill" href="#v-pills-messages-titleCaseDynamicValue" role="tab"
+            aria-controls="v-pills-messages-titleCaseDynamicValue" aria-selected="false">*.component.html</a>
+        </div>
+      </div>
+      <div class="col-md-10 remove-col-padding">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade" id="v-pills-profile-titleCaseDynamicValue" role="tabpanel"
+            aria-labelledby="v-pills-profile-titleCaseDynamicValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="json" [item]="examples.titleCaseDynamicValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-component-titleCaseDynamicValue" role="tabpanel"
+            aria-labelledby="v-pills-component-titleCaseDynamicValue-tab">
+            <div class="code-section p-0">
+              <!--<pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre>-->
+              <app-code-display innerHtml="typescript" [item]="examples.titleCaseDynamicValue"></app-code-display>
+            </div>
+          </div>
+          <div class="tab-pane fade show active" id="v-pills-messages-titleCaseDynamicValue" role="tabpanel"
+            aria-labelledby="v-pills-messages-titleCaseDynamicValue-tab">
+            <div class="code-section p-0">
+              <app-code-display innerHtml="html" [item]="examples.titleCaseDynamicValue"></app-code-display>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4 remove-col-padding">
+    <div>
+      <div class="code_eg">Output</div>
+      <div class="ngx-output">
+        <input type="text" [(ngModel)]="titleCase" [ngModelOptions]="{standalone: true}"
+          class="form-control sanitize-form-control margin-right">
+        <span class="badge badge-{{sanitize.languageCode}}">{{sanitize.titleCaseDynamicValue}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

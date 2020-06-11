@@ -2288,25 +2288,22 @@
                                 },
                                 {
                                     "title": "UpperCase",
-                                    "uri": "/ngx-translate-extension/sanitize#uppercase",
+                                    "uri": "/ngx-translate-extension/sanitize/upper-case",
                                     "isActive": false,
-                                    "isHide": true,
                                     "linkTitle": "uppercase",
                                     "refUri": "uppercase"
                                 },
                                 {
                                     "title": "TitleCase",
-                                    "uri": "/ngx-translate-extension/sanitize#titlecase",
+                                    "uri": "/ngx-translate-extension/sanitize/title-case",
                                     "isActive": false,
-                                    "isHide": true,
                                     "linkTitle": "titlecase",
                                     "refUri": "titlecase"
                                 },
                                 {
                                     "title": "Custom",
-                                    "uri": "/ngx-translate-extension/sanitize#custom",
+                                    "uri": "/ngx-translate-extension/sanitize/custom",
                                     "isActive": false,
-                                    "isHide": true,
                                     "linkTitle": "custom",
                                     "refUri": "custom"
                                 }

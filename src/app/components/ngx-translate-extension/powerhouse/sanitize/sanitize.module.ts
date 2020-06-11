@@ -21,17 +21,21 @@ import { DateComponent } from "./date/date.component";
 import { DecimalComponent } from "./decimal/decimal.component";
 import { PercentComponent } from "./percent/percent.component";
 import { LowerCaseComponent } from "./lower-case/lower-case.component";
+import { UpperCaseComponent } from "./upper-case/upper-case.component";
+import { TitleCaseComponent } from "./title-case/title-case.component";
+import { CustomPipe } from "./custom/custom.pipe";
+import { CustomComponent } from "./custom/custom.component";
 
 @NgModule({
-  imports: [NGX_SANITIZE_ROUTING, HttpClientModule,
-    RxTranslateSanitizeModule,
+  imports: [NGX_SANITIZE_ROUTING, HttpClientModule, RxTranslateSanitizeModule,
     CommonSharedModule, TopBarSharedModule, RxReactiveDynamicFormsModule, RxReactiveFormsModule,
     CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RxFormsModule, RxViewModule, ClipboardModule, HighlightModule,
   ],
   declarations: [
-    CurrencyComponent, DateComponent, DecimalComponent, PercentComponent, LowerCaseComponent
+    CurrencyComponent, DateComponent, DecimalComponent, PercentComponent, LowerCaseComponent, UpperCaseComponent, 
+    TitleCaseComponent, CustomComponent, CustomPipe
   ],
-  providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
+  providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CustomPipe],
   exports: [RouterModule]
 })
 export class SanitizeModule {

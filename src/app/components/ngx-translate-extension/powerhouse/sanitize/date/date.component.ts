@@ -39,6 +39,10 @@ today: number = Date.now();`,
       html: `<span>{{sanitize.dateDynamicParam}}</span>`
     },
   }
+  
+  get time() {
+    return 'h:mm a z';
+  }
 
   ngOnInit() {
     $('[data-toggle="tooltip"]').tooltip({

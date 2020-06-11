@@ -1126,6 +1126,7 @@ input.ng-invalid {
 
 table.table.table-sm.example-table-color {
   width: 100%;
+  background-color: transparent;
 }
 
 i.fa.fa-external-link.translate-external-link {
@@ -1319,4 +1320,8 @@ th.comprasion {
 
 .sanitize-form-control {
   width: 100px !important;
+}
+
+p.text-right.playground-links {
+  position: fixed;
 }

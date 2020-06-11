@@ -296,12 +296,10 @@ titleCase: string = 'my name is munad';`,
 
   get percentFormatting() {
     return '4.3-5';
-
   }
 
   get formatting() {
     return '4.5-5';
-
   }
 
   get currencyCode() {
