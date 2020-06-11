@@ -72,7 +72,7 @@ export class TranslateHttpLoader implements TranslateLoader {
         NgxTranslateExtensionGettingStartedComponent, ConfidenceComponent, PowerhouseAttributeDirectiveComponent, PowerhousePipeComponent,
         PowerhouseStructuralDirectiveComponent, PowerhouseDecoratorComponent, PowerhouseValidationMessageComponent, PowerhouseStructuralDirectiveChildComponent,
         PlayGroundComponent, ChangeLanguageComponent, AttributeDirectiveComponent, DecoratorComponent, OtherIntuitiveFeatureComponent, PipeComponent,
-        PreLoadModuleComponent, StructuralDirectiveComponent, ValidationMessageComponent, PowerhouseChangeLanguageComponent, NgxCodeComponent,
+        StructuralDirectiveComponent, ValidationMessageComponent, PowerhouseChangeLanguageComponent, NgxCodeComponent,
         PowerhouseOtherIntruitiveFeaturesComponent, SanitizeComponent, PowerhouseSanitizeComponent, PowerhousePurePipeComponent, PurePipeComponent
     ],
     providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CountryService],
