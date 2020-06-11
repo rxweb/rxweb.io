@@ -33,7 +33,7 @@ import { CustomComponent } from "./custom/custom.component";
   ],
   declarations: [
     CurrencyComponent, DateComponent, DecimalComponent, PercentComponent, LowerCaseComponent, UpperCaseComponent, 
-    TitleCaseComponent, CustomComponent
+      TitleCaseComponent, CustomComponent, CustomPipe
   ],
     providers: [{ provide: "COMPONENT_EXAMPLE", useValue: {} }, CustomPipe],
   exports: [RouterModule]
