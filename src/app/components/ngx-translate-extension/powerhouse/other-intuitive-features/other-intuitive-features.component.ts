@@ -22,16 +22,14 @@ export class PowerhouseOtherIntruitiveFeaturesComponent implements OnInit {
     },
     preload: {
       typescript: {
-        route: `
-@NgModule({
-    imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules  })],
-    exports: [RouterModule]
+        route: `@NgModule({
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules  })],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }`
       },
       ts: {
-        module: `
-NgModule({
+        module: `NgModule({
   imports: [
     RxTranslateModule.forRoot({
       preloadingStrategy: true      

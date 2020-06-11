@@ -14,7 +14,7 @@
   "lowerCaseDynamicValue": "{{lowerCase | lowercase}}",
   "upperCaseStaticValue": "{{'bon référentiel' | uppercase}}",
   "upperCaseDynamicValue": "{{upperCase | uppercase}}",
-  "titleCaseStaticValue": "{{'mon nom est munad' | titlecase}}",
+  "titleCaseStaticValue": "{{'mon nom est john' | titlecase}}",
   "titleCaseDynamicValue": "{{titleCase | titlecase}}",
   "percentStaticValue": "{{0.259 | percent}}",
   "percentDynamicValue": "{{percentage | percent}}",

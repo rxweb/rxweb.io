@@ -44,7 +44,6 @@ pay: number = 0.259`,
   "currencyDynamicParam": "Pay {{pay | currency:currencyCode}}"
 }`,
       typescript: `@translate({ translationName: 'sanitize' }) sanitize: { [key: string]: any };
-
 pay: number = 0.259`,
       html: `<input type="text" [(ngModel)]="pay" [ngModelOptions]="{standalone: true}">
 <span>{{sanitize.currencyDynamicParam}}</span>`

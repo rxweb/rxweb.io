@@ -12,24 +12,21 @@ import { TranslateService } from '@rxweb/ngx-translate-extension';
 export class PowerhousePurePipeComponent implements OnInit {
   @translate() global: { [key: string]: any };
 
-  name: string = "Munad"
+  name: string = "John"
 
   examples: any = {
     static: {
       json: `{
   "notification": "Hello {{name}}"
 }`,
-      typescript: `
-@translate() global: { [key: string]: any };
-      `,
-      html: `<label>{{global.raw.notification | rxTranslate:{'name':'Munad'} }}</label><br />`
+      typescript: `@translate() global: { [key: string]: any };`,
+      html: `<label>{{global.raw.notification | rxTranslate:{'name':'John'} }}</label><br />`
     },
     dynamic: {
       json: `{
   "notification": "Hello {{name}}"
 }`,
-      typescript: `
-name: string = "John";
+      typescript: `name: string = "John";
 @translate() global: { [key: string]: any };
       `,
       html: `<label>{{global.raw.notification | rxTranslate:{'name':name} }}</label><br />`

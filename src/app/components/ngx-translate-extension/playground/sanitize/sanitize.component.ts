@@ -18,7 +18,7 @@ export class SanitizeComponent {
 
   upperCase: string = 'good repository'
 
-  titleCase: string = 'my name is  munad'
+  titleCase: string = 'my name is john'
 
   percentage: number = 0.259;
 
