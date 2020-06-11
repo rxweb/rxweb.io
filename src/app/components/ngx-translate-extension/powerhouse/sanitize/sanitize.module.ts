@@ -23,7 +23,6 @@ import { PercentComponent } from "./percent/percent.component";
 import { LowerCaseComponent } from "./lower-case/lower-case.component";
 import { UpperCaseComponent } from "./upper-case/upper-case.component";
 import { TitleCaseComponent } from "./title-case/title-case.component";
-import { CustomPipe } from "./custom/custom.pipe";
 import { CustomComponent } from "./custom/custom.component";
 
 @NgModule({
