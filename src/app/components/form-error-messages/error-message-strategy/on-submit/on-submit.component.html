@@ -1,0 +1,209 @@
+<app-top-bar></app-top-bar>
+<div class="title-bar top_title">
+  <p>ErrorMessageBindingStrategy.OnSubmit</p>
+</div>
+<div class="title-bar">
+  <p>Bind your validation error messages when your form is submitted.</p>
+</div>
+
+<div>
+  <h2>Configuration</h2>
+  <span>You can bind your error messages through various types:</span>
+
+  <ul class="error-binding">
+    <li class="error-binding-links">ErrorMessage Property
+      
+    </li>
+    <li class="error-binding-links">ErrorMessages Property
+    
+    </li>
+    <li class="error-binding-links">Errors Property
+    
+    </li>
+  </ul>
+</div>
+
+<div class="bg-white border-radius" style="margin-top:40px;">
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-basic-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-basic" role="tab" aria-controls="v-pills-profile-basic"
+              aria-selected="false">en.json</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-component-basic-tab" data-toggle="pill"
+              href="#v-pills-component-basic" role="tab" aria-controls="v-pills-component-basic"
+              aria-selected="false">*.component.ts</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-basic-tab" data-toggle="pill"
+              href="#v-pills-messages-basic" role="tab" aria-controls="v-pills-messages-basic"
+              aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade" id="v-pills-profile-basic" role="tabpanel"
+              aria-labelledby="v-pills-profile-basic-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="json" [item]="examples.basic"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-component-basic" role="tabpanel"
+              aria-labelledby="v-pills-component-basic-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="typescript" [item]="examples.basic"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade active show" id="v-pills-messages-basic" role="tabpanel"
+              aria-labelledby="v-pills-messages-basic-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="html" [item]="examples.basic"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <form [formGroup]="userFormGroup">
+            <input type="text" formControlName="fullName" class="form-control" />
+            <span class="small red" *ngIf="userFormGroup.controls.fullName.errors && this.userFormGroup.submitted"><br />{{userFormGroup.controls.fullName.errors.required.message}}</span><br />
+            <a class="badge badge-light submit-btn-click" (click)="submit()">Submit</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-style">
+    <div class="col-text-style"><span class="col-hash-text-color" data-toggle="tooltip"
+        title="Want to reuse any predefined translated text? 😦 Just pass the name of text in interpolation."
+        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>errorMessage property
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-errorMessage-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-errorMessage" role="tab" aria-controls="v-pills-profile-errorMessage"
+              aria-selected="false">en.json</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-component-errorMessage-tab" data-toggle="pill"
+              href="#v-pills-component-errorMessage" role="tab" aria-controls="v-pills-component-errorMessage"
+              aria-selected="false">*.component.ts</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-errorMessage-tab" data-toggle="pill"
+              href="#v-pills-messages-errorMessage" role="tab" aria-controls="v-pills-messages-errorMessage"
+              aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade" id="v-pills-profile-errorMessage" role="tabpanel"
+              aria-labelledby="v-pills-profile-errorMessage-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="json" [item]="examples.errorMessage"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-component-errorMessage" role="tabpanel"
+              aria-labelledby="v-pills-component-errorMessage-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="typescript" [item]="examples.errorMessage"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade active show" id="v-pills-messages-errorMessage" role="tabpanel"
+              aria-labelledby="v-pills-messages-errorMessage-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="html" [item]="examples.errorMessage"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <form [formGroup]="userFormGroup">
+            <input type="text" formControlName="designation" class="form-control" />
+            <span class="small red"
+              *ngIf="userFormGroup.controls.designation.errors"><br />{{userFormGroup.controls.designation.errorMessage}}</span><br />
+            <a class="badge badge-light submit-btn-click" (click)="submit()">Submit</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col-style">
+    <div class="col-text-style"><span class="col-hash-text-color" data-toggle="tooltip"
+        title="Want to reuse any predefined translated text? 😦 Just pass the name of text in interpolation."
+        data-placement="top"><i class="fa fa-info-circle" aria-hidden="true"></i> </span>errorMessages property
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-8">
+      <div class="row ">
+        <div class="col-md-2">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-errorMessages-tab" style="font-size: 11px;" data-toggle="pill"
+              href="#v-pills-profile-errorMessages" role="tab" aria-controls="v-pills-profile-errorMessages"
+              aria-selected="false">en.json</a>
+            <a class="nav-link" style="font-size: 11px;" id="v-pills-component-errorMessages-tab" data-toggle="pill"
+              href="#v-pills-component-errorMessages" role="tab" aria-controls="v-pills-component-errorMessages"
+              aria-selected="false">*.component.ts</a>
+            <a class="nav-link active" style="font-size: 11px;" id="v-pills-messages-errorMessages-tab" data-toggle="pill"
+              href="#v-pills-messages-errorMessages" role="tab" aria-controls="v-pills-messages-errorMessages"
+              aria-selected="false">*.component.html</a>
+          </div>
+        </div>
+        <div class="col-md-10 remove-col-padding">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade" id="v-pills-profile-errorMessages" role="tabpanel"
+              aria-labelledby="v-pills-profile-errorMessages-tab">
+              <div class="code-section p-0">
+                <app-code-display innerHtml="json" [item]="examples.errorMessages"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-component-errorMessages" role="tabpanel"
+              aria-labelledby="v-pills-component-errorMessages-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="typescript" [item]="examples.errorMessages"></app-code-display>
+              </div>
+            </div>
+            <div class="tab-pane fade active show" id="v-pills-messages-errorMessages" role="tabpanel"
+              aria-labelledby="v-pills-messages-errorMessages-tab">
+              <div class="code-section p-0">
+                <!-- <pre class="pre-code ngx-pre-code"><code [innerHtml]="html"></code></pre> -->
+                <app-code-display innerHtml="html" [item]="examples.errorMessages"></app-code-display>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <div class="col-md-4 remove-col-padding">
+      <div>
+        <div class="code_eg">Output</div>
+        <div class="ngx-output">
+          <form [formGroup]="userFormGroup">
+            <input type="text" formControlName="userName" class="form-control" />
+            <span class="small red"
+              *ngIf="userFormGroup.controls.userName.errors"><br />{{userFormGroup.controls.userName.errorMessages}}</span><br />
+            <a class="badge badge-light submit-btn-click" (click)="submit()">Submit</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
