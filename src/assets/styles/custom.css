@@ -1350,6 +1350,12 @@ li.diff-points {
   list-style: decimal;
 }
 
+.submit-btn-click {
+  border: solid 1px #d4dff4;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
 .particular {
   /* min-width: 165px; */
 }

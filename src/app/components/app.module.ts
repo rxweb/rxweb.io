@@ -55,7 +55,7 @@ import { ContributorsComponent } from './contributors/contributors-component';
 import { RxTranslateModule } from '@rxweb/translate';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-  
+
 
 import { TopBarSharedModule } from './shared/top-bar/top-bar-shared.module';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
@@ -66,12 +66,12 @@ import { QuickStartComponent } from './quick-start/quick-start.component';
 import { VueGettingStartedComponent } from './vue-getting-started/vue-getting-started.component';
 import { VueHomePageComponent } from './vue-home-page/vue-home-page.component';
 import { StaticTranslationComponent } from 'src/assets/examples/static-translation/static-translation.component';
-import { TranslateModule, TranslateLoader} from "@rxweb/ngx-translate-extension";
+import { TranslateModule, TranslateLoader } from "@rxweb/ngx-translate-extension";
 import { RxTranslateSanitizeModule } from "@rxweb/translate";
 import { TranslateHttpLoader } from './ngx-translate-extension/ngx-translate-extension.module';
 import { CustomPipe } from './ngx-translate-extension/playground/sanitize/custom.pipe';
 registerLocaleData(localePt)
-
+import { RxFormErrorMessagesModule, ErrorMessageBindingStrategy, I18nPackage } from '@rxweb/form-error-messages'
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
 
@@ -79,28 +79,33 @@ registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
-    AppComponent, SideBarComponent, VueHomePageComponent,AngularHomeComponent,VueGettingStartedComponent, ChildLinkItemComponent, 
-    LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent, 
-        ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, QuickStartComponent, CustomPipe
-    
+    AppComponent, SideBarComponent, VueHomePageComponent, AngularHomeComponent, VueGettingStartedComponent, ChildLinkItemComponent,
+    LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent,
+    ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, QuickStartComponent, CustomPipe
+
   ],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
     BrowserAnimationsModule,
     RxSecurityModule, CommonModule,
-      RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
-      TranslateModule.forRoot(
-          {
-              loader:
-                  { provide: TranslateLoader, useClass: TranslateHttpLoader },
-              controlErrorMessage: {
-                  path: 'validationErrorMessages'
-              }
-          },
-      ),
-      RxTranslateSanitizeModule
+    RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
+    RxFormErrorMessagesModule.forRoot({
+      bindingStrategy: ErrorMessageBindingStrategy.OnSubmit,
+      i18n: I18nPackage.NgxTranslate,
+      messagePath: "validationErrorMessages"
+    }),
+    TranslateModule.forRoot(
+      {
+        loader:
+          { provide: TranslateLoader, useClass: TranslateHttpLoader },
+        controlErrorMessage: {
+          path: 'validationErrorMessages'
+        }
+      },
+    ),
+    RxTranslateSanitizeModule
   ],
-    providers: [RxValidation, ApplicationBroadcaster, CustomPipe,
+  providers: [RxValidation, ApplicationBroadcaster, CustomPipe,
     {
       provide: API_HOST_URI,
       useValue: 'https://rxweb.io/'
@@ -113,8 +118,8 @@ registerLocaleData(localePt)
     { provide: 'RequestHeaders', useClass: ApplicationRequestHeaders },
     { provide: 'ResponseResult', useClass: ApplicationResponse },
     ApplicationBroadcaster, PromptUpdateService, LogUpdateService, CheckForUpdateService,
-    ],
-    exports: [RouterModule],
+  ],
+  exports: [RouterModule],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
