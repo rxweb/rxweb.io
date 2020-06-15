@@ -988,6 +988,9 @@ div#rightsidebar ul:first-child>li.border-none a {
 /**/
 
 @media only screen and (max-width: 1260px) {
+    ul.nav.ml-auto.w-100.mt-2.nav-tabs.page_content_tabs{
+        padding-top: 75px;
+    }
     .home_intro .home_page_title {
         font-size: 52px;
         line-height: 52px;
@@ -1002,6 +1005,9 @@ div#rightsidebar ul:first-child>li.border-none a {
 }
 
 @media only screen and (max-width: 1200px) {
+    ul.nav.ml-auto.w-100.mt-2.nav-tabs.page_content_tabs{
+        padding-top: 75px;
+    }
     .home_intro .home_page_title {
         font-size: 46px;
         line-height: 46px;
@@ -1013,6 +1019,9 @@ div#rightsidebar ul:first-child>li.border-none a {
 }
 
 @media only screen and (max-width: 991px) {
+    ul.nav.ml-auto.w-100.mt-2.nav-tabs.page_content_tabs{
+        padding-top: 20px;
+    }
     .home_packages .btn img {
         max-height: 52px;
     }
@@ -7401,11 +7410,28 @@ a.card-body.text-center:hover {
     .header .top-search-page {
         width: 320px;
     }
+  
 }
+
+@media (max-width: 1450px) {
+    /* .container {
+        width: 1400px;
+    } */
+    .header .top-search-page {
+        width: 320px;
+    }
+    ul.nav.ml-auto.w-100.mt-2.nav-tabs.page_content_tabs{
+        padding-top: 45px;
+    }
+}
+
 
 @media only screen and (max-width:1400px) {
     .content {
         padding-left: 40px;
+    }
+    ul.nav.ml-auto.w-100.mt-2.nav-tabs.page_content_tabs{
+        padding-top: 75px;
     }
 }
 
@@ -9637,4 +9663,12 @@ div#v-pills-tabContent {
 }
   .fa-github-icon:hover {
     opacity:1 !important;
+  }
+
+  .footer-link{
+      color:#0f96e4!important
+  }
+
+  .footer-down-footer{
+      padding-top: 20px!important;
   }

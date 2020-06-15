@@ -1,18 +1,81 @@
-<footer class="footer" *ngIf="showComponent"  >
+<footer class="footer" *ngIf="showComponent">
 	<div class="row">
-			
-			<div [class.col-md-8]="!isHome" [class.offset-lg-3]="!isHome" [class.offset-md-4]="!isHome" [class.col-lg-9]="!isHome" [class.col-md-11]="isHome" [class.offset-md-1]="isHome">
-				<div class="row align-items-center content">
-					<div class="col-sm-8">
-	Maintained by the <a href="https://github.com/orgs/rxweb/people" target="_blank" rel="noopener">rxweb core team</a> with the help of 
-	<a href="https://github.com/rxweb/rxweb/graphs/contributors" target="_blank" rel="noopener">contributors</a>.<br />
-	Current version <span style="font-weight: bold">#version</span>, Code licensed <a href="https://github.com/rxweb/rxweb/blob/master/LICENSE" target="_blank" rel="noopener">MIT</a>,
-	docs license <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 4.0.</a>
-</div>
-<div class="col-sm-4">
-	<span class="">Sponsored by : <span><a href="https://radixweb.com" target="_blank" rel="noopener">RADIXWEB</a></span></span>
-</div>
-</div>
-</div>
-</div>
+
+		<div [class.col-md-8]="!isHome" [class.offset-lg-3]="!isHome" [class.offset-md-4]="!isHome"
+			[class.col-lg-9]="!isHome" [class.col-md-11]="isHome" [class.offset-md-1]="isHome">
+			<div class="row align-items-center content" *ngIf="!isHome">
+				<div class="col-lg-2">
+					<div class="footer-block">
+						<h3 style="padding-left: 38px;	font-size: 21px;">Help</h3>
+						<ul>
+							<li class="ng-star-inserted"><a class="footer-link link"
+									href="https://stackoverflow.com/search?q=rxweb" target="_blank"
+									title="Stack Overflow: where the community answers your technical Angular questions.">Stack
+									Overflow</a></li>
+							<li class="ng-star-inserted"><a class="footer-link link"
+									href="https://gitter.im/rxweb-project/rxweb" target="_blank"
+									title="Chat about Angular with other birds of a feather.">Gitter</a></li>
+							<li class="ng-star-inserted"><a class="footer-link link"
+									href="https://github.com/rxweb/rxweb/issues/new/choose" target="_blank"
+									title="Post issues and suggestions on github.">Report Issues</a></li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-2">
+					<div class="footer-block">
+						<h3 style="padding-left: 38px;	font-size: 21px;">Community</h3>
+						<ul>
+							<li class="ng-star-inserted"><a class="footer-link link"
+									href="https://github.com/rxweb/rxweb" target="_blank"
+									title="Stack Overflow: where the community answers your technical Angular questions.">Github</a>
+							</li>
+							<li><a class="footer-link link" href="https://twitter.com/RxWebOfficial" target="_blank"
+									title="Chat about Angular with other birds of a feather.">Twitter</a></li>
+							<li class="ng-star-inserted"><a class="footer-link link" target="_blank"
+									href="/community/contributing"
+									title="Post issues and suggestions on github.">Contribute</a></li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-2">
+					<div class="footer-block">
+						<h3 style="padding-left: 38px;	font-size: 21px;">Literature</h3>
+						<ul>
+							<li class="ng-star-inserted"><a class="footer-link link" href="https://dev.to/t/rxweb"
+									target="_blank"
+									title="Stack Overflow: where the community answers your technical Angular questions.">DEV</a>
+							</li>
+							<li class="ng-star-inserted"><a class="footer-link link" target="_blank"
+									href="https://medium.com/search?q=ajay%20ojha"
+									title="Chat about Angular with other birds of a feather.">Medium</a></li>
+							<li class="ng-star-inserted"><a class="footer-link link"
+									title="Post issues and suggestions on github.">NewLine</a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-center content" [class.footer-down-footer]="!isHome">
+				<div class="col-sm-8">
+					Maintained by the <a href="https://github.com/orgs/rxweb/people" target="_blank"
+						rel="noopener">rxweb core team</a> with the help of
+					<a href="https://github.com/rxweb/rxweb/graphs/contributors" target="_blank"
+						rel="noopener">contributors</a>.<br />
+					Current version <span style="font-weight: bold">#version</span>, Code licensed <a
+						href="https://github.com/rxweb/rxweb/blob/master/LICENSE" target="_blank"
+						rel="noopener">MIT</a>,
+					docs license <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank"
+						rel="noopener">CC BY 4.0.</a>
+				</div>
+				<div class="col-sm-4">
+					<span class="">Sponsored by : <span><a href="https://radixweb.com" target="_blank"
+								rel="noopener">RADIXWEB</a></span></span>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
