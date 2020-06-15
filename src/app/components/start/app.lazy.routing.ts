@@ -157,10 +157,6 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/ngx-translate-extension/ngx-translate-extension.module#NgxTranslateExtensionModule',
   },
   {
-    path: 'form-error-messages',
-    loadChildren: 'src/app/components/form-error-messages/form-error-messages.module#FormErrorMessagesModule',
-  },
-  {
     path: 'coming-soon',
     component: ComingSoonComponent,
   },
