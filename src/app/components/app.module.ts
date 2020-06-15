@@ -71,7 +71,6 @@ import { RxTranslateSanitizeModule } from "@rxweb/translate";
 import { TranslateHttpLoader } from './ngx-translate-extension/ngx-translate-extension.module';
 import { CustomPipe } from './ngx-translate-extension/playground/sanitize/custom.pipe';
 registerLocaleData(localePt)
-import { RxFormErrorMessagesModule, ErrorMessageBindingStrategy, I18nPackage } from '@rxweb/form-error-messages'
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
 
@@ -89,11 +88,6 @@ import { RxFormErrorMessagesModule, ErrorMessageBindingStrategy, I18nPackage } f
     BrowserAnimationsModule,
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
-    RxFormErrorMessagesModule.forRoot({
-      bindingStrategy: ErrorMessageBindingStrategy.OnSubmit,
-      i18n: I18nPackage.NgxTranslate,
-      messagePath: "validationErrorMessages"
-    }),
     TranslateModule.forRoot(
       {
         loader:
