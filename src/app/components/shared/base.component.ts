@@ -65,7 +65,7 @@ export abstract class BaseComponentProvider implements OnDestroy {
             params["title"] = element.getAttribute('title');
             if(this.typeName == "template_driven" )
                 params["refComponent"] =this.exampleComponents[this.typeName+"_validation_" + this.templateDrivenType][refComponent[refComponent.length - 1]];
-            else if(dynamicsplitedArray[1] == "reactive-dynamic-forms"|| dynamicsplitedArray[1] == "rxweb-localization" || dynamicsplitedArray[1] == "rxweb-router" || dynamicsplitedArray[1] == "rxweb-storage"  || dynamicsplitedArray[1] == "rxweb-generics" || dynamicsplitedArray[1] == "rxweb-http" || dynamicsplitedArray[1] == "rxweb-sanitizers")
+            else if(dynamicsplitedArray[1] == "reactive-dynamic-forms"|| dynamicsplitedArray[1] == "ngx-translate-extension" || dynamicsplitedArray[1] == "rxweb-localization" || dynamicsplitedArray[1] == "rxweb-router" || dynamicsplitedArray[1] == "rxweb-storage"  || dynamicsplitedArray[1] == "rxweb-generics" || dynamicsplitedArray[1] == "rxweb-http" || dynamicsplitedArray[1] == "rxweb-sanitizers")
             params["refComponent"] =this.exampleComponents["validators"][refComponent[refComponent.length - 1]];
             else
                 params["refComponent"] =this.exampleComponents[this.typeName][refComponent[refComponent.length - 1]];

@@ -1,0 +1,17 @@
+<div class="row ">
+    <div class="col-md-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a *ngFor="let item of examples" class="nav-link" (click)="activeTab = item.fileName"
+          [class.active]="activeTab == item.fileName" style="font-size: 11px;">{{item.fileName}}</a>
+      </div>
+    </div>
+    <div class="col-md-10 remove-col-padding">
+      <div class="tab-content" id="v-pills-tabContent" *ngFor="let item of examples">
+        <div class="tab-pane fade" [class.show]="activeTab == item.fileName" [class.active]="activeTab == item.fileName">
+          <div class="code-section p-0">
+            <pre class="pre-code ngx-pre-code"><code [innerHtml]="item.fileContent"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

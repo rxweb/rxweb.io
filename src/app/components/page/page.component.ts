@@ -112,7 +112,7 @@ export class PageComponent implements OnInit {
     let titleString = "";
     let codeUri = "";
     let htmlUri = ""
-    if (this.mainType != "reactive-dynamic-forms" && this.mainType != "rxweb-storage" && this.mainType != "rxweb-localization" && this.mainType != "rxweb-router" &&  this.mainType != "vue"  && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
+    if (this.mainType != "reactive-dynamic-forms" && this.mainType != "rxweb-storage" && this.mainType != "ngx-translate-extension" && this.mainType != "rxweb-localization" && this.mainType != "rxweb-router" &&  this.mainType != "vue"  && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
       switch (splitedArray[3]) {
         case "decorators":
           codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
