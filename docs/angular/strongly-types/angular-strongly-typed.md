@@ -6,58 +6,21 @@ type: simple
 linktitle: strongly-typed-reactive-forms
 ---
 
-<div><h1 >
-    
-    <span style="
-    color: #6ea8db;
-    background-color: #ffffff;
-    padding-left: 5px;
-    border-radius: 5px;
-    padding-right: 5px;
-">Strongly Typed Reactive Form</span>
+<div><h1>   
+    <span style="color: #6ea8db;background-color: #ffffff;padding-left: 5px; border-radius: 5px; padding-right: 5px;">Strongly Typed Reactive Form</span>
 
 </h1></div>
 
 
-<div class="title-bar"><p>👊 <span style="
-    color: aliceblue;
-    background-color: #5ea1db;
-    padding-left: 5px;
-    border-radius: 5px;
-    padding-right: 5px;
-">Power</span> = <span style="
-    color: #ffffff;
-    background-color: #e7659b;
-    padding-left: 5px;
-    border-radius: 5px;
-    padding-right: 5px;
-">No Build Size</span> <span>&amp;&amp;</span> <span style="
-    color: #ffffff;
-    background-color: #a57fcf;
-    padding-left: 5px;
-    border-radius: 5px;
-    padding-right: 5px;
-">No Module Import</span> <span>&amp;&amp;</span> <span style="
-    color: #ffffff;
-    background-color: #76808f;
-    padding-left: 5px;
-    border-radius: 5px;
-    padding-right: 5px;
-">No Custom API</span> <span>&amp;&amp;</span> <span style="
-    color: #ffffff;
-    background-color: #61b89c;
-    padding-left: 5px;
-    border-radius: 5px;
-    padding-right: 5px;
-">Use Generic Interface Only</span> 😵 😷</p></div>
+<div class="title-bar"><p>👊 <span style=" color: aliceblue;background-color: #5ea1db; padding-left: 5px; border-radius: 5px; padding-right: 5px;">Power</span> = 
+<span style=" color: #ffffff;    background-color: #e7659b;   padding-left: 5px;   border-radius: 5px;   padding-right: 5px;">No Build Size</span> <span>&amp;&amp;</span> <span style="    color: #ffffff;    background-color: #a57fcf;    padding-left: 5px;    border-radius: 5px;    padding-right: 5px;">No Module Import</span> 
+<span>&amp;&amp;</span> 
+<span style="    color: #ffffff;    background-color: #76808f;   padding-left: 5px;   border-radius: 5px;    padding-right: 5px;">No Custom API</span> <span>&amp;&amp;</span> <span style=" color: #ffffff; background-color: #61b89c; padding-left: 5px; border-radius: 5px;padding-right: 5px;">Use Generic Interface Only</span> 😵 😷</p></div>
 
 
 <div component="app-tabs" key="complete"></div>
 
 [!TabGroup]
-# [Quick View](#tab\completeview)
-![image](assets/images/strong-types.gif)
-# [/Quick View]
 # [app.component.ts](#tab\completecomponent)
 <div component="app-code" key="angular-strongly-typed-complete-component"></div> 
 # [/app.component.ts]
@@ -72,12 +35,11 @@ linktitle: strongly-typed-reactive-forms
 # [/user.ts]
 ***
 
-# What's More..?
 
 
- <div class="row page-section">
+  <div class="row page-section">
     <div class="col-lg-12">
-      <h2 class="heading-margin">Error on other than interface properties</h2>
+      <h3 class="" style="margin-bottom: 30px;">Type Mismatch <span class="" style="background-color: #fff4f6;color: #9b112b;padding: 3px;border-radius: 5px;font-weight: 500;">Errors</span></h3>
       <div class="row">
         <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
           <span class="hljs-built_in">this</span>.formGroup.controls.<span class="hljs-string-remove" style="text-decoration:underline">fakeControl</span><br/>
@@ -91,7 +53,7 @@ linktitle: strongly-typed-reactive-forms
 
 <div class="row page-section">
     <div class="col-lg-12">
-      <h2 class="heading-margin">Strongly Typed Value Changes</h2>
+      <h2 class="heading-margin">...</h2>
       <div class="row">
        <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
           <span class="hljs-built_in">this</span>.<span>formGroup.controls.firstName.valueChanges.subscribe(value =&gt; {
@@ -290,7 +252,7 @@ linktitle: strongly-typed-reactive-forms
 
 <div class="row page-section">
     <div class="col-lg-12">
-      <h2 class="heading-margin">....</h2>
+      <h2 class="heading-margin">...</h2>
       <div class="row">
        <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
           <span class="hljs-built_in">this</span>.<span>formGroup.controls.firstName.valueChanges.subscribe(value =&gt; {
