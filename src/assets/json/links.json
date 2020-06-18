@@ -715,6 +715,21 @@
             "isActive": false
         },
         {
+            "title": "Strongly Types",
+            "isOpen": false,
+            "isActive": false,
+            "otherUri": "strongly-types",
+            "childrens": [
+                {
+                    "title": "Angular",
+                    "isActive": false,
+                    "uri": "/strongly-typed/angular-strongly-typed",
+                    "linkTitle": "angular",
+                    "refUri": "angular"
+                }
+            ]
+        }, 
+        {
             "title": "Generics",
             "isOpen": false,
             "isActive": false,
@@ -2589,6 +2604,7 @@
                     "refUri": "ngxtranslateextensionplayground"
                 }
             ]
-        }  
+        }
+         
     ]
 }

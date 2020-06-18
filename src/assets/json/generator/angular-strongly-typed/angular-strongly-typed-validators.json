@@ -1,0 +1,8 @@
+{
+    "complete":{
+        "address":"export interface Address {\r\n    countryName: string;\r\n}\r\n",
+        "skill":"export interface Skill {\r\n    name: string;\r\n}\r\n",
+        "user":"import { Address } from '.\/address';\r\nimport { Skill } from '.\/skill';\r\n\r\nexport interface User {\r\n    firstName: string;\r\n\r\n    address: Address;\r\n\r\n    skills: Skill[];\r\n}",
+        "component":"import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder, Validators } from \"@angular\/forms\"\r\n\r\n@Component({\r\n    selector: 'app-root',\r\n    templateUrl: '.\/app.component.html',\r\n    styleUrls: ['.\/app.component.css']\r\n})\r\nexport class AppComponent implements OnInit {\r\n    formGroup: FormGroup;\r\n    formBuilder: FormBuilder;\r\n\r\n    constructor(formBuilder: FormBuilder) {\r\n        this.formBuilder = formBuilder;\r\n    }\r\n\r\n    ngOnInit() {\r\n\r\n        this.formGroup = this.formBuilder.group({\r\n            firstName: ['', [Validators.required]],\r\n            address: this.formBuilder.group({\r\n                countryName: [\"\", Validators.required]\r\n            }),\r\n            skills: this.formBuilder.array([\r\n                this.formBuilder.group({\r\n                    name: [\"\", Validators.required]\r\n                })\r\n            ])\r\n        });\r\n\r\n    }\r\n}"
+    }
+}

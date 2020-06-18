@@ -157,6 +157,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: 'src/app/components/ngx-translate-extension/ngx-translate-extension.module#NgxTranslateExtensionModule',
   },
   {
+    path: 'strongly-typed',
+    loadChildren: 'src/app/components/strongly-typed/strongly-typed.module#StronglyTypedAngularModule',
+  },
+  {
     path: 'coming-soon',
     component: ComingSoonComponent,
   },

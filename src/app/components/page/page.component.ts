@@ -20,45 +20,45 @@ import { DomSanitizer } from '@angular/platform-browser';
   animations: [
     trigger(
       'enterAnimation', [
-        transition(':enter', [
-          style({opacity: 0}),
-          animate('500ms', style({opacity: 1}))
-        ]),
-        transition(':leave', [
-          style({opacity: 1}),
-          animate('500ms', style({opacity: 0}))
-        ])
-      ]
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('500ms', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        style({ opacity: 1 }),
+        animate('500ms', style({ opacity: 0 }))
+      ])
+    ]
     )
   ],
 })
 export class PageComponent implements OnInit {
-  links:any;
+  links: any;
   showComponent: boolean = false;
   options: any = { responseType: 'text' };
   codeContent: any = "";
   jsonContent: any = "";
   activeTab: string = "";
-  dynamicElement:string;
+  dynamicElement: string;
   element: HTMLElement;
   typeName: string;
-  gitUrl:string;
+  gitUrl: string;
   validationName: string;
   showViewer: boolean = false;
   templateDrivenType: string = "directives";
   showExample: boolean = true;
   mainType: string;
-  rightSidebarLinks:any;
+  rightSidebarLinks: any;
   constructor(
     private http: HttpClient, private elementRef: ElementRef,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private applicationBroadcaster:ApplicationBroadcaster,
+    private applicationBroadcaster: ApplicationBroadcaster,
     private sanitizer: DomSanitizer
   ) {
- this.applicationBroadcaster.topSubject.subscribe(t=>{
+    this.applicationBroadcaster.topSubject.subscribe(t => {
       this.rightSidebarLinks = t.rightSidebarLinks;
-      this.gitUrl =  t.gitDocPath;
+      this.gitUrl = t.gitDocPath;
     })
 
     this.element = elementRef.nativeElement as HTMLElement;
@@ -78,30 +78,26 @@ export class PageComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    this.http.get('assets/json/rxweb-links.json?v=' + environment.appVersion).subscribe((response: any) => {    
+    this.http.get('assets/json/rxweb-links.json?v=' + environment.appVersion).subscribe((response: any) => {
       this.links = response;
     });
   }
 
-  nextLink()
-  {
-    var currentObjIndex = this.links.findIndex(a => a.link ==  location.pathname);
-    if(currentObjIndex != undefined)
-    {
-     currentObjIndex++;
-     var nextObj = this.links[currentObjIndex];
-     this.router.navigate([nextObj.link]);    
+  nextLink() {
+    var currentObjIndex = this.links.findIndex(a => a.link == location.pathname);
+    if (currentObjIndex != undefined) {
+      currentObjIndex++;
+      var nextObj = this.links[currentObjIndex];
+      this.router.navigate([nextObj.link]);
     }
   }
 
-  previousLink()
-  {
-    var currentObjIndex = this.links.findIndex(a => a.link ==  location.pathname);
-    if(currentObjIndex != undefined)
-    {
-     currentObjIndex--;
-     var nextObj = this.links[currentObjIndex];
-     this.router.navigate([nextObj.link]);    
+  previousLink() {
+    var currentObjIndex = this.links.findIndex(a => a.link == location.pathname);
+    if (currentObjIndex != undefined) {
+      currentObjIndex--;
+      var nextObj = this.links[currentObjIndex];
+      this.router.navigate([nextObj.link]);
     }
   }
   bind() {
@@ -112,7 +108,7 @@ export class PageComponent implements OnInit {
     let titleString = "";
     let codeUri = "";
     let htmlUri = ""
-    if (this.mainType != "reactive-dynamic-forms" && this.mainType != "rxweb-storage" && this.mainType != "ngx-translate-extension" && this.mainType != "rxweb-localization" && this.mainType != "rxweb-router" &&  this.mainType != "vue"  && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
+    if (this.mainType != "reactive-dynamic-forms" && this.mainType != "strongly-typed" && this.mainType != "rxweb-storage" && this.mainType != "ngx-translate-extension" && this.mainType != "rxweb-localization" && this.mainType != "rxweb-router" && this.mainType != "vue" && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
       switch (splitedArray[3]) {
         case "decorators":
           codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
@@ -133,46 +129,53 @@ export class PageComponent implements OnInit {
           titleString = "template-driven";
           break;
       }
-      document.title = splitedArray[2]+ " - RxWeb Docs" ;
+      document.title = splitedArray[2] + " - RxWeb Docs";
     }
-    else if(this.mainType == "vue"){
+    else if (this.mainType == "vue") {
       let vuesSplitedArray = location.pathname.split('/');
-      codeUri = 'assets/json/generator/' + vuesSplitedArray[3] + '/'+  'decorators' + '.json';
-      htmlUri = 'assets/json/generator/vue/'  + vuesSplitedArray[3]  + '/'+ vuesSplitedArray[3] + '-' + 'vue' + '.json';
+      codeUri = 'assets/json/generator/' + vuesSplitedArray[3] + '/' + 'decorators' + '.json';
+      htmlUri = 'assets/json/generator/vue/' + vuesSplitedArray[3] + '/' + vuesSplitedArray[3] + '-' + 'vue' + '.json';
       titleString = "validator";
-      document.title = splitedArray[3]+ " - RxWeb Docs" ;
-    }
-    else{
-    
-      let dynamicsplitedArray = location.pathname.split('/');
-      codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/'+  'validators' + '.json';
-      htmlUri = 'assets/json/generator/'  + dynamicsplitedArray[3]  + '/'+ dynamicsplitedArray[3] + '-' + 'validators' + '.json';
-      titleString = "validator";
-      document.title = splitedArray[3]+ " - RxWeb Docs" ;
+      document.title = splitedArray[3] + " - RxWeb Docs";
     }
 
-      this.http.get(codeUri, this.options).subscribe(response => {
-        this.codeContent = JSON.parse(response.toString());   
-        if(this.router.url.includes("vue")){
-           this.codeContent.htmlContent = this.codeContent.htmlContent.replace("Through Angular FormBuilder service we create FormGroup in the component.","");
-           this.codeContent.htmlContent = this.codeContent.htmlContent.replace("Next, we need to write html code.","");
-        }       
-        this.http.get(htmlUri, this.options).subscribe((responseObj: object) => {
-          this.jsonContent = JSON.parse(responseObj.toString());
-          this.showComponent = true;
-          this.activeTab = splitedArray[3];
-          this.applicationBroadcaster.topSubject.next({...this.codeContent,activeTab:this.activeTab,mainType:this.mainType,validationName:this.validationName,templateDrivenType:this.templateDrivenType})
-          this.showViewer = true;
-        });
+    else if (this.mainType == "strongly-typed") {
+      let dynamicsplitedArray = location.pathname.split('/');
+      codeUri = 'assets/json/generator/' + dynamicsplitedArray[2] + '/' + 'validators' + '.json';
+      htmlUri = 'assets/json/generator/' + dynamicsplitedArray[2] + '/' + dynamicsplitedArray[2] + '-' + 'validators' + '.json';
+      titleString = "validator";
+      document.title = splitedArray[2] + " - RxWeb Docs";
+    }
+
+    else {
+      let dynamicsplitedArray = location.pathname.split('/');
+      codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/' + 'validators' + '.json';
+      htmlUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/' + dynamicsplitedArray[3] + '-' + 'validators' + '.json';
+      titleString = "validator";
+      document.title = splitedArray[3] + " - RxWeb Docs";
+    }
+
+    this.http.get(codeUri, this.options).subscribe(response => {
+      this.codeContent = JSON.parse(response.toString());
+      if (this.router.url.includes("vue")) {
+        this.codeContent.htmlContent = this.codeContent.htmlContent.replace("Through Angular FormBuilder service we create FormGroup in the component.", "");
+        this.codeContent.htmlContent = this.codeContent.htmlContent.replace("Next, we need to write html code.", "");
+      }
+      this.http.get(htmlUri, this.options).subscribe((responseObj: object) => {
+        this.jsonContent = JSON.parse(responseObj.toString());
+        this.showComponent = true;
+        this.activeTab = splitedArray[3];
+        this.applicationBroadcaster.topSubject.next({ ...this.codeContent, activeTab: this.activeTab, mainType: this.mainType, validationName: this.validationName, templateDrivenType: this.templateDrivenType })
+        this.showViewer = true;
       });
+    });
   }
 
   route(typeName: string, templateDrivenType?: string) {
-   
-    if (templateDrivenType)
-    {
+
+    if (templateDrivenType) {
       this.router.navigate(['/', this.mainType, this.validationName, typeName, templateDrivenType])
-      this.templateDrivenType = templateDrivenType;  
+      this.templateDrivenType = templateDrivenType;
     }
     else
       this.router.navigate(['/', this.mainType, this.validationName, typeName])
