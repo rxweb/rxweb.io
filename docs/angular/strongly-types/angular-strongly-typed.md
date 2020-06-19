@@ -8,7 +8,6 @@ linktitle: strongly-typed-reactive-forms
 
 <div><h1>   
     <span style="color: #6ea8db;background-color: #ffffff;padding-left: 5px; border-radius: 5px; padding-right: 5px;">Strongly Typed Reactive Form</span>
-
 </h1></div>
 
 
@@ -22,56 +21,25 @@ linktitle: strongly-typed-reactive-forms
 
 [!TabGroup]
 # [app.component.ts](#tab\completecomponent)
-<div component="app-code" key="angular-strongly-typed-complete-component"></div> 
+<img style="margin:10px;" src='https://user-images.githubusercontent.com/20392302/85085119-6ef66700-b1f4-11ea-852e-052de1d85ce2.png'/>
 # [/app.component.ts]
 # [address.ts](#tab\completemodel)
-<div component="app-code" key="angular-strongly-typed-complete-address"></div> 
+<img style="margin:10px;" src='https://user-images.githubusercontent.com/20392302/85085870-bda50080-b1f6-11ea-8efc-c2c0d9781f49.png'/>
 # [/address.ts]
 # [skill.ts](#tab\completehtml)
-<div component="app-code" key="angular-strongly-typed-complete-skill"></div> 
+<img  style="margin:10px;"src='https://user-images.githubusercontent.com/20392302/85085842-aebe4e00-b1f6-11ea-9239-1e0e0fed74eb.png'/>
 # [/skill.ts]
 # [user.ts](#tab\completehtml)
-<div component="app-code" key="angular-strongly-typed-complete-user"></div> 
+<img style="margin:10px;" src='https://user-images.githubusercontent.com/20392302/85085521-bfba8f80-b1f5-11ea-957d-a69b8035bd3e.png'/>
 # [/user.ts]
 ***
 
-
-
-  <div class="row page-section">
-    <div class="col-lg-12">
-      <h3 class="" style="margin-bottom: 30px;">Type Mismatch <span class="" style="background-color: #fff4f6;color: #9b112b;padding: 3px;border-radius: 5px;font-weight: 500;">Errors</span></h3>
-      <div class="row">
-        <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
-          <span class="hljs-built_in">this</span>.formGroup.controls.<span class="hljs-string-remove" style="text-decoration:underline">fakeControl</span><br/>
-          <small class="hljs-string-remove" style="    margin-left: 206px;">(TS) Property 'fakeControl' does not exist on type'.  </small>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
+# What more ? 
 
 <div class="row page-section">
     <div class="col-lg-12">
-      <h2 class="heading-margin">...</h2>
-      <div class="row">
-       <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
-          <span class="hljs-built_in">this</span>.<span>formGroup.controls.firstName.valueChanges.subscribe(value =&gt; {
-        </span><br/>
-              <span class="hljs-built_in" style="margin-left: 33px;">let</span>   <span class="hljs-string-remove" style="text-decoration: underline;">fakeValue</span> :   <span class="code-vs">Date</span> <span>= value;</span><br/>
-          <small class="hljs-string-remove" style="margin-left: 55px;">(TS) Type 'string' is not assignable to type 'Date'. </small><br/>
-           <span>})</span>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-
-<div class="row page-section">
-    <div class="col-lg-12">
-        <h2 class="heading-margin">...</h2>
+        <h3 class="" style="margin-top: 28px; margin-bottom: 30px;">Type Mismatch <span class="" style="background-color: #fff4f6;color: #9b112b;padding: 3px;border-radius: 5px;font-weight: 500;">Errors</span></h3>
+      <h4  style="font-size: 20px;margin-bottom: 20px;">formGroup : </h4>
         <div class="row">
             <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
                 <span class="hljs-built_in">this</span>
@@ -83,11 +51,14 @@ linktitle: strongly-typed-reactive-forms
                  <span>(</span>
                  <span         class="typeit-parameter-type">"abc"</span>
                  <span>));</span></br>
-                        <small class="hljs-string-remove" style="margin-left: 242px;">(TS) Argument of type 'LastName' is not assignable to parameter of type 'firstName' |'adress' | 'skills' . </small>
+                        <small class="hljs-string-remove" style="margin-left: 245px;">(TS) Argument of type 'LastName' is not assignable to parameter of type 'firstName' |'adress' | 'skills' . </small>
              </div>               
         </div>
     </div>
 </div>
+
+  
+
 
 <div class="row page-section">
     <div class="col-lg-12">
@@ -97,7 +68,7 @@ linktitle: strongly-typed-reactive-forms
                 <span class="hljs-built_in">this</span><span>.formGroup.patchValue({ </span>
                 <span  class="hljs-string-remove" style="text-decoration:underline">lastName : </span>
              <span class="typeit-parameter-type">'ojha'</span><span>})</span></br>
-                        <small class="hljs-string-remove" style=   " margin-left: 237px;">(TS) Argument of type '{lastName : string; }' is not assignable to parameter of type Partial&ltUser&gt'. </small>
+                        <small class="hljs-string-remove" style=   "margin-left: 244px;">(TS) Argument of type '{lastName : string; }' is not assignable to parameter of type Partial&ltUser&gt'. </small>
              </div>               
         </div>
     </div>
@@ -117,7 +88,7 @@ linktitle: strongly-typed-reactive-forms
                  <span>(</span>
                  <span         class="typeit-parameter-type">"abc"</span>
                  <span>));</span></br>
-                        <small class="hljs-string-remove" style="margin-left: 274px;">(TS) Argument of type 'LastName' is not assignable to parameter of type 'firstName' |'adress' | 'skills' . </small>
+                        <small class="hljs-string-remove" style="    margin-left: 277px;">(TS) Argument of type 'LastName' is not assignable to parameter of type 'firstName' |'adress' | 'skills' . </small>
              </div>               
         </div>
     </div>
@@ -252,6 +223,39 @@ linktitle: strongly-typed-reactive-forms
 
 <div class="row page-section">
     <div class="col-lg-12">
+      <h4  style="font-size: 20px;    margin-top: 20px;margin-bottom: 20px;">formControl : </h4>
+      <div class="row">
+        <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
+          <span class="hljs-built_in">this</span>.formGroup.controls.<span class="hljs-string-remove" style="text-decoration:underline">fakeControl</span><br/>
+          <small class="hljs-string-remove" style="    margin-left: 206px;">(TS) Property 'fakeControl' does not exist on type'.  </small>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+<div class="row page-section">
+    <div class="col-lg-12">
+      <h2 class="heading-margin">...</h2>
+      <div class="row">
+       <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
+          <span class="hljs-built_in">this</span>.<span>formGroup.controls.firstName.valueChanges.subscribe(value =&gt; {
+        </span><br/>
+              <span class="hljs-built_in" style="margin-left: 33px;">let</span>   <span class="hljs-string-remove" style="text-decoration: underline;">fakeValue</span> :   <span class="code-vs">Date</span> <span>= value;</span><br/>
+          <small class="hljs-string-remove" style="margin-left: 55px;">(TS) Type 'string' is not assignable to type 'Date'. </small><br/>
+           <span>})</span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+<div class="row page-section">
+    <div class="col-lg-12">
       <h2 class="heading-margin">...</h2>
       <div class="row">
        <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
@@ -329,7 +333,7 @@ linktitle: strongly-typed-reactive-forms
 
 <div class="row page-section">
     <div class="col-lg-12">
-        <h2 class="heading-margin">...</h2>
+         <h4  style="font-size: 20px;    margin-top: 20px;margin-bottom: 20px;">Nested formGroup : </h4>
         <div class="row">
             <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
               <span class="hljs-built_in">let</span><span class="hljs-string-remove" style="text-decoration:underline">addressFormGroup</span>
@@ -346,3 +350,114 @@ linktitle: strongly-typed-reactive-forms
     </div>
 </div>
 
+<div class="row page-section">
+    <div class="col-lg-12">
+         <h4  style="font-size: 20px;    margin-top: 20px;margin-bottom: 20px;">Nested formArray : </h4>
+        <div class="row">
+            <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
+              <span class="hljs-built_in">let</span><span>skillFormArray</span>
+                <span> = </span>    <span class="hljs-built_in">this</span><span>.formGroup.controls.skills;</span> <span class="hljs-built_in">as</span> 
+                <span class="code-vs">IFormArray</span><span><</span><span class="code-vs">Skill</span><span>></span> 
+                <br/>
+                <span class="hljs-built_in">let</span>
+                <span  class="hljs-string-remove" style="text-decoration:underline">rawValue</span>
+                <span > : </span> <span class="code-vs">Address</span> <span>[] = skillFormArray.getRawValue(); </span>
+                <br/>
+                        <small class="hljs-string-remove" style="margin-left">(TS) Type 'Skill[]' is not assignable to type 'Address[]'. </small>
+             </div>               
+        </div>
+    </div>
+</div>
+
+<div class="row page-section">
+    <div class="col-lg-12">
+        <h2 class="heading-margin">...</h2>
+        <div class="row">
+            <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
+            <span>skillFormArray.insert(0,</span>
+              <span class="hljs-built_in">this</span><span class="hljs-string-remove" style="text-decoration:underline">.formBuilder.group</span>
+                <span><</span><span class="hljs-string-remove" style="text-decoration:underline">Address</span><span>></span><span>({ countryName: [</span><span class="typeit-parameter-type">''</span><span>] }));</span> 
+                <span class="code-vs">IFormArray</span><span><</span><span class="code-vs">Skill</span><span>></span> 
+                <br/>
+                        <small class="hljs-string-remove" style="margin-left: 233px;">(TS) Argument of type 'IFormGroup&ltAddress&gt' is not assignable to parameter of type `IAbstractControl&ltSkill,any&gt`. </small>
+             </div>               
+        </div>
+    </div>
+</div>
+
+<div class="row page-section">
+    <div class="col-lg-12">
+        <h2 class="heading-margin">...</h2>
+        <div class="row">
+            <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
+            <span>skillFormArray.push(</span>
+              <span class="hljs-built_in">this</span><span class="hljs-string-remove" style="text-decoration:underline">.formBuilder.group</span>
+                <span><</span><span class="hljs-string-remove" style="text-decoration:underline">Address</span><span>></span><span>({ countryName: [</span><span class="typeit-parameter-type">''</span><span>] }));</span> 
+                <span class="code-vs">IFormArray</span><span><</span><span class="code-vs">Skill</span><span>></span> 
+                <br/>
+                        <small class="hljs-string-remove" style="margin-left: 213px;">(TS) Argument of type 'IFormGroup&ltAddress&gt' is not assignable to parameter of type `IAbstractControl&ltSkill,any&gt`. </small>
+             </div>               
+        </div>
+    </div>
+</div>
+
+<div class="row page-section">
+    <div class="col-lg-12">
+        <h2 class="heading-margin">...</h2>
+        <div class="row">
+            <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
+            <span>skillFormArray.setControl(0,</span>
+              <span class="hljs-built_in">this</span><span class="hljs-string-remove" style="text-decoration:underline">.formBuilder.group</span>
+                <span><</span><span class="hljs-string-remove" style="text-decoration:underline">Address</span><span>></span><span>({ countryName: [</span><span class="typeit-parameter-type">''</span><span>] }));</span> 
+                <span class="code-vs">IFormArray</span><span><</span><span class="code-vs">Skill</span><span>></span> 
+                <br/>
+                        <small class="hljs-string-remove" style="margin-left: 273px;">(TS) Argument of type 'IFormGroup&ltAddress&gt' is not assignable to parameter of type `IAbstractControl&ltSkill,any&gt`. </small>
+             </div>               
+        </div>
+    </div>
+</div>
+
+<div class="row page-section">
+    <div class="col-lg-12">
+        <h2 class="heading-margin">...</h2>
+        <div class="row">
+            <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
+                <span class="hljs-built_in">let</span>
+                <span  class="hljs-string-remove" style="text-decoration:underline">formArrayValue</span>
+                <span > : </span> <span class="code-vs">Address</span> <span>[] = skillFormArray.value; </span>
+                <br/>
+                        <small class="hljs-string-remove" style="margin-left: 26px;">(TS) Type 'Skill[]' is not assignable to type 'Address[]'. </small>
+             </div>               
+        </div>
+    </div>
+</div>
+
+<div class="row page-section">
+    <div class="col-lg-12">
+      <h2 class="heading-margin">...</h2>
+      <div class="row">
+       <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
+          <span>skillFormArray</span>.<span>valueChanges.subscribe(skills =&gt; {
+        </span><br/>
+              <span class="hljs-built_in" style="margin-left: 33px;">let</span>   <span class="hljs-string-remove" style="text-decoration: underline;">values</span> :   <span class="code-vs">Address</span> <span>[] = skills;</span><br/>
+          <small class="hljs-string-remove" style="margin-left: 55px;">(TS) Type 'skill[]' is not assignable to type 'Address[]'. </small><br/>
+           <span>})</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row page-section">
+    <div class="col-lg-12">
+      <h2 class="heading-margin">...</h2>
+      <div class="row">
+       <div class="col-md-12 ts-code-design add-code-background" style="font-size: 18px;">
+          <span>skillFormArray</span>.<span>reset([{
+        </span><br/>
+              <span class="hljs-string-remove" style="margin-left: 22px;text-decoration: underline;" style="margin-left: 33px;">name :  </span> <span class="hljs-built_in"> new </span> <span>Date()</span><br/>
+          <small class="hljs-string-remove" style="margin-left: 19px;">(TS) Argument of type '{ name : Date; }[]' is not assignable to parameter of type 'ControlState&ltSkill[]&gt'. </small><br/>
+           <span>}]);</span>
+        </div>
+      </div>
+    </div>
+  </div>
