@@ -11,7 +11,7 @@ linktitle: strongly-typed-reactive-forms
 </h1></div>
 
 
-<div class="title-bar"><p>👊 <span style=" color: aliceblue;background-color: #5ea1db; padding-left: 5px; border-radius: 5px; padding-right: 5px;">Power</span> = 
+<div class="title-bar"><p>👊 <span style=" color: aliceblue;background-color: #5ea1db; padding-left: 5px; border-radius: 5px; padding-right: 5px;">@rxweb/types</span> = 
 <span style=" color: #ffffff;    background-color: #e7659b;   padding-left: 5px;   border-radius: 5px;   padding-right: 5px;">No Build Size</span> <span>&amp;&amp;</span> <span style="    color: #ffffff;    background-color: #a57fcf;    padding-left: 5px;    border-radius: 5px;    padding-right: 5px;">No Module Import</span> 
 <span>&amp;&amp;</span> 
 <span style="    color: #ffffff;    background-color: #76808f;   padding-left: 5px;   border-radius: 5px;    padding-right: 5px;">No Custom API</span> <span>&amp;&amp;</span> <span style=" color: #ffffff; background-color: #61b89c; padding-left: 5px; border-radius: 5px;padding-right: 5px;">Use Generic Interface Only</span> 😵 😷</p></div>
