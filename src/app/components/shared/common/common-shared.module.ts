@@ -20,7 +20,7 @@ import { NewCodeDisplayComponent } from '../new-translate-code-display/new-trans
 @NgModule({
  imports:      [CommonModule,ClipboardModule,HighlightModule ,DisqusSharedModule ],
   declarations: [PageViewerComponent, AppCodeComponent,CodeDisplayComponent,NewCodeDisplayComponent ,AppExampleRunnerComponent,CodeExampleComponent,AppTabsComponent ],
-  exports: [CommonModule, FormsModule, AppCodeComponent,CodeDisplayComponent,NewCodeDisplayComponent,PageViewerComponent,CodeExampleComponent,AppTabsComponent,DisqusSharedModule ],
+  exports: [CommonModule, FormsModule, AppCodeComponent,CodeDisplayComponent,NewCodeDisplayComponent,AppExampleRunnerComponent,PageViewerComponent,CodeExampleComponent,AppTabsComponent,DisqusSharedModule ],
  entryComponents: [GitHubIssueComponent,DisqusComponent,ContributionComponent],
 })
 export class CommonSharedModule { }
