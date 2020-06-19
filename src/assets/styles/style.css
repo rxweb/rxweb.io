@@ -991,6 +991,9 @@ div#rightsidebar ul:first-child>li.border-none a {
     ul.nav.ml-auto.w-100.mt-2.nav-tabs.page_content_tabs{
         padding-top: 75px;
     }
+    .strongly-typed-title{
+        font-size: 15px;
+    }
     .home_intro .home_page_title {
         font-size: 52px;
         line-height: 52px;
@@ -1021,6 +1024,9 @@ div#rightsidebar ul:first-child>li.border-none a {
 @media only screen and (max-width: 991px) {
     ul.nav.ml-auto.w-100.mt-2.nav-tabs.page_content_tabs{
         padding-top: 20px;
+    }
+     .strongly-typed-title{
+        font-size: 18px;
     }
     .home_packages .btn img {
         max-height: 52px;
@@ -6226,6 +6232,11 @@ img {
     }
 }
 
+@media (man-width: 1440px) {
+    p.strongly-typed-title{
+        font-size: 18px!important;
+    }
+}
 @media (min-width: 1200px) {
     .dynamic-text-typing {
         font-family: "Fira Code", Menlo, Monaco, "Courier New", monospace;
@@ -7423,6 +7434,9 @@ a.card-body.text-center:hover {
     ul.nav.ml-auto.w-100.mt-2.nav-tabs.page_content_tabs{
         padding-top: 45px;
     }
+    p.strongly-typed-title{
+        font-size: 15px!important;
+    }
 }
 
 
@@ -7432,6 +7446,9 @@ a.card-body.text-center:hover {
     }
     ul.nav.ml-auto.w-100.mt-2.nav-tabs.page_content_tabs{
         padding-top: 75px;
+    }
+    p.strongly-typed-title{
+        font-size: 15px!important;
     }
 }
 
@@ -7487,6 +7504,9 @@ a.card-body.text-center:hover {
     }
     .highlights .point {
         padding: 10px;
+    }
+    p.strongly-typed-title{
+        font-size: 15px!important;
     }
     .title-bar p {
         font-size: 24px;
@@ -7649,9 +7669,18 @@ a.card-body.text-center:hover {
         font-size: 22px;
         line-height: 28px;
     }
+    p.strongly-typed-title{
+        font-size: 15px!important;
+    }
 }
 
 @media only screen and (max-width:767px) {
+    p.strongly-typed-title{
+        font-size: 8px!important;
+    }
+    .strongly-typed-title{
+        font-size: 15px!important;
+    }
     .title-bar p {
         font-size: 20px;
         line-height: 27px;
@@ -7833,9 +7862,17 @@ a.card-body.text-center:hover {
     }
 }
 
+@media only screen and (max-width: 320px) {
+    h1.strongly-typed-heading{
+        margin-top: 100px!important;
+    }
+}
 @media only screen and (max-width: 575px) {
     .banner .top-bar {
         padding: 0;
+    }
+    h1.strongly-typed-heading{
+        margin-top: 80px!important;
     }
     body .page-tabs li a, body .page-tabs li a:hover, body .page-tabs li a:focus {
         font-size: 14px;
@@ -9604,6 +9641,10 @@ div#v-pills-tabContent {
     background-color: #fcfcfc;
     border-left: solid 1px #ebe8e8;
   }
+  .strongly-typed-link{
+   color:  #a070d4;
+  }
+
   .add-code-strongly-typed-background:hover {
     background-color: #fbfffe;
     -webkit-transition: background-color 500ms linear;

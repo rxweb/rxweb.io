@@ -1,10 +1,11 @@
 <ul class="nav flex-column" id="side-menu" style="padding-top: 20px;">
 
     <li *ngFor="let link of links">
-            
-            <a [class.d-none]="link.isHide" [class.d-block]="!link.isHide"  (click)="navigateTo(link);link.isOpen = !link.isOpen" [class.active]="link.isActive">
-      <span
-                class="nav-label" [innerHTML]="link.title"></span><span class="fa" [class.arrow]="!link.isOpen"
+
+        <a [class.d-none]="link.isHide" [class.d-block]="!link.isHide"
+            (click)="navigateTo(link);link.isOpen = !link.isOpen" [class.active]="link.isActive">
+            <span class="nav-label" [class.strongly-typed-link]="link.title == 'Strongly Types'"
+                [innerHTML]="link.title"></span><span class="fa" [class.arrow]="!link.isOpen"
                 [class.fa-angle-down]="link.isOpen" *ngIf=" link.childrens && link.childrens?.length > 0"></span></a>
         <app-child-links *ngIf=" link.childrens && link.childrens.length > 0" [isOpen]="link.isOpen" [level]="level + 1"
             [links]="link.childrens"></app-child-links>
