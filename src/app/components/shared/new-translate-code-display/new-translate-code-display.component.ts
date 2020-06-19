@@ -10,7 +10,7 @@ declare const $;
   selector: 'app-new-translate-code-display',
   templateUrl: './new-translate-code-display.component.html',
 })
-export class CodeDisplayComponent implements OnInit {
+export class NewCodeDisplayComponent implements OnInit {
 
   @Input() item: any;
   @Input() innerHtml: string;
