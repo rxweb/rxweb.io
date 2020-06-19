@@ -4,11 +4,6 @@
             "id": "angular-strongly-typed",
             "title": "angular-strongly-typed",
             "subLink": null
-        },
-        {
-            "id": "whatmore?",
-            "title": "What more ?",
-            "subLink": []
         }
     ],
     "title": "Strongly Typed Reactive Forms",
