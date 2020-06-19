@@ -3,7 +3,7 @@
   
    
     <div class="content">
-        <ul  class="nav  ml-auto w-100 mt-2" [class.nav-tabs]="mainType == 'form-validations' || mainType == 'how-to'" [class.page_content_tabs]="mainType == 'form-validations' || mainType == 'how-to'">
+        <ul *ngIf="mainType == 'form-validations' || mainType == 'how-to'"  class="nav  ml-auto w-100 mt-2" [class.nav-tabs]="mainType == 'form-validations' || mainType == 'how-to'" [class.page_content_tabs]="mainType == 'form-validations' || mainType == 'how-to'">
             <li class="ng-star-inserted" [class.active]="activeTab == 'validators'"
             *ngIf="(mainType == 'form-validations' || mainType == 'how-to')  && validationName !== 'rule' && validationName !== 'async' && validationName !== 'stronglyType' && validationName !== 'classAbstraction'  && validationName !== 'genericModel'  && validationName !== 'autoPushFormGroup'">
             <a (click)="route('validators')">Validator</a>

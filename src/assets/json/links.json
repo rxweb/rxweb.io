@@ -721,14 +721,44 @@
             "otherUri": "strongly-types",
             "childrens": [
                 {
-                    "title": "Angular",
+                    "title": "Angular Reactive Forms",
                     "isActive": false,
                     "uri": "/strongly-typed/angular-strongly-typed",
                     "linkTitle": "angular",
-                    "refUri": "angular"
+                    "refUri": "angular",
+                    "childrens": [
+                        {
+                            "title": "FormGroup",
+                            "uri": "/strongly-typed/angular-strongly-typed#formGroup",
+                            "isOpen": false,
+                            "isActive": false,
+                            "linkTitle": "formGroup"
+                        },
+                        {
+                            "title": "FormControl",
+                            "uri": "/strongly-typed/angular-strongly-typed#formGroup",
+                            "isOpen": false,
+                            "isActive": false,
+                            "linkTitle": "formControl"
+                        },
+                        {
+                            "title": "Nested FormGroup",
+                            "uri": "/strongly-typed/angular-strongly-typed#nestedFormGroup",
+                            "isOpen": false,
+                            "isActive": false,
+                            "linkTitle": "nestedFormGroup"
+                        },
+                        {
+                            "title": "Nested FormArray",
+                            "uri": "/strongly-typed/angular-strongly-typed#nestedFormArray",
+                            "isOpen": false,
+                            "isActive": false,
+                            "linkTitle": "nestedFormArray"
+                        }
+                    ]
                 }
             ]
-        }, 
+        },
         {
             "title": "Generics",
             "isOpen": false,
@@ -2605,6 +2635,5 @@
                 }
             ]
         }
-         
     ]
 }

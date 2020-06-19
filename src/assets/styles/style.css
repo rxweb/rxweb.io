@@ -9599,6 +9599,22 @@ div#v-pills-tabContent {
     -ms-transition: background-color 500ms linear;
     transition: background-color 500ms linear;
   }
+
+  .add-code-strongly-typed-background{
+    background-color: #fcfcfc;
+    border-left: solid 1px #ebe8e8;
+  }
+  .add-code-strongly-typed-background:hover {
+    background-color: #fbfffe;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  }
+  .strongly-type-error-message{
+    background-color: #fbf8f9!important;
+    color: #ea798f !important;
+  }
+
 .add-code-background {
   background-color: #fcfcfc;
   border-left: solid 1px #ebe8e8;
