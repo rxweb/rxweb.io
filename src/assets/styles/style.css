@@ -1053,6 +1053,9 @@ div#rightsidebar ul:first-child>li.border-none a {
     .home_packages .btn img {
         max-height: 48px;
     }
+    .title-bar.top_title{
+        margin-top: 83px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
