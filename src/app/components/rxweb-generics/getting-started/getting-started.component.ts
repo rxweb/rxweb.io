@@ -8,7 +8,7 @@ import { Http } from '@angular/http';
 export class GenericsGettingStartedComponent implements OnInit {
   codeContent: any;
   showComponent: boolean = false;
-  rightSidebarLinks: any = [{ "id": "getting-started", "title": "Getting Started", "subLink": null }, { "id": "getting-started", "title": "Quick Start", "subLink": null }];
+  rightSidebarLinks: any = [{ "id": "installpackage", "title": "Getting Started", "subLink": null }, { "id": "installpackage", "title": "Quick Start", "subLink": null }];
   pageTitle: any = this.rightSidebarLinks[0];
   titleData: any = { codeContent: {} };
   mainTab: string = "installation"
