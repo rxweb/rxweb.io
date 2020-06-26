@@ -710,6 +710,13 @@
                             "isActive": false
                         }
                     ]
+                },
+                {
+                    "title": "Articles",
+                    "uri": "/articles",
+                    "otherUri": "articles",
+                    "isOpen": false,
+                    "isActive": false
                 }
             ],
             "isActive": false
