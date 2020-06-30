@@ -7,4 +7,4 @@ const DYNAMICEMAIL_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DYNAMICEMAIL_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMICEMAIL_ROUTES);
+export const DYNAMICEMAIL_ROUTING = RouterModule.forChild(DYNAMICEMAIL_ROUTES);

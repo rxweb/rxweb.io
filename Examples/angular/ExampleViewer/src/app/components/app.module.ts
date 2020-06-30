@@ -13,9 +13,6 @@ import { APP_LAZY_ROUTING } from './start/app.lazy.routing';
 
 import { HighlightModule } from 'ngx-highlightjs';
 import { ClipboardModule } from 'ngx-clipboard';
-import { NgAisModule } from 'angular-instantsearch';
-
-
 import { environment } from 'src/environments/environment';
 
 import { RxFormsModule, RxValidation } from '@rx/forms';
@@ -57,7 +54,7 @@ registerLocaleData(localePt)
   declarations: [
       AppComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent,],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, DisqusSharedModule, BasicExamplesExtendedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
-    HighlightModule.forRoot({ theme: 'default' }), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule.forRoot(),
+    HighlightModule.forRoot(), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,  
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,

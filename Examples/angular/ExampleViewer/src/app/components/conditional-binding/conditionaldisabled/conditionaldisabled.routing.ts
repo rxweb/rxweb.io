@@ -7,4 +7,4 @@ const CONDITIONALDISABLED_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const CONDITIONALDISABLED_ROUTING: ModuleWithProviders = RouterModule.forChild(CONDITIONALDISABLED_ROUTES);
+export const CONDITIONALDISABLED_ROUTING = RouterModule.forChild(CONDITIONALDISABLED_ROUTES);

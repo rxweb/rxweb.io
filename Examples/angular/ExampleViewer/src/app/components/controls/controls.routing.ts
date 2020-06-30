@@ -51,4 +51,4 @@ const CONTROLS_ROUTES: Routes = [
 	loadChildren: () => import('./color/color.module').then(m => m.ColorModule),
 },
 ];
-export const CONTROLS_ROUTING: ModuleWithProviders = RouterModule.forChild(CONTROLS_ROUTES);
+export const CONTROLS_ROUTING = RouterModule.forChild(CONTROLS_ROUTES);

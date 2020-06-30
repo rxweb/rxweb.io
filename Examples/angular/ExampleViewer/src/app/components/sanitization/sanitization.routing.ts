@@ -67,4 +67,4 @@ const SANITIZATION_ROUTES: Routes = [
 	loadChildren: () => import('./suffix/suffix.module').then(m => m.SuffixModule),
 },
 ];
-export const SANITIZATION_ROUTING: ModuleWithProviders = RouterModule.forChild(SANITIZATION_ROUTES);
+export const SANITIZATION_ROUTING = RouterModule.forChild(SANITIZATION_ROUTES);

@@ -7,4 +7,4 @@ const DELETE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DELETE_ROUTING: ModuleWithProviders = RouterModule.forChild(DELETE_ROUTES);
+export const DELETE_ROUTING = RouterModule.forChild(DELETE_ROUTES);

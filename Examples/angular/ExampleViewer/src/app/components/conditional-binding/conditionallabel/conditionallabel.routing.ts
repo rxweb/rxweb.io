@@ -7,4 +7,4 @@ const CONDITIONALLABEL_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const CONDITIONALLABEL_ROUTING: ModuleWithProviders = RouterModule.forChild(CONDITIONALLABEL_ROUTES);
+export const CONDITIONALLABEL_ROUTING = RouterModule.forChild(CONDITIONALLABEL_ROUTES);

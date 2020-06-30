@@ -7,4 +7,4 @@ const CLASS_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const CLASS_ROUTING: ModuleWithProviders = RouterModule.forChild(CLASS_ROUTES);
+export const CLASS_ROUTING = RouterModule.forChild(CLASS_ROUTES);

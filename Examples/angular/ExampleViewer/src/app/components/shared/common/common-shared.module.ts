@@ -15,7 +15,7 @@ import { ContributionComponent } from '../disqus/contribution/contribution.compo
 
 @NgModule({
  imports:      [CommonModule,ClipboardModule,HighlightModule ,DisqusSharedModule ],
-  declarations: [PageViewerComponent, AppCodeComponent,CodeDisplayComponent, AppExampleRunnerComponent,CodeExampleComponent,AppTabsComponent ],
+  declarations: [PageViewerComponent, AppCodeComponent, AppExampleRunnerComponent,CodeExampleComponent,AppTabsComponent ],
   exports: [CommonModule, FormsModule, AppCodeComponent,AppExampleRunnerComponent,PageViewerComponent,CodeExampleComponent,AppTabsComponent,DisqusSharedModule ],
  entryComponents: [GitHubIssueComponent,DisqusComponent,ContributionComponent],
 })

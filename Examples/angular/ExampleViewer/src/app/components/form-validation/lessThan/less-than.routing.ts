@@ -12,4 +12,4 @@ const LESS_THAN_ROUTES: Routes = [
 }
 
 ];
-export const LESS_THAN_ROUTING: ModuleWithProviders = RouterModule.forChild(LESS_THAN_ROUTES);
+export const LESS_THAN_ROUTING = RouterModule.forChild(LESS_THAN_ROUTES);

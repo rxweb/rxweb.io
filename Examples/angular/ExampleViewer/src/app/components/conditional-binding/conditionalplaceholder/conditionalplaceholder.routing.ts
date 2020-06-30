@@ -7,4 +7,4 @@ const CONDITIONALPLACEHOLDER_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const CONDITIONALPLACEHOLDER_ROUTING: ModuleWithProviders = RouterModule.forChild(CONDITIONALPLACEHOLDER_ROUTES);
+export const CONDITIONALPLACEHOLDER_ROUTING = RouterModule.forChild(CONDITIONALPLACEHOLDER_ROUTES);

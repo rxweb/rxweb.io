@@ -7,4 +7,4 @@ const PUT_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const PUT_ROUTING: ModuleWithProviders = RouterModule.forChild(PUT_ROUTES);
+export const PUT_ROUTING = RouterModule.forChild(PUT_ROUTES);

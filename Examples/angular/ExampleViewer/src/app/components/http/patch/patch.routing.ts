@@ -7,4 +7,4 @@ const PATCH_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const PATCH_ROUTING: ModuleWithProviders = RouterModule.forChild(PATCH_ROUTES);
+export const PATCH_ROUTING = RouterModule.forChild(PATCH_ROUTES);

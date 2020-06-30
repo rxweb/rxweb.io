@@ -8,4 +8,4 @@ const PAGE_ROUTES: Routes = [
 }
 ];
 
-export const PAGE_ROUTING: ModuleWithProviders = RouterModule.forChild(PAGE_ROUTES);
+export const PAGE_ROUTING = RouterModule.forChild(PAGE_ROUTES);

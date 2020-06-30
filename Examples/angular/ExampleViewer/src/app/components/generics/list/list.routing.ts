@@ -7,4 +7,4 @@ const LIST_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const LIST_ROUTING: ModuleWithProviders = RouterModule.forChild(LIST_ROUTES);
+export const LIST_ROUTING = RouterModule.forChild(LIST_ROUTES);

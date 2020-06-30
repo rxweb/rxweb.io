@@ -20,4 +20,4 @@ const COMMUNITY_ROUTES: Routes = [
 	component:TextPageComponent
 },
 ];
-export const COMMUNITY_ROUTING: ModuleWithProviders = RouterModule.forChild(COMMUNITY_ROUTES);
+export const COMMUNITY_ROUTING = RouterModule.forChild(COMMUNITY_ROUTES);

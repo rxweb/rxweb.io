@@ -7,4 +7,4 @@ const METHODS_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const METHODS_ROUTING: ModuleWithProviders = RouterModule.forChild(METHODS_ROUTES);
+export const METHODS_ROUTING = RouterModule.forChild(METHODS_ROUTES);

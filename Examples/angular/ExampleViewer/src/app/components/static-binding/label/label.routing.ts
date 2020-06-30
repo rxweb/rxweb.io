@@ -7,4 +7,4 @@ const LABEL_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const LABEL_ROUTING: ModuleWithProviders = RouterModule.forChild(LABEL_ROUTES);
+export const LABEL_ROUTING = RouterModule.forChild(LABEL_ROUTES);

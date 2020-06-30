@@ -12,4 +12,4 @@ const DISABLE_ROUTES: Routes = [
 }
 
 ];
-export const DISABLE_ROUTING: ModuleWithProviders = RouterModule.forChild(DISABLE_ROUTES);
+export const DISABLE_ROUTING = RouterModule.forChild(DISABLE_ROUTES);

@@ -12,4 +12,4 @@ const MAX_TIME_ROUTES: Routes = [
 }
 
 ];
-export const MAX_TIME_ROUTING: ModuleWithProviders = RouterModule.forChild(MAX_TIME_ROUTES);
+export const MAX_TIME_ROUTING = RouterModule.forChild(MAX_TIME_ROUTES);

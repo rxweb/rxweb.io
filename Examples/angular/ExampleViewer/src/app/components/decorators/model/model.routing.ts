@@ -12,4 +12,4 @@ const MODEL_ROUTES: Routes = [
 }
 
 ];
-export const MODEL_ROUTING: ModuleWithProviders = RouterModule.forChild(MODEL_ROUTES);
+export const MODEL_ROUTING = RouterModule.forChild(MODEL_ROUTES);

@@ -7,4 +7,4 @@ const FOCUS_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const FOCUS_ROUTING: ModuleWithProviders = RouterModule.forChild(FOCUS_ROUTES);
+export const FOCUS_ROUTING = RouterModule.forChild(FOCUS_ROUTES);

@@ -7,4 +7,4 @@ const NESTEDFORMARRAY_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const NESTEDFORMARRAY_ROUTING: ModuleWithProviders = RouterModule.forChild(NESTEDFORMARRAY_ROUTES);
+export const NESTEDFORMARRAY_ROUTING = RouterModule.forChild(NESTEDFORMARRAY_ROUTES);

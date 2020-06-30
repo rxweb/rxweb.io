@@ -12,4 +12,4 @@ const PROP_ARRAY_ROUTES: Routes = [
 }
 
 ];
-export const PROP_ARRAY_ROUTING: ModuleWithProviders = RouterModule.forChild(PROP_ARRAY_ROUTES);
+export const PROP_ARRAY_ROUTING = RouterModule.forChild(PROP_ARRAY_ROUTES);

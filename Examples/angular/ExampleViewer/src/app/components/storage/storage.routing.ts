@@ -11,4 +11,4 @@ const STORAGE_ROUTES: Routes = [
     loadChildren: () => import('src/app/components/storage/session-storage/session-storage.module').then(m => m.SessionStorageModule),
   }
 ];
-export const STORAGE_ROUTING: ModuleWithProviders = RouterModule.forChild(STORAGE_ROUTES);
+export const STORAGE_ROUTING = RouterModule.forChild(STORAGE_ROUTES);

@@ -12,4 +12,4 @@ const JSON_ROUTES: Routes = [
 }
 
 ];
-export const JSON_ROUTING: ModuleWithProviders = RouterModule.forChild(JSON_ROUTES);
+export const JSON_ROUTING = RouterModule.forChild(JSON_ROUTES);

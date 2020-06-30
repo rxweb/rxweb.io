@@ -7,4 +7,4 @@ const PLACEHOLDER_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const PLACEHOLDER_ROUTING: ModuleWithProviders = RouterModule.forChild(PLACEHOLDER_ROUTES);
+export const PLACEHOLDER_ROUTING = RouterModule.forChild(PLACEHOLDER_ROUTES);

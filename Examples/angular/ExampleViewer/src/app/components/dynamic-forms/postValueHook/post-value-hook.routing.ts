@@ -7,4 +7,4 @@ const POST_VALUE_HOOK_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const POST_VALUE_HOOK_ROUTING: ModuleWithProviders = RouterModule.forChild(POST_VALUE_HOOK_ROUTES);
+export const POST_VALUE_HOOK_ROUTING = RouterModule.forChild(POST_VALUE_HOOK_ROUTES);

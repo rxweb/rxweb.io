@@ -12,4 +12,4 @@ const MODIFIED_VALUE_ROUTES: Routes = [
 }
 
 ];
-export const MODIFIED_VALUE_ROUTING: ModuleWithProviders = RouterModule.forChild(MODIFIED_VALUE_ROUTES);
+export const MODIFIED_VALUE_ROUTING = RouterModule.forChild(MODIFIED_VALUE_ROUTES);

@@ -12,4 +12,4 @@ const MIN_TIME_ROUTES: Routes = [
 }
 
 ];
-export const MIN_TIME_ROUTING: ModuleWithProviders = RouterModule.forChild(MIN_TIME_ROUTES);
+export const MIN_TIME_ROUTING = RouterModule.forChild(MIN_TIME_ROUTES);

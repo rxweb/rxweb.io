@@ -12,4 +12,4 @@ const CUSIP_ROUTES: Routes = [
 }
 
 ];
-export const CUSIP_ROUTING: ModuleWithProviders = RouterModule.forChild(CUSIP_ROUTES);
+export const CUSIP_ROUTING = RouterModule.forChild(CUSIP_ROUTES);

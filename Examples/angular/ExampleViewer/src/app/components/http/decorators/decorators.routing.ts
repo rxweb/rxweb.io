@@ -7,4 +7,4 @@ const DECORATORS_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DECORATORS_ROUTING: ModuleWithProviders = RouterModule.forChild(DECORATORS_ROUTES);
+export const DECORATORS_ROUTING = RouterModule.forChild(DECORATORS_ROUTES);

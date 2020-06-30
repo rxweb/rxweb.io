@@ -12,4 +12,4 @@ const CLASS_ABSTRACTION_ROUTES: Routes = [
 }
 
 ];
-export const CLASS_ABSTRACTION_ROUTING: ModuleWithProviders = RouterModule.forChild(CLASS_ABSTRACTION_ROUTES);
+export const CLASS_ABSTRACTION_ROUTING = RouterModule.forChild(CLASS_ABSTRACTION_ROUTES);

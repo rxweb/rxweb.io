@@ -12,4 +12,4 @@ const COMPOSE_ROUTES: Routes = [
 }
 
 ];
-export const COMPOSE_ROUTING: ModuleWithProviders = RouterModule.forChild(COMPOSE_ROUTES);
+export const COMPOSE_ROUTING = RouterModule.forChild(COMPOSE_ROUTES);

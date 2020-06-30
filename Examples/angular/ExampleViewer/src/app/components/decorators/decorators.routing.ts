@@ -31,4 +31,4 @@ const DECORATORS_ROUTES: Routes = [
 	loadChildren: () => import('./model/model.module').then(m => m.ModelModule),
 },
 ];
-export const DECORATORS_ROUTING: ModuleWithProviders = RouterModule.forChild(DECORATORS_ROUTES);
+export const DECORATORS_ROUTING = RouterModule.forChild(DECORATORS_ROUTES);

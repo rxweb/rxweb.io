@@ -7,4 +7,4 @@ const CUSTOMVALIDATION_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const CUSTOMVALIDATION_ROUTING: ModuleWithProviders = RouterModule.forChild(CUSTOMVALIDATION_ROUTES);
+export const CUSTOMVALIDATION_ROUTING = RouterModule.forChild(CUSTOMVALIDATION_ROUTES);

@@ -12,4 +12,4 @@ const LAT_LONG_ROUTES: Routes = [
 }
 
 ];
-export const LAT_LONG_ROUTING: ModuleWithProviders = RouterModule.forChild(LAT_LONG_ROUTES);
+export const LAT_LONG_ROUTING = RouterModule.forChild(LAT_LONG_ROUTES);

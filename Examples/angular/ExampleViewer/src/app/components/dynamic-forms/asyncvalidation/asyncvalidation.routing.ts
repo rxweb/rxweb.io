@@ -7,4 +7,4 @@ const ASYNCVALIDATION_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const ASYNCVALIDATION_ROUTING: ModuleWithProviders = RouterModule.forChild(ASYNCVALIDATION_ROUTES);
+export const ASYNCVALIDATION_ROUTING = RouterModule.forChild(ASYNCVALIDATION_ROUTES);

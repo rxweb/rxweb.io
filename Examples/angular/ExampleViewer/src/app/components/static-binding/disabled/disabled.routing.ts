@@ -7,4 +7,4 @@ const DISABLED_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DISABLED_ROUTING: ModuleWithProviders = RouterModule.forChild(DISABLED_ROUTES);
+export const DISABLED_ROUTING = RouterModule.forChild(DISABLED_ROUTES);

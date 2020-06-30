@@ -12,4 +12,4 @@ const CHOICE_ROUTES: Routes = [
 }
 
 ];
-export const CHOICE_ROUTING: ModuleWithProviders = RouterModule.forChild(CHOICE_ROUTES);
+export const CHOICE_ROUTING = RouterModule.forChild(CHOICE_ROUTES);

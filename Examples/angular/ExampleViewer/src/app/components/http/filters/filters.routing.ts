@@ -7,4 +7,4 @@ const FILTERS_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const FILTERS_ROUTING: ModuleWithProviders = RouterModule.forChild(FILTERS_ROUTES);
+export const FILTERS_ROUTING = RouterModule.forChild(FILTERS_ROUTES);

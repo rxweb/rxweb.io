@@ -9,4 +9,4 @@ const FORM_BUILDER_ROUTES: Routes = [
 },
 
 ];
-export const FORM_BUILDER_ROUTING: ModuleWithProviders = RouterModule.forChild(FORM_BUILDER_ROUTES);
+export const FORM_BUILDER_ROUTING = RouterModule.forChild(FORM_BUILDER_ROUTES);

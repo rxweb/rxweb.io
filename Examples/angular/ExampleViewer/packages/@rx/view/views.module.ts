@@ -59,5 +59,5 @@ export class RxViewModule {
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class RxViewServiceModule {
-    static forRoot(): ModuleWithProviders { return { ngModule: RxViewServiceModule, providers: [] }; }
+    static forRoot() { return { ngModule: RxViewServiceModule, providers: [] }; }
 }

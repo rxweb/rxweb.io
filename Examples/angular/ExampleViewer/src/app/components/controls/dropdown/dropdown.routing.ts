@@ -7,4 +7,4 @@ const DROPDOWN_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DROPDOWN_ROUTING: ModuleWithProviders = RouterModule.forChild(DROPDOWN_ROUTES);
+export const DROPDOWN_ROUTING = RouterModule.forChild(DROPDOWN_ROUTES);
