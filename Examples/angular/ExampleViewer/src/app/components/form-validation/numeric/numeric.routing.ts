@@ -12,4 +12,4 @@ const NUMERIC_ROUTES: Routes = [
 }
 
 ];
-export const NUMERIC_ROUTING: ModuleWithProviders = RouterModule.forChild(NUMERIC_ROUTES);
+export const NUMERIC_ROUTING = RouterModule.forChild(NUMERIC_ROUTES);

@@ -7,4 +7,4 @@ const HIDE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const HIDE_ROUTING: ModuleWithProviders = RouterModule.forChild(HIDE_ROUTES);
+export const HIDE_ROUTING = RouterModule.forChild(HIDE_ROUTES);

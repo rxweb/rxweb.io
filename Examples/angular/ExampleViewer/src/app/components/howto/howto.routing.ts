@@ -75,4 +75,4 @@ const HOWTO_ROUTES: Routes = [
 	loadChildren: () => import('./ngxTranslateValidationMessage/ngx-translate-validation-message.module').then(m => m.NgxTranslateValidationMessageModule),
 },
 ];
-export const HOWTO_ROUTING: ModuleWithProviders = RouterModule.forChild(HOWTO_ROUTES);
+export const HOWTO_ROUTING = RouterModule.forChild(HOWTO_ROUTES);

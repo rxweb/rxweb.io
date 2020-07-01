@@ -12,4 +12,4 @@ const MAC_ROUTES: Routes = [
 }
 
 ];
-export const MAC_ROUTING: ModuleWithProviders = RouterModule.forChild(MAC_ROUTES);
+export const MAC_ROUTING = RouterModule.forChild(MAC_ROUTES);

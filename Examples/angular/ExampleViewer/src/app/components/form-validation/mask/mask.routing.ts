@@ -12,4 +12,4 @@ const MASK_ROUTES: Routes = [
 }
 
 ];
-export const MASK_ROUTING: ModuleWithProviders = RouterModule.forChild(MASK_ROUTES);
+export const MASK_ROUTING = RouterModule.forChild(MASK_ROUTES);

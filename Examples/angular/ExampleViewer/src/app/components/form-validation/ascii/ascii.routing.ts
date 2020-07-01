@@ -12,4 +12,4 @@ const ASCII_ROUTES: Routes = [
 }
 
 ];
-export const ASCII_ROUTING: ModuleWithProviders = RouterModule.forChild(ASCII_ROUTES);
+export const ASCII_ROUTING = RouterModule.forChild(ASCII_ROUTES);

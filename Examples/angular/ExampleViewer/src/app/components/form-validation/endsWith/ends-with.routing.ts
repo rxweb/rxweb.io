@@ -12,4 +12,4 @@ const ENDS_WITH_ROUTES: Routes = [
 }
 
 ];
-export const ENDS_WITH_ROUTING: ModuleWithProviders = RouterModule.forChild(ENDS_WITH_ROUTES);
+export const ENDS_WITH_ROUTING = RouterModule.forChild(ENDS_WITH_ROUTES);

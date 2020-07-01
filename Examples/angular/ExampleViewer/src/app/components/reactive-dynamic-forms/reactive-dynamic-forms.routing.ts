@@ -39,4 +39,4 @@ const REACTIVE_DYNAMIC_FORMS_ROUTES: Routes = [
   }
 
 ];
-export const REACTIVE_DYNAMIC_FORMS_ROUTING: ModuleWithProviders = RouterModule.forChild(REACTIVE_DYNAMIC_FORMS_ROUTES);
+export const REACTIVE_DYNAMIC_FORMS_ROUTING = RouterModule.forChild(REACTIVE_DYNAMIC_FORMS_ROUTES);

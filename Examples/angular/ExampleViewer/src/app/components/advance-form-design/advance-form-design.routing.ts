@@ -11,4 +11,4 @@ const ADVANCE_FORM_DESIGN_ROUTES: Routes = [
 	loadChildren: () => import('./nestedformgroup/nestedformgroup.module').then(m => m.NestedformgroupModule),
 },
 ];
-export const ADVANCE_FORM_DESIGN_ROUTING: ModuleWithProviders = RouterModule.forChild(ADVANCE_FORM_DESIGN_ROUTES);
+export const ADVANCE_FORM_DESIGN_ROUTING = RouterModule.forChild(ADVANCE_FORM_DESIGN_ROUTES);

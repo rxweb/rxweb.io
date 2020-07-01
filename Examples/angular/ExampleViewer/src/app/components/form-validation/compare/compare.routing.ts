@@ -12,4 +12,4 @@ const COMPARE_ROUTES: Routes = [
 }
 
 ];
-export const COMPARE_ROUTING: ModuleWithProviders = RouterModule.forChild(COMPARE_ROUTES);
+export const COMPARE_ROUTING = RouterModule.forChild(COMPARE_ROUTES);

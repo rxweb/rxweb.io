@@ -35,4 +35,4 @@ const CONDITIONAL_BINDING_ROUTES: Routes = [
 	loadChildren: () => import('./conditionalvalue/conditionalvalue.module').then(m => m.ConditionalvalueModule),
 },
 ];
-export const CONDITIONAL_BINDING_ROUTING: ModuleWithProviders = RouterModule.forChild(CONDITIONAL_BINDING_ROUTES);
+export const CONDITIONAL_BINDING_ROUTING = RouterModule.forChild(CONDITIONAL_BINDING_ROUTES);

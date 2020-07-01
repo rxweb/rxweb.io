@@ -7,4 +7,4 @@ const DESCRIPTION_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DESCRIPTION_ROUTING: ModuleWithProviders = RouterModule.forChild(DESCRIPTION_ROUTES);
+export const DESCRIPTION_ROUTING = RouterModule.forChild(DESCRIPTION_ROUTES);

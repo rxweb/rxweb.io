@@ -12,4 +12,4 @@ const PRIME_NUMBER_ROUTES: Routes = [
 }
 
 ];
-export const PRIME_NUMBER_ROUTING: ModuleWithProviders = RouterModule.forChild(PRIME_NUMBER_ROUTES);
+export const PRIME_NUMBER_ROUTING = RouterModule.forChild(PRIME_NUMBER_ROUTES);

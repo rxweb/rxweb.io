@@ -7,4 +7,4 @@ const STEPBYSTEP_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const STEPBYSTEP_ROUTING: ModuleWithProviders = RouterModule.forChild(STEPBYSTEP_ROUTES);
+export const STEPBYSTEP_ROUTING = RouterModule.forChild(STEPBYSTEP_ROUTES);

@@ -8,4 +8,4 @@ const DYNAMIC_FORM_BUILDER_ROUTES: Routes = [
 	component:DynamicFormBuilderComponent
 }
 ];
-export const DYNAMIC_FORM_BUILDER_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMIC_FORM_BUILDER_ROUTES);
+export const DYNAMIC_FORM_BUILDER_ROUTING = RouterModule.forChild(DYNAMIC_FORM_BUILDER_ROUTES);

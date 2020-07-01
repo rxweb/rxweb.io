@@ -12,4 +12,4 @@ const ASYNC_ROUTES: Routes = [
 }
 
 ];
-export const ASYNC_ROUTING: ModuleWithProviders = RouterModule.forChild(ASYNC_ROUTES);
+export const ASYNC_ROUTING = RouterModule.forChild(ASYNC_ROUTES);

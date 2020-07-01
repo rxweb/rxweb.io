@@ -7,4 +7,4 @@ const CONDITIONALCLASS_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const CONDITIONALCLASS_ROUTING: ModuleWithProviders = RouterModule.forChild(CONDITIONALCLASS_ROUTES);
+export const CONDITIONALCLASS_ROUTING = RouterModule.forChild(CONDITIONALCLASS_ROUTES);

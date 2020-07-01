@@ -7,4 +7,4 @@ const DYNAMICFILE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DYNAMICFILE_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMICFILE_ROUTES);
+export const DYNAMICFILE_ROUTING = RouterModule.forChild(DYNAMICFILE_ROUTES);

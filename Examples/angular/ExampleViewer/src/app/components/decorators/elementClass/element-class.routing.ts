@@ -12,4 +12,4 @@ const ELEMENT_CLASS_ROUTES: Routes = [
 }
 
 ];
-export const ELEMENT_CLASS_ROUTING: ModuleWithProviders = RouterModule.forChild(ELEMENT_CLASS_ROUTES);
+export const ELEMENT_CLASS_ROUTING = RouterModule.forChild(ELEMENT_CLASS_ROUTES);

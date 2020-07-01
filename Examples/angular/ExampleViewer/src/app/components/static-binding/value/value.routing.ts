@@ -7,4 +7,4 @@ const VALUE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const VALUE_ROUTING: ModuleWithProviders = RouterModule.forChild(VALUE_ROUTES);
+export const VALUE_ROUTING = RouterModule.forChild(VALUE_ROUTES);

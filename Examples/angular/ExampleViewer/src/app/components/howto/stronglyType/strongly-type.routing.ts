@@ -12,4 +12,4 @@ const STRONGLY_TYPE_ROUTES: Routes = [
 }
 
 ];
-export const STRONGLY_TYPE_ROUTING: ModuleWithProviders = RouterModule.forChild(STRONGLY_TYPE_ROUTES);
+export const STRONGLY_TYPE_ROUTING = RouterModule.forChild(STRONGLY_TYPE_ROUTES);

@@ -7,4 +7,4 @@ const TEXTAREA_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const TEXTAREA_ROUTING: ModuleWithProviders = RouterModule.forChild(TEXTAREA_ROUTES);
+export const TEXTAREA_ROUTING = RouterModule.forChild(TEXTAREA_ROUTES);

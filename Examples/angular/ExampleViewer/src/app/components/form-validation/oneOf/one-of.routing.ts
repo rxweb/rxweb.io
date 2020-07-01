@@ -12,4 +12,4 @@ const ONE_OF_ROUTES: Routes = [
 }
 
 ];
-export const ONE_OF_ROUTING: ModuleWithProviders = RouterModule.forChild(ONE_OF_ROUTES);
+export const ONE_OF_ROUTING = RouterModule.forChild(ONE_OF_ROUTES);

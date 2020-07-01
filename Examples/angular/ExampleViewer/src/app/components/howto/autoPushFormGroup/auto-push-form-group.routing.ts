@@ -12,4 +12,4 @@ const AUTO_PUSH_FORM_GROUP_ROUTES: Routes = [
 }
 
 ];
-export const AUTO_PUSH_FORM_GROUP_ROUTING: ModuleWithProviders = RouterModule.forChild(AUTO_PUSH_FORM_GROUP_ROUTES);
+export const AUTO_PUSH_FORM_GROUP_ROUTING = RouterModule.forChild(AUTO_PUSH_FORM_GROUP_ROUTES);

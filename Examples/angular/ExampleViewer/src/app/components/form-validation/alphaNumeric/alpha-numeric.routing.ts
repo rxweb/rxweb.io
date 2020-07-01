@@ -12,4 +12,4 @@ const ALPHA_NUMERIC_ROUTES: Routes = [
 }
 
 ];
-export const ALPHA_NUMERIC_ROUTING: ModuleWithProviders = RouterModule.forChild(ALPHA_NUMERIC_ROUTES);
+export const ALPHA_NUMERIC_ROUTING = RouterModule.forChild(ALPHA_NUMERIC_ROUTES);

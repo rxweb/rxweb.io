@@ -7,4 +7,4 @@ const DYNAMICURL_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DYNAMICURL_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMICURL_ROUTES);
+export const DYNAMICURL_ROUTING = RouterModule.forChild(DYNAMICURL_ROUTES);

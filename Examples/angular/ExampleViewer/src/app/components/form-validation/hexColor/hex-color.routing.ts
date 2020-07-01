@@ -12,4 +12,4 @@ const HEX_COLOR_ROUTES: Routes = [
 }
 
 ];
-export const HEX_COLOR_ROUTING: ModuleWithProviders = RouterModule.forChild(HEX_COLOR_ROUTES);
+export const HEX_COLOR_ROUTING = RouterModule.forChild(HEX_COLOR_ROUTES);

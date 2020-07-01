@@ -12,4 +12,4 @@ const LTRIM_ROUTES: Routes = [
 }
 
 ];
-export const LTRIM_ROUTING: ModuleWithProviders = RouterModule.forChild(LTRIM_ROUTES);
+export const LTRIM_ROUTING = RouterModule.forChild(LTRIM_ROUTES);

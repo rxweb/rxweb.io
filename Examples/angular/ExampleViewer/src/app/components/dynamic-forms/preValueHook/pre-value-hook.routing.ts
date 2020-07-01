@@ -7,4 +7,4 @@ const PRE_VALUE_HOOK_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const PRE_VALUE_HOOK_ROUTING: ModuleWithProviders = RouterModule.forChild(PRE_VALUE_HOOK_ROUTES);
+export const PRE_VALUE_HOOK_ROUTING = RouterModule.forChild(PRE_VALUE_HOOK_ROUTES);

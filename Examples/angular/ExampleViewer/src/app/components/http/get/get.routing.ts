@@ -7,4 +7,4 @@ const GET_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const GET_ROUTING: ModuleWithProviders = RouterModule.forChild(GET_ROUTES);
+export const GET_ROUTING = RouterModule.forChild(GET_ROUTES);

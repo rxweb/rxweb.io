@@ -7,4 +7,4 @@ const GENERICS_ROUTES: Routes = [
 	loadChildren: () => import('./list/list.module').then(m => m.ListModule),
 },
 ];
-export const GENERICS_ROUTING: ModuleWithProviders = RouterModule.forChild(GENERICS_ROUTES);
+export const GENERICS_ROUTING = RouterModule.forChild(GENERICS_ROUTES);

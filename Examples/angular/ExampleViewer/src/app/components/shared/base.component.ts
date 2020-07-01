@@ -1,10 +1,13 @@
 import { ComponentView } from "src/app/domain/view";
-import { ViewContainerRef,OnDestroy } from "@angular/core";
+import { ViewContainerRef,OnDestroy, Component } from "@angular/core";
 import { ComponentFactoryResolver } from "@angular/core";
 import { Input } from "@angular/core";
 import { Inject } from "@angular/core";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 
+@Component({
+    template: '<div></div>'
+})
 export abstract class BaseComponentProvider implements OnDestroy {
 
     viewContainerRef:ViewContainerRef;

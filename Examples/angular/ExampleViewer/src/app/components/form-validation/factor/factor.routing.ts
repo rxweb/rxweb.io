@@ -12,4 +12,4 @@ const FACTOR_ROUTES: Routes = [
 }
 
 ];
-export const FACTOR_ROUTING: ModuleWithProviders = RouterModule.forChild(FACTOR_ROUTES);
+export const FACTOR_ROUTING = RouterModule.forChild(FACTOR_ROUTES);

@@ -7,4 +7,4 @@ const NESTEDFORMGROUP_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const NESTEDFORMGROUP_ROUTING: ModuleWithProviders = RouterModule.forChild(NESTEDFORMGROUP_ROUTES);
+export const NESTEDFORMGROUP_ROUTING = RouterModule.forChild(NESTEDFORMGROUP_ROUTES);

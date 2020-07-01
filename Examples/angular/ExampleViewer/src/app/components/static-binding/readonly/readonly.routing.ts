@@ -7,4 +7,4 @@ const READONLY_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const READONLY_ROUTING: ModuleWithProviders = RouterModule.forChild(READONLY_ROUTES);
+export const READONLY_ROUTING = RouterModule.forChild(READONLY_ROUTES);

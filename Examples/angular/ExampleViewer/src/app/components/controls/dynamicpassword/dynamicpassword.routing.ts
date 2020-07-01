@@ -7,4 +7,4 @@ const DYNAMICPASSWORD_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DYNAMICPASSWORD_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMICPASSWORD_ROUTES);
+export const DYNAMICPASSWORD_ROUTING = RouterModule.forChild(DYNAMICPASSWORD_ROUTES);

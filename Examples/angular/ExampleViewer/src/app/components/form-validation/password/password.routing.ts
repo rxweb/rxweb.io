@@ -12,4 +12,4 @@ const PASSWORD_ROUTES: Routes = [
 }
 
 ];
-export const PASSWORD_ROUTING: ModuleWithProviders = RouterModule.forChild(PASSWORD_ROUTES);
+export const PASSWORD_ROUTING = RouterModule.forChild(PASSWORD_ROUTES);

@@ -12,4 +12,4 @@ const REQUIRED_TRUE_ROUTES: Routes = [
 }
 
 ];
-export const REQUIRED_TRUE_ROUTING: ModuleWithProviders = RouterModule.forChild(REQUIRED_TRUE_ROUTES);
+export const REQUIRED_TRUE_ROUTING = RouterModule.forChild(REQUIRED_TRUE_ROUTES);

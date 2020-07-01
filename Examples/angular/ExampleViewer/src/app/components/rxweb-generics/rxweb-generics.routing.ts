@@ -14,4 +14,4 @@ const RXWEB_GENERICS_ROUTES: Routes = [
   }
 
 ];
-export const RXWEB_GENERICS_ROUTING: ModuleWithProviders = RouterModule.forChild(RXWEB_GENERICS_ROUTES);
+export const RXWEB_GENERICS_ROUTING = RouterModule.forChild(RXWEB_GENERICS_ROUTES);

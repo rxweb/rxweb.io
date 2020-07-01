@@ -7,4 +7,4 @@ const SANITIZER_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const SANITIZER_ROUTING: ModuleWithProviders = RouterModule.forChild(SANITIZER_ROUTES);
+export const SANITIZER_ROUTING = RouterModule.forChild(SANITIZER_ROUTES);

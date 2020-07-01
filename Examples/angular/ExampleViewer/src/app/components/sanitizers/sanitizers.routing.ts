@@ -7,4 +7,4 @@ const SANITIZERS_ROUTES: Routes = [
 	loadChildren: () => import('./sanitizer/sanitizer.module').then(m => m.SanitizerModule),
 },
 ];
-export const SANITIZERS_ROUTING: ModuleWithProviders = RouterModule.forChild(SANITIZERS_ROUTES);
+export const SANITIZERS_ROUTING = RouterModule.forChild(SANITIZERS_ROUTES);

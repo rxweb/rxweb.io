@@ -7,4 +7,4 @@ const OVERRIDE_PROPS_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const OVERRIDE_PROPS_ROUTING: ModuleWithProviders = RouterModule.forChild(OVERRIDE_PROPS_ROUTES);
+export const OVERRIDE_PROPS_ROUTING = RouterModule.forChild(OVERRIDE_PROPS_ROUTES);

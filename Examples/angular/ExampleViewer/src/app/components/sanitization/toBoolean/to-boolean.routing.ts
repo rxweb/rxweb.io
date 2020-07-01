@@ -12,4 +12,4 @@ const TO_BOOLEAN_ROUTES: Routes = [
 }
 
 ];
-export const TO_BOOLEAN_ROUTING: ModuleWithProviders = RouterModule.forChild(TO_BOOLEAN_ROUTES);
+export const TO_BOOLEAN_ROUTING = RouterModule.forChild(TO_BOOLEAN_ROUTES);
