@@ -59,12 +59,12 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   { path: 'other-intuitive-features', component: PowerhouseOtherIntruitiveFeaturesComponent },
   { path: 'sanitize', 
   // component: PowerhouseSanitizeComponent,
-    loadChildren: 'src/app/components/ngx-translate-extension/powerhouse/sanitize/sanitize.module#SanitizeModule' 
+    loadChildren: () => import('src/app/components/ngx-translate-extension/powerhouse/sanitize/sanitize.module').then(m => m.SanitizeModule) 
   },
   { path: 'pure-pipe', component: PowerhousePurePipeComponent },
   {
     path: 'spec-comparison',
-    loadChildren: 'src/app/components/ngx-translate-extension/spec-comparison/comparison.module#ComparisonModule',
+    loadChildren: () => import('src/app/components/ngx-translate-extension/spec-comparison/comparison.module').then(m => m.ComparisonModule),
   },
   {
     path: 'code',
@@ -96,10 +96,10 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
   },
   {
     path: 'clean-code-comparison',
-    loadChildren: 'src/app/components/ngx-translate-extension/clean-code/clean-code.module#CleanCodeModule',
+    loadChildren: () => import('src/app/components/ngx-translate-extension/clean-code/clean-code.module').then(m => m.CleanCodeModule),
   },
   {
-    path: ':languageCode/pre-load-module', loadChildren: './playground/pre-load-module/pre-load-module.component#PreLoadModule'
+    path: ':languageCode/pre-load-module', loadChildren: () => import('./playground/pre-load-module/pre-load-module.component').then(m => m.PreLoadModule)
   }
 ];
 export const NGX_TRANSLATE_EXTENSION_ROUTING = RouterModule.forChild(NGX_TRANSLATE_EXTENSION_ROUTES);

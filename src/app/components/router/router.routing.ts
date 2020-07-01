@@ -4,19 +4,19 @@ import { Routes, RouterModule } from '@angular/router';
 const ROUTER_ROUTES: Routes = [
 {
 	path:'access',
-	loadChildren: './access/access.module#AccessModule',
+	loadChildren: () => import('./access/access.module').then(m => m.AccessModule),
 },
 {
 	path:'anonymous',
-	loadChildren: './anonymous/anonymous.module#AnonymousModule',
+	loadChildren: () => import('./anonymous/anonymous.module').then(m => m.AnonymousModule),
 },
 {
 	path:'middleware',
-	loadChildren: './middleware/middleware.module#MiddlwareModule',
+	loadChildren: () => import('./middleware/middleware.module').then(m => m.MiddlwareModule),
 },
 {
 	path:'router-module',
-	loadChildren: './routerModule/router-module.module#RouterModuleModule',
+	loadChildren: () => import('./routerModule/router-module.module').then(m => m.RouterModuleModule),
 }
 ];
 export const ROUTER_ROUTING = RouterModule.forChild(ROUTER_ROUTES);

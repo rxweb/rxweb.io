@@ -12,7 +12,7 @@ const RXWEB_TRANSLATE_ROUTES: Routes = [
     path: ':languageCode/lazy-load', component: LazyLoadComponent
   },
   {
-    path: ':languageCode/pre-load-module', loadChildren: 'src/app/components/rxweb-translate/pre-load-module/pre-load-module.component#PreLoadModule'
+    path: ':languageCode/pre-load-module', loadChildren: () => import('src/app/components/rxweb-translate/pre-load-module/pre-load-module.component').then(m => m.PreLoadModule)
   },
   {
     path: "getting-started",
@@ -21,7 +21,7 @@ const RXWEB_TRANSLATE_ROUTES: Routes = [
  
   {
     path: 'translate',
-    loadChildren: 'src/app/components/translate/translate.module#TranslateModule',
+    loadChildren: () => import('src/app/components/translate/translate.module').then(m => m.TranslateModule),
   }
 
 ];

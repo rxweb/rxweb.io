@@ -12,7 +12,7 @@ const RXWEB_ROUTER_ROUTES: Routes = [
     },
     {
         path: 'router',
-        loadChildren: 'src/app/components/router/router.module#RouteModule',
+        loadChildren: () => import('src/app/components/router/router.module').then(m => m.RouteModule),
     }
 
 ];

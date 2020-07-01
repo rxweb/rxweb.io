@@ -4,55 +4,55 @@ import { Routes, RouterModule } from '@angular/router';
 const CONTROLS_ROUTES: Routes = [
 {
 	path:'textbox',
-	loadChildren: './textbox/textbox.module#TextboxModule',
+	loadChildren: () => import('./textbox/textbox.module').then(m => m.TextboxModule),
 },
 {
 	path:'color',
-	loadChildren: './color/color.module#ColorModule',
+	loadChildren: () => import('./color/color.module').then(m => m.ColorModule),
 },
 {
 	path:'checkbox',
-	loadChildren: './checkbox/checkbox.module#CheckboxModule',
+	loadChildren: () => import('./checkbox/checkbox.module').then(m => m.CheckboxModule),
 },
 {
 	path:'dynamicdate',
-	loadChildren: './dynamicdate/dynamicdate.module#DynamicdateModule',
+	loadChildren: () => import('./dynamicdate/dynamicdate.module').then(m => m.DynamicdateModule),
 },
 {
 	path:'dropdown',
-	loadChildren: './dropdown/dropdown.module#DropdownModule',
+	loadChildren: () => import('./dropdown/dropdown.module').then(m => m.DropdownModule),
 },
 {
 	path:'dynamicemail',
-	loadChildren: './dynamicemail/dynamicemail.module#DynamicemailModule',
+	loadChildren: () => import('./dynamicemail/dynamicemail.module').then(m => m.DynamicemailModule),
 },
 {
 	path:'dynamicfile',
-	loadChildren: './dynamicfile/dynamicfile.module#DynamicfileModule',
+	loadChildren: () => import('./dynamicfile/dynamicfile.module').then(m => m.DynamicfileModule),
 },
 {
 	path:'dynamicpassword',
-	loadChildren: './dynamicpassword/dynamicpassword.module#DynamicpasswordModule',
+	loadChildren: () => import('./dynamicpassword/dynamicpassword.module').then(m => m.DynamicpasswordModule),
 },
 {
 	path:'radio',
-	loadChildren: './radio/radio.module#RadioModule',
+	loadChildren: () => import('./radio/radio.module').then(m => m.RadioModule),
 },
 {
 	path:'dynamicrange',
-	loadChildren: './dynamicrange/dynamicrange.module#DynamicrangeModule',
+	loadChildren: () => import('./dynamicrange/dynamicrange.module').then(m => m.DynamicrangeModule),
 },
 {
 	path:'textarea',
-	loadChildren: './textarea/textarea.module#TextareaModule',
+	loadChildren: () => import('./textarea/textarea.module').then(m => m.TextareaModule),
 },
 {
 	path:'dynamicurl',
-	loadChildren: './dynamicurl/dynamicurl.module#DynamicurlModule',
+	loadChildren: () => import('./dynamicurl/dynamicurl.module').then(m => m.DynamicurlModule),
 },
 {
 	path:'color',
-	loadChildren: './color/color.module#ColorModule',
+	loadChildren: () => import('./color/color.module').then(m => m.ColorModule),
 },
 ];
 export const CONTROLS_ROUTING = RouterModule.forChild(CONTROLS_ROUTES);

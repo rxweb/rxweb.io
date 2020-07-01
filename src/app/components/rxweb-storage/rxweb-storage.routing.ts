@@ -10,7 +10,7 @@ const RXWEB_STORAGE_ROUTES: Routes = [
     },
     {
         path: 'storage',
-        loadChildren: 'src/app/components/storage/storage.module#StorageModule',
+        loadChildren: () => import('src/app/components/storage/storage.module').then(m => m.StorageModule),
     }
 
 ];

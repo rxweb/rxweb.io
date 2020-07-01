@@ -10,7 +10,7 @@ const RXWEB_GENERICS_ROUTES: Routes = [
 },
 {
     path: 'generics',
-    loadChildren: 'src/app/components/generics/generics.module#GenericsModule',
+    loadChildren: () => import('src/app/components/generics/generics.module').then(m => m.GenericsModule),
   }
 
 ];

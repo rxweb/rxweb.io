@@ -4,11 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 const ADVANCE_FORM_DESIGN_ROUTES: Routes = [
 {
 	path:'nestedformarray',
-	loadChildren: './nestedformarray/nestedformarray.module#NestedformarrayModule',
+	loadChildren: () => import('./nestedformarray/nestedformarray.module').then(m => m.NestedformarrayModule),
 },
 {
 	path:'nestedformgroup',
-	loadChildren: './nestedformgroup/nestedformgroup.module#NestedformgroupModule',
+	loadChildren: () => import('./nestedformgroup/nestedformgroup.module').then(m => m.NestedformgroupModule),
 },
 ];
 export const ADVANCE_FORM_DESIGN_ROUTING = RouterModule.forChild(ADVANCE_FORM_DESIGN_ROUTES);

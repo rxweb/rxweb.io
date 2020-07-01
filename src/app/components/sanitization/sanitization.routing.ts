@@ -4,67 +4,67 @@ import { Routes, RouterModule } from '@angular/router';
 const SANITIZATION_ROUTES: Routes = [
 {
 	path:'blacklist',
-	loadChildren: './blacklist/blacklist.module#BlacklistModule',
+	loadChildren: () => import('./blacklist/blacklist.module').then(m => m.BlacklistModule),
 },
 {
 	path:'ltrim',
-	loadChildren: './ltrim/ltrim.module#LtrimModule',
+	loadChildren: () => import('./ltrim/ltrim.module').then(m => m.LtrimModule),
 },
 {
 	path:'rtrim',
-	loadChildren: './rtrim/rtrim.module#RtrimModule',
+	loadChildren: () => import('./rtrim/rtrim.module').then(m => m.RtrimModule),
 },
 {
 	path:'stripLow',
-	loadChildren: './stripLow/strip-low.module#StripLowModule',
+	loadChildren: () => import('./stripLow/strip-low.module').then(m => m.StripLowModule),
 },
 {
 	path:'toBoolean',
-	loadChildren: './toBoolean/to-boolean.module#ToBooleanModule',
+	loadChildren: () => import('./toBoolean/to-boolean.module').then(m => m.ToBooleanModule),
 },
 {
 	path:'toDate',
-	loadChildren: './toDate/to-date.module#ToDateModule',
+	loadChildren: () => import('./toDate/to-date.module').then(m => m.ToDateModule),
 },
 {
 	path:'toDouble',
-	loadChildren: './toDouble/to-double.module#ToDoubleModule',
+	loadChildren: () => import('./toDouble/to-double.module').then(m => m.ToDoubleModule),
 },
 {
 	path:'toFloat',
-	loadChildren: './toFloat/to-float.module#ToFloatModule',
+	loadChildren: () => import('./toFloat/to-float.module').then(m => m.ToFloatModule),
 },
 {
 	path:'toInt',
-	loadChildren: './toInt/to-int.module#ToIntModule',
+	loadChildren: () => import('./toInt/to-int.module').then(m => m.ToIntModule),
 },
 {
 	path:'toString',
-	loadChildren: './toString/to-string.module#ToStringModule',
+	loadChildren: () => import('./toString/to-string.module').then(m => m.ToStringModule),
 },
 {
 	path:'trim',
-	loadChildren: './trim/trim.module#TrimModule',
+	loadChildren: () => import('./trim/trim.module').then(m => m.TrimModule),
 },
 {
 	path:'whitelist',
-	loadChildren: './whitelist/whitelist.module#WhitelistModule',
+	loadChildren: () => import('./whitelist/whitelist.module').then(m => m.WhitelistModule),
 },
 {
 	path:'escape',
-	loadChildren: './escape/escape.module#EscapeModule',
+	loadChildren: () => import('./escape/escape.module').then(m => m.EscapeModule),
 },
 {
 	path:'sanitize',
-	loadChildren: './sanitize/sanitize.module#SanitizeModule',
+	loadChildren: () => import('./sanitize/sanitize.module').then(m => m.SanitizeModule),
 },
 {
 	path:'prefix',
-	loadChildren: './prefix/prefix.module#PrefixModule',
+	loadChildren: () => import('./prefix/prefix.module').then(m => m.PrefixModule),
 },
 {
 	path:'suffix',
-	loadChildren: './suffix/suffix.module#SuffixModule',
+	loadChildren: () => import('./suffix/suffix.module').then(m => m.SuffixModule),
 },
 ];
 export const SANITIZATION_ROUTING = RouterModule.forChild(SANITIZATION_ROUTES);

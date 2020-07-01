@@ -11,7 +11,7 @@ const RXWEB_LOCALIZATION_ROUTES: Routes = [
     },
     {
         path: 'localization',
-        loadChildren: 'src/app/components/localization/localization.module#LocalizationModule',
+        loadChildren: () => import('src/app/components/localization/localization.module').then(m => m.LocalizationModule),
     }
 
 ];

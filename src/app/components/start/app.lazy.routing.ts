@@ -71,95 +71,95 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path: 'how-to',
-    loadChildren: 'src/app/components/howto/howto.module#HowtoModule',
+    loadChildren: () => import('src/app/components/howto/howto.module').then(m => m.HowtoModule),
   },
   {
     path: 'advance-form-validation',
-    loadChildren: 'src/app/components/advance-form-validation/advance-form-validation.module#AdvanceFormValidationModule',
+    loadChildren: () => import('src/app/components/advance-form-validation/advance-form-validation.module').then(m => m.AdvanceFormValidationModule),
   },
   {
     path: 'form-validations',
-    loadChildren: 'src/app/components/form-validation/form-validation.module#FormValidationModule',
+    loadChildren: () => import('src/app/components/form-validation/form-validation.module').then(m => m.FormValidationModule),
   },
   {
     path: 'vue/form-validations',
-    loadChildren: 'src/app/components/form-validation/form-validation.module#FormValidationModule',
+    loadChildren: () => import('src/app/components/form-validation/form-validation.module').then(m => m.FormValidationModule),
   },
   {
     path: 'rxweb-http',
-    loadChildren: 'src/app/components/rxweb-http/rxweb-http.module#RxwebHttpModule',
+    loadChildren: () => import('src/app/components/rxweb-http/rxweb-http.module').then(m => m.RxwebHttpModule),
   },
   {
     path: 'rxweb-localization',
-    loadChildren: 'src/app/components/rxweb-localization/rxweb-localization.module#RxwebLocalizationModule',
+    loadChildren: () => import('src/app/components/rxweb-localization/rxweb-localization.module').then(m => m.RxwebLocalizationModule),
   },
   {
     path: 'decorators',
-    loadChildren: 'src/app/components/decorators/decorators.module#DecoratorsModule',
+    loadChildren: () => import('src/app/components/decorators/decorators.module').then(m => m.DecoratorsModule),
   },
   {
     path: 'community',
-    loadChildren: 'src/app/components/community/community.module#CommunityModule',
+    loadChildren: () => import('src/app/components/community/community.module').then(m => m.CommunityModule),
   },
   {
     path: 'rx-web-core',
-    loadChildren: 'src/app/components/htmlpages/html.page.module#HtmlPageModule',
+    loadChildren: () => import('src/app/components/htmlpages/html.page.module').then(m => m.HtmlPageModule),
   },
   {
     path: 'form-builder',
-    loadChildren: 'src/app/components/form-builder/form-builder-shared.module#FormBuilderSharedModule',
+    loadChildren: () => import('src/app/components/form-builder/form-builder-shared.module').then(m => m.FormBuilderSharedModule),
   },
   {
     path: 'dynamic-form-builder',
-    loadChildren: 'src/app/components/dynamic-form-builder/dynamic-form-builder.module#DynamicFormBuilderModule',
+    loadChildren: () => import('src/app/components/dynamic-form-builder/dynamic-form-builder.module').then(m => m.DynamicFormBuilderModule),
   },
   {
     path: 'api/RxFormBuilder',
-    loadChildren: 'src/app/components/api/RxFormBuilder/rx-form-builder.module#RxFormBuilderModule',
+    loadChildren: () => import('src/app/components/api/RxFormBuilder/rx-form-builder.module').then(m => m.RxFormBuilderModule),
   },
   {
     path: 'api/RxFormGroup',
-    loadChildren: 'src/app/components/api/RxFormGroup/rx-form-group.module#RxFormGroupModule',
+    loadChildren: () => import('src/app/components/api/RxFormGroup/rx-form-group.module').then(m => m.RxFormGroupModule),
   },
   {
     path: 'api/FormBuilderConfiguration',
-    loadChildren: 'src/app/components/api/FormBuilderConfiguration/form-builder-configuration.module#FormBuilderConfigurationModule',
+    loadChildren: () => import('src/app/components/api/FormBuilderConfiguration/form-builder-configuration.module').then(m => m.FormBuilderConfigurationModule),
   },
   {
     path: 'sanitization',
-    loadChildren: 'src/app/components/sanitization/sanitization.module#SanitizationModule',
+    loadChildren: () => import('src/app/components/sanitization/sanitization.module').then(m => m.SanitizationModule),
   },
   {
     path: 'reactive-dynamic-forms',
-    loadChildren: 'src/app/components/reactive-dynamic-forms/reactive-dynamic-forms.module#ReactiveDynamicFormsModule',
+    loadChildren: () => import('src/app/components/reactive-dynamic-forms/reactive-dynamic-forms.module').then(m => m.ReactiveDynamicFormsModule),
   },
   {
     path: 'rxweb-generics',
-    loadChildren: 'src/app/components/rxweb-generics/rxweb-generics.module#RxwebGenericsModule',
+    loadChildren: () => import('src/app/components/rxweb-generics/rxweb-generics.module').then(m => m.RxwebGenericsModule),
   },
   {
     path: 'rxweb-router',
-    loadChildren: 'src/app/components/rxweb-router/rxweb-router.module#RxwebRouterModule',
+    loadChildren: () => import('src/app/components/rxweb-router/rxweb-router.module').then(m => m.RxwebRouterModule),
   },
   {
     path: 'rxweb-sanitizers',
-    loadChildren: 'src/app/components/rxweb-sanitizers/rxweb-sanitizers.module#RxwebSanitizersModule',
+    loadChildren: () => import('src/app/components/rxweb-sanitizers/rxweb-sanitizers.module').then(m => m.RxwebSanitizersModule),
   },
   {
     path: 'rxweb-storage',
-    loadChildren: 'src/app/components/rxweb-storage/rxweb-storage.module#RxwebStorageModule',
+    loadChildren: () => import('src/app/components/rxweb-storage/rxweb-storage.module').then(m => m.RxwebStorageModule),
   },
   {
     path: 'rxweb-translate',
-    loadChildren: 'src/app/components/rxweb-translate/rxweb-translate.module#RxwebTranslateModule',
+    loadChildren: () => import('src/app/components/rxweb-translate/rxweb-translate.module').then(m => m.RxwebTranslateModule),
   },
   {
     path: 'ngx-translate-extension',
-    loadChildren: 'src/app/components/ngx-translate-extension/ngx-translate-extension.module#NgxTranslateExtensionModule',
+    loadChildren: () => import('src/app/components/ngx-translate-extension/ngx-translate-extension.module').then(m => m.NgxTranslateExtensionModule),
   },
   {
     path: 'strongly-typed',
-    loadChildren: 'src/app/components/strongly-typed/strongly-typed.module#StronglyTypedAngularModule',
+    loadChildren: () => import('src/app/components/strongly-typed/strongly-typed.module').then(m => m.StronglyTypedAngularModule),
   },
   {
     path: 'coming-soon',

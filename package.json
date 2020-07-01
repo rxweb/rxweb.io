@@ -58,17 +58,18 @@
     "prismjs": "^1.20.0",
     "rxjs": "^6.5.5",
     "rxjs-compat": "^6.5.5",
+    "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1000.0",
+    "@angular-devkit/build-angular": "~0.1000.0",
     "@angular/cli": "^10.0.0",
     "@angular/compiler-cli": "^10.0.2",
     "@angular/language-service": "^10.0.2",
     "@types/jasmine": "~3.5.11",
     "@types/jasminewd2": "~2.0.8",
-    "@types/node": "~14.0.14",
-    "codelyzer": "~5.2.2",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.2",
     "karma": "~5.1.0",
@@ -78,7 +79,7 @@
     "karma-jasmine-html-reporter": "^1.5.4",
     "protractor": "^7.0.0",
     "ts-node": "~8.10.2",
-    "tslint": "~6.1.2",
+    "tslint": "~6.1.0",
     "typescript": "~3.9.5",
     "webpack-bundle-analyzer": "^3.8.0"
   }

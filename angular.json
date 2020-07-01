@@ -13,17 +13,20 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
+              "src/ngsw-worker.js",
               "src/favicon.ico",
               "src/assets",
               "src/AspNetCore-assets",
               "src/AspNetCore",
-              "src/manifest.json"
+              "src/manifest.json",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css"
@@ -41,6 +44,9 @@
             ]
           },
           "configurations": {
+            "local":{
+              "deployUrl": "http://localhost:4200/dist/"
+            },
             "production": {
               "serviceWorker": true,
               "fileReplacements": [
@@ -63,8 +69,13 @@
                   "type": "initial",
                   "maximumWarning": "5mb",
                   "maximumError": "10mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
-              ]
+              ],
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
@@ -101,7 +112,8 @@
               "src/assets",
               "src/AspNetCore-assets",
               "src/AspNetCore",
-              "src/manifest.json"
+              "src/manifest.json",
+              "src/manifest.webmanifest"
             ]
           }
         },
