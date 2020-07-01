@@ -85,7 +85,7 @@ registerLocaleData(localePt)
      ArticleComponent
   ],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
-    HighlightModule, ClipboardModule, ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }), NgAisModule,
+    HighlightModule, ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule,
     BrowserAnimationsModule,
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,

@@ -54,7 +54,7 @@
     "jquery": "^3.5.1",
     "json-server": "^0.16.1",
     "ngx-clipboard": "^13.0.1",
-    "ngx-highlightjs": "^4.1.0-beta",
+    "ngx-highlightjs": "^2.1.4",
     "prismjs": "^1.20.0",
     "rxjs": "^6.5.5",
     "rxjs-compat": "^6.5.5",
