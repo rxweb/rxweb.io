@@ -7,4 +7,4 @@ const FORMGROUP_CLASS_INSTANCE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const FORMGROUP_CLASS_INSTANCE_ROUTING: ModuleWithProviders = RouterModule.forChild(FORMGROUP_CLASS_INSTANCE_ROUTES);
+export const FORMGROUP_CLASS_INSTANCE_ROUTING = RouterModule.forChild(FORMGROUP_CLASS_INSTANCE_ROUTES);
