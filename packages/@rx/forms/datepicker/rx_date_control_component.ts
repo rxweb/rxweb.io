@@ -12,7 +12,7 @@ import {
 
 
 
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 import { Subscription, Observable } from "rxjs/Rx";
 import { NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl } from "@angular/forms"

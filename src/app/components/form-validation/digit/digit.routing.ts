@@ -12,4 +12,4 @@ const DIGIT_ROUTES: Routes = [
 }
 
 ];
-export const DIGIT_ROUTING: ModuleWithProviders = RouterModule.forChild(DIGIT_ROUTES);
+export const DIGIT_ROUTING = RouterModule.forChild(DIGIT_ROUTES);

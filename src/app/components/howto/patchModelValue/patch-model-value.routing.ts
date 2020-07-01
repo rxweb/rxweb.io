@@ -12,4 +12,4 @@ const PATCH_MODEL_VALUE_ROUTES: Routes = [
 }
 
 ];
-export const PATCH_MODEL_VALUE_ROUTING: ModuleWithProviders = RouterModule.forChild(PATCH_MODEL_VALUE_ROUTES);
+export const PATCH_MODEL_VALUE_ROUTING = RouterModule.forChild(PATCH_MODEL_VALUE_ROUTES);

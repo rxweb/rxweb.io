@@ -12,4 +12,4 @@ const RX_FORM_BUILDER_ROUTES: Routes = [
 }
 
 ];
-export const RX_FORM_BUILDER_ROUTING: ModuleWithProviders = RouterModule.forChild(RX_FORM_BUILDER_ROUTES);
+export const RX_FORM_BUILDER_ROUTING = RouterModule.forChild(RX_FORM_BUILDER_ROUTES);

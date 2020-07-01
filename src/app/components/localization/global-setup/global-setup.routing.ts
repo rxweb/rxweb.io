@@ -7,4 +7,4 @@ const GLOBAL_SETUP_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const GLOBAL_SETUP_ROUTING: ModuleWithProviders = RouterModule.forChild(GLOBAL_SETUP_ROUTES);
+export const GLOBAL_SETUP_ROUTING = RouterModule.forChild(GLOBAL_SETUP_ROUTES);

@@ -7,4 +7,4 @@ const CONDITIONALHIDE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const CONDITIONALHIDE_ROUTING: ModuleWithProviders = RouterModule.forChild(CONDITIONALHIDE_ROUTES);
+export const CONDITIONALHIDE_ROUTING = RouterModule.forChild(CONDITIONALHIDE_ROUTES);

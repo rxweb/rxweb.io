@@ -14,4 +14,4 @@ const RXWEB_SANITIZERS_ROUTES: Routes = [
     }
 
 ];
-export const RXWEB_SANITIZERS_ROUTING: ModuleWithProviders = RouterModule.forChild(RXWEB_SANITIZERS_ROUTES);
+export const RXWEB_SANITIZERS_ROUTING = RouterModule.forChild(RXWEB_SANITIZERS_ROUTES);

@@ -12,4 +12,4 @@ const MAX_NUMBER_ROUTES: Routes = [
 }
 
 ];
-export const MAX_NUMBER_ROUTING: ModuleWithProviders = RouterModule.forChild(MAX_NUMBER_ROUTES);
+export const MAX_NUMBER_ROUTING = RouterModule.forChild(MAX_NUMBER_ROUTES);

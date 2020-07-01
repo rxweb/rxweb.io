@@ -7,4 +7,4 @@ const DYNAMIC_FORM_CONFIGURATION_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DYNAMIC_FORM_CONFIGURATION_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMIC_FORM_CONFIGURATION_ROUTES);
+export const DYNAMIC_FORM_CONFIGURATION_ROUTING = RouterModule.forChild(DYNAMIC_FORM_CONFIGURATION_ROUTES);

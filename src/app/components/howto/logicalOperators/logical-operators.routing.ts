@@ -12,4 +12,4 @@ const LOGICAL_OPERATORS_ROUTES: Routes = [
 }
 
 ];
-export const LOGICAL_OPERATORS_ROUTING: ModuleWithProviders = RouterModule.forChild(LOGICAL_OPERATORS_ROUTES);
+export const LOGICAL_OPERATORS_ROUTING = RouterModule.forChild(LOGICAL_OPERATORS_ROUTES);

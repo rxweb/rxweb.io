@@ -7,4 +7,4 @@ const ADVANCE_FORM_VALIDATION_ROUTES: Routes = [
 	loadChildren: './conditionalValidation/conditional-validation.module#ConditionalValidationModule',
 },
 ];
-export const ADVANCE_FORM_VALIDATION_ROUTING: ModuleWithProviders = RouterModule.forChild(ADVANCE_FORM_VALIDATION_ROUTES);
+export const ADVANCE_FORM_VALIDATION_ROUTING = RouterModule.forChild(ADVANCE_FORM_VALIDATION_ROUTES);

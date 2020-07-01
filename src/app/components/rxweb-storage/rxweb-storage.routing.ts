@@ -14,4 +14,4 @@ const RXWEB_STORAGE_ROUTES: Routes = [
     }
 
 ];
-export const RXWEB_STORAGE_ROUTING: ModuleWithProviders = RouterModule.forChild(RXWEB_STORAGE_ROUTES);
+export const RXWEB_STORAGE_ROUTING = RouterModule.forChild(RXWEB_STORAGE_ROUTES);

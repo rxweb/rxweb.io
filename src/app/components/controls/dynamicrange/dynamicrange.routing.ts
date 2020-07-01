@@ -7,4 +7,4 @@ const DYNAMICRANGE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DYNAMICRANGE_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMICRANGE_ROUTES);
+export const DYNAMICRANGE_ROUTING = RouterModule.forChild(DYNAMICRANGE_ROUTES);

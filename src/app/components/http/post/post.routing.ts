@@ -7,4 +7,4 @@ const POST_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const POST_ROUTING: ModuleWithProviders = RouterModule.forChild(POST_ROUTES);
+export const POST_ROUTING = RouterModule.forChild(POST_ROUTES);

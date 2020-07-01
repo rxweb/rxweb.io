@@ -1,4 +1,4 @@
-import { ReflectiveInjector, Inject } from "@angular/core";
+import { ReflectiveInjector, Inject, Injectable } from "@angular/core";
 import { RequestOptions, Headers } from "@angular/http";
 import { user } from "@rx/security";
 import { RequestHeaders } from "@rx/http";
@@ -8,6 +8,8 @@ import { AuthorizeApi } from "@rx/security";
 import { requestCollection, Uri } from './request-uri';
 import { ApplicationPage } from "@rx/core";
 import { ActivatedRoute, Router } from '@angular/router';
+
+@Injectable()
 export class ApplicationRequestHeaders implements RequestHeaders {
     storage: RxStorage;
     headers: Headers;

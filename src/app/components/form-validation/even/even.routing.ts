@@ -12,4 +12,4 @@ const EVEN_ROUTES: Routes = [
 }
 
 ];
-export const EVEN_ROUTING: ModuleWithProviders = RouterModule.forChild(EVEN_ROUTES);
+export const EVEN_ROUTING = RouterModule.forChild(EVEN_ROUTES);

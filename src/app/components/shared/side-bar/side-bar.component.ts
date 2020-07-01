@@ -3,12 +3,6 @@ import { Router, ActivatedRoute, UrlSegment, NavigationEnd } from '@angular/rout
 import { HttpClient } from "@angular/common/http";
 import { ApplicationBroadcaster } from "@rx/core";
 import { environment } from 'src/environments/environment';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { element } from '@angular/core/src/render3';
-import { identifierModuleUrl } from '@angular/compiler';
-import { isArray } from 'util';
-import { ignoreElements } from 'rxjs-compat/operator/ignoreElements';
-
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',

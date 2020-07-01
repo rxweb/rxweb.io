@@ -15,4 +15,4 @@ const RXWEB_LOCALIZATION_ROUTES: Routes = [
     }
 
 ];
-export const RXWEB_LOCALIZATION_ROUTING: ModuleWithProviders = RouterModule.forChild(RXWEB_LOCALIZATION_ROUTES);
+export const RXWEB_LOCALIZATION_ROUTING = RouterModule.forChild(RXWEB_LOCALIZATION_ROUTES);

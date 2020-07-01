@@ -12,4 +12,4 @@ const RESET_FORM_ROUTES: Routes = [
 }
 
 ];
-export const RESET_FORM_ROUTING: ModuleWithProviders = RouterModule.forChild(RESET_FORM_ROUTES);
+export const RESET_FORM_ROUTING = RouterModule.forChild(RESET_FORM_ROUTES);

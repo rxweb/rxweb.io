@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, AfterContentInit, OnChanges, Renderer, ElementRef, forwardRef, OnDestroy, ViewChild, Inject } from "@angular/core";
+import { Component, Input, Output, EventEmitter, AfterContentInit, OnChanges, Renderer2, ElementRef, forwardRef, OnDestroy, ViewChild, Inject } from "@angular/core";
 import { NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl } from "@angular/forms"
 
 import { ApplicationConfiguration } from '../../core';
@@ -50,7 +50,7 @@ export class RxSelectComponent extends Multilingual implements AfterContentInit,
   @Input() controlTabIndex: number;
   selectConfiguration: { [key: string]: any };
   selectId: number;
-  constructor(public elementRef: ElementRef, public renderer: Renderer, public http: RxHttp) {
+  constructor(public elementRef: ElementRef, public renderer: Renderer2, public http: RxHttp) {
     super();
     this.mainSource = new Array<SelectModel>();
     this.dropSource = new Array<SelectModel>();
@@ -106,7 +106,7 @@ export class RxSelectComponent extends Multilingual implements AfterContentInit,
       this.setMainSource(this.userSource);
     this.setValue();
     if (this.focus && this.selectSearch)
-      this.renderer.invokeElementMethod(this.selectSearch.nativeElement, "focus", []);
+      this.renderer.selectRootElement(this.selectSearch.nativeElement, true);
     if (this.maxLength && this.selectSearch)
       this.selectSearch.nativeElement.maxLength = this.maxLength;
   }
@@ -413,7 +413,7 @@ export class RxSelectComponent extends Multilingual implements AfterContentInit,
 
   private clearValue(element: any): void {
     element.value = "";
-    this.renderer.invokeElementMethod(element, "focus", []);
+    this.renderer.selectRootElement(element, true);
   }
 
   private clearActiveTabClass() {

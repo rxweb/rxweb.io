@@ -2,7 +2,6 @@ import { OnInit, Component, Input } from '@angular/core';
 import { ApplicationBroadcaster } from '@rx/core';
 import { Http } from '@angular/http';
 import { Router } from '@angular/router';
-import { element } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-link-items',

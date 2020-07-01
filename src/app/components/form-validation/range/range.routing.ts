@@ -12,4 +12,4 @@ const RANGE_ROUTES: Routes = [
 }
 
 ];
-export const RANGE_ROUTING: ModuleWithProviders = RouterModule.forChild(RANGE_ROUTES);
+export const RANGE_ROUTING = RouterModule.forChild(RANGE_ROUTES);

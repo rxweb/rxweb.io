@@ -12,4 +12,4 @@ const PORT_ROUTES: Routes = [
 }
 
 ];
-export const PORT_ROUTING: ModuleWithProviders = RouterModule.forChild(PORT_ROUTES);
+export const PORT_ROUTING = RouterModule.forChild(PORT_ROUTES);

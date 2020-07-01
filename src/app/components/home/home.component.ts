@@ -6,8 +6,6 @@ import { RxwebValidators } from "@rxweb/reactive-form-validators"
 import { User } from "./model/user.model";
 import { FormBuilderConfiguration, RxFormBuilder } from "@rxweb/reactive-form-validators";
 import { ApplicationBroadcaster } from "@rx/core";
-import { environment } from 'src/environments/environment';
-import { element } from '@angular/core/src/render3';
 
 
 @Component({

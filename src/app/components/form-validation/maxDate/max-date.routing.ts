@@ -12,4 +12,4 @@ const MAX_DATE_ROUTES: Routes = [
 }
 
 ];
-export const MAX_DATE_ROUTING: ModuleWithProviders = RouterModule.forChild(MAX_DATE_ROUTES);
+export const MAX_DATE_ROUTING = RouterModule.forChild(MAX_DATE_ROUTES);

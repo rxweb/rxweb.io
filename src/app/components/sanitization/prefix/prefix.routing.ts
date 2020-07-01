@@ -12,4 +12,4 @@ const PREFIX_ROUTES: Routes = [
 }
 
 ];
-export const PREFIX_ROUTING: ModuleWithProviders = RouterModule.forChild(PREFIX_ROUTES);
+export const PREFIX_ROUTING = RouterModule.forChild(PREFIX_ROUTES);

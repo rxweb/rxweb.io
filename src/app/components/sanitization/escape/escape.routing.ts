@@ -12,4 +12,4 @@ const ESCAPE_ROUTES: Routes = [
 }
 
 ];
-export const ESCAPE_ROUTING: ModuleWithProviders = RouterModule.forChild(ESCAPE_ROUTES);
+export const ESCAPE_ROUTING = RouterModule.forChild(ESCAPE_ROUTES);

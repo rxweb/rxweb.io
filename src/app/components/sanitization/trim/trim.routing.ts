@@ -12,4 +12,4 @@ const TRIM_ROUTES: Routes = [
 }
 
 ];
-export const TRIM_ROUTING: ModuleWithProviders = RouterModule.forChild(TRIM_ROUTES);
+export const TRIM_ROUTING = RouterModule.forChild(TRIM_ROUTES);

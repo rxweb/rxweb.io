@@ -19,4 +19,4 @@ const ROUTER_ROUTES: Routes = [
 	loadChildren: './routerModule/router-module.module#RouterModuleModule',
 }
 ];
-export const ROUTER_ROUTING: ModuleWithProviders = RouterModule.forChild(ROUTER_ROUTES);
+export const ROUTER_ROUTING = RouterModule.forChild(ROUTER_ROUTES);

@@ -12,4 +12,4 @@ const STRIP_LOW_ROUTES: Routes = [
 }
 
 ];
-export const STRIP_LOW_ROUTING: ModuleWithProviders = RouterModule.forChild(STRIP_LOW_ROUTES);
+export const STRIP_LOW_ROUTING = RouterModule.forChild(STRIP_LOW_ROUTES);

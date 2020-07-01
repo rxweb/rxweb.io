@@ -263,4 +263,4 @@ const FORM_VALIDATION_ROUTES: Routes = [
 	loadChildren: './url/url.module#UrlModule',
 },
 ];
-export const FORM_VALIDATION_ROUTING: ModuleWithProviders = RouterModule.forChild(FORM_VALIDATION_ROUTES);
+export const FORM_VALIDATION_ROUTING = RouterModule.forChild(FORM_VALIDATION_ROUTES);

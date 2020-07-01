@@ -12,4 +12,4 @@ const CONTAINS_ROUTES: Routes = [
 }
 
 ];
-export const CONTAINS_ROUTING: ModuleWithProviders = RouterModule.forChild(CONTAINS_ROUTES);
+export const CONTAINS_ROUTING = RouterModule.forChild(CONTAINS_ROUTES);

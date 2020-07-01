@@ -7,4 +7,4 @@ const CHECKBOX_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const CHECKBOX_ROUTING: ModuleWithProviders = RouterModule.forChild(CHECKBOX_ROUTES);
+export const CHECKBOX_ROUTING = RouterModule.forChild(CHECKBOX_ROUTES);

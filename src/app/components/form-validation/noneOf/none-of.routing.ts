@@ -12,4 +12,4 @@ const NONE_OF_ROUTES: Routes = [
 }
 
 ];
-export const NONE_OF_ROUTING: ModuleWithProviders = RouterModule.forChild(NONE_OF_ROUTES);
+export const NONE_OF_ROUTING = RouterModule.forChild(NONE_OF_ROUTES);

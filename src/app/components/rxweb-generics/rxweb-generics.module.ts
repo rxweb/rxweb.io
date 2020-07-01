@@ -16,7 +16,7 @@ import { TopBarSharedModule } from '../shared/top-bar/top-bar-shared.module';
 
 
 @NgModule({
-  imports: [RXWEB_GENERICS_ROUTING,CommonSharedModule,TopBarSharedModule,  HighlightModule.forRoot({ theme: 'default' }), ClipboardModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
+  imports: [RXWEB_GENERICS_ROUTING,CommonSharedModule,TopBarSharedModule,  HighlightModule, ClipboardModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
   declarations: [GenericsGettingStartedComponent],
   providers:[{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
  exports:      [ RouterModule ]

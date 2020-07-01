@@ -7,4 +7,4 @@ const PAGE_LEVEL_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const PAGE_LEVEL_ROUTING: ModuleWithProviders = RouterModule.forChild(PAGE_LEVEL_ROUTES);
+export const PAGE_LEVEL_ROUTING = RouterModule.forChild(PAGE_LEVEL_ROUTES);

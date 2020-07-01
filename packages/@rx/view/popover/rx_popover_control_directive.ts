@@ -5,7 +5,7 @@ import {
     Inject,
     Directive,
     OnInit, OnDestroy, ComponentFactoryResolver, ViewContainerRef } from "@angular/core"
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 import {OverlayViewHost, OverlayPositionHost, OffSetModel} from "../../core/view/overlay_view_host";
 import {ComponentView, ComponentType} from "../../core/view/view";

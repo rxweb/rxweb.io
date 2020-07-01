@@ -12,4 +12,4 @@ const CREDIT_CARD_ROUTES: Routes = [
 }
 
 ];
-export const CREDIT_CARD_ROUTING: ModuleWithProviders = RouterModule.forChild(CREDIT_CARD_ROUTES);
+export const CREDIT_CARD_ROUTING = RouterModule.forChild(CREDIT_CARD_ROUTES);

@@ -12,4 +12,4 @@ const DATE_ROUTES: Routes = [
 }
 
 ];
-export const DATE_ROUTING: ModuleWithProviders = RouterModule.forChild(DATE_ROUTES);
+export const DATE_ROUTING = RouterModule.forChild(DATE_ROUTES);

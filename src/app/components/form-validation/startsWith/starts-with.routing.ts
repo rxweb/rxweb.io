@@ -12,4 +12,4 @@ const STARTS_WITH_ROUTES: Routes = [
 }
 
 ];
-export const STARTS_WITH_ROUTING: ModuleWithProviders = RouterModule.forChild(STARTS_WITH_ROUTES);
+export const STARTS_WITH_ROUTING = RouterModule.forChild(STARTS_WITH_ROUTES);

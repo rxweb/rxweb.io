@@ -12,4 +12,4 @@ const FILE_SIZE_ROUTES: Routes = [
 }
 
 ];
-export const FILE_SIZE_ROUTING: ModuleWithProviders = RouterModule.forChild(FILE_SIZE_ROUTES);
+export const FILE_SIZE_ROUTING = RouterModule.forChild(FILE_SIZE_ROUTES);

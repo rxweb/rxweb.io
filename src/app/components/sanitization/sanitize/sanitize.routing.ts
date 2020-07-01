@@ -12,4 +12,4 @@ const SANITIZE_ROUTES: Routes = [
 }
 
 ];
-export const SANITIZE_ROUTING: ModuleWithProviders = RouterModule.forChild(SANITIZE_ROUTES);
+export const SANITIZE_ROUTING = RouterModule.forChild(SANITIZE_ROUTES);

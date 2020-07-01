@@ -15,4 +15,4 @@ const API_ROUTES: Routes = [
 	loadChildren: './RxFormGroup/rx-form-group.module#RxFormGroupModule',
 },
 ];
-export const API_ROUTING: ModuleWithProviders = RouterModule.forChild(API_ROUTES);
+export const API_ROUTING = RouterModule.forChild(API_ROUTES);

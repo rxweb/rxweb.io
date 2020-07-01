@@ -15,4 +15,4 @@ const STORAGE_ROUTES: Routes = [
 	loadChildren: './storage-methods/storage-methods.module#StorageMethodsModule',
 }
 ];
-export const STORAGE_ROUTING: ModuleWithProviders = RouterModule.forChild(STORAGE_ROUTES);
+export const STORAGE_ROUTING = RouterModule.forChild(STORAGE_ROUTES);

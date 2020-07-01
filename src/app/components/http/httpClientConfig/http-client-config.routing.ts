@@ -7,4 +7,4 @@ const HTTP_CLIENT_CONFIG_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const HTTP_CLIENT_CONFIG_ROUTING: ModuleWithProviders = RouterModule.forChild(HTTP_CLIENT_CONFIG_ROUTES);
+export const HTTP_CLIENT_CONFIG_ROUTING = RouterModule.forChild(HTTP_CLIENT_CONFIG_ROUTES);

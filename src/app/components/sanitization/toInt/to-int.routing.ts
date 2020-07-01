@@ -12,4 +12,4 @@ const TO_INT_ROUTES: Routes = [
 }
 
 ];
-export const TO_INT_ROUTING: ModuleWithProviders = RouterModule.forChild(TO_INT_ROUTES);
+export const TO_INT_ROUTING = RouterModule.forChild(TO_INT_ROUTES);

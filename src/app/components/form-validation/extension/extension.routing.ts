@@ -12,4 +12,4 @@ const EXTENSION_ROUTES: Routes = [
 }
 
 ];
-export const EXTENSION_ROUTING: ModuleWithProviders = RouterModule.forChild(EXTENSION_ROUTES);
+export const EXTENSION_ROUTING = RouterModule.forChild(EXTENSION_ROUTES);

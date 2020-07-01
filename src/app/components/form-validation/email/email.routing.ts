@@ -12,4 +12,4 @@ const EMAIL_ROUTES: Routes = [
 }
 
 ];
-export const EMAIL_ROUTING: ModuleWithProviders = RouterModule.forChild(EMAIL_ROUTES);
+export const EMAIL_ROUTING = RouterModule.forChild(EMAIL_ROUTES);

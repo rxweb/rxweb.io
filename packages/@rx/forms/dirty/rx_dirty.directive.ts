@@ -1,4 +1,4 @@
-import { Directive, forwardRef, ElementRef, Renderer, OnChanges, Input, HostListener, AfterViewInit } from "@angular/core";
+import { Directive, forwardRef, ElementRef, Renderer2, OnChanges, Input, HostListener, AfterViewInit } from "@angular/core";
 import { NG_VALUE_ACCESSOR, ControlValueAccessor, FormGroup } from "@angular/forms";
 import { DecimalPipe } from "@angular/common";
 

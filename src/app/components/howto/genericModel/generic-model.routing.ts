@@ -12,4 +12,4 @@ const GENERIC_MODEL_ROUTES: Routes = [
 }
 
 ];
-export const GENERIC_MODEL_ROUTING: ModuleWithProviders = RouterModule.forChild(GENERIC_MODEL_ROUTES);
+export const GENERIC_MODEL_ROUTING = RouterModule.forChild(GENERIC_MODEL_ROUTES);

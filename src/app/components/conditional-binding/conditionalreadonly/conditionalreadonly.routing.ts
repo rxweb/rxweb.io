@@ -7,4 +7,4 @@ const CONDITIONALREADONLY_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const CONDITIONALREADONLY_ROUTING: ModuleWithProviders = RouterModule.forChild(CONDITIONALREADONLY_ROUTES);
+export const CONDITIONALREADONLY_ROUTING = RouterModule.forChild(CONDITIONALREADONLY_ROUTES);

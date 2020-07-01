@@ -1,9 +1,9 @@
 import {
     ContentChildren, Inject, OnInit, OnDestroy,
     QueryList, HostListener,
-    Directive, Input, Output, AfterViewInit, Renderer, ElementRef, Component, forwardRef, OnChanges, ViewContainerRef, ComponentFactoryResolver, ComponentFactory
+    Directive, Input, Output, AfterViewInit, Renderer2, ElementRef, Component, forwardRef, OnChanges, ViewContainerRef, ComponentFactoryResolver, ComponentFactory
 } from "@angular/core";
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { FormControl, ControlValueAccessor, NG_VALIDATORS, NG_VALUE_ACCESSOR, AbstractControl, ValidatorFn } from "@angular/forms"
 import { Subscription, Observable } from "rxjs/Rx";
 
@@ -55,7 +55,7 @@ export class RxMessageDirective implements OnInit, OnDestroy {
     private isControlRequired: boolean = false;
     private annotationFunc: any;
     private statusType : string;
-    constructor(private renderer: Renderer, private elementRef: ElementRef,
+    constructor(private renderer: Renderer2, private elementRef: ElementRef,
         private componentFactoryResolver: ComponentFactoryResolver,
         private viewContainerRef: ViewContainerRef, @Inject(DOCUMENT) private document: any
     ) {

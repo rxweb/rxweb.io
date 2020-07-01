@@ -9,8 +9,8 @@ import { ComponentView } from "src/app/domain/view";
 import { ViewChild } from "@angular/core";
 import { CodeExampleComponent } from "src/app/components/shared/code-example/code-example.component";
 import { StackBlitzService } from "src/app/components/shared/stackblitz/stackblitz.service";
-import { DomSanitizer, SafeResourceUrl, DOCUMENT } from '@angular/platform-browser';
-
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common'
 
 
 @Component({

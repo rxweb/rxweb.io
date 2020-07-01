@@ -7,4 +7,4 @@ const LOCAL_STORAGE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const LOCAL_STORAGE_ROUTING: ModuleWithProviders = RouterModule.forChild(LOCAL_STORAGE_ROUTES);
+export const LOCAL_STORAGE_ROUTING = RouterModule.forChild(LOCAL_STORAGE_ROUTES);

@@ -35,4 +35,4 @@ const HTTP_ROUTES: Routes = [
 	loadChildren: './decorators/decorators.module#DecoratorsModule',
 },
 ];
-export const HTTP_ROUTING: ModuleWithProviders = RouterModule.forChild(HTTP_ROUTES);
+export const HTTP_ROUTING = RouterModule.forChild(HTTP_ROUTES);

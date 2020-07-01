@@ -45,5 +45,5 @@ import { RouterModule } from "@angular/router";
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class RxFormsModule {
-    static forRoot(): ModuleWithProviders { return { ngModule: RxFormsModule, providers: [] }; }
+    static forRoot() { return { ngModule: RxFormsModule, providers: [] }; }
 }

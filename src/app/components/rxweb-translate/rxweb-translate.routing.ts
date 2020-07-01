@@ -25,4 +25,4 @@ const RXWEB_TRANSLATE_ROUTES: Routes = [
   }
 
 ];
-export const RXWEB_TRANSLATE_ROUTING: ModuleWithProviders = RouterModule.forChild(RXWEB_TRANSLATE_ROUTES);
+export const RXWEB_TRANSLATE_ROUTING = RouterModule.forChild(RXWEB_TRANSLATE_ROUTES);

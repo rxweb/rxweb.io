@@ -12,4 +12,4 @@ const RTRIM_ROUTES: Routes = [
 }
 
 ];
-export const RTRIM_ROUTING: ModuleWithProviders = RouterModule.forChild(RTRIM_ROUTES);
+export const RTRIM_ROUTING = RouterModule.forChild(RTRIM_ROUTES);

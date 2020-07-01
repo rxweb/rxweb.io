@@ -7,4 +7,4 @@ const LOCALIZATION_MODULE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const LOCALIZATION_QUICKSTART_MODULE_ROUTING: ModuleWithProviders = RouterModule.forChild(LOCALIZATION_MODULE_ROUTES);
+export const LOCALIZATION_QUICKSTART_MODULE_ROUTING = RouterModule.forChild(LOCALIZATION_MODULE_ROUTES);

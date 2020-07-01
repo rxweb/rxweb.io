@@ -12,4 +12,4 @@ const TO_FLOAT_ROUTES: Routes = [
 }
 
 ];
-export const TO_FLOAT_ROUTING: ModuleWithProviders = RouterModule.forChild(TO_FLOAT_ROUTES);
+export const TO_FLOAT_ROUTING = RouterModule.forChild(TO_FLOAT_ROUTES);

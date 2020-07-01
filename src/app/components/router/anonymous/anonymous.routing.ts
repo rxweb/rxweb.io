@@ -7,4 +7,4 @@ const ANONYMOUS_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const ANONYMOUS_ROUTING: ModuleWithProviders = RouterModule.forChild(ANONYMOUS_ROUTES);
+export const ANONYMOUS_ROUTING = RouterModule.forChild(ANONYMOUS_ROUTES);

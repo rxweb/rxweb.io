@@ -7,4 +7,4 @@ const MIDDLEWARE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const MIDDLEWARE_ROUTING: ModuleWithProviders = RouterModule.forChild(MIDDLEWARE_ROUTES);
+export const MIDDLEWARE_ROUTING = RouterModule.forChild(MIDDLEWARE_ROUTES);

@@ -7,4 +7,4 @@ const DYNAMICRESETFORM_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DYNAMICRESETFORM_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMICRESETFORM_ROUTES);
+export const DYNAMICRESETFORM_ROUTING = RouterModule.forChild(DYNAMICRESETFORM_ROUTES);

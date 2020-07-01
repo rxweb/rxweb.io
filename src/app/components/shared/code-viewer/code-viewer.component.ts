@@ -8,7 +8,7 @@ import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-markup-templating';
 
 import { CODE_EXAMPLES, EXAMPLE_TITLES, CODE_EXAMPLE_TITLES } from '../../rxweb-translate/const/code-examples';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { Router } from '@angular/router';
 
 declare var Prism: any;

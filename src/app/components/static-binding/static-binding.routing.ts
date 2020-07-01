@@ -43,4 +43,4 @@ const STATIC_BINDING_ROUTES: Routes = [
 	loadChildren: './value/value.module#ValueModule',
 },
 ];
-export const STATIC_BINDING_ROUTING: ModuleWithProviders = RouterModule.forChild(STATIC_BINDING_ROUTES);
+export const STATIC_BINDING_ROUTING = RouterModule.forChild(STATIC_BINDING_ROUTES);

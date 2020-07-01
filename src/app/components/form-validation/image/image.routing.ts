@@ -12,4 +12,4 @@ const IMAGE_ROUTES: Routes = [
 }
 
 ];
-export const IMAGE_ROUTING: ModuleWithProviders = RouterModule.forChild(IMAGE_ROUTES);
+export const IMAGE_ROUTING = RouterModule.forChild(IMAGE_ROUTES);

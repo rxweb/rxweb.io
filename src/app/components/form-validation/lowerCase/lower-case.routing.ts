@@ -12,4 +12,4 @@ const LOWER_CASE_ROUTES: Routes = [
 }
 
 ];
-export const LOWER_CASE_ROUTING: ModuleWithProviders = RouterModule.forChild(LOWER_CASE_ROUTES);
+export const LOWER_CASE_ROUTING = RouterModule.forChild(LOWER_CASE_ROUTES);

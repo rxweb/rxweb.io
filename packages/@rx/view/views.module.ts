@@ -1,5 +1,4 @@
 import {NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
-import { DOCUMENT } from '@angular/platform-browser';
 import {CommonModule} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
@@ -60,5 +59,5 @@ export class RxViewModule {
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class RxViewServiceModule {
-    static forRoot(): ModuleWithProviders { return { ngModule: RxViewServiceModule, providers: [] }; }
+    static forRoot() { return { ngModule: RxViewServiceModule, providers: [] }; }
 }

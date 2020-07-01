@@ -47,4 +47,4 @@ const DYNAMIC_FORMS_ROUTES: Routes = [
 	loadChildren: './postValueHook/post-value-hook.module#PostValueHookModule',
 },
 ];
-export const DYNAMIC_FORMS_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMIC_FORMS_ROUTES);
+export const DYNAMIC_FORMS_ROUTING = RouterModule.forChild(DYNAMIC_FORMS_ROUTES);

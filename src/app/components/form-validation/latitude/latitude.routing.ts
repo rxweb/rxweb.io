@@ -12,4 +12,4 @@ const LATITUDE_ROUTES: Routes = [
 }
 
 ];
-export const LATITUDE_ROUTING: ModuleWithProviders = RouterModule.forChild(LATITUDE_ROUTES);
+export const LATITUDE_ROUTING = RouterModule.forChild(LATITUDE_ROUTES);

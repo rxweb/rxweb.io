@@ -102,4 +102,4 @@ const NGX_TRANSLATE_EXTENSION_ROUTES: Routes = [
     path: ':languageCode/pre-load-module', loadChildren: './playground/pre-load-module/pre-load-module.component#PreLoadModule'
   }
 ];
-export const NGX_TRANSLATE_EXTENSION_ROUTING: ModuleWithProviders = RouterModule.forChild(NGX_TRANSLATE_EXTENSION_ROUTES);
+export const NGX_TRANSLATE_EXTENSION_ROUTING = RouterModule.forChild(NGX_TRANSLATE_EXTENSION_ROUTES);

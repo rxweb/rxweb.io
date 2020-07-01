@@ -12,4 +12,4 @@ const GREATER_THAN_ROUTES: Routes = [
 }
 
 ];
-export const GREATER_THAN_ROUTING: ModuleWithProviders = RouterModule.forChild(GREATER_THAN_ROUTES);
+export const GREATER_THAN_ROUTING = RouterModule.forChild(GREATER_THAN_ROUTES);

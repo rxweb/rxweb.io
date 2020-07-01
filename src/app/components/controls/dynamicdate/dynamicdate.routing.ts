@@ -7,4 +7,4 @@ const DYNAMICDATE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const DYNAMICDATE_ROUTING: ModuleWithProviders = RouterModule.forChild(DYNAMICDATE_ROUTES);
+export const DYNAMICDATE_ROUTING = RouterModule.forChild(DYNAMICDATE_ROUTES);

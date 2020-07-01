@@ -12,4 +12,4 @@ const NOT_EMPTY_ROUTES: Routes = [
 }
 
 ];
-export const NOT_EMPTY_ROUTING: ModuleWithProviders = RouterModule.forChild(NOT_EMPTY_ROUTES);
+export const NOT_EMPTY_ROUTING = RouterModule.forChild(NOT_EMPTY_ROUTES);

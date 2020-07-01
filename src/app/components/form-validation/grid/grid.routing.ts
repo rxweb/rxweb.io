@@ -12,4 +12,4 @@ const GRID_ROUTES: Routes = [
 }
 
 ];
-export const GRID_ROUTING: ModuleWithProviders = RouterModule.forChild(GRID_ROUTES);
+export const GRID_ROUTING = RouterModule.forChild(GRID_ROUTES);

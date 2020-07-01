@@ -7,7 +7,7 @@ import { RegularExpression, OrderByPipe } from './core';
     exports: [OrderByPipe]
 })
 export class RxCoreModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot() {
         return {
             ngModule: RxCoreModule,
             providers: [RegularExpression]

@@ -1,4 +1,4 @@
-import {Directive, forwardRef, ElementRef, Renderer, Input, HostListener} from "@angular/core";
+import {Directive, forwardRef, ElementRef, Renderer2, Input, HostListener} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from "@angular/forms";
 import {DecimalPipe} from "@angular/common";
 
@@ -24,7 +24,7 @@ export class RxDecimalDirective implements ControlValueAccessor {
     private onChange: any = (_: any) => { };
 
     constructor(private elementRef: ElementRef,
-        private renderer: Renderer,
+        private renderer: Renderer2,
         private decimalPipe: DecimalPipe,
         private regularExpression: RegularExpression) {
         this.element = elementRef.nativeElement as Node;
@@ -93,6 +93,6 @@ export class RxDecimalDirective implements ControlValueAccessor {
     }
 
     private setValueOnElement(value: any) {
-        this.renderer.setElementProperty(this.element, ELEMENT_VALUE, value);
+        this.renderer.setProperty(this.element, ELEMENT_VALUE, value);
     }
 }

@@ -2,7 +2,6 @@ import { OnInit, Component, Input, Output, EventEmitter } from '@angular/core';
 import { ApplicationBroadcaster } from '@rx/core';
 import { Http } from '@angular/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { isProceduralRenderer } from '@angular/core/src/render3/interfaces/renderer';
 import { HttpClient } from '@angular/common/http';
 
 @Component({

@@ -12,4 +12,4 @@ const COMMIT_ROUTES: Routes = [
 }
 
 ];
-export const COMMIT_ROUTING: ModuleWithProviders = RouterModule.forChild(COMMIT_ROUTES);
+export const COMMIT_ROUTING = RouterModule.forChild(COMMIT_ROUTES);

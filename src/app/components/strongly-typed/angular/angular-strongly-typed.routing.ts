@@ -7,4 +7,4 @@ const ANGULAR_STRONGLY_TYPED_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const ANGULAR_STRONGLY_TYPED_ROUTING: ModuleWithProviders = RouterModule.forChild(ANGULAR_STRONGLY_TYPED_ROUTES);
+export const ANGULAR_STRONGLY_TYPED_ROUTING = RouterModule.forChild(ANGULAR_STRONGLY_TYPED_ROUTES);

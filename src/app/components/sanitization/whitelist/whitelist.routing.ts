@@ -12,4 +12,4 @@ const WHITELIST_ROUTES: Routes = [
 }
 
 ];
-export const WHITELIST_ROUTING: ModuleWithProviders = RouterModule.forChild(WHITELIST_ROUTES);
+export const WHITELIST_ROUTING = RouterModule.forChild(WHITELIST_ROUTES);

@@ -12,4 +12,4 @@ const BLACKLIST_ROUTES: Routes = [
 }
 
 ];
-export const BLACKLIST_ROUTING: ModuleWithProviders = RouterModule.forChild(BLACKLIST_ROUTES);
+export const BLACKLIST_ROUTING = RouterModule.forChild(BLACKLIST_ROUTES);

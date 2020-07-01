@@ -12,4 +12,4 @@ const DIRTY_CHECK_ROUTES: Routes = [
 }
 
 ];
-export const DIRTY_CHECK_ROUTING: ModuleWithProviders = RouterModule.forChild(DIRTY_CHECK_ROUTES);
+export const DIRTY_CHECK_ROUTING = RouterModule.forChild(DIRTY_CHECK_ROUTES);

@@ -7,4 +7,4 @@ const RADIO_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const RADIO_ROUTING: ModuleWithProviders = RouterModule.forChild(RADIO_ROUTES);
+export const RADIO_ROUTING = RouterModule.forChild(RADIO_ROUTES);

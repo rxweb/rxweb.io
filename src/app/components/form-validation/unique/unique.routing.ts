@@ -12,4 +12,4 @@ const UNIQUE_ROUTES: Routes = [
 }
 
 ];
-export const UNIQUE_ROUTING: ModuleWithProviders = RouterModule.forChild(UNIQUE_ROUTES);
+export const UNIQUE_ROUTING = RouterModule.forChild(UNIQUE_ROUTES);

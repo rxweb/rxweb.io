@@ -12,4 +12,4 @@ const DIFFERENT_ROUTES: Routes = [
 }
 
 ];
-export const DIFFERENT_ROUTING: ModuleWithProviders = RouterModule.forChild(DIFFERENT_ROUTES);
+export const DIFFERENT_ROUTING = RouterModule.forChild(DIFFERENT_ROUTES);

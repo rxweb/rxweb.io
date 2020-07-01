@@ -12,4 +12,4 @@ const ERROR_MESSAGES_ROUTES: Routes = [
 }
 
 ];
-export const ERROR_MESSAGES_ROUTING: ModuleWithProviders = RouterModule.forChild(ERROR_MESSAGES_ROUTES);
+export const ERROR_MESSAGES_ROUTING = RouterModule.forChild(ERROR_MESSAGES_ROUTES);

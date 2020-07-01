@@ -7,4 +7,4 @@ const COLOR_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const COLOR_ROUTING: ModuleWithProviders = RouterModule.forChild(COLOR_ROUTES);
+export const COLOR_ROUTING = RouterModule.forChild(COLOR_ROUTES);

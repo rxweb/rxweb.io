@@ -15,4 +15,4 @@ const LOCALIZATION_ROUTES: Routes = [
 	loadChildren: './page-level/page-level.module#PageLevelModule',
 }
 ];
-export const LOCALIZATION_ROUTING: ModuleWithProviders = RouterModule.forChild(LOCALIZATION_ROUTES);	
+export const LOCALIZATION_ROUTING = RouterModule.forChild(LOCALIZATION_ROUTES);	

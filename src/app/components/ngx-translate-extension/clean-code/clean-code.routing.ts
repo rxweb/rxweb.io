@@ -104,4 +104,4 @@ const CLEAN_CODE_ROUTES: Routes = [
   }
   
 ];
-export const CLEAN_CODE_ROUTING: ModuleWithProviders = RouterModule.forChild(CLEAN_CODE_ROUTES);
+export const CLEAN_CODE_ROUTING = RouterModule.forChild(CLEAN_CODE_ROUTES);

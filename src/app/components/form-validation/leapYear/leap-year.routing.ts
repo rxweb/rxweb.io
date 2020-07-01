@@ -12,4 +12,4 @@ const LEAP_YEAR_ROUTES: Routes = [
 }
 
 ];
-export const LEAP_YEAR_ROUTING: ModuleWithProviders = RouterModule.forChild(LEAP_YEAR_ROUTES);
+export const LEAP_YEAR_ROUTING = RouterModule.forChild(LEAP_YEAR_ROUTES);

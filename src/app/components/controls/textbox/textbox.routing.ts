@@ -7,4 +7,4 @@ const TEXTBOX_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const TEXTBOX_ROUTING: ModuleWithProviders = RouterModule.forChild(TEXTBOX_ROUTES);
+export const TEXTBOX_ROUTING = RouterModule.forChild(TEXTBOX_ROUTES);

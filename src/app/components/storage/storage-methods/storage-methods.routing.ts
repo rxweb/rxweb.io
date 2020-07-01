@@ -7,4 +7,4 @@ const STORAGE_METHODS_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const STORAGE_METHODS_ROUTING: ModuleWithProviders = RouterModule.forChild(STORAGE_METHODS_ROUTES);
+export const STORAGE_METHODS_ROUTING = RouterModule.forChild(STORAGE_METHODS_ROUTES);

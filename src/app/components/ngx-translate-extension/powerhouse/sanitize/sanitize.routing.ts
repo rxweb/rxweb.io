@@ -44,4 +44,4 @@ const SANITIZE_ROUTES: Routes = [
   }
 
 ];
-export const NGX_SANITIZE_ROUTING: ModuleWithProviders = RouterModule.forChild(SANITIZE_ROUTES);
+export const NGX_SANITIZE_ROUTING = RouterModule.forChild(SANITIZE_ROUTES);

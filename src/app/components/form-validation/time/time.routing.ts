@@ -12,4 +12,4 @@ const TIME_ROUTES: Routes = [
 }
 
 ];
-export const TIME_ROUTING: ModuleWithProviders = RouterModule.forChild(TIME_ROUTES);
+export const TIME_ROUTING = RouterModule.forChild(TIME_ROUTES);

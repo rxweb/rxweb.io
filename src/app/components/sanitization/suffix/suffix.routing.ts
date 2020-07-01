@@ -12,4 +12,4 @@ const SUFFIX_ROUTES: Routes = [
 }
 
 ];
-export const SUFFIX_ROUTING: ModuleWithProviders = RouterModule.forChild(SUFFIX_ROUTES);
+export const SUFFIX_ROUTING = RouterModule.forChild(SUFFIX_ROUTES);

@@ -12,4 +12,4 @@ const BIND_CONFIG_ROUTES: Routes = [
 }
 
 ];
-export const BIND_CONFIG_ROUTING: ModuleWithProviders = RouterModule.forChild(BIND_CONFIG_ROUTES);
+export const BIND_CONFIG_ROUTING = RouterModule.forChild(BIND_CONFIG_ROUTES);

@@ -12,4 +12,4 @@ const MIN_NUMBER_ROUTES: Routes = [
 }
 
 ];
-export const MIN_NUMBER_ROUTING: ModuleWithProviders = RouterModule.forChild(MIN_NUMBER_ROUTES);
+export const MIN_NUMBER_ROUTING = RouterModule.forChild(MIN_NUMBER_ROUTES);

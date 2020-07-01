@@ -7,4 +7,4 @@ const SESSION_STORAGE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const SESSION_STORAGE_ROUTING: ModuleWithProviders = RouterModule.forChild(SESSION_STORAGE_ROUTES);
+export const SESSION_STORAGE_ROUTING = RouterModule.forChild(SESSION_STORAGE_ROUTES);

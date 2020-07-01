@@ -7,4 +7,4 @@ const SOURCE_ROUTES: Routes = [
 	component:PageComponent
 }
 ];
-export const SOURCE_ROUTING: ModuleWithProviders = RouterModule.forChild(SOURCE_ROUTES);
+export const SOURCE_ROUTING = RouterModule.forChild(SOURCE_ROUTES);

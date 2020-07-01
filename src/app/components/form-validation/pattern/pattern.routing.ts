@@ -12,4 +12,4 @@ const PATTERN_ROUTES: Routes = [
 }
 
 ];
-export const PATTERN_ROUTING: ModuleWithProviders = RouterModule.forChild(PATTERN_ROUTES);
+export const PATTERN_ROUTING = RouterModule.forChild(PATTERN_ROUTES);

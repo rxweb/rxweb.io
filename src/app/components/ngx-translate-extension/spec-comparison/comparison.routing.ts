@@ -43,4 +43,4 @@ const COMPARISION_ROUTES: Routes = [
     component: TranslateStoreComponent
   }
 ];
-export const COMPARISION_ROUTING: ModuleWithProviders = RouterModule.forChild(COMPARISION_ROUTES);
+export const COMPARISION_ROUTING = RouterModule.forChild(COMPARISION_ROUTES);
