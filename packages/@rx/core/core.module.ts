@@ -7,10 +7,10 @@ import { RegularExpression, OrderByPipe } from './core';
     exports: [OrderByPipe]
 })
 export class RxCoreModule {
-    static forRoot() {
-        return {
-            ngModule: RxCoreModule,
-            providers: [RegularExpression]
-        };
-    }
+    static forRoot(): ModuleWithProviders<RxCoreModule> {
+    return {
+        ngModule: RxCoreModule,
+        providers: [RegularExpression]
+    };
+}
 }
