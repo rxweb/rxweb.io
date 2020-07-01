@@ -735,6 +735,36 @@
                     "refUri": "angular",
                     "childrens": [
                         {
+                            "title": "Class Instances",
+                            "isOpen": false,
+                            "isActive": false,
+                            "linkTitle": "instances",
+                            "childrens": [
+                                {
+                                    "title": "formArray",
+                                    "isOpen": false,
+                                    "isActive": false,
+                                    "uri": "/strongly-typed/formGroup-class-instance",
+                                    "linkTitle": "formGroup-class-instance"
+                                },
+                                {
+                                    "title": "formGroup",
+                                    "isOpen": false,
+                                    "isActive": false,
+                                    "uri": "/strongly-typed/formGroup-class-instance",
+                                    "linkTitle": "formGroup-class-instance"
+                                },
+                                {
+                                    "title": "formControl",
+                                    "isOpen": false,
+                                    "isActive": false,
+                                    "uri": "/strongly-typed/formGroup-class-instance",
+                                    "linkTitle": "formGroup-class-instance"
+                                }
+                               
+                            ]
+                        },
+                        {
                             "title": "FormGroup",
                             "uri": "/strongly-typed/angular-strongly-typed#formGroup",
                             "isOpen": false,
