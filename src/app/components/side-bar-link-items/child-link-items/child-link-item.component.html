@@ -6,7 +6,7 @@
 
         <a [class.d-none]="link.isHide" [class.d-block]="!link.isHide" [class.disabled]="link.childrens?.length == 0 && link.uri == null"
             style="font-weight: 400;" (click)="navigateTo(link);link.isOpen = !link.isOpen"
-            [class.active]="link.isActive"><span class="nav-label" [class.strongly-typed-link]="link.title == 'Angular Reactive Forms'" [innerHTML]="link.title"></span><span class="fa"
+            [class.active]="link.isActive"><span class="nav-label" [innerHTML]="link.title"></span><span class="fa"
                 [class.arrow]="!link.isOpen" [class.fa-angle-down]="link.isOpen"
                 *ngIf="link.childrens && link.childrens?.length > 0"></span></a>
         <app-child-links *ngIf="link.childrens && link.childrens.length > 0" [isOpen]="link.isOpen"
