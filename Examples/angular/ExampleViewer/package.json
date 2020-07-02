@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "postinstall": "ivy-ngcc",
     "ngsw-config": "node_modules/.bin/ngsw-config dist ./ngsw-config.json",
     "ngsw-copy": "copy node_modules/@angular/service-worker/ngsw-worker.js dist/ngsw-worker.js",
     "build-prod-ngsw": "node --max-old-space-size=8192 node_modules/@angular/cli/bin/ng build --prod",
