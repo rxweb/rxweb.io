@@ -116,10 +116,11 @@ export class AppComponent implements OnInit {
           }
         }
         else {
-          if (this.lastRouteName != "form-validations") {
+          if (this.lastRouteName != "form-validations" && !this.isHome) {
             this.lastRouteName = "form-validations";
             this.isShowSidebar = false;
             this.http.get('assets/json/links.json').subscribe((response: any) => {
+              debugger;
               this.isShowSidebar = true
             })
             this.lastRouteName = "form-validations";

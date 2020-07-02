@@ -8,15 +8,12 @@ import { AppExampleRunnerComponent } from "src/app/components/shared/app-example
 import { PageViewerComponent } from "src/app/components/shared/page-viewer/page-viewer.component";
 import { CodeExampleComponent } from "src/app/components/shared/code-example/code-example.component";
 import { AppTabsComponent } from "src/app/components/shared/app-tabs/app-tabs.component";
-import { DisqusSharedModule } from "src/app/components/shared/disqus/disqus-shared.module";
-import { DisqusComponent } from "src/app/components/shared/disqus/disqus/disqus.component";
-import { GitHubIssueComponent } from "src/app/components/shared/disqus/github-issue/github-issue.component";
-import { ContributionComponent } from '../disqus/contribution/contribution.component';
+
 
 @NgModule({
- imports:      [CommonModule,ClipboardModule,HighlightModule ,DisqusSharedModule ],
+ imports:      [CommonModule,ClipboardModule,HighlightModule ],
   declarations: [PageViewerComponent, AppCodeComponent, AppExampleRunnerComponent,CodeExampleComponent,AppTabsComponent ],
-  exports: [CommonModule, FormsModule, AppCodeComponent,AppExampleRunnerComponent,PageViewerComponent,CodeExampleComponent,AppTabsComponent,DisqusSharedModule ],
- entryComponents: [GitHubIssueComponent,DisqusComponent,ContributionComponent],
+  exports: [CommonModule, FormsModule, AppCodeComponent,AppExampleRunnerComponent,PageViewerComponent,CodeExampleComponent,AppTabsComponent ],
+ entryComponents: [],
 })
 export class CommonSharedModule { }

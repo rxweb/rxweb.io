@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Location } from '@angular/common';
-import * as moment from 'src/assets/scripts/moment.js'
-import * as showdown from 'src/assets/scripts/showdown.js'
+
 import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 import { ApplicationBroadcaster } from '@rx/core';

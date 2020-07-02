@@ -10,13 +10,12 @@ import { ClipboardModule } from 'ngx-clipboard';
 import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
 import { RxReactiveDynamicFormsModule } from "@rxweb/reactive-dynamic-forms"
 import { CommonSharedModule } from '../shared/common/common-shared.module';
-import { SanitizersGettingStartedComponent } from './getting-started/getting-started.component';
 import { RXWEB_SANITIZERS_ROUTING } from './rxweb-sanitizers.routing';
 
 
 @NgModule({
   imports: [RXWEB_SANITIZERS_ROUTING,CommonSharedModule,RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
-  declarations: [SanitizersGettingStartedComponent],
+  declarations: [],
   providers:[{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
  exports:      [ RouterModule ]
 })

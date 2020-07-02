@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build:stats": "ng build --prod --aot --buildOptimizer --stats-json",
     "build": "ng build",
     "host": "ng serve --host 0.0.0.0",
     "ngsw-config": "node_modules/.bin/ngsw-config dist ./ngsw-config.json",
@@ -23,6 +24,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-optimizer": "^0.1000.0",
     "@angular/animations": "^10.0.2",
     "@angular/common": "^10.0.2",
     "@angular/compiler": "^10.0.2",
@@ -80,7 +82,6 @@
     "protractor": "^7.0.0",
     "ts-node": "~8.10.2",
     "tslint": "~6.1.0",
-    "typescript": "~3.9.5",
-    "webpack-bundle-analyzer": "^3.8.0"
+    "typescript": "~3.9.5"
   }
 }

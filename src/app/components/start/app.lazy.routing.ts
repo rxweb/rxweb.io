@@ -5,12 +5,11 @@ import { HomeComponent } from "src/app/components/home/home.component";
 import { NoPreloading } from "@angular/router";
 import { GettingStartedComponent } from "src/app/components/getting-started/getting-started.component";
 import { ReactiveFormConfigComponent } from "../reactive-form-config/reactive-form-config.component";
-import { FormBuilderComponent } from "../form-builder/form-builder.component";
 
 import { TextPageComponent } from "../text-page/text-page.component";
 import { WhatsNextComponent } from "../whats-next/whats-next.component";
 import { WhatsNewComponent } from "../whats-new/whats-new.component";
-import { WhyRxwebComponent } from "../why/why-component";
+
 import { ChangeLogComponent } from "../changelog/change-log.component";
 import { ContributionComponent } from "../shared/disqus/contribution/contribution.component";
 import { ContributorsComponent } from "../contributors/contributors-component";
@@ -61,9 +60,6 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'whats-new', component: WhatsNewComponent
   },
   {
-    path: 'why', component: WhyRxwebComponent
-  },
-  {
     path: 'hidden-gems', component: ContributorsComponent
   },
   {
@@ -104,14 +100,6 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'rx-web-core',
     loadChildren: () => import('src/app/components/htmlpages/html.page.module').then(m => m.HtmlPageModule),
-  },
-  {
-    path: 'form-builder',
-    loadChildren: () => import('src/app/components/form-builder/form-builder-shared.module').then(m => m.FormBuilderSharedModule),
-  },
-  {
-    path: 'dynamic-form-builder',
-    loadChildren: () => import('src/app/components/dynamic-form-builder/dynamic-form-builder.module').then(m => m.DynamicFormBuilderModule),
   },
   {
     path: 'api/RxFormBuilder',

@@ -21,16 +21,10 @@ import { RxStorageModule } from '@rx/storage';
 import { RxSecurityModule } from "@rx/security";
 
 import { AppComponent } from './start/app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ReactiveFormConfigComponent } from './reactive-form-config/reactive-form-config.component';
 import { PromptUpdateService } from '../services/prompt-update.service';
 import { LogUpdateService } from '../services/log-update.service';
 import { CheckForUpdateService } from '../services/check-for-update.service';
-import { FooterSharedModule } from './shared/footer/footer-shared.module';
 
-import { GettingStartedComponent } from './getting-started/getting-started.component';
-import { DisqusSharedModule } from './shared/disqus/disqus-shared.module';
-import { RightSideBarSharedModule } from './shared/right-sidebar/right-sidebar-shared.module';
 import { HomeComponent } from './home/home.component';
 import { PipeCommonModule } from '../pipes';
 import { ApplicationBroadcaster } from '@rx/core';
@@ -52,8 +46,8 @@ registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
-      AppComponent, DashboardComponent, GettingStartedComponent, ReactiveFormConfigComponent, HomeComponent,],
-  imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, DisqusSharedModule, BasicExamplesExtendedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
+      AppComponent, HomeComponent,],
+  imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING,  BasicExamplesExtendedModule, PipeCommonModule, TextPageModule,
     HighlightModule.forRoot(), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,  
     RxSecurityModule, CommonModule,

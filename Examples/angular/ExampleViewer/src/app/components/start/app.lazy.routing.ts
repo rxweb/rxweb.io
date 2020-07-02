@@ -1,32 +1,22 @@
 import { ModuleWithProviders } from "@angular/core";
 import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
-import { DashboardComponent } from "../dashboard/dashboard.component";
 import { HomeComponent } from "src/app/components/home/home.component";
 import { NoPreloading } from "@angular/router";
-import { GettingStartedComponent } from "src/app/components/getting-started/getting-started.component";
-import { ReactiveFormConfigComponent } from "../reactive-form-config/reactive-form-config.component";
 
 
 const APP_LAZY_ROUTES: Routes = [
   {
     path: '', redirectTo: 'home', pathMatch: 'full'
   },
-  {
-    path: 'dashboard', component: DashboardComponent
-  },
-  {
+  
+ {
     path: 'home', component: HomeComponent
-  },
-  {
-    path: 'getting-started', component: GettingStartedComponent
   },
   // {
   //   path: 'changelog', component: TextPageComponent
   //   //loadChildren: 'src/app/components/text-page/text-page.module#TextPageModule',
   // },
-  {
-    path:'api/reactive-form-config',component:ReactiveFormConfigComponent
-  },
+
  
   {
     path:'how-to',
@@ -48,10 +38,7 @@ const APP_LAZY_ROUTES: Routes = [
     path: 'decorators',
     loadChildren: () => import('src/app/components/decorators/decorators.module').then(m => m.DecoratorsModule),
   },
-  {
-    path: 'community',
-    loadChildren: () => import('src/app/components/community/community.module').then(m => m.CommunityModule),
-  },
+
   {
     path: 'rx-web-core',
     loadChildren: () => import('src/app/components/htmlpages/html.page.module').then(m => m.HtmlPageModule),
@@ -59,10 +46,6 @@ const APP_LAZY_ROUTES: Routes = [
   {
     path: 'form-builder',
     loadChildren: () => import('src/app/components/form-builder/form-builder-shared.module').then(m => m.FormBuilderSharedModule),
-  },
-  {
-    path: 'dynamic-form-builder',
-    loadChildren: () => import('src/app/components/dynamic-form-builder/dynamic-form-builder.module').then(m => m.DynamicFormBuilderModule),
   },
   {
     path: 'api/RxFormBuilder',

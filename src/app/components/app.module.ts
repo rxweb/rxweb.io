@@ -49,7 +49,6 @@ export const API_HOST_URI: string = 'API_URL';
 import { TextPageModule } from './text-page/text-page.module';
 import { WhatsNextComponent } from './whats-next/whats-next.component';
 import { WhatsNewComponent } from './whats-new/whats-new.component';
-import { WhyRxwebComponent } from './why/why-component';
 import { ChangeLogComponent } from './changelog/change-log.component';
 import { ContributorsComponent } from './contributors/contributors-component';
 import { RxTranslateModule } from '@rxweb/translate';
@@ -81,7 +80,7 @@ registerLocaleData(localePt)
   declarations: [
     AppComponent, SideBarComponent, VueHomePageComponent, AngularHomeComponent, VueGettingStartedComponent, ChildLinkItemComponent,
     LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent,
-    ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, WhyRxwebComponent, QuickStartComponent, CustomPipe,
+    ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, QuickStartComponent, CustomPipe,
      ArticleComponent
   ],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,

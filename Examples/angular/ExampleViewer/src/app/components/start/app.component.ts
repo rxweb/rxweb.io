@@ -92,42 +92,10 @@ export class AppComponent implements OnInit {
           this.isHome = false;
         }
 
-        if (location.pathname.includes("generics")) {
-          this.isShowSidebar = false;
-          this.http.get('assets/json/generics-sidebar.json').subscribe((response: any) => {
-            this.isShowSidebar = true
-          })
-        }
-        else if (location.pathname.includes("sanitizers")) {
-          this.isShowSidebar = false
-          this.http.get('assets/json/sanitizers-sidebar.json').subscribe((response: any) => {
-            this.isShowSidebar = true
-          })
-        }
-        else if (location.pathname.includes("http")) {
-          this.isShowSidebar = false;
-          this.http.get('assets/json/http-sidebar.json').subscribe((response: any) => {
-            this.isShowSidebar = true
-          })
-        }
-        else if (location.pathname.includes("reactive-dynamic-forms")) {
-          this.isShowSidebar = false;
-          this.http.get('assets/json/dynamic-sidebar.json').subscribe((response: any) => {
-            this.isShowSidebar = true
-          })
-        }
-        else if (location.pathname.includes("rx-web-core")) {
-          this.isShowSidebar = false;
-          this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
-            this.isShowSidebar = true
-          })
-        }
-        else {
-          this.isShowSidebar = false;
-          this.http.get('assets/json/sidebar.json').subscribe((response: any) => {
-            this.isShowSidebar = true
-          })
-        }
+     
+       
+       
+      
 
         var t = setTimeout(() => {
           this.showFooter = true;

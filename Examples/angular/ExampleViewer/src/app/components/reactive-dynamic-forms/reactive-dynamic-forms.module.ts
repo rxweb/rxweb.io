@@ -8,17 +8,15 @@ import { RxFormsModule } from '@rx/forms';
 import { RxViewModule } from '@rx/view';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ClipboardModule } from 'ngx-clipboard';
-import { DynamicFormHomeComponent } from "./home/home.component"
 import { DynamicValidationComponent } from '../dynamic-validation/dynamic-validation.component';
 import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
 import { RxReactiveDynamicFormsModule } from "@rxweb/reactive-dynamic-forms"
-import { DynamicGettingStartedComponent } from './getting-started/getting-started.component';
 import { CommonSharedModule } from '../shared/common/common-shared.module';
 import { FormBuilderDynamicComponent } from './dynamic-form-builder/dynamic-form-builder.component';
 
 @NgModule({
   imports: [REACTIVE_DYNAMIC_FORMS_ROUTING,CommonSharedModule, RxReactiveDynamicFormsModule,RxReactiveFormsModule,CommonModule ,FormsModule, ReactiveFormsModule,RouterModule,RxFormsModule, RxViewModule,ClipboardModule, HighlightModule  ],
-  declarations: [FormBuilderDynamicComponent,DynamicFormHomeComponent, DynamicValidationComponent,DynamicGettingStartedComponent],
+  declarations: [FormBuilderDynamicComponent, DynamicValidationComponent],
   providers:[{ provide: "COMPONENT_EXAMPLE", useValue: {} }],
  exports:      [ RouterModule ]
 })

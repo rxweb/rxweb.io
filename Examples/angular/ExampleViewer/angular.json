@@ -22,8 +22,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/AspNetCore-assets",
-              "src/AspNetCore",
               "src/manifest.json"
             ],
             "styles": [
@@ -32,11 +30,7 @@
             "scripts": [
               "src/assets/scripts/jquery.min.js",
               "src/assets/scripts/bootstrap.min.js",
-              "src/assets/scripts/custom.js",
-              "src/assets/scripts/lock.min.js",
-              "src/assets/scripts/highlight.pack.js",
-              "src/assets/scripts/moment.js",
-              "src/assets/scripts/showdown.js"
+              "src/assets/scripts/custom.js"
             ]
           },
           "configurations": {

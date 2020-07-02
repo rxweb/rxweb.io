@@ -79,9 +79,7 @@ export class PageComponent implements OnInit {
   }
   ngOnInit(): void {
   
-    this.http.get('assets/json/rxweb-links.json?v=' + environment.appVersion).subscribe((response: any) => {    
-      this.links = response;
-    });
+  
    
   }
   nextLink()

@@ -11,9 +11,7 @@ import { AppTabsComponent } from "src/app/components/shared/app-tabs/app-tabs.co
 import { Inject } from "@angular/core";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { BaseComponentProvider } from "src/app/components/shared/base.component";
-import { GitHubIssueComponent } from "src/app/components/shared/disqus/github-issue/github-issue.component";
-import { DisqusComponent } from "src/app/components/shared/disqus/disqus/disqus.component";
-import { ContributionComponent } from '../disqus/contribution/contribution.component';
+
 
 @Component({
     selector: 'page-viewer',

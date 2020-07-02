@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HighlightModule } from 'ngx-highlightjs';
 import { ClipboardModule } from "ngx-clipboard";
-import { RightSideBarSharedModule } from '../shared/right-sidebar/right-sidebar-shared.module';
 import { PageComponent } from './page.component';
 import { PageViewerComponent } from '../shared/page-viewer/page-viewer.component';
 import { AppCodeComponent } from '../shared/app-code/app-code.component';
@@ -15,7 +14,7 @@ import { CommonSharedModule } from '../shared/common/common-shared.module';
 
 @NgModule({
   imports: [
-    RouterModule,CommonModule, FormsModule, ReactiveFormsModule, RightSideBarSharedModule, ClipboardModule, HighlightModule, CommonSharedModule
+    RouterModule,CommonModule, FormsModule, ReactiveFormsModule, ClipboardModule, HighlightModule, CommonSharedModule
   ],
   declarations: [PageComponent],
   exports: [RouterModule],
