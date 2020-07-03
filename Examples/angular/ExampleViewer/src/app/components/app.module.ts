@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { APP_LAZY_ROUTING } from './start/app.lazy.routing';
@@ -21,9 +20,6 @@ import { RxStorageModule } from '@rx/storage';
 import { RxSecurityModule } from "@rx/security";
 
 import { AppComponent } from './start/app.component';
-import { PromptUpdateService } from '../services/prompt-update.service';
-import { LogUpdateService } from '../services/log-update.service';
-import { CheckForUpdateService } from '../services/check-for-update.service';
 
 import { HomeComponent } from './home/home.component';
 import { PipeCommonModule } from '../pipes';
@@ -48,7 +44,7 @@ registerLocaleData(localePt)
   declarations: [
       AppComponent, HomeComponent,],
   imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING,  BasicExamplesExtendedModule, PipeCommonModule, TextPageModule,
-    HighlightModule.forRoot(), ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    HighlightModule.forRoot(), ClipboardModule,
     BrowserAnimationsModule,  
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
@@ -66,7 +62,7 @@ registerLocaleData(localePt)
     },
     { provide: 'RequestHeaders', useClass: ApplicationRequestHeaders },
     { provide: 'ResponseResult', useClass: ApplicationResponse },
-    ApplicationBroadcaster, PromptUpdateService, LogUpdateService, CheckForUpdateService, 
+    ApplicationBroadcaster 
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent],
