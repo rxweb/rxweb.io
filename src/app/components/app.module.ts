@@ -83,8 +83,8 @@ registerLocaleData(localePt)
     ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, QuickStartComponent, CustomPipe,
      ArticleComponent
   ],
-  imports: [BrowserModule, FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
-    HighlightModule, ClipboardModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), NgAisModule,
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
+    HighlightModule, ClipboardModule, NgAisModule,
     BrowserAnimationsModule,
     RxSecurityModule, CommonModule,
     RxFormsModule, RxViewModule, RxStorageModule, RxViewServiceModule,
@@ -111,7 +111,7 @@ registerLocaleData(localePt)
     },
     { provide: 'RequestHeaders', useClass: ApplicationRequestHeaders },
     { provide: 'ResponseResult', useClass: ApplicationResponse },
-    ApplicationBroadcaster, PromptUpdateService, LogUpdateService, CheckForUpdateService,
+    ApplicationBroadcaster
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent],

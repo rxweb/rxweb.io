@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Location } from '@angular/common';
 import * as moment from 'src/assets/scripts/moment.js'
 import * as showdown from 'src/assets/scripts/showdown.js'
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-github-issue',
@@ -16,7 +17,7 @@ export class GitHubIssueComponent implements OnInit {
     showComponent: boolean = false;
     converter = new showdown.Converter();
     constructor(
-        private http: HttpClient, location: Location
+        private http: HttpClient, location: Location, private router : Router
     ) {
     }
 
@@ -28,8 +29,8 @@ export class GitHubIssueComponent implements OnInit {
         this.openIssuesList = [];
         this.closedIssuesList = [];
         var url = 'https://api.github.com/repos/rxweb/rxweb/issues?state=open';
-        if (location.pathname.split('/')[2])
-            url += '&labels=' + location.pathname.split('/')[2];
+        if (this.router.url.split('/')[2])
+            url += '&labels=' + this.router.url.split('/')[2];
         this.http.get(url).subscribe((response: any[]) => {
             for (var i = 0; i < response.length; i++) {
                 this.setIssueList(response[i], 'open');
@@ -43,8 +44,8 @@ export class GitHubIssueComponent implements OnInit {
         this.openIssuesList = [];
         this.closedIssuesList = [];
         var url = 'https://api.github.com/repos/rxweb/rxweb/issues?state=closed';
-        if (location.pathname.split('/')[2])
-            url += '&labels=' + location.pathname.split('/')[2];
+        if (this.router.url.split('/')[2])
+            url += '&labels=' + this.router.url.split('/')[2];
 
         this.http.get(url).subscribe((response: any[]) => {
             for (var i = 0; i < response.length; i++) {

@@ -50,7 +50,7 @@ export class RightSideBarComponent implements OnInit {
     ngOnInit(): void {
         if (this.router.url.includes('whats-new') || this.router.url.includes('whats-next') || this.router.url.includes('why') || this.router.url.includes('getting-started') || this.router.url.includes('reactive-form-config'))
             this.isGitEditUrlShow = false;
-        var splitedArray = location.pathname.split("/");
+        var splitedArray = this.router.url.split("/");
         this.mainType = splitedArray[1];
         this.validationName = splitedArray[2];
         if (splitedArray.length > 0 && splitedArray[1]) {
@@ -109,7 +109,7 @@ export class RightSideBarComponent implements OnInit {
     routeExample() {
         this.toogleOpen = !this.toogleOpen;
         this.showExample = !this.showExample;
-        var splitedArray = location.pathname.split('/');
+        var splitedArray = this.router.url.split('/');
         if (splitedArray[4])
             this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
         else

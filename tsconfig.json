@@ -1,6 +1,6 @@
 {
   "compileOnSave": false,
-  "include": ["./src/**/*", "./src/*" ],
+  "include": ["./src/**/*", "./src/*", "tsconfig.app.json", "tsconfig.base.json" ],
   "exclude": [
     "Examples"
 ],

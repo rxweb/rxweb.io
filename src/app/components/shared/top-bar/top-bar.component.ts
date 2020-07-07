@@ -44,9 +44,9 @@ export class TopBarComponent implements OnInit {
           this.titleData.title = this.cloneSidebarLinks[0].title;
       }
     }
-    var splitedArray = location.pathname.split("/");
+    var splitedArray = this.router.url.split("/");
     this.mainType = splitedArray[1];
-    console.log(location.pathname)
+    console.log(this.router.url)
     this.validationName = splitedArray[2];
     if (splitedArray.length > 0 && splitedArray[1]) {
       if (splitedArray.includes("rx-web-core")) {
@@ -150,7 +150,7 @@ export class TopBarComponent implements OnInit {
   routeExample() {
     this.toogleOpen = !this.toogleOpen;
     this.showExample = !this.showExample;
-    var splitedArray = location.pathname.split('/');
+    var splitedArray = this.router.url.split('/');
     if (splitedArray[4])
       this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
     else

@@ -46,7 +46,7 @@ export class AppExampleRunnerComponent implements OnInit {
   ngOnInit(): void {
 
     let codeUrl = "";
-    if (document.location.pathname.includes("dynamic-validation")) {
+    if (this.router.url.includes("dynamic-validation")) {
 
       this.showElement = true;
       this.exampleHeight = 750;
@@ -54,7 +54,7 @@ export class AppExampleRunnerComponent implements OnInit {
     }
     this.showElement = false;
   
-    if (document.location.pathname.includes("dynamic-validation") || this.decoratorName == "get"  || this.decoratorName == "post" || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject") {
+    if (this.router.url.includes("dynamic-validation") || this.decoratorName == "get"  || this.decoratorName == "post" || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject") {
       
       this.showElement = true;
     }

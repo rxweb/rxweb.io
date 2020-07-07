@@ -20,7 +20,7 @@ export class FooterComponent implements OnInit{
 
   ngOnInit(){
 
-      if(location.pathname.includes("home") || location.pathname.includes("angular-home")){
+      if(this.router.url.includes("home") || this.router.url.includes("angular-home")){
         this.isHome = true;
       }
       else {

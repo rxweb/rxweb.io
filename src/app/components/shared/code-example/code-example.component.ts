@@ -18,6 +18,7 @@ export class CodeExampleComponent extends BaseComponentProvider implements OnIni
     @Input() Component: any;
     @Input() data:any;
     element: HTMLElement;
+ 
     componentSelector: string;
     constructor(private elementRef: ElementRef, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef,
     @Inject(COMPONENT_EXAMPLE) exampleComponents: { [key: string]: any }

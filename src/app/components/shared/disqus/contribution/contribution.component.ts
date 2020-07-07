@@ -50,12 +50,12 @@ export class ContributionComponent implements OnInit{
   
     
     ngOnInit(){
-       if(location.pathname.includes("vue"))
+       if(this.router.url.includes("vue"))
        this.isVue = true;
     }
 
     nextLink() {
-        var currentObjIndex = this.links.findIndex(a => a.link == location.pathname);
+        var currentObjIndex = this.links.findIndex(a => a.link == this.router.url);
         if (currentObjIndex != undefined) {
           currentObjIndex++;
           var nextObj = this.links[currentObjIndex];

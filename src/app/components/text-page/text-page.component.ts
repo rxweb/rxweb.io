@@ -18,7 +18,7 @@ export class TextPageComponent implements OnInit {
   mainType: string;
   rightSidebarLinks:any;
   constructor(
-    private http: HttpClient,
+    private http: HttpClient,private router : Router,
     private applicationBroadcaster:ApplicationBroadcaster
   ) {
     this.applicationBroadcaster.topSubject.subscribe(t=>{
@@ -31,7 +31,7 @@ export class TextPageComponent implements OnInit {
   }
 
   bind() {
-    let splitedArray = location.pathname.split('/');
+    let splitedArray = this.router.url.split('/');
     this.mainType = splitedArray[1];
     this.validationName = splitedArray[2];
      let codeUri = 'assests/json/generator/contributing/decorators.json?v=' + environment.appVersion;

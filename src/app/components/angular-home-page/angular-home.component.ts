@@ -44,8 +44,8 @@ export class AngularHomeComponent implements OnInit {
   removeChildNodes() {
     let codeElement = document.getElementById("code_change_1");
     if(codeElement){
-    if (codeElement.children.length > this.currentTextGroup.fixText.length) {
-      document.getElementById("code_change_1").removeChild(codeElement.children.item(codeElement.children.length - 1))
+    if (codeElement?.children.length > this.currentTextGroup.fixText.length) {
+      document.getElementById("code_change_1").removeChild(codeElement?.children.item(codeElement.children.length - 1))
       var t = setTimeout(() => this.removeChildNodes(), 10);
     } else {
       this.totalIndex++;

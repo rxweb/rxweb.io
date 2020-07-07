@@ -95,7 +95,7 @@ export class AppComponent implements OnInit {
           this.isHome = false;
         }
 
-      if (location.pathname.includes("rx-web-core")) {
+      if (this.router.url.includes("rx-web-core")) {
           if (this.lastRouteName != "rx-web-core") {
             this.lastRouteName = "rx-web-core";
             this.isShowSidebar = false;
@@ -105,7 +105,7 @@ export class AppComponent implements OnInit {
             this.lastRouteName = "rx-web-core";
           }
         }
-        else if(location.pathname.includes("vue")){
+        else if(this.router.url.includes("vue")){
           if (this.lastRouteName != "vue") {
             this.lastRouteName = "vue";
             this.isShowSidebar = false;

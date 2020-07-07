@@ -13,6 +13,7 @@ import {
 import { environment } from 'src/environments/environment';
 import { ApplicationBroadcaster } from '@rx/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { visitAll } from '@angular/compiler';
 
 @Component({
   templateUrl: './page.component.html',
@@ -60,15 +61,21 @@ export class PageComponent implements OnInit {
       this.rightSidebarLinks = t.rightSidebarLinks;
       this.gitUrl = t.gitDocPath;
     })
+    router.events.subscribe((val) => {
 
-    this.element = elementRef.nativeElement as HTMLElement;
-    activatedRoute.params.subscribe(t => {
-      if (t["typeName"])
-        this.typeName = t["typeName"];
-      if (t["templateDrivenType"])
-        this.templateDrivenType = t["templateDrivenType"];
+      if (val instanceof NavigationEnd) {
+        debugger
+        if(val.url.includes('#')){
+        var newUrl = val.url.split('#')[0]
+        val.url = val.url.replace(val.url,newUrl);
+        }
+        this.typeName = val.url.split('/')[3];
+        if(val.url.includes("template-driven"))
+        this.templateDrivenType =  val.url.split('/')[4];
       this.bind();
+      }     
     })
+    this.element = elementRef.nativeElement as HTMLElement;
     activatedRoute.queryParams.subscribe(params => {
       if (params.showExample)
         this.showExample = params.showExample == "true" ? true : false;
@@ -84,7 +91,7 @@ export class PageComponent implements OnInit {
   }
 
   nextLink() {
-    var currentObjIndex = this.links.findIndex(a => a.link == location.pathname);
+    var currentObjIndex = this.links.findIndex(a => a.link == this.router.url);
     if (currentObjIndex != undefined) {
       currentObjIndex++;
       var nextObj = this.links[currentObjIndex];
@@ -93,7 +100,7 @@ export class PageComponent implements OnInit {
   }
 
   previousLink() {
-    var currentObjIndex = this.links.findIndex(a => a.link == location.pathname);
+    var currentObjIndex = this.links.findIndex(a => a.link == this.router.url);
     if (currentObjIndex != undefined) {
       currentObjIndex--;
       var nextObj = this.links[currentObjIndex];
@@ -102,13 +109,13 @@ export class PageComponent implements OnInit {
   }
   bind() {
     this.showViewer = false;
-    let splitedArray = location.pathname.split('/');
+    let splitedArray = this.router.url.split('/');
     this.mainType = splitedArray[1];
     this.validationName = splitedArray[2];
     let titleString = "";
     let codeUri = "";
     let htmlUri = ""
-    if (this.mainType != "reactive-dynamic-forms" && this.mainType != "strongly-typed" && this.mainType != "rxweb-storage" && this.mainType != "ngx-translate-extension" && this.mainType != "rxweb-localization" && this.mainType != "rxweb-router" && this.mainType != "vue" && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
+    if (this.mainType != "reactive-dynamic-forms" && this.mainType != "api" && this.mainType != "strongly-typed" && this.mainType != "rxweb-storage" && this.mainType != "ngx-translate-extension" && this.mainType != "rxweb-localization" && this.mainType != "rxweb-router" && this.mainType != "vue" && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
       switch (splitedArray[3]) {
         case "decorators":
           codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
@@ -131,16 +138,27 @@ export class PageComponent implements OnInit {
       }
       document.title = splitedArray[2] + " - RxWeb Docs";
     }
+   else if(this.mainType == "api"){
+    this.typeName = this.router.url.split('/')[2];
+    codeUri = 'assets/json/generator/' + this.typeName + '/' + 'decorators' + '.json';
+    htmlUri = 'assets/json/generator/' + this.typeName + '/' + this.typeName + '-' + 'decorators' + '.json';
+    titleString = "validator";
+    document.title = this.typeName + " - RxWeb Docs";
+   }
     else if (this.mainType == "vue") {
-      let vuesSplitedArray = location.pathname.split('/');
+      let vuesSplitedArray = this.router.url.split('/');
       codeUri = 'assets/json/generator/' + vuesSplitedArray[3] + '/' + 'decorators' + '.json';
       htmlUri = 'assets/json/generator/vue/' + vuesSplitedArray[3] + '/' + vuesSplitedArray[3] + '-' + 'vue' + '.json';
       titleString = "validator";
       document.title = splitedArray[3] + " - RxWeb Docs";
     }
-
+ 
     else if (this.mainType == "strongly-typed") {
-      let dynamicsplitedArray = location.pathname.split('/');
+      let dynamicsplitedArray = this.router.url.split('/');
+      if(dynamicsplitedArray[2] && dynamicsplitedArray[2].includes('#')){
+        var newUrl = dynamicsplitedArray[2].split('#')[0];
+        dynamicsplitedArray[2] = newUrl;
+      }
       codeUri = 'assets/json/generator/' + dynamicsplitedArray[2] + '/' + 'validators' + '.json';
       htmlUri = 'assets/json/generator/' + dynamicsplitedArray[2] + '/' + dynamicsplitedArray[2] + '-' + 'validators' + '.json';
       titleString = "validator";
@@ -148,7 +166,11 @@ export class PageComponent implements OnInit {
     }
 
     else {
-      let dynamicsplitedArray = location.pathname.split('/');
+      let dynamicsplitedArray = this.router.url.split('/');
+      if(dynamicsplitedArray[3] && dynamicsplitedArray[3].includes('#')){
+      var newUrl = dynamicsplitedArray[3].split('#')[0];
+      dynamicsplitedArray[3] = dynamicsplitedArray[3].replace(dynamicsplitedArray[3],newUrl);
+      }     
       codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/' + 'validators' + '.json';
       htmlUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/' + dynamicsplitedArray[3] + '-' + 'validators' + '.json';
       titleString = "validator";
@@ -172,7 +194,6 @@ export class PageComponent implements OnInit {
   }
 
   route(typeName: string, templateDrivenType?: string) {
-
     if (templateDrivenType) {
       this.router.navigate(['/', this.mainType, this.validationName, typeName, templateDrivenType])
       this.templateDrivenType = templateDrivenType;
@@ -187,7 +208,7 @@ export class PageComponent implements OnInit {
 
   routeExample() {
     this.showExample = !this.showExample;
-    var splitedArray = location.pathname.split('/');
+    var splitedArray = this.router.url.split('/');
     if (splitedArray[4])
       this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
     else
