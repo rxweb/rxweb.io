@@ -130,7 +130,7 @@ export class CountryService {
 }
         `
       },
-      html: `<select name="control" class="form-control">
+      html: `<select name="control" class="form-control translate">
   <option *ngFor="let item of countries | async" [value]="item.countryId">{{item.countryName}}</option>
 </select>`
     },

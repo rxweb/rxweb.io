@@ -7,10 +7,6 @@ const CONTROLS_ROUTES: Routes = [
 	loadChildren: () => import('./textbox/textbox.module').then(m => m.TextboxModule),
 },
 {
-	path:'color',
-	loadChildren: () => import('./color/color.module').then(m => m.ColorModule),
-},
-{
 	path:'checkbox',
 	loadChildren: () => import('./checkbox/checkbox.module').then(m => m.CheckboxModule),
 },

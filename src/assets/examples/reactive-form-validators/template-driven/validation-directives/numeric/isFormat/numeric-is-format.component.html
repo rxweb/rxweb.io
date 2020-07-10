@@ -1,0 +1,11 @@
+<div>
+  <form #userinfoForm = "ngForm" [rxwebForm]="userinfoForm" [model]="userinfo">
+    <div class="form-group">
+      <label>Total Amount</label>
+	    <input type="text" name="totalAmount" [(ngModel)]="userinfo.totalAmount"  class="form-control" [rxnumeric]="{'isFormat':true}"/>
+
+	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.totalAmount?.errors">{{userinfoForm.controls?.totalAmount?.errors?.numeric.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userinfoForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

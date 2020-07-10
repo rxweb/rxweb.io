@@ -1,0 +1,23 @@
+<form *ngIf="userFormGroup" [formGroup]="userFormGroup">
+    
+    <button class="btn btn-primary" (click)="addIndex()">Add Number</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Negative Arithemtic Expression</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr [formGroup]="address" *ngFor="let address of userFormGroup.controls.progressions.controls; let i = index">
+                <th scope="row">{{i}}</th>
+                <td><input type="text" formControlName="positiveArithemticExpression" class="form-control" />
+                </td>
+                <br/>
+              	<small class="form-text text-danger" *ngIf="address.controls.positiveArithemticExpression.errors">{{address.controls.positiveArithemticExpression.errors.lessThan.message}}<br/></small>
+            </tr>
+        </tbody>
+    </table>
+    <button  [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+</form>

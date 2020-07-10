@@ -1,0 +1,23 @@
+<form *ngIf="userFormGroup" [formGroup]="userFormGroup">
+   
+    <button class="btn btn-primary" (click)="addCartItem()">Add Item</button>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Products</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr [formGroup]="cart" *ngFor="let cart of userFormGroup.controls.carts.controls; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td><input type="text" formControlName="cartItem" class="form-control" />
+                </td>
+              
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="onSubmit()" [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+</form>

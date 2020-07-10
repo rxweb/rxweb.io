@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="digitalInfoFormGroup">
+    <div class="form-group">
+      <label>VideoGraphic GRid</label>
+      <input type="text" formControlName="videoGraphicGrid" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message based on message key.<br/></small>
+	<small class="form-text text-danger" *ngIf="digitalInfoFormGroup.controls.videoGraphicGrid.errors">{{digitalInfoFormGroup.controls.videoGraphicGrid.errors.grid.message}}<br/></small>
+    </div>
+    <button [disabled]="!digitalInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

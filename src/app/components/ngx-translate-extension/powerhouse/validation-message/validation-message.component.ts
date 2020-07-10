@@ -42,7 +42,7 @@ export class PowerhouseValidationMessageComponent implements OnInit {
       }`,
      html: `
 <form [formGroup]="formGroup">
-  <input type="text" formControlName="fullName" class="form-control" />
+  <input type="text" formControlName="fullName" class="form-control translate" />
   <span class="margin-left small red" *ngIf="formGroup.controls.fullName.errors">{{formGroup.controls.fullName.errors.required.message}}</span>
 </form>` 
   },
@@ -59,7 +59,7 @@ ngOnInit() {
   })
 }`,
       html: `<form [formGroup]="formGroup">
-  <input type="text" formControlName="designation" class="form-control" />
+  <input type="text" formControlName="designation" class="form-control translate" />
   <span class="margin-left small red" *ngIf="formGroup.controls.designation.errors">{{formGroup.controls.designation.errors.maxlength.message}}</span>
 </form>`
     },
@@ -83,7 +83,7 @@ identityRevealedValidator(control: FormGroup): ValidationErrors | null {
   };
 `,
       html: `<form [formGroup]="formGroup">
-  <input type="text" formControlName="userName" class="form-control" />
+  <input type="text" formControlName="userName" class="form-control translate" />
   <span class="margin-left small red" *ngIf="formGroup.controls.userName.errors">{{formGroup.controls.userName.errors.identityRevealed.message}}</span>
 </form>`
     }

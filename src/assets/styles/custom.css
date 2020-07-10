@@ -1258,7 +1258,7 @@ th {
   font-weight: 500;
 }
 
-.form-control {
+.translate {
   height: auto !important;
   width: 30% !important;
   display: inline !important;
@@ -1266,7 +1266,7 @@ th {
   font-size: 15px;
 }
 
-.margin-left {
+.margin-left {  
   margin-left: 10px;
 }
 

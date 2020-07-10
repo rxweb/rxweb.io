@@ -1,0 +1,13 @@
+<div>
+    <form  [formGroup]="userFormGroup">
+    
+      <div class="form-group" [formGroup]="userFormGroup.controls.address">
+      <label>areaName</label>
+      <input type="text" formControlName="areaName" class="form-control"  />   
+    </div>
+ 
+      <button [disabled]="!userFormGroup.valid"  class="btn btn-primary">Submit</button>
+       <button (click)="resetForm()"  class="btn btn-primary">Reset</button>
+    </form>
+  </div>
+  

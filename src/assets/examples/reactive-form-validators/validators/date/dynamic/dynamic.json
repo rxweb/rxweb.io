@@ -1,0 +1,1 @@
+{"birthDate":{"date":true},"registrationDate":{"date":{"allowISODate":"true"}},"enrollmentDate":{"date":{"conditionalExpression":"x => x.birthDate ==\"16/04/1997\""}},"allocationDate":{"date":{"message":"{{0}} is not a valid date"}},"confirmationDate":{"date":{"messageKey":"dateMessageKey"}}}

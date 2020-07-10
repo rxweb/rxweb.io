@@ -1,0 +1,4 @@
+<form [formGroup]="dynamicFormBuildConfig.formGroup">
+    <div viewMode="basic" [rxwebDynamicForm]="dynamicFormBuildConfig" [uiBindings]="uiBindings"></div>
+</form>
+<pre>Confirm: {{dynamicFormBuildConfig.formGroup.controls.confirm.value | json}}</pre>

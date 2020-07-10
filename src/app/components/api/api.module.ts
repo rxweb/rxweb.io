@@ -6,10 +6,8 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [API_ROUTING,PageModule],
+  imports: [API_ROUTING ,PageModule],
   exports: [RouterModule],
   })
 export class ApiModule { }
-
-
 

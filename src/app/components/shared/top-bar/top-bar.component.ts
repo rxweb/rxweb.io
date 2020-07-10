@@ -46,7 +46,6 @@ export class TopBarComponent implements OnInit {
     }
     var splitedArray = this.router.url.split("/");
     this.mainType = splitedArray[1];
-    console.log(this.router.url)
     this.validationName = splitedArray[2];
     if (splitedArray.length > 0 && splitedArray[1]) {
       if (splitedArray.includes("rx-web-core")) {

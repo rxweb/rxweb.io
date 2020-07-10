@@ -6,7 +6,7 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [SANITIZERS_ROUTING,PageModule],
+  imports: [SANITIZERS_ROUTING ,PageModule],
   exports: [RouterModule],
   })
 export class SanitizersModule { }

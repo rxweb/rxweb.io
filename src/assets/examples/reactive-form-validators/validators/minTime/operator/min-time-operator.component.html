@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="attandanceDetailFormGroup">
+    <div class="form-group">
+      <label>Required Hours</label>
+      <input type="text" formControlName="requiredHours" class="form-control"  />
+      <small class="form-text text-muted">Value should be greater than 8:30<br/></small>
+     <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.requiredHours.errors">{{attandanceDetailFormGroup.controls.requiredHours.errors.minTime.message}}<br/></small>	
+    </div>
+    <button [disabled]="!attandanceDetailFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

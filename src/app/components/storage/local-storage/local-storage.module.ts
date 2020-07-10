@@ -1,19 +1,14 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-
-import { DECORATORS_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/http/decorators/decorators.constants";
-
-import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { PageModule } from "src/app/components/page/page.module";
 import { LOCAL_STORAGE_ROUTING } from './local-storage.routing';
-
-
-
+import { LocalStorageValidatorsExtendedModule } from 'src/assets/examples/storage/local-storage/local-storage-validators-extended.module';
+import { LOCAL_STORAGE_COMPONENT_EXAMPLE_CONSTANT } from './local-storage.constants';
+import { COMPONENT_EXAMPLE } from 'src/app/domain/application.const';
 
 @NgModule({
-  imports: [LOCAL_STORAGE_ROUTING,PageModule],
+  imports: [LOCAL_STORAGE_ROUTING, LocalStorageValidatorsExtendedModule, PageModule],
   exports: [RouterModule],
-    providers:[{ provide: COMPONENT_EXAMPLE, useValue: DECORATORS_COMPONENT_EXAMPLE_CONSTANT }]
-  })
+  providers: [{ provide: COMPONENT_EXAMPLE, useValue: LOCAL_STORAGE_COMPONENT_EXAMPLE_CONSTANT }]
+})
 export class LocalStorageModule { }

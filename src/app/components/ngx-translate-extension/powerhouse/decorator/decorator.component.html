@@ -119,7 +119,7 @@
       <div>
         <div class="code_eg">Output</div>
         <div class="ngx-output">
-          <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control">
+          <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control translate">
           <span class="margin-left badge badge-{{translate.currentLang}}">
             {{global.notification }}
           </span>
@@ -362,7 +362,7 @@
       <div>
         <div class="code_eg">Output</div>
         <div class="ngx-output">
-          <select name="control" class="form-control">
+          <select name="control" class="form-control translate">
             <option *ngFor="let item of countries | async" [value]="item.countryId">{{item.countryName}}</option>
           </select>
           <br />

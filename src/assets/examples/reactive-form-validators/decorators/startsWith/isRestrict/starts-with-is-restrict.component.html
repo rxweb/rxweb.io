@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>Department</label>
+      <input type="text" formControlName="department" class="form-control"  />
+      <small class="form-text text-muted">Input should not startsWith `D`<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.department.errors">{{userFormGroup.controls.department.errors.startsWith.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

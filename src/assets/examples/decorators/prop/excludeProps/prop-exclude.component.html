@@ -1,0 +1,8 @@
+<form  [formGroup]="userFormGroup">
+    <div class="form-group">
+       <label>Type</label>
+       <input type="text" formControlName="type" class="form-control" />
+   </div>   
+   <button  [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  Value : {{userFormGroup.value | json}}
+</form>

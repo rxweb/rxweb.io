@@ -1,0 +1,21 @@
+<div>
+    <form [formGroup]="userFormGroup">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" type="text" formControlName="fullName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input id="age" type="number" formControlName="age" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="accepted">Do you accept cookies?</label>
+            <select id="accepted" formControlName="accepted" class="form-control">
+              <option [value]="item.value" *ngFor="let item of acceptCookies">{{item.text}}</option>
+              </select>
+        </div>
+    </form>
+
+      {{this.userFormGroup.modelInstance | json}}
+
+</div>

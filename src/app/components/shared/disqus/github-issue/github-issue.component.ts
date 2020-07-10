@@ -22,47 +22,47 @@ export class GitHubIssueComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.openIssues(true);
+       // this.openIssues(true);
     }
 
-    openIssues(fromInit: boolean) {
-        this.openIssuesList = [];
-        this.closedIssuesList = [];
-        var url = 'https://api.github.com/repos/rxweb/rxweb/issues?state=open';
-        if (this.router.url.split('/')[2])
-            url += '&labels=' + this.router.url.split('/')[2];
-        this.http.get(url).subscribe((response: any[]) => {
-            for (var i = 0; i < response.length; i++) {
-                this.setIssueList(response[i], 'open');
-            }
-            if (fromInit)
-                this.showComponent = true;
-        })
-    }
+    // openIssues(fromInit: boolean) {
+    //     this.openIssuesList = [];
+    //     this.closedIssuesList = [];
+    //     var url = 'https://api.github.com/repos/rxweb/rxweb/issues?state=open';
+    //     if (this.router.url.split('/')[2])
+    //         url += '&labels=' + this.router.url.split('/')[2];
+    //     this.http.get(url).subscribe((response: any[]) => {
+    //         for (var i = 0; i < response.length; i++) {
+    //             this.setIssueList(response[i], 'open');
+    //         }
+    //         if (fromInit)
+    //             this.showComponent = true;
+    //     })
+    // }
 
-    closeIssues(fromInit: boolean) {
-        this.openIssuesList = [];
-        this.closedIssuesList = [];
-        var url = 'https://api.github.com/repos/rxweb/rxweb/issues?state=closed';
-        if (this.router.url.split('/')[2])
-            url += '&labels=' + this.router.url.split('/')[2];
+    // closeIssues(fromInit: boolean) {
+    //     this.openIssuesList = [];
+    //     this.closedIssuesList = [];
+    //     var url = 'https://api.github.com/repos/rxweb/rxweb/issues?state=closed';
+    //     if (this.router.url.split('/')[2])
+    //         url += '&labels=' + this.router.url.split('/')[2];
 
-        this.http.get(url).subscribe((response: any[]) => {
-            for (var i = 0; i < response.length; i++) {
-                this.setIssueList(response[i], 'close');
-            }
-        })
-    }
+    //     this.http.get(url).subscribe((response: any[]) => {
+    //         for (var i = 0; i < response.length; i++) {
+    //             this.setIssueList(response[i], 'close');
+    //         }
+    //     })
+    // }
 
-    tabClick(activeTabName: string) {
-        this.activeTab = activeTabName;
-        if (activeTabName == 'open') {
-            this.openIssues(false)
-        }
-        else {
-            this.closeIssues(false);
-        }
-    }
+    // tabClick(activeTabName: string) {
+    //     this.activeTab = activeTabName;
+    //     if (activeTabName == 'open') {
+    //         this.openIssues(false)
+    //     }
+    //     else {
+    //         this.closeIssues(false);
+    //     }
+    // }
 
     setIssueList(objectElement: any, type: string) {
         let item: any = {}

@@ -147,6 +147,10 @@ const FORM_VALIDATION_ROUTES: Routes = [
 	loadChildren: () => import('./lowerCase/lower-case.module').then(m => m.LowerCaseModule),
 },
 {
+	path:'mask',
+	loadChildren: () => import('./mask/mask.module').then(m => m.MaskModule),
+},
+{
 	path:'mac',
 	loadChildren: () => import('./mac/mac.module').then(m => m.MacModule),
 },
@@ -157,10 +161,6 @@ const FORM_VALIDATION_ROUTES: Routes = [
 {
 	path:'maxLength',
 	loadChildren: () => import('./maxLength/max-length.module').then(m => m.MaxLengthModule),
-},
-{
-	path:'mask',
-	loadChildren: () => import('./mask/mask.module').then(m => m.MaskModule),
 },
 {
 	path:'maxNumber',

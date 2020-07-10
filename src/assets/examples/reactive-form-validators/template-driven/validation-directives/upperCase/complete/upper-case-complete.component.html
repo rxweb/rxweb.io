@@ -1,0 +1,32 @@
+<div>
+  <form #locationForm = "ngForm" [rxwebForm]="locationForm" [model]="location">
+    <div class="form-group">
+      <label>Country Name</label>
+	    <input type="text" name="countryName" [(ngModel)]="location.countryName"  class="form-control" rxupperCase/>
+
+	   <small class="form-text text-danger" *ngIf="locationForm.controls?.countryName?.errors">{{locationForm.controls?.countryName?.errors?.upperCase.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>City Name</label>
+	    <input type="text" name="cityName" [(ngModel)]="location.cityName"  class="form-control" [rxupperCase]="{'conditionalExpression':'x => x.countryName == \'INDIA\''}"/>
+
+      <small class="form-text text-muted">To apply the validation of upperCase on 'City Name' field, then enter the value of 'INDIA' in 'Country Name' textbox.<br/></small>
+      <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
+	   <small class="form-text text-danger" *ngIf="locationForm.controls?.cityName?.errors">{{locationForm.controls?.cityName?.errors?.upperCase.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Colony Name</label>
+	    <input type="text" name="colonyName" [(ngModel)]="location.colonyName"  class="form-control" [rxupperCase]="{'message':'You can enter only upperCase letters.'}"/>
+
+	   <small class="form-text text-danger" *ngIf="locationForm.controls?.colonyName?.errors">{{locationForm.controls?.colonyName?.errors?.upperCase.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Street Name</label>
+	    <input type="text" name="streetName" [(ngModel)]="location.streetName"  class="form-control" [rxupperCase]="{'messageKey':'upperCaseMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="locationForm.controls?.streetName?.errors">{{locationForm.controls?.streetName?.errors?.upperCase.message}}<br/></small>	
+    </div>
+    <button [disabled]="!locationForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+<div>
+  <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
+    <div class="form-group">
+      <label>Joining Age</label>
+	    <input type="text" name="joiningAge" [(ngModel)]="user.joiningAge"  class="form-control" [rxgreaterThan]="{'fieldName':'age','messageKey':'greaterThanMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.joiningAge?.errors">{{userForm.controls?.joiningAge?.errors?.greaterThan.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

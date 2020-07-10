@@ -30,7 +30,6 @@ export class AppCodeComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.type = typeof this.content;
     this.allContents = [];
     if (this.type == "object") {

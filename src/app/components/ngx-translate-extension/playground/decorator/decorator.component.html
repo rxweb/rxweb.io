@@ -23,7 +23,7 @@
     <tr>
       <td class="category">Multilingual Text with Custom Parameter</td>
       <td>
-        <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control">
+        <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control translate">
 
         <span class="margin-left badge badge-{{translate.currentLang}}">
 
@@ -79,7 +79,7 @@
       <td class="category">Async Source</td>
       <td>
 
-        <select name="control" class="form-control">
+        <select name="control" class="form-control translate">
           <option *ngFor="let item of countries | async" [value]="item.countryId">{{item.countryName}}</option>
         </select>
 

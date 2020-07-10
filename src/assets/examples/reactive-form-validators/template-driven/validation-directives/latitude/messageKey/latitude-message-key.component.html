@@ -1,0 +1,12 @@
+<div>
+  <form #countryForm = "ngForm" [rxwebForm]="countryForm" [model]="country">
+    <div class="form-group">
+      <label>Fourth Country Latitude</label>
+	    <input type="text" name="fourthCountryLatitude" [(ngModel)]="country.fourthCountryLatitude"  class="form-control" [rxlatitude]="{'messageKey':'latitudeMessageKey'}"/>
+
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+	   <small class="form-text text-danger" *ngIf="countryForm.controls?.fourthCountryLatitude?.errors">{{countryForm.controls?.fourthCountryLatitude?.errors?.latitude.message}}<br/></small>	
+    </div>
+    <button [disabled]="!countryForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

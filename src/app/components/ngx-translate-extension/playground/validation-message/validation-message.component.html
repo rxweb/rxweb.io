@@ -14,7 +14,7 @@
       <td class="category">Simple Validation Message</td>
       <td>
         <form [formGroup]="formGroup">
-          <input type="text" formControlName="fullName" class="form-control" />
+          <input type="text" formControlName="fullName" class="form-control translate" />
           <span class="margin-left small red" *ngIf="formGroup.controls.fullName.errors">{{formGroup.controls.fullName.errors.required.message}}</span>
         </form>
       </td>
@@ -24,7 +24,7 @@
       <td class="category">Validation Message with parameter interpolation</td>
       <td>
         <form [formGroup]="formGroup">
-          <input type="text" formControlName="designation" class="form-control" />
+          <input type="text" formControlName="designation" class="form-control translate" />
           <span class="margin-left small red" *ngIf="formGroup.controls.designation.errors">{{formGroup.controls.designation.errors.maxlength.message}}</span>
         </form>
       </td>
@@ -35,7 +35,7 @@
       <td class="category">Validation Message with array parameter interpolation</td>
       <td>
         <form [formGroup]="formGroup">
-          <input type="text" formControlName="userName" class="form-control" />
+          <input type="text" formControlName="userName" class="form-control translate" />
           <span class="margin-left small red" *ngIf="formGroup.controls.userName.errors">{{formGroup.controls.userName.errors.identityRevealed.message}}</span>
         </form>
       </td>

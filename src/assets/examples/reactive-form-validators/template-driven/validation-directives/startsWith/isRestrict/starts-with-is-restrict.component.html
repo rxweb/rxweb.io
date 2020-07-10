@@ -1,0 +1,12 @@
+<div>
+  <form #userForm = "ngForm" [rxwebForm]="userForm" [model]="user">
+    <div class="form-group">
+      <label>Department</label>
+	    <input type="text" name="department" [(ngModel)]="user.department"  class="form-control" [rxstartsWith]="{'value':'D','isRestrict':true}"/>
+
+      <small class="form-text text-muted">Input should not startsWith `D`<br/></small>
+	   <small class="form-text text-danger" *ngIf="userForm.controls?.department?.errors">{{userForm.controls?.department?.errors?.startsWith.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

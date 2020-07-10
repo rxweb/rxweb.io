@@ -1,0 +1,12 @@
+<div>
+    <form  [formGroup]="userInfoFormGroup">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" formControlName="email" class="form-control"  />
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.email.errors">{{userInfoFormGroup.controls.email.errors.or.message}}<br/></small>	
+      </div>
+
+      <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

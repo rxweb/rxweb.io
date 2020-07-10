@@ -1,7 +1,6 @@
-
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { PageComponent } from "src/app/components/page/page.component";
-import { Routes, RouterModule } from "@angular/router";
-import { ModuleWithProviders } from "@angular/core";
 const NGX_TRANSLATE_VALIDATION_MESSAGE_ROUTES: Routes = [
 {
 	path:':typeName/:templateDrivenType',

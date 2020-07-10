@@ -1,0 +1,12 @@
+<div>
+  <form #userinfoForm = "ngForm" [rxwebForm]="userinfoForm" [model]="userinfo">
+    <div class="form-group">
+      <label>Registration Date</label>
+	    <input type="text" name="registrationDate" [(ngModel)]="userinfo.registrationDate"  class="form-control" [rxdate]="{'allowISODate':true}"/>
+
+      <small class="form-text text-muted">allows standard way to express a numeric calendar date according to International Organization for Standardization.<br/></small>
+	   <small class="form-text text-danger" *ngIf="userinfoForm.controls?.registrationDate?.errors">{{userinfoForm.controls?.registrationDate?.errors?.date.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userinfoForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

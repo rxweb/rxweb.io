@@ -1,0 +1,38 @@
+{
+    "entryPlace": {},
+    "closingTime": {
+        "maxTime": {
+            "value": "23:30"
+        }
+    },
+    "breakHours": {
+        "maxTime": {
+            "operator": "<",
+            "value": "00:10"
+        }
+    },
+    "entryTime": {
+        "maxTime": {
+            "conditionalExpression": "x => x.entryPlace == \"Main Entry Gate\"",
+            "value": "11:00"
+        }
+    },
+    "totalOutTime": {
+        "maxTime": {
+            "allowSeconds": "true",
+            "value": "02:00:00"
+        }
+    },
+    "exitTime": {
+        "maxTime": {
+            "message": "Please enter valid input",
+            "fieldName": "closingTime"
+        }
+    },
+    "netInTime": {
+        "maxTime": {
+            "messageKey": "maxTimeMessageKey",
+            "fieldName": "totalInTime"
+        }
+    }
+}

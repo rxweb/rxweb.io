@@ -6,7 +6,7 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [GENERICS_ROUTING,PageModule],
+  imports: [GENERICS_ROUTING ,PageModule],
   exports: [RouterModule],
   })
 export class GenericsModule { }

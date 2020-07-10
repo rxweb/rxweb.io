@@ -1,0 +1,11 @@
+<div>
+  <form #attandancedetailForm = "ngForm" [rxwebForm]="attandancedetailForm" [model]="attandancedetail">
+    <div class="form-group">
+      <label>Opening Time</label>
+	    <input type="text" name="openingTime" [(ngModel)]="attandancedetail.openingTime"  class="form-control" [rxminTime]="{'value':'08:00'}"/>
+
+	   <small class="form-text text-danger" *ngIf="attandancedetailForm.controls?.openingTime?.errors">{{attandancedetailForm.controls?.openingTime?.errors?.minTime.message}}<br/></small>	
+    </div>
+    <button [disabled]="!attandancedetailForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

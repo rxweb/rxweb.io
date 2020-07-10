@@ -19,7 +19,7 @@
     "json-server": "json-server --watch db.json --port 3004",
     "dev:ssr": "ng run rxwebio:serve-ssr",
     "serve:ssr": "node dist/rxwebio/server/main.js",
-    "build:ssr": "ng build --prod && ng run rxwebio:server:production",
+    "build:ssr": "node --max-old-space-size=8192 node_modules/@angular/cli/bin/ng build --prod && ng run rxwebio:server:production",
     "prerender": "ng run rxwebio:prerender"
   },
   "window": {

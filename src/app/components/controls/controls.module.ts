@@ -6,7 +6,7 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [CONTROLS_ROUTING,PageModule],
+  imports: [CONTROLS_ROUTING ,PageModule],
   exports: [RouterModule],
   })
 export class ControlsModule { }

@@ -64,7 +64,7 @@ import { AngularHomeComponent } from './angular-home-page/angular-home.component
 import { QuickStartComponent } from './quick-start/quick-start.component';
 import { VueGettingStartedComponent } from './vue-getting-started/vue-getting-started.component';
 import { VueHomePageComponent } from './vue-home-page/vue-home-page.component';
-import { StaticTranslationComponent } from 'src/assets/examples/static-translation/static-translation.component';
+
 import { TranslateModule, TranslateLoader } from "@rxweb/ngx-translate-extension";
 import { RxTranslateSanitizeModule } from "@rxweb/translate";
 import { TranslateHttpLoader } from './ngx-translate-extension/ngx-translate-extension.module';

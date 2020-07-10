@@ -1,0 +1,23 @@
+import {  alpha,prop, } from   "@rxweb/reactive-form-validators"   
+
+export class AddressInfo {
+
+	@prop()
+	countryName: string;
+
+	@prop()
+	cityName: string;
+
+	@prop()
+	spanishcityName: string;
+
+	@prop()
+	stateName: string;
+
+	@prop()
+	stateCode: string;
+
+	@prop()
+	cityCode: string;
+
+}

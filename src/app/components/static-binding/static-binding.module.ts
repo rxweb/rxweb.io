@@ -6,7 +6,7 @@ import { PageModule } from "src/app/components/page/page.module";
 
 
 @NgModule({
-  imports: [STATIC_BINDING_ROUTING,PageModule],
+  imports: [STATIC_BINDING_ROUTING ,PageModule],
   exports: [RouterModule],
   })
 export class StaticBindingModule { }

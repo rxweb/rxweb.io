@@ -44,56 +44,9 @@ export class AppExampleRunnerComponent implements OnInit {
   }
  
   ngOnInit(): void {
-
-    let codeUrl = "";
-    if (this.router.url.includes("dynamic-validation")) {
-
-      this.showElement = true;
-      this.exampleHeight = 750;
-      this.isRunCode = true;
-    }
-    this.showElement = false;
   
-    if (this.router.url.includes("dynamic-validation") || this.decoratorName == "get"  || this.decoratorName == "post" || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject") {
-      
-      this.showElement = true;
-    }
-    this.tabArray = [];
-    if (this.content && this.showTab) {
-      if (this.content.function != null)
-        this.tabArray.push({ "tabName": "Component", "tabItem": "component", "content": this.content.function })
-      if (this.content.model != null)
-        this.tabArray.push({ "tabName": "Model", "tabItem": "model", "content": this.content.model })
-      if (this.decoratorName != "sanitizer" && this.decoratorName != "post" && this.decoratorName != "delete" && this.decoratorName != "patch" && this.decoratorName != "put" && this.decoratorName != "get" && this.decoratorName != "list" && this.content.component != null)
-        this.tabArray.push({ "tabName": "Component", "tabItem": "component", "content": this.content.component })
-      if (JSON.stringify(this.content.json) !== JSON.stringify({})) {
-        var jsonObject = this.content.json;
-        if (jsonObject) {
-          for (var prop in jsonObject) {
-            if (jsonObject.hasOwnProperty(prop) && this.decoratorName != "get") {
-              this.tabArray.push({ "tabName": prop, "tabItem": prop, "content": jsonObject[prop] })
-            }
-          }
-        }
-      }
-      if (this.content.html != null)
-        this.tabArray.push({ "tabName": "Html", "tabItem": "html", "content": this.content.html })
-      if (this.content && this.content.dataParam)
-        this.dataParam = this.content.dataParam;
-      this.activeTab = this.tabArray[0].tabName;
-    }
-    if(this.decoratorName.includes("Of")){
-     this.exampleHeights =  [{ exampleName: 'add', height: 300 }, { exampleName: 'conditionalExpression', height: 800 },  { exampleName: 'allowWhiteSpace', height: 300 }, { exampleName: 'message', height: 360 }, { exampleName: 'messageKey', height: 360 }, { exampleName: 'locale', height: 160 }, { exampleName: 'complete', height: 1500 }, { exampleName: 'dynamic', height: 1200 }]
-    }
-    else if(this.decoratorName.includes("greaterThanLessThanFormArray")){
-      this.exampleHeights =  [{ exampleName: 'add', height: 350 }, { exampleName: 'conditionalExpression', height: 800 },  { exampleName: 'allowWhiteSpace', height: 300 }, { exampleName: 'message', height: 360 }, { exampleName: 'messageKey', height: 360 }, { exampleName: 'locale', height: 160 }, { exampleName: 'complete', height: 350 }, { exampleName: 'dynamic', height: 1200 }]
-    }
-    let example = this.exampleHeights.filter(x => x.exampleName == this.exampleName);
-    if (example.length > 0)
-      this.exampleHeight = example[0].height; 
-    else
-      this.exampleHeight = 160;
-    
+    let codeUrl = "";
+    this.showElement = false;
     if(this.router.url.includes("vue")){
       this.clientSideValidationType = "vue"
        let validationName = `${this.dashCase(this.router.url.split('/')[3])}`;
@@ -101,19 +54,42 @@ export class AppExampleRunnerComponent implements OnInit {
        this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
        setTimeout(() => { this.isRunCode = true; }, 500)
      }
-     else {
-       this.clientSideValidationType = "angular"
-     if (this.router.url.includes("#"))
+     let example = this.exampleHeights.filter(x => x.exampleName == this.exampleName);
+    if (example.length > 0)
+      this.exampleHeight = example[0].height;
+    else
+      this.exampleHeight = 160;
+    if(this.decoratorName == "get"|| this.decoratorName == "post"  || this.decoratorName == "delete" || this.decoratorName == "patch" || this.decoratorName == "put" || this.decoratorName == "sanitizer" || this.decoratorName == "list" || this.decoratorName == "async" || this.decoratorName == "prop" || this.decoratorName == "propArray" || this.decoratorName == "propObject" )
+    {
+      this.showElement = true;
+    }
+    this.tabArray = []; 
+    if(this.content && this.showTab){
+      if(this.content.function != null)
+      this.tabArray.push({"tabName": "Component", "tabItem": "component", "content": this.content.function})
+      if (this.content.model != null)
+        this.tabArray.push({ "tabName": "Model", "tabItem": "model", "content": this.content.model })
+      if (this.decoratorName != "sanitizer"  && this.decoratorName != "post"  && this.decoratorName != "delete"   && this.decoratorName != "patch"  && this.decoratorName != "put" && this.decoratorName != "get"  && this.decoratorName != "list" && this.content.component != null)
+        this.tabArray.push({ "tabName": "Component", "tabItem": "component", "content": this.content.component })
+      if (JSON.stringify(this.content.json) !== JSON.stringify({}))
+      {
+        var jsonObject = this.content.json;
+        if (jsonObject) {
+          for (var prop in jsonObject) {
+            if (jsonObject.hasOwnProperty(prop) && this.decoratorName !="get") {
+              this.tabArray.push({ "tabName": prop, "tabItem": prop, "content": jsonObject[prop] })
+            }
+          }
+        }
+      }
+      if (this.content.html != null)
+        this.tabArray.push({ "tabName": "Html", "tabItem": "html", "content": this.content.html })
+      if(this.content && this.content.dataParam)
+      this.dataParam = this.content.dataParam;
+      this.activeTab = this.tabArray[0].tabName;
+    }
     
-       codeUrl = "https://rxwebangular.z20.web.core.windows.net" + this.router.url.split("#")[0] + "?exampleName=" + this.exampleName;
-       else if(this.router.url.includes("?"))
-        codeUrl = "https://rxwebangular.z20.web.core.windows.net" + this.router.url.split("?")[0] + "?exampleName=" + this.exampleName;
-      else
-        codeUrl = "https://rxwebangular.z20.web.core.windows.net" + this.router.url + "?exampleName=" + this.exampleName;
- 
-     this.exampleUrl = this.sanitizer.bypassSecurityTrustResourceUrl(codeUrl);
-      this.isRunCode = true; 
-     }
+    
   }
 
 

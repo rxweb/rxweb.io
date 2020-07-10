@@ -1,0 +1,36 @@
+<div>
+  <form  [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>Agree to terms and conditions</label>&nbsp;
+      <input type="checkbox" formControlName="isAgree" /><br/>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.isAgree.errors">{{userFormGroup.controls.isAgree.errors.requiredTrue.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Is Checked</label>&nbsp;
+      <input type="checkbox" formControlName="isChecked" /><br/>
+      <small class="form-text text-muted">Conditional validation will be applied if the isAgree checkbox is  true<br/></small>
+      <small class="form-text text-muted">Conditional Expression with type 'function'<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.isChecked.errors">{{userFormGroup.controls.isChecked.errors.requiredTrue.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>CheckMeOut</label>&nbsp;
+      <input type="checkbox" formControlName="checkMeOut" /><br/>
+      <small class="form-text text-muted">Conditional validation will be applied if the isAgree checkbox is  true<br/></small>
+      <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.checkMeOut.errors">{{userFormGroup.controls.checkMeOut.errors.requiredTrue.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>IsActive</label>&nbsp;
+      <input type="checkbox" formControlName="isActive" /><br/>
+      <small class="form-text text-muted">Shows Custom Validation Message.<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.isActive.errors">{{userFormGroup.controls.isActive.errors.requiredTrue.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>IsBlocked</label>&nbsp;
+      <input type="checkbox" formControlName="isBlocked" /><br/>
+      <small class="form-text text-muted">Shows Custom Validation Message based on message key<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.isBlocked.errors">{{userFormGroup.controls.isBlocked.errors.requiredTrue.message}}<br/></small>		
+    </div>
+    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>
