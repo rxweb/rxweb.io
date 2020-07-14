@@ -59,7 +59,7 @@ export class AppCodeComponent implements OnInit {
   hideActive(item: any) {
     item.active = false;
     if (item.childrens && item.childrens.length != 0) {
-      debugger
+    
       item.childrens.forEach(elem => {
         this.hideActive(elem);
       })

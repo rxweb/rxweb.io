@@ -67,7 +67,7 @@ export class PageComponent implements OnInit,OnDestroy {
     this.myObserver = router.events.subscribe((val) => { 
 
       if (val instanceof NavigationEnd) {
-      debugger
+
        if(val.url.includes("vue")){
         if(val.url.split('/')[4])
         this.typeName = val.url.split('/')[4];
