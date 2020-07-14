@@ -64,6 +64,13 @@ export class StackBlitzService {
                   "required": "This field is required",
 
                 }
+                
+              }
+              else if (validationName == "backEndMessages") {
+                configObject.validationMessage = {
+                  "required": "This field is required",
+
+                }
               }
               else if (validationName == "RxFormGroup") {
                 configObject.validationMessage = {
