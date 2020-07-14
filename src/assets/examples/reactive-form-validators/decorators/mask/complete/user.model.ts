@@ -24,6 +24,11 @@ export class User {
 	contactNumber: string;
 	
 	
+	//Digit Options
+	@mask({mask:'999-9999999'  ,minLength:10 }) 
+	residentalContactNumber: string;
+	
+	
 	//Shows custom message based on message key
 	@mask({mask:'9999999999'  ,messageKey:'maskMessageKey' }) 
 	alternateContactNumber: string;

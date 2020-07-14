@@ -64,8 +64,10 @@ export class PageComponent implements OnInit,OnDestroy {
       this.gitUrl = t.gitDocPath;
     })
 
-    this.myObserver = router.events.subscribe((val) => {      
+    this.myObserver = router.events.subscribe((val) => { 
+
       if (val instanceof NavigationEnd) {
+      debugger
        if(val.url.includes("vue")){
         if(val.url.split('/')[4])
         this.typeName = val.url.split('/')[4];
@@ -77,7 +79,12 @@ export class PageComponent implements OnInit,OnDestroy {
         var newUrl = val.url.split('#')[0]
         val.url = val.url.replace(val.url,newUrl);
         }
+        else if(val.url.includes("?")){
+          var newUrl = val.url.split('?')[0]
+          val.url = val.url.replace(val.url,newUrl);
+        }
         if(val.url.split('/')[3])
+        
         this.typeName = val.url.split('/')[3];
         else
         this.typeName = val.url.split('/')[2];
@@ -94,7 +101,9 @@ export class PageComponent implements OnInit,OnDestroy {
           });
         
           this.bind();
-      }     
+         
+    }
+  
     })
     
   }
@@ -122,7 +131,6 @@ export class PageComponent implements OnInit,OnDestroy {
     }
   }
   bind() {
-    debugger;
     this.codeUri = "";
     this.htmlUri = "";
     this.showViewer = false;
@@ -133,6 +141,14 @@ export class PageComponent implements OnInit,OnDestroy {
    
 
     if (this.mainType != "reactive-dynamic-forms"  && this.mainType != "strongly-typed" && this.mainType != "rxweb-storage" && this.mainType != "ngx-translate-extension" && this.mainType != "rxweb-localization" && this.mainType != "rxweb-router" && this.mainType != "vue" && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
+      if(splitedArray[3].includes("?")){
+        var newUrl = splitedArray[3].split('?')[0]
+        splitedArray[3] = splitedArray[3].replace(splitedArray[3],newUrl);
+      }
+      if(splitedArray[3].includes("#")){
+        var newUrl = splitedArray[3].split('#')[0]
+        splitedArray[3] = splitedArray[3].replace(splitedArray[3],newUrl);
+      }
       switch (splitedArray[3]) {
         case "decorators":
           this.codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
@@ -197,15 +213,14 @@ export class PageComponent implements OnInit,OnDestroy {
 
    
     if(this.typeName)
+
     this.http.get(this.codeUri, this.options).subscribe(response => {
-      debugger
       this.codeContent = JSON.parse(response.toString());
       if (this.router.url.includes("vue")) {
         this.codeContent.htmlContent = this.codeContent.htmlContent.replace("Through Angular FormBuilder service we create FormGroup in the component.", "");
         this.codeContent.htmlContent = this.codeContent.htmlContent.replace("Next, we need to write html code.", "");
       }
-      this.http.get(this.htmlUri, this.options).subscribe((responseObj: object) => { 
-        debugger        
+      this.http.get(this.htmlUri, this.options).subscribe((responseObj: object) => {      
         this.jsonContent = JSON.parse(responseObj.toString());
         this.showComponent = true;
         this.activeTab = splitedArray[3];
@@ -228,11 +243,17 @@ export class PageComponent implements OnInit,OnDestroy {
   }
 
   routeExample() {
+
     this.showExample = !this.showExample;
-    var splitedArray = this.router.url.split('/');
+    var splitedArray = this.router.url.split('/')
     if (splitedArray[4])
-      this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+    
+      this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample } });
     else
-      this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+    if(splitedArray[3].includes("?")){
+      var newUrl = splitedArray[3].split('?')[0]
+      splitedArray[3] = splitedArray[3].replace(splitedArray[3],newUrl);
+    }
+      this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample } });
   }
 }

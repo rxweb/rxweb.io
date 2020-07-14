@@ -33,8 +33,7 @@
                         <div class="tab-content fade" [class.show]="showViewer">
                             <div class="tab-pane panel-body validation-tab active">
                                 <div class="tabs-left" *ngIf="showViewer" [@enterAnimation]>
-                                    <button class="btn  example-btn" [class.btn-primary]="!showExample"
-                                        [class.btn-outline-secondary]="showExample" *ngIf="mainType != 'how-to'"
+                                    <button class="btn  example-btn" *ngIf="mainType != 'how-to'"
                                         (click)="routeExample()">Examples Only</button>
                                         
                                     <page-viewer [content]="codeContent.htmlContent" [tabArray]="codeContent.tabArray"

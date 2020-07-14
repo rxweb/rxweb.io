@@ -9,14 +9,7 @@ const MASK_ROUTES: Routes = [
 	{
 		path:"validators",
 		component:PageComponent
-	},
-	{
-		path:"template-driven/directives",
-		component:PageComponent
-	},
-	{
-		path:"template-driven/decorators",
-		component:PageComponent
 	}
+
 ];
 export const MASK_ROUTING = RouterModule.forChild(MASK_ROUTES);

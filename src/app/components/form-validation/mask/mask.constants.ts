@@ -19,6 +19,8 @@ import { MaskAddComponent } from "src/assets/examples/reactive-form-validators/d
 
 import { MaskAddValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/mask/add/mask-add.component";
 import { MaskEditComponent } from "src/assets/examples/reactive-form-validators/decorators/mask/edit/mask-edit.component";
+import { MaskMinLengthValidatorComponent } from 'src/assets/examples/reactive-form-validators/validators/mask/minLength/mask-min-length.component';
+import { MaskMinLengthComponent } from 'src/assets/examples/reactive-form-validators/decorators/mask/minLength/mask-min-length.component';
 
 export const MASK_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
@@ -30,6 +32,7 @@ export const MASK_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						dynamic : MaskDynamicComponent,
 						add : MaskAddComponent,
 						edit : MaskEditComponent,
+						minLength: MaskMinLengthComponent
 			  },
 	template_driven_validation_directives:{
 				
@@ -42,5 +45,6 @@ export const MASK_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						messageKey : MaskMessageKeyValidatorComponent,
 						dynamic : MaskDynamicValidatorComponent,
 						add : MaskAddValidatorComponent,
+						minLength:MaskMinLengthValidatorComponent
 			  },
 }

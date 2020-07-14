@@ -15,6 +15,9 @@ export class User {
 	contactNumber: string;
 
 	@prop()
+	residentalContactNumber: string;
+
+	@prop()
 	alternateContactNumber: string;
 
 }

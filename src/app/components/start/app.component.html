@@ -1,3 +1,4 @@
+
 <aside *ngIf="gitterAsideShow" class="gitter-chat-embed">
   <div class="gitter-chat-embed-action-bar">
     <a class="gitter-icon" aria-label="Open Chat in Gitter.im"
@@ -8,12 +9,14 @@
     </button>
 
   </div>
+ 
   <div class="gitter-chat-embed-loading-wrapper">
     <div class="gitter-chat-embed-loading-indicator gitter-icon"></div>
   </div>
 
   
 </aside>
+
 <!-- <iframe style="display: none;" height="350" width="500" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" frameborder="0"
     [src]="gitAsideUrl"></iframe> -->
 <div style="position:relative;min-height:90vh;">
@@ -22,7 +25,9 @@
   <rx-popup></rx-popup>
   <rx-spinner></rx-spinner>
   <!-- <app-top-bar [sidebarLinks]="rightSidebarLinks" *ngIf="!isHome"></app-top-bar> -->
-
+  <div *ngIf="!isHome">
+ 
+</div>
   <header *ngIf="isHome" [class.ihomepage-header]="!isHome" class="home_page_header border-0">
     <nav class="navbar py-0 pt-4">
       <div class="lft-section">

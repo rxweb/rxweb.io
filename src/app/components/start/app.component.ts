@@ -83,8 +83,8 @@ export class AppComponent implements OnInit {
     router.events.subscribe((val) => {
 
       if (val instanceof NavigationEnd) {
-      
-        if (val.url == "/" || val.url == "/form-builder" || val.url.includes("?") || val.url == "/dynamic-form-builder" || val.url.includes("/#") || val.url.includes("/home") || val.url.includes("/angular-home") || val.url.includes("/home?_ga")) {
+      debugger;
+        if (val.url == "/" || val.url == "/form-builder" || val.url.includes("?_ga") || val.url == "/dynamic-form-builder" || val.url.includes("/#") || val.url.includes("/home") || val.url.includes("/angular-home") || val.url.includes("/home?_ga")) {
           this.isHome = true;
         }
         else if (val.url.includes("rx-web-core")) {
@@ -115,8 +115,14 @@ export class AppComponent implements OnInit {
             this.lastRouteName = "vue";
           }
         }
+        else if(router.url.includes("showExample")){
+          this.http.get('assets/json/links.json').subscribe((response: any) => {
+          this.isShowSidebar = true
+          })
+        }
         else {
-          if (this.lastRouteName != "form-validations" && !this.isHome) {
+          if (this.lastRouteName != "form-validations" && !this.isHome && !router.url.includes("showExample")) {
+            
             this.lastRouteName = "form-validations";
             this.isShowSidebar = false;
             this.http.get('assets/json/links.json').subscribe((response: any) => {
@@ -230,6 +236,7 @@ export class AppComponent implements OnInit {
               "longitude": "Please enter a valid longitude",
               "lowerCase": "Input must be in lower case",
               "mac": "Invalid mac format",
+              "mask":"Invalid Input",
               "maxLength": "Input exceeds the maximum length",
               "maxNumber": "Maximum number is not matched.",
               "maxDate": "Input date exceed the maximum date",
@@ -306,6 +313,7 @@ export class AppComponent implements OnInit {
               "minDateMessageKey": "The input date enterred must be greater than the value mentioned in config",
               "maxLengthMessageKey": "The input enterred can have maximum 20 characters",
               "minLengthMessageKey": "The input enterred must have minimum 6 characters",
+              "maskMessageKey":"Input does not match the given pattern",
               "maxNumberMessageKey": "The input enterred must be less than or equal to the config value",
               "minNumberMessageKey": "The input enterred must be greater than or equal to the config value",
               "notEmptyMessageKey": "You must enter input in this field",

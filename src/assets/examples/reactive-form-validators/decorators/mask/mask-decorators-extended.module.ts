@@ -12,6 +12,7 @@ import { MaskCompleteComponent } from './complete/mask-complete.component';
 import { MaskMaskComponent } from './mask/mask-mask.component';
 import { MaskConditionalExpressionComponent } from './conditionalExpression/mask-conditional-expression.component';
 import { MaskMessageComponent } from './message/mask-message.component';
+import { MaskMinLengthComponent } from './minLength/mask-min-length.component';
 import { MaskMessageKeyComponent } from './messageKey/mask-message-key.component';
 import { MaskDynamicComponent } from './dynamic/mask-dynamic.component';
 import { MaskAddComponent } from './add/mask-add.component';
@@ -23,6 +24,7 @@ import { MaskEditComponent } from './edit/mask-edit.component';
 	MaskMaskComponent,
 	MaskConditionalExpressionComponent,
 	MaskMessageComponent,
+	MaskMinLengthComponent,
 	MaskMessageKeyComponent,
 	MaskDynamicComponent,
 	MaskAddComponent,
@@ -33,6 +35,7 @@ entryComponents: [
 	MaskMaskComponent,
 	MaskConditionalExpressionComponent,
 	MaskMessageComponent,
+	MaskMinLengthComponent,
 	MaskMessageKeyComponent,
 	MaskDynamicComponent,
 	MaskAddComponent,
@@ -51,6 +54,7 @@ entryComponents: [
 	MaskMaskComponent,
 	MaskConditionalExpressionComponent,
 	MaskMessageComponent,
+	MaskMinLengthComponent,
 	MaskMessageKeyComponent,
 	MaskDynamicComponent,
 	MaskAddComponent,

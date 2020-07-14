@@ -15,9 +15,11 @@ export class TopBarComponent implements OnInit {
   isReactive: boolean
   validationName: string;
   mainType: string;
+  isStarFirstTimeBind:boolean = true;
   isFirstTimeRightSideBarBind: boolean = true;
   secondLevelBreadCrumb: string = "Angular";
   toogleOpen: boolean = true;
+  showComponent:boolean = true;
   isFirstLevelBreadCrumb: boolean = true;
   isSecondLevelBreadCrumb: boolean = true;
   showExample: boolean = true;
@@ -31,7 +33,10 @@ export class TopBarComponent implements OnInit {
   @ViewChild('search1') searchInput: ElementRef;
   titleData: any = { codeContent: {} };
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private router: Router, private route: ActivatedRoute) {
-
+  
+  var starGitUrl = document.getElementById("starIframe");
+    if(!starGitUrl)
+     this.isStarFirstTimeBind = false;
     this.cloneSideBarLinkItems();
   }
 
@@ -62,6 +67,7 @@ export class TopBarComponent implements OnInit {
       }
     }
     this.cloneSideBarLinkItems();
+    this.showComponent = true;
   }
 
 
@@ -153,6 +159,10 @@ export class TopBarComponent implements OnInit {
     if (splitedArray[4])
       this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
     else
+    if(splitedArray[3].includes("?")){
+      var newUrl = splitedArray[3].split('?')[0]
+      splitedArray[3] = splitedArray[3].replace(splitedArray[3],newUrl);
+    }
       this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
   }
   openMenu(): void {

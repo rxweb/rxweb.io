@@ -102,6 +102,14 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 
 <div component="app-example-runner" ref-component="app-mask-conditionalExpression" title="mask {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
 
+## minLength
+Type :  `number` 
+
+To use digit options while setting the `minLength` property
+
+<div component="app-code" key="mask-minLengthExample-model"></div> 
+<div component="app-example-runner" ref-component="app-mask-minLength" title="mask {{validatorType}} with minLength" key="minLength"></div>
+
 ## message
 Type :  `string` 
 

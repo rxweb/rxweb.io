@@ -1,0 +1,22 @@
+<div>
+    <form [formGroup]="userInfoFormGroup">
+
+        <div class="form-group">
+            <label>FirstName</label>
+            <input type="text" formControlName="firstName" class="form-control" />
+            <small class="form-text text-danger"
+                *ngIf="userInfoFormGroup.controls.firstName.errors">{{userInfoFormGroup.controls.firstName.errorMessage}}<br /></small>
+        </div>
+
+        <div class="form-group" [formGroup]="userInfoFormGroup.controls.address">
+            <label>areaName</label>
+            <input type="text" formControlName="areaName" class="form-control" />
+            <small class="form-text text-danger"
+            *ngIf="userInfoFormGroup.get('address')['controls'].areaName.errors">{{userInfoFormGroup.get('address')['controls'].areaName.errorMessage}}<br /></small>
+        </div>
+        <div class="btn btn-group">
+            <button (click)="setEndErrors()" class="btn btn-sm btn-primary">Set Errors</button>&nbsp;
+            <button (click)="clearBackEndErrors()" class="btn btn-sm btn-primary">Clear Errors</button>
+        </div>
+    </form>
+</div>

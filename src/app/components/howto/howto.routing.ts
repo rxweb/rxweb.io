@@ -27,6 +27,10 @@ const HOWTO_ROUTES: Routes = [
 	loadChildren: () => import('./stronglyType/strongly-type.module').then(m => m.StronglyTypeModule),
 },
 {
+	path:'backEndMessages',
+	loadChildren: () => import('./backEndMessages/back-end-messages.module').then(m => m.BackEndMessagesModule),
+},
+{
 	path:'bindConfig',
 	loadChildren: () => import('./bindConfig/bind-config.module').then(m => m.BindConfigModule),
 },

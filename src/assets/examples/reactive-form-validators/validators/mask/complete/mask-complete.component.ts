@@ -20,6 +20,7 @@ export class MaskCompleteValidatorComponent implements OnInit {
             postalCode:['', RxwebValidators.mask({mask:'999-999'  ,conditionalExpression:(x,y)=> x.firstName == "Bharat" })], 
             zipcode:['', RxwebValidators.mask({mask:'9999'  ,conditionalExpression:'x => x.firstName == "Bharat"' })], 
             contactNumber:['', RxwebValidators.mask({mask:'999-9999999'  ,message:'Enter a valid Contact Number' })], 
+            residentalContactNumber:['', RxwebValidators.mask({mask:'999-9999999'  ,minLength:10 })], 
             alternateContactNumber:['', RxwebValidators.mask({mask:'9999999999'  ,messageKey:'maskMessageKey' })], 
         });
     }

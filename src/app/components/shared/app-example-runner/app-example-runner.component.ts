@@ -44,7 +44,6 @@ export class AppExampleRunnerComponent implements OnInit {
   }
  
   ngOnInit(): void {
-  
     let codeUrl = "";
     this.showElement = false;
     if(this.router.url.includes("vue")){
@@ -88,8 +87,7 @@ export class AppExampleRunnerComponent implements OnInit {
       this.dataParam = this.content.dataParam;
       this.activeTab = this.tabArray[0].tabName;
     }
-    
-    
+  
   }
 
 
