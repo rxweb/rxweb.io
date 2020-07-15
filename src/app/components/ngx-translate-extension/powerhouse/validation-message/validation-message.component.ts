@@ -98,6 +98,7 @@ identityRevealedValidator(control: FormGroup): ValidationErrors | null {
   }
 
   ngOnInit() {
+    document.title = "Validation Message -  RxWeb Docs"
     this.formGroup = this.formBuilder.group({
       fullName: ['', Validators.required],
       designation: ['Software', Validators.maxLength(5)],

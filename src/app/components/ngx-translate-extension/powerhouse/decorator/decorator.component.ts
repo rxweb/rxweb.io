@@ -197,6 +197,7 @@ dashboardEnglish: { [key: string]: any };`,
   json: any;
   html: any;
   ngOnInit() {
+    document.title = "Decorator -  RxWeb Docs"
     $('[data-toggle="tooltip"]').tooltip({
       template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-decorator-inner md-inner"></div></div>'
     });

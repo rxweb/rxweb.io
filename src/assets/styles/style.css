@@ -5913,8 +5913,8 @@ pre {
 }
 
 input.ng-invalid {
-    background-color: #DA5235;
-    color: white;
+    background-color: #DA5235!important;
+    color: white!important;
 }
 
 .text-blue {

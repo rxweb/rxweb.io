@@ -4,7 +4,7 @@ declare const $;
 import $ from 'jquery';
 import { TranslateService } from '@rxweb/ngx-translate-extension';
 import { Router, ActivatedRoute } from '@angular/router';
-import { translate } from '@rxweb/translate';
+import { translate, RxTranslation } from '@rxweb/translate';
 
 @Component({
   templateUrl: './change-language.component.html',
@@ -17,6 +17,7 @@ export class PowerhouseChangeLanguageComponent implements OnInit {
 
   @translate({ translationName: 'lazy-load' }) global: any;
 
+ 
   examples: any = {
     program: {
       typescript: `changeLanguage(languageCode: string) {
@@ -38,15 +39,15 @@ export class PowerhouseChangeLanguageComponent implements OnInit {
     }
   }
 
-  changeLanguage(languageCode: string) {
-    this.translate.use(languageCode);
-  }
+  changeLanguage(languageCode) {
+    this.rxTranslation.change(languageCode);
+}
 
   navigate(languageCode: string) {
     this.router.navigate(["ngx-translate-extension", languageCode, "change-language"])
   }
 
-  constructor(public translate: TranslateService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(public translate: TranslateService, private router: Router, private activatedRoute: ActivatedRoute, private rxTranslation: RxTranslation,) {
     translate.addLangs(['en', 'es', 'fr']);
     translate.setDefaultLang('en');
     translate.use('en');
@@ -57,6 +58,7 @@ export class PowerhouseChangeLanguageComponent implements OnInit {
   }
 
   ngOnInit() {
+    document.title = "Change Language -  RxWeb Docs"
     $('[data-toggle="tooltip"]').tooltip({
       template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-change-inner md-inner"></div></div>'
     });

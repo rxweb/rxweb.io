@@ -61,10 +61,15 @@
       <div>
         <div class="code_eg">Output</div>
         <div class="ngx-output">
+       
+        
+         
           <p class="small ">
             <a class="blue-link" [class.active-language]="global.languageCode == 'en'" (click)="changeLanguage('en')">English</a>
             <a class="blue-link" [class.active-language]="global.languageCode == 'fr'" (click)="changeLanguage('fr')">French</a>
           </p>
+          {{global.text}}
+          <br />
           <br />
         </div>
       </div>

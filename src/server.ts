@@ -26,7 +26,8 @@ global['document'] = win.document;
 export function app(): express.Express {
   global['window'] = window;
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/rxwebio/browser');
+  const distFolder = join(process.cwd(), 'dist','rxwebio',  'browser');
+  //const distFolder = join(process.cwd(), 'dist/rxwebio/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)

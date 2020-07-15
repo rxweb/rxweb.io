@@ -1196,7 +1196,7 @@ code.command.hljs.routeros {
 .mt-2 {
   margin-left: 5px;
   margin-top: 20px;
-  margin-bottom: 40px;
+ 
 }
 
 .text-right {
@@ -1205,7 +1205,7 @@ code.command.hljs.routeros {
 
 .active-language {
   font-weight: bold;
-}
+} 
 
 .english {
   background-color: #ffdc72;

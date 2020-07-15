@@ -40,6 +40,7 @@ export class PowerhousePurePipeComponent implements OnInit {
   }
 
   ngOnInit() {
+    document.title = "Pure Pipe -  RxWeb Docs"
     $('[data-toggle="tooltip"]').tooltip({
       template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-pure-pipe-inner md-inner"></div></div>'
     });

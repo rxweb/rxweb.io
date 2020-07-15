@@ -15,6 +15,7 @@ export class ArticleComponent implements OnInit {
        
     }
     ngOnInit(){
+        document.title = "Articles - RxWeb Docs";
         this.applicationBroadcaster.topSubject.next(this.pageTitle);
     }
 }

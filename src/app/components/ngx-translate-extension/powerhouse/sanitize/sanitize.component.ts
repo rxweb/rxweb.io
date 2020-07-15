@@ -311,6 +311,7 @@ titleCase: string = 'my name is munad';`,
   }
 
   ngOnInit() {
+    document.title = "Sanitize -  RxWeb Docs"
     $('[data-toggle="tooltip"]').tooltip({
       template: '<div class="tooltip md-tooltip"><div class="tooltip-arrow md-arrow"></div><div class="tooltip-inner md-sanitizer-inner md-inner"></div></div>'
     });
