@@ -15,11 +15,11 @@ export class TopBarComponent implements OnInit {
   isReactive: boolean
   validationName: string;
   mainType: string;
-  isStarFirstTimeBind:boolean = true;
+  isStarFirstTimeBind: boolean = true;
   isFirstTimeRightSideBarBind: boolean = true;
   secondLevelBreadCrumb: string = "Angular";
   toogleOpen: boolean = true;
-  showComponent:boolean = true;
+  showComponent: boolean = true;
   isFirstLevelBreadCrumb: boolean = true;
   isSecondLevelBreadCrumb: boolean = true;
   showExample: boolean = true;
@@ -33,10 +33,9 @@ export class TopBarComponent implements OnInit {
   @ViewChild('search1') searchInput: ElementRef;
   titleData: any = { codeContent: {} };
   constructor(private applicationBroadCaster: ApplicationBroadcaster, private router: Router, private route: ActivatedRoute) {
-  
-  var starGitUrl = document.getElementById("starIframe");
-    if(!starGitUrl)
-     this.isStarFirstTimeBind = false;
+    var starGitUrl = document.getElementById("starIframe");
+    if (!starGitUrl)
+      this.isStarFirstTimeBind = true;
     this.cloneSideBarLinkItems();
   }
 
@@ -128,8 +127,8 @@ export class TopBarComponent implements OnInit {
   showsearchcontent1(event, searchvalue1: string) {
     var testarray = document.getElementsByClassName("ais-SearchBox");
     for (var i = 0; i < testarray.length; i++) {
-      if(!testarray[i].classList.contains("searchbox-width"))
-      testarray[i].className += " searchbox-width";
+      if (!testarray[i].classList.contains("searchbox-width"))
+        testarray[i].className += " searchbox-width";
     }
     if (event.key == "Escape")
       this.hideSearch1();
@@ -156,14 +155,24 @@ export class TopBarComponent implements OnInit {
     this.toogleOpen = !this.toogleOpen;
     this.showExample = !this.showExample;
     var splitedArray = this.router.url.split('/');
-    if (splitedArray[4])
+    if (splitedArray[4]) {
+      if (splitedArray[4].includes("?")) {
+        var newUrl = splitedArray[4].split('?')[0]
+        splitedArray[4] = splitedArray[4].replace(splitedArray[4], newUrl);
+      }
       this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3], splitedArray[4]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
-    else
-    if(splitedArray[3].includes("?")){
-      var newUrl = splitedArray[3].split('?')[0]
-      splitedArray[3] = splitedArray[3].replace(splitedArray[3],newUrl);
     }
+    else {
+      if (splitedArray[3].includes("?")) {
+        var newUrl = splitedArray[3].split('?')[0]
+        splitedArray[3] = splitedArray[3].replace(splitedArray[3], newUrl);
+      }
+      if (splitedArray[3].includes("#")) {
+        var newUrl = splitedArray[3].split('#')[0]
+        splitedArray[3] = splitedArray[3].replace(splitedArray[3], newUrl);
+      }
       this.router.navigate(['/', splitedArray[1], splitedArray[2], splitedArray[3]], { queryParams: { showExample: this.showExample }, replaceUrl: false });
+    }
   }
   openMenu(): void {
     const body = document.getElementsByClassName('header-links content')[0];

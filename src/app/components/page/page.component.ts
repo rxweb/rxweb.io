@@ -65,9 +65,7 @@ export class PageComponent implements OnInit,OnDestroy {
     })
 
     this.myObserver = router.events.subscribe((val) => { 
-
       if (val instanceof NavigationEnd) {
-
        if(val.url.includes("vue")){
         if(val.url.split('/')[4])
         this.typeName = val.url.split('/')[4];
@@ -204,7 +202,11 @@ export class PageComponent implements OnInit,OnDestroy {
       if(dynamicsplitedArray[3] && dynamicsplitedArray[3].includes('#')){
       var newUrl = dynamicsplitedArray[3].split('#')[0];
       dynamicsplitedArray[3] = dynamicsplitedArray[3].replace(dynamicsplitedArray[3],newUrl);
-      }     
+      }    
+      if(dynamicsplitedArray[3] && dynamicsplitedArray[3].includes('?')){
+        var newUrl = dynamicsplitedArray[3].split('?')[0];
+        dynamicsplitedArray[3] = dynamicsplitedArray[3].replace(dynamicsplitedArray[3],newUrl);
+        }     
       this.codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/' + 'validators' + '.json';
       this.htmlUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/' + dynamicsplitedArray[3] + '-' + 'validators' + '.json';
       titleString = "validator";
