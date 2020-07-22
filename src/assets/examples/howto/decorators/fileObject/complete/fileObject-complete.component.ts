@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { User } from './user.model';
 @Component({
     selector: 'app-fileobject-complete',
-    templateUrl: './fileobject-complete.component.html'
+    templateUrl: './fileObject-complete.component.html'
 })
 export class FileobjectCompleteComponent implements OnInit {
     userInfoFormGroup: RxFormGroup
