@@ -1,7 +1,7 @@
 import { Input, OnDestroy, ElementRef, Directive } from "@angular/core";
 import { Subscription } from "rxjs/Rx";
+import { ApplicationPage } from '@rx/core';
 
-import { ApplicationPage } from "../../core";
 @Directive({
   selector: '[rxLabel]',
 })

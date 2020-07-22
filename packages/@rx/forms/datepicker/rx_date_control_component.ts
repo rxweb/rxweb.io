@@ -16,12 +16,12 @@ import { DOCUMENT } from '@angular/common';
 
 import { Subscription, Observable } from "rxjs/Rx";
 import { NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl } from "@angular/forms"
-import { ApplicationConfiguration, ApplicationPage } from '../../core';
 import { RxPickerComponent } from './rx_picker_control_component'
 import { DateDisabled } from './datepicker.models';
 import { OverlayViewHost, OverlayPositionHost, ElementOffsetModel, OffSetModel } from "../../core/view/overlay_view_host";
 import { ComponentView } from "../../core/view/view";
 import { Multilingual } from "@rx/forms/multilingual";
+import { ApplicationConfiguration } from '@rx/core';
 
 
 @Component({

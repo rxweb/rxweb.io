@@ -19,7 +19,8 @@ import { RxTabContentComponent } from "./rx_tab_content_control_component";
 import { RxPopup } from '../popup/popup.service';
 import { CanActivate } from "@angular/router"
 import { UnAuthorizedAccessComponent } from '../popup/unauthorized-access.component';
-import { DynamicComponentContainer, ApplicationPage } from "../../core";
+import { DynamicComponentContainer, ApplicationPage } from '@rx/core';
+
 @Component({
     selector: 'rx-tabs',
     templateUrl: "./rx_tabs_control_component.html"

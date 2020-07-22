@@ -1,5 +1,5 @@
 ﻿export * from "./applicationconfiguration";
-export * from "./applicationpage";
+export * from "./ApplicationPage";
 export * from "./regularexpression";
 export * from "./applicationbroadcaster";
 export * from "./core.module";

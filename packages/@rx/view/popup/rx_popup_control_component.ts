@@ -8,10 +8,10 @@ import { DOCUMENT } from '@angular/common';
 
 import {OverlayViewHost, BackDrop} from "../../core/view/overlay_view_host";
 import {ComponentType, ComponentView} from "../../core/view/view";
-import {DynamicComponentContainer, ApplicationPage, ComponentCanDeactivate } from "../../core";
 import {RxPopup } from "./popup.service";
 import {ValidationFailedComponent } from "./validation-failed.component";
 import {UnAuthorizedAccessComponent } from "./unauthorized-access.component";
+import { DynamicComponentContainer } from '@rx/core/dynamic_component_container';
 const KEY_ESC: number = 27;
 
 @Component({

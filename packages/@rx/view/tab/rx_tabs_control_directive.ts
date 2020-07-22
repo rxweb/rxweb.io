@@ -2,12 +2,12 @@
 import {Subscription} from "rxjs/Rx";
 import { CanActivate } from "@angular/router"
 
-import {DynamicComponentContainer, ApplicationPage } from "../../core";
 import {RxTabDirective } from "./rx_tab_control_directive";
 import {RxTabContentDirective} from "./rx_tab_content_control_directive";
 import {TabModel} from "./tab.models";
 import {RxPopup }  from '../popup/popup.service';
 import {UnAuthorizedAccessComponent } from '../popup/unauthorized-access.component';
+import { DynamicComponentContainer, ApplicationPage } from '@rx/core';
 
 @Directive({
     selector: '[rxTabs]',

@@ -16,10 +16,10 @@ import {
 import { DOCUMENT } from '@angular/common';
 
 import {MOUSEOVER_EVENT, DOM_EVENT, FOCUSIN_EVENT, FOCUSOUT_EVENT, MOUSEOUT_EVENT, CLICK_EVENT } from "../../util/constants/constants";
+import { ApplicationPage } from '@rx/core';
+import { ComponentView } from '@rx/core/view/view';
+import { OverlayViewHost, OverlayPositionHost, OffSetModel } from '@rx/core/view/overlay_view_host';
 
-import {OverlayViewHost, OverlayPositionHost, ElementOffsetModel, OffSetModel} from "../../core/view/overlay_view_host";
-import { ComponentView } from "../../core/view/view";
-import { ApplicationPage } from "../../core";
 
 @Component({
     selector: 'rx-tooltip',

@@ -1,5 +1,5 @@
 import { Input, Directive } from "@angular/core";
-import { ApplicationPage } from '../core'
+import { ApplicationPage } from '@rx/core';
 
 @Directive()
 export class Multilingual {

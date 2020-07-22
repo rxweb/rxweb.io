@@ -5,7 +5,7 @@ import { DOCUMENT } from '@angular/common';
 import { RxDialog } from './dialog.service';
 import { DialogDataModel, DialogStyle, DialogClick } from './dialog.models';
 import { OverlayViewHost, BackDrop } from "../../core/view/overlay_view_host";
-import { ApplicationConfiguration, ApplicationPage, ApplicationBroadcaster } from "../../core";
+import { ApplicationBroadcaster, ApplicationConfiguration, ApplicationPage } from '@rx/core';
 const KEY_ESC: number = 27;
 
 @Component({

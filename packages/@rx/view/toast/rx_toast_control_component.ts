@@ -1,10 +1,8 @@
 
 import { Component, ElementRef } from '@angular/core';
-
-import { ApplicationPage } from '../../core';
-
 import { RxToast } from './toast_service'
 import {MessageModel } from "./toast.models";
+import { ApplicationPage } from '@rx/core';
 
 const STATUS: string = "status";
 const POSITION: string = "position";
