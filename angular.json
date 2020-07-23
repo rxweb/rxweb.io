@@ -27,7 +27,6 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              
               "src/styles.css"
             ],
             "scripts": [
@@ -40,11 +39,22 @@
             ]
           },
           "configurations": {
-            "local":{
+            "local": {
               "deployUrl": "http://localhost:4200/dist/"
             },
             "production": {
-  
+              "assets": [
+                "src/assets/data",
+                "src/assets/fonts",
+                "src/assets/i18n",
+                "src/assets/icons",
+                "src/assets/images",
+                "src/assets/json",
+                "src/assets/monaco",
+                "src/assets/rxwebcore",
+                "src/assets/scripts",
+                "src/assets/styles"
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
