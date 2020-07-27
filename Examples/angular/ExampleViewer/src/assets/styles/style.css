@@ -4974,12 +4974,6 @@ body.light-skin.fixed-footer .footer {
     height: 55px
 }
 
-.landing-page header {
-    background: url('../images/landing/header.jpg') 50% 0 no-repeat;
-    height: 480px;
-    padding-top: 50px;
-    margin-bottom: 30px
-}
 
 .landing-page section {
     padding: 50px 0 50px 0;
