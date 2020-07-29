@@ -4,7 +4,7 @@ import { Http } from "@angular/http";
 import { environment } from 'src/environments/environment';
 import { ApplicationBroadcaster } from '@rx/core';
 import { TopBarComponent } from '../shared/top-bar/top-bar.component';
-
+declare function Gifffer(): any;
 
 @Component({
   templateUrl: './getting-started.component.html',
@@ -16,12 +16,13 @@ export class GettingStartedComponent implements OnInit {
   pageTitle:any = this.rightSidebarLinks[0];
   importModuleContent: string;
   options: any = { responseType: 'text' };
-  codeContent: any;
+
   globalValidationMessageContent: string;
   mainTab: string = "installation"
   reactiveFormBasedValidation: string = "Example";
   templateFormBasedValidation: string = "Example";
   modelBasedFormValidation: string = "Example";
+  codeContent:any = {"installation":"npm install @rxweb/reactive-form-validators"};
   //titleData: any = { codeContent: {} };
   sticky: boolean = false;
   templateDrivenType: string = "directives";
@@ -32,13 +33,15 @@ export class GettingStartedComponent implements OnInit {
 
   ngOnInit(): void {
     document.title = "Getting Started Reactive Forms - RxWeb";
-    this.http.get('assets/json/generator/getting-started/getting-started.json?v=' + environment.appVersion).subscribe(response => {
-      this.codeContent = response.json();
+  
       this.showComponent = true;
-    });
+      this.giffer();
+    
   //  this.applicationBroadCaster.topSubject.next(this.rightSidebarLinks);
   }
-
+  giffer() {
+    setTimeout(() => { Gifffer(); }, 10)
+}
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
     const windowScroll = document.documentElement.scrollTop;
@@ -53,4 +56,8 @@ export class GettingStartedComponent implements OnInit {
     location.hash = section;
     return false;
   }
+  changeTab(tab: string) {
+    this.mainTab = tab;
+    this.giffer()
+}
 }
