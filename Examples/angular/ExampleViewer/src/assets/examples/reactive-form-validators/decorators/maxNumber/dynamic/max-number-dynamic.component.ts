@@ -20,7 +20,7 @@ export class MaxNumberDynamicComponent implements OnInit {
     ngOnInit() {
         let subjectDetails = new SubjectDetails();
         let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/decorators/maxNumber/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/maxNumber/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
             formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			this.subjectDetailsFormGroup = this.formBuilder.formGroup(subjectDetails,formBuilderConfiguration);
         })

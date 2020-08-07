@@ -26,7 +26,7 @@ export class ChoiceDynamicValidatorComponent implements OnInit {
   certificationsArray: string[] = ["Microsoft certified", "Google certified", "Oracle certified", "AWS certified", "Adobe certified", "VMware certified"];
     ngOnInit() {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/validators/choice/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/validators/choice/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
           var employeeInfo = { department: '', projectDomains: '', skills: '', hobbies: '', languages: '', certifications: '' }
 			this.employeeInfoFormGroup = this.formBuilder.group(employeeInfo,formBuilderConfiguration);

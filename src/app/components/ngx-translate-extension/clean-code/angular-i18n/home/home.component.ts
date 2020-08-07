@@ -17,7 +17,7 @@ export class CleanCodeAngularComparisonComponent {
 
   constructor(private http: HttpClient) {
 
-    this.http.get("assets/json/code-compare-angular-i18n.json").subscribe(response => {
+    this.http.get("https://rxwebioassets.blob.core.windows.net/$web/json/code-compare-angular-i18n.json").subscribe(response => {
       this.tabArray = response['home'];
       console.log(this.tabArray)
       this.activeTab = this.tabArray[0].tabName;

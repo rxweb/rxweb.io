@@ -17,7 +17,7 @@ export class LowerCaseEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/lowerCase/edit/user-info-data.json?v=' + environment.appVersion).subscribe(userInfo => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/lowerCase/edit/user-info-data.json?v=' + environment.appVersion).subscribe(userInfo => {
             this.userInfoFormGroup = this.formBuilder.formGroup<UserInfo>(UserInfo,userInfo);
         })
     }

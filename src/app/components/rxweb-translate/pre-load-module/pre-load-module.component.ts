@@ -17,8 +17,8 @@ export class PreLoadModuleComponent {
         RxTranslateModule.forRoot({
             preloadingStrategy: true,
             cacheLanguageWiseObject: true,
-            globalFilePath: "assets/i18n/{{language-code}}/global.{{language-code}}.json",
-            filePath: "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json"
+            globalFilePath: "https://rxwebioassets.blob.core.windows.net/$web/i18n/{{language-code}}/global.{{language-code}}.json",
+            filePath: "https://rxwebioassets.blob.core.windows.net/$web/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json"
         })
     ],
 })

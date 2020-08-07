@@ -5,6 +5,7 @@ import { MaxDateTemplateDrivenValidationDirectivesExtendedModule } from "src/ass
 import { MaxDateTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/maxDate/max-date-validation-decorators-extended.module";
 
 import { MaxDateValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/maxDate/max-date-validators-extended.module";
+
 import { MAX_DATE_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/maxDate/max-date.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { MAX_DATE_ROUTING } from "src/app/components/form-validation/maxDate/max-date.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: MAX_DATE_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class MaxDateModule { }
+
+
 

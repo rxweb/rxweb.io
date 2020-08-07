@@ -24,7 +24,7 @@ dotnet new rxwebapi --name HumanResourceApplication
 `````
 
 <video  controls>
-<source src="assets/rxwebcore/Images/create-project-hrms1.mp4" type="video/mp4">
+<source src="https://rxwebioassets.blob.core.windows.net/$web/rxwebcore/Images/create-project-hrms1.mp4" type="video/mp4">
 </video>
 
 # Database Setup
@@ -52,7 +52,7 @@ rxwebcore --database-setup
 `````
 
 <video  controls>
-<source src="assets/rxwebcore/Images/database-setup.mp4" type="video/mp4">
+<source src="https://rxwebioassets.blob.core.windows.net/$web/rxwebcore/Images/database-setup.mp4" type="video/mp4">
 </video>
 
 # Examine the Project Structure

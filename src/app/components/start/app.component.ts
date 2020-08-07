@@ -99,7 +99,7 @@ export class AppComponent implements OnInit {
           if (this.lastRouteName != "rx-web-core") {
             this.lastRouteName = "rx-web-core";
             this.isShowSidebar = false;
-            this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
+            this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/rxwebcore-sidebar.json').subscribe((response: any) => {
               this.isShowSidebar = true
             })
             this.lastRouteName = "rx-web-core";
@@ -109,14 +109,14 @@ export class AppComponent implements OnInit {
           if (this.lastRouteName != "vue") {
             this.lastRouteName = "vue";
             this.isShowSidebar = false;
-            this.http.get('assets/json/vue-sidebar.json').subscribe((response: any) => {
+            this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/vue-sidebar.json').subscribe((response: any) => {
               this.isShowSidebar = true
             })
             this.lastRouteName = "vue";
           }
         }
         else if(router.url.includes("showExample")){
-          this.http.get('assets/json/links.json').subscribe((response: any) => {
+          this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/links.json').subscribe((response: any) => {
           this.isShowSidebar = true
           })
         }
@@ -125,7 +125,7 @@ export class AppComponent implements OnInit {
             
             this.lastRouteName = "form-validations";
             this.isShowSidebar = false;
-            this.http.get('assets/json/links.json').subscribe((response: any) => {
+            this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/links.json').subscribe((response: any) => {
 
               this.isShowSidebar = true
             })

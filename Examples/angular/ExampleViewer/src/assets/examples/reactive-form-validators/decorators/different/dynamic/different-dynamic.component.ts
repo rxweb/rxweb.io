@@ -20,7 +20,7 @@ export class DifferentDynamicComponent implements OnInit {
     ngOnInit() {
         let accountInfo = new AccountInfo();
         let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/decorators/different/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/different/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
             formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			this.accountInfoFormGroup = this.formBuilder.formGroup(accountInfo,formBuilderConfiguration);
         })

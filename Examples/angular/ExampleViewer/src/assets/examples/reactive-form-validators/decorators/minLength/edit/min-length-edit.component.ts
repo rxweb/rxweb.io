@@ -17,7 +17,7 @@ export class MinLengthEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/minLength/edit/contact-data.json?v=' + environment.appVersion).subscribe(contact => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/minLength/edit/contact-data.json?v=' + environment.appVersion).subscribe(contact => {
             this.contactFormGroup = this.formBuilder.formGroup<Contact>(Contact,contact);
         })
     }

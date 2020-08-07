@@ -26,7 +26,7 @@ export class CommitDynamicValidatorComponent implements OnInit {
 
 
   update(){
-   this.http.get('assets/dynamic.json').subscribe(dynamic => {
+   this.http.get('https://rxwebioassets.blob.core.windows.net/$web/dynamic.json').subscribe(dynamic => {
 			this.editForm.patchModelValue(dynamic);
       this.editForm.commit();
         })

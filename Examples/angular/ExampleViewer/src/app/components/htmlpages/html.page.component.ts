@@ -44,7 +44,7 @@ export class HtmlPageComponent implements OnInit {
         this.bind()
       this.isNotFirstTime = true;
     })
-    this.http.get('assets/json/rxwebcore-links.json?v=' + environment.appVersion).subscribe((response: any) => {
+    this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/rxwebcore-links.json?v=' + environment.appVersion).subscribe((response: any) => {
       this.links = response;
       var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
       if (currentObjIndex != undefined) {
@@ -62,7 +62,7 @@ export class HtmlPageComponent implements OnInit {
 
   getUri() {
 
-    let uri: string = 'assets/json/generator/rx-web-core';
+    let uri: string = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/rx-web-core';
     if (this.rootFolder)
       uri += `/${this.rootFolder}`;
     if (this.nestedFolder)

@@ -18,7 +18,7 @@ export class RangeDynamicValidatorComponent implements OnInit {
 
     ngOnInit() {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/validators/range/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/validators/range/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			var employeeInfo = { age:'', projectDuration:'', experience:'', salary:'', noOfprojects:'',  }
 			this.employeeInfoFormGroup = this.formBuilder.group(employeeInfo,formBuilderConfiguration);

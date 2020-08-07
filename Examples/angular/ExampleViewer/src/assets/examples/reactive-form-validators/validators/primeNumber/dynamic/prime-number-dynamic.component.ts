@@ -18,7 +18,7 @@ export class PrimeNumberDynamicValidatorComponent implements OnInit {
 
     ngOnInit() {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/validators/primeNumber/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/validators/primeNumber/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			var numberInfo = { numberType:'', secondNumber:'', thirdNumber:'', firstNumber:'', fourthNumber:'',  }
 			this.numberInfoFormGroup = this.formBuilder.group(numberInfo,formBuilderConfiguration);

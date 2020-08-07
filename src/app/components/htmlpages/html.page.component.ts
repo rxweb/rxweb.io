@@ -64,7 +64,7 @@ export class HtmlPageComponent implements OnInit {
 
   getUri() {
 
-    let uri: string = 'assets/json/generator/rx-web-core';
+    let uri: string = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/rx-web-core';
     if (this.rootFolder)
       uri += `/${this.rootFolder}`;
     if (this.nestedFolder)

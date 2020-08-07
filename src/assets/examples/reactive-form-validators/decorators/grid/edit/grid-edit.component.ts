@@ -17,7 +17,7 @@ export class GridEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/grid/edit/digital-info-data.json?v=' + environment.appVersion).subscribe(digitalInfo => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/grid/edit/digital-info-data.json?v=' + environment.appVersion).subscribe(digitalInfo => {
             this.digitalInfoFormGroup = this.formBuilder.formGroup<DigitalInfo>(DigitalInfo,digitalInfo);
         })
     }

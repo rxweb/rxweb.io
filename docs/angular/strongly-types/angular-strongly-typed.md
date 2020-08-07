@@ -21,7 +21,7 @@ linktitle: strongly-typed-reactive-forms
 
 [!TabGroup]
 # [Quick Start](#tab\completequickstart)
-<img style="margin:10px;" src='assets/images/strong-types.gif'/>
+<img style="margin:10px;" src='https://rxwebioassets.blob.core.windows.net/$web/images/strong-types.gif'/>
 # [/Quick Start]
 # [app.component.ts](#tab\completecomponent)
 <img style="margin:10px;" src='https://user-images.githubusercontent.com/20392302/85085119-6ef66700-b1f4-11ea-852e-052de1d85ce2.png'/>

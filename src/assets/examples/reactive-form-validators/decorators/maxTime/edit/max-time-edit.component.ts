@@ -17,7 +17,7 @@ export class MaxTimeEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/maxTime/edit/attandance-detail-data.json?v=' + environment.appVersion).subscribe(attandanceDetail => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/maxTime/edit/attandance-detail-data.json?v=' + environment.appVersion).subscribe(attandanceDetail => {
             this.attandanceDetailFormGroup = this.formBuilder.formGroup<AttandanceDetail>(AttandanceDetail,attandanceDetail);
         })
     }

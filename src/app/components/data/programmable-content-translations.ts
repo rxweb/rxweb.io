@@ -70,7 +70,7 @@ export const PROGRAMMABLE_CONTENT_TRANSLATIONS = [
         "type": "file",
         "ref": "urlContent",
         "contentType": 'typescript',
-        "content": "\import { NgModule } from '@angular/core'; \r\nimport { RxTranslateModule } from '@rxweb/translate' \r\n \r\n@NgModule({ \r\n    imports: [ \r\n        RxTranslateModule.forRoot({ \r\n            cacheLanguageWiseObject: true, \r\n            globalFilePath: 'assets/i18n/{{language-code}}/global.{{language-code}}.json', \r\n               }) \r\n    ], \r\n    exports: [RxTranslateModule], \r\n}) \r\nexport class RxWebModule { }",
+        "content": "\import { NgModule } from '@angular/core'; \r\nimport { RxTranslateModule } from '@rxweb/translate' \r\n \r\n@NgModule({ \r\n    imports: [ \r\n        RxTranslateModule.forRoot({ \r\n            cacheLanguageWiseObject: true, \r\n            globalFilePath: 'https://rxwebioassets.blob.core.windows.net/$web/i18n/{{language-code}}/global.{{language-code}}.json', \r\n               }) \r\n    ], \r\n    exports: [RxTranslateModule], \r\n}) \r\nexport class RxWebModule { }",
       }
     ]
   }

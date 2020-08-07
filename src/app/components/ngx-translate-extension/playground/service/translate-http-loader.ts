@@ -10,9 +10,9 @@ export class TranslateHttpLoader implements TranslateLoader {
     public getTranslation(lang: any): Observable<Object> {
         
         if (lang && lang.translationName && !lang.filePath)
-            return this.http.get(`assets/i18n/${lang.translationName}/${lang.lang}.json`);
+            return this.http.get(`https://rxwebioassets.blob.core.windows.net/$web/i18n/${lang.translationName}/${lang.lang}.json`);
         else if (lang && lang.filePath)
             return this.http.get(lang.filePath);
-        return this.http.get(`assets/i18n/${lang}.json`);
+        return this.http.get(`https://rxwebioassets.blob.core.windows.net/$web/i18n/${lang}.json`);
     }
 }

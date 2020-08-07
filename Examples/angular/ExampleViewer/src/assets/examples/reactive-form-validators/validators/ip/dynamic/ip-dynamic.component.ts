@@ -29,7 +29,7 @@ export class IpDynamicValidatorComponent implements OnInit {
 
     ngOnInit() {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/validators/ip/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/validators/ip/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			var user = { ipType:'', ipV4:'', ipV6:'', anyIPType:'', ipV4Cidr:'', ipV6Cidr:'', ipV6Conditional:'', ipV4Conditional:'', ipV4Message:'', ipV6MessageKey:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);

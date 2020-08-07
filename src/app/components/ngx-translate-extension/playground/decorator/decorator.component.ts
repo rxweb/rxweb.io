@@ -14,7 +14,7 @@ export class DecoratorComponent {
 
     @translate({ translationName: 'dashboard' }) dashboard: { [key: string]: any };
 
-    @translate({ translationName: 'customfile', filePath: "assets/i18n/dashboard/en.json" }) dashboardEnglish: { [key: string]: any };
+    @translate({ translationName: 'customfile', filePath: "https://rxwebioassets.blob.core.windows.net/$web/i18n/dashboard/en.json" }) dashboardEnglish: { [key: string]: any };
 
     @asyncTranslate({
         serviceModel: CountryService,

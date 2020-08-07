@@ -20,8 +20,8 @@ export class TranslateGettingStartedComponent implements OnInit {
   mainTab: string = "installation"
   importModule: any = `RxTranslateModule.forRoot({
           cacheLanguageWiseObject: true,
-          globalFilePath: "assets/i18n/{{language-code}}/global.{{language-code}}.json",
-          filePath: "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json"
+          globalFilePath: "https://rxwebioassets.blob.core.windows.net/$web/i18n/{{language-code}}/global.{{language-code}}.json",
+          filePath: "https://rxwebioassets.blob.core.windows.net/$web/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json"
       })`
   mapTranslate: any = `export class UserComponent{
 

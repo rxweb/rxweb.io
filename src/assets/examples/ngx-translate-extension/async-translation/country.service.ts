@@ -10,7 +10,7 @@ export class CountryService {
   constructor(private http: HttpClient, private rxTranslation: RxTranslation) { }
 
   get() {
-    return this.http.get("assets/i18n/" + this.rxTranslation.language + "/countries." + this.rxTranslation.language + ".json")
+    return this.http.get("https://rxwebioassets.blob.core.windows.net/$web/i18n/" + this.rxTranslation.language + "/countries." + this.rxTranslation.language + ".json")
   }
 
 }

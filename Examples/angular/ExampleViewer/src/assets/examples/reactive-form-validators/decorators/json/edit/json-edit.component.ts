@@ -17,7 +17,7 @@ export class JsonEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/json/edit/json-info-data.json?v=' + environment.appVersion).subscribe(jsonInfo => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/json/edit/json-info-data.json?v=' + environment.appVersion).subscribe(jsonInfo => {
             this.jsonInfoFormGroup = this.formBuilder.formGroup<JsonInfo>(JsonInfo,jsonInfo);
         })
     }

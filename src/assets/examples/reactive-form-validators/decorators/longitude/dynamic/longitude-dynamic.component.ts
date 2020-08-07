@@ -20,7 +20,7 @@ export class LongitudeDynamicComponent implements OnInit {
     ngOnInit() {
         let country = new Country();
         let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/decorators/longitude/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/longitude/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
             formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			this.countryFormGroup = this.formBuilder.formGroup(country,formBuilderConfiguration);
         })

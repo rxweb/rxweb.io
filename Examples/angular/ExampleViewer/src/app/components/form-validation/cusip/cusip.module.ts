@@ -5,6 +5,7 @@ import { CusipTemplateDrivenValidationDirectivesExtendedModule } from "src/asset
 import { CusipTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/cusip/cusip-validation-decorators-extended.module";
 
 import { CusipValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/cusip/cusip-validators-extended.module";
+
 import { CUSIP_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/cusip/cusip.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { CUSIP_ROUTING } from "src/app/components/form-validation/cusip/cusip.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: CUSIP_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class CusipModule { }
+
+
 

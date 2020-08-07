@@ -36,10 +36,10 @@ export class TextPageComponent implements OnInit {
     this.validationName = splitedArray[2];
      let codeUri = 'assests/json/generator/contributing/decorators.json?v=' + environment.appVersion;
      if(this.validationName !== undefined)
-       codeUri = 'assets/json/generator/' + this.validationName + '/decorators.json?v=' + environment.appVersion;
+       codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/decorators.json?v=' + environment.appVersion;
      else
        if(this.mainType == 'changelog')
-        codeUri = 'assets/json/generator/CHANGELOG/decorators.json?v=' + environment.appVersion;
+        codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/CHANGELOG/decorators.json?v=' + environment.appVersion;
     this.http.get(codeUri, this.options).subscribe(response => {
         this.codeContent = JSON.parse(response.toString());
         var element = document.getElementById("mainContent")

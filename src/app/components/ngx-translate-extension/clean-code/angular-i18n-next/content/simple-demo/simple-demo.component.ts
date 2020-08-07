@@ -17,7 +17,7 @@ export class SimpleDemoAngularNextComparisonComponent {
 
   constructor(private http: HttpClient) {
 
-    this.http.get("assets/json/code-compare-angular-i18n-next.json").subscribe(response => {
+    this.http.get("https://rxwebioassets.blob.core.windows.net/$web/json/code-compare-angular-i18n-next.json").subscribe(response => {
       this.tabArray = response['simple-demo'];
       console.log(this.tabArray)
       this.activeTab = this.tabArray[0].tabName;

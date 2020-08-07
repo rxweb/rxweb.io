@@ -81,7 +81,7 @@ export class DynamicValidationComponent {
 
     ngOnInit() {
      
-                this.http.get('assets/json/dynamic-validation.json').subscribe((res: any) => {
+                this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/dynamic-validation.json').subscribe((res: any) => {
                     this.validatorWiseServerData = JSON.parse(res);
                     this.dropDownData = Object.keys(this.validatorWiseServerData);
                     this.onChange()

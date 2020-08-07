@@ -17,7 +17,7 @@ export class AlphaNumericEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/alphaNumeric/edit/location-data.json?v=' + environment.appVersion).subscribe(location => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/alphaNumeric/edit/location-data.json?v=' + environment.appVersion).subscribe(location => {
             this.locationFormGroup = this.formBuilder.formGroup<Location>(Location,location);
         })
     }

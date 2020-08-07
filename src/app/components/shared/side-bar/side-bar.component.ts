@@ -29,7 +29,7 @@ export class SideBarComponent implements OnInit {
     if (this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/" && this.router['location']['_platformStrategy']['_platformLocation'].location.pathname != "/home") {
 
       if (location.pathname.includes("rx-web-core")) {
-        this.http.get('assets/json/rxwebcore-sidebar.json').subscribe((response: any) => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/rxwebcore-sidebar.json').subscribe((response: any) => {
           this.links = response.links;
           var currentUrl = this.router.url;
           this.setActiveLink(currentUrl);
@@ -43,7 +43,7 @@ export class SideBarComponent implements OnInit {
       }
 
       else if (location.pathname.includes("vue")) {
-        this.http.get('assets/json/vue-sidebar.json').subscribe((response: any) => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/vue-sidebar.json').subscribe((response: any) => {
           this.links = response.links;
           var currentUrl = this.router.url;
           this.setActiveLink(currentUrl);
@@ -56,7 +56,7 @@ export class SideBarComponent implements OnInit {
       }
 
       else {
-        this.http.get('assets/json/links.json?v=' + environment.appVersion).subscribe((response: any) => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/links.json?v=' + environment.appVersion).subscribe((response: any) => {
           this.userProfile = localStorage.getItem("profile") != undefined ? JSON.parse(localStorage.getItem("profile")) : null;
           this.links = response.links;
           var currentUrl = this.router.url;

@@ -17,14 +17,14 @@ Let's assume you want to make a custom textbox design appending the icon with th
 ```html
 <div class="input-control" style="margin-bottom: 1rem;">
   <label>
-    <img src="/assets/images/account.svg" />
+    <img src="https://rxwebioassets.blob.core.windows.net/$web/images/account.svg" />
     <span class="placeholder">Account Number</span>
   </label>
   <input formControlName="account-number" type="number" />
 </div>
 <div class="input-control" style="margin-bottom: 1rem;">
   <label>
-    <img src="/assets/images/bank.svg" />
+    <img src="https://rxwebioassets.blob.core.windows.net/$web/images/bank.svg" />
     <span class="placeholder">Bank Name</span>
   </label>
   <input formControlName="bank-name" type="text" />
@@ -68,7 +68,7 @@ serverData: Array<{ [key: string]: any }> = [
   {
     type: 'profile-input',
     name: 'bank-name',
-    source: [{ value: '/assets/images/bank.svg', text: 'Bank Name', type: 'text' }],
+    source: [{ value: 'https://rxwebioassets.blob.core.windows.net/$web/images/bank.svg', text: 'Bank Name', type: 'text' }],
     ui: {
       viewMode: {
         advance: {
@@ -80,7 +80,7 @@ serverData: Array<{ [key: string]: any }> = [
   {
     type: 'profile-input',
     name: 'account-number',
-    source: [{ value: '/assets/images/account.svg', text: 'Account Number', type: 'number' }],
+    source: [{ value: 'https://rxwebioassets.blob.core.windows.net/$web/images/account.svg', text: 'Account Number', type: 'number' }],
     ui: {
       viewMode: {
         advance: {

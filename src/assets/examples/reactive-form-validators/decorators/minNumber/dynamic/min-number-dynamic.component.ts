@@ -20,7 +20,7 @@ export class MinNumberDynamicComponent implements OnInit {
     ngOnInit() {
         let resultInfo = new ResultInfo();
         let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/decorators/minNumber/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/minNumber/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
             formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			this.resultInfoFormGroup = this.formBuilder.formGroup(resultInfo,formBuilderConfiguration);
         })

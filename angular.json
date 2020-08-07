@@ -43,6 +43,7 @@
               "deployUrl": "http://localhost:4200/dist/"
             },
             "production": {
+              "assets": [],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

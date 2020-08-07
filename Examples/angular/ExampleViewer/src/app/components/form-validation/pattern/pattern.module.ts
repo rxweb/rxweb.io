@@ -5,6 +5,7 @@ import { PatternTemplateDrivenValidationDirectivesExtendedModule } from "src/ass
 import { PatternTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/pattern/pattern-validation-decorators-extended.module";
 
 import { PatternValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/pattern/pattern-validators-extended.module";
+
 import { PATTERN_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/pattern/pattern.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { PATTERN_ROUTING } from "src/app/components/form-validation/pattern/pattern.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: PATTERN_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class PatternModule { }
+
+
 

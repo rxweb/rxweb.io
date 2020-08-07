@@ -17,7 +17,7 @@ export class MaxNumberEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/maxNumber/edit/subject-details-data.json?v=' + environment.appVersion).subscribe(subjectDetails => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/maxNumber/edit/subject-details-data.json?v=' + environment.appVersion).subscribe(subjectDetails => {
             this.subjectDetailsFormGroup = this.formBuilder.formGroup<SubjectDetails>(SubjectDetails,subjectDetails);
         })
     }

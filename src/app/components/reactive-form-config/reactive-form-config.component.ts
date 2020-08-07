@@ -20,7 +20,7 @@ export class ReactiveFormConfigComponent implements OnInit {
             
         }
     ngOnInit(): void {
-        this.http.get('assets/json/generator/reactiveFormConfig/reactiveFormConfig.json?v=' + environment.appVersion).subscribe(response => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/generator/reactiveFormConfig/reactiveFormConfig.json?v=' + environment.appVersion).subscribe(response => {
             this.codeContent = response.json();
             this.showComponent = true;
     });

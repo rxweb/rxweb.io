@@ -29,7 +29,7 @@ export class NoneOfDynamicComponent implements OnInit {
   ngOnInit() {
     let employeeInfo = new EmployeeInfo();
     let formBuilderConfiguration = new FormBuilderConfiguration();
-    this.http.get('assets/examples/reactive-form-validators/decorators/noneOf/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+    this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/noneOf/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
       formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
       this.employeeInfoFormGroup = this.formBuilder.formGroup(employeeInfo, formBuilderConfiguration);
     })

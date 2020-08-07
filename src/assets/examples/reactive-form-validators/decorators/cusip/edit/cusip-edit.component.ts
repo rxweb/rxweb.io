@@ -17,7 +17,7 @@ export class CusipEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/cusip/edit/company-info-data.json?v=' + environment.appVersion).subscribe(companyInfo => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/cusip/edit/company-info-data.json?v=' + environment.appVersion).subscribe(companyInfo => {
             this.companyInfoFormGroup = this.formBuilder.formGroup<CompanyInfo>(CompanyInfo,companyInfo);
         })
     }

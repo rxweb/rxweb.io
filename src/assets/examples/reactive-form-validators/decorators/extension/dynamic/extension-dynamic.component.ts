@@ -21,7 +21,7 @@ export class ExtensionDynamicComponent implements OnInit {
     ngOnInit() {
         let userInfo = new UserInfo();
         let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/decorators/extension/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/extension/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
             formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			this.userInfoFormGroup = this.formBuilder.formGroup(userInfo,formBuilderConfiguration);
         })

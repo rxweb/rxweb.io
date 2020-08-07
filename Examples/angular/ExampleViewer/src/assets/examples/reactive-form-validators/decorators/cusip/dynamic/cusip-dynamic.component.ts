@@ -21,7 +21,7 @@ export class CusipDynamicComponent implements OnInit {
     ngOnInit() {
         let companyInfo = new CompanyInfo();
         let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/decorators/cusip/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/cusip/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
             formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			this.companyInfoFormGroup = this.formBuilder.formGroup(companyInfo,formBuilderConfiguration);
         })

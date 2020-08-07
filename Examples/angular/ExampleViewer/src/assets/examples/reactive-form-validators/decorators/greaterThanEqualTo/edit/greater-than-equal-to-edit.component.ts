@@ -17,7 +17,7 @@ export class GreaterThanEqualToEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/greaterThanEqualTo/edit/user-data.json?v=' + environment.appVersion).subscribe(user => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/greaterThanEqualTo/edit/user-data.json?v=' + environment.appVersion).subscribe(user => {
             this.userFormGroup = this.formBuilder.formGroup<User>(User,user);
         })
     }

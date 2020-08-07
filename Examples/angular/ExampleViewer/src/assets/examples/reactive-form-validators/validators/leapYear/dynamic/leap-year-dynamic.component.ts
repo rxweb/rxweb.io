@@ -18,7 +18,7 @@ export class LeapYearDynamicValidatorComponent implements OnInit {
 
     ngOnInit() {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/validators/leapYear/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/validators/leapYear/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			var user = { name:'', birthYear:'', admissionYear:'', joiningYear:'', promotionYear:'',  }
 			this.userFormGroup = this.formBuilder.group(user,formBuilderConfiguration);

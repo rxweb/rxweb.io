@@ -18,7 +18,7 @@ export class LatLongDynamicValidatorComponent implements OnInit {
 
     ngOnInit() {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/validators/latLong/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/validators/latLong/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			var country = { continent:'', secondCountry:'', thirdCountry:'', firstCountry:'', fourthCountry:'',  }
 			this.countryFormGroup = this.formBuilder.group(country,formBuilderConfiguration);

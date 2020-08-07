@@ -17,7 +17,7 @@ export class RangeEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/range/edit/employee-info-data.json?v=' + environment.appVersion).subscribe(employeeInfo => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/range/edit/employee-info-data.json?v=' + environment.appVersion).subscribe(employeeInfo => {
             this.employeeInfoFormGroup = this.formBuilder.formGroup<EmployeeInfo>(EmployeeInfo,employeeInfo);
         })
     }

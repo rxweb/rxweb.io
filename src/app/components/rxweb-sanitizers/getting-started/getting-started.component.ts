@@ -23,7 +23,7 @@ export class SanitizersGettingStartedComponent implements OnInit {
 
   ngOnInit(): void {
     document.title = "Getting Started Sanitizers - RxWeb Docs";
-    this.http.get('assets/json/generator/rxweb-sanitizers/sanitizer-install.json').subscribe(response => {
+    this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/generator/rxweb-sanitizers/sanitizer-install.json').subscribe(response => {
       this.codeContent = response.json();
       this.showComponent = true;
     });

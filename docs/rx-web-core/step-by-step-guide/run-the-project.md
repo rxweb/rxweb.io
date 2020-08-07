@@ -17,7 +17,7 @@ The first step is to hit the authentication api get method, it should be authori
 > This is done to prevent brute force attacks.
 
 <video  controls>
-<source src="assets/rxwebcore/Images/run-project-hrms.mp4" type="video/mp4">
+<source src="https://rxwebioassets.blob.core.windows.net/$web/rxwebcore/Images/run-project-hrms.mp4" type="video/mp4">
 </video>
 
 Once the user is successfully logged in, the api of the applications can be accessed. For accessing the api, refer <a class="redirect-link" href="/rxwebcore/basiccontroller#acessingtheapi">Accessing The Api

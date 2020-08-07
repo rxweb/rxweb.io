@@ -5,6 +5,7 @@ import { JsonTemplateDrivenValidationDirectivesExtendedModule } from "src/assets
 import { JsonTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/json/json-validation-decorators-extended.module";
 
 import { JsonValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/json/json-validators-extended.module";
+
 import { JSON_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/json/json.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { JSON_ROUTING } from "src/app/components/form-validation/json/json.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: JSON_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class JsonModule { }
+
+
 

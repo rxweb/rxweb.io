@@ -20,7 +20,7 @@ export class AlphaDynamicComponent implements OnInit {
     ngOnInit() {
         let addressInfo = new AddressInfo();
         let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/decorators/alpha/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/alpha/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
             formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			this.addressInfoFormGroup = this.formBuilder.formGroup(addressInfo,formBuilderConfiguration);
         })

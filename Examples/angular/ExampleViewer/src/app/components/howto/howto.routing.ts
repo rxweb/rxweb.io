@@ -4,75 +4,75 @@ import { Routes, RouterModule } from '@angular/router';
 const HOWTO_ROUTES: Routes = [
 {
 	path:'errorMessages',
-	loadChildren: () => import('./errorMessages/error-messages.module').then(m => m.ErrorMessagesModule),
+	loadChildren: './errorMessages/error-messages.module#ErrorMessagesModule',
 },
 {
 	path:'formData',
-	loadChildren: () => import('./formData/form-data.module').then(m => m.FormDataModule),
+	loadChildren: './formData/form-data.module#FormDataModule',
 },
 {
 	path:'fileObject',
-	loadChildren: () => import('./fileObject/file-object.module').then(m => m.FileObjectModule),
+	loadChildren: './fileObject/file-object.module#FileObjectModule',
 },
 {
 	path:'dirtyCheck',
-	loadChildren: () => import('./dirtyCheck/dirty-check.module').then(m => m.DirtyCheckModule),
+	loadChildren: './dirtyCheck/dirty-check.module#DirtyCheckModule',
 },
 {
 	path:'resetForm',
-	loadChildren: () => import('./resetForm/reset-form.module').then(m => m.ResetFormModule),
+	loadChildren: './resetForm/reset-form.module#ResetFormModule',
 },
 {
 	path:'stronglyType',
-	loadChildren: () => import('./stronglyType/strongly-type.module').then(m => m.StronglyTypeModule),
+	loadChildren: './stronglyType/strongly-type.module#StronglyTypeModule',
 },
 {
 	path:'bindConfig',
-	loadChildren: () => import('./bindConfig/bind-config.module').then(m => m.BindConfigModule),
+	loadChildren: './bindConfig/bind-config.module#BindConfigModule',
 },
 {
 	path:'patchModelValue',
-	loadChildren: () => import('./patchModelValue/patch-model-value.module').then(m => m.PatchModelValueModule),
+	loadChildren: './patchModelValue/patch-model-value.module#PatchModelValueModule',
 },
 {
 	path:'logicalOperators',
-	loadChildren: () => import('./logicalOperators/logical-operators.module').then(m => m.LogicalOperatorsModule),
+	loadChildren: './logicalOperators/logical-operators.module#LogicalOperatorsModule',
 },
 {
 	path:'classAbstraction',
-	loadChildren: () => import('./classAbstraction/class-abstraction.module').then(m => m.ClassAbstractionModule),
+	loadChildren: './classAbstraction/class-abstraction.module#ClassAbstractionModule',
 },
 {
 	path:'genericModel',
-	loadChildren: () => import('./genericModel/generic-model.module').then(m => m.GenericModelModule),
+	loadChildren: './genericModel/generic-model.module#GenericModelModule',
 },
 {
 	path:'errorMessageStrategy',
-	loadChildren: () => import('./errorMessageStrategy/error-message-strategy.module').then(m => m.ErrorMessageStrategyModule),
+	loadChildren: './errorMessageStrategy/error-message-strategy.module#ErrorMessageStrategyModule',
 },
 {
 	path:'commit',
-	loadChildren: () => import('./commit/commit.module').then(m => m.CommitModule),
+	loadChildren: './commit/commit.module#CommitModule',
 },
 {
 	path:'modifiedValue',
-	loadChildren: () => import('./modifiedValue/modified-value.module').then(m => m.ModifiedValueModule),
+	loadChildren: './modifiedValue/modified-value.module#ModifiedValueModule',
 },
 {
 	path:'conditionalControlDisable',
-	loadChildren: () => import('./conditionalControlDisable/conditional-control-disable.module').then(m => m.ConditionalControlDisableModule),
+	loadChildren: './conditionalControlDisable/conditional-control-disable.module#ConditionalControlDisableModule',
 },
 {
 	path:'autoPushFormGroup',
-	loadChildren: () => import('./autoPushFormGroup/auto-push-form-group.module').then(m => m.AutoPushFormGroupModule),
-},
-{
-	path:'greaterThanLessThanFormArray',
-	loadChildren: () => import('./greaterThanLessThanFormArray/greater-than-less-than-form-array.module').then(m => m.GreaterThanLessThanFormArrayModule),
+	loadChildren: './autoPushFormGroup/auto-push-form-group.module#AutoPushFormGroupModule',
 },
 {
 	path:'ngxTranslateValidationMessage',
-	loadChildren: () => import('./ngxTranslateValidationMessage/ngx-translate-validation-message.module').then(m => m.NgxTranslateValidationMessageModule),
+	loadChildren: './ngxTranslateValidationMessage/ngx-translate-validation-message.module#NgxTranslateValidationMessageModule',
+},
+{
+	path:'greaterThanLessThanFormArray',
+	loadChildren: './greaterThanLessThanFormArray/greater-than-less-than-form-array.module#GreaterThanLessThanFormArrayModule',
 },
 ];
 export const HOWTO_ROUTING = RouterModule.forChild(HOWTO_ROUTES);

@@ -4,263 +4,263 @@ import { Routes, RouterModule } from '@angular/router';
 const FORM_VALIDATION_ROUTES: Routes = [
 {
 	path:'allOf',
-	loadChildren: () => import('./allOf/all-of.module').then(m => m.AllOfModule),
+	loadChildren: './allOf/all-of.module#AllOfModule',
 },
 {
 	path:'alpha',
-	loadChildren: () => import('./alpha/alpha.module').then(m => m.AlphaModule),
+	loadChildren: './alpha/alpha.module#AlphaModule',
 },
 {
 	path:'alphaNumeric',
-	loadChildren: () => import('./alphaNumeric/alpha-numeric.module').then(m => m.AlphaNumericModule),
+	loadChildren: './alphaNumeric/alpha-numeric.module#AlphaNumericModule',
 },
 {
 	path:'async',
-	loadChildren: () => import('./async/async.module').then(m => m.AsyncModule),
+	loadChildren: './async/async.module#AsyncModule',
 },
 {
 	path:'ascii',
-	loadChildren: () => import('./ascii/ascii.module').then(m => m.AsciiModule),
+	loadChildren: './ascii/ascii.module#AsciiModule',
 },
 {
 	path:'choice',
-	loadChildren: () => import('./choice/choice.module').then(m => m.ChoiceModule),
+	loadChildren: './choice/choice.module#ChoiceModule',
 },
 {
 	path:'compose',
-	loadChildren: () => import('./compose/compose.module').then(m => m.ComposeModule),
+	loadChildren: './compose/compose.module#ComposeModule',
 },
 {
 	path:'compare',
-	loadChildren: () => import('./compare/compare.module').then(m => m.CompareModule),
+	loadChildren: './compare/compare.module#CompareModule',
 },
 {
 	path:'contains',
-	loadChildren: () => import('./contains/contains.module').then(m => m.ContainsModule),
+	loadChildren: './contains/contains.module#ContainsModule',
 },
 {
 	path:'cusip',
-	loadChildren: () => import('./cusip/cusip.module').then(m => m.CusipModule),
+	loadChildren: './cusip/cusip.module#CusipModule',
 },
 {
 	path:'creditCard',
-	loadChildren: () => import('./creditCard/credit-card.module').then(m => m.CreditCardModule),
+	loadChildren: './creditCard/credit-card.module#CreditCardModule',
 },
 {
 	path:'dataUri',
-	loadChildren: () => import('./dataUri/data-uri.module').then(m => m.DataUriModule),
+	loadChildren: './dataUri/data-uri.module#DataUriModule',
 },
 {
 	path:'date',
-	loadChildren: () => import('./date/date.module').then(m => m.DateModule),
+	loadChildren: './date/date.module#DateModule',
 },
 {
 	path:'different',
-	loadChildren: () => import('./different/different.module').then(m => m.DifferentModule),
+	loadChildren: './different/different.module#DifferentModule',
 },
 {
 	path:'digit',
-	loadChildren: () => import('./digit/digit.module').then(m => m.DigitModule),
+	loadChildren: './digit/digit.module#DigitModule',
 },
 {
 	path:'email',
-	loadChildren: () => import('./email/email.module').then(m => m.EmailModule),
+	loadChildren: './email/email.module#EmailModule',
 },
 {
 	path:'endsWith',
-	loadChildren: () => import('./endsWith/ends-with.module').then(m => m.EndsWithModule),
+	loadChildren: './endsWith/ends-with.module#EndsWithModule',
 },
 {
 	path:'even',
-	loadChildren: () => import('./even/even.module').then(m => m.EvenModule),
+	loadChildren: './even/even.module#EvenModule',
 },
 {
 	path:'extension',
-	loadChildren: () => import('./extension/extension.module').then(m => m.ExtensionModule),
+	loadChildren: './extension/extension.module#ExtensionModule',
 },
 {
 	path:'factor',
-	loadChildren: () => import('./factor/factor.module').then(m => m.FactorModule),
+	loadChildren: './factor/factor.module#FactorModule',
 },
 {
 	path:'fileSize',
-	loadChildren: () => import('./fileSize/file-size.module').then(m => m.FileSizeModule),
+	loadChildren: './fileSize/file-size.module#FileSizeModule',
 },
 {
 	path:'file',
-	loadChildren: () => import('./file/file.module').then(m => m.FileModule),
+	loadChildren: './file/file.module#FileModule',
 },
 {
 	path:'greaterThanEqualTo',
-	loadChildren: () => import('./greaterThanEqualTo/greater-than-equal-to.module').then(m => m.GreaterThanEqualToModule),
+	loadChildren: './greaterThanEqualTo/greater-than-equal-to.module#GreaterThanEqualToModule',
 },
 {
 	path:'greaterThan',
-	loadChildren: () => import('./greaterThan/greater-than.module').then(m => m.GreaterThanModule),
+	loadChildren: './greaterThan/greater-than.module#GreaterThanModule',
 },
 {
 	path:'grid',
-	loadChildren: () => import('./grid/grid.module').then(m => m.GridModule),
+	loadChildren: './grid/grid.module#GridModule',
 },
 {
 	path:'hexColor',
-	loadChildren: () => import('./hexColor/hex-color.module').then(m => m.HexColorModule),
+	loadChildren: './hexColor/hex-color.module#HexColorModule',
 },
 {
 	path:'ip',
-	loadChildren: () => import('./ip/ip.module').then(m => m.IpModule),
+	loadChildren: './ip/ip.module#IpModule',
 },
 {
 	path:'image',
-	loadChildren: () => import('./image/image.module').then(m => m.ImageModule),
+	loadChildren: './image/image.module#ImageModule',
 },
 {
 	path:'json',
-	loadChildren: () => import('./json/json.module').then(m => m.JsonModule),
+	loadChildren: './json/json.module#JsonModule',
 },
 {
 	path:'latitude',
-	loadChildren: () => import('./latitude/latitude.module').then(m => m.LatitudeModule),
+	loadChildren: './latitude/latitude.module#LatitudeModule',
 },
 {
 	path:'latLong',
-	loadChildren: () => import('./latLong/lat-long.module').then(m => m.LatLongModule),
+	loadChildren: './latLong/lat-long.module#LatLongModule',
 },
 {
 	path:'leapYear',
-	loadChildren: () => import('./leapYear/leap-year.module').then(m => m.LeapYearModule),
+	loadChildren: './leapYear/leap-year.module#LeapYearModule',
 },
 {
 	path:'lessThanEqualTo',
-	loadChildren: () => import('./lessThanEqualTo/less-than-equal-to.module').then(m => m.LessThanEqualToModule),
+	loadChildren: './lessThanEqualTo/less-than-equal-to.module#LessThanEqualToModule',
 },
 {
 	path:'lessThan',
-	loadChildren: () => import('./lessThan/less-than.module').then(m => m.LessThanModule),
+	loadChildren: './lessThan/less-than.module#LessThanModule',
 },
 {
 	path:'longitude',
-	loadChildren: () => import('./longitude/longitude.module').then(m => m.LongitudeModule),
+	loadChildren: './longitude/longitude.module#LongitudeModule',
 },
 {
 	path:'lowerCase',
-	loadChildren: () => import('./lowerCase/lower-case.module').then(m => m.LowerCaseModule),
-},
-{
-	path:'mask',
-	loadChildren: () => import('./mask/mask.module').then(m => m.MaskModule),
+	loadChildren: './lowerCase/lower-case.module#LowerCaseModule',
 },
 {
 	path:'mac',
-	loadChildren: () => import('./mac/mac.module').then(m => m.MacModule),
+	loadChildren: './mac/mac.module#MacModule',
+},
+{
+	path:'mask',
+	loadChildren: './mask/mask.module#MaskModule',
 },
 {
 	path:'maxDate',
-	loadChildren: () => import('./maxDate/max-date.module').then(m => m.MaxDateModule),
+	loadChildren: './maxDate/max-date.module#MaxDateModule',
 },
 {
 	path:'maxLength',
-	loadChildren: () => import('./maxLength/max-length.module').then(m => m.MaxLengthModule),
+	loadChildren: './maxLength/max-length.module#MaxLengthModule',
 },
 {
 	path:'maxNumber',
-	loadChildren: () => import('./maxNumber/max-number.module').then(m => m.MaxNumberModule),
+	loadChildren: './maxNumber/max-number.module#MaxNumberModule',
 },
 {
 	path:'minDate',
-	loadChildren: () => import('./minDate/min-date.module').then(m => m.MinDateModule),
+	loadChildren: './minDate/min-date.module#MinDateModule',
 },
 {
 	path:'minLength',
-	loadChildren: () => import('./minLength/min-length.module').then(m => m.MinLengthModule),
+	loadChildren: './minLength/min-length.module#MinLengthModule',
 },
 {
 	path:'minNumber',
-	loadChildren: () => import('./minNumber/min-number.module').then(m => m.MinNumberModule),
+	loadChildren: './minNumber/min-number.module#MinNumberModule',
 },
 {
 	path:'noneOf',
-	loadChildren: () => import('./noneOf/none-of.module').then(m => m.NoneOfModule),
+	loadChildren: './noneOf/none-of.module#NoneOfModule',
 },
 {
 	path:'notEmpty',
-	loadChildren: () => import('./notEmpty/not-empty.module').then(m => m.NotEmptyModule),
+	loadChildren: './notEmpty/not-empty.module#NotEmptyModule',
 },
 {
 	path:'numeric',
-	loadChildren: () => import('./numeric/numeric.module').then(m => m.NumericModule),
+	loadChildren: './numeric/numeric.module#NumericModule',
 },
 {
 	path:'odd',
-	loadChildren: () => import('./odd/odd.module').then(m => m.OddModule),
+	loadChildren: './odd/odd.module#OddModule',
 },
 {
 	path:'oneOf',
-	loadChildren: () => import('./oneOf/one-of.module').then(m => m.OneOfModule),
+	loadChildren: './oneOf/one-of.module#OneOfModule',
 },
 {
 	path:'password',
-	loadChildren: () => import('./password/password.module').then(m => m.PasswordModule),
+	loadChildren: './password/password.module#PasswordModule',
 },
 {
 	path:'pattern',
-	loadChildren: () => import('./pattern/pattern.module').then(m => m.PatternModule),
+	loadChildren: './pattern/pattern.module#PatternModule',
 },
 {
 	path:'port',
-	loadChildren: () => import('./port/port.module').then(m => m.PortModule),
+	loadChildren: './port/port.module#PortModule',
 },
 {
 	path:'primeNumber',
-	loadChildren: () => import('./primeNumber/prime-number.module').then(m => m.PrimeNumberModule),
+	loadChildren: './primeNumber/prime-number.module#PrimeNumberModule',
 },
 {
 	path:'range',
-	loadChildren: () => import('./range/range.module').then(m => m.RangeModule),
+	loadChildren: './range/range.module#RangeModule',
 },
 {
 	path:'rule',
-	loadChildren: () => import('./rule/rule.module').then(m => m.RuleModule),
+	loadChildren: './rule/rule.module#RuleModule',
 },
 {
 	path:'required',
-	loadChildren: () => import('./required/required.module').then(m => m.RequiredModule),
+	loadChildren: './required/required.module#RequiredModule',
 },
 {
 	path:'requiredTrue',
-	loadChildren: () => import('./requiredTrue/required-true.module').then(m => m.RequiredTrueModule),
+	loadChildren: './requiredTrue/required-true.module#RequiredTrueModule',
 },
 {
 	path:'fileSize',
-	loadChildren: () => import('./fileSize/file-size.module').then(m => m.FileSizeModule),
+	loadChildren: './fileSize/file-size.module#FileSizeModule',
 },
 {
 	path:'startsWith',
-	loadChildren: () => import('./startsWith/starts-with.module').then(m => m.StartsWithModule),
+	loadChildren: './startsWith/starts-with.module#StartsWithModule',
 },
 {
 	path:'time',
-	loadChildren: () => import('./time/time.module').then(m => m.TimeModule),
+	loadChildren: './time/time.module#TimeModule',
 },
 {
 	path:'maxTime',
-	loadChildren: () => import('./maxTime/max-time.module').then(m => m.MaxTimeModule),
+	loadChildren: './maxTime/max-time.module#MaxTimeModule',
 },
 {
 	path:'minTime',
-	loadChildren: () => import('./minTime/min-time.module').then(m => m.MinTimeModule),
+	loadChildren: './minTime/min-time.module#MinTimeModule',
 },
 {
 	path:'unique',
-	loadChildren: () => import('./unique/unique.module').then(m => m.UniqueModule),
+	loadChildren: './unique/unique.module#UniqueModule',
 },
 {
 	path:'upperCase',
-	loadChildren: () => import('./upperCase/upper-case.module').then(m => m.UpperCaseModule),
+	loadChildren: './upperCase/upper-case.module#UpperCaseModule',
 },
 {
 	path:'url',
-	loadChildren: () => import('./url/url.module').then(m => m.UrlModule),
+	loadChildren: './url/url.module#UrlModule',
 },
 ];
 export const FORM_VALIDATION_ROUTING = RouterModule.forChild(FORM_VALIDATION_ROUTES);

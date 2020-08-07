@@ -26,7 +26,7 @@ export class ContributionComponent implements OnInit{
          
           })
         if(router.url.includes("rx-web-core")){
-        // this.http.get('assets/json/rxwebcore-links.json').subscribe((response: any) => {
+        // this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/rxwebcore-links.json').subscribe((response: any) => {
         //     this.links = response;
         //     var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
         //     if (currentObjIndex != undefined) {
@@ -37,7 +37,7 @@ export class ContributionComponent implements OnInit{
         //   })
         // }
         // else{
-        //   this.http.get('assets/json/search1.json').subscribe((response: any) => {
+        //   this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/search1.json').subscribe((response: any) => {
         //     this.links = response;
         //     var currentObjIndex = this.links.findIndex(a => a.path == this.fileName);
         //     if (currentObjIndex != undefined) {

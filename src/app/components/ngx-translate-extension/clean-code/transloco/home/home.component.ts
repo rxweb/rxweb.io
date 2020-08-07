@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private http: HttpClient) {
 
-    this.http.get("assets/json/data.json").subscribe(response => {
+    this.http.get("https://rxwebioassets.blob.core.windows.net/$web/json/data.json").subscribe(response => {
       this.tabArray = response['home'];
       console.log(this.tabArray)
       this.activeTab = this.tabArray[1].tabName;

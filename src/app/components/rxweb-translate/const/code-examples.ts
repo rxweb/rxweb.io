@@ -103,7 +103,7 @@ countries: any;`,
 constructor(private http: HttpClient, private rxTranslation: RxTranslation) {}
 
 get() { 
-    return this.http.get("assets/i18n/" + this.rxTranslation.language + "/countries." + this.rxTranslation.language + ".json")
+    return this.http.get("https://rxwebioassets.blob.core.windows.net/$web/i18n/" + this.rxTranslation.language + "/countries." + this.rxTranslation.language + ".json")
 }`,
         html: `     <select name="control" class="form-control">
     <option *ngFor="let item of countries | async" [value]="item.countryId">{{item.countryName}}</option>
@@ -344,9 +344,9 @@ NgModule({
       preloadingStrategy: true,
       cacheLanguageWiseObject: true,
       globalFilePath:
-        "assets/i18n/{{language-code}}/global.{{language-code}}.json",
+        "https://rxwebioassets.blob.core.windows.net/$web/i18n/{{language-code}}/global.{{language-code}}.json",
       filePath:
-        "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json",
+        "https://rxwebioassets.blob.core.windows.net/$web/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json",
       
     })
   ],

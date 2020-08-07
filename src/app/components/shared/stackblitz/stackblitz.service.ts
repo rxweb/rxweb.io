@@ -160,7 +160,7 @@ export class StackBlitzService {
       //   let exampleJsonFileName = `src/assets/${exampleContent["jsonName"]}`
       //   this.addInputElement(form, `files[${exampleJsonFileName}]`, exampleContent["json"]);
       //   if (exampleContent["component"] != null)
-      //     exampleContent["component"] = exampleContent["component"].replace(`assets/examples/reactive-form-validators/${validationType}s/${validationName}/${exampleName}/${exampleContent["jsonName"]}`, `assets/${exampleContent["jsonName"]}`)
+      //     exampleContent["component"] = exampleContent["component"].replace(`https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/${validationType}s/${validationName}/${exampleName}/${exampleContent["jsonName"]}`, `https://rxwebioassets.blob.core.windows.net/$web/${exampleContent["jsonName"]}`)
       // }
       if (exampleContent["component"] != null)
         this.addInputElement(form, `files[${exampleComponentFileName}]`, exampleContent["component"]);
@@ -284,7 +284,7 @@ export class StackBlitzService {
         //   let exampleJsonFileName = `src/assets/${exampleContent["jsonName"]}`
         //   this.addInputElement(form, `files[${exampleJsonFileName}]`, exampleContent["json"]);
         //   if (exampleContent["component"] != null)
-        //     exampleContent["component"] = exampleContent["component"].replace(`assets/examples/reactive-form-validators/${validationType}s/${validationName}/${exampleName}/${exampleContent["jsonName"]}`, `assets/${exampleContent["jsonName"]}`)
+        //     exampleContent["component"] = exampleContent["component"].replace(`https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/${validationType}s/${validationName}/${exampleName}/${exampleContent["jsonName"]}`, `https://rxwebioassets.blob.core.windows.net/$web/${exampleContent["jsonName"]}`)
         // }
         if (exampleContent["component"] != null)
           this.addInputElement(form, `files[${exampleComponentFileName}]`, exampleContent["component"]);
@@ -361,14 +361,14 @@ export class StackBlitzService {
       for (var prop in jsonObject) {
         if (jsonObject.hasOwnProperty(prop)) {
           let exampleJsonFileName = `src/assets/${prop}`
-          let sourcePath: string = validationType == "templateDriven" ? `assets/examples/reactive-form-validators/template-driven/validation-${templateDrivenType}/${validationName}/${exampleName}/${prop}` : `assets/examples/reactive-form-validators/${validationType}s/${validationName}/${exampleName}/${prop}`;
-          let destinationPath: string = `assets/${prop}`
+          let sourcePath: string = validationType == "templateDriven" ? `https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/template-driven/validation-${templateDrivenType}/${validationName}/${exampleName}/${prop}` : `https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/${validationType}s/${validationName}/${exampleName}/${prop}`;
+          let destinationPath: string = `https://rxwebioassets.blob.core.windows.net/$web/${prop}`
           this.addInputElement(form, `files[${exampleJsonFileName}]`, jsonObject[prop]);
           if (exampleName == "dynamic") {
             obj["component"] = obj["component"].replace(sourcePath, destinationPath)
             obj["component"] = obj["component"].replace("import { environment } from 'src/environments/environment';", "")
-            obj["component"] = obj["component"].replace("'assets/dynamic.json?v='+environment.appVersion", "'assets/dynamic.json'")
-            obj["component"] = obj["component"].replace("'assets/dynamic.json?v=' + environment.appVersion", "'assets/dynamic.json'")
+            obj["component"] = obj["component"].replace("'https://rxwebioassets.blob.core.windows.net/$web/dynamic.json?v='+environment.appVersion", "'https://rxwebioassets.blob.core.windows.net/$web/dynamic.json'")
+            obj["component"] = obj["component"].replace("'https://rxwebioassets.blob.core.windows.net/$web/dynamic.json?v=' + environment.appVersion", "'https://rxwebioassets.blob.core.windows.net/$web/dynamic.json'")
           }
           else if (exampleName == "edit") {
             obj["component"] = obj["component"].replace(sourcePath, destinationPath)

@@ -4,35 +4,35 @@ import { Routes, RouterModule } from '@angular/router';
 const CONDITIONAL_BINDING_ROUTES: Routes = [
 {
 	path:'conditionalclass',
-	loadChildren: () => import('./conditionalclass/conditionalclass.module').then(m => m.ConditionalclassModule),
+	loadChildren: './conditionalclass/conditionalclass.module#ConditionalclassModule',
 },
 {
 	path:'conditionaldescription',
-	loadChildren: () => import('./conditionaldescription/conditionaldescription.module').then(m => m.ConditionaldescriptionModule),
+	loadChildren: './conditionaldescription/conditionaldescription.module#ConditionaldescriptionModule',
 },
 {
 	path:'conditionaldisabled',
-	loadChildren: () => import('./conditionaldisabled/conditionaldisabled.module').then(m => m.ConditionaldisabledModule),
+	loadChildren: './conditionaldisabled/conditionaldisabled.module#ConditionaldisabledModule',
 },
 {
 	path:'conditionalhide',
-	loadChildren: () => import('./conditionalhide/conditionalhide.module').then(m => m.ConditionalhideModule),
+	loadChildren: './conditionalhide/conditionalhide.module#ConditionalhideModule',
 },
 {
 	path:'conditionallabel',
-	loadChildren: () => import('./conditionallabel/conditionallabel.module').then(m => m.ConditionallabelModule),
+	loadChildren: './conditionallabel/conditionallabel.module#ConditionallabelModule',
 },
 {
 	path:'conditionalplaceholder',
-	loadChildren: () => import('./conditionalplaceholder/conditionalplaceholder.module').then(m => m.ConditionalplaceholderModule),
+	loadChildren: './conditionalplaceholder/conditionalplaceholder.module#ConditionalplaceholderModule',
 },
 {
 	path:'conditionalreadonly',
-	loadChildren: () => import('./conditionalreadonly/conditionalreadonly.module').then(m => m.ConditionalreadonlyModule),
+	loadChildren: './conditionalreadonly/conditionalreadonly.module#ConditionalreadonlyModule',
 },
 {
 	path:'conditionalvalue',
-	loadChildren: () => import('./conditionalvalue/conditionalvalue.module').then(m => m.ConditionalvalueModule),
+	loadChildren: './conditionalvalue/conditionalvalue.module#ConditionalvalueModule',
 },
 ];
 export const CONDITIONAL_BINDING_ROUTING = RouterModule.forChild(CONDITIONAL_BINDING_ROUTES);

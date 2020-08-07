@@ -36,7 +36,7 @@ The CLI provides lots of features through scaffolding like generating different 
 I believe this is interesting :).
 
 <video  controls>
-<source src="assets/images/rxwebcore-cli-installation.mp4" type="video/mp4">
+<source src="https://rxwebioassets.blob.core.windows.net/$web/images/rxwebcore-cli-installation.mp4" type="video/mp4">
 </video>
  
 ## Step 3 : Examine the Project Structure and Database Tables
@@ -120,5 +120,5 @@ After the project solution is successfully generated as per the mentioned projec
 The first step is to hit the authentication api get method, it should be authorized through inserting the value in the authorize button and then after the post method is called. After the new token is generated it is authorized using the authorize button. 
 > This is done to prevent brute force attacks.
 <video  controls>
-<source src="assets/images/build-project.mp4" type="video/mp4">
+<source src="https://rxwebioassets.blob.core.windows.net/$web/images/build-project.mp4" type="video/mp4">
 </video>

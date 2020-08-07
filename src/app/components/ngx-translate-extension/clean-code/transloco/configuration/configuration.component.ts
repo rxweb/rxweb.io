@@ -17,7 +17,7 @@ export class ConfigurationComponent {
 
   constructor(private http: HttpClient) {
 
-    this.http.get("assets/json/data.json").subscribe(response => {
+    this.http.get("https://rxwebioassets.blob.core.windows.net/$web/json/data.json").subscribe(response => {
       this.tabArray = response['configuration'];
       console.log(this.tabArray)
       this.activeTab = this.tabArray[0].tabName;

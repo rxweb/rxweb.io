@@ -5,6 +5,7 @@ import { TimeTemplateDrivenValidationDirectivesExtendedModule } from "src/assets
 import { TimeTemplateDrivenValidationDecoratorsExtendedModule } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/time/time-validation-decorators-extended.module";
 
 import { TimeValidatorsExtendedModule } from "src/assets/examples/reactive-form-validators/validators/time/time-validators-extended.module";
+
 import { TIME_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/form-validation/time/time.constants";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { TIME_ROUTING } from "src/app/components/form-validation/time/time.routing";
@@ -18,4 +19,6 @@ import { PageModule } from "src/app/components/page/page.module";
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: TIME_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class TimeModule { }
+
+
 

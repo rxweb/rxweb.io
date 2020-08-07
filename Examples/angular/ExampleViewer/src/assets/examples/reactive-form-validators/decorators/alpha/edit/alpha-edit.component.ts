@@ -17,7 +17,7 @@ export class AlphaEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/alpha/edit/country-data.json?v=' + environment.appVersion).subscribe(country => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/alpha/edit/country-data.json?v=' + environment.appVersion).subscribe(country => {
             this.countryFormGroup = this.formBuilder.formGroup<Country>(Country,country);
         })
     }

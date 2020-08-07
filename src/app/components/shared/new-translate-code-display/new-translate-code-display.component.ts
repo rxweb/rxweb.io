@@ -25,7 +25,7 @@ export class NewCodeDisplayComponent implements OnInit {
 
   ngOnInit() {
     var fileName = this.router.url.split('/')[2];
-    this.http.get<any[]>(`assets/json/generator/ngx-translate/${fileName}.json`).subscribe(res => {
+    this.http.get<any[]>(`https://rxwebioassets.blob.core.windows.net/$web/json/generator/ngx-translate/${fileName}.json`).subscribe(res => {
       var data = res.filter(x => x.exampleName == this.exampleName);
       this.examples = data[0].exampleItems;
       this.activeTab = this.examples[0].fileName;

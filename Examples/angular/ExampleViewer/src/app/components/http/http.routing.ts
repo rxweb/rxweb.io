@@ -4,35 +4,35 @@ import { Routes, RouterModule } from '@angular/router';
 const HTTP_ROUTES: Routes = [
 {
 	path:'get',
-	loadChildren: () => import('./get/get.module').then(m => m.GetModule),
+	loadChildren: './get/get.module#GetModule',
 },
 {
 	path:'post',
-	loadChildren: () => import('./post/post.module').then(m => m.PostModule),
+	loadChildren: './post/post.module#PostModule',
 },
 {
 	path:'put',
-	loadChildren: () => import('./put/put.module').then(m => m.PutModule),
+	loadChildren: './put/put.module#PutModule',
 },
 {
 	path:'patch',
-	loadChildren: () => import('./patch/patch.module').then(m => m.PatchModule),
+	loadChildren: './patch/patch.module#PatchModule',
 },
 {
 	path:'delete',
-	loadChildren: () => import('./delete/delete.module').then(m => m.DeleteModule),
+	loadChildren: './delete/delete.module#DeleteModule',
 },
 {
 	path:'filters',
-	loadChildren: () => import('./filters/filters.module').then(m => m.FiltersModule),
+	loadChildren: './filters/filters.module#FiltersModule',
 },
 {
 	path:'httpClientConfig',
-	loadChildren: () => import('./httpClientConfig/http-client-config.module').then(m => m.HttpClientConfigModule),
+	loadChildren: './httpClientConfig/http-client-config.module#HttpClientConfigModule',
 },
 {
 	path:'decorators',
-	loadChildren: () => import('./decorators/decorators.module').then(m => m.DecoratorsModule),
+	loadChildren: './decorators/decorators.module#DecoratorsModule',
 },
 ];
 export const HTTP_ROUTING = RouterModule.forChild(HTTP_ROUTES);

@@ -7,7 +7,7 @@ linktitle: formGroup-class-instance
 ---
 # formArrray Class Instance
 
-<img style="margin:10px;" src='assets/images/strongly-typed-form-array.png'/>
+<img style="margin:10px;" src='https://rxwebioassets.blob.core.windows.net/$web/images/strongly-typed-form-array.png'/>
 
 <div class="row page-section" style="padding-bottom: 60px;">
     <div class="col-lg-12">
@@ -23,7 +23,7 @@ linktitle: formGroup-class-instance
 
 # formGroup Class Instance
 
-<img style="margin:10px;" src='assets/images/strongly-typed-form-group.png'/>
+<img style="margin:10px;" src='https://rxwebioassets.blob.core.windows.net/$web/images/strongly-typed-form-group.png'/>
 
 <div class="row page-section" style="padding-bottom: 60px;">
     <div class="col-lg-12">
@@ -39,7 +39,7 @@ linktitle: formGroup-class-instance
 
 # formControl Class Instance
 
-<img style="margin:10px;" src='assets/images/strongly-typed-form-control.png'/>
+<img style="margin:10px;" src='https://rxwebioassets.blob.core.windows.net/$web/images/strongly-typed-form-control.png'/>
 
 <div class="row page-section">
     <div class="col-lg-12">

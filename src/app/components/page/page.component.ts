@@ -149,21 +149,21 @@ export class PageComponent implements OnInit,OnDestroy {
       }
       switch (splitedArray[3]) {
         case "decorators":
-          this.codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
-          this.htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.validationName + '-' + this.typeName + '.json?v=' + environment.appVersion;
+          this.codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
+          this.htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.validationName + '-' + this.typeName + '.json?v=' + environment.appVersion;
           titleString = "decorator";
           break;
         case "validators":
-          this.codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
-          this.htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.validationName + '-' + this.typeName + '.json?v=' + environment.appVersion;
+          this.codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
+          this.htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.validationName + '-' + this.typeName + '.json?v=' + environment.appVersion;
           titleString = "validator";
           break;
         case "template-driven":
-          this.codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
+          this.codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
           if (this.templateDrivenType == "decorators")
-            this.htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '/' + this.validationName + '-validation-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
+            this.htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '/' + this.validationName + '-validation-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
           else if (this.templateDrivenType == "directives")
-            this.htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '/' + this.validationName + '-validation-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
+            this.htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '/' + this.validationName + '-validation-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
           titleString = "template-driven";
           break;
       }
@@ -172,15 +172,15 @@ export class PageComponent implements OnInit,OnDestroy {
   //  else if(this.mainType == "api"){
   //    debugger;
   //   this.typeName = this.router.url.split('/')[2];
-  //   this.codeUri = 'assets/json/generator/' + this.typeName + '/' + 'decorators' + '.json';
-  //   this.htmlUri = 'assets/json/generator/' + this.typeName + '/' + this.typeName + '-' + 'decorators' + '.json';
+  //   this.codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.typeName + '/' + 'decorators' + '.json';
+  //   this.htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.typeName + '/' + this.typeName + '-' + 'decorators' + '.json';
   //   titleString = "validator";
   //   document.title = this.typeName + " - RxWeb Docs";
   //  }
     else if (this.mainType == "vue") {
       let vuesSplitedArray = this.router.url.split('/');
-      this.codeUri = 'assets/json/generator/' + vuesSplitedArray[3] + '/' + 'decorators' + '.json';
-      this.htmlUri = 'assets/json/generator/vue/' + vuesSplitedArray[3] + '/' + vuesSplitedArray[3] + '-' + 'vue' + '.json';
+      this.codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + vuesSplitedArray[3] + '/' + 'decorators' + '.json';
+      this.htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/vue/' + vuesSplitedArray[3] + '/' + vuesSplitedArray[3] + '-' + 'vue' + '.json';
       titleString = "validator";
       document.title = splitedArray[3] + " - RxWeb Docs";
     }
@@ -191,8 +191,8 @@ export class PageComponent implements OnInit,OnDestroy {
         var newUrl = dynamicsplitedArray[2].split('#')[0];
         dynamicsplitedArray[2] = newUrl;
       }
-      this.codeUri = 'assets/json/generator/' + dynamicsplitedArray[2] + '/' + 'validators' + '.json';
-      this.htmlUri = 'assets/json/generator/' + dynamicsplitedArray[2] + '/' + dynamicsplitedArray[2] + '-' + 'validators' + '.json';
+      this.codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + dynamicsplitedArray[2] + '/' + 'validators' + '.json';
+      this.htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + dynamicsplitedArray[2] + '/' + dynamicsplitedArray[2] + '-' + 'validators' + '.json';
       titleString = "validator";
       document.title = splitedArray[2] + " - RxWeb Docs";
     }
@@ -207,8 +207,8 @@ export class PageComponent implements OnInit,OnDestroy {
         var newUrl = dynamicsplitedArray[3].split('?')[0];
         dynamicsplitedArray[3] = dynamicsplitedArray[3].replace(dynamicsplitedArray[3],newUrl);
         }     
-      this.codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/' + 'validators' + '.json';
-      this.htmlUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/' + dynamicsplitedArray[3] + '-' + 'validators' + '.json';
+      this.codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + dynamicsplitedArray[3] + '/' + 'validators' + '.json';
+      this.htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + dynamicsplitedArray[3] + '/' + dynamicsplitedArray[3] + '-' + 'validators' + '.json';
       titleString = "validator";
       document.title = splitedArray[3] + " - RxWeb Docs";
     }

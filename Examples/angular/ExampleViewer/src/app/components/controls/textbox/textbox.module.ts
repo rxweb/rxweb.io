@@ -1,7 +1,5 @@
 import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-
 import { TEXTBOX_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/controls/textbox/textbox.constants";
 import { TextboxValidatorsExtendedModule } from "src/assets/examples/controls/textbox/textbox-validators-extended.module";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";

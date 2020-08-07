@@ -1,7 +1,5 @@
 import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-
 import { DYNAMICURL_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/controls/dynamicurl/dynamicurl.constants";
 import { DynamicurlValidatorsExtendedModule } from "src/assets/examples/controls/dynamicurl/dynamicurl-validators-extended.module";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";

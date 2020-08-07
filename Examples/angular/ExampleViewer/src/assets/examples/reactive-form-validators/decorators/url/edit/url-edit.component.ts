@@ -17,7 +17,7 @@ export class UrlEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/url/edit/web-site-info-model-data.json?v=' + environment.appVersion).subscribe(webSiteInfoModel => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/url/edit/web-site-info-model-data.json?v=' + environment.appVersion).subscribe(webSiteInfoModel => {
             this.webSiteInfoModelFormGroup = this.formBuilder.formGroup<WebSiteInfoModel>(WebSiteInfoModel,webSiteInfoModel);
         })
     }

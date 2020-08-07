@@ -1,7 +1,5 @@
 import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-
 import { RADIO_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/controls/radio/radio.constants";
 import { RadioValidatorsExtendedModule } from "src/assets/examples/controls/radio/radio-validators-extended.module";
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";

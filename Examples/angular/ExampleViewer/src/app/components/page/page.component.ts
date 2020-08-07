@@ -114,21 +114,21 @@ export class PageComponent implements OnInit {
     if (this.mainType != "reactive-dynamic-forms" && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
       switch (splitedArray[3]) {
         case "decorators":
-          codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
-          htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.validationName + '-' + this.typeName + '.json?v=' + environment.appVersion;
+          codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
+          htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.validationName + '-' + this.typeName + '.json?v=' + environment.appVersion;
           titleString = "decorator";
           break;
         case "validators":
-          codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
-          htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.validationName + '-' + this.typeName + '.json?v=' + environment.appVersion;
+          codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '.json?v=' + environment.appVersion;
+          htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.validationName + '-' + this.typeName + '.json?v=' + environment.appVersion;
           titleString = "validator";
           break;
         case "template-driven":
-          codeUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
+          codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
           if (this.templateDrivenType == "decorators")
-            htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '/' + this.validationName + '-validation-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
+            htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '/' + this.validationName + '-validation-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
           else if (this.templateDrivenType == "directives")
-            htmlUri = 'assets/json/generator/' + this.validationName + '/' + this.typeName + '/' + this.validationName + '-validation-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
+            htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + this.validationName + '/' + this.typeName + '/' + this.validationName + '-validation-' + this.templateDrivenType + '.json?v=' + environment.appVersion;
           titleString = "template-driven";
           break;
       }
@@ -136,8 +136,8 @@ export class PageComponent implements OnInit {
     }
     else{
       let dynamicsplitedArray = location.pathname.split('/');
-      codeUri = 'assets/json/generator/' + dynamicsplitedArray[3] + '/'+  'validators' + '.json';
-      htmlUri = 'assets/json/generator/'  + dynamicsplitedArray[3]  + '/'+ dynamicsplitedArray[3] + '-' + 'validators' + '.json';
+      codeUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/' + dynamicsplitedArray[3] + '/'+  'validators' + '.json';
+      htmlUri = 'https://rxwebioassets.blob.core.windows.net/$web/json/generator/'  + dynamicsplitedArray[3]  + '/'+ dynamicsplitedArray[3] + '-' + 'validators' + '.json';
       titleString = "validator";
     }
 

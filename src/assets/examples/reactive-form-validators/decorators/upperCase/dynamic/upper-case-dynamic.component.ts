@@ -20,7 +20,7 @@ export class UpperCaseDynamicComponent implements OnInit {
     ngOnInit() {
         let location = new Location();
         let formBuilderConfiguration = new FormBuilderConfiguration();
-		this.http.get('assets/examples/reactive-form-validators/decorators/upperCase/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
+		this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/upperCase/dynamic/dynamic.json?v=' + environment.appVersion).subscribe(dynamic => {
             formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
 			this.locationFormGroup = this.formBuilder.formGroup(location,formBuilderConfiguration);
         })

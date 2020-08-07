@@ -17,7 +17,7 @@ export class LatitudeEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/latitude/edit/number-info-data.json?v=' + environment.appVersion).subscribe(numberInfo => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/latitude/edit/number-info-data.json?v=' + environment.appVersion).subscribe(numberInfo => {
             this.numberInfoFormGroup = this.formBuilder.formGroup<NumberInfo>(NumberInfo,numberInfo);
         })
     }

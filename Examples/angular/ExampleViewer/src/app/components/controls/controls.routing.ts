@@ -4,51 +4,55 @@ import { Routes, RouterModule } from '@angular/router';
 const CONTROLS_ROUTES: Routes = [
 {
 	path:'textbox',
-	loadChildren: () => import('./textbox/textbox.module').then(m => m.TextboxModule),
-},
-{
-	path:'checkbox',
-	loadChildren: () => import('./checkbox/checkbox.module').then(m => m.CheckboxModule),
-},
-{
-	path:'dynamicdate',
-	loadChildren: () => import('./dynamicdate/dynamicdate.module').then(m => m.DynamicdateModule),
-},
-{
-	path:'dropdown',
-	loadChildren: () => import('./dropdown/dropdown.module').then(m => m.DropdownModule),
-},
-{
-	path:'dynamicemail',
-	loadChildren: () => import('./dynamicemail/dynamicemail.module').then(m => m.DynamicemailModule),
-},
-{
-	path:'dynamicfile',
-	loadChildren: () => import('./dynamicfile/dynamicfile.module').then(m => m.DynamicfileModule),
-},
-{
-	path:'dynamicpassword',
-	loadChildren: () => import('./dynamicpassword/dynamicpassword.module').then(m => m.DynamicpasswordModule),
-},
-{
-	path:'radio',
-	loadChildren: () => import('./radio/radio.module').then(m => m.RadioModule),
-},
-{
-	path:'dynamicrange',
-	loadChildren: () => import('./dynamicrange/dynamicrange.module').then(m => m.DynamicrangeModule),
-},
-{
-	path:'textarea',
-	loadChildren: () => import('./textarea/textarea.module').then(m => m.TextareaModule),
-},
-{
-	path:'dynamicurl',
-	loadChildren: () => import('./dynamicurl/dynamicurl.module').then(m => m.DynamicurlModule),
+	loadChildren: './textbox/textbox.module#TextboxModule',
 },
 {
 	path:'color',
-	loadChildren: () => import('./color/color.module').then(m => m.ColorModule),
+	loadChildren: './color/color.module#ColorModule',
+},
+{
+	path:'checkbox',
+	loadChildren: './checkbox/checkbox.module#CheckboxModule',
+},
+{
+	path:'dynamicdate',
+	loadChildren: './dynamicdate/dynamicdate.module#DynamicdateModule',
+},
+{
+	path:'dropdown',
+	loadChildren: './dropdown/dropdown.module#DropdownModule',
+},
+{
+	path:'dynamicemail',
+	loadChildren: './dynamicemail/dynamicemail.module#DynamicemailModule',
+},
+{
+	path:'dynamicfile',
+	loadChildren: './dynamicfile/dynamicfile.module#DynamicfileModule',
+},
+{
+	path:'dynamicpassword',
+	loadChildren: './dynamicpassword/dynamicpassword.module#DynamicpasswordModule',
+},
+{
+	path:'radio',
+	loadChildren: './radio/radio.module#RadioModule',
+},
+{
+	path:'dynamicrange',
+	loadChildren: './dynamicrange/dynamicrange.module#DynamicrangeModule',
+},
+{
+	path:'textarea',
+	loadChildren: './textarea/textarea.module#TextareaModule',
+},
+{
+	path:'dynamicurl',
+	loadChildren: './dynamicurl/dynamicurl.module#DynamicurlModule',
+},
+{
+	path:'color',
+	loadChildren: './color/color.module#ColorModule',
 },
 ];
 export const CONTROLS_ROUTING = RouterModule.forChild(CONTROLS_ROUTES);

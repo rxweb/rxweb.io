@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    this.http.get('assets/json/validation.json?v=' + environment.appVersion)
+    this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/validation.json?v=' + environment.appVersion)
       .subscribe((response:any) => {
         this.validators = response.routes;
         this.masterList = this.validators.map(x => Object.assign({}, x));

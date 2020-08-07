@@ -17,7 +17,7 @@ export class DifferentEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/different/edit/account-info-data.json?v=' + environment.appVersion).subscribe(accountInfo => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/different/edit/account-info-data.json?v=' + environment.appVersion).subscribe(accountInfo => {
             this.accountInfoFormGroup = this.formBuilder.formGroup<AccountInfo>(AccountInfo,accountInfo);
         })
     }

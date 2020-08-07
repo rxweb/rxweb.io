@@ -22,8 +22,8 @@ export class AppCodeComponent implements OnInit {
   type: string;
 
   constructor(private http: Http) {
-    // this.http.get('assets/data/' + this.scopeName + '-translations.ts').subscribe(res => {
-    // this.http.get(`assets/data/${this.scopeName}-translations.ts`).subscribe(res => {
+    // this.http.get('https://rxwebioassets.blob.core.windows.net/$web/data/' + this.scopeName + '-translations.ts').subscribe(res => {
+    // this.http.get(`https://rxwebioassets.blob.core.windows.net/$web/data/${this.scopeName}-translations.ts`).subscribe(res => {
     //   this.items = res;
     //   console.log(this.items)
     // })
@@ -43,7 +43,7 @@ export class AppCodeComponent implements OnInit {
       }
     }
 
-    // this.http.get('assets/data/async-translations.json').subscribe(res => {
+    // this.http.get('https://rxwebioassets.blob.core.windows.net/$web/data/async-translations.json').subscribe(res => {
     //   this.items = res['_body'];
     //   console.log(this.items);
     // })

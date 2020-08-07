@@ -17,7 +17,7 @@ export class MacEditComponent implements OnInit {
         private formBuilder: RxFormBuilder,private http: HttpClient    ) { }
 
     ngOnInit() {
-        this.http.get('assets/examples/reactive-form-validators/decorators/mac/edit/mac-address-info-data.json?v=' + environment.appVersion).subscribe(macAddressInfo => {
+        this.http.get('https://rxwebioassets.blob.core.windows.net/$web/examples/reactive-form-validators/decorators/mac/edit/mac-address-info-data.json?v=' + environment.appVersion).subscribe(macAddressInfo => {
             this.macAddressInfoFormGroup = this.formBuilder.formGroup<MacAddressInfo>(MacAddressInfo,macAddressInfo);
         })
     }

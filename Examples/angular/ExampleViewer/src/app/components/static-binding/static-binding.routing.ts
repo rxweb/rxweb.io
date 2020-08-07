@@ -4,43 +4,43 @@ import { Routes, RouterModule } from '@angular/router';
 const STATIC_BINDING_ROUTES: Routes = [
 {
 	path:'class',
-	loadChildren: () => import('./class/class.module').then(m => m.ClassModule),
+	loadChildren: './class/class.module#ClassModule',
 },
 {
 	path:'description',
-	loadChildren: () => import('./description/description.module').then(m => m.DescriptionModule),
+	loadChildren: './description/description.module#DescriptionModule',
 },
 {
 	path:'disabled',
-	loadChildren: () => import('./disabled/disabled.module').then(m => m.DisabledModule),
+	loadChildren: './disabled/disabled.module#DisabledModule',
 },
 {
 	path:'focus',
-	loadChildren: () => import('./focus/focus.module').then(m => m.FocusModule),
+	loadChildren: './focus/focus.module#FocusModule',
 },
 {
 	path:'hide',
-	loadChildren: () => import('./hide/hide.module').then(m => m.HideModule),
+	loadChildren: './hide/hide.module#HideModule',
 },
 {
 	path:'label',
-	loadChildren: () => import('./label/label.module').then(m => m.LabelModule),
+	loadChildren: './label/label.module#LabelModule',
 },
 {
 	path:'placeholder',
-	loadChildren: () => import('./placeholder/placeholder.module').then(m => m.PlaceholderModule),
+	loadChildren: './placeholder/placeholder.module#PlaceholderModule',
 },
 {
 	path:'readonly',
-	loadChildren: () => import('./readonly/readonly.module').then(m => m.ReadonlyModule),
+	loadChildren: './readonly/readonly.module#ReadonlyModule',
 },
 {
 	path:'source',
-	loadChildren: () => import('./source/source.module').then(m => m.SourceModule),
+	loadChildren: './source/source.module#SourceModule',
 },
 {
 	path:'value',
-	loadChildren: () => import('./value/value.module').then(m => m.ValueModule),
+	loadChildren: './value/value.module#ValueModule',
 },
 ];
 export const STATIC_BINDING_ROUTING = RouterModule.forChild(STATIC_BINDING_ROUTES);

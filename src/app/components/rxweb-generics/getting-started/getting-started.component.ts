@@ -22,7 +22,7 @@ export class GenericsGettingStartedComponent implements OnInit {
 
   ngOnInit(): void {
     document.title = "Getting Started Generics - RxWeb Docs";
-    this.http.get('assets/json/generator/rxweb-generics/generic-install.json').subscribe(response => {
+    this.http.get('https://rxwebioassets.blob.core.windows.net/$web/json/generator/rxweb-generics/generic-install.json').subscribe(response => {
       this.codeContent = response.json();
       this.showComponent = true;
     });
