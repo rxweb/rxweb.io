@@ -35,7 +35,7 @@ Before creating a project you have to install the project template. There are tw
 The CLI provides lots of features through scaffolding like generating different types of controllers, bounded context, setup the unit of work layer, domain class layer, enums according to the database values, generating models, initial database table setup which is optional etc.
 I believe this is interesting :).
 
-<video  controls>
+<video   controls>
 <source src="assets/images/rxwebcore-cli-installation.mp4" type="video/mp4">
 </video>
  

@@ -879,8 +879,8 @@ li.configuration-steps {
 .command {
   color: #37474f!important;
   padding-top: 0px!important;
-  background-color: hsl(0, 0%, 94%)!important;
-  padding-bottom: 0;
+  background-color:hsl(0deg 11% 97%)!important;
+ 
 }
 
 blockquote.command.showHideElement.showElement {
