@@ -70,6 +70,7 @@ import { RxTranslateSanitizeModule } from "@rxweb/translate";
 import { TranslateHttpLoader } from './ngx-translate-extension/ngx-translate-extension.module';
 import { CustomPipe } from './ngx-translate-extension/playground/sanitize/custom.pipe';
 import { ArticleComponent } from './article/article.component';
+import { CodeComparison } from './code-comparison/code-comparison.component';
 registerLocaleData(localePt)
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
@@ -78,7 +79,7 @@ registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
-    AppComponent, SideBarComponent, VueHomePageComponent, AngularHomeComponent, VueGettingStartedComponent, ChildLinkItemComponent,
+    AppComponent, SideBarComponent,CodeComparison, VueHomePageComponent, AngularHomeComponent, VueGettingStartedComponent, ChildLinkItemComponent,
     LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent,
     ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, QuickStartComponent, CustomPipe,
      ArticleComponent

@@ -1,0 +1,188 @@
+<h1> This document shows the use cases and difference between the standard and RxWebValidators approach. </h1>
+<div id="accordion" style="padding: 5px;">
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" style="font-weight: 600;" data-toggle="collapse" href="#collapseOne">
+                Compare Password
+            </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 ts-code-design remove-code-background">
+                        <div class="code_eg">Standard Approach</div><span
+                            class="hljs-keyword-code-compare">const</span><span>userForm =</span><span
+                            class="hljs-keyword-code-compare">new</span><span class="import-class-code-compare">FormGroup</span><br>
+                        <span>({{ '{' }} </span><br><span class="hljs-string-remove-code-comparison" style="
+                    padding-left: 15px;
+                ">'firstName':</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormControl</span><span>(),</span><br><span
+                            class="hljs-string-remove-code-comparison" style="
+                    padding-left: 15px;
+                ">'password':</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormControl</span><span>(),</span><br><span
+                            class="hljs-string-remove-code-comparison" style="
+                    padding-left: 15px;
+                ">'comparePassword' :</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormControl</span><span>()</span><span style="
+                    padding-left: 17px;
+                "><br>},</span><br><span>{{ '{' }}</span><span>validators:</span><span>(control:
+                            FormGroup):</span><span class="import-class-code-compare">ValidationErrors</span><span>|</span><span
+                            class="hljs-keyword-code-compare">null</span><span> =&gt;
+                            {{ '{' }}</span><br><span class="hljs-keyword-code-compare" style="padding-left: 10px;"> const</span> password =
+                        control.get('password');<br><span class="hljs-keyword-code-compare" style="padding-left: 10px;"> const</span>
+                        comparePassword =
+                        control.get('comparePassword');<br><span style="padding-left: 10px;"> return password &amp;&amp; comparePassword &amp;&amp;
+                            password.value !== comparePassword.value ?</span><span style="padding-left: 10px;">{{ '{' }} 'compare': true <br><span style="padding-left: 10px;">} :</span>
+                            <span class="hljs-keyword-code-compare">null</span>; }</span><br><span>});</span>
+                    </div>
+                    <div class="col-md-6 ts-code-design add-code-background">
+                        <div class="code_eg">RxWeb</div><span class="hljs-keyword-code-compare">let</span><span>userForm
+                            =</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormGroup</span><br><span>({{ '{' }}</span><br><span
+                            class="hljs-string-remove-code-comparison" style="
+                   padding-left: 15px;
+               ">password:</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormControl</span><span>(),</span><br><span
+                            class="hljs-string-remove-code-comparison" style="
+                   padding-left: 15px;
+               ">comparePassword :</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormControl</span><span>FormControl('', <span
+                                class="import-class-code-compare" style="
+                   padding-left: 15px;
+               ">RxwebValidators</span>.compare({{ '{' }}fieldName:'password'}) <br>}),</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <a class="collapsed card-link" style="font-weight: 600;" data-toggle="collapse" href="#collapseTwo">
+                Conditional Validation
+            </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 ts-code-design remove-code-background">
+                        <div class="code_eg">Standard Approach</div><span
+                            class="import-class-code-compare" style="padding-left: 0px;padding-right: 0px;">setNotification</span><span>(ticked: boolean):</span><span
+                            class="hljs-keyword-code-compare">void</span><br><span>{{ '{' }}</span><br><span
+                            class="hljs-keyword-code-compare" style="
+                    padding-right: 10px;
+                    padding-left: 10px;
+                ">const</span><span>phoneControl = </span><span
+                            class="hljs-keyword-code-compare" style="padding-right: 0px;">this</span><span>.userForm.get('phone');</span><br><span
+                            style="
+                    padding-left: 10px;
+                             ">if (<span class="hljs-keyword-code-compare" style="padding-right: 0px;">ticked</span>) {{ '{' }}</span><br><span style="
+                    padding-left: 10px;
+                             ">phoneControl.setValidators(<span
+                                class="import-class-code-compare" style="padding-left: 0px;padding-right: 0px;">Validators</span>.required);</span><br><span style="
+                    padding-left: 10px;
+                ">{{ '}' }} <span class="hljs-keyword-code-compare" style="padding-right: 0px;">else</span> {{ '{' }}</span><br><span style="
+                    padding-left: 10px;
+                ">phoneControl.clearValidators();</span><br><span style="
+                    padding-left: 10px;
+                ">{{ '}' }}</span><br><span style="
+                    padding-left: 10px;
+                             ">phoneControl.<span class="">updateValueAndValidity</span>();</span><br><span>}</span>
+                    </div>
+                    <div class="col-md-6 ts-code-design add-code-background">
+                        <div class="code_eg">RxWeb</div><span class="hljs-keyword-code-compare">let</span><span>userForm
+                            =</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormGroup</span><br><span>({{ '{' }}</span><br><span
+                            class="hljs-string-remove-code-comparison" style="
+                   padding-left: 15px;
+               ">password:</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormControl</span><span>(),</span><br><span
+                            class="hljs-string-remove-code-comparison" style="
+                   padding-left: 15px;
+               ">comparePassword :</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormControl</span><span>FormControl('', <span
+                                class="hljs-string-remove-code-comparison" style="
+                   padding-left: 15px;
+               ">RxwebValidators</span>.required({{ '{' }}conditionalExpression:x => x.notification === true }) <br>)},</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <a class="collapsed card-link" style="font-weight: 600;" data-toggle="collapse" href="#collapseThree">
+                On Demand Validation
+            </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 ts-code-design remove-code-background">
+                        <div class="code_eg">Standard Approach</div>
+                       <span>ngOnInit()</span>  <span>{{ '{' }}</span><br/>
+                       <span
+                       class="hljs-keyword-code-compare" style="padding-right: 0px;">this</span>
+                       <span>.userInfoFormGroup = </span> <span class="hljs-keyword-code-compare">new</span> <span class="import-class-code-compare">FormGroup</span>
+                       <span>({{ '{' }}</span><br/>
+                              <span class="hljs-string-remove-code-comparison" style="padding-left: 10px;">premiumCharge :</span><span class="import-class-code-compare">new</span> <span class="hljs-keyword-code-compare">FormControl</span>(),<br/>
+                              <span class="hljs-string-remove-code-comparison"  style="padding-left: 10px;">purchasePrice:</span><span class="import-class-code-compare">new</span> <span class="hljs-keyword-code-compare">FormControl</span>(),<br/>
+                              <span class="hljs-string-remove-code-comparison"  style="padding-left: 10px;">resalePrice:</span><span class="import-class-code-compare">new</span> <span class="hljs-keyword-code-compare">FormControl</span>(),<br/> 
+    
+                           <span style="padding-left:10px;">{{ '}' }}</span>);<br/><br/>
+                    
+                           <span class="hljs-keyword-code-compare" style="padding-right: 0px;padding-left: 10px;">this</span><span>.userInfoFormGroup.controls.premiumCharge.valueChanges.subscribe(</span><span class="hljs-keyword-code-compare">t</span><span>=>{{ '{' }}</span><br/>
+                            <span class="hljs-keyword-code-compare" style="padding-right: 0px;padding-left: 10px;">this</span><span>.setMinValidator(<span class="hljs-keyword-code-compare" style="padding-right: 0px;">this</span>.userInfoFormGroup.value)</span><br/>
+                            <span style="padding-left:10px;">{{ '}' }}</span>)<br/>
+                    
+                            <span class="hljs-keyword-code-compare" style="padding-right: 0px;padding-left: 10px;">this</span><span>.userInfoFormGroup.controls.purchasePrice.valueChanges.subscribe(</span><span class="hljs-keyword-code-compare">t</span><span>=>{{ '{' }}</span><br/>
+                                <span class="hljs-keyword-code-compare" style="padding-right: 0px;padding-left: 10px;">this</span><span>.setMinValidator(<span class="hljs-keyword-code-compare" style="padding-right: 0px;">this</span>.userInfoFormGroup.value)</span><br/>
+                                <span style="padding-left:10px;">{{ '}' }}</span>)<br/>
+    
+                                <span >{{ '}' }}</span>);<br/><br/>
+                                <span
+                                class="import-class-code-compare" style="padding-left: 0px;padding-right: 0px;">setMinValidator</span><span>(formValue:any){{ '{' }}</span><br/>
+                                <span
+                                class="hljs-keyword-code-compare" style="
+                        padding-right: 10px;
+                        padding-left: 10px;
+                    ">const</span><span>minimumPrice = </span> ((<span class="hljs-keyword-code-compare">parseInt</span><span>(formValue.purchasePrice) +</span> <span class="hljs-keyword-code-compare">parseInt</span><span>(formValue.premiumCharge)) * 30 / 100);</span>
+                          <span class="hljs-keyword-code-compare" style="padding-right: 0px;">this</span> <span>.userInfoFormGroup.controls.resalePrice.clearValidators();</span><br/>
+                          <span class="hljs-keyword-code-compare" style="padding-right: 0px;">this</span> <span>.userInfoFormGroup.controls.resalePrice.setValidators(<span  class="import-class-code-compare" style="padding-left: 0px;padding-right: 0px;">Validators</span>.min(minimumPrice));</span><br/>
+                          <span class="hljs-keyword-code-compare" style="padding-right: 0px;">this</span> userInfoFormGroup.controls.resalePrice.updateValueAndValidity({{ '{' }}onlySelf:<span class="hljs-keyword-code-compare" style="padding-right: 0px;">true</span><br/>
+                          <span style="padding-left: 10px;;">{{ '}' }});</span><br/>
+                       
+                          {{ '}' }}<br/>
+                    </div>
+                    <div class="col-md-6 ts-code-design add-code-background">
+                        <div class="code_eg">RxWeb</div><span class="hljs-keyword-code-compare">let</span><span>userForm
+                            =</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormGroup</span><br><span>({{ '{' }}</span><br><span
+                            class="hljs-string-remove-code-comparison" style="
+                   padding-left: 15px;
+               ">password:</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormControl</span><span>(),</span><br><span
+                            class="hljs-string-remove-code-comparison" style="
+                   padding-left: 15px;
+               ">comparePassword :</span><span class="hljs-keyword-code-compare">new</span><span
+                            class="import-class-code-compare">FormControl</span><span>FormControl('', <span
+                                class="import-class-code-compare" style="
+                   padding-left: 15px;
+               ">RxwebValidators</span>.minNumber({{ '{' }}<br/>
+               <span class="hljs-keyword-code-compare" style="padding-left: 10px;">dynamicConfig:</span> <span>(x, y) => {{ '{' }}</span><br/>
+               <span
+               class="hljs-keyword-code-compare" style="
+       padding-right: 10px;
+       padding-left: 10px;
+   ">const</span> <span>minimumPrice =</span> <span>((x.purchasePrice + x.premiumCharge) * 30 / 100);</span><br/>
+                  <span class="hljs-keyword-code-compare" style="padding-left: 10px;">return</span> {{ '{' }} value: <span class="hljs-string-remove-code-comparison">minimumPrice</span> {{ '}' }};
+                  {{ '}' }}<br/>
+
+          <span style="padding-left:10px;">{{ '}' }}))</span>   <br>{{ '}' }})),</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-top-bar></app-top-bar>

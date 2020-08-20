@@ -717,6 +717,13 @@
                     ]
                 },
                 {
+                    "title": "Code Comparison",
+                    "uri": "/code-comparison",
+                    "otherUri": "code-comparison",
+                    "isOpen": false,
+                    "isActive": false
+                },
+                {
                     "title": "Articles",
                     "uri": "/articles",
                     "otherUri": "articles",

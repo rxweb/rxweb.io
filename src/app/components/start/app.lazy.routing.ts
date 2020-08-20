@@ -20,6 +20,7 @@ import { QuickStartComponent } from "../quick-start/quick-start.component";
 import { VueGettingStartedComponent } from "../vue-getting-started/vue-getting-started.component";
 import { VueHomePageComponent } from "../vue-home-page/vue-home-page.component";
 import { ArticleComponent } from "../article/article.component";
+import { CodeComparison } from '../code-comparison/code-comparison.component';
 
 
 
@@ -61,6 +62,9 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path: 'hidden-gems', component: ContributorsComponent
+  },
+  {
+    path: 'code-comparison', component: CodeComparison
   },
   {
     path: 'changelog', component: ChangeLogComponent
