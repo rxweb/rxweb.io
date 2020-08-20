@@ -6,6 +6,37 @@
             "uri": "/rx-web-core/quick-start/quick-start"
         },
         {
+            "title": "Get Started",
+            "path": "get-started",
+            "childrens": [
+                {
+                    "childrens": [],
+                    "title": "Prerequisites",
+                    "path": "prerequisites",
+                    "uri": "/rx-web-core/quick-start/prerequisites"
+                },
+                {
+                    "childrens": [],
+                    "title": "Installation",
+                    "path": "installation",
+                    "uri": "/rx-web-core/quick-start/installation"
+                },
+                {
+                    "childrens": [],
+                    "title": "Project Creation",
+                    "path": "project-creation",
+                    "uri": "/rx-web-core/quick-start/project-creation"
+                },
+                {
+                    "childrens": [],
+                    "title": "Database Setup",
+                    "path": "database-setup",
+                    "uri": "/rx-web-core/quick-start/database-setup"
+                }
+            ]
+          
+        },
+        {
             "childrens": [
                 {
                     "childrens": [
