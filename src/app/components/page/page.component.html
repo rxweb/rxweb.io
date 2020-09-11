@@ -3,18 +3,18 @@
   
    
     <div class="content">
-        <ul *ngIf="mainType == 'form-validations' || mainType == 'how-to'"  class="nav  ml-auto w-100 mt-2" [class.nav-tabs]="mainType == 'form-validations' || mainType == 'how-to'" [class.page_content_tabs]="mainType == 'form-validations' || mainType == 'how-to'">
+        <ul *ngIf="mainType == 'form-validations' || mainType == 'how-to' || mainType == 'async-validators'"  class="nav  ml-auto w-100 mt-2" [class.nav-tabs]="mainType == 'form-validations' || mainType == 'how-to'" [class.page_content_tabs]="mainType == 'form-validations' || mainType == 'how-to' || mainType == 'async-validators'">
             <li class="ng-star-inserted" [class.active]="activeTab == 'validators'"
-            *ngIf="(mainType == 'form-validations' || mainType == 'how-to')  && validationName !== 'rule' && validationName !== 'async' && validationName !== 'stronglyType' && validationName !== 'classAbstraction'  && validationName !== 'genericModel'  && validationName !== 'autoPushFormGroup'">
+            *ngIf="(mainType == 'form-validations' || mainType == 'how-to' || mainType == 'async-validators')  && validationName !== 'rule' && validationName !== 'async' && validationName !== 'stronglyType' && validationName !== 'classAbstraction'  && validationName !== 'genericModel'  && validationName !== 'autoPushFormGroup'">
             <a (click)="route('validators')">Validator</a>
         </li>
         <li class="ng-star-inserted"
             [class.active]="activeTab == 'template-driven' && templateDrivenType == 'directives'"
-            *ngIf="mainType == 'form-validations' && (validationName !== 'minTime' && validationName !== 'mask' && validationName !== 'requiredTrue' && validationName !== 'maxTime' && validationName !== 'pattern' && validationName !== 'unique'  && validationName !== 'ip' && validationName !== 'compose' && validationName !== 'allOf' && validationName !== 'oneOf' && validationName !== 'noneOf' && validationName !== 'choice' && validationName !== 'rule' )">
+            *ngIf="mainType == 'form-validations'  && (validationName !== 'minTime' && validationName !== 'mask' && validationName !== 'requiredTrue' && validationName !== 'maxTime' && validationName !== 'pattern' && validationName !== 'unique'  && validationName !== 'ip' && validationName !== 'compose' && validationName !== 'allOf' && validationName !== 'oneOf' && validationName !== 'noneOf' && validationName !== 'choice' && validationName !== 'rule' )">
             <a (click)="route('template-driven','directives')">Template Driven</a>
         </li>
         <li class="ng-star-inserted" [class.active]="activeTab == 'decorators'"
-            *ngIf="(mainType == 'form-validations' || mainType == 'how-to') && validationName !== 'ip'   && validationName !== 'conditionalValidation' && validationName !== 'conditionalControlDisable'">
+            *ngIf="(mainType == 'form-validations'  || mainType == 'async-validators'|| mainType == 'how-to') && validationName !== 'ip'   && validationName !== 'conditionalValidation' && validationName !== 'conditionalControlDisable'">
             <a (click)="route('decorators')">Decorator</a>
         </li>
         <li class="ng-star-inserted"

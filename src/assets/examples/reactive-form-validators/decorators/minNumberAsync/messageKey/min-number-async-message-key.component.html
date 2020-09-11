@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="resultInfoFormGroup">
+    <div class="form-group">
+      <label>Economics</label>
+      <input type="text" formControlName="economics" class="form-control"  />
+      <small class="form-text text-muted">Shows Custom Validation Message using message key<br/></small>
+     <small class="form-text text-danger" *ngIf="resultInfoFormGroup.controls.economics.errors">{{resultInfoFormGroup.controls.economics.errors.minNumberMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!resultInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

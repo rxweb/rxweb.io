@@ -82,6 +82,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: () => import('src/app/components/form-validation/form-validation.module').then(m => m.FormValidationModule),
   },
   {
+    path: 'async-validators',
+    loadChildren: () => import('src/app/components/async-validators/async-validators.module').then(m => m.AsyncValidatorsModule),
+  },
+  {
     path: 'vue/form-validations',
     loadChildren: () => import('src/app/components/form-validation/form-validation.module').then(m => m.FormValidationModule),
   },

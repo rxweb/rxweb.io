@@ -1,0 +1,1 @@
+{"maths":{"minNumberAsync":{"value":"35"}},"science":{"minNumberAsync":{"value":"35","message":"Number should not be less than 35"}},"economics":{"minNumberAsync":{"value":"35","messageKey":"minNumberMessageKey"}}}

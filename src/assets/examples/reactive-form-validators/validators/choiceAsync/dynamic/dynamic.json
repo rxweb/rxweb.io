@@ -1,0 +1,33 @@
+{
+  "department": {
+    "choice": false
+  },
+  "projectDomains": {
+    "choice": {
+      "minLength": 2
+    }
+  },
+  "languages": {
+    "choice": {
+      "maxLength": 4
+    }
+  },
+  "skills": {
+    "choice": {
+      "minLength": 2,
+      "conditionalExpression": "x => x.department =='DotNet'"
+    }
+  },
+  "hobbies": {
+    "choice": {
+      "maxLength": 3,
+      "message": "You can select atmost 3 hobbies"
+    }
+  },
+  "certifications": {
+    "choice": {
+      "minLength": 2,
+      "messageKey": "choiceMessageKey"
+    }
+  }
+}

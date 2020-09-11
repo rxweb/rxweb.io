@@ -1,0 +1,1 @@
+{"fileType":{},"videoFile":{"fileSizeAsync":{"maxSize":"100"}},"audioFile":{"fileSizeAsync":{"minSize":"3","maxSize":"100"}},"contactFile":{"fileSizeAsync":{"maxSize":"10","message":"File exceed maximum size."}},"profilePicture":{"fileSizeAsync":{"maxSize":"50"}},"excelFile":{"fileSizeAsync":{"maxSize":"100","messageKey":"fileSizeMessageKey"}}}

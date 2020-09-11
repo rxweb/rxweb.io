@@ -1,0 +1,1 @@
+{"firstName":{"maxLengthAsync":{"value":"16"}},"userName":{"maxLengthAsync":{"value":"10","message":"Maximum 10 characters are allowed"}},"fullName":{"maxLengthAsync":{"value":"20","messageKey":"maxLengthMessageKey"}}}

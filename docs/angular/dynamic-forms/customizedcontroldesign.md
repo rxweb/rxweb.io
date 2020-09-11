@@ -35,7 +35,7 @@ Above design is bit different than than usual textbox design which is generally 
 
 For designing that, first you need to make a constant with the same design as you need to create through dynamic forms. Below is a same custom design constant which will generate your above design mentioned in html.
 
-```js
+````
 const customInputDesign = ['div', [{
   attr: { class: ['input-1'] },
   for: {
@@ -49,7 +49,7 @@ const customInputDesign = ['div', [{
     }
   }
 }]]
-```
+````
 
 # Bind this design with a custom type
 
@@ -63,7 +63,7 @@ DYNAMIC_ELEMENT_DESIGN_TREE["profile-input"] = customInputDesign;
 
 As you have resolved this custom design with it's custom type-name, you can use this type-name in your control which you will set in `serverData`. You can bind customized attributes in `source` property of server data and set it dynamically in constant 
 
-```ts
+````
 serverData: Array<{ [key: string]: any }> = [
   {
     type: 'profile-input',
@@ -90,4 +90,4 @@ serverData: Array<{ [key: string]: any }> = [
     }
   }
 ]
-```
+````

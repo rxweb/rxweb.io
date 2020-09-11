@@ -1,0 +1,1 @@
+{"name":{"endsWithAsync":{"value":"t"}},"company":{"endsWithAsync":{"value":"b","message":"{{0}} does not ends with `b`"}},"skill":{"endsWithAsync":{"value":"r","messageKey":"endsWithMessageKey"}}}

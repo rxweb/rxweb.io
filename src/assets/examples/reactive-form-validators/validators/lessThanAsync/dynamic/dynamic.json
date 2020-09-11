@@ -1,0 +1,1 @@
+{"obtainedMarks":{},"otherActivityMarks":{"lessThanAsync":{"fieldName":"obtainedMarks"}},"maximumAge":{"lessThanAsync":{"value":"60"}},"otherMarks":{"lessThanAsync":{"fieldName":"obtainedMarks","message":"Please enter number greater than 100."}},"disciplineMarks":{"lessThanAsync":{"fieldName":"obtainedMarks","messageKey":"lessThanMessageKey"}}}

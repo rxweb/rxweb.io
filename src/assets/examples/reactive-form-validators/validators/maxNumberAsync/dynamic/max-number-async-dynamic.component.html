@@ -1,0 +1,29 @@
+<div>
+  <form  *ngIf="subjectDetailsFormGroup"  [formGroup]="subjectDetailsFormGroup">
+    <div class="form-group">
+      <label>Subject Code</label>
+      <input type="text" formControlName="subjectCode" class="form-control"   />
+      <small class="form-text text-danger" *ngIf="subjectDetailsFormGroup.controls.subjectCode.errors">{{subjectDetailsFormGroup.controls.subjectCode.errors.maxNumber.message}}<br/></small>
+    </div>
+    <div class="form-group">
+      <label>Passing Marks</label>
+      <input type="text" formControlName="passingMarks" class="form-control"  />
+      <small class="form-text text-muted">you can enter MaxNumber upto 50<br/></small>
+     <small class="form-text text-danger" *ngIf="subjectDetailsFormGroup.controls.passingMarks.errors">{{subjectDetailsFormGroup.controls.passingMarks.errors.maxNumber.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Practical Marks</label>
+      <input type="text" formControlName="practicalMarks" class="form-control"  />
+      <small class="form-text text-muted">you can enter MaxNumber upto 70<br/></small>
+      <small class="form-text text-muted">Shows custom message<br/></small>
+     <small class="form-text text-danger" *ngIf="subjectDetailsFormGroup.controls.practicalMarks.errors">{{subjectDetailsFormGroup.controls.practicalMarks.errors.maxNumber.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Discipline Marks</label>
+      <input type="text" formControlName="disciplineMarks" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+     <small class="form-text text-danger" *ngIf="subjectDetailsFormGroup.controls.disciplineMarks.errors">{{subjectDetailsFormGroup.controls.disciplineMarks.errors.maxNumberMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!subjectDetailsFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -19,6 +19,25 @@
                     "isActive": false
                 },
                 {
+                    "title": "Async Validations",
+                    "uri": null,
+                    "otherUri": "async-validators",
+                    "isOpen": false,
+                    "isActive": false,
+                    "childrens": [
+                        {
+                            "title": "alphaAsync",
+                            "uri": "/async-validators/alphaAsync/validators",
+                            "isActive": false
+                        },
+                        {
+                            "title": "alphaNumericAsync",
+                            "uri": "/async-validators/alphaNumericAsync/validators",
+                            "isActive": false
+                        }
+                    ]
+                },
+                {
                     "title": "Form Validations",
                     "uri": null,
                     "otherUri": "form-validations",
@@ -773,7 +792,6 @@
                                     "uri": "/strongly-typed/formGroup-class-instance",
                                     "linkTitle": "formGroup-class-instance"
                                 }
-                               
                             ]
                         },
                         {
@@ -2054,6 +2072,18 @@
                             "uri": "/reactive-dynamic-forms/dynamic-getting-started",
                             "isActive": false,
                             "linkTitle": "getting-started"
+                        },
+                        {
+                            "title": "Custom Components",
+                            "uri": "/reactive-dynamic-forms/dynamic-forms/custom-component",
+                            "isActive": false,
+                            "linkTitle": "custom-component"
+                        },
+                        {
+                            "title": "Customize Control Design",
+                            "uri": "/reactive-dynamic-forms/dynamic-forms/customize-control-design",
+                            "isActive": false,
+                            "linkTitle": "customize-control-design"
                         }
                     ]
                 }

@@ -1,0 +1,1 @@
+{"age":{"rangeAsync":{"minimumNumber":"18","maximumNumber":"60"}},"salary":{"rangeAsync":{"minimumNumber":"1000","maximumNumber":"200000","message":"Your Salary should be between 1000 to 200000."}},"noOfprojects":{"rangeAsync":{"minimumNumber":"1","maximumNumber":"10","messageKey":"rangeMessageKey"}}}

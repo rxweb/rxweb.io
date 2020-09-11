@@ -1,0 +1,116 @@
+{
+    "complete": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-alphaAsync-complete-validator',\r\n    templateUrl: './alpha-async-complete.component.html'\r\n})\r\nexport class AlphaAsyncCompleteValidatorComponent implements OnInit {\r\n    addressInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.addressInfoFormGroup = this.formBuilder.group({\r\n            countryName:['',[], RxwebValidators.alphaAsync()], \r\n            countryCode:['',[], RxwebValidators.alphaAsync({validatorConfig:of({conditionalExpression:(x,y) => x.countryName == \"India\" })], \r\n            cityName:['',[], RxwebValidators.alphaAsync({validatorConfig:of({conditionalExpression:'x => x.countryName ==\"India\"' })], \r\n            spanishcityName:['',[], RxwebValidators.alphaAsync({validatorConfig:of({locale:ValidationAlphabetLocale.spanish })], \r\n            stateName:['',[], RxwebValidators.alphaAsync({validatorConfig:of({allowWhiteSpace:true })], \r\n            stateCode:['',[], RxwebValidators.alphaAsync({validatorConfig:of({message:'You can enter only alphabets.' })], \r\n            cityCode:['',[], RxwebValidators.alphaAsync({validatorConfig:of({messageKey:'alphaMessageKey' })], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"addressInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Country Name</label>\r\n      <input type=\"text\" formControlName=\"countryName\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.countryName.errors\">{{addressInfoFormGroup.controls.countryName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Country Code</label>\r\n      <input type=\"text\" formControlName=\"countryCode\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">If you want to apply conditional validation on 'Country Code' then you need to add 'Country Name' input as 'India'.<br/></small>\r\n      <small class=\"form-text text-muted\">Conditional Expression with type 'function'<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.countryCode.errors\">{{addressInfoFormGroup.controls.countryCode.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>City</label>\r\n      <input type=\"text\" formControlName=\"cityName\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">If you want to apply conditional validation on 'City' then you need to add 'Country Name' input as 'India'.<br/></small>\r\n      <small class=\"form-text text-muted\">Conditional Expression with type 'string'<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.cityName.errors\">{{addressInfoFormGroup.controls.cityName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>SpanishCityName</label>\r\n      <input type=\"text\" formControlName=\"spanishcityName\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">It will allow spanish characters in the formControl<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.spanishcityName.errors\">{{addressInfoFormGroup.controls.spanishcityName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>State Name</label>\r\n      <input type=\"text\" formControlName=\"stateName\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">This allowed whitespace in alphaAsync validation<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.stateName.errors\">{{addressInfoFormGroup.controls.stateName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>State Code</label>\r\n      <input type=\"text\" formControlName=\"stateCode\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">Shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.stateCode.errors\">{{addressInfoFormGroup.controls.stateCode.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>City Code</label>\r\n      <input type=\"text\" formControlName=\"cityCode\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">custom message based on messageKey<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.cityCode.errors\">{{addressInfoFormGroup.controls.cityCode.errors.alphaMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!addressInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "conditionalExpressionExampleFunction": {
+        "notes": null,
+        "component": null,
+        "html": null,
+        "model": "RxwebValidators.alphaAsync({validatorConfig:of({conditionalExpression:(x,y) => x.countryName == \"India\" });\r\n",
+        "modelName": null,
+        "json": {}
+    },
+    "conditionalExpression": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-alphaAsync-conditionalExpression-validator',\r\n    templateUrl: './alpha-async-conditional-expression.component.html'\r\n})\r\nexport class AlphaAsyncConditionalExpressionValidatorComponent implements OnInit {\r\n    addressInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.addressInfoFormGroup = this.formBuilder.group({\r\n            countryName:['',[], RxwebValidators.alphaAsync()], \r\n            cityName:['',[], RxwebValidators.alphaAsync({validatorConfig:of({conditionalExpression:'x => x.countryName ==\"India\"' })], \r\n            countryCode:['',[], RxwebValidators.alphaAsync({validatorConfig:of({conditionalExpression:(x,y) => x.countryName == \"India\" })], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"addressInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Country Name</label>\r\n      <input type=\"text\" formControlName=\"countryName\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.countryName.errors\">{{addressInfoFormGroup.controls.countryName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>City</label>\r\n      <input type=\"text\" formControlName=\"cityName\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">If you want to apply conditional validation on 'City' then you need to add 'Country Name' input as 'India'.<br/></small>\r\n      <small class=\"form-text text-muted\">Conditional Expression with type 'string'<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.cityName.errors\">{{addressInfoFormGroup.controls.cityName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Country Code</label>\r\n      <input type=\"text\" formControlName=\"countryCode\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">If you want to apply conditional validation on 'Country Code' then you need to add 'Country Name' input as 'India'.<br/></small>\r\n      <small class=\"form-text text-muted\">Conditional Expression with type 'function'<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.countryCode.errors\">{{addressInfoFormGroup.controls.countryCode.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!addressInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "conditionalExpressionExampleString": {
+        "notes": null,
+        "component": null,
+        "html": null,
+        "model": "RxwebValidators.alphaAsync({validatorConfig:of({conditionalExpression:'x => x.countryName ==\"India\"' });\r\n",
+        "modelName": null,
+        "json": {}
+    },
+    "localeExample": {
+        "notes": null,
+        "component": null,
+        "html": null,
+        "model": "RxwebValidators.alphaAsync({validatorConfig:of({locale:ValidationAlphabetLocale.spanish });\r\n",
+        "modelName": null,
+        "json": {}
+    },
+    "locale": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-alphaAsync-locale-validator',\r\n    templateUrl: './alpha-async-locale.component.html'\r\n})\r\nexport class AlphaAsyncLocaleValidatorComponent implements OnInit {\r\n    addressInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.addressInfoFormGroup = this.formBuilder.group({\r\n            spanishcityName:['',[], RxwebValidators.alphaAsync({validatorConfig:of({locale:ValidationAlphabetLocale.spanish })], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"addressInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>SpanishCityName</label>\r\n      <input type=\"text\" formControlName=\"spanishcityName\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">It will allow spanish characters in the formControl<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.spanishcityName.errors\">{{addressInfoFormGroup.controls.spanishcityName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!addressInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "allowWhiteSpaceExample": {
+        "notes": null,
+        "component": null,
+        "html": null,
+        "model": "RxwebValidators.alphaAsync({validatorConfig:of({allowWhiteSpace:true });\r\n",
+        "modelName": null,
+        "json": {}
+    },
+    "allowWhiteSpace": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-alphaAsync-allowWhiteSpace-validator',\r\n    templateUrl: './alpha-async-allow-white-space.component.html'\r\n})\r\nexport class AlphaAsyncAllowWhiteSpaceValidatorComponent implements OnInit {\r\n    addressInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.addressInfoFormGroup = this.formBuilder.group({\r\n            stateName:['',[], RxwebValidators.alphaAsync({validatorConfig:of({allowWhiteSpace:true })], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"addressInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>State Name</label>\r\n      <input type=\"text\" formControlName=\"stateName\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">This allowed whitespace in alphaAsync validation<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.stateName.errors\">{{addressInfoFormGroup.controls.stateName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!addressInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "messageExample": {
+        "notes": null,
+        "component": null,
+        "html": null,
+        "model": "RxwebValidators.alphaAsync({validatorConfig:of({message:'You can enter only alphabets.' });\r\n",
+        "modelName": null,
+        "json": {}
+    },
+    "message": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-alphaAsync-message-validator',\r\n    templateUrl: './alpha-async-message.component.html'\r\n})\r\nexport class AlphaAsyncMessageValidatorComponent implements OnInit {\r\n    addressInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.addressInfoFormGroup = this.formBuilder.group({\r\n            stateCode:['',[], RxwebValidators.alphaAsync({validatorConfig:of({message:'You can enter only alphabets.' })], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"addressInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>State Code</label>\r\n      <input type=\"text\" formControlName=\"stateCode\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">Shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.stateCode.errors\">{{addressInfoFormGroup.controls.stateCode.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!addressInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "messageKeyExample": {
+        "notes": null,
+        "component": null,
+        "html": null,
+        "model": "RxwebValidators.alphaAsync({validatorConfig:of({messageKey:'alphaMessageKey' });\r\n",
+        "modelName": null,
+        "json": {}
+    },
+    "messageKey": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-alphaAsync-messageKey-validator',\r\n    templateUrl: './alpha-async-message-key.component.html'\r\n})\r\nexport class AlphaAsyncMessageKeyValidatorComponent implements OnInit {\r\n    addressInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.addressInfoFormGroup = this.formBuilder.group({\r\n            cityCode:['',[], RxwebValidators.alphaAsync({validatorConfig:of({messageKey:'alphaMessageKey' })], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"addressInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>City Code</label>\r\n      <input type=\"text\" formControlName=\"cityCode\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">custom message based on messageKey<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.cityCode.errors\">{{addressInfoFormGroup.controls.cityCode.errors.alphaMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!addressInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "dynamic": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\nimport { HttpClient } from '@angular/common/http';\r\nimport { FormBuilderConfiguration,RxFormBuilder} from '@rxweb/reactive-form-validators';\r\nimport { environment } from 'src/environments/environment';\r\n\r\n@Component({\r\n    selector: 'app-alphaAsync-dynamic-validator',\r\n    templateUrl: './alpha-async-dynamic.component.html'\r\n})\r\nexport class AlphaAsyncDynamicValidatorComponent implements OnInit {\r\n    addressInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: RxFormBuilder , private http: HttpClient )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n\t\tlet formBuilderConfiguration = new FormBuilderConfiguration();\r\n\t\tthis.http.get('assets/examples/reactive-form-validators/validators/alphaAsync/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {\r\n\t\t\tformBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));\r\n\t\t\tvar addressInfo = { countryName:'', countryCode:'', cityName:'', spanishcityName:'', stateName:'', stateCode:'', cityCode:'',  }\r\n\t\t\tthis.addressInfoFormGroup = this.formBuilder.group(addressInfo,formBuilderConfiguration);\r\n\t\t})\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  *ngIf=\"addressInfoFormGroup\"  [formGroup]=\"addressInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Country Name</label>\r\n      <input type=\"text\" formControlName=\"countryName\" class=\"form-control\"   />\r\n      <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.countryName.errors\">{{addressInfoFormGroup.controls.countryName.errors.alpha.message}}<br/></small>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>City</label>\r\n      <input type=\"text\" formControlName=\"cityName\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">If you want to apply conditional validation on 'City' then you need to add 'Country Name' input as 'India'.<br/></small>\r\n      <small class=\"form-text text-muted\">Conditional Expression with type 'string'<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.cityName.errors\">{{addressInfoFormGroup.controls.cityName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>SpanishCityName</label>\r\n      <input type=\"text\" formControlName=\"spanishcityName\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">It will allow spanish characters in the formControl<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.spanishcityName.errors\">{{addressInfoFormGroup.controls.spanishcityName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>State Name</label>\r\n      <input type=\"text\" formControlName=\"stateName\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">This allowed whitespace in alphaAsync validation<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.stateName.errors\">{{addressInfoFormGroup.controls.stateName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>State Code</label>\r\n      <input type=\"text\" formControlName=\"stateCode\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">Shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.stateCode.errors\">{{addressInfoFormGroup.controls.stateCode.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>City Code</label>\r\n      <input type=\"text\" formControlName=\"cityCode\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">custom message based on messageKey<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"addressInfoFormGroup.controls.cityCode.errors\">{{addressInfoFormGroup.controls.cityCode.errors.alphaMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!addressInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {
+            "dynamic.json": "{\"countryName\":{\"alphaAsync\":true},\"cityName\":{\"alphaAsync\":{\"conditionalExpression\":\"x => x.countryName ==\\\"India\\\"\"}},\"spanishcityName\":{\"alphaAsync\":{\"locale\":\"ValidationAlphabetLocale.spanish\"}},\"stateName\":{\"alphaAsync\":{\"allowWhiteSpace\":\"true\"}},\"stateCode\":{\"alphaAsync\":{\"message\":\"You can enter only alphabets.\"}},\"cityCode\":{\"alphaAsync\":{\"messageKey\":\"alphaMessageKey\"}}}"
+        }
+    },
+    "add": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-alphaAsync-add-validator',\r\n    templateUrl: './alpha-async-add.component.html'\r\n})\r\nexport class AlphaAsyncAddValidatorComponent implements OnInit {\r\n    countryFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.countryFormGroup = this.formBuilder.group({\r\n            countryName:['',[], RxwebValidators.alphaAsync()], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"countryFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Country Name</label>\r\n      <input type=\"text\" formControlName=\"countryName\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"countryFormGroup.controls.countryName.errors\">{{countryFormGroup.controls.countryName.errors.alpha.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!countryFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }
+}

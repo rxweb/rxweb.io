@@ -1,0 +1,1 @@
+{"dataType":{},"negativeNumber":{"numericAsync":{"acceptValue":"NumericValueType.NegativeNumber"}},"totalAmount":{"numericAsync":{"isFormat":"true"}},"decimalNumber":{"numericAsync":{"allowDecimal":"true"}},"positiveNumber":{"numericAsync":{"message":"{{0}} is not a positive number"}},"positiveNonDecimalNumber":{"numericAsync":{"messageKey":"numericMessageKey"}}}

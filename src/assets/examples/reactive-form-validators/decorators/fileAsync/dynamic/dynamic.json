@@ -1,0 +1,1 @@
+{"fileType":{},"totalImageFiles":{"fileAsync":{"maxFiles":"5"}},"totalDocumentFiles":{"fileAsync":{"minFiles":"5"}},"minMaxFiles":{"fileAsync":{"minFiles":"5","maxFiles":"10","message":"You can upload minimum 5 and maximum 10 files."}},"excelFiles":{"fileAsync":{"minFiles":"2","maxFiles":"5","messageKey":"fileMessageKey"}}}

@@ -1,0 +1,1 @@
+{"totalMarks":{},"passingMarks":{"lessThanEqualToAsync":{"fieldName":"totalMarks"}},"maximumAge":{"lessThanEqualToAsync":{"value":"60"}},"otherMarks":{"lessThanEqualToAsync":{"fieldName":"totalMarks","message":"Please enter number less than 100."}},"disciplineMarks":{"lessThanEqualToAsync":{"fieldName":"totalMarks","messageKey":"lessThanEqualToMessageKey"}}}

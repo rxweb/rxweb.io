@@ -1,0 +1,1 @@
+{"adminWebsiteUrl":{"urlAsync":true},"maintenanceWebSiteUrl":{"urlAsync":{"message":"{{0}} Is not the correct url pattern."}},"localhostUrl":{"urlAsync":{"urlValidationType":"2"}},"fqdnDomainUrl":{"urlAsync":{"urlValidationType":"1"}},"intraServerUrl":{"urlAsync":{"urlValidationType":"3"}},"deployedWebSiteUrl":{"urlAsync":{"messageKey":"urlMessageKey"}}}

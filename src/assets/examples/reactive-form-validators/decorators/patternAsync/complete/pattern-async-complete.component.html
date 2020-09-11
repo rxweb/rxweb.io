@@ -1,0 +1,24 @@
+<div>
+  <form  [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>User Name</label>
+      <input type="text" formControlName="userName" class="form-control"  />
+      <small class="form-text text-muted">It checked that username match alpha regex or not<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.userName.errors">{{userFormGroup.controls.userName.errors.pattern.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Zip Code</label>
+      <input type="text" formControlName="zipCode" class="form-control"  />
+      <small class="form-text text-muted">It checked that zipcode match zipcode regex or not <br/></small>
+      <small class="form-text text-muted">Shows custom message<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.zipCode.errors">{{userFormGroup.controls.zipCode.errors.pattern.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Pin Code</label>
+      <input type="text" formControlName="pinCode" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.pinCode.errors">{{userFormGroup.controls.pinCode.errors.patternMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

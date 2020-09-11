@@ -1,0 +1,40 @@
+<div>
+  <form  [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>Admin Website Url</label>
+      <input type="text" formControlName="adminWebsiteUrl" class="form-control"  />
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.adminWebsiteUrl.errors">{{userFormGroup.controls.adminWebsiteUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Maintenance Website Url</label>
+      <input type="text" formControlName="maintenanceWebSiteUrl" class="form-control"  />
+      <small class="form-text text-muted">Shows Custom Validation Message.<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.maintenanceWebSiteUrl.errors">{{userFormGroup.controls.maintenanceWebSiteUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Localhost Url</label>
+      <input type="text" formControlName="localhostUrl" class="form-control"  />
+      <small class="form-text text-muted">Enter valid localhost url.<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.localhostUrl.errors">{{userFormGroup.controls.localhostUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>FQDN Domain Url</label>
+      <input type="text" formControlName="fqdnDomainUrl" class="form-control"  />
+      <small class="form-text text-muted">Enter valid FQDN url.<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.fqdnDomainUrl.errors">{{userFormGroup.controls.fqdnDomainUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>IntraServer Url</label>
+      <input type="text" formControlName="intraServerUrl" class="form-control"  />
+      <small class="form-text text-muted">Enter valid Intra url.<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.intraServerUrl.errors">{{userFormGroup.controls.intraServerUrl.errors.url.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Deployed Website Url</label>
+      <input type="text" formControlName="deployedWebSiteUrl" class="form-control"  />
+      <small class="form-text text-muted">Shows Custom Validation Message based on message key<br/></small>
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.deployedWebSiteUrl.errors">{{userFormGroup.controls.deployedWebSiteUrl.errors.urlMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

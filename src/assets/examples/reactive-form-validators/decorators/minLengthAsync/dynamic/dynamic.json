@@ -1,0 +1,1 @@
+{"countryName":{},"mobileNo":{"minLengthAsync":{"value":"10"}},"landLineNo":{"minLengthAsync":{"value":"8","message":"Minimum 8 characters are allowed"}},"stateName":{"minLengthAsync":{"value":"3","messageKey":"minLengthMessageKey"}}}

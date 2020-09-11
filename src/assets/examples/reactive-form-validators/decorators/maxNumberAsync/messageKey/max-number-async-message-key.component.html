@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="subjectDetailsFormGroup">
+    <div class="form-group">
+      <label>Discipline Marks</label>
+      <input type="text" formControlName="disciplineMarks" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message based on message key<br/></small>
+     <small class="form-text text-danger" *ngIf="subjectDetailsFormGroup.controls.disciplineMarks.errors">{{subjectDetailsFormGroup.controls.disciplineMarks.errors.maxNumberMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!subjectDetailsFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

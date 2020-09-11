@@ -1,0 +1,28 @@
+<div>
+  <form  [formGroup]="attandanceDetailFormGroup">
+    <div class="form-group">
+      <label>Entry Place</label>
+      <input type="text" formControlName="entryPlace" class="form-control"  />
+     <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.entryPlace.errors">{{attandanceDetailFormGroup.controls.entryPlace.errors.time.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Total Time Out</label>
+      <input type="text" formControlName="totalOutTime" class="form-control"  />
+      <small class="form-text text-muted">Allow seconds.<br/></small>
+     <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.totalOutTime.errors">{{attandanceDetailFormGroup.controls.totalOutTime.errors.time.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Exit Time</label>
+      <input type="text" formControlName="exitTime" class="form-control"  />
+      <small class="form-text text-muted">Shows Custom Validation Message.<br/></small>
+     <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.exitTime.errors">{{attandanceDetailFormGroup.controls.exitTime.errors.time.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>Net-In Time</label>
+      <input type="text" formControlName="netInTime" class="form-control"  />
+      <small class="form-text text-muted">Shows Custom Validation Message using message key<br/></small>
+     <small class="form-text text-danger" *ngIf="attandanceDetailFormGroup.controls.netInTime.errors">{{attandanceDetailFormGroup.controls.netInTime.errors.timeMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!attandanceDetailFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>
