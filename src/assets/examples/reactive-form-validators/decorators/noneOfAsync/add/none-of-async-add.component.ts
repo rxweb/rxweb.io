@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-noneOf-add',
-  templateUrl: './none-of-add.component.html'
+  templateUrl: './none-of-async-add.component.html'
 })
 export class NoneOfAsyncAddComponent implements OnInit {
   employeeInfoFormGroup: FormGroup

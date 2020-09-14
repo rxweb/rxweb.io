@@ -4,33 +4,28 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
-import { AllOfCompleteValidatorComponent } from './complete/all-of-complete.component';
-import { AllOfConditionalExpressionValidatorComponent } from './conditionalExpression/all-of-conditonal-expression.component';
-import { AllOfMatchValuesValidatorComponent } from './matchValues/all-of-match-values.component';
-import { AllOfMessageValidatorComponent } from './message/all-of-message.component';
-import { AllOfDynamicValidatorComponent } from './dynamic/all-of-dynamic.component';
-import { AllOfAddValidatorComponent } from './add/all-of-add.component';
-import { AllOfMessageKeyValidatorComponent } from './messageKey/all-of-message-key.component';
+import { AllOfAsyncMessageKeyValidatorComponent } from './messageKey/all-of-async-message-key.component';
+import { AllOfAsyncAddValidatorComponent } from './add/all-of-async-add.component';
+import { AllOfAsyncMessageValidatorComponent } from './message/all-of-async-message.component';
+import { AllOfAsyncMatchValuesValidatorComponent } from './matchValues/all-of-async-match-values.component';
+import { AllOfAsyncCompleteValidatorComponent } from './complete/all-of-async-complete.component';
+
 
 
 @NgModule({
   declarations: [
-	AllOfCompleteValidatorComponent,
-	AllOfConditionalExpressionValidatorComponent,
-	AllOfMatchValuesValidatorComponent,
-	AllOfMessageValidatorComponent,
-	AllOfDynamicValidatorComponent,
-  AllOfAddValidatorComponent,
-  AllOfMessageKeyValidatorComponent
+	AllOfAsyncCompleteValidatorComponent,
+	AllOfAsyncMatchValuesValidatorComponent,
+	AllOfAsyncMessageValidatorComponent,
+  AllOfAsyncAddValidatorComponent,
+  AllOfAsyncMessageKeyValidatorComponent
   ],
 entryComponents: [
-	AllOfCompleteValidatorComponent,
-	AllOfConditionalExpressionValidatorComponent,
-	AllOfMatchValuesValidatorComponent,
-	AllOfMessageValidatorComponent,
-	AllOfDynamicValidatorComponent,
-  AllOfAddValidatorComponent,
-  AllOfMessageKeyValidatorComponent
+	AllOfAsyncCompleteValidatorComponent,
+	AllOfAsyncMatchValuesValidatorComponent,
+	AllOfAsyncMessageValidatorComponent,
+  AllOfAsyncAddValidatorComponent,
+  AllOfAsyncMessageKeyValidatorComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -39,14 +34,12 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-	AllOfCompleteValidatorComponent,
-	AllOfConditionalExpressionValidatorComponent,
-	AllOfMatchValuesValidatorComponent,
-	AllOfMessageValidatorComponent,
-	AllOfDynamicValidatorComponent,
-  AllOfAddValidatorComponent,
-  AllOfMessageKeyValidatorComponent
+    AllOfAsyncCompleteValidatorComponent,
+    AllOfAsyncMatchValuesValidatorComponent,
+    AllOfAsyncMessageValidatorComponent,
+    AllOfAsyncAddValidatorComponent,
+    AllOfAsyncMessageKeyValidatorComponent
   ],
 
 })
-export class  AllOfValidatorsExtendedModule { }
+export class  AllOfAsyncValidatorsExtendedModule { }

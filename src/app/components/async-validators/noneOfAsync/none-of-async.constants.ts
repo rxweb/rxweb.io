@@ -4,17 +4,23 @@ import { NoneOfAsyncMessageValidatorComponent } from 'src/assets/examples/reacti
 import { NoneOfAsyncAddValidatorComponent } from 'src/assets/examples/reactive-form-validators/validators/noneOfAsync/add/none-of-async-add.component';
 import { NoneOfAsyncNonArrayValueValidatorComponent } from 'src/assets/examples/reactive-form-validators/validators/noneOfAsync/nonArrayValue/none-of-async-non-array-value.component';
 import { NoneOfAsyncMessageKeyValidatorComponent } from 'src/assets/examples/reactive-form-validators/validators/noneOfAsync/messageKey/none-of-async-message-key.component';
+import { NoneOfAsyncCompleteComponent } from 'src/assets/examples/reactive-form-validators/decorators/noneOfAsync/complete/none-of-async-complete.component';
+import { NoneOfAsyncMatchValuesComponent } from 'src/assets/examples/reactive-form-validators/decorators/noneOfAsync/matchValues/none-of-async-match-values.component';
+import { NoneOfAsyncMessageComponent } from 'src/assets/examples/reactive-form-validators/decorators/noneOfAsync/message/none-of-async-message.component';
+import { NoneOfAsyncAddComponent } from 'src/assets/examples/reactive-form-validators/decorators/noneOfAsync/add/none-of-async-add.component';
+import { NoneOfAsyncNonArrayValueComponent } from 'src/assets/examples/reactive-form-validators/decorators/noneOfAsync/nonArrayValue/none-of-async-non-array-value.component';
+import { NoneOfAsyncMessageKeyComponent } from 'src/assets/examples/reactive-form-validators/decorators/noneOfAsync/messageKey/none-of-async-message-key.component';
 
 
 
 export const NONE_OF_ASYNC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
   decorators: {
-    // complete: NoneOfAsyncCompleteComponent,
-    // matchValues: NoneOfAsyncMatchValuesComponent,
-    // message: NoneOfAsyncMessageComponent,
-    // add: NoneOfAsyncAddComponent,
-    // nonArrayValue: NoneOfAsyncNonArrayValueComponent,
-    // messageKey: NoneOfAsyncMessageKeyComponent
+    complete: NoneOfAsyncCompleteComponent,
+    matchValues: NoneOfAsyncMatchValuesComponent,
+    message: NoneOfAsyncMessageComponent,
+    add: NoneOfAsyncAddComponent,
+    nonArrayValue: NoneOfAsyncNonArrayValueComponent,
+    messageKey: NoneOfAsyncMessageKeyComponent
   },
   template_driven_validation_directives: {
     // complete : NoneOfCompleteTemplateDrivenValidationDirectivesComponent,

@@ -4,16 +4,22 @@ import { ChoiceAsyncMaxLengthValidatorComponent } from 'src/assets/examples/reac
 import { ChoiceAsyncMessageValidatorComponent } from 'src/assets/examples/reactive-form-validators/validators/choiceAsync/message/choice-async-message.component';
 import { ChoiceAsyncAddValidatorComponent } from 'src/assets/examples/reactive-form-validators/validators/choiceAsync/add/choice-async-add.component';
 import { ChoiceAsyncMessageKeyValidatorComponent } from 'src/assets/examples/reactive-form-validators/validators/choiceAsync/messageKey/choice-async-message-key.component';
+import { ChoiceAsyncCompleteComponent } from 'src/assets/examples/reactive-form-validators/decorators/choiceAsync/complete/choice-async-complete.component';
+import { ChoiceAsyncMinLengthComponent } from 'src/assets/examples/reactive-form-validators/decorators/choiceAsync/minLength/choice-async-min-length.component';
+import { ChoiceAsyncMaxLengthComponent } from 'src/assets/examples/reactive-form-validators/decorators/choiceAsync/maxLength/choice-async-max-length.component';
+import { ChoiceAsyncMessageComponent } from 'src/assets/examples/reactive-form-validators/decorators/choiceAsync/message/choice-async-message.component';
+import { ChoiceAsyncAddComponent } from 'src/assets/examples/reactive-form-validators/decorators/choiceAsync/add/choice-async-add.component';
+import { ChoiceAsyncMessageKeyComponent } from 'src/assets/examples/reactive-form-validators/decorators/choiceAsync/messageKey/choice-async-message-key.component';
 
 
 export const CHOICE_ASYNC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
   decorators: {
-    // complete: ChoiceAsyncCompleteComponent,
-    // minLength: ChoiceAsyncMinLengthComponent,
-    // maxLength: ChoiceAsyncMaxLengthComponent,
-    // message: ChoiceAsyncMessageComponent,
-    // add: ChoiceAsyncAddComponent,
-    // messageKey: ChoiceAsyncMessageKeyComponent
+    complete: ChoiceAsyncCompleteComponent,
+    minLength: ChoiceAsyncMinLengthComponent,
+    maxLength: ChoiceAsyncMaxLengthComponent,
+    message: ChoiceAsyncMessageComponent,
+    add: ChoiceAsyncAddComponent,
+    messageKey: ChoiceAsyncMessageKeyComponent
   },
   template_driven_validation_directives: {
     // complete: ChoiceCompleteTemplateDrivenValidationDirectivesComponent,
