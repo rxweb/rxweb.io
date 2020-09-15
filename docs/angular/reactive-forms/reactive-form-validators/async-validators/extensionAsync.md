@@ -95,6 +95,15 @@ extensions property of ExtensionConfig is an array of multiple extensions which 
 <div component="app-code" key="extensionAsync-extensionsExample-model"></div> 
 <div component="app-example-runner" ref-component="app-extensionAsync-extensions" title="extensionAsync {{validatorType}} with extensions" key="extensions"></div>
 
+## isExcludeExtensions
+Type :  `boolean` 
+
+This property is used to exclude the extensions mentioned in the extensions array. It is restrict the `extensions` mentioned 
+
+<div component="app-code" key="extensionAsync-isExcludeExtensionsExample-model"></div> 
+<div component="app-example-runner" ref-component="app-extensionAsync-isExcludeExtensions" title="extensionAsync {{validatorType}} with extensions" key="isExcludeExtensions"></div>
+
+
 ## message 
 Type :  `string` 
 
