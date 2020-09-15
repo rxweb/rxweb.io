@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from "@angular/forms"
-import { of } from 'rxjs';
 import { RxwebValidators } from '@rxweb/reactive-form-validators';
+import { of } from 'rxjs';
 
 @Component({
     selector: 'app-extensionAsync-message-validator',
@@ -16,7 +16,7 @@ export class ExtensionAsyncMessageValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            contactFile:['',[], RxwebValidators.extensionAsync({validatorConfig:of({extensions:['vcf']  ,message:'You can upload only .vcf files.' })})], 
+            contactFile:['', RxwebValidators.extensionAsync({validatorConfig:of({extensions:['vcf']  ,message:'You can upload only .vcf files.' })})], 
         });
     }
 }

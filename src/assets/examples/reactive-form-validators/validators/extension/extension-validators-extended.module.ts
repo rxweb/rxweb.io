@@ -5,8 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
+import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
+
+
 import { ExtensionCompleteValidatorComponent } from './complete/extension-complete.component';
 import { ExtensionExtensionsValidatorComponent } from './extensions/extension-extensions.component';
+import { ExtensionIsExcludeExtensionsValidatorComponent } from './isExcludeExtensions/extension-is-exclude-extensions.component';
 import { ExtensionConditionalExpressionValidatorComponent } from './conditionalExpression/extension-conditional-expression.component';
 import { ExtensionMessageValidatorComponent } from './message/extension-message.component';
 import { ExtensionMessageKeyValidatorComponent } from './messageKey/extension-message-key.component';
@@ -17,6 +21,7 @@ import { ExtensionAddValidatorComponent } from './add/extension-add.component';
   declarations: [
 	ExtensionCompleteValidatorComponent,
 	ExtensionExtensionsValidatorComponent,
+	ExtensionIsExcludeExtensionsValidatorComponent,
 	ExtensionConditionalExpressionValidatorComponent,
 	ExtensionMessageValidatorComponent,
 	ExtensionMessageKeyValidatorComponent,
@@ -26,6 +31,7 @@ import { ExtensionAddValidatorComponent } from './add/extension-add.component';
 entryComponents: [
 	ExtensionCompleteValidatorComponent,
 	ExtensionExtensionsValidatorComponent,
+	ExtensionIsExcludeExtensionsValidatorComponent,
 	ExtensionConditionalExpressionValidatorComponent,
 	ExtensionMessageValidatorComponent,
 	ExtensionMessageKeyValidatorComponent,
@@ -33,14 +39,17 @@ entryComponents: [
 	ExtensionAddValidatorComponent,
   ],
   imports: [
-    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
+    CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
   ],
+  
+ 
   providers: [],
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
 	ExtensionCompleteValidatorComponent,
 	ExtensionExtensionsValidatorComponent,
+	ExtensionIsExcludeExtensionsValidatorComponent,
 	ExtensionConditionalExpressionValidatorComponent,
 	ExtensionMessageValidatorComponent,
 	ExtensionMessageKeyValidatorComponent,

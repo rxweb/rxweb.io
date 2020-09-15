@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>Profile Image</label>
+      <input type="file" formControlName="profileImage" class="form-control"  />
+      <small class="form-text text-muted">This field will not allow file extension as jpg or bmp.<br/></small>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.profileImage.errors">{{userInfoFormGroup.controls.profileImage.errors.extension.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

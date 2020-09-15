@@ -25,6 +25,10 @@ import { ExtensionAddTemplateDrivenValidationDirectivesComponent } from "src/ass
 import { ExtensionAddTemplateDrivenValidationDecoratorsComponent } from "src/assets/examples/reactive-form-validators/template-driven/validation-decorators/extension/add/extension-add.component";
 import { ExtensionAddValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/extension/add/extension-add.component";
 import { ExtensionEditComponent } from "src/assets/examples/reactive-form-validators/decorators/extension/edit/extension-edit.component";
+import { ExtensionIsExcludeExtensionsComponent } from 'src/assets/examples/reactive-form-validators/decorators/extension/isExcludeExtensions/extension-is-exclude-extensions.component';
+import { ExtensionIsExcludeExtensionsTemplateDrivenValidationDirectivesComponent } from 'src/assets/examples/reactive-form-validators/template-driven/validation-directives/extension/isExcludeExtensions/extension-is-exclude-extensions.component';
+import { ExtensionIsExcludeExtensionsTemplateDrivenValidationDecoratorsComponent } from 'src/assets/examples/reactive-form-validators/template-driven/validation-decorators/extension/isExcludeExtensions/extension-is-exclude-extensions.component';
+import { ExtensionIsExcludeExtensionsValidatorComponent } from 'src/assets/examples/reactive-form-validators/validators/extension/isExcludeExtensions/extension-is-exclude-extensions.component';
 
 export const EXTENSION_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
@@ -36,6 +40,7 @@ export const EXTENSION_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						dynamic : ExtensionDynamicComponent,
 						add : ExtensionAddComponent,
 						edit : ExtensionEditComponent,
+						isExcludeExtensions: ExtensionIsExcludeExtensionsComponent
 			  },
 	template_driven_validation_directives:{
 						complete : ExtensionCompleteTemplateDrivenValidationDirectivesComponent,
@@ -44,6 +49,7 @@ export const EXTENSION_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						message : ExtensionMessageTemplateDrivenValidationDirectivesComponent,
 						messageKey : ExtensionMessageKeyTemplateDrivenValidationDirectivesComponent,
 						add : ExtensionAddTemplateDrivenValidationDirectivesComponent,
+						isExcludeExtensions: ExtensionIsExcludeExtensionsTemplateDrivenValidationDirectivesComponent
 			  },
 	template_driven_validation_decorators:{
 						complete : ExtensionCompleteTemplateDrivenValidationDecoratorsComponent,
@@ -52,6 +58,7 @@ export const EXTENSION_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						message : ExtensionMessageTemplateDrivenValidationDecoratorsComponent,
 						messageKey : ExtensionMessageKeyTemplateDrivenValidationDecoratorsComponent,
 						add : ExtensionAddTemplateDrivenValidationDecoratorsComponent,
+						isExcludeExtensions :ExtensionIsExcludeExtensionsTemplateDrivenValidationDecoratorsComponent
 			  },
 	validators:{
 						complete : ExtensionCompleteValidatorComponent,
@@ -61,5 +68,6 @@ export const EXTENSION_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 						messageKey : ExtensionMessageKeyValidatorComponent,
 						dynamic : ExtensionDynamicValidatorComponent,
 						add : ExtensionAddValidatorComponent,
+						isExcludeExtensions: ExtensionIsExcludeExtensionsValidatorComponent
 			  },
 }

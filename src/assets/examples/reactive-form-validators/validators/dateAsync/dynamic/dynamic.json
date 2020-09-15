@@ -1,0 +1,1 @@
+{"birthDate":{"dateAsync":true},"registrationDate":{"dateAsync":{"allowISODate":"true"}},"allocationDate":{"dateAsync":{"message":"{{0}} is not a valid date"}},"confirmationDate":{"dateAsync":{"messageKey":"dateMessageKey"}}}

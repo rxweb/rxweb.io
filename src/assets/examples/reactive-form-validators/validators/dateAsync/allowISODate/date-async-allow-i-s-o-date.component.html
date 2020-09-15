@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>Registration Date</label>
+      <input type="text" formControlName="registrationDate" class="form-control"  />
+      <small class="form-text text-muted">allows standard way to express a numeric calendar date according to International Organization for Standardization.<br/></small>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.registrationDate.errors">{{userInfoFormGroup.controls.registrationDate.errors.date.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

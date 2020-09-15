@@ -12,7 +12,7 @@ import { ExtensionAsyncCompleteComponent } from './complete/extension-async-comp
 import { ExtensionAsyncExtensionsComponent } from './extensions/extension-async-extensions.component';
 import { ExtensionAsyncMessageComponent } from './message/extension-async-message.component';
 import { ExtensionAsyncMessageKeyComponent } from './messageKey/extension-async-message-key.component';
-import { ExtensionAsyncDynamicComponent } from './dynamic/extension-async-dynamic.component';
+
 import { ExtensionAsyncAddComponent } from './add/extension-async-add.component';
 import { ExtensionAsyncEditComponent } from './edit/extension-async-edit.component';
 
@@ -22,8 +22,7 @@ import { ExtensionAsyncEditComponent } from './edit/extension-async-edit.compone
 	ExtensionAsyncExtensionsComponent,
 	ExtensionAsyncMessageComponent,
 	ExtensionAsyncMessageKeyComponent,
-	ExtensionAsyncDynamicComponent,
-	ExtensionAsyncAddComponent,
+
 	ExtensionAsyncEditComponent,
   ],
 entryComponents: [
@@ -31,7 +30,7 @@ entryComponents: [
 	ExtensionAsyncExtensionsComponent,
 	ExtensionAsyncMessageComponent,
 	ExtensionAsyncMessageKeyComponent,
-	ExtensionAsyncDynamicComponent,
+	
 	ExtensionAsyncAddComponent,
 	ExtensionAsyncEditComponent,
   ],
@@ -48,7 +47,7 @@ entryComponents: [
 	ExtensionAsyncExtensionsComponent,
 	ExtensionAsyncMessageComponent,
 	ExtensionAsyncMessageKeyComponent,
-	ExtensionAsyncDynamicComponent,
+
 	ExtensionAsyncAddComponent,
 	ExtensionAsyncEditComponent,
   ],

@@ -10,12 +10,15 @@ import { ExtensionAsyncMessageValidatorComponent } from "src/assets/examples/rea
 import { ExtensionAsyncMessageKeyComponent } from "src/assets/examples/reactive-form-validators/decorators/extensionAsync/messageKey/extension-async-message-key.component";
 
 import { ExtensionAsyncMessageKeyValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/extensionAsync/messageKey/extension-async-message-key.component";
-import { ExtensionAsyncDynamicComponent } from "src/assets/examples/reactive-form-validators/decorators/extensionAsync/dynamic/extension-async-dynamic.component";
-import { ExtensionAsyncDynamicValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/extensionAsync/dynamic/extension-async-dynamic.component";
+
+
 import { ExtensionAsyncAddComponent } from "src/assets/examples/reactive-form-validators/decorators/extensionAsync/add/extension-async-add.component";
 
 import { ExtensionAsyncAddValidatorComponent } from "src/assets/examples/reactive-form-validators/validators/extensionAsync/add/extension-async-add.component";
 import { ExtensionAsyncEditComponent } from "src/assets/examples/reactive-form-validators/decorators/extensionAsync/edit/extension-async-edit.component";
+import { ExtensionIsExcludeExtensionsComponent } from 'src/assets/examples/reactive-form-validators/decorators/extension/isExcludeExtensions/extension-is-exclude-extensions.component';
+import { ExtensionAsyncIsExcludeExtensionsComponent } from 'src/assets/examples/reactive-form-validators/decorators/extensionAsync/isExcludeExtensions/extension-async-is-exclude-extensions.component';
+import { ExtensionAsyncIsExcludeExtensionsValidatorComponent } from 'src/assets/examples/reactive-form-validators/validators/extensionAsync/isExcludeExtensions/extension-async-is-exclude-extensions.component';
 
 export const EXTENSION_ASYNC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } = {
 	decorators:{
@@ -23,9 +26,10 @@ export const EXTENSION_ASYNC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } 
 						extensions : ExtensionAsyncExtensionsComponent,
 						message : ExtensionAsyncMessageComponent,
 						messageKey : ExtensionAsyncMessageKeyComponent,
-						dynamic : ExtensionAsyncDynamicComponent,
+			
 						add : ExtensionAsyncAddComponent,
 						edit : ExtensionAsyncEditComponent,
+						isExcludeExtensions: ExtensionAsyncIsExcludeExtensionsComponent
 			  },
 	
 	validators:{
@@ -33,7 +37,8 @@ export const EXTENSION_ASYNC_COMPONENT_EXAMPLE_CONSTANT: { [key: string]: any } 
 						extensions : ExtensionAsyncExtensionsValidatorComponent,
 						message : ExtensionAsyncMessageValidatorComponent,
 						messageKey : ExtensionAsyncMessageKeyValidatorComponent,
-						dynamic : ExtensionAsyncDynamicValidatorComponent,
+					
 						add : ExtensionAsyncAddValidatorComponent,
+						isExcludeExtensions: ExtensionAsyncIsExcludeExtensionsValidatorComponent
 			  },
 }

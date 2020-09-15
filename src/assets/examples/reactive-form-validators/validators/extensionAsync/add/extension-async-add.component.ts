@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from "@angular/forms"
-import { of } from 'rxjs';
 import { RxwebValidators } from '@rxweb/reactive-form-validators';
+import { of } from 'rxjs';
 
 @Component({
     selector: 'app-extensionAsync-add-validator',
@@ -16,7 +16,7 @@ export class ExtensionAsyncAddValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            profilePicture:['',[], RxwebValidators.extensionAsync({validatorConfig:of({extensions:['jpg','bmp'] })})], 
+            profilePicture:['', RxwebValidators.extensionAsync({validatorConfig:of({extensions:['jpg','bmp'] })})], 
         });
     }
 }

@@ -19,6 +19,7 @@ export class ExtensionDynamicValidatorComponent implements OnInit {
 	
 	
 	
+	
 	constructor(
         private formBuilder: RxFormBuilder , private http: HttpClient )
 	{ }
@@ -27,7 +28,7 @@ export class ExtensionDynamicValidatorComponent implements OnInit {
 		let formBuilderConfiguration = new FormBuilderConfiguration();
 		this.http.get('assets/examples/reactive-form-validators/validators/extension/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {
 			formBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));
-			var userInfo = { fileType:'', profilePicture:'', imageFile:'', documentFile:'', contactFile:'', excelFile:'',  }
+			var userInfo = { fileType:'', profilePicture:'', profileImage:'', imageFile:'', documentFile:'', contactFile:'', excelFile:'',  }
 			this.userInfoFormGroup = this.formBuilder.group(userInfo,formBuilderConfiguration);
 		})
     }

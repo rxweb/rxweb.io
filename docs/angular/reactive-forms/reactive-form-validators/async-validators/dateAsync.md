@@ -51,7 +51,7 @@ Next, we need to write html code.
 <div component="app-example-runner" ref-component="app-dateAsync-add"></div>
 # [/Add]
 # [Edit](#tab\basicedit)
-<div component="app-code" key="dateAsync-edit-component"></div> \
+<div component="app-code" key="dateAsync-edit-component"></div> 
 
 The below default data which is coming from the server in this example of edit form which is set in the `dateAsync-info-data.json` in json format like this:
 <div component="app-code" key="dateAsync-edit-json"></div> 

@@ -9,6 +9,9 @@ export class UserInfo {
 	profilePicture: string;
 
 	@prop()
+	profileImage: string;
+
+	@prop()
 	imageFile: string;
 
 	@prop()

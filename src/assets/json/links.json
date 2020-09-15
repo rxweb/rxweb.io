@@ -56,6 +56,11 @@
                             "isActive": false
                         },
                         {
+                            "title": "dateAsync",
+                            "uri": "/async-validators/dateAsync/validators",
+                            "isActive": false
+                        },
+                        {
                             "title": "endsWithAsync",
                             "uri": "/async-validators/endsWithAsync/validators",
                             "isActive": false
@@ -88,6 +93,16 @@
                         {
                             "title": "greaterThanAsync",
                             "uri": "/async-validators/greaterThanAsync/validators",
+                            "isActive": false
+                        },
+                        {
+                            "title": "imageAsync",
+                            "uri": "/async-validators/imageAsync/validators",
+                            "isActive": false
+                        },
+                        {
+                            "title": "ipAsync",
+                            "uri": "/async-validators/ipAsync/validators",
                             "isActive": false
                         },
                         {

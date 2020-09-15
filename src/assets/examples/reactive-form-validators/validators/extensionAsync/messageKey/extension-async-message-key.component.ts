@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from "@angular/forms"
-import { of } from 'rxjs';
 import { RxwebValidators } from '@rxweb/reactive-form-validators';
+import { of } from 'rxjs';
 
 @Component({
     selector: 'app-extensionAsync-messageKey-validator',
@@ -16,7 +16,7 @@ export class ExtensionAsyncMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            excelFile:['',[], RxwebValidators.extensionAsync({validatorConfig:of({extensions:['xls','xlsx']  ,messageKey:'extensionMessageKey' })})], 
+            excelFile:['', RxwebValidators.extensionAsync({validatorConfig:of({extensions:['xls','xlsx']  ,messageKey:'extensionMessageKey' })})], 
         });
     }
 }

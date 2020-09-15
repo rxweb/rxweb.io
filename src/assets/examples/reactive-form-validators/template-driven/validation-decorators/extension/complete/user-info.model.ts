@@ -9,6 +9,10 @@ export class UserInfo {
 	profilePicture: string;
 	
 	
+	@extension({extensions:['jpg','bmp']  ,isExcludeExtensions:true }) 
+	profileImage: string;
+	
+	
 	@extension({extensions:['jpg','bmp']  ,conditionalExpression:'x => x.fileType == "Picture"' }) 
 	imageFile: string;
 	

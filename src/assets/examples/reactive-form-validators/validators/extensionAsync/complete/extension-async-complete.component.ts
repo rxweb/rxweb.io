@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from "@angular/forms"
-import { of } from 'rxjs';
 import { RxwebValidators } from '@rxweb/reactive-form-validators';
+import { of } from 'rxjs';
 
 @Component({
     selector: 'app-extensionAsync-complete-validator',
@@ -21,10 +21,10 @@ export class ExtensionAsyncCompleteValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            fileType:['',[],], 
-            profilePicture:['',[], RxwebValidators.extensionAsync({validatorConfig:of({extensions:['jpg','bmp'] })})], 
-            contactFile:['',[], RxwebValidators.extensionAsync({validatorConfig:of({extensions:['vcf']  ,message:'You can upload only .vcf files.' })})], 
-            excelFile:['',[], RxwebValidators.extensionAsync({validatorConfig:of({extensions:['xls','xlsx']  ,messageKey:'extensionMessageKey' })})], 
+            fileType:['',], 
+            profilePicture:['', RxwebValidators.extensionAsync({validatorConfig:of({extensions:['jpg','bmp'] })})], 
+            contactFile:['', RxwebValidators.extensionAsync({validatorConfig:of({extensions:['vcf']  ,message:'You can upload only .vcf files.' })})], 
+            excelFile:['', RxwebValidators.extensionAsync({validatorConfig:of({extensions:['xls','xlsx']  ,messageKey:'extensionMessageKey' })})], 
         });
     }
 }
