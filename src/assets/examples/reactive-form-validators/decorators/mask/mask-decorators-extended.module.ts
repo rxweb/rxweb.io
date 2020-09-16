@@ -10,6 +10,7 @@ import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
 
 import { MaskCompleteComponent } from './complete/mask-complete.component';
 import { MaskMaskComponent } from './mask/mask-mask.component';
+import { MaskValueWithMaskComponent } from './valueWithMask/mask-value-with-mask.component';
 import { MaskConditionalExpressionComponent } from './conditionalExpression/mask-conditional-expression.component';
 import { MaskMessageComponent } from './message/mask-message.component';
 import { MaskMinLengthComponent } from './minLength/mask-min-length.component';
@@ -22,6 +23,7 @@ import { MaskEditComponent } from './edit/mask-edit.component';
   declarations: [
 	MaskCompleteComponent,
 	MaskMaskComponent,
+	MaskValueWithMaskComponent,
 	MaskConditionalExpressionComponent,
 	MaskMessageComponent,
 	MaskMinLengthComponent,
@@ -33,6 +35,7 @@ import { MaskEditComponent } from './edit/mask-edit.component';
 entryComponents: [
 	MaskCompleteComponent,
 	MaskMaskComponent,
+	MaskValueWithMaskComponent,
 	MaskConditionalExpressionComponent,
 	MaskMessageComponent,
 	MaskMinLengthComponent,
@@ -52,6 +55,7 @@ entryComponents: [
   exports: [
 	MaskCompleteComponent,
 	MaskMaskComponent,
+	MaskValueWithMaskComponent,
 	MaskConditionalExpressionComponent,
 	MaskMessageComponent,
 	MaskMinLengthComponent,

@@ -9,6 +9,9 @@ export class User {
 	phoneNumber: string;
 
 	@prop()
+	macNumber: string;
+
+	@prop()
 	zipcode: string;
 
 	@prop()

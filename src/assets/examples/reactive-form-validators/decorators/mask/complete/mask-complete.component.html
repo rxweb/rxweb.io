@@ -11,6 +11,11 @@
      <small class="form-text text-danger" *ngIf="userFormGroup.controls.phoneNumber.errors">{{userFormGroup.controls.phoneNumber.errors.mask.message}}<br/></small>	
     </div>
     <div class="form-group">
+      <label>Mac Number</label>
+      <input type="text" formControlName="macNumber" class="form-control"  />
+     <small class="form-text text-danger" *ngIf="userFormGroup.controls.macNumber.errors">{{userFormGroup.controls.macNumber.errors.mask.message}}<br/></small>	
+    </div>
+    <div class="form-group">
       <label>Postal Code</label>
       <input type="text" formControlName="postalCode" class="form-control"  />
       <small class="form-text text-muted">If you want to apply conditionalExpression on 'Postal Code', then enter 'Bharat' in 'First Name'<br/></small>

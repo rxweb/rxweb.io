@@ -102,6 +102,14 @@ If there is need of dynamic validation means it is not fixed in client code, it 
 
 <div component="app-example-runner" ref-component="app-mask-conditionalExpression" title="mask {{validatorType}} with conditionalExpression" key="conditionalExpression"></div>
 
+## valueWithMask
+Type :  `boolean` 
+
+To Add a mask to a mac validator
+
+<div component="app-code" key="mask-valueWithMaskExample-model"></div> 
+<div component="app-example-runner" ref-component="app-mask-valueWithMask" title="mask {{validatorType}} with valueWithMask" key="valueWithMask"></div>
+
 ## minLength
 Type :  `number` 
 

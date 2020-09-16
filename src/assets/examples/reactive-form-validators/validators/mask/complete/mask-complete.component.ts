@@ -17,6 +17,7 @@ export class MaskCompleteValidatorComponent implements OnInit {
         this.userFormGroup = this.formBuilder.group({
             firstName:['',], 
             phoneNumber:['', RxwebValidators.mask({mask:'(999)-999 9999' })], 
+            macNumber:['', [RxwebValidators.mask({mask:'**:**:**:**:**:**',valueWithMask:true }),RxwebValidators.mac()]], 
             postalCode:['', RxwebValidators.mask({mask:'999-999'  ,conditionalExpression:(x,y)=> x.firstName == "Bharat" })], 
             zipcode:['', RxwebValidators.mask({mask:'9999'  ,conditionalExpression:'x => x.firstName == "Bharat"' })], 
             contactNumber:['', RxwebValidators.mask({mask:'999-9999999'  ,message:'Enter a valid Contact Number' })], 

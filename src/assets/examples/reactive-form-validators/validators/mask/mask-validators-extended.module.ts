@@ -10,6 +10,7 @@ import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
 
 import { MaskCompleteValidatorComponent } from './complete/mask-complete.component';
 import { MaskMaskValidatorComponent } from './mask/mask-mask.component';
+import { MaskValueWithMaskValidatorComponent } from './valueWithMask/mask-value-with-mask.component';
 import { MaskConditionalExpressionValidatorComponent } from './conditionalExpression/mask-conditional-expression.component';
 import { MaskMessageValidatorComponent } from './message/mask-message.component';
 import { MaskMinLengthValidatorComponent } from './minLength/mask-min-length.component';
@@ -21,6 +22,7 @@ import { MaskAddValidatorComponent } from './add/mask-add.component';
   declarations: [
 	MaskCompleteValidatorComponent,
 	MaskMaskValidatorComponent,
+	MaskValueWithMaskValidatorComponent,
 	MaskConditionalExpressionValidatorComponent,
 	MaskMessageValidatorComponent,
 	MaskMinLengthValidatorComponent,
@@ -31,6 +33,7 @@ import { MaskAddValidatorComponent } from './add/mask-add.component';
 entryComponents: [
 	MaskCompleteValidatorComponent,
 	MaskMaskValidatorComponent,
+	MaskValueWithMaskValidatorComponent,
 	MaskConditionalExpressionValidatorComponent,
 	MaskMessageValidatorComponent,
 	MaskMinLengthValidatorComponent,
@@ -49,6 +52,7 @@ entryComponents: [
   exports: [
 	MaskCompleteValidatorComponent,
 	MaskMaskValidatorComponent,
+	MaskValueWithMaskValidatorComponent,
 	MaskConditionalExpressionValidatorComponent,
 	MaskMessageValidatorComponent,
 	MaskMinLengthValidatorComponent,

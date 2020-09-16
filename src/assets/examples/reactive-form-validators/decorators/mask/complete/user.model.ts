@@ -1,4 +1,4 @@
-import {  mask,prop, } from   "@rxweb/reactive-form-validators"   
+import {  mask,prop, mac, } from   "@rxweb/reactive-form-validators"   
 
 export class User {
 
@@ -7,6 +7,11 @@ export class User {
 
 	@mask({mask:'(999)-999 9999' }) 
 	phoneNumber: string;
+	
+	
+	@mac()
+	@mask({mask:'mask:"**:**:**:**:**:**"'  ,valueWithMask:true }) 
+	macNumber: string;
 	
 	
 	//If you want to apply conditional expression of type 'function'
