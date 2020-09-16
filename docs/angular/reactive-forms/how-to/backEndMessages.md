@@ -13,6 +13,10 @@ This concept is used for the forms in which there is a need to set and clear val
 # FormControl Level
 Setting backend validation messages at FormControl level is done using `RxFormControl` which is extended by FormControl class. use the `setBackEndErrors` to set the validators and `clearBackEndErrors` to clear the validating messages
 
+## getValidators
+This method is used to get the validators at formControl level while manually reloading the validators. In the below example the `getFirstNamerrors` is used to get te get the validators of the formControl firstName and `getAreaNameErrors` is used to get the validators of the control in the nested formGroup areaName
+
+
 <data-scope scope="['decorator']">
 First we need to create a user class and define properties in the model.
 <div component="app-code" key="backEndMessages-complete-model"></div> 

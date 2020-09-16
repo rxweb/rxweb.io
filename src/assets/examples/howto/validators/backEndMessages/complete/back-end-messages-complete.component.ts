@@ -9,7 +9,9 @@ import { RxFormBuilder, RxFormGroup, RxwebValidators, RxFormControl } from '@rxw
 })
 export class BackEndMessagesCompleteValidatorComponent implements OnInit {
     userInfoFormGroup: RxFormGroup
-
+    firstNameCount:any=''
+    areaNameCount : any = ''
+    
     constructor(
         private formBuilder: RxFormBuilder) { }
 
@@ -37,4 +39,17 @@ export class BackEndMessagesCompleteValidatorComponent implements OnInit {
     clearAreaNameBackEndErrors() {
         (<RxFormControl>this.userInfoFormGroup.get('address')['controls'].areaName).clearBackEndErrors();
     }
+    getAreaNameErrors() {
+        let validators = (<RxFormControl>this.userInfoFormGroup.get('address')['controls'].areaName).getValidators();
+        validators.push(RxwebValidators.alpha());
+        this.userInfoFormGroup.get('address')['controls'].areaName.setValidators(validators);
+        this.areaNameCount = (<RxFormControl>this.userInfoFormGroup.get('address')['controls'].areaName).getValidators().length;
+    }
+
+    getFirstNamerrors() {
+        let validators = (<RxFormControl>this.userInfoFormGroup.controls.firstName).getValidators();
+          validators.push(RxwebValidators.alpha());
+           this.userInfoFormGroup.controls.firstName.setValidators(validators);
+           this.firstNameCount = (<RxFormControl>this.userInfoFormGroup.controls.firstName).getValidators().length;
+      }
 }

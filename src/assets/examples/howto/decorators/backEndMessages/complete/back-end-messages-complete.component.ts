@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RxFormBuilder, RxFormGroup, RxFormControl } from '@rxweb/reactive-form-validators';
+import { RxFormBuilder, RxFormGroup, RxFormControl, RxwebValidators } from '@rxweb/reactive-form-validators';
 
 import { User, Address } from './user.model';
 
@@ -9,7 +9,8 @@ import { User, Address } from './user.model';
 })
 export class BackEndMessagesCompleteComponent implements OnInit {
     userInfoFormGroup: RxFormGroup
-
+    firstNameCount:any=''
+    areaNameCount : any = ''
     constructor(
         private formBuilder: RxFormBuilder) { }
 
@@ -34,5 +35,19 @@ export class BackEndMessagesCompleteComponent implements OnInit {
     clearAreaNameBackEndErrors() {
         (<RxFormControl>this.userInfoFormGroup.get('address')['controls'].areaName).clearBackEndErrors();
     }
+
+    getAreaNameErrors() {
+        let validators = (<RxFormControl>this.userInfoFormGroup.get('address')['controls'].areaName).getValidators();
+        validators.push(RxwebValidators.alpha());
+        this.userInfoFormGroup.get('address')['controls'].areaName.setValidators(validators);
+        this.areaNameCount = (<RxFormControl>this.userInfoFormGroup.get('address')['controls'].areaName).getValidators().length;
+    }
+
+    getFirstNamerrors() {
+        let validators = (<RxFormControl>this.userInfoFormGroup.controls.firstName).getValidators();
+          validators.push(RxwebValidators.alpha());
+           this.userInfoFormGroup.controls.firstName.setValidators(validators);
+           this.firstNameCount = (<RxFormControl>this.userInfoFormGroup.controls.firstName).getValidators().length;
+      }
 
 }
