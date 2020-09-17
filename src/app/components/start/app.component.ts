@@ -11,6 +11,7 @@ import { RightSideBarComponent } from '../shared/right-sidebar/right-sidebar.com
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientConfig } from '@rxweb/http';
+import { TranslationCore, RxTranslation } from '@rxweb/translate';
 
 
 @Component({
@@ -71,7 +72,7 @@ export class AppComponent implements OnInit {
   rightSidebarLinks: any=[];
 
   
-  constructor(private router: Router, private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer, private http: HttpClient) {
+  constructor(private router: Router, private rxTranslation: RxTranslation,private applicationBroadCast: ApplicationBroadcaster, private sanitizer: DomSanitizer, private http: HttpClient) {
     // setTimeout(() => { this.gitAsideUrl = sanitizer.bypassSecurityTrustResourceUrl("https://rxwebangular.z20.web.core.windows.net/")}, 200);
     this.applicationBroadCast.urlSubscriber.subscribe(t => {
       this.homeInit(t)
@@ -83,9 +84,23 @@ export class AppComponent implements OnInit {
     router.events.subscribe((val) => {
 
       if (val instanceof NavigationEnd) {
-  
+          
         if (val.url == "/" || val.url == "/form-builder" || val.url.includes("?_ga") || val.url == "/dynamic-form-builder" || val.url.includes("/#") || val.url.includes("/home") || val.url.includes("/angular-home") || val.url.includes("/home?_ga")) {
           this.isHome = true;
+        }
+        else if(val.url.includes("multilingualValidationMessage")){
+          debugger;
+          ReactiveFormConfig.i18n = {
+            validationMessage: () => {
+                         return TranslationCore.getText("global.validationMessages")
+            }
+        };
+        Object.defineProperty(ReactiveFormConfig.i18n, "language", {
+            get: () => {
+              
+                return this.rxTranslation.language;
+            }
+        })
         }
         else if (val.url.includes("rx-web-core")) {
           this.isAspNetCore = true;

@@ -767,6 +767,11 @@
                             "isActive": false
                         },
                         {
+                            "title": "Multilingual Validation Messages",
+                            "uri": "/how-to/multilingualValidationMessage/validators",
+                            "isActive": false
+                        },
+                        {
                             "title": "Patch Model Value",
                             "uri": "/how-to/patchModelValue/validators",
                             "isActive": false

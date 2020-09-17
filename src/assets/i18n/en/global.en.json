@@ -15,9 +15,14 @@
   "reuseText": "{{global.scopedText}} {{global.conditionalText}}",
   "validationErrorMessages": {
     "required": "This Field is Required.",
-    "maxlength": "Maximum length is reached"
+    "maxlength": "Maximum length is reached",
+    "alpha":"Only alphabets are required"
   },
   "placeholder": {
     "freeText": "Enter your name!"
+  },
+  "validationMessages":{
+    "required":"This field is required",
+    "alpha":"Only alphabets are required"
   }
 }

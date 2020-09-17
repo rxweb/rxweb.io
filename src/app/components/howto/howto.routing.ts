@@ -63,6 +63,10 @@ const HOWTO_ROUTES: Routes = [
 	loadChildren: () => import('./modifiedValue/modified-value.module').then(m => m.ModifiedValueModule),
 },
 {
+	path:'multilingualValidationMessage',
+	loadChildren: () => import('./multilingualValidationMessage/multilingual-validation-message.module').then(m => m.MultilingualValidationMessageModule),
+},
+{
 	path:'conditionalControlDisable',
 	loadChildren: () => import('./conditionalControlDisable/conditional-control-disable.module').then(m => m.ConditionalControlDisableModule),
 },
