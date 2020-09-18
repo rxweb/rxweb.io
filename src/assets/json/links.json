@@ -107,8 +107,8 @@
                             "isActive": false,
                             "childrens": [
                                 {
-                                    "title": "fileAsync",
-                                    "uri": "/async-validators/fileAsync/validators",
+                                    "title": "fileSizeAsync",
+                                    "uri": "/async-validators/fileSizeAsync/validators",
                                     "isActive": false
                                 },
                                 {

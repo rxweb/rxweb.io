@@ -16,7 +16,7 @@ export class DateAsyncAddValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            birthDate:['', RxwebValidators.dateAsync()], 
+            birthDate:['', [],RxwebValidators.dateAsync()], 
         });
     }
 }

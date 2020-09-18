@@ -16,7 +16,7 @@ export class DateAsyncMessageValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            allocationDate:['', RxwebValidators.dateAsync({validatorConfig:of({message:'{{0}} is not a valid date' })})], 
+            allocationDate:['',[], RxwebValidators.dateAsync({validatorConfig:of({message:'{{0}} is not a valid date' })})], 
         });
     }
 }

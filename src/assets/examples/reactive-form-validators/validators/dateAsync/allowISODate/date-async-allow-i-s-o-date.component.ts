@@ -16,7 +16,7 @@ export class DateAsyncAllowISODateValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            registrationDate:['', RxwebValidators.dateAsync({validatorConfig:of({allowISODate:true })})], 
+            registrationDate:['',[], RxwebValidators.dateAsync({validatorConfig:of({allowISODate:true })})], 
         });
     }
 }

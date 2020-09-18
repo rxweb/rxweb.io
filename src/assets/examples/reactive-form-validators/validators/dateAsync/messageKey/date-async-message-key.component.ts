@@ -16,7 +16,7 @@ export class DateAsyncMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            confirmationDate:['', RxwebValidators.dateAsync({validatorConfig:of({messageKey:'dateMessageKey' })})], 
+            confirmationDate:['',[], RxwebValidators.dateAsync({validatorConfig:of({messageKey:'dateMessageKey' })})], 
         });
     }
 }

@@ -16,11 +16,11 @@ export class DateAsyncCompleteValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            birthDate:['', RxwebValidators.dateAsync()], 
-            registrationDate:['', RxwebValidators.dateAsync({validatorConfig:of({allowISODate:true })})], 
-            admissionDate:['', RxwebValidators.dateAsync({validatorConfig:of({conditionalExpression:(x,y) => x.birthDate == "16/04/1997"  })})], 
-            allocationDate:['', RxwebValidators.dateAsync({validatorConfig:of({message:'{{0}} is not a valid date' })})], 
-            confirmationDate:['', RxwebValidators.dateAsync({validatorConfig:of({messageKey:'dateMessageKey' })})], 
+            birthDate:['',[], RxwebValidators.dateAsync()], 
+            registrationDate:['',[], RxwebValidators.dateAsync({validatorConfig:of({allowISODate:true })})], 
+            admissionDate:['',[], RxwebValidators.dateAsync({validatorConfig:of({conditionalExpression:(x,y) => x.birthDate == "16/04/1997"  })})], 
+            allocationDate:['',[], RxwebValidators.dateAsync({validatorConfig:of({message:'{{0}} is not a valid date' })})], 
+            confirmationDate:['',[], RxwebValidators.dateAsync({validatorConfig:of({messageKey:'dateMessageKey' })})], 
         });
     }
 }
