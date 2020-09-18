@@ -26,187 +26,214 @@
                     "isActive": false,
                     "childrens": [
                         {
-                            "title": "alphaAsync",
-                            "uri": "/async-validators/alphaAsync/validators",
-                            "isActive": false
+                            "title": "Array",
+                            "isOpen": false,
+                            "isActive": false,
+                            "childrens": [
+                                {
+                                    "title": "allOfAsync",
+                                    "uri": "/async-validators/allOfAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "choiceAsync",
+                                    "uri": "/async-validators/choiceAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "noneOfAsync",
+                                    "uri": "/async-validators/noneOfAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "oneOfAsync",
+                                    "uri": "/async-validators/oneOfAsync/validators",
+                                    "isActive": false
+                                }
+                            ]
                         },
                         {
-                            "title": "alphaNumericAsync",
-                            "uri": "/async-validators/alphaNumericAsync/validators",
-                            "isActive": false
+                            "title": "Custom",
+                            "isOpen": false,
+                            "isActive": false,
+                            "childrens": [
+                                {
+                                    "title": "patternAsync",
+                                    "uri": "/async-validators/patternAsync/validators",
+                                    "isActive": false
+                                }
+                            ]
                         },
                         {
-                            "title": "allOfAsync",
-                            "uri": "/async-validators/allOfAsync/validators",
-                            "isActive": false
+                            "title": "Date and time",
+                            "isOpen": false,
+                            "isActive": false,
+                            "childrens": [
+                                {
+                                    "title": "dateAsync",
+                                    "uri": "/async-validators/dateAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "maxDateAsync",
+                                    "uri": "/async-validators/maxDateAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "minDateAsync",
+                                    "uri": "/async-validators/minDateAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "minTimeAsync",
+                                    "uri": "/async-validators/minTimeAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "maxTimeAsync",
+                                    "uri": "/async-validators/maxTimeAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "timeAsync",
+                                    "uri": "/async-validators/timeAsync/validators",
+                                    "isActive": false
+                                }
+                            ]
                         },
                         {
-                            "title": "choiceAsync",
-                            "uri": "/async-validators/choiceAsync/validators",
-                            "isActive": false
+                            "title": "File",
+                            "isOpen": false,
+                            "isActive": false,
+                            "childrens": [
+                                {
+                                    "title": "fileAsync",
+                                    "uri": "/async-validators/fileAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "imageAsync",
+                                    "uri": "/async-validators/imageAsync/validators",
+                                    "isActive": false
+                                }
+                            ]
                         },
                         {
-                            "title": "containsAsync",
-                            "uri": "/async-validators/containsAsync/validators",
-                            "isActive": false
+                            "title": "Numeric",
+                            "isOpen": false,
+                            "isActive": false,
+                            "childrens": [
+                                {
+                                    "title": "creditCardAsync",
+                                    "uri": "/async-validators/creditCardAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "maxNumberAsync",
+                                    "uri": "/async-validators/maxNumberAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "minNumberAsync",
+                                    "uri": "/async-validators/minNumberAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "numericAsync",
+                                    "uri": "/async-validators/numericAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "rangeAsync",
+                                    "uri": "/async-validators/rangeAsync/validators",
+                                    "isActive": false
+                                }
+                            ]
                         },
                         {
-                            "title": "creditCardAsync",
-                            "uri": "/async-validators/creditCardAsync/validators",
-                            "isActive": false
+                            "title": "Relational",
+                            "isOpen": false,
+                            "isActive": false,
+                            "childrens": [
+                                {
+                                    "title": "lessThanEqualToAsync",
+                                    "uri": "/async-validators/lessThanEqualToAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "lessThanAsync",
+                                    "uri": "/async-validators/lessThanAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "greaterThanEqualToAsync",
+                                    "uri": "/async-validators/greaterThanEqualToAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "greaterThanAsync",
+                                    "uri": "/async-validators/greaterThanAsync/validators",
+                                    "isActive": false
+                                }
+                            ]
                         },
                         {
-                            "title": "dateAsync",
-                            "uri": "/async-validators/dateAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "endsWithAsync",
-                            "uri": "/async-validators/endsWithAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "extensionAsync",
-                            "uri": "/async-validators/extensionAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "factorAsync",
-                            "uri": "/async-validators/factorAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "fileSizeAsync",
-                            "uri": "/async-validators/fileSizeAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "fileAsync",
-                            "uri": "/async-validators/fileAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "greaterThanEqualToAsync",
-                            "uri": "/async-validators/greaterThanEqualToAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "greaterThanAsync",
-                            "uri": "/async-validators/greaterThanAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "imageAsync",
-                            "uri": "/async-validators/imageAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "ipAsync",
-                            "uri": "/async-validators/ipAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "lessThanEqualToAsync",
-                            "uri": "/async-validators/lessThanEqualToAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "lessThanAsync",
-                            "uri": "/async-validators/lessThanAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "maxDateAsync",
-                            "uri": "/async-validators/maxDateAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "maxLengthAsync",
-                            "uri": "/async-validators/maxLengthAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "maxNumberAsync",
-                            "uri": "/async-validators/maxNumberAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "maxTimeAsync",
-                            "uri": "/async-validators/maxTimeAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "minDateAsync",
-                            "uri": "/async-validators/minDateAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "minLengthAsync",
-                            "uri": "/async-validators/minLengthAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "minNumberAsync",
-                            "uri": "/async-validators/minNumberAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "minTimeAsync",
-                            "uri": "/async-validators/minTimeAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "noneOfAsync",
-                            "uri": "/async-validators/noneOfAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "numericAsync",
-                            "uri": "/async-validators/numericAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "oneOfAsync",
-                            "uri": "/async-validators/oneOfAsync/validators",
-                            "isActive": false
-                        },
-            
-                        {
-                            "title": "patternAsync",
-                            "uri": "/async-validators/patternAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "passwordAsync",
-                            "uri": "/async-validators/passwordAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "rangeAsync",
-                            "uri": "/async-validators/rangeAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "startsWithAsync",
-                            "uri": "/async-validators/startsWithAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "rangeAsync",
-                            "uri": "/async-validators/rangeAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "timeAsync",
-                            "uri": "/async-validators/timeAsync/validators",
-                            "isActive": false
-                        },
-                        {
-                            "title": "urlAsync",
-                            "uri": "/async-validators/urlAsync/validators",
-                            "isActive": false
+                            "title": "String",
+                            "isOpen": false,
+                            "isActive": false,
+                            "childrens": [
+                                {
+                                    "title": "alphaAsync",
+                                    "uri": "/async-validators/alphaAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "alphaNumericAsync",
+                                    "uri": "/async-validators/alphaNumericAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "containsAsync",
+                                    "uri": "/async-validators/containsAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "endsWithAsync",
+                                    "uri": "/async-validators/endsWithAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "factorAsync",
+                                    "uri": "/async-validators/factorAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "ipAsync",
+                                    "uri": "/async-validators/ipAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "maxLengthAsync",
+                                    "uri": "/async-validators/maxLengthAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "minLengthAsync",
+                                    "uri": "/async-validators/minLengthAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "startsWithAsync",
+                                    "uri": "/async-validators/startsWithAsync/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "urlAsync",
+                                    "uri": "/async-validators/urlAsync/validators",
+                                    "isActive": false
+                                }
+                            ]
                         }
-
                     ]
                 },
                 {
