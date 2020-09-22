@@ -1,5 +1,7 @@
 export const APP_COMPONENT :string = `import { Component,OnInit } from '@angular/core';
 import { ReactiveFormConfig } from '@rxweb/reactive-form-validators';
+import { of } from 'rxjs';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

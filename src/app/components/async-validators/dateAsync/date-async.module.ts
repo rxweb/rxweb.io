@@ -6,13 +6,14 @@ import { DATE_ASYNC_ROUTING } from "src/app/components/async-validators/dateAsyn
 import { PageModule } from "src/app/components/page/page.module";
 import { DateAsyncDecoratorsExtendedModule } from 'src/assets/examples/reactive-form-validators/decorators/dateAsync/date-async-decorators-extended.module';
 import { DateAsyncValidatorsExtendedModule } from 'src/assets/examples/reactive-form-validators/validators/dateAsync/date-async-validators-extended.module';
+import { DATE_ASYNC_COMPONENT_EXAMPLE_CONSTANT } from './date-async.constants';
 
 
 
 @NgModule({
   imports: [DATE_ASYNC_ROUTING ,DateAsyncValidatorsExtendedModule, DateAsyncDecoratorsExtendedModule, PageModule],
   exports: [RouterModule],
-    providers:[{ provide: COMPONENT_EXAMPLE, useValue: '' }]
+    providers:[{ provide: COMPONENT_EXAMPLE, useValue: DATE_ASYNC_COMPONENT_EXAMPLE_CONSTANT }]
   })
 export class DateAsyncModule { }
 

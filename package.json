@@ -48,7 +48,7 @@
     "@rxweb/localization": "0.0.2-beta2",
     "@rxweb/ngx-translate-extension": "^1.0.6",
     "@rxweb/reactive-dynamic-forms": "0.0.3",
-    "@rxweb/reactive-form-validators": "^2.1.0",
+    "@rxweb/reactive-form-validators": "^2.1.1",
     "@rxweb/sanitizers": "0.0.1-1",
     "@rxweb/storage": "0.0.2-beta2",
     "@rxweb/translate": "^1.0.13",
