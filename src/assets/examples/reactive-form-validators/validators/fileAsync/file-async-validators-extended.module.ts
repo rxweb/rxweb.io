@@ -6,31 +6,32 @@ import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
-import { FileCompleteValidatorComponent } from '../file/complete/file-complete.component';
-import { FileMaxFilesValidatorComponent } from '../file/maxFiles/file-max-files.component';
-import { FileMinFilesValidatorComponent } from '../file/minFiles/file-min-files.component';
-import { FileMessageValidatorComponent } from '../file/message/file-message.component';
-import { FileMessageKeyValidatorComponent } from '../file/messageKey/file-message-key.component';
-import { FileAddValidatorComponent } from '../file/add/file-add.component';
+
+import { FileAsyncCompleteValidatorComponent } from './complete/file-async-complete.component';
+import { FileAsyncMaxFilesValidatorComponent } from './maxFiles/file-async-max-files.component';
+import { FileAsyncMinFilesValidatorComponent } from './minFiles/file-async-min-files.component';
+import { FileAsyncMessageValidatorComponent } from './message/file-async-message.component';
+import { FileAsyncMessageKeyValidatorComponent } from './messageKey/file-async-message-key.component';
+import { FileAsyncAddValidatorComponent } from './add/file-async-add.component';
 
 
 
 @NgModule({
   declarations: [
-	FileCompleteValidatorComponent,
-	FileMaxFilesValidatorComponent,
-	FileMinFilesValidatorComponent,
-	FileMessageValidatorComponent,
-	FileMessageKeyValidatorComponent,
-	FileAddValidatorComponent,
+	FileAsyncCompleteValidatorComponent,
+	FileAsyncMaxFilesValidatorComponent,
+	FileAsyncMinFilesValidatorComponent,
+	FileAsyncMessageValidatorComponent,
+	FileAsyncMessageKeyValidatorComponent,
+	FileAsyncAddValidatorComponent,
   ],
 entryComponents: [
-    FileCompleteValidatorComponent,
-	FileMaxFilesValidatorComponent,
-	FileMinFilesValidatorComponent,
-	FileMessageValidatorComponent,
-	FileMessageKeyValidatorComponent,
-	FileAddValidatorComponent,
+	FileAsyncCompleteValidatorComponent,
+	FileAsyncMaxFilesValidatorComponent,
+	FileAsyncMinFilesValidatorComponent,
+	FileAsyncMessageValidatorComponent,
+	FileAsyncMessageKeyValidatorComponent,
+	FileAsyncAddValidatorComponent,
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule,RxReactiveDynamicFormsModule
@@ -41,12 +42,12 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-	FileCompleteValidatorComponent,
-	FileMaxFilesValidatorComponent,
-	FileMinFilesValidatorComponent,
-	FileMessageValidatorComponent,
-	FileMessageKeyValidatorComponent,
-	FileAddValidatorComponent,
+	FileAsyncCompleteValidatorComponent,
+	FileAsyncMaxFilesValidatorComponent,
+	FileAsyncMinFilesValidatorComponent,
+	FileAsyncMessageValidatorComponent,
+	FileAsyncMessageKeyValidatorComponent,
+	FileAsyncAddValidatorComponent,
   ],
 
 })
