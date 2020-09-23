@@ -4,7 +4,7 @@
       <label>CRBankAccountNumber</label>
       <input type="text" formControlName="cRBankAccountNumber" class="form-control"  />
       <small class="form-text text-muted">It shows custom message<br/></small>
-     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.cRBankAccountNumber.errors">{{userInfoFormGroup.controls.cRBankAccountNumber.errors.ibanAsync.message}}<br/></small>	
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.cRBankAccountNumber.errors">{{userInfoFormGroup.controls.cRBankAccountNumber.errors.iban.message}}<br/></small>	
     </div>
     <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
   </form>

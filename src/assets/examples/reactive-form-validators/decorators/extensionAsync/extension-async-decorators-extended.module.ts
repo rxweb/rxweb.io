@@ -15,14 +15,16 @@ import { ExtensionAsyncMessageKeyComponent } from './messageKey/extension-async-
 
 import { ExtensionAsyncAddComponent } from './add/extension-async-add.component';
 import { ExtensionAsyncEditComponent } from './edit/extension-async-edit.component';
+import { ExtensionAsyncIsExcludeExtensionsComponent } from './isExcludeExtensions/extension-async-is-exclude-extensions.component';
 
 @NgModule({
   declarations: [
 	ExtensionAsyncCompleteComponent,
 	ExtensionAsyncExtensionsComponent,
 	ExtensionAsyncMessageComponent,
+	ExtensionAsyncIsExcludeExtensionsComponent,
 	ExtensionAsyncMessageKeyComponent,
-
+	ExtensionAsyncAddComponent,
 	ExtensionAsyncEditComponent,
   ],
 entryComponents: [
@@ -30,7 +32,7 @@ entryComponents: [
 	ExtensionAsyncExtensionsComponent,
 	ExtensionAsyncMessageComponent,
 	ExtensionAsyncMessageKeyComponent,
-	
+	ExtensionAsyncIsExcludeExtensionsComponent,
 	ExtensionAsyncAddComponent,
 	ExtensionAsyncEditComponent,
   ],
@@ -47,7 +49,7 @@ entryComponents: [
 	ExtensionAsyncExtensionsComponent,
 	ExtensionAsyncMessageComponent,
 	ExtensionAsyncMessageKeyComponent,
-
+	ExtensionAsyncIsExcludeExtensionsComponent,
 	ExtensionAsyncAddComponent,
 	ExtensionAsyncEditComponent,
   ],

@@ -9,14 +9,14 @@
             <div class="form-group">
                 <label>First Name</label>
                 <input type="text" formControlName="firstName" class="form-control" />
-                {{userInfoFormGroup.controls.firstName.errorMessage}}
+                {{userInfoFormGroup.controls.firstName['errorMessage']}}
 
             </div>
 
             <div class="form-group">
                 <label>Last Name</label>
                 <input type="text" formControlName="userName" class="form-control" />
-                {{userInfoFormGroup.controls.userName.errorMessage}}
+                {{userInfoFormGroup.controls.userName['errorMessage']}}
 
             </div>
 

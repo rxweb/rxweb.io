@@ -3,7 +3,7 @@
     <div class="form-group">
       <label>GBBankAccountNumber</label>
       <input type="text" formControlName="gBBankAccountNumber" class="form-control"  />
-     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.gBBankAccountNumber.errors">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.ibanAsync.message}}<br/></small>	
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.gBBankAccountNumber.errors">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.iban.message}}<br/></small>	
     </div>
     <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
   </form>

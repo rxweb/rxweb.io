@@ -14,6 +14,7 @@ import { ExtensionAsyncMessageValidatorComponent } from './message/extension-asy
 import { ExtensionAsyncMessageKeyValidatorComponent } from './messageKey/extension-async-message-key.component';
 
 import { ExtensionAsyncAddValidatorComponent } from './add/extension-async-add.component';
+import { ExtensionAsyncIsExcludeExtensionsValidatorComponent } from './isExcludeExtensions/extension-async-is-exclude-extensions.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { ExtensionAsyncAddValidatorComponent } from './add/extension-async-add.c
 	ExtensionAsyncExtensionsValidatorComponent,
 	ExtensionAsyncMessageValidatorComponent,
 	ExtensionAsyncMessageKeyValidatorComponent,
-	
+	ExtensionAsyncIsExcludeExtensionsValidatorComponent,
 	ExtensionAsyncAddValidatorComponent,
   ],
 entryComponents: [
@@ -29,7 +30,7 @@ entryComponents: [
 	ExtensionAsyncExtensionsValidatorComponent,
 	ExtensionAsyncMessageValidatorComponent,
 	ExtensionAsyncMessageKeyValidatorComponent,
-	
+	ExtensionAsyncIsExcludeExtensionsValidatorComponent,
 	ExtensionAsyncAddValidatorComponent,
   ],
   imports: [
@@ -45,7 +46,7 @@ entryComponents: [
 	ExtensionAsyncExtensionsValidatorComponent,
 	ExtensionAsyncMessageValidatorComponent,
 	ExtensionAsyncMessageKeyValidatorComponent,
-
+	ExtensionAsyncIsExcludeExtensionsValidatorComponent,
 	ExtensionAsyncAddValidatorComponent,
   ],
 

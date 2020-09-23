@@ -3,13 +3,13 @@
     <div class="form-group">
       <label>GBBankAccountNumber</label>
       <input type="text" formControlName="gBBankAccountNumber" class="form-control"  />
-     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.gBBankAccountNumber.errors">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.ibanAsync.message}}<br/></small>	
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.gBBankAccountNumber.errors">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.iban.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>CRBankAccountNumber</label>
       <input type="text" formControlName="cRBankAccountNumber" class="form-control"  />
       <small class="form-text text-muted">It shows custom message<br/></small>
-     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.cRBankAccountNumber.errors">{{userInfoFormGroup.controls.cRBankAccountNumber.errors.ibanAsync.message}}<br/></small>	
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.cRBankAccountNumber.errors">{{userInfoFormGroup.controls.cRBankAccountNumber.errors.iban.message}}<br/></small>	
     </div>
     <div class="form-group">
       <label>CHBankAccountNumber</label>

@@ -42,12 +42,18 @@ export class StackBlitzService {
             fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
             fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
             if (fileName.indexOf("app.component.ts")) {
+
                if(validationName == "autoPushFormGroup") {
    
                 fileContent = fileContent.replace(`ngOnInit(){`,`ngOnInit(){  ReactiveFormConfig.autoInstancePush = true;`);
               }
               let configObject = { validationMessage: {} };
+              if(validationName.includes("Async")){
+                configObject.validationMessage[validationName.replace('Async','') + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName.replace('Async','') + "MessageKey"];
+                configObject.validationMessage[validationName.replace('Async','')] = VALIDATION_MESSAGES["validationMessage"][validationName.replace('Async','')];
+              }
               if (validationName.indexOf("Date") >= 0 || validationName.indexOf("date") == 0) {
+                
                 if (exampleName == "complete") {
                   configObject.validationMessage[validationName + "MessageKey"] = VALIDATION_MESSAGES["validationMessage"][validationName + "MessageKey"];
                   configObject.validationMessage[validationName] = VALIDATION_MESSAGES["validationMessage"][validationName];
