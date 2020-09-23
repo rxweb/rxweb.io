@@ -4,13 +4,14 @@ import { FILE_SIZE_ASYNC_COMPONENT_EXAMPLE_CONSTANT } from "src/app/components/a
 import { COMPONENT_EXAMPLE } from "src/app/domain/application.const";
 import { FILE_SIZE_ASYNC_ROUTING } from "src/app/components/async-validators/fileSizeAsync/file-size-async.routing";
 import { PageModule } from "src/app/components/page/page.module";
-import { FileSizeValidatorsExtendedModule } from 'src/assets/examples/reactive-form-validators/validators/fileSize/file-size-validators-extended.module';
-import { FileSizeDecoratorsExtendedModule } from 'src/assets/examples/reactive-form-validators/decorators/fileSize/file-size-decorators-extended.module';
+
+import { FileSizeAsyncValidatorsExtendedModule } from 'src/assets/examples/reactive-form-validators/validators/fileSizeAsync/file-size-async-validators-extended.module';
+import { FileSizeAsyncDecoratorsExtendedModule } from 'src/assets/examples/reactive-form-validators/decorators/fileSizeAsync/file-size-async-decorators-extended.module';
 
 
 
 @NgModule({
-  imports: [FILE_SIZE_ASYNC_ROUTING ,FileSizeValidatorsExtendedModule, FileSizeDecoratorsExtendedModule, PageModule],
+  imports: [FILE_SIZE_ASYNC_ROUTING ,FileSizeAsyncValidatorsExtendedModule, FileSizeAsyncDecoratorsExtendedModule, PageModule],
   exports: [RouterModule],
     providers:[{ provide: COMPONENT_EXAMPLE, useValue: FILE_SIZE_ASYNC_COMPONENT_EXAMPLE_CONSTANT }]
   })

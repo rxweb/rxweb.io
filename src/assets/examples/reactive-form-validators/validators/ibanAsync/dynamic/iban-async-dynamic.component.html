@@ -1,0 +1,22 @@
+<div>
+  <form  *ngIf="userInfoFormGroup"  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>GBBankAccountNumber</label>
+      <input type="text" formControlName="gBBankAccountNumber" class="form-control"  />
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.gBBankAccountNumber.errors">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.ibanAsync.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>CRBankAccountNumber</label>
+      <input type="text" formControlName="cRBankAccountNumber" class="form-control"  />
+      <small class="form-text text-muted">It shows custom message<br/></small>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.cRBankAccountNumber.errors">{{userInfoFormGroup.controls.cRBankAccountNumber.errors.ibanAsync.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>CHBankAccountNumber</label>
+      <input type="text" formControlName="cHBankAccountNumber" class="form-control"  />
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.cHBankAccountNumber.errors">{{userInfoFormGroup.controls.cHBankAccountNumber.errors.ibanMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

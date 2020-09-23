@@ -1,0 +1,76 @@
+{
+    "complete": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-ibanAsync-complete-validator',\r\n    templateUrl: './iban-async-complete.component.html'\r\n})\r\nexport class IbanAsyncCompleteValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            gBBankAccountNumber:['',[] RxwebValidators.ibanAsync({validatorConfig:of({validatorConfig:of({countryCode:'US' })})], \r\n            cRBankAccountNumber:['',[] RxwebValidators.ibanAsync({validatorConfig:of({validatorConfig:of({countryCode:'CR'  ,message:'You must enter a Costa Rica account number .' })})], \r\n            cHBankAccountNumber:['',[] RxwebValidators.ibanAsync({validatorConfig:of({validatorConfig:of({messageKey:'ibanMessageKey'  ,countryCode:'CH' })})], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>GBBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"gBBankAccountNumber\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.gBBankAccountNumber.errors\">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.iban.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>CRBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"cRBankAccountNumber\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">It shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.cRBankAccountNumber.errors\">{{userInfoFormGroup.controls.cRBankAccountNumber.errors.iban.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>CHBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"cHBankAccountNumber\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">custom message based on messageKey<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.cHBankAccountNumber.errors\">{{userInfoFormGroup.controls.cHBankAccountNumber.errors.ibanMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "countryCodeExample": {
+        "notes": null,
+        "component": null,
+        "html": null,
+        "model": "RxwebValidators.ibanAsync({validatorConfig:of({validatorConfig:of({countryCode:'US' });\r\n",
+        "modelName": null,
+        "json": {}
+    },
+    "countryCode": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-ibanAsync-countryCode-validator',\r\n    templateUrl: './iban-async-country-code.component.html'\r\n})\r\nexport class IbanAsyncCountryCodeValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            gBBankAccountNumber:['',[] RxwebValidators.ibanAsync({validatorConfig:of({validatorConfig:of({countryCode:'US' })})], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>GBBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"gBBankAccountNumber\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.gBBankAccountNumber.errors\">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.iban.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "messageExample": {
+        "notes": null,
+        "component": null,
+        "html": null,
+        "model": "RxwebValidators.ibanAsync({validatorConfig:of({validatorConfig:of({countryCode:'CR'  ,message:'You must enter a Costa Rica account number .' });\r\n",
+        "modelName": null,
+        "json": {}
+    },
+    "message": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-ibanAsync-message-validator',\r\n    templateUrl: './iban-async-message.component.html'\r\n})\r\nexport class IbanAsyncMessageValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            cRBankAccountNumber:['',[] RxwebValidators.ibanAsync({validatorConfig:of({validatorConfig:of({countryCode:'CR'  ,message:'You must enter a Costa Rica account number .' })})], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>CRBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"cRBankAccountNumber\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">It shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.cRBankAccountNumber.errors\">{{userInfoFormGroup.controls.cRBankAccountNumber.errors.iban.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "messageKeyExample": {
+        "notes": null,
+        "component": null,
+        "html": null,
+        "model": "RxwebValidators.ibanAsync({validatorConfig:of({validatorConfig:of({messageKey:'ibanMessageKey'  ,countryCode:'CH' });\r\n",
+        "modelName": null,
+        "json": {}
+    },
+    "messageKey": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-ibanAsync-messageKey-validator',\r\n    templateUrl: './iban-async-message-key.component.html'\r\n})\r\nexport class IbanAsyncMessageKeyValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            cHBankAccountNumber:['',[] RxwebValidators.ibanAsync({validatorConfig:of({validatorConfig:of({messageKey:'ibanMessageKey'  ,countryCode:'CH' })})], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>CHBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"cHBankAccountNumber\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">custom message based on messageKey<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.cHBankAccountNumber.errors\">{{userInfoFormGroup.controls.cHBankAccountNumber.errors.ibanMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    },
+    "dynamic": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\nimport { HttpClient } from '@angular/common/http';\r\nimport { FormBuilderConfiguration,RxFormBuilder} from '@rxweb/reactive-form-validators';\r\nimport { environment } from 'src/environments/environment';\r\n\r\n@Component({\r\n    selector: 'app-ibanAsync-dynamic-validator',\r\n    templateUrl: './iban-async-dynamic.component.html'\r\n})\r\nexport class IbanAsyncDynamicValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: RxFormBuilder , private http: HttpClient )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n\t\tlet formBuilderConfiguration = new FormBuilderConfiguration();\r\n\t\tthis.http.get('assets/examples/reactive-form-validators/validators/ibanAsync/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {\r\n\t\t\tformBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));\r\n\t\t\tvar userInfo = { gBBankAccountNumber:'', cRBankAccountNumber:'', cHBankAccountNumber:'',  }\r\n\t\t\tthis.userInfoFormGroup = this.formBuilder.group(userInfo,formBuilderConfiguration);\r\n\t\t})\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  *ngIf=\"userInfoFormGroup\"  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>GBBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"gBBankAccountNumber\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.gBBankAccountNumber.errors\">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.iban.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>CRBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"cRBankAccountNumber\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">It shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.cRBankAccountNumber.errors\">{{userInfoFormGroup.controls.cRBankAccountNumber.errors.iban.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>CHBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"cHBankAccountNumber\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">custom message based on messageKey<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.cHBankAccountNumber.errors\">{{userInfoFormGroup.controls.cHBankAccountNumber.errors.ibanMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {
+            "dynamic.json": "{\"gBBankAccountNumber\":{\"ibanAsync\":{\"countryCode\":\"US\"}},\"cRBankAccountNumber\":{\"ibanAsync\":{\"countryCode\":\"CR\",\"message\":\"You must enter a Costa Rica account number .\"}},\"cHBankAccountNumber\":{\"ibanAsync\":{\"messageKey\":\"ibanMessageKey\",\"countryCode\":\"CH\"}}}"
+        }
+    },
+    "add": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-ibanAsync-add-validator',\r\n    templateUrl: './iban-async-add.component.html'\r\n})\r\nexport class IbanAsyncAddValidatorComponent implements OnInit {\r\n    userFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userFormGroup = this.formBuilder.group({\r\n            gBBankAccountNumber:['',[] RxwebValidators.ibanAsync()], \r\n        });\r\n    }\r\n}\r\n",
+        "html": "<div>\r\n  <form  [formGroup]=\"userFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>GBBankAccountNumber</label>\r\n      <input type=\"text\" formControlName=\"gBBankAccountNumber\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userFormGroup.controls.gBBankAccountNumber.errors\">{{userFormGroup.controls.gBBankAccountNumber.errors.iban.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+        "model": null,
+        "modelName": null,
+        "json": {}
+    }
+}

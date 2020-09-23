@@ -107,6 +107,10 @@ const FORM_VALIDATION_ROUTES: Routes = [
 	loadChildren: () => import('./hexColor/hex-color.module').then(m => m.HexColorModule),
 },
 {
+	path:'iban',
+	loadChildren: () => import('./iban/iban.module').then(m => m.IbanModule),
+},
+{
 	path:'ip',
 	loadChildren: () => import('./ip/ip.module').then(m => m.IpModule),
 },

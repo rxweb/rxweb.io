@@ -1,0 +1,10 @@
+<div>
+  <form  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>GBBank Account Number</label>
+      <input type="text" formControlName="gBBankAccountNumber" class="form-control"  />
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.gBBankAccountNumber.errors">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.iban.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -208,6 +208,11 @@
                                     "isActive": false
                                 },
                                 {
+                                    "title": "ibanAsync",
+                                    "uri": "/async-validators/ibanAsync/validators",
+                                    "isActive": false
+                                },
+                                {
                                     "title": "ipAsync",
                                     "uri": "/async-validators/ipAsync/validators",
                                     "isActive": false
@@ -539,6 +544,11 @@
                                 {
                                     "title": "hexColor",
                                     "uri": "/form-validations/hexColor/validators",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "iban",
+                                    "uri": "/form-validations/iban/validators",
                                     "isActive": false
                                 },
                                 {

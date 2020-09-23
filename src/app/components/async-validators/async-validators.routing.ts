@@ -83,6 +83,11 @@ const ASYNC_VALIDATORS_ROUTES: Routes = [
 	
 },
 {
+	path:'ibanAsync',
+  loadChildren: () => import('./ibanAsync/iban-async.module').then(m => m.IbanAsyncModule),
+	
+},
+{
 	path:'ipAsync',
   loadChildren: () => import('./ipAsync/ip-async.module').then(m => m.IpAsyncModule),
 	

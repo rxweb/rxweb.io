@@ -1,0 +1,29 @@
+<div>
+  <form  *ngIf="userInfoFormGroup"  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>GBBank Account Number</label>
+      <input type="text" formControlName="gBBankAccountNumber" class="form-control"  />
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.gBBankAccountNumber.errors">{{userInfoFormGroup.controls.gBBankAccountNumber.errors.iban.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>DKBank Account Number</label>
+      <input type="text" formControlName="dKBankAccountNumber" class="form-control"  />
+      <small class="form-text text-muted">If you want to apply conditional validation on 'dKBankAccountNumber' then you need to add 'GBBankAccountNumber' input as 'GB33BUKB20201555555555'.<br/></small>
+      <small class="form-text text-muted">Conditional Expression with type 'string'<br/></small>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.dKBankAccountNumber.errors">{{userInfoFormGroup.controls.dKBankAccountNumber.errors.iban.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>CHBank Account Number</label>
+      <input type="text" formControlName="cHBankAccountNumber" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message<br/></small>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.cHBankAccountNumber.errors">{{userInfoFormGroup.controls.cHBankAccountNumber.errors.iban.message}}<br/></small>	
+    </div>
+    <div class="form-group">
+      <label>CRBankAccountNumber</label>
+      <input type="text" formControlName="cRBankAccountNumber" class="form-control"  />
+      <small class="form-text text-muted">custom message based on messageKey<br/></small>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.cRBankAccountNumber.errors">{{userInfoFormGroup.controls.cRBankAccountNumber.errors.ibanMessageKey.message}}<br/></small>		
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

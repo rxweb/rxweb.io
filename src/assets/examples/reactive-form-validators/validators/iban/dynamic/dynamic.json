@@ -1,0 +1,1 @@
+{"gBBankAccountNumber":{"iban":{"countryCode":"GB"}},"dKBankAccountNumber":{"iban":{"countryCode":"CR","conditionalExpression":"x => x.gBBankAccountNumber ==\"GB33BUKB20201555555555\""}},"cHBankAccountNumber":{"iban":{"message":"Enter valid CH account Number."}},"cRBankAccountNumber":{"iban":{"messageKey":"ibanMessageKey"}}}

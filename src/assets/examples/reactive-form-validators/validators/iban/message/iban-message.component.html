@@ -1,0 +1,11 @@
+<div>
+  <form  [formGroup]="userInfoFormGroup">
+    <div class="form-group">
+      <label>CHBank Account Number</label>
+      <input type="text" formControlName="cHBankAccountNumber" class="form-control"  />
+      <small class="form-text text-muted">Shows custom message<br/></small>
+     <small class="form-text text-danger" *ngIf="userInfoFormGroup.controls.cHBankAccountNumber.errors">{{userInfoFormGroup.controls.cHBankAccountNumber.errors.iban.message}}<br/></small>	
+    </div>
+    <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>
