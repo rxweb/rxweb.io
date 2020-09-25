@@ -16,7 +16,7 @@ export class IpAsyncIsCidrValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userFormGroup = this.formBuilder.group({
-            ipV4Cidr:['', RxwebValidators.ipAsync({validatorConfig:of({version:1  ,isCidr:true })})], 
+            ipV4Cidr:['', [], RxwebValidators.ipAsync({validatorConfig:of({version:1  ,isCidr:true })})], 
         });
     }
 }

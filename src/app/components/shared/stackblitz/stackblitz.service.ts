@@ -2,15 +2,17 @@ import { FILES } from "./files"
 import { PACKAGE } from './files/package.string'
 import { VALIDATION_MESSAGES } from "src/app/components/shared/stackblitz/files/validation-messages.const";
 import { config } from "rxjs";
-const STACKBLITZ_ANGULAR_TEMPLATE_URI = 'https://run.stackblitz.com/api/angular/v1';
 
+var STACKBLITZ_ANGULAR_TEMPLATE_URI = 'https://run.stackblitz.com/api/angular/v1';
 
 
 export class StackBlitzService {
+   
   constructor() {
   }
 
   buildForm(validationName: string, exampleName: string, validationType: string, templateDrivenType: string, exampleContent: { [key: string]: any }, title?: string) {
+
     if (!location.pathname.includes("reactive-dynamic-forms")) {
       if (title == null)
         title = validationName + " " + validationType + " with " + exampleName;
@@ -42,7 +44,9 @@ export class StackBlitzService {
             fileContent = fileContent.replace(new RegExp(/selector-name/, "g"), selectorName);
             fileContent = fileContent.replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##title##/), title).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-name##/), componentName).replace(new RegExp(/##component-path##/), componentPath);
             if (fileName.indexOf("app.component.ts")) {
-
+             if(validationName == "multilingualValidationMessage"){
+              STACKBLITZ_ANGULAR_TEMPLATE_URI = 'https://stackblitz.com/angular/kroadvgdrdl?file=src%2Fapp%2Fmultilingual-validation-message-complete.component.ts';
+             }
                if(validationName == "autoPushFormGroup") {
    
                 fileContent = fileContent.replace(`ngOnInit(){`,`ngOnInit(){  ReactiveFormConfig.autoInstancePush = true;`);

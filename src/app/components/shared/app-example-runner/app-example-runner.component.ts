@@ -108,11 +108,16 @@ export class AppExampleRunnerComponent implements OnInit {
 
 
   openStackblitz() {
+    if(this.decoratorName == "multilingualValidationMessage"){
+      window.open("https://stackblitz.com/edit/rxweb-multilingual-error-messages?file=src%2Fapp%2Frxweb.module.ts", "_blank");
+    }
+    else{
     var stackBlitz = new StackBlitzService();
     let form = stackBlitz.buildForm(this.decoratorName, this.exampleName, this.typeName, this.templateDrivenType, this.content, this.title)
     document.body.appendChild(form);
     form.submit();
     document.body.removeChild(form);
+    }
   }
 }
 

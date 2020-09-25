@@ -16,7 +16,7 @@ export class ImageAsyncMessageKeyValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            passport:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' })})], 
+            passport:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' })})], 
         });
     }
 }

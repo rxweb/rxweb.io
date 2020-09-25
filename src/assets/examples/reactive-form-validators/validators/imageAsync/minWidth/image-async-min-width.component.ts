@@ -16,7 +16,7 @@ export class ImageAsyncMinWidthValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            voterId:['', RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], 
+            voterId:['', [],RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], 
         });
     }
 }

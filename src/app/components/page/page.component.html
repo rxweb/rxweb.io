@@ -14,7 +14,7 @@
             <a (click)="route('template-driven','directives')">Template Driven</a>
         </li>
         <li class="ng-star-inserted" [class.active]="activeTab == 'decorators'"
-            *ngIf="(mainType == 'form-validations'  || mainType == 'async-validators'|| mainType == 'how-to') && validationName !== 'ip' && validationName !== 'iban' && validationName !== 'ibanAsync'   && validationName !== 'conditionalValidation' && validationName !== 'conditionalControlDisable'">
+            *ngIf="(mainType == 'form-validations'  || mainType == 'async-validators'|| mainType == 'how-to') && validationName !== 'ip' && validationName !== 'ipAsync' && validationName !== 'iban' && validationName !== 'ibanAsync'   && validationName !== 'conditionalValidation' && validationName !== 'conditionalControlDisable'">
             <a (click)="route('decorators')">Decorator</a>
         </li>
         <li class="ng-star-inserted"

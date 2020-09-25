@@ -7,7 +7,7 @@ import { ##component-name## } from './##component-path##';
 import { AppComponent } from './app.component';
 
 import {  RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
-
+import { RxTranslateModule } from '@rxweb/translate';
 import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
 
 import { registerLocaleData } from '@angular/common';
@@ -15,7 +15,11 @@ import localePt from '@angular/common/locales/pt';
 registerLocaleData(localePt)
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,RxReactiveFormsModule,HttpClientModule,RxReactiveDynamicFormsModule ],
+  imports:      [ BrowserModule, FormsModule,    RxTranslateModule.forRoot({
+    cacheLanguageWiseObject: true,
+    globalFilePath: "assets/i18n/{{language-code}}/global.{{language-code}}.json",
+    filePath: "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json"
+}),ReactiveFormsModule,RxReactiveFormsModule,HttpClientModule,RxReactiveDynamicFormsModule ],
   declarations: [AppComponent, ##component-name##],
   bootstrap:    [ AppComponent],
   providers:[{ provide: LOCALE_ID, useValue: 'pt' }]

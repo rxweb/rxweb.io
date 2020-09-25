@@ -16,7 +16,7 @@ export class ImageAsyncMessageValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            residenceProof:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,message:'File exceed maximum Height.' })})], 
+            residenceProof:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,message:'File exceed maximum Height.' })})], 
         });
     }
 }

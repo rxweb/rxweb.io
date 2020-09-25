@@ -16,7 +16,7 @@ export class ImageAsyncMaxHeightValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            profilePhoto:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], 
+            profilePhoto:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], 
         });
     }
 }

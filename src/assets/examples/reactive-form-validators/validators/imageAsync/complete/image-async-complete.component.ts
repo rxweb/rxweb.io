@@ -25,14 +25,14 @@ export class ImageAsyncCompleteValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userInfoFormGroup = this.formBuilder.group({
-            imageType:['',], 
-            profilePhoto:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], 
-            signature:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], 
-            voterId:['', RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], 
-            identityCard:['', RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,maxWidth:100 })})], 
-            drivinglicense:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], 
-            residenceProof:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,message:'File exceed maximum Height.' })})], 
-            passport:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' })})], 
+            imageType:['', [],], 
+            profilePhoto:['', [], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], 
+            signature:['', [], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], 
+            voterId:['', [], RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], 
+            identityCard:['', [], RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,maxWidth:100 })})], 
+            drivinglicense:['', [], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], 
+            residenceProof:['', [], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,message:'File exceed maximum Height.' })})], 
+            passport:['', [], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' })})], 
         });
     }
 }

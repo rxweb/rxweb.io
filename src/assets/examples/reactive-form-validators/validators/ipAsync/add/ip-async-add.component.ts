@@ -17,7 +17,7 @@ export class IpAsyncAddValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userFormGroup = this.formBuilder.group({
-            ipV4:['', RxwebValidators.ipAsync({validatorConfig:of({version:1 })})], 
+            ipV4:['', [],RxwebValidators.ipAsync({validatorConfig:of({version:1 })})], 
         });
     }
 }

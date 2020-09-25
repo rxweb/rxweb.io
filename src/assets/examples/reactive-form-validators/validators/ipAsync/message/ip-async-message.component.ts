@@ -16,7 +16,7 @@ export class IpAsyncMessageValidatorComponent implements OnInit {
 
     ngOnInit() {
         this.userFormGroup = this.formBuilder.group({
-            ipV4Message:['', RxwebValidators.ipAsync({validatorConfig:of({version:1  ,message:'Please Enter IP V4 type Only' })})], 
+            ipV4Message:['',[], RxwebValidators.ipAsync({validatorConfig:of({version:1  ,message:'Please Enter IP V4 type Only' })})], 
         });
     }
 }
