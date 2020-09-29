@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup} from "@angular/forms"
+import { FormGroup, FormBuilder} from "@angular/forms"
 import { of } from 'rxjs';
 import { RxFormBuilder, RxwebValidators } from '@rxweb/reactive-form-validators';
 
@@ -15,7 +15,7 @@ export class NoneOfAsyncMessageKeyValidatorComponent implements OnInit {
   languages: string[] = [];
 
   constructor(
-    private formBuilder: RxFormBuilder, private http: HttpClient) { }
+    private formBuilder: FormBuilder, private http: HttpClient) { }
 
   languagesArray: string[] = ["English", "Spanish", "French", "German", "Chinese"];
 

@@ -15,11 +15,7 @@ import localePt from '@angular/common/locales/pt';
 registerLocaleData(localePt)
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,    RxTranslateModule.forRoot({
-    cacheLanguageWiseObject: true,
-    globalFilePath: "assets/i18n/{{language-code}}/global.{{language-code}}.json",
-    filePath: "assets/i18n/{{language-code}}/{{translation-name}}.{{language-code}}.json"
-}),ReactiveFormsModule,RxReactiveFormsModule,HttpClientModule,RxReactiveDynamicFormsModule ],
+  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,RxReactiveFormsModule,HttpClientModule,RxReactiveDynamicFormsModule ],
   declarations: [AppComponent, ##component-name##],
   bootstrap:    [ AppComponent],
   providers:[{ provide: LOCALE_ID, useValue: 'pt' }]

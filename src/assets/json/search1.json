@@ -1,5 +1,555 @@
 [
 	{
+		"title": "Async Validation",
+		"link": "/reactive-dynamic-forms//asyncvalidation",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Bootstrap-Advance",
+		"link": "/reactive-dynamic-forms//color",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Bootstrap-Horizontal",
+		"link": "/reactive-dynamic-forms//color",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Checkbox",
+		"link": "/reactive-dynamic-forms/controls/checkbox",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Class",
+		"link": "/reactive-dynamic-forms/static-binding/class",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Color",
+		"link": "/reactive-dynamic-forms//color",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Conditional class",
+		"link": "/reactive-dynamic-forms/conditional-binding/conditionalclass",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Conditional description",
+		"link": "/reactive-dynamic-forms/conditional-binding/conditionaldescription",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Conditional disabled",
+		"link": "/reactive-dynamic-forms/conditional-binding/conditionaldisabled",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Conditional hide",
+		"link": "/reactive-dynamic-forms/conditional-binding/conditionalhide",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Conditional label",
+		"link": "/reactive-dynamic-forms/conditional-binding/conditionallabel",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Conditional placeholder",
+		"link": "/reactive-dynamic-forms/conditional-binding/conditionalplaceholder",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Conditional readonly",
+		"link": "/reactive-dynamic-forms/conditional-binding/conditionalreadonly",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Conditional value",
+		"link": "/reactive-dynamic-forms/conditional-binding/conditionalvalue",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "CssClassNames",
+		"link": null,
+		"description": "cssClassNames can be used inside ui feature to apply extra css classes other than the css classes which are already applied in the ui-component. cssClassNames can be applied statically or conditionally based on your requirements.",
+		"linkTrees": [
+			{
+				"category": "ui-features",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Custom Component",
+		"link": "/reactive-dynamic-forms//Custom Component",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Customized Control Design",
+		"link": "/reactive-dynamic-forms//customizedcontroldesign",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Custom Validation",
+		"link": "/reactive-dynamic-forms//customvalidation",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Description",
+		"link": "/reactive-dynamic-forms/static-binding/description",
+		"description": "description can be used inside ui binding to display description for the particular formControl in the dynamic-form. description can be generated statically or conditionally based on your requirements.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Disabled",
+		"link": "/reactive-dynamic-forms/static-binding/disabled",
+		"description": "disable can be used inside ui binding to disable the particular control object in the dynamic-form.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Dropdown",
+		"link": "/reactive-dynamic-forms/controls/dropdown",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Power of Dynamic Forms",
+		"link": "/reactive-dynamic-forms//dynamic",
+		"description": "rxweb dynamic forms is giving wide variety of features wich include horizontal forms, inline form, customized sizing for formControls, customized controls like plaintext mode for checkbox, radio and other formcontrols.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "DynamicComponent",
+		"link": "/reactive-dynamic-forms//dynamicComponent",
+		"description": "override Props is used to override the property based upon the server returned configuration.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Date",
+		"link": "/reactive-dynamic-forms/controls/dynamicdate",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Disable",
+		"link": null,
+		"description": "disable can be used inside ui feature to disable the particular formControl in the dynamic-form. You can disable a formControl statically or conditionally based on your requirements.",
+		"linkTrees": [
+			{
+				"category": "ui-features",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Email",
+		"link": "/reactive-dynamic-forms/controls/dynamicemail",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Globally Bind Error Message Strategy",
+		"link": "/reactive-dynamic-forms//dynamicerrormessagestrategy",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "File",
+		"link": "/reactive-dynamic-forms/controls/dynamicfile",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "DynamicFormConfiguration",
+		"link": "/reactive-dynamic-forms//DynamicFormConfiguration",
+		"description": "DynamicFormConfiguration",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Password",
+		"link": "/reactive-dynamic-forms/controls/dynamicpassword",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Range",
+		"link": "/reactive-dynamic-forms/controls/dynamicrange",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Reset Form",
+		"link": "/reactive-dynamic-forms//dynamicresetform",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Url",
+		"link": "/reactive-dynamic-forms/controls/dynamicurl",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Focus",
+		"link": "/reactive-dynamic-forms/static-binding/focus",
+		"description": "focus can be used inside ui binding to set focus on particular control object in the dynamic-form.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Hide",
+		"link": "/reactive-dynamic-forms/static-binding/hide",
+		"description": "hide can be used inside ui bindings to hide the particular control object in the dynamic-form.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Label",
+		"link": "/reactive-dynamic-forms/static-binding/label",
+		"description": "label can be used inside ui binding to generate a label in the dynamic-form.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Nested FormArray",
+		"link": "/reactive-dynamic-forms/advance-form-design/nestedformarray",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Nested FormGroup",
+		"link": "/reactive-dynamic-forms/advance-form-design/nestedformgroup",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "OverrideProps",
+		"link": "/reactive-dynamic-forms//overrideProps",
+		"description": "override Props is used to override the property based upon the server returned configuration.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Placeholder",
+		"link": "/reactive-dynamic-forms/static-binding/placeholder",
+		"description": "placeholder can be used inside ui binding to display placeholder for the particular control object in the dynamic-form.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "PostValue",
+		"link": "/reactive-dynamic-forms//postValueHook",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "PrependLeftTextBox",
+		"link": "/reactive-dynamic-forms//prependlefttextbox",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "PreValue",
+		"link": "/reactive-dynamic-forms//preValueHook",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Radio",
+		"link": "/reactive-dynamic-forms/controls/radio",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Readonly",
+		"link": "/reactive-dynamic-forms/static-binding/readonly",
+		"description": "readonly can be used inside ui binding to convert the particular control object in readonly state in your dynamic-form.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Source",
+		"link": "/reactive-dynamic-forms/static-binding/source",
+		"description": "source can be used inside ui binding to bind the sourcedata in the particular formControl in your dynamic-form.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Step By Step Design",
+		"link": "/reactive-dynamic-forms//stepbystep",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Textarea",
+		"link": "/reactive-dynamic-forms/controls/textarea",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "TextBox",
+		"link": "/reactive-dynamic-forms/controls/textbox",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Value",
+		"link": "/reactive-dynamic-forms/static-binding/value",
+		"description": "value property can be used in the serverData to set a default value for particular control object.",
+		"linkTrees": [
+			{
+				"category": "dynamic-forms",
+				"subCategory": null
+			}
+		]
+	},
+	{
 		"title": "Nested FormArray",
 		"link": "/reactive-dynamic-forms/advance-form-design/nestedformarray",
 		"description": "",
@@ -352,8 +902,75 @@
 		]
 	},
 	{
+		"title": "Global Setup",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "global-setup",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Localization Methods",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "localization-methods",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Localization",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "localization",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Page Level Rendering",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "page-level",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Translation: Attribute Directive",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "powerhouse-of-translation",
+				"subCategory": null
+			}
+		]
+	},
+
+	{
 		"title": "AutoPushFormGroup",
 		"link": "/how-to/autoPushFormGroup/validators",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "how-to",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Set and Clear BackEnd Validation Messages",
+		"link": "/how-to/backEndMessages/validators",
 		"description": "",
 		"linkTrees": [
 			{
@@ -506,6 +1123,17 @@
 		]
 	},
 	{
+		"title": "Multilingual Validation Messages",
+		"link": "/how-to/multilingualValidationMessage/validators",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "how-to",
+				"subCategory": null
+			}
+		]
+	},
+	{
 		"title": "NgxTranslateValidationMessage",
 		"link": "/how-to/ngxTranslateValidationMessage/validators",
 		"description": "",
@@ -583,6 +1211,402 @@
 		]
 	},
 	{
+		"title": "AllOfAsync",
+		"link": "/async-validators/allOfAsync/validators",
+		"description": "allOfAsync validationwill check whether the user has entered all of the values of given field or not.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "AlphaAsync",
+		"link": "/async-validators/alphaAsync/validators",
+		"description": "alphaAsync validationwill allow only alphabets to be entered. It will not allow any digit or special character.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "AlphaNumericAsync",
+		"link": "/async-validators/alphaNumericAsync/validators",
+		"description": "Alpha Numeric Async validationwill allow only alphabets and numbers to be entered. It will not allow any special character.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "ChoiceAsync",
+		"link":  "/async-validators/choiceAsync/validators",
+		"description": "choiceAsync validationwill check that whether the value entered by user is matching the range defined in the properties.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "ContainsAsync",
+		"link":  "/async-validators/containsAsync/validators",
+		"description": "containsAsync  validationwill check whether a particular value is in the input. It will not allow user to enter input that does not containsAsync the predefined value.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "CreditCardAsync",
+		"link": "/async-validators/creditCardAsync/validators",
+		"description": "creditCardAsync validationwill check property value is creditCardAsynctype or not. It will not allow to enter any value other than credit card format.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "CustomAsync",
+		"link": null,
+		"description": "creditCard validationwill check property value is creditcardtype or not. It will not allow to enter any value other than credit card format.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "DateAsync",
+		"link": "/async-validators/dateAsync/validators",
+		"description": "dateAsync Async validationwill allow user to enter input which is only in the proper dateAsync format.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "EndsWithAsync",
+		"link": "/async-validators/endsWithAsync/validators",
+		"description": "endsWithAsync Async validationallows user to validate the input which ends with particular value.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "ExtensionAsync",
+		"link": "/async-validators/extensionAsync/validators",
+		"description": "extensionAsync validationallows user to validate the input which is in the proper extensionAsync format.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "FactorAsync",
+		"link": "/async-validators/factorAsync/validators",
+		"description": "factorAsync validationwill allow user to enter valid factor of a number which is called dividend.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "FileSizeAsync",
+		"link": "/async-validators/fileSizeAsync/validators",
+		"description": "fileSizeAsync validationallows user to enter the input which is in the proper fileSizeAsync size format.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "GreaterThanAsync",
+		"link": "/async-validators/greaterThanAsync/validators",
+		"description": "Greater than validationwill check that user's input is greater than related field input.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "GreaterThanEqualToAsync",
+		"link": "/async-validators/greaterThanEqualToAsync/validators",
+		"description": "Greater than equal to validation  will check that input property is greater than or equal to the related field input.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "IbanAsync",
+		"link": "/async-validators/ibanAsync/validators",
+		"description": "ibanAsync validation  will allow user to enter only the input in proper Hex Color format.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "ImageAsync",
+		"link": "/async-validators/imageAsync/validators",
+		"description": "imageAsync validation  allows user to validate imageAsync like height,width etc.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "IpAsync",
+		"link":  "/async-validators/ipAsync/validators",
+		"description": "ipAsync validationis used to validate the ipAsync address of the device.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "LessThanAsync",
+		"link":  "/async-validators/lessThanAsync/validators",
+		"description": "Less than validation  will allow the user to enter only that value which is less than the value in the pre defined field.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "LessThanEqualToAsync",
+		"link": "/async-validators/lessThanEqualToAsync/validators",
+		"description": "Less than equal to validationwill allow the user to enter only that value which is less than or equal to the value in the pre defined field.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "MaxDateAsync",
+		"link": "/async-validators/maxDateAsync/validators",
+		"description": "maxDateAsync validation  will allow user to enter the date less than the maxDateAsync value parameter.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "MaxLengthAsync",
+		"link": "/async-validators/maxLengthAsync/validators",
+		"description": "maxLengthAsync validation  will allow user to enter the input upto the maximum length value parameter.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "MaxNumberAsync",
+		"link": "/async-validators/maxNumberAsync/validators",
+		"description": "maxNumberAsync validation  will allow user to enter the input upto the maximum number value parameter.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "MaxTimeAsync",
+		"link": "/async-validators/maxTimeAsync/validators",
+		"description": "maxTimeAsync validation  will allow user to enter the input time format which must be less than or equal to the maximum time mentioned in the config parameters.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "MinDateAsync",
+		"link": "/async-validators/minDateAsync/validators",
+		"description": "Minimum Date validation  will allow user to enter date greater the minimum date value parameter.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "MinLengthAsync",
+		"link": "/async-validators/minLengthAsync/validators",
+		"description": "minLengthAsync validation  will allow user to enter the input length matching the minimum length value parameter.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "MinNumberAsync",
+		"link": "/async-validators/minNumberAsync/validators",
+		"description": "minNumberAsync validation  will allow user to enter the input greater than the minimum number value parameter.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "MinTimeAsync",
+		"link": "/async-validators/minTimeAsync/validators",
+		"description": "minTimeAsync validationwill allow user to enter the input time format which must be strictly greater than or greater than or equal to the minimum time mentioned in the config parameters.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "NoneOfAsync",
+		"link": "/async-validators/noneOfAsync/validators",
+		"description": "noneOfAsync validation  will check whether the none of the values is selected from the given inputs.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "NumericAsync",
+		"link": "/async-validators/numericAsync/validators",
+		"description": "numericAsync validation  will check whether the value entered is a valid numberic value or not.The validation can be set according to requirement, it can be either decimal,negative number or positive number.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "OneOfAsync",
+		"link": "/async-validators/oneOfAsync/validators",
+		"description": "oneOfAsync validation  will check whether the user has entered any one of the given inputs or not.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "PasswordAsync",
+		"link": "/async-validators/passwordAsync/validators",
+		"description": "passwordAsync validation  will allow user to enter only the input according to correct passwordAsync validation format.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "PatternAsync",
+		"link": "/async-validators/patternAsync/validators",
+		"description": "patternAsync validationwill allow user to enter the input which match the predefined patternAsync value parameter.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "RangeAsync",
+		"link": "/async-validators/rangeAsync/validators",
+		"description": "rangeAsync validation  will check that the entered value is in the specified rangeAsync.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "StartsWithAsync",
+		"link": "/async-validators/startsWithAsync/validators",
+		"description": "startsWithAsync validation  allows user to enter the input which starts with particular value.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "TimeAsync",
+		"link": "/async-validators/timeAsync/validators",
+		"description": "timeAsync validation  will allow user to enter the input only in the correct timeAsync format.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "UrlAsync",
+		"link": "/async-validators/urlAsync/validators",
+		"description": "urlAsync validation  will check that value entered in the property is in the correct url format or not.",
+		"linkTrees": [
+			{
+				"category": "async-validators",
+				"subCategory": null
+			}
+		]
+	},
+	{
 		"title": "Disabled Control Conditionally",
 		"link": "/decorators/disable/validators",
 		"description": "It is used for disabled control conditionally",
@@ -619,6 +1643,18 @@
 		"title": "@model",
 		"link": "/decorators/model/validators",
 		"description": "",
+		"linkTrees": [
+			{
+				"category": "decorators",
+				"subCategory": null
+			}
+		]
+	},
+	
+	{
+		"title": "Conditional Validation",
+		"link": "/decorators/conditionalValidation/validators",
+		"description": "Conditional validation is used when the user wants to apply validation on the field depending upon the condition of some other field",
 		"linkTrees": [
 			{
 				"category": "decorators",
@@ -905,6 +1941,17 @@
 		"title": "HexColor",
 		"link": "/form-validations/hexColor/validators",
 		"description": "HexColor validation  will allow user to enter only the input in proper Hex Color format.",
+		"linkTrees": [
+			{
+				"category": "form-validations",
+				"subCategory": "String"
+			}
+		]
+	},
+	{
+		"title": "Iban",
+		"link": "/form-validations/iban/validators",
+		"description": "iban validation  will allow user to enter only the input in proper Hex Color format.",
 		"linkTrees": [
 			{
 				"category": "form-validations",
@@ -1330,6 +2377,7 @@
 			}
 		]
 	},
+
 	{
 		"title": "Prefix",
 		"link": "/sanitization/prefix/validators",
@@ -1340,6 +2388,12 @@
 				"subCategory": null
 			}
 		]
+	},
+	{
+		"title": null,
+		"link": null,
+		"description": null,
+		"linkTrees": []
 	},
 	{
 		"title": "Custom",
@@ -1353,12 +2407,162 @@
 		]
 	},
 	{
+		"title": null,
+		"link": null,
+		"description": null,
+		"linkTrees": []
+	},
+	{
 		"title": "Suffix",
 		"link": "/sanitization/suffix/validators",
 		"description": "Allows you to add suffix to the input.",
 		"linkTrees": [
 			{
 				"category": "sanitization",
+				"subCategory": null
+			}
+		]
+	},
+	
+	{
+		"title": "Access",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "router",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Anonymous",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "router",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Middleware",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "router",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "RouterModule",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "router",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Local Storage",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "storage",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Session Storage",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "storage",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Methods",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "storage",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Storage",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "storage",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Strongly Typed Reactive Forms",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "strongly-types",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "FormGroup Class Instance",
+		"link": null,
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "strongly-types",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Database Best Practices",
+		"link": "/rx-web-core/tours-of-contoso-app/Beginner/database-best-practices",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "rxwebcore",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Database Best Practices",
+		"link": "/rx-web-core/tours-of-contoso-app/Beginner/database-best-practices",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "rxwebcore",
+				"subCategory": null
+			}
+		]
+	},
+	{
+		"title": "Restful Best Practices",
+		"link": "/rx-web-core/tours-of-contoso-app/Beginner/restful-best-practices",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "rxwebcore",
 				"subCategory": null
 			}
 		]
@@ -1660,6 +2864,13 @@
 			}
 		]
 	},
+
+	{
+		"title": null,
+		"link": null,
+		"description": null,
+		"linkTrees": []
+	},
 	{
 		"title": "Authentication",
 		"link": "/rx-web-core/tours-of-contoso-app/Beginner/authentication",
@@ -1748,6 +2959,7 @@
 			}
 		]
 	},
+
 	{
 		"title": "Authentication",
 		"link": "/rx-web-core/tours-of-contoso-app/Beginner/overview",
@@ -1837,6 +3049,17 @@
 		]
 	},
 	{
+		"title": "BoundedContext And Uow",
+		"link": "/rx-web-core/tours-of-contoso-app/Beginner/boundedcontext",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "rxwebcore",
+				"subCategory": null
+			}
+		]
+	},
+	{
 		"title": "Creating Api",
 		"link": "/rx-web-core/tours-of-contoso-app/Beginner/creating-api",
 		"description": "",
@@ -1847,6 +3070,18 @@
 			}
 		]
 	},
+	{
+		"title": "Models",
+		"link": "/rx-web-core/tours-of-contoso-app/Beginner/models",
+		"description": "",
+		"linkTrees": [
+			{
+				"category": "rxwebcore",
+				"subCategory": null
+			}
+		]
+	},
+
 	{
 		"title": "List",
 		"link": "/rxweb-generics/generics/list",
@@ -1964,29 +3199,6 @@
 		"linkTrees": [
 			{
 				"category": "sanitizers",
-				"subCategory": null
-			}
-		]
-	},
-	{
-		"title": "Translate",
-		"link": "/rxweb-translate/getting-started",
-		"description": "",
-		"linkTrees": [
-			{
-				"category": "translate",
-				"subCategory": null
-			}
-			
-		]
-	},
-	{
-		"title": "Features",
-		"link": "/rxweb-translate/translate/binding",
-		"description": "",
-		"linkTrees": [
-			{
-				"category": "translate",
 				"subCategory": null
 			}
 		]

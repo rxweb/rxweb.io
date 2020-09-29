@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup} from "@angular/forms"
+import { FormGroup, FormBuilder} from "@angular/forms"
 import { of } from 'rxjs';
 import { RxFormBuilder, RxwebValidators } from '@rxweb/reactive-form-validators';
 import { HttpClient } from '@angular/common/http';
@@ -17,7 +17,7 @@ export class OneOfAsyncCompleteValidatorComponent implements OnInit {
   languages: string[] = [];
 
   constructor(
-    private formBuilder: RxFormBuilder, private http: HttpClient) { }
+    private formBuilder: FormBuilder, private http: HttpClient) { }
 
   qualificationsArray: string[] = ["Secondary", "Senior Secondary", "B.Tech.", "M.Tech.", "B.C.A.", "M.C.A."];
   skillsArray: string[] = ["MVC", "AngularJS", "Angular 5", "C#", "Web Api", "SQL Server"];

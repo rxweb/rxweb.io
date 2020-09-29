@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup} from "@angular/forms"
+import { FormGroup, FormBuilder} from "@angular/forms"
 import { of } from 'rxjs';
 import { RxFormBuilder, RxwebValidators } from '@rxweb/reactive-form-validators';
 import { HttpClient } from '@angular/common/http';
@@ -14,7 +14,7 @@ export class NoneOfAsyncAddValidatorComponent implements OnInit {
     projectDomains:string[] = [];
  
     constructor(
-        private formBuilder: RxFormBuilder ,private http: HttpClient) { }
+        private formBuilder: FormBuilder ,private http: HttpClient) { }
 
     projectDomainsArray: string[] = ["ECommerce", "Banking", "Educational", "Gaming"];
       
