@@ -1,12 +1,12 @@
 {
-    "complete": {
-        "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-imageAsync-complete-validator',\r\n    templateUrl: './image-async-complete.component.html'\r\n})\r\nexport class ImageAsyncCompleteValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\t\t\t\tImageTypes = [ \"Picture\", \"IdentityCard\",];\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            imageType:['',], \r\n            profilePhoto:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], \r\n            signature:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], \r\n            voterId:['', RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], \r\n            identityCard:['', RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,maxWidth:100 })})], \r\n            drivinglicense:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], \r\n            residenceProof:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,message:'File exceed maximum Height.' })})], \r\n            passport:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' })})], \r\n        });\r\n    }\r\n}\r\n",
-        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Image Type</label>\r\n      <select formControlName=\"imageType\" class=\"form-control\">\r\n\t\t<option [value]=\"item\" *ngFor=\"let item of ImageTypes\">{{item}}</option>\r\n      </select>\r\n      <small class=\"form-text text-muted\">Based on selection of file type conditional validation is applied<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.imageType.errors\">{{userInfoFormGroup.controls.imageType.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Profile Photo</label>\r\n      <input type=\"file\" formControlName=\"profilePhoto\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.profilePhoto.errors\">{{userInfoFormGroup.controls.profilePhoto.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Signature</label>\r\n      <input type=\"file\" formControlName=\"signature\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.signature.errors\">{{userInfoFormGroup.controls.signature.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Voter Id</label>\r\n      <input type=\"file\" formControlName=\"voterId\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.voterId.errors\">{{userInfoFormGroup.controls.voterId.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Identity Card</label>\r\n      <input type=\"file\" formControlName=\"identityCard\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.identityCard.errors\">{{userInfoFormGroup.controls.identityCard.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Driving License</label>\r\n      <input type=\"file\" formControlName=\"drivinglicense\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.drivinglicense.errors\">{{userInfoFormGroup.controls.drivinglicense.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Residence Proof</label>\r\n      <input type=\"file\" formControlName=\"residenceProof\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">Invalid Image height or width.<br/></small>\r\n      <small class=\"form-text text-muted\">It shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.residenceProof.errors\">{{userInfoFormGroup.controls.residenceProof.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Passport</label>\r\n      <input type=\"file\" formControlName=\"passport\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.passport.errors\">{{userInfoFormGroup.controls.passport.errors.imageMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
-        "model": null,
-        "modelName": null,
-        "json": {}
-    },
+  "complete": {
+    "notes": [],
+    "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators } from '@rxweb\/reactive-form-validators';\r\nimport {of} from 'rxjs';\r\n@Component({\r\n    selector: 'app-imageAsync-complete-validator',\r\n    templateUrl: '.\/image-async-complete.component.html'\r\n})\r\nexport class ImageAsyncCompleteValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\t\t\t\tImageTypes = [ \"Picture\", \"IdentityCard\",];\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            imageType:['',], \r\n            profilePhoto:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], \r\n            signature:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], \r\n            voterId:['',[], RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], \r\n            identityCard:['',[], RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,maxWidth:100 })})], \r\n            drivinglicense:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], \r\n            residenceProof:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,message:'File exceed maximum Height.' })})], \r\n            passport:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' })})], \r\n        });\r\n    }\r\n}\r\n",
+    "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Image Type</label>\r\n      <select formControlName=\"imageType\" class=\"form-control\">\r\n\t\t<option [value]=\"item\" *ngFor=\"let item of ImageTypes\">{{item}}</option>\r\n      </select>\r\n      <small class=\"form-text text-muted\">Based on selection of file type conditional validation is applied<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.imageType.errors\">{{userInfoFormGroup.controls.imageType.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Profile Photo</label>\r\n      <input type=\"file\" formControlName=\"profilePhoto\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.profilePhoto.errors\">{{userInfoFormGroup.controls.profilePhoto.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Signature</label>\r\n      <input type=\"file\" formControlName=\"signature\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.signature.errors\">{{userInfoFormGroup.controls.signature.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Voter Id</label>\r\n      <input type=\"file\" formControlName=\"voterId\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.voterId.errors\">{{userInfoFormGroup.controls.voterId.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Identity Card</label>\r\n      <input type=\"file\" formControlName=\"identityCard\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.identityCard.errors\">{{userInfoFormGroup.controls.identityCard.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Driving License</label>\r\n      <input type=\"file\" formControlName=\"drivinglicense\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.drivinglicense.errors\">{{userInfoFormGroup.controls.drivinglicense.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Residence Proof</label>\r\n      <input type=\"file\" formControlName=\"residenceProof\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">Invalid Image height or width.<br/></small>\r\n      <small class=\"form-text text-muted\">It shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.residenceProof.errors\">{{userInfoFormGroup.controls.residenceProof.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label>Passport</label>\r\n      <input type=\"file\" formControlName=\"passport\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.passport.errors\">{{userInfoFormGroup.controls.passport.errors.imageMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+    "model": null,
+    "modelName": null,
+    "json": {}
+  },
     "maxHeightExample": {
         "notes": null,
         "component": null,
@@ -15,14 +15,14 @@
         "modelName": null,
         "json": {}
     },
-    "maxHeight": {
-        "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-imageAsync-maxHeight-validator',\r\n    templateUrl: './image-async-max-height.component.html'\r\n})\r\nexport class ImageAsyncMaxHeightValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            profilePhoto:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], \r\n        });\r\n    }\r\n}\r\n",
-        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Profile Photo</label>\r\n      <input type=\"file\" formControlName=\"profilePhoto\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.profilePhoto.errors\">{{userInfoFormGroup.controls.profilePhoto.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
-        "model": null,
-        "modelName": null,
-        "json": {}
-    },
+  "maxHeight": {
+    "notes": [],
+    "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators } from '@rxweb\/reactive-form-validators';\r\nimport { of } from 'rxjs'\r\n@Component({\r\n    selector: 'app-imageAsync-maxHeight-validator',\r\n    templateUrl: '.\/image-async-max-height.component.html'\r\n})\r\nexport class ImageAsyncMaxHeightValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            profilePhoto:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100 ,maxWidth:100 })})], \r\n        });\r\n    }\r\n}\r\n",
+    "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Profile Photo</label>\r\n      <input type=\"file\" formControlName=\"profilePhoto\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.profilePhoto.errors\">{{userInfoFormGroup.controls.profilePhoto.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+    "model": null,
+    "modelName": null,
+    "json": {}
+  },
     "maxWidthExample": {
         "notes": null,
         "component": null,
@@ -31,14 +31,14 @@
         "modelName": null,
         "json": {}
     },
-    "maxWidth": {
-        "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-imageAsync-maxWidth-validator',\r\n    templateUrl: './image-async-max-width.component.html'\r\n})\r\nexport class ImageAsyncMaxWidthValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            profilePhoto:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], \r\n        });\r\n    }\r\n}\r\n",
-        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Profile Photo</label>\r\n      <input type=\"file\" formControlName=\"profilePhoto\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.profilePhoto.errors\">{{userInfoFormGroup.controls.profilePhoto.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
-        "model": null,
-        "modelName": null,
-        "json": {}
-    },
+  "maxWidth": {
+    "notes": [],
+    "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators } from '@rxweb\/reactive-form-validators';\r\nimport { of } from 'rxjs';\r\n@Component({\r\n    selector: 'app-imageAsync-maxWidth-validator',\r\n    templateUrl: '.\/image-async-max-width.component.html'\r\n})\r\nexport class ImageAsyncMaxWidthValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            profilePhoto:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100 ,maxWidth:100 })})], \r\n        });\r\n    }\r\n}\r\n",
+    "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Profile Photo</label>\r\n      <input type=\"file\" formControlName=\"profilePhoto\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.profilePhoto.errors\">{{userInfoFormGroup.controls.profilePhoto.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+    "model": null,
+    "modelName": null,
+    "json": {}
+  },
     "minHeightExample": {
         "notes": null,
         "component": null,
@@ -47,14 +47,14 @@
         "modelName": null,
         "json": {}
     },
-    "minHeight": {
-        "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-imageAsync-minHeight-validator',\r\n    templateUrl: './image-async-min-height.component.html'\r\n})\r\nexport class ImageAsyncMinHeightValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            voterId:['', RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], \r\n        });\r\n    }\r\n}\r\n",
-        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Voter Id</label>\r\n      <input type=\"file\" formControlName=\"voterId\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.voterId.errors\">{{userInfoFormGroup.controls.voterId.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
-        "model": null,
-        "modelName": null,
-        "json": {}
-    },
+  "minHeight": {
+    "notes": [],
+    "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators } from '@rxweb\/reactive-form-validators';\r\nimport { of } from 'rxjs';\r\n@Component({\r\n    selector: 'app-imageAsync-minHeight-validator',\r\n    templateUrl: '.\/image-async-min-height.component.html'\r\n})\r\nexport class ImageAsyncMinHeightValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            voterId:['',[], RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], \r\n        });\r\n    }\r\n}\r\n",
+    "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Voter Id</label>\r\n      <input type=\"file\" formControlName=\"voterId\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.voterId.errors\">{{userInfoFormGroup.controls.voterId.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+    "model": null,
+    "modelName": null,
+    "json": {}
+  },
     "minWidthExample": {
         "notes": null,
         "component": null,
@@ -63,14 +63,14 @@
         "modelName": null,
         "json": {}
     },
-    "minWidth": {
-        "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-imageAsync-minWidth-validator',\r\n    templateUrl: './image-async-min-width.component.html'\r\n})\r\nexport class ImageAsyncMinWidthValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            voterId:['', RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], \r\n        });\r\n    }\r\n}\r\n",
-        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Voter Id</label>\r\n      <input type=\"file\" formControlName=\"voterId\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.voterId.errors\">{{userInfoFormGroup.controls.voterId.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
-        "model": null,
-        "modelName": null,
-        "json": {}
-    },
+  "minWidth": {
+    "notes": [],
+    "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators } from '@rxweb\/reactive-form-validators';\r\nimport { of } from 'rxjs';\r\n@Component({\r\n    selector: 'app-imageAsync-minWidth-validator',\r\n    templateUrl: '.\/image-async-min-width.component.html'\r\n})\r\nexport class ImageAsyncMinWidthValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            voterId:['',[], RxwebValidators.imageAsync({validatorConfig:of({minHeight:10  ,maxHeight:100  ,minWidth:10  ,maxWidth:10 })})], \r\n        });\r\n    }\r\n}\r\n",
+    "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Voter Id</label>\r\n      <input type=\"file\" formControlName=\"voterId\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.voterId.errors\">{{userInfoFormGroup.controls.voterId.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+    "model": null,
+    "modelName": null,
+    "json": {}
+  },
     "messageExample": {
         "notes": null,
         "component": null,
@@ -79,14 +79,14 @@
         "modelName": null,
         "json": {}
     },
-    "message": {
-        "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-imageAsync-message-validator',\r\n    templateUrl: './image-async-message.component.html'\r\n})\r\nexport class ImageAsyncMessageValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            residenceProof:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,message:'File exceed maximum Height.' })})], \r\n        });\r\n    }\r\n}\r\n",
-        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Residence Proof</label>\r\n      <input type=\"file\" formControlName=\"residenceProof\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">Invalid Image height or width.<br/></small>\r\n      <small class=\"form-text text-muted\">It shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.residenceProof.errors\">{{userInfoFormGroup.controls.residenceProof.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
-        "model": null,
-        "modelName": null,
-        "json": {}
-    },
+  "message": {
+    "notes": [],
+    "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators } from '@rxweb\/reactive-form-validators';\r\nimport { of } from 'rxjs';\r\n@Component({\r\n    selector: 'app-imageAsync-message-validator',\r\n    templateUrl: '.\/image-async-message.component.html'\r\n})\r\nexport class ImageAsyncMessageValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            residenceProof:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,message:'File exceed maximum Height.' })})], \r\n        });\r\n    }\r\n}\r\n",
+    "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Residence Proof</label>\r\n      <input type=\"file\" formControlName=\"residenceProof\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">Invalid Image height or width.<br/></small>\r\n      <small class=\"form-text text-muted\">It shows custom message<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.residenceProof.errors\">{{userInfoFormGroup.controls.residenceProof.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+    "model": null,
+    "modelName": null,
+    "json": {}
+  },
     "messageKeyExample": {
         "notes": null,
         "component": null,
@@ -95,14 +95,14 @@
         "modelName": null,
         "json": {}
     },
-    "messageKey": {
-        "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-imageAsync-messageKey-validator',\r\n    templateUrl: './image-async-message-key.component.html'\r\n})\r\nexport class ImageAsyncMessageKeyValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            passport:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' })})], \r\n        });\r\n    }\r\n}\r\n",
-        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Passport</label>\r\n      <input type=\"file\" formControlName=\"passport\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.passport.errors\">{{userInfoFormGroup.controls.passport.errors.imageMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
-        "model": null,
-        "modelName": null,
-        "json": {}
-    },
+  "messageKey": {
+    "notes": [],
+    "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators } from '@rxweb\/reactive-form-validators';\r\nimport { of } from 'rxjs';\r\n@Component({\r\n    selector: 'app-imageAsync-messageKey-validator',\r\n    templateUrl: '.\/image-async-message-key.component.html'\r\n})\r\nexport class ImageAsyncMessageKeyValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            passport:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100  ,messageKey:'imageMessageKey' })})], \r\n        });\r\n    }\r\n}\r\n",
+    "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Passport</label>\r\n      <input type=\"file\" formControlName=\"passport\" class=\"form-control\"  />\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.passport.errors\">{{userInfoFormGroup.controls.passport.errors.imageMessageKey.message}}<br/></small>\t\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+    "model": null,
+    "modelName": null,
+    "json": {}
+  },
     "dynamic": {
         "notes": [],
         "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\nimport { HttpClient } from '@angular/common/http';\r\nimport { FormBuilderConfiguration,RxFormBuilder} from '@rxweb/reactive-form-validators';\r\nimport { environment } from 'src/environments/environment';\r\n\r\n@Component({\r\n    selector: 'app-imageAsync-dynamic-validator',\r\n    templateUrl: './image-async-dynamic.component.html'\r\n})\r\nexport class ImageAsyncDynamicValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\t\t\t\tImageTypes = [ \"Picture\", \"IdentityCard\",];\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\tconstructor(\r\n        private formBuilder: RxFormBuilder , private http: HttpClient )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n\t\tlet formBuilderConfiguration = new FormBuilderConfiguration();\r\n\t\tthis.http.get('assets/examples/reactive-form-validators/validators/imageAsync/dynamic/dynamic.json?v='+environment.appVersion).subscribe(dynamic => {\r\n\t\t\tformBuilderConfiguration.dynamicValidation = JSON.parse(JSON.stringify(dynamic));\r\n\t\t\tvar userInfo = { imageType:'', profilePhoto:'', signature:'', voterId:'', identityCard:'', drivinglicense:'', residenceProof:'', passport:'',  }\r\n\t\t\tthis.userInfoFormGroup = this.formBuilder.group(userInfo,formBuilderConfiguration);\r\n\t\t})\r\n    }\r\n}\r\n",
@@ -113,12 +113,12 @@
             "dynamic.json": "{\"imageType\":{},\"profilePhoto\":{\"imageAsync\":{\"maxHeight\":\"100\",\"maxWidth\":\"100\"}},\"signature\":{\"imageAsync\":{\"maxHeight\":\"100\",\"maxWidth\":\"100\"}},\"voterId\":{\"imageAsync\":{\"minHeight\":\"10\",\"maxHeight\":\"100\",\"minWidth\":\"10\",\"maxWidth\":\"10\"}},\"identityCard\":{\"imageAsync\":{\"minHeight\":\"10\",\"maxHeight\":\"100\",\"maxWidth\":\"100\"}},\"drivinglicense\":{\"imageAsync\":{\"maxHeight\":\"100\",\"maxWidth\":\"100\"}},\"residenceProof\":{\"imageAsync\":{\"maxHeight\":\"100\",\"maxWidth\":\"100\",\"message\":\"File exceed maximum Height.\"}},\"passport\":{\"imageAsync\":{\"maxHeight\":\"100\",\"maxWidth\":\"100\",\"messageKey\":\"imageMessageKey\"}}}"
         }
     },
-    "add": {
-        "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { FormGroup, FormBuilder } from \"@angular/forms\"\r\nimport { RxwebValidators } from '@rxweb/reactive-form-validators';\r\n\r\n@Component({\r\n    selector: 'app-imageAsync-add-validator',\r\n    templateUrl: './image-async-add.component.html'\r\n})\r\nexport class ImageAsyncAddValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            profilePhoto:['', RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100  ,maxWidth:100 })})], \r\n        });\r\n    }\r\n}\r\n",
-        "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Profile Photo</label>\r\n      <input type=\"file\" formControlName=\"profilePhoto\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">Uploaded image must be in the proper height and width.<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.profilePhoto.errors\">{{userInfoFormGroup.controls.profilePhoto.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
-        "model": null,
-        "modelName": null,
-        "json": {}
-    }
+  "add": {
+    "notes": [],
+    "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { FormGroup, FormBuilder } from \"@angular\/forms\"\r\nimport { RxwebValidators } from '@rxweb\/reactive-form-validators';\r\nimport { of } from 'rxjs';\r\n@Component({\r\n    selector: 'app-imageAsync-add-validator',\r\n    templateUrl: '.\/image-async-add.component.html'\r\n})\r\nexport class ImageAsyncAddValidatorComponent implements OnInit {\r\n    userInfoFormGroup: FormGroup\r\n\r\n\tconstructor(\r\n        private formBuilder: FormBuilder )\r\n\t{ }\r\n\r\n    ngOnInit() {\r\n        this.userInfoFormGroup = this.formBuilder.group({\r\n            profilePhoto:['',[], RxwebValidators.imageAsync({validatorConfig:of({maxHeight:100 ,maxWidth:100 })})], \r\n        });\r\n    }\r\n}\r\n",
+    "html": "<div>\r\n  <form  [formGroup]=\"userInfoFormGroup\">\r\n    <div class=\"form-group\">\r\n      <label>Profile Photo</label>\r\n      <input type=\"file\" formControlName=\"profilePhoto\" class=\"form-control\"  />\r\n      <small class=\"form-text text-muted\">Uploaded image must be in the proper height and width.<br/></small>\r\n     <small class=\"form-text text-danger\" *ngIf=\"userInfoFormGroup.controls.profilePhoto.errors\">{{userInfoFormGroup.controls.profilePhoto.errors?.image?.message}}<br/></small>\t\r\n    </div>\r\n    <button [disabled]=\"!userInfoFormGroup.valid\" class=\"btn btn-primary\">Submit</button>\r\n  </form>\r\n</div>\r\n",
+    "model": null,
+    "modelName": null,
+    "json": {}
+  }
 }
