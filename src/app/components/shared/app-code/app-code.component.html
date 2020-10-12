@@ -1,4 +1,5 @@
 <div class="model-ts" *ngIf="content && type == 'string'">
+    <a class="float-right file-icon" *ngIf="isRouterDoc"  (click)="openStackblitz()"><i aria-hidden="true" class="fa fa-external-link"></i></a>
     <div class="code">
         <a class="float-right copy-icon" ngxClipboard [cbContent]="content" (cbOnSuccess)="CodeContentCopied = true"
             [class.copied]="CodeContentCopied"><i class="fa fa-files-o" aria-hidden="true"></i></a>

@@ -11,8 +11,8 @@ const RXWEB_ROUTER_ROUTES: Routes = [
         component: RouterGettingStartedComponent
     },
     {
-        path: 'router',
-        loadChildren: () => import('src/app/components/router/router.module').then(m => m.RouteModule),
+        path: 'angular-router',
+        loadChildren: () => import('src/app/components/angular-router/angular-router.module').then(m => m.AngularRouterModule),
     }
 
 ];

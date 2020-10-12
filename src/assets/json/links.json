@@ -2927,6 +2927,99 @@
                     "refUri": "ngxtranslateextensionplayground"
                 }
             ]
+        },
+        {
+            "title": "Router",
+            "childrens": [
+                {
+                    "title": "Getting Started",
+                    "uri": "/rxweb-router/router-getting-started",
+                    "otherUri": "getting-started",
+                    "isOpen": false,
+                    "isActive": false
+                },
+                {
+                    "title": "Authorization",
+                    "uri": "/rxweb-router/angular-router/router-authorization",
+                    "childrens": [
+                        {
+                            "title": "Global",
+                            "isActive": false,
+                            "uri": "/rxweb-router/angular-router/router-authorization#global",
+                            "linkTitle": "global",
+                            "refUri": "global"
+                        },
+                        {
+                            "title": "Component Based",
+                            "isActive": false,
+                            "uri": "/rxweb-router/angular-router/router-authorization#component-based",
+                            "linkTitle": "component-based",
+                            "refUri": "component-based"
+                        }
+                    ]
+                },
+                {
+                    "title": "Authentication",
+                    "isActive": false,
+                    "uri": "/rxweb-router/angular-router/router-authentication",
+                    "linkTitle": "component-based",
+                    "refUri": "component-based"
+                },
+                {
+                    "title": "Middlewares",
+                    "uri": "/rxweb-router/router/access",
+                    "childrens": [
+                        {
+                            "title": "Global",
+                            "isActive": false,
+                            "uri": "/rxweb-router/router/code",
+                            "linkTitle": "global",
+                            "refUri": "global"
+                        },
+                        {
+                            "title": "Component Based",
+                            "isActive": false,
+                            "uri": "/rxweb-router/router/code",
+                            "linkTitle": "component-based",
+                            "refUri": "component-based"
+                        }
+                    ]
+                },
+                {
+                    "title": "Decorators",
+                    "uri": "/rxweb-router/router/access",
+                    "childrens": [
+                        {
+                            "title": "@access",
+                            "isActive": false,
+                            "uri": "/rxweb-router/router/code",
+                            "linkTitle": "global",
+                            "refUri": "global"
+                        },
+                        {
+                            "title": "@anonymous",
+                            "isActive": false,
+                            "uri": "/rxweb-router/router/code",
+                            "linkTitle": "component-based",
+                            "refUri": "component-based"
+                        },
+                        {
+                            "title": "@middleware",
+                            "isActive": false,
+                            "uri": "/rxweb-router/router/code",
+                            "linkTitle": "component-based",
+                            "refUri": "component-based"
+                        },
+                        {
+                            "title": "@routerModule",
+                            "isActive": false,
+                            "uri": "/rxweb-router/router/code",
+                            "linkTitle": "component-based",
+                            "refUri": "component-based"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

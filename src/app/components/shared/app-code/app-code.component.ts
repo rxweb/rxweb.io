@@ -16,7 +16,7 @@ export class AppCodeComponent implements OnInit {
   @Input() scopeName: string;
 
   items: any;
-
+  isRouterDoc:boolean;
   contentItem: any = {};
   allContents: any[] = [];
   type: string;
@@ -31,6 +31,9 @@ export class AppCodeComponent implements OnInit {
 
   ngOnInit() {
     this.type = typeof this.content;
+    if(location.pathname.includes("angular-router")){
+    this.isRouterDoc = true;
+  }
     this.allContents = [];
     if (this.type == "object") {
       for (var prop in this.content) {
