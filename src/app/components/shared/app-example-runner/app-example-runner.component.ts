@@ -38,12 +38,15 @@ export class AppExampleRunnerComponent implements OnInit {
   tabArray: any = {};
   activeTab: string;
   showComponent: boolean = false;
+  exampleNameCode:string = '';
   dataParam: any;
   constructor(private router: Router, private sanitizer: DomSanitizer)
   {
   }
  
   ngOnInit(): void {
+  
+  
     let codeUrl = "";
     this.showElement = false;
     if(this.router.url.includes("vue")){
@@ -64,6 +67,7 @@ export class AppExampleRunnerComponent implements OnInit {
     }
     this.tabArray = []; 
     if(this.content && this.showTab){
+     
       if(this.content.function != null)
       this.tabArray.push({"tabName": "Component", "tabItem": "component", "content": this.content.function})
       if (this.content.model != null)
@@ -86,6 +90,7 @@ export class AppExampleRunnerComponent implements OnInit {
       if(this.content && this.content.dataParam)
       this.dataParam = this.content.dataParam;
       this.activeTab = this.tabArray[0].tabName;
+      
     }
   
   }

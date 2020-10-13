@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { HttpClient } from '@angular/common/http';
-import { Http } from '@angular/http';
 import { json } from '@rxweb/reactive-form-validators';
 // import { } from 'src/assets/data/';
 declare const Prism;
@@ -14,14 +14,28 @@ export class AppCodeComponent implements OnInit {
   @Input() content: any;
   @Input() treeItems: Array<any>;
   @Input() scopeName: string;
-
+  @Input() exampleName: string;
+  routerData:any=[];
+  
   items: any;
   isRouterDoc:boolean;
   contentItem: any = {};
   allContents: any[] = [];
   type: string;
 
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
+   
+  this.http.get('assets/json/router-examples.json').subscribe(
+    res=>{
+      debugger
+      this.routerData = res;
+      var data = this.routerData.filter(x=>x.content == this.content)
+      if(data[0]){
+        this.isRouterDoc = data[0].isRouterDoc
+      }
+    }
+  )   
+
     // this.http.get('assets/data/' + this.scopeName + '-translations.ts').subscribe(res => {
     // this.http.get(`assets/data/${this.scopeName}-translations.ts`).subscribe(res => {
     //   this.items = res;
@@ -30,10 +44,9 @@ export class AppCodeComponent implements OnInit {
   }
 
   ngOnInit() {
+  
     this.type = typeof this.content;
-    if(location.pathname.includes("angular-router")){
-    this.isRouterDoc = true;
-  }
+ 
     this.allContents = [];
     if (this.type == "object") {
       for (var prop in this.content) {
@@ -45,7 +58,7 @@ export class AppCodeComponent implements OnInit {
         }
       }
     }
-
+   
     // this.http.get('assets/data/async-translations.json').subscribe(res => {
     //   this.items = res['_body'];
     //   console.log(this.items);
@@ -57,6 +70,12 @@ export class AppCodeComponent implements OnInit {
         this.showCode(item)
       }
     }
+  }
+
+  openStackblitz(content:any){
+   var routerLinkRedirectData = this.routerData.filter(x=>x.content == content);
+   var routerlinkRedirect = routerLinkRedirectData[0].link; 
+    window.open(`${routerlinkRedirect}`, "_blank");    
   }
 
   hideActive(item: any) {

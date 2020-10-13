@@ -11,7 +11,8 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane" *ngFor="let tab of tabArray" [class.active]="activeTab == tab.tabName">
-                    <app-code [content]="tab.content"></app-code>
+                    
+                    <app-code [content]="tab.content" ></app-code>
                 </div>
             </div>
             <hr/>

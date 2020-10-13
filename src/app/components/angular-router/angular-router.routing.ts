@@ -12,5 +12,10 @@ const ANGULAR_ROUTER_ROUTES: Routes = [
   loadChildren: () => import('./router-authentication/router-authentication.module').then(m => m.Router_authenticationModule),
 	
 },
+{
+	path:'middleware',
+  loadChildren: () => import('./middleware/middleware.module').then(m => m.MiddlwareModule),
+	
+},
 ];
 export const ANGULAR_ROUTER_ROUTING = RouterModule.forChild(ANGULAR_ROUTER_ROUTES);

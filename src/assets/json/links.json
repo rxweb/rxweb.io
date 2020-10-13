@@ -2967,7 +2967,7 @@
                 },
                 {
                     "title": "Middlewares",
-                    "uri": "/rxweb-router/router/access",
+                    "uri": "/rxweb-router/angular-router/middleware",
                     "childrens": [
                         {
                             "title": "Global",
