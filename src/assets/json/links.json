@@ -2968,52 +2968,38 @@
                 {
                     "title": "Middlewares",
                     "uri": "/rxweb-router/angular-router/middleware",
-                    "childrens": [
-                        {
-                            "title": "Global",
-                            "isActive": false,
-                            "uri": "/rxweb-router/router/code",
-                            "linkTitle": "global",
-                            "refUri": "global"
-                        },
-                        {
-                            "title": "Component Based",
-                            "isActive": false,
-                            "uri": "/rxweb-router/router/code",
-                            "linkTitle": "component-based",
-                            "refUri": "component-based"
-                        }
-                    ]
+                    "linkTitle": "middlewares",
+                    "refUri": "middlewares"
                 },
                 {
                     "title": "Decorators",
-                    "uri": "/rxweb-router/router/access",
+                    "uri": "/rxweb-router/angular-router/router-decorators",
                     "childrens": [
                         {
                             "title": "@access",
                             "isActive": false,
-                            "uri": "/rxweb-router/router/code",
+                            "uri": "/rxweb-router/angular-router/decorators#@access",
                             "linkTitle": "global",
                             "refUri": "global"
                         },
                         {
                             "title": "@anonymous",
                             "isActive": false,
-                            "uri": "/rxweb-router/router/code",
+                            "uri": "/rxweb-router/angular-router/decorators#@anonymous",
                             "linkTitle": "component-based",
                             "refUri": "component-based"
                         },
                         {
                             "title": "@middleware",
                             "isActive": false,
-                            "uri": "/rxweb-router/router/code",
+                            "uri": "/rxweb-router/angular-router/decorators#@middleware",
                             "linkTitle": "component-based",
                             "refUri": "component-based"
                         },
                         {
                             "title": "@routerModule",
                             "isActive": false,
-                            "uri": "/rxweb-router/router/code",
+                            "uri": "/rxweb-router/angular-router/decorators#@routerModule",
                             "linkTitle": "component-based",
                             "refUri": "component-based"
                         }
