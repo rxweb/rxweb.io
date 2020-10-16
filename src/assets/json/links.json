@@ -2286,19 +2286,8 @@
                             "uri": "/reactive-dynamic-forms/dynamic-getting-started",
                             "isActive": false,
                             "linkTitle": "getting-started"
-                        },
-                        {
-                            "title": "Custom Components",
-                            "uri": "/reactive-dynamic-forms/dynamic-forms/custom-component",
-                            "isActive": false,
-                            "linkTitle": "custom-component"
-                        },
-                        {
-                            "title": "Customize Control Design",
-                            "uri": "/reactive-dynamic-forms/dynamic-forms/customize-control-design",
-                            "isActive": false,
-                            "linkTitle": "customize-control-design"
                         }
+                       
                     ]
                 }
             ]
