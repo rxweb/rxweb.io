@@ -40,7 +40,7 @@
     },
     "middlewares": {
        
-        "component": " middlewares: [GlobalMultilingualContentResolver, ComponentMultilingualContentResolver],"
+        "component": " middlewares: [MessageMiddlware],"
       
     },
     "url": {
