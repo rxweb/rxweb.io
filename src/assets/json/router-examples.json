@@ -1,6 +1,32 @@
-[{
-    "isRouterDoc":true,
-        "link": "https://stackblitz.com/edit/router-authorization?file=src/app/app.component.ts",
+[
+    {
+        "isRouterDoc": true,
+        "link": "https://stackblitz.com/edit/router-authorization?file=src/app/security/authorization-resolver.ts",
         "content": "import { Injectable } from '@angular\/core';\r\nimport { IAuthorize, AuthorizeConfig } from '@rxweb\/angular-router';\r\nimport { Router, ActivatedRouteSnapshot } from '@angular\/router';\r\nimport { RxHttp } from '@rxweb\/http';\r\nimport { resolve } from 'dns';\r\n\r\nexport var dbAccessModule : any ;\r\n\r\n@Injectable({\r\n    providedIn: 'root',\r\n})\r\nexport class AuthorizationResolver implements IAuthorize {\r\n\r\n    constructor(private http: RxHttp, private router: Router) { }\r\n\r\n    authorize(authorizeConfig: AuthorizeConfig, route: ActivatedRouteSnapshot): Promise<boolean> | boolean {\r\n   \r\n       \r\n        var promise = new Promise<boolean>((resolve, reject) => {\r\n            var t = this;\r\n             \r\n            if (dbAccessModule == undefined || dbAccessModule == null) {\r\n                this.http.get<string>({ path: \"api\/Authorize\/access\", }).subscribe(response => {\r\n                    dbAccessModule = JSON.parse(response);\r\n                    \r\n                    \/\/resolve(dbAccessModule);\r\n                    let isAccess = this.verifyAuthorization(authorizeConfig);                    \r\n                    resolve(isAccess);\r\n                    if(!isAccess)\r\n                        this.router.navigate([\"\/dashboard\"])\r\n                })\r\n            }\r\n            else{\r\n                let isAccess = this.verifyAuthorization(authorizeConfig);\r\n                resolve(isAccess);\r\n                if(!isAccess)\r\n                        this.router.navigate([\"\/dashboard\"])\r\n            }\r\n        })\r\n        return promise;\r\n    }\r\n\r\n    verifyAuthorization(authorizeConfig: AuthorizeConfig): boolean{\r\n        return dbAccessModule[authorizeConfig.accessLevel][authorizeConfig.action]\r\n    }\r\n\r\n    authorizeChildren(authorizeConfig: AuthorizeConfig, pageAuthorizeConfig: AuthorizeConfig) {\r\n        \r\n        if (dbAccessModule === undefined || dbAccessModule == null) {\r\n            const promise = new Promise<boolean>((resolve, reject) => {\r\n                this.http.get<string>({ path: 'api\/Authorize\/access' }).subscribe(response => {\r\n                    dbAccessModule = JSON.parse(response);\r\n                    const result = this.verifyAuthorization(authorizeConfig);\r\n                    resolve(result);\r\n                });\r\n            });\r\n            return promise;\r\n        } else {\r\n            return this.verifyAuthorization(authorizeConfig);\r\n        }\r\n\r\n    }\r\n\r\n    clearPermissions() {\r\n        dbAccessModule = null;\r\n    }\r\n}\r\n"
+    },
+    {
+        "isRouterDoc": true,
+        "link": "https://stackblitz.com/edit/router-authorization-anonymous?file=src/app/login.component.ts",
+        "content": "import { Component, OnInit } from '@angular\/core';\r\nimport { anonymous } from '@rxweb\/angular-router'\r\n\r\n@anonymous()\r\n@Component({\r\n    selector: 'app-login',\r\n    templateUrl: '.\/login.component.html',\r\n    styleUrls: ['.\/login.component.css']\r\n})\r\n\r\nexport class LoginComponent implements OnInit {\r\n\r\n    ngOnInit(){\r\n\r\n    }\r\n}"
+    },
+    {
+        "isRouterDoc": true,
+        "link": "https://stackblitz.com/edit/router-authorization-access?file=src/app/dashboard.component.ts",
+        "content": "import { Component, OnInit } from \"@angular\/core\"\r\nimport { access } from '@rxweb\/angular-router';\r\n\r\n@access({ accessLevel: 57, action: \"post\" })\r\n@Component({\r\n    selector: \"app-event-add\",\r\n    templateUrl: '.\/event-add.component.html'\r\n})\r\nexport class EventAddComponent implements OnInit {\r\n\r\n    ngOnInit(){\r\n\r\n    }\r\n}"
+    },
+    {
+        "isRouterDoc": true,
+        "link": "https://stackblitz.com/edit/router-authentication?file=src/app/security/authentication-resolver.ts",
+        "content": "import { Injectable } from '@angular\/core';\r\nimport { IAuthResolver } from '@rxweb\/angular-router'\r\nimport { RxHttp } from '@rxweb\/http';\r\nimport { BrowserStorage } from '..\/services\/browser-storage';\r\nimport { CoreComponent } from '@rxweb\/angular-router';\r\n\r\n@Injectable({\r\n    providedIn: 'root',\r\n})\r\nexport class AuthResolver extends CoreComponent implements IAuthResolver {\r\n\r\n    constructor(private http: RxHttp,private storagedata: BrowserStorage) {\r\n        super();\r\n        this.storagedata = new BrowserStorage();\r\n    }\r\n\r\n    resolveAuth(): Promise<{ [key: string]: any; }> | { [key: string]: any; } {\r\n        debugger;\r\n        var promise = new Promise<{ [key: string]: any; }>((resolve, reject) => {\r\n            var auth = this.storagedata.local.get(\"auth\");\r\n            if (auth) {\r\n                this.http.get({ path: \"api\/Authorize\/userDetails\",}).subscribe(response => {\r\n                    resolve(response);\r\n                })\r\n            }\r\n        })\r\n\r\n        return promise;\r\n    }\r\n}"
+    },
+    {
+        "isRouterDoc": true,
+        "link": "https://stackblitz.com/edit/router-authentication?file=src/app/security/authentication-resolver.ts",
+        "content": "import { Injectable } from '@angular\/core';\r\nimport { IAuthResolver } from '@rxweb\/angular-router'\r\nimport { RxHttp } from '@rxweb\/http';\r\nimport { BrowserStorage } from '..\/services\/browser-storage';\r\nimport { CoreComponent } from '@rxweb\/angular-router';\r\n\r\n@Injectable({\r\n    providedIn: 'root',\r\n})\r\nexport class AuthResolver extends CoreComponent implements IAuthResolver {\r\n\r\n    constructor(private http: RxHttp,private storagedata: BrowserStorage) {\r\n        super();\r\n        this.storagedata = new BrowserStorage();\r\n    }\r\n\r\n    resolveAuth(): Promise<{ [key: string]: any; }> | { [key: string]: any; } {\r\n        debugger;\r\n        var promise = new Promise<{ [key: string]: any; }>((resolve, reject) => {\r\n            var auth = this.storagedata.local.get(\"auth\");\r\n            if (auth) {\r\n                this.http.get({ path: \"api\/Authorize\/userDetails\",}).subscribe(response => {\r\n                    resolve(response);\r\n                })\r\n            }\r\n        })\r\n\r\n        return promise;\r\n    }\r\n}"
+    },
+    {
+        "isRouterDoc": true,
+        "link": "https://stackblitz.com/edit/router-midleware?file=src/app/middlewares/login.middleware.ts",
+        "content": "@middleware([LoggedInMiddleware])\r\n@anonymous()\r\n@Component({\r\n    templateUrl: '.\/login.component.html',\r\n})\r\nexport class LoginComponent  implements OnInit {\r\n\r\n ngOnInit(): void {\r\n       \r\n    }\r\n\t\r\n}"
     }
 ]
