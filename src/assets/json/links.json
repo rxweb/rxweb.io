@@ -2967,28 +2967,28 @@
                         {
                             "title": "@access",
                             "isActive": false,
-                            "uri": "/rxweb-router/angular-router/decorators#@access",
+                            "uri": "/rxweb-router/angular-router/router-decorators#@access",
                             "linkTitle": "global",
                             "refUri": "global"
                         },
                         {
                             "title": "@anonymous",
                             "isActive": false,
-                            "uri": "/rxweb-router/angular-router/decorators#@anonymous",
+                            "uri": "/rxweb-router/angular-router/router-decorators#@anonymous",
                             "linkTitle": "component-based",
                             "refUri": "component-based"
                         },
                         {
                             "title": "@middleware",
                             "isActive": false,
-                            "uri": "/rxweb-router/angular-router/decorators#@middleware",
+                            "uri": "/rxweb-router/angular-router/router-decorators#@middleware",
                             "linkTitle": "component-based",
                             "refUri": "component-based"
                         },
                         {
                             "title": "@routerModule",
                             "isActive": false,
-                            "uri": "/rxweb-router/angular-router/decorators#@routerModule",
+                            "uri": "/rxweb-router/angular-router/router-decorators#@routerModule",
                             "linkTitle": "component-based",
                             "refUri": "component-based"
                         }
