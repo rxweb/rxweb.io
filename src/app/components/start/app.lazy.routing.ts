@@ -21,6 +21,7 @@ import { VueGettingStartedComponent } from "../vue-getting-started/vue-getting-s
 import { VueHomePageComponent } from "../vue-home-page/vue-home-page.component";
 import { ArticleComponent } from "../article/article.component";
 import { CodeComparison } from '../code-comparison/code-comparison.component';
+import { WhyComponent } from '../why/why.component';
 
 
 
@@ -36,6 +37,9 @@ const APP_LAZY_ROUTES: Routes = [
   },
   {
     path: 'home', component: AngularHomeComponent
+  },
+  {
+    path: 'why', component: WhyComponent
   },
   {
     path: 'getting-started', component: GettingStartedComponent

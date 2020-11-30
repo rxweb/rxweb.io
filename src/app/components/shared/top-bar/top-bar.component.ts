@@ -52,6 +52,7 @@ export class TopBarComponent implements OnInit {
     this.mainType = splitedArray[1];
     this.validationName = splitedArray[2];
     if (splitedArray.length > 0 && splitedArray[1]) {
+
       if (splitedArray.includes("rx-web-core")) {
         this.secondLevelBreadCrumb = "AspNetCore";
         this.activeTab = "aspnetcore";
@@ -60,7 +61,10 @@ export class TopBarComponent implements OnInit {
         this.secondLevelBreadCrumb = "Vue";
         this.activeTab = "vue";
       }
-      else {
+      else if(splitedArray.includes("why?package=reactive-forms")){
+        this.activeTab = "why";
+      }
+      else{
         this.secondLevelBreadCrumb = "Angular";
         this.activeTab = "angular";
       }

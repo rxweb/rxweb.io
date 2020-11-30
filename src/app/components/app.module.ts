@@ -71,6 +71,7 @@ import { TranslateHttpLoader } from './ngx-translate-extension/ngx-translate-ext
 import { CustomPipe } from './ngx-translate-extension/playground/sanitize/custom.pipe';
 import { ArticleComponent } from './article/article.component';
 import { CodeComparison } from './code-comparison/code-comparison.component';
+import { WhyComponent } from './why/why.component';
 registerLocaleData(localePt)
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
@@ -82,7 +83,7 @@ registerLocaleData(localePt)
     AppComponent, SideBarComponent,CodeComparison, VueHomePageComponent, AngularHomeComponent, VueGettingStartedComponent, ChildLinkItemComponent,
     LinkItemsComponent, ComingSoonComponent, ContributorsComponent, ChangeLogComponent, DashboardComponent, GettingStartedComponent,
     ReactiveFormConfigComponent, HomeComponent, WhatsNextComponent, WhatsNewComponent, QuickStartComponent, CustomPipe,
-     ArticleComponent
+     ArticleComponent,WhyComponent
   ],
   imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), FormsModule, RxReactiveFormsModule, ReactiveFormsModule, HttpModule, HttpClientModule, RouterModule, APP_LAZY_ROUTING, RightSideBarSharedModule, TopBarSharedModule, DisqusSharedModule, FooterSharedModule, PipeCommonModule, TextPageModule,
     HighlightModule, ClipboardModule, NgAisModule,

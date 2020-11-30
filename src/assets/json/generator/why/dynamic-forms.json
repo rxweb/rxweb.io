@@ -1,0 +1,7 @@
+[
+    {
+        "title": "UI Bindings",
+        "without": "export class FormControlModel {\r\n  _label: string;\r\n  _placeholder: string;\r\n\r\n  set label(value: string) {\r\n    this._label = value;\r\n  }\r\n\r\n  get label() {\r\n    console.log(this._label);\r\n    return this._label;\r\n  }\r\n\r\n  set placeholder(value: string) {\r\n    this._placeholder = value;\r\n  }\r\n\r\n  get placeholder() {\r\n    return this._placeholder;\r\n  }\r\n}\r\n\r\n@Component({\r\n  templateUrl: \".\/dynamic-form-binding.component.html\",\r\n  selector: \"app-dynamic-form-binding\"\r\n})\r\nexport class StandardFormBindingComponent {\r\n  @Input() formControls: FormControlModel[];\r\n\r\n}",
+        "with": "export class DynamicFormControlModel extends FormControlConfig {\r\n  _label: string;\r\n  _placeholder: string;\r\n\r\n  set label(value: string) {\r\n    this._label = value;\r\n  }\r\n\r\n  get label() {\r\n    return this._label;\r\n  }\r\n\r\n  set placeholder(value: string) {\r\n    this._placeholder = value;\r\n  }\r\n\r\n  get placeholder() {\r\n    return this._placeholder;\r\n  }\r\n}\r\n@Component({\r\n  templateUrl: \".\/dynamic-form-binding.component.html\",\r\n  selector: \"app-dynamic-form-binding\"\r\n})\r\nexport class DynamicFormBindingComponent {\r\n  @Input() dynamicFormBuildConfig: DynamicFormBuildConfig;\r\n  @Input() uiBindings: string[];\r\n}"
+    }
+]

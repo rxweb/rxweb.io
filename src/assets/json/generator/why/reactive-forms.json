@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Compare Password",
+        "description":"Easier to implement compare password using RxWeb without creation of custom code in component.",
+        "without": "const userForm = newFormGroup(\r\n  {\r\n    firstName: newFormControl(),\r\n    password: newFormControl(),\r\n    comparePassword: newFormControl(),\r\n  },\r\n  {\r\n    validators: (control: FormGroup): ValidationErrors | null => {\r\n      const password = control.get(\"password\");\r\n      const comparePassword = control.get(\"comparePassword\");\r\n      return password &&\r\n        comparePassword &&\r\n        password.value !== comparePassword.value\r\n        ? { compare: true }\r\n        : null;\r\n    },\r\n  }\r\n);\r\n",
+        "with": "let userForm =new FormGroup\r\n({\r\npassword:new FormControl(),\r\ncomparePassword :new \r\nFormControl('', RxwebValidators.compare({fieldName:'password'})\r\n})"
+    },
+    {
+        "title": "Conditional Validation",
+        "description":"",
+        "without": "setNotification(ticked: boolean): void {\r\n        constphoneControl = this.userForm.get('phone');\r\n        if (ticked) {\r\n            phoneControl.setValidators(Validators.required);\r\n        } else {\r\n            phoneControl.clearValidators();\r\n        }\r\n        phoneControl.updateValueAndValidity();\r\n    }",
+        "with": "let userForm = new FormGroup\r\n({\r\n    password: new FormControl(),\r\n    comparePassword: new FormControl('',\r\n    RxwebValidators.required\r\n    ({ conditionalExpression: x => x.notification === true })\r\n    )\r\n}"
+    },
+    {
+        "title": "On Demand Validation",
+        "description":"",
+        "without": "ngOnInit() {\r\n  this.userInfoFormGroup = new FormGroup({\r\n    premiumCharge:new FormControl(),\r\n    purchasePrice:new FormControl(), \r\n    resalePrice: new FormControl() \r\n  });\r\n\r\n    this.userInfoFormGroup.controls.premiumCharge.valueChanges.subscribe(t=>{\r\n    this.setMinValidator(this.userInfoFormGroup.value)\r\n    })\r\n\r\n    this.userInfoFormGroup.controls.purchasePrice.valueChanges.subscribe(t=>{\r\n    this.setMinValidator(this.userInfoFormGroup.value)\r\n    })\r\n  }\r\n    setMinValidator(formValue:any){\r\n    const minimumPrice = ((parseInt(formValue.purchasePrice) + \r\n    parseInt(formValue.premiumCharge)) * 30 \/ 100);\r\n    this.userInfoFormGroup.controls.resalePrice.clearValidators();\r\n    this.userInfoFormGroup.controls.resalePrice.setValidators\r\n    (Validators.min(minimumPrice));\r\n    this.userInfoFormGroup.controls.resalePrice.updateValueAndValidity\r\n    ({onlySelf:true});\r\n}",
+        "with": "this.userInfoFormGroup = new FormGroup({\r\n    premiumCharge:new FormControl(),\r\n    purchasePrice:new FormControl(), \r\n    resalePrice: new FormControl('', RxwebValidators.minNumber({\r\n    dynamicConfig: (x, y) => {\r\n        const minimumPrice = \r\n        ((x.purchasePrice + x.premiumCharge) * 30 \/ 100);\r\n        return { value: minimumPrice };\r\n    }\r\n    })) \r\n});"
+    }
+]
