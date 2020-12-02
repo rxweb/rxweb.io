@@ -1,23 +1,45 @@
 <div id="wrapper">
     <div class="content">
-        <div class="title-bar">
-            <p>Package List
-            </p>
-        </div>
-        <div class="form-select-menu">
-            <div class="btn-group">
-                <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" data-display="static"
-                    aria-haspopup="true" aria-expanded="false">
-                    {{displayData}}
-                </button>
-                <div class="dropdown-menu">
-                    <button class="dropdown-item" [routerLink]="['/why']" [queryParams]="{package: 'reactive-forms'}" (click)="loadWhyData('reactive-forms')" type="button">Reactive Forms</button>
-                    <button class="dropdown-item" [routerLink]="['/why']" [queryParams]="{package: 'dynamic-forms'}" (click)="loadWhyData('dynamic-forms')" type="button">Dynamic Forms</button>
+        <div>
+            <div class="title-bar">
+                <p>Package List
+                </p>
+            </div>
+            <div class="form-select-menu">
+                <div class="btn-group">
+                    <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" data-display="static"
+                        aria-haspopup="true" aria-expanded="false">
+                        {{displayData}}
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" [routerLink]="['/why']"
+                            [queryParams]="{package: 'reactive-forms'}" (click)="loadWhyData('reactive-forms')"
+                            type="button">Reactive Forms</button>
+                        <button class="dropdown-item" [routerLink]="['/why']" [queryParams]="{package: 'dynamic-forms'}"
+                            (click)="loadWhyData('dynamic-forms')" type="button">Dynamic Forms</button>
+                    </div>
+
+
+                    &nbsp;&nbsp;
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" data-display="static"
+                        aria-haspopup="true" aria-expanded="false">
+                        {{activeListItem}}
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" *ngFor="let item of listItems" (click)="scrollTo('item')"
+                            type="button">{{item}}</button>
+                    </div>
+
+
                 </div>
             </div>
         </div>
         <div *ngFor="let item of codeContent">
-            <h3 style="margin-top: 16px;">{{item.title}}</h3>
+            <h3 style="margin-top: 16px;">{{item.title}}</h3><a href="#item.title"></a>
             <p style="font-size: 17px!important;">{{item.description}}</p>
 
             <div class="row page-section" id="installpackage">
@@ -40,7 +62,7 @@
 
                     <div class="model-ts">
                         <div class="code">
-                            <a class="float-right copy-icon" ngxClipboard ></a>
+                            <a class="float-right copy-icon" ngxClipboard></a>
                             <div highlight="pre code">
                                 <pre><code [textContent]="item.with"></code></pre>
                             </div>
@@ -49,8 +71,8 @@
 
                 </div>
             </div>
-       
+
         </div>
-    
+
         <app-top-bar></app-top-bar>
     </div>
