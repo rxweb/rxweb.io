@@ -28,7 +28,7 @@ export class WhyComponent implements OnInit {
     ngOnInit() {
         document.title = "Why - RxWeb Docs";
         this.http.get(`assets/json/generator/why/${this.selectedData.package}.json`).subscribe(response => {
-            console.log(response);
+            console.log(response['value']);
             this.codeContent = response['value'];
             if (this.codeContent)
                 this.codeContent.forEach(element => {
