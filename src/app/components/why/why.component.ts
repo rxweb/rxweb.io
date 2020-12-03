@@ -29,8 +29,8 @@ export class WhyComponent implements OnInit {
         document.title = "Why - RxWeb Docs";
         this.http.get(`assets/json/generator/why/${this.selectedData.package}.json`).subscribe(response => {
             this.codeContent = response;
-            this.codeContent = Object.values(this.codeContent);
-            console.log(Object.values(this.codeContent));
+            this.codeContent = Object.values(this.codeContent[0]);
+            console.log(Object.values(this.codeContent[0]));
             if (this.codeContent)
                 this.codeContent.forEach(element => {
                     this.listItems.push(element.title);              
@@ -42,7 +42,7 @@ export class WhyComponent implements OnInit {
         this.listItems = [];
         this.http.get(`assets/json/generator/why/${packageName}.json`).subscribe(response => {
             this.codeContent = response;
-            this.codeContent = Object.values(this.codeContent);
+            this.codeContent = Object.values(this.codeContent[0]);
             if (this.codeContent)
                 this.codeContent.forEach(element => {
                     this.listItems.push(element.title);
