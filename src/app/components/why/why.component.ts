@@ -10,31 +10,31 @@ import { HttpClient } from '@angular/common/http';
     entryComponents: [AppExampleRunnerComponent]
 })
 export class WhyComponent implements OnInit {
-    codeContent: any;
+    codeContent: any = [];
     selectedData: any = "Reactive Forms";
-    displayData : string = "";
-    listItems:any=[];
-    activeListItem:string="All";
+    displayData: string = "";
+    listItems: any = [];
+    activeListItem: string = "All";
     constructor(private http: HttpClient, private activateRoute: ActivatedRoute) {
         activateRoute.queryParams.subscribe(t => {
             this.selectedData = t;
-            if(this.selectedData == "reactive-forms")
-            this.displayData = "Dynamic Forms"
+            if (this.selectedData == "reactive-forms")
+                this.displayData = "Dynamic Forms"
             else
-            this.displayData = "Reactive Forms"
+                this.displayData = "Reactive Forms"
         })
     }
 
     ngOnInit() {
         document.title = "Why - RxWeb Docs";
-        this.http.get(`assets/json/generator/why/${this.selectedData.package}.json`).subscribe(response => {            
-            this.codeContent = response;  
+        this.http.get(`assets/json/generator/why/${this.selectedData.package}.json`).subscribe(response => {
+            this.codeContent = response;
             console.log(this.codeContent);
-            if(this.codeContent)
-            this.codeContent.forEach(element => {
-                this.listItems.push(element.title);
-                
-            });        
+            if (this.codeContent)
+                this.codeContent.forEach(element => {
+                    this.listItems.push(element.title);
+
+                });
         });
     }
 
@@ -42,10 +42,10 @@ export class WhyComponent implements OnInit {
         this.listItems = [];
         this.http.get(`assets/json/generator/why/${packageName}.json`).subscribe(response => {
             this.codeContent = response;
-            if(this.codeContent)
-            this.codeContent.forEach(element => {
-                this.listItems.push(element.title);
-            });
+            if (this.codeContent)
+                this.codeContent.forEach(element => {
+                    this.listItems.push(element.title);
+                });
         });
     }
 
@@ -55,9 +55,9 @@ export class WhyComponent implements OnInit {
         node.scrollIntoView(true);
         var scrolledY = window.scrollY;
         if (scrolledY) {
-          window.scroll(0, scrolledY - 62);
+            window.scroll(0, scrolledY - 62);
         }
         return false;
-      }
-   
+    }
+
 }
