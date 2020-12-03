@@ -1,12 +1,14 @@
 [
     {
         "title": "Compare Password",
+        "href":"compare-password",
         "description":"Easier to implement compare password using RxWeb without creation of custom code in component.",
         "without": "const userForm = newFormGroup(\r\n  {\r\n    firstName: newFormControl(),\r\n    password: newFormControl(),\r\n    comparePassword: newFormControl(),\r\n  },\r\n  {\r\n    validators: (control: FormGroup): ValidationErrors | null => {\r\n      const password = control.get(\"password\");\r\n      const comparePassword = control.get(\"comparePassword\");\r\n      return password &&\r\n        comparePassword &&\r\n        password.value !== comparePassword.value\r\n        ? { compare: true }\r\n        : null;\r\n    },\r\n  }\r\n);\r\n",
         "with": "let userForm =new FormGroup\r\n({\r\npassword:new FormControl(),\r\ncomparePassword :new \r\nFormControl('', RxwebValidators.compare({fieldName:'password'})\r\n})"
     },
     {
         "title": "Conditional Validation",
+        "href":"conditional-validation",
         "description":"",
         "without": "setNotification(ticked: boolean): void {\r\n        constphoneControl = this.userForm.get('phone');\r\n        if (ticked) {\r\n            phoneControl.setValidators(Validators.required);\r\n        } else {\r\n            phoneControl.clearValidators();\r\n        }\r\n        phoneControl.updateValueAndValidity();\r\n    }",
         "with": "let userForm = new FormGroup\r\n({\r\n    password: new FormControl(),\r\n    comparePassword: new FormControl('',\r\n    RxwebValidators.required\r\n    ({ conditionalExpression: x => x.notification === true })\r\n    )\r\n}"
@@ -14,48 +16,56 @@
     {
         "title": "On Demand Validation",
         "description":"",
+        "href":"on-demand-validation",
         "without": "ngOnInit() {\r\n  this.userInfoFormGroup = new FormGroup({\r\n    premiumCharge:new FormControl(),\r\n    purchasePrice:new FormControl(), \r\n    resalePrice: new FormControl() \r\n  });\r\n\r\n    this.userInfoFormGroup.controls.premiumCharge.valueChanges.subscribe(t=>{\r\n    this.setMinValidator(this.userInfoFormGroup.value)\r\n    })\r\n\r\n    this.userInfoFormGroup.controls.purchasePrice.valueChanges.subscribe(t=>{\r\n    this.setMinValidator(this.userInfoFormGroup.value)\r\n    })\r\n  }\r\n    setMinValidator(formValue:any){\r\n    const minimumPrice = ((parseInt(formValue.purchasePrice) + \r\n    parseInt(formValue.premiumCharge)) * 30 \/ 100);\r\n    this.userInfoFormGroup.controls.resalePrice.clearValidators();\r\n    this.userInfoFormGroup.controls.resalePrice.setValidators\r\n    (Validators.min(minimumPrice));\r\n    this.userInfoFormGroup.controls.resalePrice.updateValueAndValidity\r\n    ({onlySelf:true});\r\n}",
         "with": "this.userInfoFormGroup = new FormGroup({\r\n    premiumCharge:new FormControl(),\r\n    purchasePrice:new FormControl(), \r\n    resalePrice: new FormControl('', RxwebValidators.minNumber({\r\n    dynamicConfig: (x, y) => {\r\n        const minimumPrice = \r\n        ((x.purchasePrice + x.premiumCharge) * 30 \/ 100);\r\n        return { value: minimumPrice };\r\n    }\r\n    })) \r\n});"
     },
     {
         "title": "Showing Error Messages",
         "description":"",
+        "href":"showing-error-messages",
         "without": " <div *ngIf=\"studentFormGroup.controls['lastName'].errors && (studentFormGroup.controls['lastName'].dirty || studentFormGroup.controls['lastName'].touched)\"\r\n        class=\"alert alert-danger\">\r\n        <div *ngIf=\"studentFormGroup.controls['lastName'].errors.required\">\r\n            Last Name is required!\r\n        <\/div>\r\n        <div *ngIf=\"studentFormGroup.controls['lastName'].errors.pattern\">\r\n            Last Name can only contain alphabets!\r\n        <\/div>\r\n    <\/div>",
         "with": "<div *ngIf=\"countryFormGroup.controls.lastName.errors\">\r\n  {{countryFormGroup.controls.lastName.errorMessage}}        \r\n<\/div>"
     },
     {
         "title": "Async Validations",
         "description":"",
+        "href":"async-validations",
         "without": "ngOnInit() {\r\n  this.testFormGroup = new FormGroup({});\r\n  this.syncControl = new FormControl('', [Validators.required]);\r\n  this.asyncControl = new FormControl('', [Validators.required], this.validateLoginNotTaken.bind(this));\r\n  this.testFormGroup.addControl('asyncControl', this.asyncControl);\r\n}\r\n\r\nvalidateLoginNotTaken(control: AbstractControl) {\r\n  return this.validationService.checkLoginNotTaken(control.value).map(res => {\r\n  return res ? null : { emailTaken: true};\r\n});\r\n}",
         "with": "ngOnInit() {\r\n  this.countryFormGroup = this.formBuilder.group({\r\n   countryName:['',[], RxwebValidators.alphaAsync()], \r\n  });\r\n}"
     },
     {
         "title": "Unique Validation",
         "description":"",
+        "href":"unique-validation",
         "without": "ngOnInit() {\r\n  this.testFormGroup = new FormGroup({});\r\n  this.UserNameControl = new FormControl('', [\r\n this.uniqueUsername.bind(this));\r\n}\r\n\r\n uniqueUsername: {\r\n expression: (control: FormControl) => {\r\n   return new Promise((resolve, reject) => {\r\n   setTimeout(() => {\r\n      resolve(this.existingUsers.indexOf(control.value) === -1);\r\n    }, 1000);\r\n  });\r\n },\r\n   message: 'This username is already taken.',\r\n },\r\n}",
         "with": "ngOnInit() {\r\n this.employeeFormGroup = this.formBuilder.group({\r\n  fullName:[''], \r\n  skills:this.formBuilder.array([\r\n  this.getSkillFormGroup()\r\n  ])\r\n});\r\n}\r\n\r\naddSkill(){\r\n  let skillsArray = <FormArray>this.employeeFormGroup.controls.skills;\r\n  skillsArray.push(this.getSkillFormGroup());\r\n }\r\n  \r\ngetSkillFormGroup(){\r\n  return this.formBuilder.group({\r\n  skillName:['',RxwebValidators.unique()]\r\n  })\r\n }\r\n}"
     },
     {
         "title": "Form Binding with FormBuilder",
         "description":"",
+        "href":"form-binding-with-form-builder",
         "without": "constructor(\r\nprivate formBuilder: FormBuilder )\r\n{ }\r\n\r\nngOnInit() {\r\n this.userFormGroup = this.formBuilder.group({\r\n   email:['', RxwebValidators.email()], \r\n  });\r\n}",
         "with": "export class User {\r\n  @email()\r\n  email: string;\r\n}\r\n@Component({\r\n  selector: \"app-email-add\",\r\n  templateUrl: \".\/email-add.component.html\"\r\n})\r\nexport class EmailAddComponent implements OnInit {\r\n  userFormGroup: FormGroup;\r\n\r\n  constructor(private formBuilder: RxFormBuilder) {}\r\n\r\n  ngOnInit() {\r\n    let user = new User();\r\n    this.userFormGroup = this.formBuilder.formGroup(user);\r\n  }\r\n}"
     },
     {
         "title": "Date And Currency",
         "description":"",
+        "href":"date-and-currency",
         "without": "dateValidator(c: AbstractControl): { [key: string]: boolean } {\r\n    let value = c.value;\r\n    if (value && typeof value === \"string\") {\r\n      let match =\r\n      value.match(\/^([12]\\d{3}-(0[1-9]|1[0-2])\r\n      -(0[1-9]|[12]\\d|3[01]))\/);\r\n      if (!match) {\r\n        return { 'dateInvalid': true };\r\n      } else if (match && match[0] !== value) {\r\n        return { 'dateInvalid': true };\r\n      }\r\n    }\r\n    return null;\r\n  }\r\n\r\nfunction numberValidator(c: AbstractControl):\r\n { [key: string]: boolean } | null {\r\n    if (c.pristine) {\r\n        return null;\r\n    }\r\n    if (c.value.match(\/.*[^0-9].*\/)) {\r\n        return { 'numeric': true };\r\n    }\r\n    return null;\r\n}\r\n\r\nconst userFormGroup = this.formBuilder.group({\r\n  DateType: ['',Validators.required, this.dateValidator],\r\n  price: ['',this.dateValidator]\r\n})",
         "with": "const userFormGroup = this.formBuilder.group({\r\n  DateType: ['',RxwebValidators.date()],\r\n  price: ['',RxwebValidators.numeric({isFormat:true})]\r\n})"
     },
     {
         "title": "Reset Form",
         "description":"",
+        "href":"reset-form",
         "with":  "ngOnInit() {\r\nthis.userFormGroup = <RxFormGroup>this.formBuilder.group({\r\n  firstName:[''],\r\n  lastName:[''],\r\n  userName:[''],\r\n  password:['']\r\n });\r\n}\r\n\r\nresetForm(){\r\n  this.userFormGroup.resetForm();\r\n}",
         "without": "ngOnInit() {  \r\n this.userFormGroup = this.formBuilder.group({\r\n firstName:[''],\r\n lastName:[''],\r\n userName:[''],\r\n password:['']\r\n});\r\n}\r\nresetForm(){\r\n  this.userFormGroup.reset();\r\n}"
     },
     {
         "title": "Patch Model Value",
         "description":"",
+        "href":"patch-model-value",
         "without": "ngOnInit() {\r\n  this.userInfoFormGroup = this.formBuilder.group({\r\n    firstName: [\"\"],\r\n    address: {\r\n      areaName: \"\"\r\n    },\r\n    hobbies: [\r\n     {\r\n      name: \"\"\r\n    }\r\n  ]\r\n });\r\n }\r\n\r\ngetFormArray() {\r\n  let formarray = this.userInfoFormGroup.controls.hobbies as FormArray;\r\n  return formarray.controls;\r\n}\r\n\r\npatchvalue() {\r\nthis.userInfoFormGroup.patchValue({\r\n  firstName: \"John\",\r\n  address: { areaName: \"Victoria\" },\r\n  hobbies: [{ name: \"Travelling\" }]\r\n});\r\n}",
         "with": "ngOnInit() {\r\n  this.userInfoFormGroup = <RxFormGroup>this.formBuilder.group({\r\n    firstName:[''],\r\n    address:{\r\n          areaName:''\r\n          },\r\n          hobbies:[\r\n          {\r\n            name:''\r\n          }]\r\n        });\r\n    }\r\ngetFormArray(){\r\n  let formarray = this.userInfoFormGroup.controls.hobbies as FormArray;\r\n  return formarray.controls;\r\n}\r\n\r\npatchvalue(){\r\n this.userInfoFormGroup.patchModelValue( {firstName:'John',\r\n  address: { areaName: \"Victoria\" },\r\n  hobbies: [{ name: \"Travelling\" }] });\r\n}"
     }

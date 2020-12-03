@@ -30,19 +30,19 @@
                     </button>
 
                     <div class="dropdown-menu">
-                        <button class="dropdown-item" *ngFor="let item of listItems" (click)="scrollTo('item')"
-                            type="button">{{item}}</button>
+                        <button class="dropdown-item" *ngFor="let item of codeContent" (click)="scrollTo(item.href)"
+                            type="button">{{item.title}}</button>
                     </div>
 
 
                 </div>
             </div>
         </div>
-        <div *ngFor="let item of codeContent">
-            <h3 style="margin-top: 16px;">{{item.title}}</h3><a href="#item.title"></a>
+        <div *ngFor="let item of codeContent" id="{{item.href}}">
+            <h3 style="margin-top: 16px;" href='#{{item.href}}'>{{item.title}}</h3>
             <p style="font-size: 17px!important;">{{item.description}}</p>
 
-            <div class="row page-section" id="installpackage">
+            <div class="row page-section" id="item.title">
 
                 <div class="col-lg-6">
                     <h5>Standard</h5>

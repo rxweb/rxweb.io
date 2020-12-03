@@ -15,26 +15,27 @@ export class AppCodeComponent implements OnInit {
   @Input() treeItems: Array<any>;
   @Input() scopeName: string;
   @Input() exampleName: string;
-  routerData:any=[];
-  
+  routerData: any = [];
+
   items: any;
-  isRouterDoc:boolean;
+  isRouterDoc: boolean;
   contentItem: any = {};
   allContents: any[] = [];
   type: string;
 
   constructor(private http: HttpClient) {
-   
-  this.http.get('assets/json/router-examples.json').subscribe(
-    res=>{
-      debugger
-      this.routerData = res;
-      var data = this.routerData.filter(x=>x.content == this.content)
-      if(data[0]){
-        this.isRouterDoc = data[0].isRouterDoc
+
+    this.http.get('assets/json/router-examples.json').subscribe(
+      res => {
+        this.routerData = res;
+        if (this.routerData) {
+          var data = this.routerData.filter(x => x.content == this.content)
+          if (data[0]) {
+            this.isRouterDoc = data[0].isRouterDoc
+          }
+        }
       }
-    }
-  )   
+    )
 
     // this.http.get('assets/data/' + this.scopeName + '-translations.ts').subscribe(res => {
     // this.http.get(`assets/data/${this.scopeName}-translations.ts`).subscribe(res => {
@@ -44,9 +45,9 @@ export class AppCodeComponent implements OnInit {
   }
 
   ngOnInit() {
-  
+
     this.type = typeof this.content;
- 
+
     this.allContents = [];
     if (this.type == "object") {
       for (var prop in this.content) {
@@ -58,7 +59,7 @@ export class AppCodeComponent implements OnInit {
         }
       }
     }
-   
+
     // this.http.get('assets/data/async-translations.json').subscribe(res => {
     //   this.items = res['_body'];
     //   console.log(this.items);
@@ -72,16 +73,16 @@ export class AppCodeComponent implements OnInit {
     }
   }
 
-  openStackblitz(content:any){
-   var routerLinkRedirectData = this.routerData.filter(x=>x.content == content);
-   var routerlinkRedirect = routerLinkRedirectData[0].link; 
-    window.open(`${routerlinkRedirect}`, "_blank");    
+  openStackblitz(content: any) {
+    var routerLinkRedirectData = this.routerData.filter(x => x.content == content);
+    var routerlinkRedirect = routerLinkRedirectData[0].link;
+    window.open(`${routerlinkRedirect}`, "_blank");
   }
 
   hideActive(item: any) {
     item.active = false;
     if (item.childrens && item.childrens.length != 0) {
-    
+
       item.childrens.forEach(elem => {
         this.hideActive(elem);
       })
