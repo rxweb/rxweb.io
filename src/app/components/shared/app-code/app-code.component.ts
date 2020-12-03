@@ -18,24 +18,24 @@ export class AppCodeComponent implements OnInit {
   routerData: any = [];
 
   items: any;
-  isRouterDoc: boolean;
+ // isRouterDoc: boolean;
   contentItem: any = {};
   allContents: any[] = [];
   type: string;
 
   constructor(private http: HttpClient) {
 
-    this.http.get('assets/json/router-examples.json').subscribe(
-      res => {
-        this.routerData = res;
-        if (this.routerData) {
-          var data = this.routerData.filter(x => x.content == this.content)
-          if (data[0]) {
-            this.isRouterDoc = data[0].isRouterDoc
-          }
-        }
-      }
-    )
+   // this.http.get('assets/json/router-examples.json').subscribe(
+   //   res => {
+        // this.routerData = res;
+        // if (this.routerData) {
+        //   var data = this.routerData.filter(x => x.content == this.content)
+        //   if (data[0]) {
+        //     this.isRouterDoc = data[0].isRouterDoc
+        //   }
+        // }
+     // }
+   // )
 
     // this.http.get('assets/data/' + this.scopeName + '-translations.ts').subscribe(res => {
     // this.http.get(`assets/data/${this.scopeName}-translations.ts`).subscribe(res => {
@@ -74,9 +74,9 @@ export class AppCodeComponent implements OnInit {
   }
 
   openStackblitz(content: any) {
-    var routerLinkRedirectData = this.routerData.filter(x => x.content == content);
-    var routerlinkRedirect = routerLinkRedirectData[0].link;
-    window.open(`${routerlinkRedirect}`, "_blank");
+   // var routerLinkRedirectData = this.routerData.filter(x => x.content == content);
+  //  var routerlinkRedirect = routerLinkRedirectData[0].link;
+   // window.open(`${routerlinkRedirect}`, "_blank");
   }
 
   hideActive(item: any) {
