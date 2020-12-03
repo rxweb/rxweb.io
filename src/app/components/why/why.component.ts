@@ -28,9 +28,8 @@ export class WhyComponent implements OnInit {
     ngOnInit() {
         document.title = "Why - RxWeb Docs";
         this.http.get(`assets/json/generator/why/${this.selectedData.package}.json`).subscribe(response => {
+            console.log(response);
             this.codeContent = response;
-            this.codeContent = Object.values(this.codeContent[0]);
-            console.log(Object.values(this.codeContent[0]));
             if (this.codeContent)
                 this.codeContent.forEach(element => {
                     this.listItems.push(element.title);              
@@ -41,8 +40,8 @@ export class WhyComponent implements OnInit {
     loadWhyData(packageName: string) {
         this.listItems = [];
         this.http.get(`assets/json/generator/why/${packageName}.json`).subscribe(response => {
+            console.log(response);
             this.codeContent = response;
-            this.codeContent = Object.values(this.codeContent[0]);
             if (this.codeContent)
                 this.codeContent.forEach(element => {
                     this.listItems.push(element.title);
