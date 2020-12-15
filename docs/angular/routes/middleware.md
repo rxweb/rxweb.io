@@ -5,16 +5,22 @@ category: router
 type: simple
 linktitle: middleware
 ---
+# Middleware 
+The role of the middleware is to run in the front to make each request which is created by the router at a specific route, Using @rxweb it can be applied at global as well as component level. 
 
-Whenever a request is made to the server, middleware runs in the front of each request made by the router at a specific route. Lets consider a scenario where you want to check whether the authorization token is present into the web storage. The `middleware` attribute of the @routerModule allows you to add a middleware during the route.  here is an example of using a middleware into `@routerModule` for resolving the multilingual data.
+# Global
+Global level middleware is set using the RxwebModule which contains a property of middleware where the specific middleware is passed. Whenever any request is made at the global level of the application this middleware is invoked. 
 
-
-Here in this class, the global message web push notification in the angular application, have a look at <a class="redirect-link" href="/rxweb-localization/localization/localization-quick-start">Message</a>
+The below example describes a middleware used at the global level `MessageMiddleware` which sends the message to multiple users at the same time
 
 <div component="app-code" key="middleware-router-component"></div> 
 
-# middleware
-Using @middleware helps yoy to add middleware at the component level. Here is an example of using login middleware for the login component which  
+It is passed along with the middleware property of the <a class="redirect-link">RxwebModule</a> 
+
+# Component Based
+Component specific middleware are applied using `@middleware` decorator will is called whenever the route of the particular component is called.
+
+Using @middleware helps you to add middleware at the component level. Here is an example of using login middleware for the login component which  
 gets the anonymous web token generated. 
 
 <div component="app-code" key="middleware-complete-model"></div> 

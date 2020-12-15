@@ -1,0 +1,5 @@
+{
+    "complete":{
+        "component":"import { routerModule } from '@rxweb\/angular-router';\r\nimport { NgModule } from '@angular\/core';\r\n\r\n@routerModule({\r\n   urlEncryption:true\r\n})\r\n@NgModule({\r\n    declarations: [\r\n    ],\r\n    imports: [\r\n    ],\r\n    providers: [],\r\n})\r\nexport class RxWebModule {\r\n\r\n}"
+    }
+}

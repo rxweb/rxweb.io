@@ -2287,7 +2287,6 @@
                             "isActive": false,
                             "linkTitle": "getting-started"
                         }
-                       
                     ]
                 }
             ]
@@ -2928,7 +2927,21 @@
                     "isActive": false
                 },
                 {
-                    "title": "Authorization",
+                    "title": "Url Encryption",
+                    "uri": "/rxweb-router/angular-router/url-encryption",
+                    "otherUri": "getting-started",
+                    "isOpen": false,
+                    "isActive": false
+                },
+                {
+                    "title": "Authenticate Route",
+                    "isActive": false,
+                    "uri": "/rxweb-router/angular-router/router-authentication",
+                    "linkTitle": "component-based",
+                    "refUri": "component-based"
+                },
+                {
+                    "title": "Authorize Route",
                     "uri": "/rxweb-router/angular-router/router-authorization",
                     "childrens": [
                         {
@@ -2948,51 +2961,10 @@
                     ]
                 },
                 {
-                    "title": "Authentication",
-                    "isActive": false,
-                    "uri": "/rxweb-router/angular-router/router-authentication",
-                    "linkTitle": "component-based",
-                    "refUri": "component-based"
-                },
-                {
                     "title": "Middlewares",
                     "uri": "/rxweb-router/angular-router/middleware",
                     "linkTitle": "middlewares",
                     "refUri": "middlewares"
-                },
-                {
-                    "title": "Decorators",
-                    "uri": "/rxweb-router/angular-router/router-decorators",
-                    "childrens": [
-                        {
-                            "title": "@access",
-                            "isActive": false,
-                            "uri": "/rxweb-router/angular-router/router-decorators#@access",
-                            "linkTitle": "global",
-                            "refUri": "global"
-                        },
-                        {
-                            "title": "@anonymous",
-                            "isActive": false,
-                            "uri": "/rxweb-router/angular-router/router-decorators#@anonymous",
-                            "linkTitle": "component-based",
-                            "refUri": "component-based"
-                        },
-                        {
-                            "title": "@middleware",
-                            "isActive": false,
-                            "uri": "/rxweb-router/angular-router/router-decorators#@middleware",
-                            "linkTitle": "component-based",
-                            "refUri": "component-based"
-                        },
-                        {
-                            "title": "@routerModule",
-                            "isActive": false,
-                            "uri": "/rxweb-router/angular-router/router-decorators#@routerModule",
-                            "linkTitle": "component-based",
-                            "refUri": "component-based"
-                        }
-                    ]
                 }
             ]
         }

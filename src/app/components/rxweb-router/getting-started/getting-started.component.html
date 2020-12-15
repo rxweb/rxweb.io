@@ -1,49 +1,82 @@
 <div id="wrapper" *ngIf="showComponent">
     <div class="content">
         <div class="title-bar">
-            <p>It is used to manage navigation in single page applications along with determining user's access, resolving authentication, using
-                middleware.</p>
+            <p>A single package to manage routes, middlewares, access, authenticity and Url encryption in an intuitive
+                and segregated way.</p>
         </div>
 
-        <div class="bg-white border-radius" style="margin-top:22px;">
-            <div class="row">
-                <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-12">
 
+                <div class="bg-white border-radius">
                     <div class="hpanel">
                         <div class="tab-content fade show">
                             <div class="tab-pane panel-body validation-tab active">
-                                <div class="row page-section" id="installpackage">
-                                    <div class="col-lg-12">
-                                        <h2>Install Package<a title="Link to this heading" class="link-header"
-                                                href="/rxweb-router/router-getting-started#installpackage"><i
-                                                    class="fa fa-link"></i></a></h2>
-                                        <p class="showHideElement showElement">you need to install <span
-                                                class="highlighted">@rxweb/angular-router</span></p>
-                                        <div class="model-ts">
-                                            <div class="code">
-                                                <a class="float-right copy-icon" ngxClipboard
-                                                  [cbContent]="codeContent.installation"
-                                                    (cbOnSuccess)="installationCopied = true"
-                                                    [class.copied]="installationCopied"><i class="fa fa-files-o"
-                                                        aria-hidden="true"></i></a>
-                                                <div highlight="pre code">
-                                                    <pre><code [textContent]="codeContent.installation"></code></pre>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class='row page-section' id="benefits">
 
+                                    <div class='col-lg-12'>
+                                        <h2>Benefits:<a title="Link to this heading" class="link-header"
+                                                routerLink="/whats-next"><i class="fa fa-link"></i></a></h2>
+                                        <ul style="line-height: 35px;font-size: 15px;" class="bullet-list pl-3">
+                                            <li class="overview-nav-item">Maintainable and consistent
+
+                                            </li>
+                                            <li class="overview-nav-item">
+                                                Seperation of authentication and authorization
+                                            </li>
+                                            <li class="overview-nav-item">Individual Component wise access check
+                                            </li>
+                                            <li class="overview-nav-item">Centralized Encryption Management
+                                            </li>
+                                            <li class="overview-nav-item">Throughout application set one activate
+                                            </li>
+                                            <li class="overview-nav-item">Intuitive way to move throughout the
+                                                application using
+                                                decorator
+                                            </li>
+                                            <li class="overview-nav-item">Allow anonymous using a single decorator
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+                            
 
-                                <div class="row page-section" id="rxwebmodule">
+
+
+                    <div class="row page-section" id="installpackage">
+                        <div class="col-lg-12">
+                            <h2>Install Package<a title="Link to this heading" class="link-header"
+                                    href="/rxweb-router/router-getting-started#installpackage"><i
+                                        class="fa fa-link"></i></a></h2>
+                            <p class="showHideElement showElement">Install the package using the below command</p>
+                            <div class="model-ts">
+                                <div class="code">
+                                    <a class="float-right copy-icon" ngxClipboard [cbContent]="codeContent.installation"
+                                        (cbOnSuccess)="installationCopied = true" [class.copied]="installationCopied"><i
+                                            class="fa fa-files-o" aria-hidden="true"></i></a>
+                                    <div highlight="pre code">
+                                        <pre><code [textContent]="codeContent.installation"></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+                    <!-- <div class="row page-section" id="rxwebmodule">
                                     <div class="col-lg-12">
 
                                         <h2>Creating RxWebModule<a title="Link to this heading" class="link-header"><i
                                                     class="fa fa-link"></i></a></h2>
-                                        <p>RxWebModule is made for using multiple configurations and using the services of the router
-                                            package which resolves all the necessary information of the user from the server which is useful after navigating done which the help of router.  
-                                             you first need to create <span class="highlighted">RxWebModule</span> and create <span
-                                                class="highlighted">@routerModule</span>
+                                        <p>RxWebModule is made for using multiple configurations and using the services
+                                            of the router
+                                            package which resolves all the necessary information of the user from the
+                                            server which is useful after navigating done which the help of router.
+                                            you first need to create <span class="highlighted">RxWebModule</span> and
+                                            create <span class="highlighted">@routerModule</span>
 
                                         </p>
                                         <p>
@@ -54,28 +87,32 @@
                                             <p>After creation of RxWebModule, it needs to be imported in app module</p>
                                         </blockquote>
                                         <ol class="bullet-list-ordered">
-                                            <li><a class="redirect-link" routerLink="/rxweb-router/router/router-module"
+                                            <li><a class="redirect-link"
+                                                    routerLink="/rxweb-router/angular-router/router-authentication"
                                                     fragment="authentication">Authentication</a> for resolving the
                                                 authentication details from the server.
 
                                             </li>
                                             <li>For resolving the access from the server for a particular user
-                                                <a class="redirect-link" routerLink="/rxweb-router/router/router-module"
+                                                <a class="redirect-link"
+                                                    routerLink="/rxweb-router/angular-router/router-authorization"
                                                     fragment="authorization">Authorization</a>
 
                                             </li>
-                                            <li>For performing any action at the time of request calling
+                                            <li>Message middleware for sending mutiple messages at the same time to
+                                                multiple users
                                                 <a class="redirect-link"
-                                                    routerLink="/rxweb-router/router/middleware">Middleware</a>
+                                                    routerLink="/rxweb-router/angular-router/middleware">Middleware</a>
 
                                             </li>
                                             <li>
-                                                <a class="redirect-link" routerLink="/rxweb-router/router/router-module"
+                                                <a class="redirect-link"
+                                                    routerLink="/rxweb-router/angular-router/router-module"
                                                     fragment="urlencryption">Url Encryption </a>
                                                 for encrypting the url.
                                             </li>
                                         </ol>
-                                       
+
                                         <div class="model-ts">
                                             <div class="code">
                                                 <a class="float-right copy-icon" ngxClipboard
@@ -88,7 +125,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       <p>The above code is of rxweb.module.ts from which RxWebModule is imported in the app module.</p>
+                                        <p>The above code is of rxweb.module.ts from which RxWebModule is imported in
+                                            the app module.</p>
 
                                     </div>
                                 </div>
@@ -99,11 +137,16 @@
                                                     class="fa fa-link"></i></a></h2>
 
                                         <p>
-                                            Routing enables you to navigate the path from one route to another. For more information about routing, visit <a target="_blank" class="redirect-link" href="https://angular.io/api/router/Router">Angular Routing</a> 
-                                            While declaring routes, we provide the path and the component name to the respective component name  
-                                            To route the configured services at the time of navigation use the <span class="highlighted">BaseCanActivate</span>. 
-                                            It will allow to use the @routerModule services while writting any custom code or adding any complex logic. 
-                                           
+                                            Routing enables you to navigate the path from one route to another. For more
+                                            information about routing, visit <a target="_blank" class="redirect-link"
+                                                href="https://angular.io/api/router/Router">Angular Routing</a>
+                                            While declaring routes, we provide the path and the component name to the
+                                            respective component name
+                                            To route the configured services at the time of navigation use the <span
+                                                class="highlighted">BaseCanActivate</span>.
+                                            It will allow to use the @routerModule services while writting any custom
+                                            code or adding any complex logic.
+
                                         </p>
 
                                         <h2>Example of route using BaseCanActivate
@@ -124,11 +167,8 @@
 
 
                                     </div>
-                                </div>
-                            </div>
+                                </div> -->
 
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

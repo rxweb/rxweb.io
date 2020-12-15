@@ -22,5 +22,10 @@ const ANGULAR_ROUTER_ROUTES: Routes = [
   loadChildren: () => import('./router-decorators/router-decorators.module').then(m => m.Router_decoratorsModule),
 	
 },
+{
+	path:'url-encryption',
+  loadChildren: () => import('./url-encryption/url-encryption.module').then(m => m.Router_UrlEncryptionModule),
+	
+},
 ];
 export const ANGULAR_ROUTER_ROUTING = RouterModule.forChild(ANGULAR_ROUTER_ROUTES);

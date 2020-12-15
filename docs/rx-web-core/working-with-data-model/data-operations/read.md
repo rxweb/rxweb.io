@@ -171,7 +171,7 @@ It retrieves the last element in the list which fulfiles the given condition.
     {
         return UserUow.Repository&ltUser&gt().Last(a =&gt a.LastName == "Christian");
     }
-````
+```
 
 ## LastAsync
 It retrieves the last element in the list which fulfiles the given condition asynchronously.
