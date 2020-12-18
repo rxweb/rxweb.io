@@ -1359,6 +1359,14 @@ li.diff-points {
 .particular {
   /* min-width: 165px; */
 }
+.stackbltiz-link {
+  background-color: #e7ecf3;
+  padding: 1em 1.25em;
+  border-radius: 2px;
+  color: #c5d6f3;
+  position: relative;
+  margin-top: 1em;
+}
 
 .text {
   /* min-width: 254px; */

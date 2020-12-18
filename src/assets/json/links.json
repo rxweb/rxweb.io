@@ -2927,13 +2927,6 @@
                     "isActive": false
                 },
                 {
-                    "title": "Url Encryption",
-                    "uri": "/rxweb-router/angular-router/url-encryption",
-                    "otherUri": "getting-started",
-                    "isOpen": false,
-                    "isActive": false
-                },
-                {
                     "title": "Authenticate Route",
                     "isActive": false,
                     "uri": "/rxweb-router/angular-router/router-authentication",
@@ -2945,18 +2938,25 @@
                     "uri": "/rxweb-router/angular-router/router-authorization",
                     "childrens": [
                         {
-                            "title": "Global",
+                            "title": "Page Level",
                             "isActive": false,
-                            "uri": "/rxweb-router/angular-router/router-authorization#global",
+                            "uri": "/rxweb-router/angular-router/router-authorization#page-level",
                             "linkTitle": "global",
                             "refUri": "global"
                         },
                         {
-                            "title": "Component Based",
+                            "title": "Component Level",
                             "isActive": false,
-                            "uri": "/rxweb-router/angular-router/router-authorization#component-based",
+                            "uri": "/rxweb-router/angular-router/router-authorization#component-level",
+                            "linkTitle": "global",
+                            "refUri": "global"
+                        },
+                        {
+                            "title": "Control Level",
+                            "isActive": false,
+                            "uri": "/rxweb-router/angular-router/router-authorization#control-level",
                             "linkTitle": "component-based",
-                            "refUri": "component-based"
+                            "refUri": "control-level"
                         }
                     ]
                 },

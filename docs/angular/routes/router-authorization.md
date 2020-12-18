@@ -6,44 +6,73 @@ type: simple
 linktitle: router-authorization
 ---
 
-# Global 
+# Authorization
+In every enterprise application there is a need of role based authorization to resolve the rights of the particular user to the application based upon the role after the user has logged in, lets consider a scenario where the application has a candidate module in the application having candidate form, A list to display the details of the candidate, a shared component which displays the skills of the candidate along with a button control to add and update skills, In this case the role based authorization should be done in such as way that the candidate page should be displayed to the role of the user depending upon the authorization level which will be divided into three categories :
 
-To assemble the rights of the user during the navigation in a single page application, global level authorization provides the authorized modules the accessibilty of the particular module for the logged in users    
+1) Page level authorization
+2) Component level authorization
+3) Control level authorization
 
-Authorization at the global level is done with the help of `@routerModule` which is configured in the App Module. Whenever the route is changed the component will accommodate the user and its access towards the particular module inrespect to the type of its action
+![Role Based Authorization](Images/roles-snap2.png)
 
-The `AuthorizationResolver` contains methods of Authorize and AuthorizeChildren methods to resolve the access modules based upon the user and roles. Authorize is used for the parent module and AuthorizeChildren are used for the child modules of the application. The Data for the access is resolved from the server and then it is resolved using this global resolver  
+# Page Level Authorization
+As mentioned in the above scenario, There is a candidate page which consists of a form which is displayed whenever the candidate module route is called after user logs in, In this case we will resolve the access towards the candidate page for the user whenever its route is called. The json schema which will be retrieved as per the case is as below :
+
+<div component="app-code" key="authorization-router-json"></div> 
+
+In this json result, 1 is the Id of the application module along with the read, write, update and delete access to the user. 
+
+> This schema may differ from the application based upon the complexity and need
+
+To achieve this we need to create a class named `AuthorizationResolver` which implements the interface `IAuthorize` to add the methods to resolve the user access object.
+Next we need to create a method `authorize` which returns the user access from the server based upon the application module Id and the action type which is verified in the `verifyAuthorization` method where the `AuthorizeConfig` configuration's  access level is the module Id and action type(get, post). You need to write the business logic here based upon the schema here the data is retrieved from the user-access.json file. 
+
+The Authentication Resolver class is as below : 
 
 <div component="app-code" key="authorization-router-component"></div> 
 
-# Component Based
-The standard approach of angular uses the `canActivate` to determine the accessibility after the route is called and this leads to creation of mutiple canActivate which is difficult to manage in large applications. But here we will manage this using a single `BaseCanActivate` used thoroughly in the application using decorators in the component for component level authorization  
+Next in the component class we need to add the `@access` decorator in which the application module id as the access level  and the action type as action as shown in the below component of candidate
 
-Individual component wise we can check whether the component is allowed to the particular user by the help of `@access` decorator which is used to determine the module access of the user for the particular component
+<div component="app-code" key="authorization-candidate-component"></div> 
 
-Component based authorization is done using the decorators of the access and anoymous above the component to determine the access of the application modules based upon the user roles and db access modules. 
+The standard approach of angular uses the `canActivate` gaurd to determine the accessibility according to the role after the route is called and this leads to creation of mutiple canActivate which is difficult to manage in large applications. But here we will manage this using a single `BaseCanActivate` used thoroughly in the application using decorators in the component for component level authorization
 
-# anonymous
-To allow anonymous users in any of the component throughout the application by using `@anonymous`
-Authenticated APIs need an authentication token for accessing the api in the web application but some API need an authentication by pass. For example : Login.
-For such Api we need `@anonymous` decorator in the component   
+In the candidate routing file, we need to pass the `BaseCanActivate` along with the route in canActivate parameter as shown here
 
-The second step is to pass the `@anonymous` decorator into the component as below 
+<div component="app-code" key="authorization-candidate-routing"></div> 
 
-<div component="app-code" key="authorization-anonymous-component"></div> 
+At the last we need to add the AuthorizationResolver class in the authorization parameter of `@routerModule` decorator at the root level module to make it globally accessible 
 
-# access
+<div component="app-code" key="authorization-router-model"></div> 
 
-While performing Role based authorization, It becomes important to maintain it on the client side as well. `@access` is used for managing the access based upon the role which is used for adjudging the role access based upon the application module and action.
+# Component Level Authorization
+In every application there are shared component/smart component which are the sub module of the main module, for these shared components the access is further kept to another level where it is sub divided based upon the role, If we talk about the candidate page which has a list component which displays the data of the candidate which is the child module of candidate
 
-<table class="table table-bordered table-striped">
-<tr><th>Parameter</th><th>Description</th></tr>
-<tr><td>accessLevel</td><td>Access level based upon the module</td></tr>
-<tr><td>action</td><td>name of the action(HTTP Verb)</td></tr>
-</table>
+In this case we need to create a `authorizeChildren` method in the same AuthorizationResolver class which we created earlier to resolve the user access object, this method is used to resolve the access of the child module.
 
-<div component="app-code" key="authorization-complete-model"></div> 
+<div component="app-code" key="authorization-router-sharedcomponent"></div> 
 
-The second step is to pass the `@access` decorator into the component as below 
+Further `@access` decorator will be added in the CandidateListComponent(shared module) in which the access level and the action type will be passed the same way as we had done in the page level component
 
-<div component="app-code" key="authorization-complete-component"></div> 
+The CandidateListComponent is as below :
+
+<div component="app-code" key="authorization-router-candidatelistcomponent"></div> 
+
+Add the  `BaseCanActivate` Authgaurd in the routing file of the candidate module for CandidateList module
+
+<div component="app-code" key="authorization-router-candidatelistrouting"></div> 
+
+# Control Level Authorization
+While performing some operations on a certain entity there are some controls which need to be restricted from certain users, For example in the skill entity of the candidate module there is a control of add in which based upon the plus icon click event the skill can be added, This control needs to be authorized based upon the user role.
+
+This can be done using `*rxAuthorize` in which the add component will be passed as the parameter value as shown in this html code
+
+<div component="app-code" key="authorization-candidate-html"></div> 
+
+The skillAdd is the property whose value will be assigned in the component as the SkillAddComponent, The authorization of the add button will be done based upon the access object retrieved from the skill add component.
+
+<div component="app-code" key="authorization-candidate-controlcomponent"></div> 
+
+<div class="stackbltiz-link"> 
+<a target="_blank" class="redirect-link" href="https://stackblitz.com/edit/router-authorization-e8dq1f?file=src/app/security/authorization-resolver.ts">Stackblitz</a>
+</div>
