@@ -45,6 +45,10 @@ At the last we need to add the AuthorizationResolver class in the authorization 
 
 <div component="app-code" key="authorization-router-model"></div> 
 
+<div class="stackbltiz-link"> 
+<a target="_blank" class="redirect-link" href="https://stackblitz.com/edit/router-authorization-e8dq1f?file=src/app/security/authorization-resolver.ts">Stackblitz</a>
+</div>
+
 # Component Level Authorization
 In every application there are shared component/smart component which are the sub module of the main module, for these shared components the access is further kept to another level where it is sub divided based upon the role, If we talk about the candidate page which has a list component which displays the data of the candidate which is the child module of candidate
 
@@ -62,6 +66,11 @@ Add the  `BaseCanActivate` Authgaurd in the routing file of the candidate module
 
 <div component="app-code" key="authorization-router-candidatelistrouting"></div> 
 
+<div class="stackbltiz-link"> 
+<a target="_blank" class="redirect-link" href="https://stackblitz.com/edit/router-authorization-child-level-authorization?file=src/app/dashboard.component.html">Stackblitz</a>
+</div>
+
+
 # Control Level Authorization
 While performing some operations on a certain entity there are some controls which need to be restricted from certain users, For example in the skill entity of the candidate module there is a control of add in which based upon the plus icon click event the skill can be added, This control needs to be authorized based upon the user role.
 
@@ -73,6 +82,7 @@ The skillAdd is the property whose value will be assigned in the component as th
 
 <div component="app-code" key="authorization-candidate-controlcomponent"></div> 
 
+
 <div class="stackbltiz-link"> 
-<a target="_blank" class="redirect-link" href="https://stackblitz.com/edit/router-authorization-e8dq1f?file=src/app/security/authorization-resolver.ts">Stackblitz</a>
+<a target="_blank" class="redirect-link" href="https://stackblitz.com/edit/router-authorization-control-level?file=src/app/candidate-list/candidate-list.component.ts">Stackblitz</a>
 </div>

@@ -30,3 +30,7 @@ The loggin middleware class is as below
 The second step is to pass the `@middleware` decorator into the component as below 
 
 <div component="app-code" key="middleware-complete-model"></div> 
+
+<div class="stackbltiz-link"> 
+<a target="_blank" class="redirect-link" href="https://stackblitz.com/edit/router-global-middleware-3hua2y?file=src/app/security/middlewares/bread-crumb-content-resolver.ts">Stackblitz</a>
+</div>
