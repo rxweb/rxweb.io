@@ -1,11 +1,11 @@
 {
     "complete": {
         "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { BaseComponent } from './base.component';\r\n\r\n\r\n@Component({\r\n    selector: 'app-put-complete',\r\n    templateUrl: './put-complete.component.html'\r\n})\r\nexport class PutCompleteComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any;\r\n\r\n    ngOnInit() {\r\n     this.Put(2);   \r\n    }\r\n\r\n    Put(id:number) {\r\n        this.put({params: [id], body: { firstName: \"Srishti\", lastName: 'Khandelwal' } }).subscribe(res => {\r\n            this.result = res\r\n        })\r\n    }\r\n}",
-        "function":"export class PutCompleteComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any;\r\n\r\n    ngOnInit() {\r\n     this.Put(2);   \r\n    }\r\n\r\n    Put(id:number) {\r\n        this.put({params: [id], body: { firstName: \"Srishti\", lastName: 'Khandelwal' } }).subscribe(res => {\r\n            this.result = res\r\n        })\r\n    }\r\n}",
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { UserService } from '.\/user.service';\r\n\r\n\r\n@Component({\r\n    selector: 'app-put-complete',\r\n    templateUrl: '.\/put-complete.component.html'\r\n})\r\nexport class PutCompleteComponent {\r\n\r\n    constructor(private userService:UserService){}\r\n    result: any;\r\n\r\n    Put(id:number) {\r\n        this.userService.put({path:'api\/Put', params: [id], body: { firstName: \"Cristine\", lastName: 'Dave' } }).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}",
+        "function":"export class PutCompleteComponent {\r\n\r\n    constructor(private userService:UserService){}\r\n    result: any;\r\n\r\n    Put(id:number) {\r\n        this.userService.put({path:'api\/Put', params: [id], body: { firstName: \"Cristine\", lastName: 'Dave' } }).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}",
         "html": "<button class=\"btn btn-primary\"  (click)=\"Put()\">Put Data</button><br />\r\n<div>{{result | json}}</div>   ",
-        "model": "import { RxHttp, http } from \"@rxweb/http\";\r\n\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/Put\",\r\n})\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}",
-        "modelName": "base.component.ts",
+        "model": "import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api\/Put\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class UserService extends RxHttp  {\r\n   \r\n     constructor() {\r\n        super();\r\n       \r\n    }\r\n}",
+        "modelName": "user.service.ts",
             "json": {}
     }
 }

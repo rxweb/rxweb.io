@@ -1,38 +1,43 @@
 {
+    "register":{
+        "complete":"hostUri?: string;\r\npath?: string;\r\nparams?: any[];\r\nqueryParams?: {\r\n    [key: string]: any;\r\n};\r\nresponseType?: 'arraybuffer' | 'blob' | 'json' | 'text';",
+        "service":"\r\nimport { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/Users\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class UserService extends RxHttp  {\r\n   \r\n     constructor() {\r\n        super();\r\n       \r\n    }\r\n}\r\n"
+        
+    },
     "complete": {
         "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\nimport { BaseComponent } from './base.component';\r\n\r\n@Component({\r\n    selector: 'app-get-complete',\r\n    templateUrl: './get-complete.component.html'\r\n})\r\nexport class GetCompleteComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n      \r\n    }\r\n\r\n    Get() {\r\n        this.get().subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}\r\n",
-        "function":"export class GetCompleteComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n      this.Get();\r\n    }\r\n\r\n    Get() {\r\n        this.get().subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}",
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { UserService } from '.\/user.service';\r\n@Component({\r\n    selector: 'app-get-complete',\r\n    templateUrl: '.\/get-complete.component.html'\r\n})\r\nexport class GetCompleteComponent  {\r\n  constructor(private userService : UserService){}\r\n    result: any\r\n\r\n    Get() {\r\n        this.userService.get().subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}",
+        "function":"export class GetCompleteComponent  {\r\n  constructor(private userService : UserService){}\r\n    result: any\r\n\r\n    Get() {\r\n        this.userService.get().subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}",
         "html": "<button class=\"btn btn-primary\" (click)=\"Get()\">Get Data</button><br />\r\n<div>{{result | json}}</div>",
-        "model": "import { RxHttp, http } from \"@rxweb/http\";\r\n\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/Get\",\r\n})\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}",
-        "modelName": "base.component.ts",
+        "model":"import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/Get\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class UserService extends RxHttp  {\r\n   \r\n     constructor() {\r\n        super();\r\n       \r\n    }\r\n}\r\n",
+        "modelName":"user.service.ts",
         "json": {}
     },
     "getById": {
         "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { BaseComponent } from './base.component';\r\n\r\n@Component({\r\n    selector: 'app-get-getById',\r\n    templateUrl: './get-get-by-id.component.html'\r\n})\r\nexport class GetGetByIdComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n      \r\n    }\r\n\r\n    GetById(id:number) {\r\n        this.get({params:[id]}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}\r\n",
-        "function":"export class GetGetByIdComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n      this.GetById(2);\r\n    }\r\n\r\n    GetById(id:number) {\r\n        this.get({params:[id]}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}",
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { UserService } from '.\/user.service';\r\n\r\n@Component({\r\n    selector: 'app-get-getById',\r\n    templateUrl: '.\/get-get-by-id.component.html'\r\n})\r\nexport class GetGetByIdComponent {\r\n\r\n    constructor(private userService: UserService){}\r\n\r\n    result: any\r\n\r\n    GetById(id:number) {\r\n        this.userService.get({params:[id]}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}\r\n",
+        "function":"export class GetGetByIdComponent {\r\n\r\n    constructor(private userService: UserService){}\r\n\r\n    result: any\r\n\r\n    GetById(id:number) {\r\n        this.userService.get({params:[id]}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}",
         "html": "<button class=\"btn btn-primary\"  (click)=\"GetById(2)\">Get Data By Id</button><br />\r\n<div>{{result | json}}</div>",
-        "model": "import { RxHttp, http } from \"@rxweb/http\";\r\n\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/GetById\",\r\n})\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}",
-        "modelName": "base.component.ts",
+        "model":"import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/GetById\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class UserService extends RxHttp  {\r\n   \r\n     constructor() {\r\n        super();\r\n       \r\n    }\r\n}\r\n",
+        "modelName":"user.service.ts",
         "json": {}
     },
     "getByQueryParams": {
         "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { BaseComponent } from './base.component';\r\n\r\n@Component({\r\n    selector: 'app-get-getByQueryParams',\r\n    templateUrl: './get-get-by-query-params.component.html'\r\n})\r\nexport class GetGetByQueryParamsComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n      \r\n    }\r\n\r\n    GetByQueryParams(firstName:number) {\r\n        this.get({queryParams:[firstName]}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}\r\n",
-        "function":"export class GetGetByQueryParamsComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n    this.GetByQueryParams('Srishti');\r\n    }\r\n\r\n    GetByQueryParams(firstName:string) {\r\n        this.get({queryParams:[firstName]}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}\r\n",
-        "html": "<button class=\"btn btn-primary\"  (click)=\"GetByQueryParams('Srishti')\">Get Data By queryParams</button><br />\r\n<div>{{result | json}}</div>",
-        "model": "import { RxHttp, http } from \"@rxweb/http\";\r\n\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/GetByQueryParams\",\r\n})\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}",
-        "modelName": "base.component.ts",
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { UserService } from '.\/user.service';\r\n\r\n@Component({\r\n    selector: 'app-get-getByQueryParams',\r\n    templateUrl: '.\/get-get-by-query-params.component.html'\r\n})\r\nexport class GetGetByQueryParamsComponent {\r\n\r\n    constructor(private userService: UserService){}\r\n\r\n    result: any\r\n\r\n    GetByQueryParams(firstName:number) {\r\n        this.userService.get({queryParams:[firstName]}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}\r\n",
+        "function":"export class GetGetByQueryParamsComponent {\r\n\r\n    constructor(private userService: UserService){}\r\n\r\n    result: any\r\n\r\n    GetByQueryParams(firstName:number) {\r\n        this.userService.get({queryParams:[firstName]}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}",
+        "html": "<button class=\"btn btn-primary\"  (click)=\"GetByQueryParams('Cristine')\">Get Data By queryParams</button><br />\r\n<div>{{result | json}}</div>",
+        "model":"import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/GetByQueryParams\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class UserService extends RxHttp  {\r\n   \r\n     constructor() {\r\n        super();\r\n       \r\n    }\r\n}\r\n",
+        "modelName":"user.service.ts",
         "json": {}
     },
     "responseType": {
         "notes": [],
-        "component": "import { Component, OnInit } from '@angular/core';\r\n\r\nimport { BaseComponent } from './base.component';\r\n\r\n@Component({\r\n    selector: 'app-get-getByQueryParams',\r\n    templateUrl: './get-get-by-query-params.component.html'\r\n})\r\nexport class GetGetByQueryParamsComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n      \r\n    }\r\n\r\n    GetByQueryParams(firstName:number) {\r\n        this.get({queryParams:[firstName]}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}\r\n",
-        "function":"export class GetResponseTypeComponent extends BaseComponent implements OnInit {\r\n\r\n    result: any\r\n\r\n    ngOnInit() {\r\n      this.GetByResponseType(); \r\n    }\r\n\r\n    GetByResponseType() {\r\n        this.get({responseType:\"text\"}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n\r\n}",
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { UserService } from '.\/user.service';\r\n\r\n@Component({\r\n    selector: 'app-get-responseType',\r\n    templateUrl: '.\/get-response-type.component.html'\r\n})\r\nexport class GetResponseTypeComponent {\r\n\r\n    constructor(private userService: UserService){}\r\n\r\n    result: any\r\n\r\n    GetByQueryParams() {\r\n        this.userService.get({responseType:\"text\"}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}",
+        "function":"export class GetResponseTypeComponent {\r\n\r\n    constructor(private userService: UserService){}\r\n\r\n    result: any\r\n\r\n    GetByQueryParams() {\r\n        this.userService.get({responseType:\"text\"}).subscribe(res => {\r\n            this.result = res;\r\n        })\r\n    }\r\n}",
         "html": "<button class=\"btn btn-primary\"  (click)=\"GetByResponseType()\">Get Data By ResponseType</button><br />\r\n<div>{{result | json}}</div>",
-        "model": "import { RxHttp, http } from \"@rxweb/http\";\r\n\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/GetByResponseType\",\r\n})\r\nexport class BaseComponent extends RxHttp {\r\n\r\n}",
-        "modelName": "base.component.ts",
+        "model":"import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api/GetByResponseType\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class UserService extends RxHttp  {\r\n   \r\n     constructor() {\r\n        super();\r\n       \r\n    }\r\n}\r\n",
+        "modelName":"user.service.ts",
         "json": {}
     }
 }

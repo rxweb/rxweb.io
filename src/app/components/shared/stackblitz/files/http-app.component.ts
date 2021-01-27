@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
         hostURIs: [{
             name: 'local',
             default: true,
-            uri: 'https://rxhttpapi.azurewebsites.net' //Your server side url here
+            uri: 'https://rxwebhttpapi.azurewebsites.net' //Your server side url here
         }],
         filters: [],
         onError: (r) => { console.log(r) }        

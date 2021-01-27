@@ -1,23 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-
-import { BaseComponent } from '../base.component';
+import { UserService } from '../../user.service';
 
 
 @Component({
     selector: 'app-put-complete',
     templateUrl: './put-complete.component.html'
 })
-export class PutCompleteComponent extends BaseComponent implements OnInit {
+export class PutCompleteComponent implements OnInit {
 
+    constructor(private userService:UserService){}
     result: any;
 
     ngOnInit() {
-     this.Put(2);   
     }
 
     Put(id:number) {
-        this.put({params: [id], body: { firstName: "Srishti", lastName: 'Khandelwal' } }).subscribe(res => {
-            this.result = res
+        this.userService.put({path:'api/Put', params: [id], body: { firstName: "Cristine", lastName: 'Dave' } }).subscribe(res => {
+            this.result = JSON.parse(JSON.stringify(res));
+            this.result = JSON.parse(this.result.substr(14,56));
         })
     }
 }
+

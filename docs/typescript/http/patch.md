@@ -5,8 +5,8 @@ category: http
 type: simple
 linktitle: patch
 ---
-
-The `patch` method of `RxHttp` is used for making partial changes to an existing resource by setting the config in your component.
+# Patch
+`patch` method of `RxHttp` is used for making partial changes to an existing resource by setting the config in your component.
 
 # Example
 

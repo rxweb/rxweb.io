@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../user.service';
 
-import { BaseComponent } from '../base.component';
 
 @Component({
     selector: 'app-patch-complete',
     templateUrl: './patch-complete.component.html'
 })
-export class PatchCompleteComponent extends BaseComponent implements OnInit {
+export class PatchCompleteComponent  {
 
     result: any;
-
-    ngOnInit() {
-     this.Patch(2);   
-    }
+  
+    constructor(private userService: UserService){}
 
     Patch(id:number) {
-        this.patch({params: [id], body: { firstName: "Srishti", } }).subscribe(res => {
-            this.result = res;
+        this.userService.patch({path:'api/Patch', params: [2], body: { firstName: "Cristine", } }).subscribe(res => {
+            this.result = JSON.parse(JSON.stringify(res));
+            this.result = JSON.parse(this.result.substr(14,56));
         })
     }
 }
+

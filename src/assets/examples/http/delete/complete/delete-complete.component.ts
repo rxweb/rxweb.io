@@ -1,21 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-
-import { BaseComponent } from '../base.component';
+import { UserService } from '../../user.service';
 
 @Component({
     selector: 'app-delete-complete',
     templateUrl: './delete-complete.component.html'
 })
-export class DeleteCompleteComponent extends BaseComponent implements OnInit {
+export class DeleteCompleteComponent {
 
     result: any;
 
-    ngOnInit() {
-    this.Delete(2);   
-    }
+    constructor(private userService : UserService){}
 
     Delete(id:number) {
-        this.delete({ params: [id], body: { firstName: "Srishti", lastName: 'Khandelwal' } }).subscribe(res => {
+        this.userService.delete({ path:'api/Delete', params: [id], body: { firstName: "Srishti", lastName: 'Khandelwal' } }).subscribe(res => {
         this.result = res;
         })
     }

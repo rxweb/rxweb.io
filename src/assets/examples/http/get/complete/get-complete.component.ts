@@ -1,22 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseComponent } from './base.component';
-
+import { UserService } from '../../user.service';
 @Component({
     selector: 'app-get-complete',
     templateUrl: './get-complete.component.html'
 })
-export class GetCompleteComponent extends BaseComponent implements OnInit {
-
+export class GetCompleteComponent  {
+  constructor(private userService : UserService){}
     result: any
 
-    ngOnInit() {
-      this.Get();
-    }
-
     Get() {
-        this.get().subscribe(res => {
+        this.userService.get({path:'api/Get'}).subscribe(res => {
             this.result = res;
+            this.result = JSON.parse(this.result);
         })
     }
-
 }

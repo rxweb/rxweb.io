@@ -1,23 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
-import { BaseComponent } from './base.component';
+import { UserService } from '../../user.service';
 
 @Component({
     selector: 'app-get-getByQueryParams',
     templateUrl: './get-get-by-query-params.component.html'
 })
-export class GetGetByQueryParamsComponent extends BaseComponent implements OnInit {
+export class GetGetByQueryParamsComponent  {
 
+    constructor(private userService: UserService){}    
     result: any
 
-    ngOnInit() {
-    this.GetByQueryParams('Srishti');
-    }
-
-    GetByQueryParams(firstName:string) {
-        this.get({queryParams:[firstName]}).subscribe(res => {
+    GetByQueryParams(firstName?:string) {
+        this.userService.get({path:'api/GetByQueryParams', queryParams:['Cristine']}).subscribe(res => {
             this.result = res;
+            this.result = JSON.parse(this.result);
         })
     }
-
 }

@@ -1,23 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
-import { BaseComponent } from './base.component';
+import { UserService } from '../../user.service';
 
 @Component({
     selector: 'app-get-responseType',
     templateUrl: './get-response-type.component.html'
 })
-export class GetResponseTypeComponent extends BaseComponent implements OnInit {
+export class GetResponseTypeComponent {
 
+    constructor(private userService:UserService){}
     result: any
 
-    ngOnInit() {
-      this.GetByResponseType(); 
-    }
-
     GetByResponseType() {
-        this.get({responseType:"text"}).subscribe(res => {
+        this.userService.get({path:'api/GetByResponseType', responseType:"text"}).subscribe(res => {
             this.result = res;
+            this.result = JSON.parse(this.result);
         })
     }
-
 }
