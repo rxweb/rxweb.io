@@ -4,9 +4,9 @@
          "component":"import {XhrContext, HttpResponse,ResponseFilter,AbstractRequestFilter } from \"@rxweb/http\"\r\n\r\nexport class InMemory extends AbstractRequestFilter {\r\n    \r\n    onRequest = (context: XhrContext) => {\r\n        context.result = [{ firstName: 'John' }]\r\n        context.response.statusCode = 200;\r\n        this.onRequestExecuting(context);\r\n    }\r\n\r\n}"
     },
     "auth":{
-      "filter":"import { XhrContext, AbstractRequestFilter } from \"@rxweb/http\"\r\nexport class AuthFilter extends AbstractRequestFilter {\r\n\r\n    onRequest = (context: XhrContext) => {\r\n        context.request.headers.Authorization = \"Abc\";\r\n        this.onRequestExecuting(context);\r\n    }\r\n}"
+      "filter":"onRequest = (context: XhrContext) => {    \r\n            let authorization = this.storagedata.local.get(\"auth\",false)\r\n            let key = this.storagedata.local.get(\"key\",false)\r\n            if (authorization !== null && authorization !== undefined && key !== null && key !== undefined){\r\n                context.request.headers[\"Authorization\"] = authorization;\r\n                context.request.headers[\"request_identity\"] = key;\r\n            }\r\n        this.onRequestExecuting(context);\r\n    }  "
     },
     "response":{
-        "filter":"import {XhrContext, HttpResponse,ResponseFilter,AbstractRequestFilter } from \"@rxweb/http\"\r\n\r\nexport class Logging extends AbstractRequestFilter implements ResponseFilter {\r\n    private _startTime: Date;\r\n    onRequest = (context: XhrContext) => {\r\n        this._startTime = new Date();\r\n        this.onRequestExecuting(context);\r\n    }\r\n\r\n\r\n    onResponse = (response: HttpResponse) => {\r\n        return response;\r\n    }\r\n}"
+        "filter":"onResponse = (response: HttpResponse) => {\r\n        let authorization = this.storagedata.local.get(\"auth\",false)\r\n        if (authorization !== null && authorization !== undefined){\r\n            this.storagedata.local.save(\"xSession\",new Date())\r\n        }\r\n        return response;\r\n    }"
       }     
 }
