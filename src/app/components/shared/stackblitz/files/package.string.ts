@@ -15,7 +15,7 @@ export const PACKAGE:string = `{
     "core-js": "^2.5.7",
     "@rxweb/reactive-dynamic-forms": "0.0.3",
     "@rxweb/generics":"0.0.1-4",
-    "@rxweb/sanitizers":"0.0.1-1",
+    "@rxweb/sanitizers":"0.0.1",
     "@rxweb/http":"0.0.0-5",
     "@rxweb/storage":"0.0.1",
     "@rxweb/translate":"1.0.13",
