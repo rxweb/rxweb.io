@@ -1403,35 +1403,7 @@
                         }
                     ]
                 },
-                {
-                    "title": "Decorators",
-                    "isOpen": true,
-                    "isActive": false,
-                    "linkTitle": "decorators",
-                    "childrens": [
-                        {
-                            "title": "http",
-                            "uri": "/rxweb-http/http/decorators#http",
-                            "isActive": false,
-                            "linkTitle": "decorators",
-                            "refUri": "http"
-                        },
-                        {
-                            "title": "inMemory",
-                            "uri": "/rxweb-http/http/decorators#inMemory",
-                            "isActive": false,
-                            "linkTitle": "decorators",
-                            "refUri": "inMemory"
-                        },
-                        {
-                            "title": "xhrFilter",
-                            "uri": "/rxweb-http/http/decorators#xhrFilter",
-                            "isActive": false,
-                            "linkTitle": "decorators",
-                            "refUri": "xhrFilter"
-                        }
-                    ]
-                },
+              
                 {
                     "title": "API",
                     "isOpen": true,
