@@ -1400,18 +1400,11 @@
                     "linkTitle": "decorators",
                     "childrens": [
                         {
-                            "title": "onRequest",
-                            "uri": "/rxweb-http/http/filters#OnRequest",
+                            "title": "filters",
+                            "uri": "/rxweb-http/http/global-filter",
                             "isActive": false,
                             "linkTitle": "filters",
                             "refUri": "OnRequest"
-                        },
-                        {
-                            "title": "onResponse",
-                            "uri": "/rxweb-http/http/filters#OnResponse",
-                            "isActive": false,
-                            "linkTitle": "filters",
-                            "refUri": "OnResponse"
                         }
                     ]
                 }
