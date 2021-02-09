@@ -5,20 +5,54 @@ category: http
 type: simple
 linktitle: filters
 ---
-OnRequest and OnResponse filters allows you to perform some action during the request execution and on response during the server interaction life cycle. If you want to set config object including any arguments or model to pass while making XHR calls (i.e. using XMLHttpRequest), you can do it with the help of `@xhrFilter` decorator of `RxHttp`.   
-
-# Scenario
-As we are using token based authentication in the application, we need to add the authentication token along with the request identity key in the authorization header when we make a request to the server         
+Filters in rxweb http allows to run a specific code at specific stages in the request processing whenever any request is made. Here we will understand two stages at when we can excecute filters at global as well as component level. OnRequest and OnResponse filters allows you to perform some action during the request execution and on response during the server interaction life cycle.
 
 ![OnRequest and OnResponse](assets/rxwebcore/Images/onrequest.png)
 
+# Global Filters
+# Scenario
+As we are using token based authentication in the application, we need to add the authentication token along with the request identity key in the authorization header when we make a request to the server         
+
 # OnRequest
-In this OnRequest method adds authorization header to the request. this header will be passed from the auth token which is stored in the local storage   
+In this OnRequest method adds authorization header to the request, this header will be passed from the auth token which is stored in the local storage   
+To Authorize the requests the context will be in need to add authorization headers before every request is made to the server    
 
-<div component="app-code" key="app-filters-auth"></div>
+<div component="app-code" key="app-auth-filter"></div>
 
-# OnResponse
-In this OnResponse method it stores the session data is stored in the local storage
+# OnResponse             
+The OnResponse method will be called once the response is fetched from the server, In this OnResponse method it stores the session data is stored in the local storage. This method will be further used to check whether to logOut whenever the session timeOut Takes place
 
-<div component="app-code" key="app-filters-response"></div>
+<div component="app-code" key="app-response-filter"></div>
+
+Add this Auth filter into the root app component to use it globally into the model parameter 
+
+<div component="app-code" key="app-filters-model"></div>
+
+Below is the working example 
+<div class="stackbltiz-link"> 
+<a target="_blank" class="redirect-link" href="https://stackblitz.com/edit/angular-nkmcqc-frtjha?file=src%2Fapp%2Fbrowser-storage.ts">Stackblitz</a>
+</div>
+
+# Service Based
+If you want to set config object including any arguments or model to pass while making XHR calls (i.e. using XMLHttpRequest), you can do it with the help of `@xhrFilter` decorator of `RxHttp`.   
+
+# Scenario
+In the product controller there is a need to add an additional header which specifies that the content type should be application json. This will be done using `@xhrFilter` decorator above the service class, the headers will be added in the onRequest method of the header filter class.
+
+The header filter class is as below:
+
+<div component="app-code" key="app-complete-component"></div>
+
+This will be registered in the product service class of the entity where the additional header will be added and this method will be specified in the model parameter as below 
+
+<div component="app-code" key="app-complete-model"></div>
+
+The example is as below :
+
+<div class="stackbltiz-link"> 
+<a target="_blank" class="redirect-link" href="https://stackblitz.com/edit/angular-nkmcqc-frtjha?file=src/app/product.service.ts">Stackblitz</a>
+</div>
+
+
+
 

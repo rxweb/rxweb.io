@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { OnInit } from "@angular/core";
-import { ReactiveFormConfig, ErrorMessageBindingStrategy } from "@rxweb/reactive-form-validators";
+import { ReactiveFormConfig, ErrorMessageBindingStrategy, model } from "@rxweb/reactive-form-validators";
 import { Router, RouterOutlet } from "@angular/router";
 import { NavigationEnd } from "@angular/router";
 import { HostListener } from "@angular/core";
@@ -12,6 +12,7 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientConfig } from '@rxweb/http';
 import { TranslationCore, RxTranslation } from '@rxweb/translate';
+
 
 
 @Component({
@@ -203,7 +204,7 @@ export class AppComponent implements OnInit {
             hostURIs: [{
               name: 'local',
               default: true,
-              uri: 'https://rxwebhttpapi.azurewebsites.net'
+              uri: 'http://rxwebhttpapi.azurewebsites.net'
            
             }],
             filters: [],

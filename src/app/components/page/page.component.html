@@ -1,8 +1,19 @@
 
 <div id="wrapper">
   
-   
     <div class="content">
+        <ul *ngIf="mainType == 'rxweb-http' && (typeName == 'global-filter' || typeName == 'service-entity-filter')" class="nav  ml-auto w-100 mt-2" [class.nav-tabs]="mainType == 'rxweb-http' && (typeName == 'global-filter' || typeName == 'service-entity-filter')" [class.page_content_tabs]="mainType == 'rxweb-http' && (typeName == 'global-filter' || typeName == 'service-entity-filter')" >
+            <li class="ng-star-inserted" [class.active]="activeTab == 'global-filter'">
+  
+            <a (click)="changeRouteTo('global-filter')">Global</a>
+        </li>
+        <li class="ng-star-inserted"
+            [class.active]="activeTab == 'service-entity-filter'"
+           >
+            <a (click)="changeRouteTo('service-entity-filter')">Service Entity</a>
+        </li>
+    </ul>
+
         <ul *ngIf="mainType == 'form-validations' || mainType == 'how-to' || mainType == 'async-validators'"  class="nav  ml-auto w-100 mt-2" [class.nav-tabs]="mainType == 'form-validations' || mainType == 'how-to'" [class.page_content_tabs]="mainType == 'form-validations' || mainType == 'how-to' || mainType == 'async-validators'">
             <li class="ng-star-inserted" [class.active]="activeTab == 'validators'"
             *ngIf="(mainType == 'form-validations' || mainType == 'how-to' || mainType == 'async-validators')  && validationName !== 'rule' && validationName !== 'async' && validationName !== 'stronglyType' && validationName !== 'classAbstraction'  && validationName !== 'genericModel'  && validationName !== 'autoPushFormGroup'">

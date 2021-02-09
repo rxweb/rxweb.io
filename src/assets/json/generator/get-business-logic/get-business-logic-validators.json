@@ -1,0 +1,38 @@
+{
+    "customlogic": {
+        "notes": [],
+        "component": "import { Component, OnInit } from \"@angular\/core\";\r\nimport { UserService, UserList } from \".\/user.service\";\r\n@Component({\r\n  selector: \"app-get-custom\",\r\n  templateUrl: \".\/get-custom.component.html\"\r\n})\r\nexport class GetCustomComponent {\r\n  constructor(private userService: UserService) {}\r\n  result: any;\r\n\r\n  Get() {\r\n    this.userService.GetAllUsers();\r\n    this.result = UserList;\r\n  }\r\n}\r\n",
+        "function": "export class GetCustomComponent {\r\n  constructor(private userService: UserService) {}\r\n  result: any;\r\n\r\n  Get() {\r\n    this.userService.GetAllUsers();\r\n    this.result = UserList;\r\n  }\r\n}\r\n",
+        "html": "<button class=\"btn btn-primary\" (click)=\"Get()\">Get Active Users<\/button><br \/>\r\n<div>{{result | json}}<\/div>",
+        "model": "import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\nexport var UserList;\r\n\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api\/GetBusinessLogic\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class UserService extends RxHttp {\r\n    constructor() {\r\n        super();\r\n\r\n    }\r\n\r\n    GetAllUsers() {\r\n        return this.get().subscribe(response => {\r\n            UserList =  response;\r\n            UserList = JSON.parse(UserList).filter(x => x.isActive == true)\r\n        })\r\n    }\r\n\r\n}\r\n",
+        "modelName": "user.service.ts",
+        "json": {}
+    },
+    "customgetById": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { CustomGetByIdService,User } from '.\/get-custom.service';\r\n\r\n\r\n@Component({\r\n    selector: 'app-get-customgetById',\r\n    templateUrl: '.\/get-custom-by-id.component.html'\r\n})\r\nexport class GetCustomByIdComponent {\r\n\r\n    constructor(private customGetByIdService: CustomGetByIdService){}\r\n\r\n    result: any\r\n\r\n    GetById(id:number) {\r\n        this.result = this.customGetByIdService.GetUserById(id);\r\n        this.result = User;   \r\n    }\r\n}\r\n",
+        "function": "export class GetCustomByIdComponent {\r\n    constructor(private customGetByIdService: CustomGetByIdService){}\r\n\r\n    result: any\r\n\r\n    GetById(id:number) {\r\n        this.result = this.customGetByIdService.GetUserById(id);\r\n        this.result = User;   \r\n    }\r\n}\r\n",
+        "html": "<button class=\"btn btn-primary\" (click)=\"GetById(2)\">Get Active Users<\/button><br \/>\r\n<div>{{result | json}}<\/div>",
+        "model": "import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\n@http({\r\n    path: \"api\/Products\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class ProductService extends RxHttp {\r\n    markAsDirty:boolean;\r\n    constructor() {\r\n        super();\r\n    }\r\n\r\n    addProduct(product?: any) {\r\n        product.createdBy = this.browserStorage.local.get('userId', true);\r\n        product.createdDate = new Date();\r\n        return this.post({ body: product });\r\n    }\r\n}",
+        "modelName": "get-custom.service.ts",
+        "json": {}
+    },
+    "customgetByParams": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { CustomByParamsService, users } from '.\/get-custom.service';\r\n\r\n@Component({\r\n    selector: 'app-get-customgetByParams',\r\n    templateUrl: '.\/get-custom-params.component.html'\r\n})\r\nexport class GetCustomParamsComponent {\r\n\r\n    constructor(private customByParamsService: CustomByParamsService){}\r\n\r\n    result: any\r\n\r\n\r\n    GetByQueryParams(startLetter?:number) {\r\n        this.result = this.customByParamsService.GetUserByParams(startLetter);  \r\n        this.result = users;\r\n    }\r\n\r\n}",
+        "function": "export class GetCustomParamsComponent {\r\n\r\n    constructor(private customByParamsService: CustomByParamsService){}\r\n\r\n    result: any\r\n\r\n \r\n    GetByQueryParams(startLetter?:number) {\r\n        this.result = this.customByParamsService.GetUserByParams(startLetter);  \r\n        this.result = users;\r\n    }\r\n\r\n}",
+        "html": "<button class=\"btn btn-primary\" (click)=\"GetByQueryParams()\">Get Active Users<\/button><br \/>\r\n<div>{{result | json}}<\/div>",
+        "model": "import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\nexport var users: any;\r\n@http({\r\n    path: \"api\/GetByQueryParams\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class CustomByParamsService extends RxHttp {\r\n\r\n    constructor() {\r\n        super();\r\n\r\n    }\r\n\r\n    GetUserByParams(queryParams:any) {\r\n        return this.get().subscribe(response => {\r\n             users = response;\r\n            users = JSON.parse(users)\r\n             users = users[0].filter(x=>x['firstName'].startsWith(\"J\"))\r\n           \r\n        })\r\n    }\r\n\r\n}",
+        "modelName": "get-custom.service.ts",
+        "json": {}
+    },
+     "custombyresponsetype": {
+        "notes": [],
+        "component": "import { Component, OnInit } from '@angular\/core';\r\nimport { CustomByResponseService, UserList } from '.\/get-custom-responsetype.service';\r\n\r\n@Component({\r\n    selector: 'app-get-custombyresponsetype',\r\n    templateUrl: '.\/get-custom-responsetype.component.html'\r\n})\r\nexport class GetCustomByResponseTypeCompleteComponent  {\r\n  constructor(private customByResponseService: CustomByResponseService){}\r\n    result: any\r\n\r\n    Get() {\r\n        this.result = this.customByResponseService.GetAllUsers();\r\n        this.result = UserList;        \r\n    }\r\n}\r\n",
+        "function": "export class GetCustomByResponseTypeCompleteComponent  {\r\n  constructor(private customByResponseService: CustomByResponseService){}\r\n    result: any\r\n\r\n    Get() {\r\n        this.result = this.customByResponseService.GetAllUsers();\r\n        this.result = UserList;        \r\n    }\r\n}\r\n",
+        "html": "<button class=\"btn btn-primary\" (click)=\"Get()\">Get Active Users<\/button><br \/>\r\n<div>{{result | json}}<\/div>",
+        "model": "import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\nexport var UserList: any ;\r\n@http({\r\n    hostKey: \"local\",\r\n    path: \"api\/GetBusinessLogic\",\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class CustomByResponseService extends RxHttp {\r\n \r\n    constructor() {\r\n        super();\r\n\r\n    }\r\n\r\n    GetAllUsers() {\r\n        return this.get({responseType:'text'}).subscribe(response => {\r\n            UserList = response;\r\n            UserList =  JSON.parse(UserList).filter(x => x.isActive == true)            \r\n        })\r\n    }\r\n\r\n}\r\n",
+        "modelName": "get-custom.service.ts",
+        "json": {}
+    }
+}

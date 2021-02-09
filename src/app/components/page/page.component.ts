@@ -128,6 +128,13 @@ export class PageComponent implements OnInit,OnDestroy {
       this.router.navigate([nextObj.link]);
     }
   }
+
+  changeRouteTo(tabName : string){
+   
+   
+    this.router.navigate(['/', this.mainType, this.validationName,  tabName])
+    this.activeTab = tabName;
+  }
   bind() {
     this.codeUri = "";
     this.htmlUri = "";
@@ -215,7 +222,7 @@ export class PageComponent implements OnInit,OnDestroy {
 
    
     if(this.typeName)
-
+    
     this.http.get(this.codeUri, this.options).subscribe(response => {
       this.codeContent = JSON.parse(response.toString());
       if (this.router.url.includes("vue")) {
@@ -225,7 +232,13 @@ export class PageComponent implements OnInit,OnDestroy {
       this.http.get(this.htmlUri, this.options).subscribe((responseObj: object) => {      
         this.jsonContent = JSON.parse(responseObj.toString());
         this.showComponent = true;
+        if(this.mainType == 'rxweb-http'  && (this.typeName == 'global-filter' || this.typeName == 'service-entity-filter')){
+          if(this.typeName )
+          this.activeTab = this.typeName;
+          }
+          else{
         this.activeTab = splitedArray[3];
+          }
         this.applicationBroadcaster.topSubject.next({ ...this.codeContent, activeTab: this.activeTab, mainType: this.mainType, validationName: this.validationName, templateDrivenType: this.templateDrivenType })
         this.showViewer = true;
       });
@@ -233,12 +246,15 @@ export class PageComponent implements OnInit,OnDestroy {
   }
 
   route(typeName: string, templateDrivenType?: string) {
+    if(this.mainType == "")
+    this.router.navigate(['/',this.mainType])
     if (templateDrivenType) {
       this.router.navigate(['/', this.mainType, this.validationName, typeName, templateDrivenType])
       this.templateDrivenType = templateDrivenType;
     }
     else
       this.router.navigate(['/', this.mainType, this.validationName, typeName])
+
   }
   scrollTo(section) {
     window.location.hash = section;

@@ -82,24 +82,8 @@
                                 </div>
                                 <div class="row page-section" id="baseComponent">
                                     <div class="col-lg-12">
-                                        <h2>How to use<a title="Link to this heading" class="link-header"><i
-                                                    class="fa fa-link"></i></a></h2>
-                                         There are two approaches to use RxHttp methods
-                                         <h4>Approach 1:</h4>
-                                         <p>(1) Create object of <span class="highlighted">Rxhttp</span> in the component. </p>
-                                         <div class="model-ts">
-                                            <div class="code">
-                                                <a class="float-right copy-icon" ngxClipboard
-                                                    [cbContent]="codeContent.objectExample" (cbOnSuccess)="objectExampleCopied = true"
-                                                    [class.copied]="objectExampleCopied"><i class="fa fa-files-o"
-                                                        aria-hidden="true"></i></a>
-                                                <div highlight="pre code">
-                                                    <pre><code [textContent]="codeContent.objectExample"></code></pre>
-                                                </div>
-                                            </div>
-                                        </div>
-                                         <h4>Approach 2:</h4>
-                                        <p>(1) Create a model class and extend it from <span class="highlighted">RxHttp</span></p>
+                                     
+                                        <p>(1) Create an injectable service class and extend it from <span class="highlighted">RxHttp</span></p>
                                         <div class="model-ts">
                                             <div class="code">
                                                 <a class="float-right copy-icon" ngxClipboard
@@ -117,7 +101,7 @@
                                             class="highlighted">hostKey</span> which is the name of the server mentioned in httpClientConfig and <span class="highlighted">path</span> is the path of the specified controller or the path of the data to be accessed.</p>
                                           
                                           
-                                        <p> Extend your component class from BaseComponent and use httpMethods into it 
+                                        <p> Inject the service class in the component and use httpMethods into it 
                                         </p>
                                     
                                     

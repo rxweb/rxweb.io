@@ -1,17 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../user.service';
+import { Component } from '@angular/core';
+import { ProductService } from './product.service';
+
 @Component({
     selector: 'app-get-complete',
     templateUrl: './get-complete.component.html'
 })
 export class GetCompleteComponent  {
-  constructor(private userService : UserService){}
-    result: any
+  constructor(private productService : ProductService){}
+    result: any;
+    GetProducts() {
+        this.result = this.productService.get({path:'api/Products'});
+    }
+  
+    AddProducts(){
+        this.result = this.productService.addProduct({path:'api/SaveProduct'});
+    }
 
-    Get() {
-        this.userService.get({path:'api/Get'}).subscribe(res => {
-            this.result = res;
-            this.result = JSON.parse(this.result);
-        })
+    UpdateProducts(){
+        this.result = this.productService.editProduct({path:'api/PutProduct'});
     }
 }

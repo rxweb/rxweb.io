@@ -1,0 +1,6 @@
+{
+    "complete":{
+        "complete":"hostUri?: string;\r\npath?: string;\r\nparams?: any[];\r\nqueryParams?: {\r\n    [key: string]: any;\r\n};\r\nresponseType?: 'arraybuffer' | 'blob' | 'json' | 'text';",
+        "HttpRequestBodyConfig":" body: any;"
+    }
+}

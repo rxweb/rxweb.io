@@ -1,0 +1,14 @@
+{
+    "inMemory":{
+         "component":"import {XhrContext, HttpResponse,ResponseFilter,AbstractRequestFilter } from \"@rxweb/http\"\r\n\r\nexport class InMemory extends AbstractRequestFilter {\r\n    \r\n    onRequest = (context: XhrContext) => {\r\n        context.result = [{ firstName: 'John' }]\r\n        context.response.statusCode = 200;\r\n        this.onRequestExecuting(context);\r\n    }\r\n\r\n}"
+    },
+    "auth":{
+      "filter":"export class AuthFilter extends AbstractRequestFilter implements ResponseFilter {\r\nonRequest = (context: XhrContext) => {    \r\n        context.request.headers[\"Authorization\"] = authorization;\r\n        context.request.headers[\"request_identity\"] = key;\r\n   this.onRequestExecuting(context);\r\n  }\r\n}  "
+    },
+    "response":{
+        "filter":"onResponse = (response: HttpResponse) => {\r\n        let authorization = this.storagedata.local.get(\"auth\",false)\r\n        if (authorization !== null && authorization !== undefined){\r\n            this.storagedata.local.save(\"xSession\",new Date())\r\n        }\r\n        return response;\r\n    }"
+      },
+      "appcomponent":{
+        "model":"export class AppComponent implements OnInit {\r\n    ngOnInit() {\r\n      \/\/if you want to apply global configuration then use below code.\r\n      HttpClientConfig.register({\r\n        hostURIs: [\r\n          {\r\n            name: \"local\",\r\n            default: true,\r\n            uri: \"Your Server App Url\" \/\/Your server side url here\r\n          }\r\n        ],\r\n        filters: [{ model: AuthFilter }],\r\n        onError: r => {\r\n          console.log(r);\r\n        }\r\n      });\r\n    }\r\n  }"
+      }
+    }

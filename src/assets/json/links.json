@@ -1363,47 +1363,10 @@
                 {
                     "title": "Http Methods",
                     "isOpen": true,
+                    "uri":"/rxweb-http/http/get-direct-usage",
                     "isActive": false,
-                    "linkTitle": "http-methods",
-                    "childrens": [
-                        {
-                            "title": "Get",
-                            "uri": "/rxweb-http/http/get",
-                            "isActive": false,
-                            "linkTitle": "methods",
-                            "refUri": "get"
-                        },
-                        {
-                            "title": "Post",
-                            "uri": "/rxweb-http/http/post",
-                            "isActive": false,
-                            "linkTitle": "methods",
-                            "refUri": "post"
-                        },
-                        {
-                            "title": "Put",
-                            "uri": "/rxweb-http/http/put",
-                            "isActive": false,
-                            "linkTitle": "methods",
-                            "refUri": "put"
-                        },
-                        {
-                            "title": "Patch",
-                            "uri": "/rxweb-http/http/patch",
-                            "isActive": false,
-                            "linkTitle": "methods",
-                            "refUri": "patch"
-                        },
-                        {
-                            "title": "Delete",
-                            "uri": "/rxweb-http/http/delete",
-                            "isActive": false,
-                            "linkTitle": "methods",
-                            "refUri": "delete"
-                        }
-                    ]
+                    "linkTitle": "http-methods"
                 },
-              
                 {
                     "title": "API",
                     "isOpen": true,
@@ -1415,12 +1378,23 @@
                             "uri": "/rxweb-http/http/httpClientConfig",
                             "isActive": false,
                             "linkTitle": "httpClientConfig"
+                        },
+                        {
+                            "title": "HttpRequestConfig",
+                            "uri": "/rxweb-http/http/HttpRequestConfig",
+                            "isActive": false,
+                            "linkTitle": "HttpRequestConfig"
+                        },
+                        {
+                            "title": "HttpRequestBodyConfig",
+                            "uri": "/rxweb-http/http/HttpRequestConfig#HttpRequestBodyConfig",
+                            "isActive": false,
+                            "linkTitle": "HttpRequestBodyConfig"
                         }
                     ]
                 },
                 {
                     "title": "Filters",
-                    "uri": "/rxweb-http/http/decorators",
                     "isOpen": true,
                     "isActive": false,
                     "linkTitle": "decorators",

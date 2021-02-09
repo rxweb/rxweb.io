@@ -70,8 +70,10 @@ export class AppExampleRunnerComponent implements OnInit {
      
       if(this.content.function != null)
       this.tabArray.push({"tabName": "Component", "tabItem": "component", "content": this.content.function})
-      if (this.content.model != null)
+      if (this.content.model != null && this.decoratorName != "post"  && this.decoratorName != "delete"   && this.decoratorName != "patch"  && this.decoratorName != "put" && this.decoratorName != "get" )
         this.tabArray.push({ "tabName": "Model", "tabItem": "model", "content": this.content.model })
+        if(this.decoratorName == "post" || this.decoratorName == "delete"  || this.decoratorName == "patch"  || this.decoratorName == "put" || this.decoratorName == "get" )
+        this.tabArray.push({"tabName":"Service","tabItem": "model","content":this.content.model})
       if (this.decoratorName != "sanitizer"  && this.decoratorName != "post"  && this.decoratorName != "delete"   && this.decoratorName != "patch"  && this.decoratorName != "put" && this.decoratorName != "get"  && this.decoratorName != "list" && this.content.component != null)
         this.tabArray.push({ "tabName": "Component", "tabItem": "component", "content": this.content.component })
       if (JSON.stringify(this.content.json) !== JSON.stringify({}))

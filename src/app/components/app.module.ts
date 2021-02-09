@@ -72,6 +72,7 @@ import { CustomPipe } from './ngx-translate-extension/playground/sanitize/custom
 import { ArticleComponent } from './article/article.component';
 import { CodeComparison } from './code-comparison/code-comparison.component';
 import { WhyComponent } from './why/why.component';
+import { ProductService } from 'src/assets/examples/http/get/complete/product.service';
 registerLocaleData(localePt)
 //import { TextPageComponent } from './text-page/text-page.component';
 //import { PageViewerComponent } from './shared/page-viewer/page-viewer.component';
@@ -101,7 +102,7 @@ registerLocaleData(localePt)
     ),
     RxTranslateSanitizeModule
   ],
-  providers: [RxValidation, ApplicationBroadcaster, CustomPipe,
+  providers: [RxValidation, ApplicationBroadcaster, CustomPipe,ProductService,
     {
       provide: API_HOST_URI,
       useValue: 'https://rxweb.io/'

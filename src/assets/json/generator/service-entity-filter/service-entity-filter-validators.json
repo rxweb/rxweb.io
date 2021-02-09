@@ -1,0 +1,6 @@
+{
+"complete":{
+    "component":"import {\r\n  AbstractRequestFilter,\r\n  HttpResponse,\r\n  ResponseFilter,\r\n  XhrContext\r\n} from \"@rxweb\/http\";\r\n\r\nexport class HeaderFilter extends AbstractRequestFilter\r\n  implements ResponseFilter {\r\n  onRequest = (context: XhrContext) => {\r\n    context.request.headers[\"Content-Type\"] = \"application\/json\";\r\n    this.onRequestExecuting(context);\r\n  };\r\n  onResponse = (response: HttpResponse) => {\r\n    return response;\r\n  };\r\n}\r\n",
+    "model":"@xhrFilter([{ model: HeaderFilter }])\r\n@http({\r\n  path: \"api\/Products\"\r\n})\r\n@Injectable({\r\n  providedIn: \"root\"\r\n})\r\nexport class ProductService extends RxHttp {"
+  }
+}  
