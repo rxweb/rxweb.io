@@ -204,7 +204,7 @@ export class AppComponent implements OnInit {
             hostURIs: [{
               name: 'local',
               default: true,
-              uri: 'http://rxwebhttpapi.azurewebsites.net'
+              uri: 'https://rxwebhttpapi.azurewebsites.net'
            
             }],
             filters: [],
