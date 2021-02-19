@@ -1,0 +1,10 @@
+{
+    "add": {
+        "notes": [],
+        "component": "export class DashboardComponent implements OnInit{\r\n    @translate({translationName:'dashboard'}) dashboard : any;\r\n    \r\n    ngOnInit(){\r\n\r\n    }\r\n}",
+        "html": "<div class=\"card-header\">{{dashboard.total_users}}<\/div>",
+        "model": "@NgModule({\r\n  declarations: [\r\n   {...}\r\n  ],\r\n  imports: [\r\n   {...},\r\n    RxTranslateModule.forRoot({\r\n      cacheLanguageWiseObject: true,\r\n      globalFilePath: \"assets\/i18n\/{{language-code}}\/global.{{language-code}}.json\",\r\n      filePath: \"assets\/i18n\/{{language-code}}\/{{translation-name}}.{{language-code}}.json\"        \r\n  }),\r\n   ]\r\n})\r\nexport class AppModule { }",
+        "modelName": null,
+        "json": {}
+    }
+}

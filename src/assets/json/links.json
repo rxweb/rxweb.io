@@ -9,6 +9,64 @@
             "isActive": false
         },
         {
+            "title": "Learn",
+            "otherUri": "learn",
+            "childrens": [
+                {
+                    "title": "Creating Application",
+                    "isOpen": false,
+                    "isActive": false,
+                    "uri": "/learn/creating-project",
+                    "linkTitle": "creating-application"
+                },
+                {
+                    "title": "Navigating Routes",
+                    "isOpen": false,
+                    "isActive": false,
+                    "childrens": [
+                        {
+                            "title": "Authenticating Routes",
+                            "uri": "/learn/authentication-resolver",
+                            "isActive": false
+                        },
+                        {
+                            "title": "Authorizating Routes",
+                            "uri": "/learn/authorization-resolver",
+                            "isActive": false
+                        },
+                        {
+                            "title": "Middlewares",
+                            "uri": "/learn/component-middleware",
+                            "isActive": false
+                        }
+                    ],
+                    "linkTitle": "adding-routes"
+                },
+                {
+                    "title": "Using Forms",
+                    "isOpen": false,
+                    "isActive": false,
+                    "uri": "/learn/managing-input",
+                    "linkTitle": "adding-routes"
+                },
+                {
+                    "title": "Accessing Data",
+                    "isOpen": false,
+                    "isActive": false,
+                    "uri": "/learn/data-access",
+                    "linkTitle": "accessing-data"
+                },
+                {
+                    "title": "Localizing Data",
+                    "isOpen": false,
+                    "isActive": false,
+                    "uri": "/learn/multilingual",
+                    "linkTitle": "accessing-data"
+                }
+            ],
+            "isActive": false
+        },
+        {
             "title": "Reactive Forms",
             "childrens": [
                 {
@@ -1363,7 +1421,7 @@
                 {
                     "title": "Http Methods",
                     "isOpen": true,
-                    "uri":"/rxweb-http/http/get-direct-usage",
+                    "uri": "/rxweb-http/http/get-direct-usage",
                     "isActive": false,
                     "linkTitle": "http-methods"
                 },

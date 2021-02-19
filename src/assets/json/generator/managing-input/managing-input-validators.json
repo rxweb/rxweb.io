@@ -1,0 +1,10 @@
+{
+    "add": {
+        "notes": [],
+        "component": "export class UserComponent implements OnInit{\r\n    userFormGroup : FormGroup ;\r\n    constructor(private formBuilder:RxFormBuilder){ }\r\n\r\n    ngOnInit(){\r\n        this.userFormGroup = this.formBuilder.formGroup(User);\r\n    }\r\n}",
+        "html": "  <input type=\"text\" formControlName=\"firstName\" class=\"form-control\"> \r\n<small class=\"form-text text-danger\" *ngIf=\"userFormGroup.controls.firstName.errors\">{{userFormGroup.controls.firstName.errors.alpha.message}}<br\/><\/small>\t",
+        "model": "import { alpha, prop, required } from \"@rxweb\/reactive-form-validators\";\r\n\r\nexport class User{\r\n     @alpha()\r\n     @required()\r\n     firstName : string;\r\n\r\n     @prop()\r\n     @required()\r\n     lastName:string;\r\n\r\n     @prop()\r\n     @required()\r\n     password:string;\r\n\r\n     @prop()\r\n     email:string;\r\n\r\n     @prop()\r\n     city:string;\r\n\r\n     @prop()\r\n     state:string;\r\n\r\n     @prop()\r\n     zip:string;\r\n}",
+        "modelName": null,
+        "json": {}
+    }
+}

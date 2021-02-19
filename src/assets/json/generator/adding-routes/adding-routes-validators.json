@@ -1,0 +1,12 @@
+{
+    "add": {
+        "notes": null,
+        "component": "@routerModule({\r\n  authentication:AuthResolver,\r\n  authorization:AuthorizationResolver\r\n})\r\n@NgModule({...})\r\nexport class AppModule { }",
+        "html": "@access({accessLevel:1,action:'post'})\r\nexport class UserComponent implements OnInit{\r\n    constructor(){ }\r\n\r\n    ngOnInit(){\r\n       \r\n    }\r\n}",
+        "model": "export const DASHBOARD_ROUTES: Routes = [\r\n    { \r\n        component: DashboardComponent, \r\n        path: '', \r\n        canActivate: [BaseCanActivate]\r\n    }\r\n];\r\n",
+        "canactivate":"export const USER_ROUTES: Routes = [\r\n    { \r\n        component: UserComponent, \r\n        path: '', \r\n        canActivate: [BaseCanActivate]\r\n    }\r\n];",
+        "modelName": "employee-info.model.ts",
+        "middleware":"@middleware([LoggedInMiddleware])\r\n@Component({\r\n  selector: 'app-login',\r\n  templateUrl: '.\/login.component.html'\r\n})\r\nexport class LoginComponent {\r\n\r\n}",
+        "json": null
+      }  
+}

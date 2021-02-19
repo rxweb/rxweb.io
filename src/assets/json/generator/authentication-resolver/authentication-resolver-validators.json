@@ -1,0 +1,7 @@
+{
+    "add":{
+        "component":"import { Injectable } from \"@angular\/core\";\r\nimport { IAuthResolver } from \"@rxweb\/angular-router\";\r\nimport { HttpClient } from \"@angular\/common\/http\";\r\n\r\nvar Users: any = [];\r\n@Injectable({\r\n  providedIn: \"root\"\r\n})\r\nexport class AuthResolver implements IAuthResolver {\r\n  constructor(private http: HttpClient) {}\r\n\r\n  resolveAuth(): Promise<{ [key: string]: any }> | { [key: string]: any } {\r\n    var promise = new Promise<{ [key: string]: any }>((resolve, reject) => {\r\n      \/\/ Your custom logic here\r\n      if (Users.length == 0)\r\n        this.http.get(\"assets\/json\/users.json\").subscribe(response => {\r\n          Users = response;\r\n          resolve(response);\r\n        });\r\n        else resolve(Users);\r\n    });\r\n    return promise;\r\n  }\r\n}",
+        "html":"export const USER_ROUTES: Routes = [\r\n    { \r\n        component: UserComponent, \r\n        path: '', \r\n        canActivate: [BaseCanActivate]\r\n    }\r\n];",
+        "model":"@routerModule({\r\n  authentication:AuthResolver,\r\n  authorization:AuthorizationResolver\r\n})\r\n@NgModule({...})\r\nexport class AppModule { }"
+    }
+}

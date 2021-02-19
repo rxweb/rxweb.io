@@ -1,0 +1,7 @@
+{
+    "add":{
+       "service":"import { Injectable } from \"@angular\/core\";\r\nimport { http, RxHttp } from \"@rxweb\/http\";\r\n\r\n@http({\r\n    path: \"api\/Users\"\r\n})\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class UserService extends RxHttp {\r\n    constructor() {\r\n        super();\r\n    }\r\n\r\n    addUser(user?: any) {\r\n        return this.post({body: user });\r\n    }\r\n}",
+       "component":"export class AppComponent implements OnInit {\r\n\r\n  ngOnInit(){\r\n       HttpClientConfig.register({\r\n            hostURIs: [{\r\n                name: 'local',\r\n                default: true,\r\n                uri: 'http:\/\/localhost:3004' \/\/Your server side url here\r\n            }],\r\n            filters: [],\r\n            onError: (r) => { console.log(r) }        \r\n        })\r\n  }\r\n}",
+       "model":"export class UserComponent implements OnInit {\r\n    result: any;\r\n    userFormGroup: FormGroup;\r\n\r\n    constructor(private formBuilder: RxFormBuilder, private userService: UserService) { }\r\n\r\n    ngOnInit() {\r\n        this.userFormGroup = this.formBuilder.formGroup(User);\r\n    }\r\n    AddProducts() {\r\n        this.result = this.userService.addUser(this.userFormGroup.value);\r\n    }\r\n}" 
+    }
+}

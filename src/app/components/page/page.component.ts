@@ -144,8 +144,8 @@ export class PageComponent implements OnInit,OnDestroy {
     this.validationName = splitedArray[2];
     let titleString = "";
    
-
-    if (this.mainType != "reactive-dynamic-forms"  && this.mainType != "strongly-typed" && this.mainType != "rxweb-storage" && this.mainType != "ngx-translate-extension" && this.mainType != "rxweb-localization" && this.mainType != "rxweb-router" && this.mainType != "vue" && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
+    if (this.mainType != "reactive-dynamic-forms" && this.mainType != "learn"  && this.mainType != "strongly-typed" && this.mainType != "rxweb-storage" && this.mainType != "ngx-translate-extension" && this.mainType != "rxweb-localization" && this.mainType != "rxweb-router" && this.mainType != "vue" && this.mainType != "rxweb-http" && this.mainType != "rxweb-generics" && this.mainType != "rxweb-sanitizers") {
+    
       if(splitedArray[3].includes("?")){
         var newUrl = splitedArray[3].split('?')[0]
         splitedArray[3] = splitedArray[3].replace(splitedArray[3],newUrl);
@@ -192,7 +192,7 @@ export class PageComponent implements OnInit,OnDestroy {
       document.title = splitedArray[3] + " - RxWeb Docs";
     }
  
-    else if (this.mainType == "strongly-typed") {
+    else if (this.mainType == "strongly-typed" || this.mainType == "learn") {
       let dynamicsplitedArray = this.router.url.split('/');
       if(dynamicsplitedArray[2] && dynamicsplitedArray[2].includes('#')){
         var newUrl = dynamicsplitedArray[2].split('#')[0];
@@ -203,6 +203,8 @@ export class PageComponent implements OnInit,OnDestroy {
       titleString = "validator";
       document.title = splitedArray[2] + " - RxWeb Docs";
     }
+
+   
 
     else {
       let dynamicsplitedArray = this.router.url.split('/');
