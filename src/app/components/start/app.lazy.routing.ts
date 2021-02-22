@@ -130,6 +130,10 @@ const APP_LAZY_ROUTES: Routes = [
     loadChildren: () => import('src/app/components/sanitization/sanitization.module').then(m => m.SanitizationModule),
   },
   {
+    path: 'learn',
+    loadChildren: () => import('src/app/components/learn/learn.module').then(m => m.LearnModule),
+  },
+  {
     path: 'reactive-dynamic-forms',
     loadChildren: () => import('src/app/components/reactive-dynamic-forms/reactive-dynamic-forms.module').then(m => m.ReactiveDynamicFormsModule),
   },
