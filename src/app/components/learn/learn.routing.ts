@@ -42,5 +42,30 @@ const LEARN_ROUTES: Routes = [
   loadChildren: () => import('./component-middleware/component-middleware.module').then(m => m.Component_middlewareModule),
 	
 },
+{
+	path:'advance-forms',
+  loadChildren: () => import('./advance-forms/advance-forms.module').then(m => m.Advance_formsModule),
+	
+},
+{
+	path:'navigating-routes-advance',
+  loadChildren: () => import('./navigating-routes-advance/navigating-routes-advance.module').then(m => m.Navigating_routes_advanceModule),
+	
+},
+{
+	path:'nested-props',
+  loadChildren: () => import('./nested-props/nested-props.module').then(m => m.Nested_propsModule),
+	
+},
+{
+	path:'creating-advance-application',
+  loadChildren: () => import('./creating-advance-application/creating-advance-application.module').then(m => m.Creating_advance_applicationModule),
+	
+},
+{
+	path:'accessing-data-advance',
+  loadChildren: () => import('./accessing-data-advance/accessing-data-advance.module').then(m => m.Accessing_data_advanceModule),
+	
+},
 ];
 export const LEARN_ROUTING = RouterModule.forChild(LEARN_ROUTES);

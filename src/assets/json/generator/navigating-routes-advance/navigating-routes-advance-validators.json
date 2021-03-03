@@ -1,0 +1,6 @@
+{
+    "complete":{
+        "routermodule":"@routerModule({\r\n    middlewares:[ConfigurationResolver]\r\n  })\r\n@NgModule({...})\r\nexport class AppModule { }",
+            "middleware":"import { Injectable } from \"@angular\/core\";\r\nimport { IMiddleware } from \"@rxweb\/angular-router\";\r\nimport { Router, ActivatedRouteSnapshot } from \"@angular\/router\";\r\nimport { HttpClient } from \"@angular\/common\/http\";\r\n\r\nexport var configurationData: any;\r\n@Injectable({\r\n  providedIn: \"root\"\r\n})\r\nexport class ConfigurationResolver implements IMiddleware {\r\n  constructor(private http: HttpClient, private router: Router) {}\r\n  invoke(user: { [key: string]: any }) {\r\n    const promise = new Promise<any>((resolve, reject) => {\r\n      if (configurationData == undefined || configurationData == null)\r\n        this.http.get(`\/assets\/application-configuration.json`).subscribe(response => {\r\n          resolve(true);\r\n          configurationData = response;\r\n        });\r\n      else resolve(true);\r\n    });\r\n    return promise;\r\n  }\r\n}"
+    }
+}

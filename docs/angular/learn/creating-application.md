@@ -8,7 +8,9 @@ linktitle: creating-application
 
 In this documentation section we will learn how to built an angular application with `RxWeb` Architecture from the start to deployment of the application along with learning the concepts, understanding of the core fundamentals and terminology with security implementations.
 
-This guide will include a guide to create and develop an application using angular cli and using the benefits of RxWeb packages which can increase the efficiency of the application by making it more modular, scalar, simpler, clean and scalable.
+The architecture is the most important aspect of any application, Usually when the application scopes are larger there is a need to maintanability of the code, To resolve the business problems.
+
+This guide will teach you to create and develop an application using angular cli and using the benefits of RxWeb packages which can increase the efficiency of the application by making it more modular, scalar, simpler, clean and scalable.
 
 By the end of the tutorial we will learn:
 
@@ -19,7 +21,7 @@ By the end of the tutorial we will learn:
   <li class="overview-nav-item">Multilingual Data access</li>
 </ul>
 
-After the final steps are implemented the app will look like <a class="redirect-link" href="" target="_blank" >Live Example</a> / <a class="redirect-link">Download</a>
+After the final steps are implemented the app will look like <a class="redirect-link" href="https://stackblitz.com/edit/angular-ivy-zwmauq?file=src/app/app.component.ts" target="_blank" >Live Example</a> / <a class="redirect-link">Download</a>
 
 # What you will build
 Here is an overview of how the application will look after the end of this tutorial 
@@ -32,7 +34,7 @@ Here is an overview of how the application will look after the end of this tutor
 
 1) To examine and run the project from github, follow these steps to run the project in the development environment:
 
-> git clone
+> git clone 
 
 2) Install the packages at the path where the project is cloned using npm install command:
 

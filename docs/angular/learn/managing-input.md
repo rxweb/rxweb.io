@@ -9,7 +9,7 @@ linktitle: managing-input
 
 After creating the components and adding the routes to it, lets proceed towards the creation of reactive forms and adding validations to it. Lets start by creating a user input form which will be model based reactive forms with addition of the in-built validations provided in the <a class="redirect-link" href="/getting-started">@rxweb/reactive-form-validators</a>.
 
-> This guide describes the model driven approach, the same can be achieved using <a target="_blank" class="redirect-link" href="form-validations/alpha/validators">validator</b> approach 
+> This guide describes the model driven approach, the same can be achieved using <a target="_blank" class="redirect-link" href="form-validations/alpha/validators">validator</a> approach 
 
 1) Lets start by creating a model class with property initilialization in the model class. As we are going to add a user registration form, Create a user model class as below:
 

@@ -13,55 +13,111 @@
             "otherUri": "learn",
             "childrens": [
                 {
-                    "title": "Creating Application",
-                    "isOpen": false,
-                    "isActive": false,
-                    "uri": "/learn/creating-project",
-                    "linkTitle": "creating-application"
-                },
-                {
-                    "title": "Navigating Routes",
+                    "title": "Basic",
                     "isOpen": false,
                     "isActive": false,
                     "childrens": [
                         {
-                            "title": "Authenticating Routes",
-                            "uri": "/learn/authentication-resolver",
-                            "isActive": false
+                            "title": "Creating Application",
+                            "isOpen": false,
+                            "isActive": false,
+                            "uri": "/learn/creating-project",
+                            "linkTitle": "creating-application"
                         },
                         {
-                            "title": "Authorizating Routes",
-                            "uri": "/learn/authorization-resolver",
-                            "isActive": false
+                            "title": "Navigating Routes",
+                            "isOpen": false,
+                            "isActive": false,
+                            "childrens": [
+                                {
+                                    "title": "Authenticating Routes",
+                                    "uri": "/learn/authentication-resolver",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "Authorizating Routes",
+                                    "uri": "/learn/authorization-resolver",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "Middlewares",
+                                    "uri": "/learn/component-middleware",
+                                    "isActive": false
+                                }
+                            ],
+                            "linkTitle": "adding-routes"
                         },
                         {
-                            "title": "Middlewares",
-                            "uri": "/learn/component-middleware",
+                            "title": "Using Forms",
+                            "isOpen": false,
+                            "isActive": false,
+                            "uri": "/learn/managing-input",
+                            "linkTitle": "adding-routes"
+                        },
+                        {
+                            "title": "Accessing Data",
+                            "isOpen": false,
+                            "isActive": false,
+                            "uri": "/learn/data-access",
+                            "linkTitle": "accessing-data"
+                        },
+                        {
+                            "title": "Localizing Data",
+                            "isOpen": false,
+                            "isActive": false,
+                            "uri": "/learn/multilingual",
+                            "linkTitle": "accessing-data"
+                        }
+                    ]
+                    
+                    
+                },
+               
+                {
+                    "title": "Advance",
+                    "isOpen": false,
+                    "isActive": false,
+                    "childrens": [
+                        {
+                            "title": "Creating Application",
+                            "isOpen": false,
+                            "isActive": false,
+                            "uri": "/learn/creating-advance-application",
+                            "linkTitle": "creating-advance-application"
+                        },
+                        {
+                            "title": "Navigating Routes",
+                             "isOpen": false,
+                            "isActive": false,
+                            "linkTitle": "navigating-routes",
+                            "childrens": [
+                                {
+                                    "title": "Global Resolver",
+                                    "uri": "/learn/navigating-routes-advance",
+                                    "isActive": false
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Using Forms",                
+                            "otherUri": "advance-forms",
+                            "childrens": [
+                                {
+                                    "title": "Advance Forms",
+                                    "uri": "/learn/advance-forms",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "Managing Generic Props",
+                                    "uri": "/learn/nested-props",
+                                    "isActive": false
+                                }
+                            ],
+                            "isOpen": false,
                             "isActive": false
                         }
                     ],
-                    "linkTitle": "adding-routes"
-                },
-                {
-                    "title": "Using Forms",
-                    "isOpen": false,
-                    "isActive": false,
-                    "uri": "/learn/managing-input",
-                    "linkTitle": "adding-routes"
-                },
-                {
-                    "title": "Accessing Data",
-                    "isOpen": false,
-                    "isActive": false,
-                    "uri": "/learn/data-access",
-                    "linkTitle": "accessing-data"
-                },
-                {
-                    "title": "Localizing Data",
-                    "isOpen": false,
-                    "isActive": false,
-                    "uri": "/learn/multilingual",
-                    "linkTitle": "accessing-data"
+                    "linkTitle": "advance"
                 }
             ],
             "isActive": false
