@@ -5,7 +5,7 @@
             "uri": "getting-started",
             "otherUri": "getting-started",
             "isOpen": false,
-            "isHide": true,
+            "isHide": false,
             "isActive": false
         },
         {
@@ -78,6 +78,7 @@
                     "isOpen": false,
                     "isActive": false,
                     "childrens": [
+                        
                         {
                             "title": "Creating Application",
                             "isOpen": false,
@@ -86,35 +87,46 @@
                             "linkTitle": "creating-advance-application"
                         },
                         {
-                            "title": "Navigating Routes",
-                             "isOpen": false,
-                            "isActive": false,
-                            "linkTitle": "navigating-routes",
-                            "childrens": [
-                                {
-                                    "title": "Global Resolver",
-                                    "uri": "/learn/navigating-routes-advance",
-                                    "isActive": false
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Using Forms",                
+                            "title": "Forms",                
                             "otherUri": "advance-forms",
                             "childrens": [
                                 {
-                                    "title": "Advance Forms",
+                                    "title": "Saving Unique Users",
                                     "uri": "/learn/advance-forms",
                                     "isActive": false
                                 },
                                 {
-                                    "title": "Managing Generic Props",
-                                    "uri": "/learn/nested-props",
+                                    "title": "Validating Employees Dynamically",
+                                    "uri": "/learn/validating-employee-dynamically",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "Employee Department Details Generic",
+                                    "uri": "/learn/adding-employee-department-details-generic",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "Resolve Email Entity On Demand",
+                                    "uri": "/learn/resolve-contact-details-ondemand",
                                     "isActive": false
                                 }
                             ],
                             "isOpen": false,
                             "isActive": false
+                        },
+                        {
+                            "title": "Navigating Routes",
+                            "isOpen": false,
+                            "isActive": false,
+                            "uri": "/learn/creating-advance-application",
+                            "linkTitle": "creating-advance-application"
+                        },
+                        {
+                            "title": "Localizing Data",
+                            "isOpen": false,
+                            "isActive": false,
+                            "uri": "/learn/creating-advance-application",
+                            "linkTitle": "creating-advance-application"
                         }
                     ],
                     "linkTitle": "advance"

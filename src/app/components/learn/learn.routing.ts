@@ -53,11 +53,6 @@ const LEARN_ROUTES: Routes = [
 	
 },
 {
-	path:'nested-props',
-  loadChildren: () => import('./nested-props/nested-props.module').then(m => m.Nested_propsModule),
-	
-},
-{
 	path:'creating-advance-application',
   loadChildren: () => import('./creating-advance-application/creating-advance-application.module').then(m => m.Creating_advance_applicationModule),
 	
@@ -65,6 +60,21 @@ const LEARN_ROUTES: Routes = [
 {
 	path:'accessing-data-advance',
   loadChildren: () => import('./accessing-data-advance/accessing-data-advance.module').then(m => m.Accessing_data_advanceModule),
+	
+},
+{
+	path:'validating-employee-dynamically',
+  loadChildren: () => import('./validating-employee-dynamically/validating-employee-dynamically.module').then(m => m.Validating_employee_dynamicallyModule),
+	
+},
+{
+	path:'adding-employee-department-details-generic',
+  loadChildren: () => import('./adding-employee-department-details-generic/adding-employee-department-details-generic.module').then(m => m.Adding_employee_department_details_genericModule),
+	
+},
+{
+	path:'resolve-contact-details-ondemand',
+  loadChildren: () => import('./resolve-contact-details-on-demand/resolve-contact-details-on-demand.module').then(m => m.Resolve_contact_details_on_demandModule),
 	
 },
 ];
