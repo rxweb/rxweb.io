@@ -69,16 +69,12 @@
                             "linkTitle": "accessing-data"
                         }
                     ]
-                    
-                    
                 },
-               
                 {
                     "title": "Advance",
                     "isOpen": false,
                     "isActive": false,
                     "childrens": [
-                        
                         {
                             "title": "Creating Application",
                             "isOpen": false,
@@ -87,7 +83,7 @@
                             "linkTitle": "creating-advance-application"
                         },
                         {
-                            "title": "Forms",                
+                            "title": "Forms",
                             "otherUri": "advance-forms",
                             "childrens": [
                                 {
@@ -118,15 +114,32 @@
                             "title": "Navigating Routes",
                             "isOpen": false,
                             "isActive": false,
-                            "uri": "/learn/creating-advance-application",
-                            "linkTitle": "creating-advance-application"
+                            "linkTitle": "creating-advance-application",
+                            "childrens": [
+                                {
+                                    "title": "Resolve Global Configurations",
+                                    "uri": "/learn/navigating-routes-advance",
+                                    "isActive": false
+                                }
+                            ]
                         },
                         {
                             "title": "Localizing Data",
                             "isOpen": false,
                             "isActive": false,
-                            "uri": "/learn/creating-advance-application",
-                            "linkTitle": "creating-advance-application"
+                            "linkTitle": "creating-advance-application",
+                            "childrens": [
+                                {
+                                    "title": "Adding Multilingual Validation Messages Globally",
+                                    "uri": "/learn/adding-mutlingual-validation-messages-globally",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "Set PageTitle Using Single Property",
+                                    "uri": "/learn/set-pagetitle-using-single-property",
+                                    "isActive": false
+                                }
+                            ]
                         }
                     ],
                     "linkTitle": "advance"

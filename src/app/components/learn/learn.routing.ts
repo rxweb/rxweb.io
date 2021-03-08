@@ -73,8 +73,23 @@ const LEARN_ROUTES: Routes = [
 	
 },
 {
-	path:'resolve-contact-details-ondemand',
+	path:'resolve-contact-details-on-demand',
   loadChildren: () => import('./resolve-contact-details-on-demand/resolve-contact-details-on-demand.module').then(m => m.Resolve_contact_details_on_demandModule),
+	
+},
+{
+	path:'adding-mutilingual-validation-messages-globally',
+  loadChildren: () => import('./adding-mutilingual-validation-messages-globally/adding-mutilingual-validation-messages-globally.module').then(m => m.Adding_mutilingual_validation_messages_globallyModule),
+	
+},
+{
+	path:'set-pagetitle-using-single-property',
+  loadChildren: () => import('./set-pagetitle-using-single-property/set-pagetitle-using-single-property.module').then(m => m.Set_pagetitle_using_single_propertyModule),
+	
+},
+{
+	path:'loading-message-conditionally',
+  loadChildren: () => import('./loading-message-conditionally/loading-message-conditionally.module').then(m => m.Loading_message_conditionallyModule),
 	
 },
 ];

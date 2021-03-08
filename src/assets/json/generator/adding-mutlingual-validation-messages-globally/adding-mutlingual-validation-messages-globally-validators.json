@@ -1,0 +1,7 @@
+{
+    "complete":{
+        "json":"{\r\n    \"validationMessages\":{\r\n        \"required\":\"This field is required\"\r\n      }\r\n}",
+        "component":"export class UserComponent {\r\n  @translate() global : {[key:string]:any}\r\n  {...}\r\n}",
+        "model":" ReactiveFormConfig.i18n = {\r\n      validationMessage: () => {\r\n        return TranslationCore.getText(\"global.validationMessages\")\r\n      }\r\n    };\r\n    Object.defineProperty(ReactiveFormConfig.i18n, \"language\", {\r\n      get: () => {\r\n        return this.rxTranslation.language;\r\n      }\r\n\r\n    })"
+    }
+}
