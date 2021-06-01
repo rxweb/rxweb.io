@@ -24,3 +24,4 @@ First we need to create a user class and define properties in the model.
 Next, we need to write html code.
 <div component="app-code" key="formadata-complete-html"></div> 
 <div component="app-example-runner" ref-component="app-formadata-complete"></div>
+

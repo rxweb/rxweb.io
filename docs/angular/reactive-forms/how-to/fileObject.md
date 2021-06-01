@@ -22,3 +22,18 @@ First we need to create a user class and define properties in the model.
 Next, we need to write html code.
 <div component="app-code" key="fileobject-complete-html"></div> 
 <div component="app-example-runner" ref-component="app-fileobject-complete"></div>
+
+# Allow Not Indexed Property Property
+
+To use the property name without indexed format with the fileList values. 
+
+Use the property of `excludeImageIndex` from formDataConfig to use the fileList value without the indexed format.
+
+<data-scope scope="['decorator']">
+First we need to create a user class and define properties in the model.
+<div component="app-code" key="fileobject-excludeindex-model"></div> 
+</data-scope>
+<div component="app-code" key="fileobject-excludeindex-component"></div> 
+Next, we need to write html code.
+<div component="app-code" key="fileobject-excludeindex-html"></div> 
+<div component="app-example-runner" ref-component="app-fileobject-excludeindex"></div>
