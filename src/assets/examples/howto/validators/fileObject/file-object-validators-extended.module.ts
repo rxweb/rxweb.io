@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { FileobjectCompleteValidatorComponent } from './complete/fileObject-complete.component';
+import { FileobjectExcludeIndexValidatorComponent } from './excludeindex/fileObject-excludeindex.component';
 
 
 
@@ -13,10 +14,10 @@ import { FileobjectCompleteValidatorComponent } from './complete/fileObject-comp
 
 @NgModule({
   declarations: [
-    FileobjectCompleteValidatorComponent
+    FileobjectCompleteValidatorComponent,FileobjectExcludeIndexValidatorComponent
   ],
 entryComponents: [
-	FileobjectCompleteValidatorComponent
+	FileobjectCompleteValidatorComponent,FileobjectExcludeIndexValidatorComponent
   ],
   imports: [
     CommonModule,HttpClientModule,ReactiveFormsModule,FormsModule,RxReactiveFormsModule
@@ -25,7 +26,7 @@ entryComponents: [
   bootstrap: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
-    FileobjectCompleteValidatorComponent
+    FileobjectCompleteValidatorComponent,FileobjectExcludeIndexValidatorComponent
   ],
 
 })
