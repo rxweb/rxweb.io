@@ -14,7 +14,7 @@ Lets consider a scenario where the application has a candidate module which cont
 ### Page Level Authorization
 
 <video controls>
-<source src="assets/rxwebcore/Images/controller-page-level.mp4" type="video/mp4">
+<source src="assets/rxwebcore/Images/rxweb-authorization-1.mp4.mp4" type="video/mp4">
 </video>
 
 Page level authorization is required when some pages need to be accessed only by some specific users which are retrieved based upon the role of the user and the module(unit) of the application, In this case the page is accessed to logged-in user based upon the Json Schema retrieved from the server ad below 
@@ -63,7 +63,7 @@ So far we have finished the implementation of page level access based upon the l
 
 ### Component Level Authorization
 <video controls>
-<source src="assets/rxwebcore/Images/controller-component-level.mp4" type="video/mp4">
+<source src="assets/rxwebcore/Images/rxweb-authorization-2.mp4.mp4" type="video/mp4">
 </video>
 
 In every application there are shared component/smart component which are the sub module of the main module, These are basically used as the selector in the application for these shared components the access is further kept to another level where it is sub divided based upon the role, If we talk about the candidate page which has a new candidate add form which is the child module of candidate
@@ -94,7 +94,7 @@ The example is as below:
 ### Control Level Authorization
 
 <video controls>
-<source src="assets/rxwebcore/Images/router-control-level.mp4" type="video/mp4">
+<source src="assets/rxwebcore/Images/router-control-level-new.mp4" type="video/mp4">
 </video>
 
 While performing some operations on a certain entity there are some controls which need to be restricted from certain users, For example in the skill entity of the candidate module there is a control of add in which based upon the plus icon click event the skill can be added, This control needs to be authorized based upon the user role.
