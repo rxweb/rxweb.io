@@ -17,6 +17,8 @@ Lets consider a scenario where the application has a candidate module which cont
 <source src="assets/rxwebcore/Images/rxweb-authorization-1.mp4.mp4" type="video/mp4">
 </video>
 
+In the above video, the logged in admin user is able to access the candidate page whereas the HRA user is restricted to access the candidate page therefore the Authorization Resolver will determine the page level access based upon the user type. 
+
 Page level authorization is required when some pages need to be accessed only by some specific users which are retrieved based upon the role of the user and the module(unit) of the application, In this case the page is accessed to logged-in user based upon the Json Schema retrieved from the server ad below 
 
 # The User Role Object
@@ -68,6 +70,8 @@ So far we have finished the implementation of page level access based upon the l
 
 In every application there are shared component/smart component which are the sub module of the main module, These are basically used as the selector in the application for these shared components the access is further kept to another level where it is sub divided based upon the role, If we talk about the candidate page which has a new candidate add form which is the child module of candidate
 
+In the above video, hr admin user has the rights to access the candidate add component but the HRO user is restricted to access the candidate add form.
+
 # Child Component Authorization
 In this case we need to create a `authorizeChildren` method in the same AuthorizationResolver class which we created earlier to resolve the user access object, this method is used to resolve the access of the child module.
 
@@ -99,7 +103,9 @@ The example is as below:
 
 While performing some operations on a certain entity there are some controls which need to be restricted from certain users, For example in the skill entity of the candidate module there is a control of add in which based upon the plus icon click event the skill can be added, This control needs to be authorized based upon the user role.
 
-This can be done using `*rxAuthorize` in which the add component will be passed as the parameter value as shown in this html code
+In the above video, hr admin user has the rights to access the candidate in which the admin can view and add the candidate component but the HRC user is restricted to add the component but has the access to only view it.
+
+This is implemented using `*rxAuthorize` in which the add component will be passed as the parameter value as shown in this html code
 
 <div component="app-code" key="authorization-candidate-html"></div> 
 
