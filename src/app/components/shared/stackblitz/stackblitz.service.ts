@@ -179,12 +179,14 @@ export class StackBlitzService {
       return form;
     }
     else {
+      debugger
       if (location.pathname.includes("dynamic-validation")) {
         if (title == null)
           title = validationName;
         let exampleComponentFileName = `src/app/dynamic-validation.component.ts`
         let componentPath = `dynamic-validation.component`
         let exampleComponentHtmlFileName = `src/app/dynamic-validation.component.html`
+        let exampleModelFileName = `src/app/${exampleContent["modelName"]}`
         let jsonPathFileName = `src/app/server-json.ts`
         let form = this.createFormElement(exampleComponentFileName);
         this.addDefaultElement(form, validationName, "", "", "", title);
@@ -215,6 +217,9 @@ export class StackBlitzService {
           this.addInputElement(form, `files[${exampleComponentFileName}]`, exampleContent["component"]);
         if (exampleContent["html"] != null)
           this.addInputElement(form, `files[${exampleComponentHtmlFileName}]`, exampleContent["html"]);
+          if (exampleContent["model"] != null)
+      
+          this.addInputElement(form, `files[${exampleModelFileName}]`, exampleContent["model"]);
         return form;
       }
       else {
@@ -282,10 +287,7 @@ export class StackBlitzService {
             this.addInputElement(form, `files[${fileName}]`, fileContent);
           }
 
-          if (exampleContent["modelName"] != null && exampleContent["model"] != null) {
-            let exampleModelFileName = `src/app/${exampleContent["modelName"]}`
-            this.addInputElement(form, `files[${exampleModelFileName}]`, exampleContent["model"]);
-          }
+       
           if (JSON.stringify(exampleContent["json"]) !== JSON.stringify({})) {
             this.addJson(form, exampleContent, validationType, validationName, exampleName, templateDrivenType)
           }
@@ -296,6 +298,11 @@ export class StackBlitzService {
         //   if (exampleContent["component"] != null)
         //     exampleContent["component"] = exampleContent["component"].replace(`assets/examples/reactive-form-validators/${validationType}s/${validationName}/${exampleName}/${exampleContent["jsonName"]}`, `assets/${exampleContent["jsonName"]}`)
         // }
+        if (exampleContent["modelName"] != null && exampleContent["model"] != null){
+        let exampleModelFileName = `src/app/${exampleContent["modelName"]}`
+  
+        this.addInputElement(form, `files[${exampleModelFileName}]`, exampleContent["model"]);
+        }
         if (exampleContent["component"] != null)
           this.addInputElement(form, `files[${exampleComponentFileName}]`, exampleContent["component"]);
         if (exampleContent["html"] != null)
