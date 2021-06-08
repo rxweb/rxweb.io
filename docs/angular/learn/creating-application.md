@@ -21,7 +21,7 @@ By the end of the tutorial we will learn:
   <li class="overview-nav-item">Multilingual Data access</li>
 </ul>
 
-After the final steps are implemented the app will look like <a class="redirect-link" href="https://stackblitz.com/edit/angular-ivy-zwmauq?file=src/app/app.component.ts" target="_blank" >Live Example</a> / <a class="redirect-link">Download</a>
+After the final steps are implemented the app will look like <a class="redirect-link" href="https://stackblitz.com/edit/angular-ivy-zwmauq?file=src/app/app.component.ts" target="_blank" >Live Example</a> / <a class="redirect-link" href="https://github.com/rxweb/rxweb/tree/Development/examples/client-side/angular/HrManagementSystem">Download</a>
 
 # What you will build
 Here is an overview of how the application will look after the end of this tutorial 
