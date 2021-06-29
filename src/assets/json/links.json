@@ -100,11 +100,6 @@
                                     "title": "Employee Department Details Generic",
                                     "uri": "/learn/adding-employee-department-details-generic",
                                     "isActive": false
-                                },
-                                {
-                                    "title": "Resolve Email Entity On Demand",
-                                    "uri": "/learn/resolve-contact-details-ondemand",
-                                    "isActive": false
                                 }
                             ],
                             "isOpen": false,
@@ -131,12 +126,17 @@
                             "childrens": [
                                 {
                                     "title": "Adding Multilingual Validation Messages Globally",
-                                    "uri": "/learn/adding-mutlingual-validation-messages-globally",
+                                    "uri": "/learn/adding-mutilingual-validation-messages-globally",
                                     "isActive": false
                                 },
                                 {
                                     "title": "Set PageTitle Using Single Property",
-                                    "uri": "/learn/set-pagetitle-using-single-property",
+                                     "uri": "/learn/set-pagetitle-using-single-property",
+                                    "isActive": false
+                                },
+                                {
+                                    "title": "Load Message Conditionally",
+                                    "uri": "/learn/loading-message-conditionally",
                                     "isActive": false
                                 }
                             ]

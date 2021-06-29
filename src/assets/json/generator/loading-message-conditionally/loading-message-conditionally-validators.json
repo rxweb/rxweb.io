@@ -1,0 +1,6 @@
+{
+    "complete":{
+        "json":"{  \r\n  \"adminText\":\"Admin\",\r\n  \"hrText\":\"HR\",\r\n  \"conditionalText\":\"this.userRole == 'admin' ? this.global.adminText : this.global.hrText\"\r\n}\r\n",
+        "component":"getUser(){\r\n    let userRole = this.browserStorage.local.get('user-role');\r\n    return userRole;\r\n }"
+    }
+}

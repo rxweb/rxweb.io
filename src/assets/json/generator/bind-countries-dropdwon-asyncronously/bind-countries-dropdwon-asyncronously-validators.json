@@ -1,0 +1,9 @@
+{
+    "complete":{
+        "html":"<select name=\"control\" class=\"form-control\">\r\n   <option *ngFor=\"let item of states | async\" [value]=\"item.stateId\">{{item.stateName}}<\/option>\r\n <\/select>",
+        "json":"[\r\n    {\r\n        \"stateName\": \"California\",\r\n        \"stateId\": 1\r\n    },\r\n    {\r\n        \"stateName\": \"Arizona\",\r\n        \"stateId\": 2\r\n    },\r\n    {\r\n        \"stateName\": \"North Dakota\",\r\n        \"stateId\": 3\r\n    }\r\n]",
+        "component":"export class UserComponent implements OnInit {\r\n    @asyncTranslate({\r\n      serviceModel: StateService,\r\n      serviceMethod:StateService.prototype.get\r\n    })\r\n    states: any;\r\n}    ",
+        "service":"import { HttpClient } from '@angular\/common\/http';\r\nimport { RxTranslation } from '@rxweb\/translate';\r\n\r\nexport class StateService {\r\n\r\n    constructor(private http:HttpClient,private rxTranslation : RxTranslation){}\r\n\r\n    get(){\r\n        return this.http.get(\"assets\/i18n\/states\"+ this.rxTranslation.language + \".json\")\r\n    }\r\n}"
+    }
+}
+
