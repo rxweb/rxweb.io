@@ -5,7 +5,7 @@ category: strongly-types
 type: simple
 linktitle: formGroup-class-instance
 ---
-# formArrray Class Instance
+# formArray Class Instance
 
 <img style="margin:10px;" src='assets/images/strongly-typed-form-array.png'/>
 
