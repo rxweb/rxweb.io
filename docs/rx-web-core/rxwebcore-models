@@ -1,0 +1,30 @@
+---
+title: rxweb core commands
+author: Ushmi Dave
+category: rxwebcore 
+type:simple
+linktitle:rxwebcore new 
+---
+
+# rxwebcore models:
+Creates models using the below CLI command
+
+rxwebcore --models --main
+
+## Description
+This command creates POCO models based upon the database tables used to access properties of the database tables in the models class library of the project solution.
+
+## Arguments
+
+<table class="table table-bordered table-striped">
+<tr><th>Argument</th><th>Description</th></tr>
+<tr><td>--models</td><td>To create models</td></tr>
+</table>
+
+## Options
+
+<table class="table table-bordered table-striped">
+<tr><th>Option</th><th>Description</th></tr>
+<tr><td>--main</td><td>Name of the database connection configured in application settings</td></tr>
+</table>
+
