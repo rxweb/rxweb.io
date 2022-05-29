@@ -91,7 +91,7 @@ Below options are not mandatory to use in the `alpha` validation. If needed then
 ## locale 
 Type : `String`
 
-his will allow multilingual characters based upon the specified validation alphabet locale. It can be set to Spanish, danish, french, german, russian.
+This will allow multilingual characters based upon the specified validation alphabet locale. It can be set to Spanish, danish, french, german, russian.
 
 <div component="app-code" key="alpha-localeExample-model"></div> 
 <div component="app-example-runner" ref-component="app-alpha-locale" title="alpha {{validatorType}} with locale" key="locale"></div>
