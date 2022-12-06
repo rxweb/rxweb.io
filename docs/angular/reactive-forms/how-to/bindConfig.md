@@ -8,9 +8,9 @@ linktitle: bindConfig
 
 While developing large forms, we have multiple needs to validate the FormControl. For that we are going to write the custom business logic a lot to manage the complex scenarios.
 
-The benefit of using this is don't have worry about when this validator will call, this will be called whatever properties you have used in the dynamicConfig function. Those thing the framework automatically take cares of it.
+The benefit of using this is that we don't have to worry about when this validator is being called. This will call whatever properties you have used in the dynamicConfig function. Those things the framework automatically takes care of.
 
-Here is an example for a scenerio such that there are two fields Purchase price and Resale Price and the resaleprice is validated such that Resale price must be at least 30% more than Purchase price, This can be achieved using dynamicConfig. Lets see how:
+Here is an example of a scenerio such that there are two fields Purchase price and Resale Price and the resaleprice is validated such that Resale price must be at least 30% more than Purchase price, This can be achieved using dynamicConfig. Lets see how:
 
 # Example
 
