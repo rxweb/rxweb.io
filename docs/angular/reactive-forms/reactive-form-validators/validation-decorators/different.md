@@ -8,7 +8,7 @@ type: tabs
 linktitle: different
 ---
 
-<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>different validation {{validatorType}} will check two inputs whether they are different or not. It is just opposite of different decorator.</p></div>
+<div class="title-bar top_title"><p>{{Title}}</p></div> <div class="title-bar"><p>different validation {{validatorType}} will check two inputs whether they are different or not. It is just opposite of compare decorator.</p></div>
 
 # When to use
 Suppose you want to create a user form in which you want to different 2 input values which are entered by the user. The user form contains fields like firstname and lastname, password Here depending upon the requirement these scenarios may arise.
